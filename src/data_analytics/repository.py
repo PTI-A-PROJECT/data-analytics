@@ -1,9 +1,10 @@
-"""Orkestrasi Aturan Skor & Hasil Simulasi — lihat resolusi tiket 01 di
-.scratch/osn-data-analytics/issues/01-aturan-skor-hasil-simulasi.md.
+"""Orkestrasi Aturan Skor & Hasil Simulasi (tiket 01) dan Progress Belajar
+(tiket 02) — lihat .scratch/osn-data-analytics/issues/.
 """
 
 from __future__ import annotations
 
+from collections import defaultdict
 from collections.abc import Sequence
 from dataclasses import dataclass
 from datetime import datetime
@@ -12,7 +13,14 @@ from typing import Final
 from sqlalchemy import delete, select
 from sqlalchemy.orm import Session
 
-from data_analytics.models import AturanPredikat, HasilTes, HasilTesSubkompetensi, JenisTes
+from data_analytics.models import (
+    AturanPredikat,
+    HasilTes,
+    HasilTesSubkompetensi,
+    JenisTes,
+    ProgressMateri,
+)
+from data_analytics.progress import persentase_selesai, validasi_halaman
 from data_analytics.scoring import hitung_skor, tentukan_predikat
 
 DEFAULT_ATURAN_PREDIKAT: Final[tuple[tuple[str, float], ...]] = (
@@ -153,3 +161,128 @@ def catat_hasil_tes(
     session.add(hasil)
     session.flush()
     return hasil
+
+
+def catat_progress_halaman(
+    session: Session,
+    *,
+    siswa_id: int,
+    materi_id: int,
+    subkompetensi_id: int,
+    tingkat_seleksi_id: int,
+    total_halaman: int,
+    halaman_dicapai: int,
+) -> ProgressMateri:
+    """Catat siswa mencapai suatu halaman Materi. halaman_tertinggi_dicapai adalah
+    high-water mark — tidak pernah turun walau siswa navigasi mundur.
+    subkompetensi_id/tingkat_seleksi_id/total_halaman selalu diperbarui ke nilai
+    terbaru dari payload (snapshot), sesuai ADR 0002.
+
+    Larangan "harus urut untuk maju" dari resolusi tiket 02 adalah aturan
+    navigasi UI Layanan Belajar (fullstack yang mencegah klik "lanjut" melompati
+    halaman) — fungsi ini tidak menegakkan ulang bahwa halaman_dicapai persis
+    existing+1; ia hanya menjamin invariant penyimpanan (rentang valid,
+    monoton tidak turun), konsisten dengan ADR 0002 yang mempercayai pemanggil
+    sebagai sumber kebenaran metadata Materi.
+    """
+    validasi_halaman(
+        halaman=halaman_dicapai, total_halaman=total_halaman, nama_field="halaman_dicapai"
+    )
+
+    existing = session.scalars(
+        select(ProgressMateri).where(
+            ProgressMateri.siswa_id == siswa_id,
+            ProgressMateri.materi_id == materi_id,
+        )
+    ).one_or_none()
+
+    if existing is None:
+        baris = ProgressMateri(
+            siswa_id=siswa_id,
+            materi_id=materi_id,
+            subkompetensi_id=subkompetensi_id,
+            tingkat_seleksi_id=tingkat_seleksi_id,
+            total_halaman=total_halaman,
+            halaman_tertinggi_dicapai=halaman_dicapai,
+        )
+        session.add(baris)
+        session.flush()
+        return baris
+
+    mark_baru = max(existing.halaman_tertinggi_dicapai, halaman_dicapai)
+    if mark_baru > total_halaman:
+        raise ValueError(
+            "total_halaman baru "
+            f"({total_halaman}) lebih kecil dari halaman yang sudah pernah "
+            f"dicapai siswa ({existing.halaman_tertinggi_dicapai})"
+        )
+
+    existing.subkompetensi_id = subkompetensi_id
+    existing.tingkat_seleksi_id = tingkat_seleksi_id
+    existing.total_halaman = total_halaman
+    existing.halaman_tertinggi_dicapai = mark_baru
+    session.flush()
+    return existing
+
+
+@dataclass(frozen=True, slots=True)
+class MateriRelevan:
+    """Satu Materi yang saat ini masuk Rekomendasi Materi siswa — dipasok
+    pemanggil (tim fullstack), bukan dari katalog Materi milik layanan ini
+    (ADR 0002).
+    """
+
+    materi_id: int
+    subkompetensi_id: int
+
+
+@dataclass(frozen=True, slots=True)
+class ProgressSubkompetensi:
+    subkompetensi_id: int
+    jumlah_materi: int
+    rata_rata_persentase: float
+
+
+def hitung_progress_belajar(
+    session: Session,
+    *,
+    siswa_id: int,
+    materi_relevan: Sequence[MateriRelevan],
+) -> list[ProgressSubkompetensi]:
+    """Breakdown Progress Belajar per Subkompetensi, dihitung dari materi_relevan
+    (Rekomendasi Materi TERKINI siswa — bukan histori kumulatif). Materi yang
+    belum pernah dibuka (tidak punya baris progress_materi) dianggap 0%. Materi
+    di progress_materi yang tidak ada di materi_relevan diabaikan.
+    """
+    if not materi_relevan:
+        return []
+
+    materi_ids = [m.materi_id for m in materi_relevan]
+    baris_progress = session.scalars(
+        select(ProgressMateri).where(
+            ProgressMateri.siswa_id == siswa_id,
+            ProgressMateri.materi_id.in_(materi_ids),
+        )
+    ).all()
+    persentase_per_materi = {
+        p.materi_id: persentase_selesai(
+            halaman_tertinggi_dicapai=p.halaman_tertinggi_dicapai,
+            total_halaman=p.total_halaman,
+        )
+        for p in baris_progress
+    }
+
+    materi_per_subkompetensi: dict[int, list[float]] = defaultdict(list)
+    for materi in materi_relevan:
+        materi_per_subkompetensi[materi.subkompetensi_id].append(
+            persentase_per_materi.get(materi.materi_id, 0.0)
+        )
+
+    return [
+        ProgressSubkompetensi(
+            subkompetensi_id=subkompetensi_id,
+            jumlah_materi=len(persentase_list),
+            rata_rata_persentase=round(sum(persentase_list) / len(persentase_list), 2),
+        )
+        for subkompetensi_id, persentase_list in sorted(materi_per_subkompetensi.items())
+    ]

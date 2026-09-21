@@ -1,5 +1,5 @@
-"""Skema penyimpanan untuk Aturan Skor & Hasil Simulasi — lihat resolusi tiket 01
-di .scratch/osn-data-analytics/issues/01-aturan-skor-hasil-simulasi.md.
+"""Skema penyimpanan untuk Aturan Skor & Hasil Simulasi (tiket 01) dan Progress
+Belajar (tiket 02) — lihat .scratch/osn-data-analytics/issues/.
 """
 
 from __future__ import annotations
@@ -110,3 +110,36 @@ class HasilTesSubkompetensi(Base):
     jumlah_benar: Mapped[int]
 
     hasil_tes: Mapped[HasilTes] = relationship(back_populates="breakdown_subkompetensi")
+
+
+class ProgressMateri(Base):
+    """Satu baris per siswa per Materi — snapshot kumulatif akses (high-water mark
+    halaman). Metadata Materi (subkompetensi_id, tingkat_seleksi_id, total_halaman)
+    didenormalisasi dari payload event terakhir, bukan di-join dari katalog Materi
+    milik tim fullstack — lihat ADR 0002. persentase_selesai dihitung saat baca
+    (progress.persentase_selesai), bukan disimpan sebagai kolom.
+    """
+
+    __tablename__ = "progress_materi"
+    __table_args__ = (
+        UniqueConstraint("siswa_id", "materi_id"),
+        CheckConstraint("total_halaman > 0", name="ck_progress_materi_total_halaman_positif"),
+        CheckConstraint(
+            "halaman_tertinggi_dicapai >= 1 AND halaman_tertinggi_dicapai <= total_halaman",
+            name="ck_progress_materi_halaman_dalam_rentang",
+        ),
+    )
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    siswa_id: Mapped[int]
+    materi_id: Mapped[int]
+    subkompetensi_id: Mapped[int]
+    tingkat_seleksi_id: Mapped[int]
+    total_halaman: Mapped[int]
+    halaman_tertinggi_dicapai: Mapped[int]
+    pertama_dibuka_pada: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), server_default=func.now()
+    )
+    diperbarui_pada: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), server_default=func.now(), onupdate=func.now()
+    )
