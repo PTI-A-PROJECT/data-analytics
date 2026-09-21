@@ -1,0 +1,23 @@
+[project]
+name = "data-analytics"
+version = "0.1.0"
+description = "Data & analytics service for the OSN Informatika test-prep platform"
+readme = "README.md"
+authors = [
+    { name = "razaq", email = "smknkepanjenkanesa@gmail.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "psycopg[binary]>=3.1",
+    "sqlalchemy>=2.0",
+]
+
+[build-system]
+requires = ["uv_build>=0.12.5,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "mypy>=1.10",
+    "pytest>=8.0",
+]
