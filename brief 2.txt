@@ -1,0 +1,376 @@
+﻿master logic : 
+tujuan : website untuk mempersiapkan siswa untuk mengikuti seleksi OSN bidang informatika.
+user : siswa, super admin, sistem
+fitur yang digunakan : regis, login, log out, pilih tingkat seleksi, pre test,  pemetaan, rekomendasi materi, layanan belajar,simulasi seleksi OSN, hasil, pembahasan dan evaluasi, hasil 
+penjelasan tiap fitur : 
+* regis, login, logout : user input nama, email, dan password. email dan password digunakan untuk login. 
+* pilih tingkat seleksi : pilihan ini digunakan untuk akses materi yang berbeda di tiap tingkatan (kabupaten, provinsi dan nasional) fitur ini masuk kedalam dashboard jadi jika selesai di tingkat dasar bisa lanjut ke tingkat selanjutnya
+* pre test : pre test digunakan untuk mencari tahu kemampuan awal dari user sebelum melakukan simulasi seleksi OSN (pre test di sesuaikan dengan tingkatan seleksi)
+* pemetaan : hasil perhitungan berdasarkan pretest manakah yang mencukupi dan yang belum 
+* rekomendasi materi : memberikan rekomendasi meteri dari yang terlemah hingga terkuat berdasarkan hasil kategori pretest
+* layanan belajar : memberikan layanan materi sesuai tingkatan untuk belajar berdasarkan hasil dari pemetaan
+* simulasi seleksi : melakukan simulasi seleksi OSN sesuai tingkatan yang dipilih berdasarkan standart dari TOKI
+* hasil : menampilkan hasil dari simulasi seleksi OSN
+* evaluasi : evaluasi di tiap soal dan penjelasan
+
+
+Tujuan : website untuk mempersiapkan siswa untuk mengikuti seleksi OSN bidang informatika.
+User : siswa, super admin, sistem
+
+
+Fitur yang digunakan : 
+A. Autentikasi
+* Registrasi
+* Login
+* Logout
+B. Dashboard & Progress
+* Dashboard
+* Progress Belajar
+* Riwayat Hasil
+* Kenaikan Tingkat
+C. Assessment
+* Pilih Tingkat Seleksi
+* Pre-Test
+* Pemetaan Kompetensi
+D. Pembelajaran
+* Rekomendasi Materi
+* Layanan Belajar
+E. Simulasi & Evaluasi
+* Simulasi Seleksi OSN
+* Hasil Simulasi 
+* Evaluasi
+F. Administrasi — Super Admin
+* Manajemen Siswa
+* Manajemen Tingkat
+* Manajemen Kompetensi
+* Manajemen Materi
+* Manajemen Soal
+* Manajemen Simulasi
+* Manajemen Evaluasi
+* Manajemen Aturan Pemetaan
+* Dashboard Super Admin
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+________________
+ 
+No.
+	Fitur
+	Penjelasan
+	1
+	Registrasi
+	Siswa membuat akun dengan mengisi nama, email, dan password. Data tersebut digunakan sebagai identitas untuk mengakses sistem.
+	2
+	Login
+	Siswa masuk ke sistem menggunakan email dan password yang telah didaftarkan untuk mengakses dashboard dan fitur pembelajaran.
+	3
+	Logout
+	Siswa keluar dari akun untuk mengakhiri sesi penggunaan sistem.
+	4
+	Dashboard
+	Menampilkan informasi utama siswa, seperti tingkat seleksi yang sedang diikuti, progress belajar, hasil pemetaan, rekomendasi materi, dan hasil simulasi terakhir.
+	5
+	Pilih Tingkat Seleksi
+	Siswa memilih tingkat persiapan OSN, yaitu Kabupaten, Provinsi, atau Nasional. Setiap tingkat memiliki materi, soal, dan simulasi yang disesuaikan. Tingkat berikutnya dapat dibuka setelah memenuhi ketentuan tingkat sebelumnya.
+	6
+	Pre-Test
+	Siswa mengerjakan tes awal sesuai tingkat seleksi yang dipilih untuk mengetahui kemampuan awal sebelum mengikuti pembelajaran dan simulasi.
+	7
+	Pemetaan Kompetensi
+	Sistem mengolah hasil pre-test untuk mengetahui kompetensi yang sudah dikuasai dan kompetensi yang masih perlu ditingkatkan.
+	8
+	Rekomendasi Materi
+	Sistem memberikan rekomendasi materi berdasarkan hasil pemetaan kompetensi, dengan memprioritaskan materi yang membutuhkan peningkatan.
+	9
+	Layanan Belajar
+	Siswa mengakses materi pembelajaran sesuai tingkat seleksi dan hasil pemetaan kompetensinya.
+	10
+	Progress Belajar
+	Sistem mencatat dan menampilkan perkembangan siswa dalam menyelesaikan materi, latihan, dan tahapan persiapan pada setiap tingkat seleksi.
+	11
+	Simulasi Seleksi OSN
+	Siswa mengikuti simulasi seleksi berdasarkan tingkat yang dipilih. Simulasi disusun sesuai acuan yang digunakan dalam sistem untuk merepresentasikan proses latihan seleksi OSN.
+	12
+	Hasil Simulasi
+	Sistem menampilkan hasil simulasi setelah siswa menyelesaikan seluruh soal, seperti nilai, jumlah jawaban benar dan salah, serta informasi pencapaian lainnya.
+	13
+	Pembahasan dan Evaluasi
+	Siswa melihat pembahasan setiap soal dan penjelasan mengenai jawaban yang benar maupun kesalahan yang dilakukan untuk mengetahui bagian yang perlu dipelajari kembali.
+	14
+	Riwayat Hasil
+	Sistem menyimpan hasil pre-test, latihan, dan simulasi yang pernah dikerjakan sehingga siswa dapat melihat perkembangan hasil belajarnya dari waktu ke waktu.
+	15
+	Kenaikan Tingkat
+	Sistem mengatur akses siswa ke tingkat seleksi berikutnya berdasarkan ketentuan penyelesaian atau pencapaian yang telah ditentukan pada tingkat sebelumnya.
+	16
+	Manajemen Siswa
+	Super Admin dapat melihat dan mengelola data akun siswa yang terdaftar dalam sistem.
+	17
+	Manajemen Tingkat Seleksi
+	Super Admin dapat mengelola data tingkat seleksi, seperti Kabupaten, Provinsi, dan Nasional, termasuk informasi dan status akses setiap tingkat.
+	18
+	Manajemen Kompetensi
+	Super Admin dapat mengelola kompetensi dan subkompetensi yang digunakan sebagai dasar pemetaan kemampuan siswa.
+	19
+	Manajemen Materi
+	Super Admin dapat menambah, mengubah, menghapus, dan mengelola materi pembelajaran berdasarkan tingkat dan kompetensi.
+	20
+	Manajemen Soal
+	Super Admin dapat mengelola soal yang digunakan untuk pre-test, latihan, dan simulasi, termasuk menghubungkan soal dengan tingkat dan kompetensi tertentu.
+	21
+	Manajemen Simulasi
+	Super Admin dapat membuat dan mengatur simulasi, seperti tingkat seleksi, jumlah soal, durasi, serta soal yang digunakan.
+	22
+	Manajemen Pembahasan
+	Super Admin dapat menambahkan dan mengelola pembahasan atau penjelasan untuk setiap soal.
+	23
+	Manajemen Aturan Pemetaan
+	Super Admin dapat mengatur parameter atau ketentuan yang digunakan sistem untuk mengolah hasil tes menjadi pemetaan kompetensi.
+	24
+	Dashboard Super Admin
+	Menampilkan informasi pengelolaan sistem, seperti jumlah siswa, aktivitas pengerjaan, distribusi tingkat, serta data hasil pembelajaran dan simulasi.
+	
+
+RECRUITMENT FITUR
+
+
+ID
+	Fitur
+	Aktor
+	Input
+	Proses Sistem
+	Output
+	Precondition
+	Postcondition
+	Business Rule
+	FR-01
+	Registrasi
+	Siswa
+	Nama, email, password
+	Sistem memvalidasi data dan memeriksa email yang digunakan
+	Akun berhasil dibuat / pesan kesalahan
+	Siswa belum memiliki akun
+	Data akun siswa tersimpan
+	Email harus unik dan data wajib diisi
+	FR-02
+	Login
+	Siswa
+	Email, password
+	Sistem memvalidasi kredensial pengguna
+	Dashboard siswa / pesan login gagal
+	Akun telah terdaftar
+	Sesi siswa aktif
+	Email dan password harus sesuai
+	FR-03
+	Logout
+	Siswa
+	Sesi pengguna
+	Sistem mengakhiri sesi login
+	Halaman login
+	Siswa sedang login
+	Sesi pengguna berakhir
+	Pengguna harus login kembali untuk mengakses sistem
+	FR-04
+	Dashboard
+	Siswa
+	Data akun, progress, hasil, rekomendasi
+	Sistem mengambil dan mengolah data perkembangan siswa
+	Informasi dashboard
+	Siswa telah login
+	Informasi perkembangan dapat dilihat
+	Dashboard menampilkan data sesuai akun siswa
+	FR-05
+	Pilih Tingkat Seleksi
+	Siswa
+	Pilihan tingkat
+	Sistem memeriksa tingkat yang dapat diakses siswa
+	Tingkat yang dipilih / informasi akses
+	Siswa telah login
+	Tingkat aktif tersimpan
+	Tingkat berikutnya hanya dapat diakses sesuai ketentuan
+	FR-06
+	Pre-Test
+	Siswa
+	Jawaban soal pre-test
+	Sistem menampilkan soal, menerima jawaban, menyimpan jawaban, dan menghitung hasil
+	Nilai pre-test
+	Siswa telah memilih tingkat
+	Hasil pre-test tersimpan
+	Soal pre-test sesuai tingkat yang dipilih
+	FR-07
+	Pemetaan Kompetensi
+	Sistem
+	Hasil pre-test, kompetensi soal, aturan pemetaan
+	Sistem menganalisis hasil berdasarkan kompetensi dan aturan pemetaan
+	Peta kompetensi siswa
+	Pre-test telah diselesaikan
+	Data pemetaan kompetensi tersimpan
+	Setiap soal yang digunakan dalam pemetaan harus memiliki kompetensi terkait
+	FR-08
+	Rekomendasi Materi
+	Sistem
+	Hasil pemetaan kompetensi
+	Sistem menentukan materi berdasarkan kompetensi yang perlu ditingkatkan
+	Daftar rekomendasi materi
+	Pemetaan kompetensi tersedia
+	Rekomendasi tersimpan/ditampilkan
+	Materi diprioritaskan berdasarkan kebutuhan kompetensi siswa
+	FR-09
+	Layanan Belajar
+	Siswa
+	Pilihan/rekomendasi materi
+	Sistem mengambil dan menampilkan materi sesuai tingkat dan kompetensi
+	Materi pembelajaran
+	Siswa telah login dan memiliki akses tingkat
+	Aktivitas belajar dapat dicatat
+	Materi harus sesuai tingkat dan kompetensi
+	FR-10
+	Progress Belajar
+	Sistem
+	Data materi, latihan, aktivitas siswa
+	Sistem menghitung perkembangan pembelajaran siswa
+	Informasi progress
+	Terdapat aktivitas belajar
+	Progress siswa diperbarui
+	Progress berdasarkan aktivitas yang tercatat sistem
+	FR-11
+	Simulasi Seleksi OSN
+	Siswa
+	Pilihan simulasi, jawaban
+	Sistem menampilkan simulasi, mengatur durasi, dan menyimpan pengerjaan
+	Hasil pengerjaan simulasi
+	Siswa memiliki akses tingkat
+	Percobaan simulasi tersimpan
+	Simulasi mengikuti konfigurasi yang ditentukan
+	FR-12
+	Hasil Simulasi
+	Sistem
+	Jawaban simulasi, kunci jawaban
+	Sistem memeriksa jawaban dan menghitung hasil
+	Nilai, benar, salah, dan pencapaian
+	Simulasi telah selesai
+	Hasil simulasi tersimpan
+	Perhitungan hasil mengikuti aturan penilaian sistem
+	FR-13
+	Pembahasan dan Evaluasi
+	Siswa
+	Hasil pengerjaan, pembahasan soal
+	Sistem menampilkan jawaban siswa, jawaban benar, dan pembahasan
+	Pembahasan dan evaluasi
+	Latihan/simulasi telah dikerjakan
+	Siswa memperoleh informasi kesalahan
+	Pembahasan tersedia untuk soal yang memiliki pembahasan
+	FR-14
+	Riwayat Hasil
+	Siswa
+	Data hasil pre-test, latihan, simulasi
+	Sistem mengambil dan mengurutkan hasil berdasarkan waktu
+	Riwayat hasil belajar
+	Siswa memiliki riwayat pengerjaan
+	Riwayat dapat dilihat kembali
+	Riwayat hanya menampilkan data siswa terkait
+	FR-15
+	Kenaikan Tingkat
+	Sistem
+	Progress, hasil, aturan kenaikan tingkat
+	Sistem memeriksa pencapaian siswa terhadap ketentuan tingkat
+	Status akses tingkat berikutnya
+	Siswa telah menyelesaikan persyaratan tingkat
+	Akses tingkat dapat berubah
+	Kenaikan tingkat mengikuti aturan yang ditetapkan sistem
+	FR-16
+	Manajemen Siswa
+	Super Admin
+	Data akun siswa
+	Sistem menampilkan dan mengelola data siswa
+	Data siswa terkelola
+	Super Admin telah login
+	Data siswa tersimpan/diperbarui
+	Hanya Super Admin yang dapat mengelola data siswa
+	FR-17
+	Manajemen Tingkat Seleksi
+	Super Admin
+	Data tingkat, informasi, status akses
+	Sistem melakukan pengelolaan tingkat seleksi
+	Data tingkat terkelola
+	Super Admin telah login
+	Data tingkat tersimpan/diperbarui
+	Tingkat terdiri dari Kabupaten, Provinsi, dan Nasional
+	FR-18
+	Manajemen Kompetensi
+	Super Admin
+	Kompetensi, subkompetensi
+	Sistem melakukan CRUD kompetensi
+	Data kompetensi terkelola
+	Super Admin telah login
+	Kompetensi tersimpan/diperbarui
+	Kompetensi digunakan sebagai dasar pemetaan
+	FR-19
+	Manajemen Materi
+	Super Admin
+	Judul, isi materi, tingkat, kompetensi
+	Sistem melakukan CRUD dan menghubungkan materi dengan tingkat/kompetensi
+	Data materi terkelola
+	Super Admin telah login
+	Materi dapat digunakan siswa
+	Materi harus memiliki keterkaitan tingkat/kompetensi
+	FR-20
+	Manajemen Soal
+	Super Admin
+	Soal, pilihan jawaban, kunci, tingkat, kompetensi
+	Sistem melakukan CRUD soal dan menentukan keterkaitannya
+	Data soal terkelola
+	Super Admin telah login
+	Soal dapat digunakan dalam assessment
+	Soal harus memiliki tingkat dan kompetensi yang sesuai
+	FR-21
+	Manajemen Simulasi
+	Super Admin
+	Nama simulasi, tingkat, jumlah soal, durasi, soal
+	Sistem membuat dan mengatur konfigurasi simulasi
+	Simulasi terkelola
+	Super Admin telah login
+	Simulasi tersedia untuk siswa
+	Simulasi harus memiliki tingkat, soal, dan konfigurasi yang valid
+	FR-22
+	Manajemen Pembahasan
+	Super Admin
+	Soal, pembahasan
+	Sistem menyimpan dan mengelola pembahasan soal
+	Pembahasan soal terkelola
+	Soal telah tersedia
+	Pembahasan dapat ditampilkan kepada siswa
+	Pembahasan harus terhubung dengan soal
+	FR-23
+	Manajemen Aturan Pemetaan
+	Super Admin
+	Parameter dan ketentuan pemetaan
+	Sistem menyimpan aturan yang digunakan untuk mengolah hasil assessment
+	Aturan pemetaan terkelola
+	Super Admin telah login
+	Aturan dapat digunakan sistem
+	Aturan menjadi dasar proses pemetaan kompetensi
+	FR-24
+	Dashboard Super Admin
+	Super Admin
+	Data siswa, aktivitas, tingkat, hasil
+	Sistem mengolah data menjadi informasi statistik
+	Dashboard administrasi
+	Super Admin telah login
+	Informasi pengelolaan sistem dapat dipantau
+	Data yang ditampilkan harus berasal dari data sistem
