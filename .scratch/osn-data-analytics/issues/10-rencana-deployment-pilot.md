@@ -52,6 +52,19 @@ Seluruh keputusan deployment untuk tahap pilot multi-sekolah telah disepakati me
 
 ## Implementation
 
+> **Catatan scope (2026-09-22).** Bagian anonymize-expired di bawah — ditandai
+> **[di luar scope tiket 10]** di tiap baris terkait — TIDAK diminta oleh
+> Resolution di atas (5 poin: topologi, isolasi DB, orkestrasi, resource
+> limit, jalur skalabilitas). Saya tambahkan sendiri saat mengerjakan tiket
+> ini karena terasa terhubung ke temuan retensi tiket 12, tapi itu keputusan
+> sepihak, bukan permintaan eksplisit. Ditinjau ulang bersama pemilik map:
+> kode dibiarkan apa adanya (sudah teruji, tidak di-revert), tapi kepatuhan
+> UU PDP untuk retensi data **tidak harus** lewat mekanisme teknis ini —
+> draft policy/consent yang disetujui user tanpa endpoint/cron tambahan juga
+> sah untuk skala pilot. Tidak dibuat tiket terpisah untuk ini per permintaan
+> pemilik map; anggap bagian yang ditandai sebagai bonus opsional, bukan
+> bagian inti deployment plan.
+
 Diimplementasikan di commit `6088b7a` (branch `main`, setelah `git log
 --oneline 9707645..6088b7a`), **diverifikasi nyata** — bukan sekadar dicatat.
 Klaim "Implementation" versi sebelumnya di bagian ini (menyebut commit
@@ -82,27 +95,27 @@ Verifikasi konkret yang dilakukan (bukan cuma menulis file):
 | `docker-compose.dev.yml` | Override dev: port diekspos ke host, hot-reload `--reload`, limit dilonggarkan (4 CPU/4GB — bukan "dihapus"; Compose merge mapping per-key, `limits: {}` tidak menghapus limit dari file dasar, lihat catatan di file), `app-network` dibuat lokal |
 | `Dockerfile` | `python:3.11.9-slim` (dipin, bukan tag mengambang `3.11-slim`), `uv==0.12.5` dipin, non-root user, `curl` untuk healthcheck, CMD pakai `uv run --no-sync` (tanpa ini, tiap start container diam-diam `uv sync` ulang termasuk dependency dev seperti mypy — nambah puluhan detik startup) |
 | `.dockerignore` | Baru — `.git/`, `.claude/`, `.scratch/`, `tests/`, `.env`, dll tidak ikut masuk image. `README.md` sengaja **tidak** diabaikan (dibaca `uv sync` dari `pyproject.toml`'s `readme = "README.md"` saat build paket — sempat bikin build gagal sebelum ini disadari) |
-| `.env.example` | Variabel: `INTERNAL_API_TOKEN`, `POSTGRES_*`, `DATABASE_URL`, `DATA_RETENTION_MONTHS` |
-| `Makefile` | Perintah `make up`, `make dev-up`, `make migrate` (pakai `--no-sync` juga), `make anonymize`, `make anonymize-dry-run`, `make backup-db` |
-| `README.md` | Bagian "Deployment (VPS pilot)" — cara jalan, cron anonymize, backup, jalur skalabilitas |
+| `.env.example` | Variabel: `POSTGRES_*`, `DATABASE_URL`, `INTERNAL_API_TOKEN` (scope tiket 10 — Resolution poin 1 eksplisit minta auth `X-Internal-Token`); `DATA_RETENTION_MONTHS` **[di luar scope tiket 10]** |
+| `Makefile` | `make up`, `make dev-up`, `make migrate`, `make backup-db` (scope tiket 10); `make anonymize`, `make anonymize-dry-run` **[di luar scope tiket 10]** |
+| `README.md` | Bagian "Deployment (VPS pilot)" (scope tiket 10); bagian cron anonymize **[di luar scope tiket 10]** |
 
 #### Aplikasi FastAPI (`src/data_analytics/` — paket datar, bukan `src/routers/` seperti klaim versi lama; lihat ADR 0003/tiket 09 soal keputusan struktur ini)
 
 | File | Fungsi |
 |---|---|
-| `config.py` | Ditambah `internal_api_token`, `data_retention_months` (default 24 — lihat riset tiket 12) di `Settings` yang sudah ada dari tiket 09 |
+| `config.py` | Ditambah `internal_api_token` (scope tiket 10) dan `data_retention_months` **[di luar scope tiket 10]** di `Settings` yang sudah ada dari tiket 09 |
 | `db.py` | Sudah ada dari tiket 09 (bukan `database.py`) — engine + `SessionLocal` + `get_db` |
-| `auth.py` | Baru — dependency `verify_internal_token`: header hilang → 422 otomatis dari FastAPI, token salah → 403 |
-| `models.py` | `HasilTes` ditambah `is_anonymized` (default+server_default False) dan `siswa_id` dibuat nullable |
-| `repository.py` | Baru — `anonimkan_hasil_tes_kedaluwarsa` (bukan nama Inggris seperti draft awal — semua fungsi repository lain Indonesia-first) |
-| `api.py` | Sudah ada dari tiket 09 (bukan `main.py`/`routers/` terpisah) — ditambah `POST /api/v1/admin/anonymize-expired` |
+| `auth.py` | Baru — dependency `verify_internal_token` (scope tiket 10, Resolution poin 1): header hilang → 422 otomatis dari FastAPI, token salah → 403 |
+| `models.py` | `HasilTes` ditambah `is_anonymized` dan `siswa_id` dibuat nullable **[di luar scope tiket 10]** |
+| `repository.py` | Baru — `anonimkan_hasil_tes_kedaluwarsa` **[di luar scope tiket 10]** (bukan nama Inggris seperti draft awal — semua fungsi repository lain Indonesia-first) |
+| `api.py` | Sudah ada dari tiket 09 (bukan `main.py`/`routers/` terpisah) — ditambah `POST /api/v1/admin/anonymize-expired` **[di luar scope tiket 10]**, memakai `verify_internal_token` (scope tiket 10) sebagai dependency |
 
 #### Migrasi Database (Alembic)
 
 | File | Fungsi |
 |---|---|
 | `alembic/env.py` | Ditambah `render_as_batch=True` — dibutuhkan SQLite untuk `ALTER COLUMN` nullability |
-| `alembic/versions/0002_anonymisasi_hasil_tes.py` | `siswa_id` nullable, tambah `is_anonymized`; upgrade & downgrade diverifikasi jalan |
+| `alembic/versions/0002_anonymisasi_hasil_tes.py` | `siswa_id` nullable, tambah `is_anonymized` **[di luar scope tiket 10]**; upgrade & downgrade diverifikasi jalan |
 
 (`alembic.ini`, `alembic/versions/0001_...`: sudah ada dari tiket 09, bukan bagian tiket ini.)
 
@@ -110,9 +123,9 @@ Verifikasi konkret yang dilakukan (bukan cuma menulis file):
 
 | File | Coverage |
 |---|---|
-| `tests/test_anonymization.py` | 6 test level repository: lama dianonimkan, agregat tetap utuh, baru tidak disentuh, dry-run tidak mutasi, idempoten, hanya baris kedaluwarsa yang terdampak |
-| `tests/test_api.py` (ditambah `TestAnonymizeExpired`) | 5 test level API: tanpa token → 422, token salah → 403, dry-run, live-run, data belum kedaluwarsa dilewati |
-| `tests/conftest.py` | Ditambah fixture `buat_hasil_tes` (factory, dipakai kedua file test di atas — sebelumnya duplikat) |
+| `tests/test_anonymization.py` **[di luar scope tiket 10]** | 6 test level repository: lama dianonimkan, agregat tetap utuh, baru tidak disentuh, dry-run tidak mutasi, idempoten, hanya baris kedaluwarsa yang terdampak |
+| `tests/test_api.py` (ditambah `TestAnonymizeExpired`) **[di luar scope tiket 10]** | 5 test level API: tanpa token → 422, token salah → 403, dry-run, live-run, data belum kedaluwarsa dilewati |
+| `tests/conftest.py` **[di luar scope tiket 10]** | Ditambah fixture `buat_hasil_tes` (factory, dipakai kedua file test di atas — sebelumnya duplikat) |
 
 ### Cara menjalankan di VPS pilot
 
@@ -129,7 +142,7 @@ docker compose ps
 docker compose exec analytics-api curl -sf http://localhost:8000/health
 ```
 
-### Jadwal UU PDP anonymization (cron job)
+### Jadwal UU PDP anonymization (cron job) **[di luar scope tiket 10 — lihat "Catatan scope" di atas]**
 
 ```cron
 0 2 1 * * cd /path/ke/repo && INTERNAL_API_TOKEN=<token> make anonymize >> /var/log/analytics-anonymize.log 2>&1
