@@ -15,3 +15,34 @@ kebijakan kepatuhan data siswa (lihat juga tiket riset UU PDP) — apakah ada ba
 retensi/consent yang sudah ditetapkan; (4) timeline realistis sekolah pilot mulai
 memakai sistem. Selesaikan tiket ini dengan mencatat jawaban dari tim fullstack untuk
 tiap poin.
+
+## Resolution
+
+Seluruh 4 fakta arsitektural telah diselaraskan melalui sesi grilling terstruktur:
+
+1. **Model Identitas Siswa ↔ Sekolah**:
+   - Terdapat entitas `Sekolah` eksplisit di skema database aplikasi utama. Siswa terafiliasi ke sekolah tertentu.
+   - Backend fullstack selalu menyertakan `sekolah_id` bersama `siswa_id` dalam setiap payload submission tes (`POST /api/v1/hasil-tes` dan endpoint pemetaan).
+   - Layanan Data & Analytics membekukan `sekolah_id` sebagai snapshot pada tabel `hasil_tes` (nullable) saat attempt diselesaikan. Ini memungkinkan agregasi dan filter performa per sekolah di Dashboard Super Admin (FR-51) tanpa layanan analytics perlu mengelola CRUD data sekolah.
+
+2. **Lokasi & Topologi Hosting**:
+   - Layanan Data & Analytics akan **co-located** di 1 VPS (Ubuntu) yang sama dengan aplikasi utama menggunakan Docker Compose untuk fase pilot multi-sekolah.
+   - Komunikasi antar-layanan berjalan privat di dalam Docker bridge network (`http://analytics:8000`), port 8000 tidak diekspos ke internet publik luar VPS.
+   - Autentikasi panggilan antar-service diamankan dengan static shared secret pada header HTTP (`X-Internal-Token`).
+   - Database PostgreSQL terpisah (dedicated container di Docker Compose atau database `analytics_db` terpisah) agar isolasi data dan eksekusi migrasi skema analytics mandiri dari skema aplikasi utama.
+
+3. **Kebijakan Consent Orang Tua & Retensi Data (UU PDP)**:
+   - Backend fullstack bertindak sebagai *gatekeeper* kepatuhan UU PDP Pasal 25(2) (menangani verifikasi dan pencatatan consent eksplisit orang tua/wali untuk siswa minor sebelum mengizinkan pengerjaan tes).
+   - Durasi retensi data performa/hasil tes siswa ditetapkan **1 siklus tahun ajaran OSN** (12 bulan).
+   - Mekanisme pembersihan: Layanan Data & Analytics menyediakan endpoint internal pembersihan terjadwal (`POST /api/v1/admin/anonymize-expired`). Saat retensi kedaluwarsa, baris data tidak di-hard delete melainkan di-**anonimkan** (`siswa_id` di-set `NULL` / di-hash searah) agar data statistik agregat sekolah dan nasional tetap utuh untuk historis platform.
+
+4. **Timeline & Pola Beban Konkurensi Pilot**:
+   - Timeline: Target go-live pilot dijadwalkan dalam **1–2 bulan ke depan** untuk 2–3 sekolah mitra (total ~100 siswa aktif).
+   - Pola Beban: Simulasi dikerjakan secara **serentak di lab komputer sekolah**, menghasilkan lonjakan beban puncak (peak burst) ~50 request submission dalam jendela 5–10 menit saat waktu tes habis.
+   - Performa: Pemrosesan skor dan pemetaan kompetensi tetap diproses secara **sinkron instan (<500ms)**. Komputasi matriks pilihan ganda sangat ringan di CPU Python; FastAPI (Gunicorn/Uvicorn workers + connection pool PostgreSQL) mampu menangani konkurensi ini tanpa membutuhkan antrean pesan asinkron (Kafka/Celery) yang berlebihan.
+
+### Dependensi turunan yang terbuka
+
+- Tiket [10-rencana-deployment-pilot.md](10-rencana-deployment-pilot.md) kini **unblocked** (spesifikasi Docker Compose, co-located VPS, database terpisah, dan jaringan bridge siap dirumuskan).
+- Tiket [11-kontrak-api-pemetaan-rekomendasi.md](11-kontrak-api-pemetaan-rekomendasi.md) dapat menyertakan `sekolah_id` pada payload submission tes.
+- Tiket [13-selaraskan-consent-orang-tua.md](13-selaraskan-consent-orang-tua.md) selaras dengan peran fullstack sebagai gatekeeper consent orang tua.
