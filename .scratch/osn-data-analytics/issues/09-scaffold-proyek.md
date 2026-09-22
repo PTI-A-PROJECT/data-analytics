@@ -1,7 +1,7 @@
 # Task: Scaffold Proyek FastAPI + PostgreSQL & Data Uji
 
 Type: task
-Status: open
+Status: resolved
 Blocked by: none
 
 ## Question
@@ -59,3 +59,56 @@ Rancangan arsitektur dan scaffolding proyek telah disepakati melalui sesi grilli
    - Endpoint:
      - `GET /health`: Liveness probe cepat.
      - `GET /api/v1/health`: Readiness probe yang melakukan query ping aktif ke database.
+
+## Implementation
+
+Diimplementasikan dan **diverifikasi jalan** (bukan sekadar dicatat — lihat catatan
+verifikasi di tiket 10 untuk kontras dengan klaim yang tidak terverifikasi):
+`uv run pytest` (64 test lulus), `uv run mypy src tests` (bersih), migrasi
+`alembic upgrade head` dan `python -m data_analytics.scripts.seed` dijalankan
+end-to-end terhadap file SQLite sungguhan (bukan cuma di test).
+
+Tiga penyesuaian sengaja menyimpang dari resolusi di atas, disepakati bersama user
+sebelum coding (lihat percakapan sesi ini untuk konteks lengkap):
+
+1. **Struktur folder**: kode tetap di paket datar `src/data_analytics/` yang sudah
+   ada dan teruji (tiket 01/02/08), BUKAN direstrukturisasi ke layout
+   `src/domain/`, `src/models/`, `src/schemas/`, `src/api/`, `src/core/`,
+   `src/scripts/` yang diusulkan poin 2. Alasan: restrukturisasi akan mengubah
+   import path 48 test yang sudah ada tanpa manfaat fungsional, murni risiko
+   regresi.
+2. **Kepemilikan tabel katalog**: `tingkat_seleksi`, `aturan_pemetaan`,
+   `kompetensi`, `subkompetensi`, `soal` awalnya bertentangan dengan pola
+   "tanpa FK, caller-supplied" yang sudah mapan (diperluas dari ADR 0002). User
+   memilih tetap membuatnya sebagai tabel produksi sungguhan (bukan cuma
+   fixture test) — didokumentasikan formal di **`docs/adr/0003`**, termasuk
+   penjelasan bahwa `HasilTes`/`ProgressMateri`/dst. tetap TIDAK di-FK ke
+   tabel-tabel baru ini.
+3. **Driver Postgres**: tetap `psycopg[binary]` (psycopg3, sudah terpasang
+   sejak tiket 01) alih-alih `psycopg2-binary` yang disebut poin 1 — tidak ada
+   alasan untuk migrasi driver mundur.
+
+### File yang dibuat/diubah
+
+| File | Fungsi |
+|---|---|
+| `src/data_analytics/models.py` | + `TingkatSeleksi`, `AturanPemetaan`, `Kompetensi`, `Subkompetensi`, `Soal` |
+| `src/data_analytics/config.py` | `Settings` (pydantic-settings) — baca `DATABASE_URL` dari env/`.env` |
+| `src/data_analytics/db.py` | Engine + `SessionLocal` + `get_db` dependency |
+| `src/data_analytics/api.py` | FastAPI app: `GET /health`, `GET /api/v1/health` |
+| `src/data_analytics/scripts/seed.py` | Seed idempotent: 3 Tingkat Seleksi, aturan predikat+pemetaan bawaan, 2 Kompetensi/4 Subkompetensi, 15 soal seimbang, 2 dummy siswa + 1 dummy sekolah |
+| `alembic.ini`, `alembic/env.py`, `alembic/versions/0001_skema_awal.py` | Migrasi awal — seluruh 9 tabel (autogenerate dari `Base.metadata`, diverifikasi lewat `tests/test_migrations.py`) |
+| `docs/adr/0003-local-catalog-tables-for-seed-data.md` | Dokumentasi keputusan poin 2 di atas |
+| `.env.example`, `README.md`, `.gitignore` (+`.env`, `*.db`) | Onboarding dev |
+| `tests/test_catalog_models.py`, `tests/test_api.py`, `tests/test_seed.py`, `tests/test_migrations.py` | Test baru (TDD) untuk seluruh poin di atas |
+| `tests/conftest.py` | Fixture `session` ditambah `StaticPool`/`check_same_thread=False` supaya bisa dipakai lintas-thread oleh FastAPI `TestClient` |
+
+### Cara menjalankan
+
+```bash
+uv sync
+cp .env.example .env
+uv run alembic upgrade head
+uv run python -m data_analytics.scripts.seed
+uv run uvicorn data_analytics.api:app --reload
+```

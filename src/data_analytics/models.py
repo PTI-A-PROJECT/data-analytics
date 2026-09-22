@@ -7,7 +7,15 @@ from __future__ import annotations
 import enum
 from datetime import datetime
 
-from sqlalchemy import CheckConstraint, DateTime, ForeignKey, Numeric, UniqueConstraint, func
+from sqlalchemy import (
+    JSON,
+    CheckConstraint,
+    DateTime,
+    ForeignKey,
+    Numeric,
+    UniqueConstraint,
+    func,
+)
 from sqlalchemy import Enum as SqlEnum
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship
 
@@ -146,3 +154,103 @@ class ProgressMateri(Base):
     diperbarui_pada: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), server_default=func.now(), onupdate=func.now()
     )
+
+
+# --- Katalog lokal (tiket 09) ------------------------------------------------
+#
+# TingkatSeleksi, AturanPemetaan, Kompetensi, Subkompetensi, dan Soal di bawah
+# ini ADALAH tabel yang dimiliki & dimigrasikan layanan ini — beda dari
+# siswa_id/sekolah_id/simulasi_id/materi_id di atas, yang sengaja disimpan
+# sebagai int mentah tanpa FK karena entitasnya dikelola tim fullstack (ADR
+# 0002). Kelima tabel ini eksis sebagai data uji/seed lokal supaya Peta
+# Kompetensi & Rekomendasi Materi bisa dikembangkan sebelum data pilot nyata
+# tersedia — bukan pengelolaan konten soal/materi produksi (itu tetap milik
+# tim lain, lihat map.md "Out of scope"). Lihat docs/adr/0003.
+#
+# Tabel HasilTes/HasilTesSubkompetensi/AturanPredikat/ProgressMateri di atas
+# TIDAK diberi FK ke tabel-tabel ini — pencatatan hasil tes tetap mempercayai
+# id yang dikirim pemanggil apa adanya, konsisten dengan resolusi tiket 01/08.
+
+
+class TingkatSeleksi(Base):
+    """Kabupaten/Provinsi/Nasional. urutan menentukan jenjang (1 = pertama)."""
+
+    __tablename__ = "tingkat_seleksi"
+    __table_args__ = (UniqueConstraint("urutan"),)
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    nama: Mapped[str]
+    urutan: Mapped[int]
+
+
+class AturanPemetaan(Base):
+    """Satu baris per Tingkat Seleksi — ambang correctness & representasi yang
+    dipakai algoritma Pemetaan Kompetensi (FR-07). Lihat CONTEXT.md "Aturan
+    Pemetaan".
+    """
+
+    __tablename__ = "aturan_pemetaan"
+    __table_args__ = (
+        UniqueConstraint("tingkat_seleksi_id"),
+        CheckConstraint(
+            "ambang_cukup_persen >= 0 AND ambang_cukup_persen <= 100",
+            name="ck_aturan_pemetaan_ambang_cukup_rentang",
+        ),
+        CheckConstraint(
+            "ambang_representasi_persen >= 0 AND ambang_representasi_persen <= 100",
+            name="ck_aturan_pemetaan_ambang_representasi_rentang",
+        ),
+    )
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    tingkat_seleksi_id: Mapped[int] = mapped_column(
+        ForeignKey("tingkat_seleksi.id", ondelete="CASCADE")
+    )
+    ambang_cukup_persen: Mapped[float] = mapped_column(Numeric(5, 2, asdecimal=False))
+    ambang_representasi_persen: Mapped[float] = mapped_column(
+        Numeric(5, 2, asdecimal=False)
+    )
+
+
+class Kompetensi(Base):
+    """Area kompetensi tingkat atas (mis. "Struktur Data")."""
+
+    __tablename__ = "kompetensi"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    nama: Mapped[str]
+    deskripsi: Mapped[str | None]
+
+
+class Subkompetensi(Base):
+    """Unit kompetensi paling rinci (mis. "Graph"), milik satu Kompetensi."""
+
+    __tablename__ = "subkompetensi"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    kompetensi_id: Mapped[int] = mapped_column(
+        ForeignKey("kompetensi.id", ondelete="CASCADE")
+    )
+    nama: Mapped[str]
+    deskripsi: Mapped[str | None]
+
+
+class Soal(Base):
+    """Soal pilihan ganda data uji, ditandai Subkompetensi & Tingkat Seleksi.
+    pilihan_jawaban adalah map label -> teks (mis. {"A": "...", "B": "..."}).
+    """
+
+    __tablename__ = "soal"
+    __table_args__ = (UniqueConstraint("tingkat_seleksi_id", "nomor"),)
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    subkompetensi_id: Mapped[int] = mapped_column(
+        ForeignKey("subkompetensi.id", ondelete="CASCADE")
+    )
+    tingkat_seleksi_id: Mapped[int] = mapped_column(
+        ForeignKey("tingkat_seleksi.id", ondelete="CASCADE")
+    )
+    nomor: Mapped[int]
+    pertanyaan: Mapped[str]
+    pilihan_jawaban: Mapped[dict[str, str]] = mapped_column(JSON)
+    kunci_jawaban: Mapped[str]
