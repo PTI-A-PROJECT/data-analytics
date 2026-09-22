@@ -17,6 +17,7 @@ from sqlalchemy import (
     UniqueConstraint,
     false,
     func,
+    true,
 )
 from sqlalchemy import Enum as SqlEnum
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship
@@ -336,5 +337,108 @@ class JawabanSiswa(Base):
     durasi_detik: Mapped[int]
     is_lambat: Mapped[bool]
     dibuat_pada: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), server_default=func.now()
+    )
+
+
+# --- Kenaikan Tingkat (tiket 03) ---------------------------------------------
+#
+# tingkat_asal_id/tingkat_tujuan_id di bawah adalah FK sungguhan ke TingkatSeleksi
+# lokal (bukan tingkat_seleksi_id caller-supplied UUID yang dipakai HasilTes dkk.)
+# — Aturan Kenaikan Tingkat adalah config Super Admin terhadap jenjang lokal
+# (urutan Kabupaten/Provinsi/Nasional), konsep yang hanya eksis di katalog lokal
+# ini (lihat catatan "Katalog lokal" di atas). Ini berarti ada gap yang sama
+# seperti yang sudah dicatat tiket 11 ("dependensi turunan terbuka"): pemanggil
+# endpoint evaluasi kenaikan (tingkat/evaluasi) harus mengirim tingkat_asal_id
+# sebagai id katalog lokal, bukan UUID yang sama dengan HasilTes.tingkat_seleksi_id
+# — rekonsiliasi dua skema id ini belum diselesaikan, konsisten dengan gap
+# progress_materi/katalog lokal yang juga masih terbuka.
+class AturanKenaikanTingkat(Base):
+    """Config Super Admin: syarat kelayakan pindah dari satu Tingkat Seleksi
+    lokal ke tingkat berikutnya (resolusi tiket 03/FR-17).
+    """
+
+    __tablename__ = "aturan_kenaikan_tingkat"
+    __table_args__ = (
+        UniqueConstraint("tingkat_asal_id", "tingkat_tujuan_id"),
+        CheckConstraint(
+            "skor_simulasi_min >= 0 AND skor_simulasi_min <= 100",
+            name="ck_aturan_kenaikan_skor_rentang",
+        ),
+        CheckConstraint(
+            "persentase_kompetensi_cukup_min >= 0 AND persentase_kompetensi_cukup_min <= 100",
+            name="ck_aturan_kenaikan_persentase_rentang",
+        ),
+    )
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    tingkat_asal_id: Mapped[int] = mapped_column(
+        ForeignKey("tingkat_seleksi.id", ondelete="CASCADE")
+    )
+    tingkat_tujuan_id: Mapped[int] = mapped_column(
+        ForeignKey("tingkat_seleksi.id", ondelete="CASCADE")
+    )
+    skor_simulasi_min: Mapped[float] = mapped_column(Numeric(5, 2, asdecimal=False))
+    persentase_kompetensi_cukup_min: Mapped[float] = mapped_column(
+        Numeric(5, 2, asdecimal=False)
+    )
+    aktif: Mapped[bool] = mapped_column(default=True, server_default=true())
+
+
+class AksesTingkatSiswa(Base):
+    """Status akses satu siswa ke satu Tingkat Seleksi lokal — 'terbuka' bersifat
+    permanen begitu tercapai (resolusi tiket 03: tidak pernah terkunci kembali).
+    Tingkat urutan=1 default 'terbuka' (dibuka_karena='default_awal') saat siswa
+    pertama kali dikenal sistem — lihat repository.inisialisasi_akses_siswa.
+    """
+
+    __tablename__ = "akses_tingkat_siswa"
+    __table_args__ = (UniqueConstraint("siswa_id", "tingkat_seleksi_id"),)
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    siswa_id: Mapped[str]
+    tingkat_seleksi_id: Mapped[int] = mapped_column(
+        ForeignKey("tingkat_seleksi.id", ondelete="CASCADE")
+    )
+    status: Mapped[str]
+    dibuka_karena: Mapped[str | None]
+    hasil_tes_id: Mapped[int | None] = mapped_column(
+        ForeignKey("hasil_tes.id", ondelete="SET NULL")
+    )
+    dibuka_pada: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+    catatan: Mapped[str | None]
+    dibuat_pada: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), server_default=func.now()
+    )
+    diperbarui_pada: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), server_default=func.now(), onupdate=func.now()
+    )
+
+    tingkat_seleksi: Mapped[TingkatSeleksi] = relationship()
+
+
+class RiwayatEvaluasiKenaikan(Base):
+    """Log audit satu evaluasi kenaikan tingkat (dipicu tiap submission Simulasi
+    — resolusi tiket 03). Baris ini tidak pernah diubah setelah dibuat.
+    """
+
+    __tablename__ = "riwayat_evaluasi_kenaikan"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    siswa_id: Mapped[str]
+    hasil_tes_id: Mapped[int] = mapped_column(
+        ForeignKey("hasil_tes.id", ondelete="CASCADE")
+    )
+    aturan_kenaikan_id: Mapped[int] = mapped_column(
+        ForeignKey("aturan_kenaikan_tingkat.id", ondelete="CASCADE")
+    )
+    skor_aktual: Mapped[float] = mapped_column(Numeric(5, 2, asdecimal=False))
+    skor_target: Mapped[float] = mapped_column(Numeric(5, 2, asdecimal=False))
+    syarat_skor_lulus: Mapped[bool]
+    persentase_cukup_aktual: Mapped[float] = mapped_column(Numeric(5, 2, asdecimal=False))
+    persentase_cukup_target: Mapped[float] = mapped_column(Numeric(5, 2, asdecimal=False))
+    syarat_kompetensi_lulus: Mapped[bool]
+    hasil_evaluasi: Mapped[str]
+    dievaluasi_pada: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), server_default=func.now()
     )

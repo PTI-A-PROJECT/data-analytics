@@ -1,7 +1,7 @@
-"""DTO Pydantic untuk kontrak API publik (tiket 11) — endpoint
-POST /api/v1/analytics/assessment/submit. Terpisah dari model SQLAlchemy
-(models.py) supaya bentuk wire format (mis. jenis_tes UPPERCASE, label
-status_pemetaan berkapital) tidak membocorkan representasi penyimpanan
+"""DTO Pydantic untuk kontrak API publik: endpoint submit Pre-Test/Simulasi
+(tiket 11) dan endpoint Kenaikan Tingkat (tiket 03). Terpisah dari model
+SQLAlchemy (models.py) supaya bentuk wire format (mis. jenis_tes UPPERCASE,
+label status_pemetaan berkapital) tidak membocorkan representasi penyimpanan
 internal.
 """
 
@@ -57,3 +57,121 @@ class SubmitAssessmentResponse(BaseModel):
     status: Literal["success"] = "success"
     message: str = "Pemetaan kompetensi berhasil dihitung"
     data: SubmitAssessmentData
+
+
+# --- Kenaikan Tingkat (tiket 03) ---------------------------------------------
+# tingkat_seleksi_id di sini merujuk ke katalog TingkatSeleksi LOKAL (int) —
+# lihat catatan gap id di models.AturanKenaikanTingkat.
+
+
+class AksesTingkatItem(BaseModel):
+    tingkat_seleksi_id: int
+    nama: str
+    status: str
+    dibuka_karena: str | None
+    catatan: str | None
+
+
+class AksesTingkatSiswaResponse(BaseModel):
+    siswa_id: str
+    daftar_akses: list[AksesTingkatItem]
+
+
+class OverrideAksesRequest(BaseModel):
+    siswa_id: str
+    tingkat_seleksi_id: int
+    status: Literal["terbuka", "terkunci"]
+    catatan: str | None = None
+
+
+class AturanKenaikanItem(BaseModel):
+    id: int
+    tingkat_asal_id: int
+    tingkat_tujuan_id: int
+    skor_simulasi_min: float
+    persentase_kompetensi_cukup_min: float
+    aktif: bool
+
+
+class UpdateAturanKenaikanRequest(BaseModel):
+    skor_simulasi_min: float | None = Field(default=None, ge=0, le=100)
+    persentase_kompetensi_cukup_min: float | None = Field(default=None, ge=0, le=100)
+    aktif: bool | None = None
+
+
+class EvaluasiKenaikanRequest(BaseModel):
+    siswa_id: str
+    hasil_tes_id: int
+    tingkat_asal_id: int
+    skor: float = Field(ge=0, le=100)
+    jumlah_kompetensi_cukup: int = Field(ge=0)
+    total_kompetensi_silabus: int = Field(gt=0)
+
+
+class EvaluasiKenaikanResponse(BaseModel):
+    evaluasi_dilakukan: bool
+    hasil_evaluasi: str | None = None
+    syarat_skor_lulus: bool | None = None
+    syarat_kompetensi_lulus: bool | None = None
+    persentase_cukup_aktual: float | None = None
+
+
+# --- Dashboard Super Admin (tiket 04) ----------------------------------------
+# Section "analisis_kompetensi" (top/bottom 3 Kompetensi) resolusi tiket 04
+# sengaja BELUM diimplementasikan di sini: butuh join HasilTesSubkompetensi.
+# subkompetensi_id (str, caller-supplied UUID sejak tiket 11) ke katalog
+# Subkompetensi/Kompetensi LOKAL (int) — gap yang sama dengan "progress_materi
+# dan PK katalog seed lokal belum diselaraskan ke UUID" yang sudah dicatat
+# tiket 11. Menunggu penyelarasan skema id itu, bukan sesuatu yang aman
+# ditambal di sini.
+
+
+class DashboardFilter(BaseModel):
+    sekolah_id: str | None
+    rentang_waktu: str
+
+
+class DashboardKPI(BaseModel):
+    total_siswa_aktif: int
+    total_tes_selesai: int
+    total_pre_test: int
+    total_simulasi: int
+    rata_rata_skor_simulasi: float
+    rasio_kelulusan_tingkat: float
+
+
+class DistribusiTingkatItem(BaseModel):
+    tingkat_id: int
+    nama: str
+    jumlah_siswa: int
+    persentase: float
+
+
+class TrenAktivitasItem(BaseModel):
+    tanggal: str
+    pre_test: int
+    simulasi: int
+
+
+class DistribusiPredikatItem(BaseModel):
+    label: str
+    jumlah: int
+    persentase: float
+
+
+class KomparasiSekolahItem(BaseModel):
+    sekolah_id: str
+    total_siswa_aktif: int
+    total_simulasi: int
+    rata_rata_skor: float
+    rasio_kelulusan_tingkat: float
+
+
+class DashboardResponse(BaseModel):
+    rentang_waktu: str
+    filter: DashboardFilter
+    kpi: DashboardKPI
+    distribusi_tingkat: list[DistribusiTingkatItem]
+    tren_aktivitas: list[TrenAktivitasItem]
+    distribusi_predikat: list[DistribusiPredikatItem]
+    komparasi_sekolah: list[KomparasiSekolahItem]

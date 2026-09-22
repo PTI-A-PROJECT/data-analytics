@@ -134,3 +134,48 @@ CREATE INDEX idx_riwayat_eval_dashboard ON riwayat_evaluasi_kenaikan (hasil_eval
 ### Dependensi turunan yang diselesaikan
 
 - Tiket 11 (Kontrak API: Pemetaan Kompetensi & Rekomendasi Materi): spesifikasi rute `GET /api/v1/admin/dashboard` siap dimasukkan ke kontrak OpenAPI platform.
+
+## Implementation
+
+**Diimplementasikan** di `src/data_analytics/dashboard.py` +
+`GET /api/v1/admin/dashboard` (`api.py`, dilindungi `X-Internal-Token`) —
+KPI Utama, Tren Aktivitas, Distribusi Predikat, dan Komparasi Sekolah persis
+sesuai resolusi di atas, dihitung real-time dari `hasil_tes` +
+`riwayat_evaluasi_kenaikan` (tiket 03), tanpa tabel rollup terpisah. Filter
+`sekolah_id` dan `rentang_waktu` (`7d`/`30d`/`90d`/`all`) diimplementasikan;
+`distribusi_tingkat` memakai `akses_tingkat_siswa`+`tingkat_seleksi` (tiket
+03) — snapshot lifetime, tidak terpotong `rentang_waktu`, sesuai resolusi.
+
+**Scope dipersempit dari resolusi di atas — dua bagian SENGAJA belum
+diimplementasikan**, keduanya karena gap yang sama yang sudah dicatat tiket
+11 ("progress_materi dan PK katalog seed lokal belum diselaraskan ke UUID"):
+
+1. **"Analisis Penguasaan Kompetensi" (top/bottom 3 Kompetensi)**: butuh
+   join `hasil_tes_subkompetensi.subkompetensi_id` (str, UUID caller-supplied
+   sejak tiket 11) ke katalog `subkompetensi`/`kompetensi` LOKAL (int,
+   tiket 09) untuk resolve `nama` — dua ruang id berbeda, tidak bisa di-join
+   langsung. Ditinggalkan kosong daripada menampilkan grouping yang
+   menyesatkan (mis. label = UUID mentah).
+2. **Filter `tingkat_seleksi_id`**: KPI transaksional (`hasil_tes`) pakai
+   UUID caller-supplied, sedangkan `distribusi_tingkat` pakai id katalog
+   lokal (tiket 03) — satu parameter filter tidak bisa menyaring keduanya
+   secara konsisten.
+
+Kedua gap ini menunggu penyelarasan skema id yang sama dengan `progress_materi`
+(tiket 02) — item terbuka yang sama, bukan kegagalan baru dari tiket ini.
+
+### File yang dibuat/diubah
+
+| File | Fungsi |
+|---|---|
+| `src/data_analytics/dashboard.py` | Agregasi metrik (baru) |
+| `src/data_analytics/schemas.py` | DTO Pydantic response dashboard |
+| `src/data_analytics/api.py` | Endpoint `GET /api/v1/admin/dashboard` |
+| `tests/test_api_kenaikan_dashboard.py` | Test baru (KPI, filter sekolah, komparasi sekolah) |
+
+Diverifikasi: full test suite (129 test) dan `mypy` bersih.
+
+### Latar belakang: konsolidasi dari `app/` (PR #7)
+
+Sama seperti tiket 03 — lihat catatan konsolidasi di tiket itu dan di
+`map.md`.
