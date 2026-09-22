@@ -57,5 +57,5 @@ class TestSeed:
         seed(session)
 
         hasil = session.scalars(select(HasilTes)).all()
-        assert {h.sekolah_id for h in hasil} == {1}
-        assert {h.siswa_id for h in hasil} == {1, 2}
+        assert {h.sekolah_id for h in hasil} == {"1"}
+        assert {h.siswa_id for h in hasil} == {"1", "2"}

@@ -85,7 +85,7 @@ def upgrade() -> None:
     sa.Column('ambang_representasi_persen', sa.Numeric(precision=5, scale=2, asdecimal=False), nullable=False),
     sa.CheckConstraint('ambang_cukup_persen >= 0 AND ambang_cukup_persen <= 100', name='ck_aturan_pemetaan_ambang_cukup_rentang'),
     sa.CheckConstraint('ambang_representasi_persen >= 0 AND ambang_representasi_persen <= 100', name='ck_aturan_pemetaan_ambang_representasi_rentang'),
-    sa.ForeignKeyConstraint(['tingkat_seleksi_id'], ['tingkat_seleksi.id'], ondelete='CASCADE'),
+    sa.ForeignKeyConstraint(['tingkat_seleksi_id'], ['tingkat_seleksi.id'], ondelete='CASCADE', name='fk_aturan_pemetaan_tingkat_seleksi_id_tingkat_seleksi'),
     sa.PrimaryKeyConstraint('id'),
     sa.UniqueConstraint('tingkat_seleksi_id')
     )

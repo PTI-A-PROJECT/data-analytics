@@ -37,10 +37,10 @@ class TestAnonimkanHasilTesKedaluwarsa:
         anonimkan_hasil_tes_kedaluwarsa(session, retention_months=RETENSI_BULAN, sekarang=sekarang)
 
         session.refresh(hasil)
-        assert hasil.sekolah_id == 7  # tetap - dipakai agregasi Dashboard Admin
+        assert hasil.sekolah_id == "7"  # tetap - dipakai agregasi Dashboard Admin
         assert hasil.skor == 80.0
         assert hasil.predikat_label == "Baik"
-        assert hasil.tingkat_seleksi_id == 1
+        assert hasil.tingkat_seleksi_id == "1"
 
     def test_hasil_tes_baru_tidak_disentuh(
         self, session: Session, buat_hasil_tes: Callable[..., HasilTes]
@@ -55,7 +55,7 @@ class TestAnonimkanHasilTesKedaluwarsa:
 
         session.refresh(hasil)
         assert jumlah == 0
-        assert hasil.siswa_id == 1
+        assert hasil.siswa_id == "1"
         assert hasil.is_anonymized is False
 
     def test_dry_run_tidak_mengubah_data(
@@ -71,7 +71,7 @@ class TestAnonimkanHasilTesKedaluwarsa:
 
         session.refresh(hasil)
         assert jumlah == 1  # tetap melaporkan berapa yang AKAN terdampak
-        assert hasil.siswa_id == 1  # tapi tidak benar-benar diubah
+        assert hasil.siswa_id == "1"  # tapi tidak benar-benar diubah
         assert hasil.is_anonymized is False
 
     def test_idempoten_baris_yang_sudah_dianonimkan_tidak_dihitung_ulang(
@@ -94,13 +94,13 @@ class TestAnonimkanHasilTesKedaluwarsa:
         sekarang = datetime(2026, 9, 22, tzinfo=timezone.utc)
         lama = sekarang - timedelta(days=RETENSI_BULAN * 31 + 10)
         baru = sekarang - timedelta(days=10)
-        hasil_lama = buat_hasil_tes(dibuat_pada=lama, siswa_id=1)
-        hasil_baru = buat_hasil_tes(dibuat_pada=baru, siswa_id=2)
+        hasil_lama = buat_hasil_tes(dibuat_pada=lama, siswa_id="1")
+        hasil_baru = buat_hasil_tes(dibuat_pada=baru, siswa_id="2")
 
         anonimkan_hasil_tes_kedaluwarsa(session, retention_months=RETENSI_BULAN, sekarang=sekarang)
 
         semua = session.scalars(select(HasilTes)).all()
         assert {h.id: h.siswa_id for h in semua} == {
             hasil_lama.id: None,
-            hasil_baru.id: 2,
+            hasil_baru.id: "2",
         }

@@ -49,8 +49,8 @@ JUMLAH_SOAL_PER_SUBKOMPETENSI: dict[str, int] = {
     "Linked List": 3,
 }
 
-DUMMY_SEKOLAH_ID = 1
-DUMMY_SISWA_ID: tuple[int, ...] = (1, 2)
+DUMMY_SEKOLAH_ID = "1"
+DUMMY_SISWA_ID: tuple[str, ...] = ("1", "2")
 
 
 def _sudah_diseed(session: Session) -> bool:
@@ -71,10 +71,13 @@ def _seed_aturan_predikat_dan_pemetaan(
     session: Session, tingkat_list: list[TingkatSeleksi]
 ) -> None:
     for tingkat in tingkat_list:
-        get_or_create_aturan_predikat(session, tingkat.id)
+        # tingkat.id (PK katalog lokal, int) dipakai apa adanya sebagai string —
+        # aturan_predikat/aturan_pemetaan mengindeks by id caller-supplied
+        # (str), bukan FK ke TingkatSeleksi lokal (lihat catatan di models.py).
+        get_or_create_aturan_predikat(session, str(tingkat.id))
         session.add(
             AturanPemetaan(
-                tingkat_seleksi_id=tingkat.id,
+                tingkat_seleksi_id=str(tingkat.id),
                 ambang_cukup_persen=AMBANG_CUKUP_PERSEN_DEFAULT,
                 ambang_representasi_persen=AMBANG_REPRESENTASI_PERSEN_DEFAULT,
             )
@@ -139,7 +142,7 @@ def _seed_dummy_hasil_tes(
     """
     breakdown = [
         BreakdownSubkompetensi(
-            subkompetensi_id=soal_list[0].subkompetensi_id,
+            subkompetensi_id=str(soal_list[0].subkompetensi_id),
             jumlah_soal=len(soal_list),
             jumlah_benar=max(len(soal_list) - 1, 0),
         )
@@ -153,7 +156,7 @@ def _seed_dummy_hasil_tes(
             session,
             siswa_id=siswa_id,
             sekolah_id=DUMMY_SEKOLAH_ID,
-            tingkat_seleksi_id=tingkat_kabupaten.id,
+            tingkat_seleksi_id=str(tingkat_kabupaten.id),
             jenis_tes=JenisTes.PRE_TEST,
             total_soal=total_soal,
             jumlah_benar=jumlah_benar,

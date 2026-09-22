@@ -53,7 +53,7 @@ class TestAturanPemetaan:
         tingkat = _tingkat_seleksi(session)
 
         aturan = AturanPemetaan(
-            tingkat_seleksi_id=tingkat.id,
+            tingkat_seleksi_id=str(tingkat.id),
             ambang_cukup_persen=70,
             ambang_representasi_persen=20,
         )
@@ -67,7 +67,7 @@ class TestAturanPemetaan:
         tingkat = _tingkat_seleksi(session)
         session.add(
             AturanPemetaan(
-                tingkat_seleksi_id=tingkat.id,
+                tingkat_seleksi_id=str(tingkat.id),
                 ambang_cukup_persen=70,
                 ambang_representasi_persen=20,
             )
@@ -76,7 +76,7 @@ class TestAturanPemetaan:
 
         session.add(
             AturanPemetaan(
-                tingkat_seleksi_id=tingkat.id,
+                tingkat_seleksi_id=str(tingkat.id),
                 ambang_cukup_persen=80,
                 ambang_representasi_persen=30,
             )
@@ -88,7 +88,7 @@ class TestAturanPemetaan:
         tingkat = _tingkat_seleksi(session)
         session.add(
             AturanPemetaan(
-                tingkat_seleksi_id=tingkat.id,
+                tingkat_seleksi_id=str(tingkat.id),
                 ambang_cukup_persen=150,
                 ambang_representasi_persen=20,
             )

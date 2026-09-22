@@ -12,6 +12,7 @@ from sqlalchemy import (
     CheckConstraint,
     DateTime,
     ForeignKey,
+    MetaData,
     Numeric,
     UniqueConstraint,
     false,
@@ -20,9 +21,22 @@ from sqlalchemy import (
 from sqlalchemy import Enum as SqlEnum
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship
 
+# Constraint tanpa name= eksplisit (mis. ForeignKeyConstraint) dapat berbeda
+# nama antar backend (Postgres auto-name, SQLite tanpa nama) — konvensi ini
+# membuatnya deterministik supaya Alembic autogenerate bisa
+# create/drop_constraint dengan andal. Lihat alembic/versions/0001 untuk
+# constraint yang sudah diberi name= eksplisit mengikuti pola ini.
+NAMING_CONVENTION = {
+    "ix": "ix_%(column_0_label)s",
+    "uq": "uq_%(table_name)s_%(column_0_name)s",
+    "ck": "ck_%(table_name)s_%(constraint_name)s",
+    "fk": "fk_%(table_name)s_%(column_0_name)s_%(referred_table_name)s",
+    "pk": "pk_%(table_name)s",
+}
+
 
 class Base(DeclarativeBase):
-    pass
+    metadata = MetaData(naming_convention=NAMING_CONVENTION)
 
 
 class JenisTes(enum.StrEnum):
@@ -30,11 +44,25 @@ class JenisTes(enum.StrEnum):
     SIMULASI = "simulasi"
 
 
-# tingkat_seleksi_id, simulasi_id, subkompetensi_id, dan sekolah_id (di bawah)
-# merujuk ke entitas yang dikelola tim fullstack, bukan tabel di database ini —
-# sengaja tanpa ForeignKey() SQLAlchemy, sama seperti pola di ADR 0002 (layanan
-# ini tidak memiliki katalog Materi/Tingkat Seleksi/Simulasi/Subkompetensi/
-# Sekolah sendiri).
+class StatusPemetaan(enum.StrEnum):
+    """Klasifikasi Subkompetensi dari algoritma Pemetaan Kompetensi (FR-07) —
+    lihat CONTEXT.md "Status Pemetaan" dan resolusi tiket 11.
+    """
+
+    CUKUP = "cukup"
+    BELUM_CUKUP = "belum_cukup"
+    BELUM_TERUJI = "belum_teruji"
+
+
+# tingkat_seleksi_id, simulasi_id, subkompetensi_id, sekolah_id, dan soal_id (di
+# bawah) merujuk ke entitas yang dikelola tim fullstack, bukan tabel di database
+# ini — sengaja tanpa ForeignKey() SQLAlchemy, sama seperti pola di ADR 0002
+# (layanan ini tidak memiliki katalog Materi/Tingkat Seleksi/Simulasi/
+# Subkompetensi/Sekolah/Soal produksi sendiri — tabel Soal dkk di bagian
+# "Katalog lokal" di bawah adalah data uji, lihat ADR 0003). Sejak resolusi
+# tiket 05/11, seluruh id caller-supplied ini berformat UUID v4 string — disimpan
+# sebagai str, bukan int, walau baris milik layanan ini sendiri (mis. HasilTes.id)
+# tetap integer auto-increment biasa.
 class AturanPredikat(Base):
     """Config Super Admin, per Tingkat Seleksi. Di-seed otomatis dengan 4 predikat
     default saat sebuah Tingkat Seleksi belum punya aturan sendiri — lihat
@@ -50,7 +78,7 @@ class AturanPredikat(Base):
     )
 
     id: Mapped[int] = mapped_column(primary_key=True)
-    tingkat_seleksi_id: Mapped[int]
+    tingkat_seleksi_id: Mapped[str]
     label: Mapped[str]
     batas_bawah: Mapped[float] = mapped_column(Numeric(5, 2, asdecimal=False))
     created_at: Mapped[datetime] = mapped_column(
@@ -81,10 +109,10 @@ class HasilTes(Base):
     # Nullable: di-null-kan permanen oleh anonimkan_hasil_tes_kedaluwarsa (tiket
     # 10, kepatuhan UU PDP tiket 12) setelah retention_months lewat — lihat
     # is_anonymized. Selain itu selalu diisi.
-    siswa_id: Mapped[int | None]
+    siswa_id: Mapped[str | None]
     # Nullable: siswa tanpa afiliasi sekolah formal. Lihat resolusi tiket 08.
-    sekolah_id: Mapped[int | None]
-    tingkat_seleksi_id: Mapped[int]
+    sekolah_id: Mapped[str | None]
+    tingkat_seleksi_id: Mapped[str]
     jenis_tes: Mapped[JenisTes] = mapped_column(
         SqlEnum(
             JenisTes,
@@ -92,7 +120,7 @@ class HasilTes(Base):
             native_enum=False,
         )
     )
-    simulasi_id: Mapped[int | None]
+    simulasi_id: Mapped[str | None]
     total_soal: Mapped[int]
     jumlah_benar: Mapped[int]
     jumlah_salah: Mapped[int]
@@ -113,8 +141,10 @@ class HasilTes(Base):
 
 
 class HasilTesSubkompetensi(Base):
-    """Breakdown per Subkompetensi dalam satu attempt — input untuk Peta
-    Kompetensi. Tidak menyimpan identitas soal atau isi jawaban.
+    """Breakdown per Subkompetensi dalam satu attempt — input untuk & hasil dari
+    Peta Kompetensi (FR-07, tiket 11). Tidak menyimpan identitas soal atau isi
+    jawaban. status_pemetaan dan butuh_optimasi dibekukan saat attempt dihitung
+    — sama seperti predikat_label di HasilTes (lihat resolusi tiket 01).
     """
 
     __tablename__ = "hasil_tes_subkompetensi"
@@ -124,9 +154,21 @@ class HasilTesSubkompetensi(Base):
     hasil_tes_id: Mapped[int] = mapped_column(
         ForeignKey("hasil_tes.id", ondelete="CASCADE")
     )
-    subkompetensi_id: Mapped[int]
+    subkompetensi_id: Mapped[str]
     jumlah_soal: Mapped[int]
     jumlah_benar: Mapped[int]
+    status_pemetaan: Mapped[StatusPemetaan] = mapped_column(
+        SqlEnum(
+            StatusPemetaan,
+            values_callable=lambda cls: [item.value for item in cls],
+            native_enum=False,
+        )
+    )
+    # True kalau status_pemetaan == CUKUP tapi >50% jawaban benar di
+    # subkompetensi ini is_lambat (resolusi tiket 05). Selalu False kalau
+    # BELUM_CUKUP/BELUM_TERUJI — "butuh optimasi kecepatan" tidak relevan kalau
+    # pemahamannya sendiri belum cukup.
+    butuh_optimasi: Mapped[bool] = mapped_column(default=False, server_default=false())
 
     hasil_tes: Mapped[HasilTes] = relationship(back_populates="breakdown_subkompetensi")
 
@@ -166,18 +208,23 @@ class ProgressMateri(Base):
 
 # --- Katalog lokal (tiket 09) ------------------------------------------------
 #
-# TingkatSeleksi, AturanPemetaan, Kompetensi, Subkompetensi, dan Soal di bawah
-# ini ADALAH tabel yang dimiliki & dimigrasikan layanan ini — beda dari
-# siswa_id/sekolah_id/simulasi_id/materi_id di atas, yang sengaja disimpan
-# sebagai int mentah tanpa FK karena entitasnya dikelola tim fullstack (ADR
-# 0002). Kelima tabel ini eksis sebagai data uji/seed lokal supaya Peta
-# Kompetensi & Rekomendasi Materi bisa dikembangkan sebelum data pilot nyata
-# tersedia — bukan pengelolaan konten soal/materi produksi (itu tetap milik
-# tim lain, lihat map.md "Out of scope"). Lihat docs/adr/0003.
+# TingkatSeleksi, Kompetensi, Subkompetensi, dan Soal di bawah ini ADALAH tabel
+# yang dimiliki & dimigrasikan layanan ini — beda dari siswa_id/sekolah_id/
+# simulasi_id/materi_id di atas, yang sengaja disimpan sebagai str (UUID)
+# mentah tanpa FK karena entitasnya dikelola tim fullstack (ADR 0002). Keempat
+# tabel ini eksis sebagai data uji/seed lokal supaya Peta Kompetensi &
+# Rekomendasi Materi bisa dikembangkan sebelum data pilot nyata tersedia —
+# bukan pengelolaan konten soal/materi produksi (itu tetap milik tim lain,
+# lihat map.md "Out of scope"). Lihat docs/adr/0003.
 #
-# Tabel HasilTes/HasilTesSubkompetensi/AturanPredikat/ProgressMateri di atas
-# TIDAK diberi FK ke tabel-tabel ini — pencatatan hasil tes tetap mempercayai
-# id yang dikirim pemanggil apa adanya, konsisten dengan resolusi tiket 01/08.
+# Tabel HasilTes/HasilTesSubkompetensi/AturanPredikat/AturanPemetaan/
+# ProgressMateri di atas TIDAK diberi FK ke tabel-tabel ini — pencatatan hasil
+# tes tetap mempercayai id yang dikirim pemanggil apa adanya, konsisten dengan
+# resolusi tiket 01/08. AturanPemetaan awalnya (tiket 09) di-FK ke
+# TingkatSeleksi lokal; sejak tiket 05/11 menetapkan tingkat_seleksi_id yang
+# dikirim Fullstack saat submit berformat UUID (bukan PK integer katalog lokal
+# ini), FK itu dilepas — AturanPemetaan sekarang dicari lewat id caller-supplied
+# yang sama seperti AturanPredikat, bukan lewat baris TingkatSeleksi lokal.
 
 
 class TingkatSeleksi(Base):
@@ -192,9 +239,9 @@ class TingkatSeleksi(Base):
 
 
 class AturanPemetaan(Base):
-    """Satu baris per Tingkat Seleksi — ambang correctness & representasi yang
-    dipakai algoritma Pemetaan Kompetensi (FR-07). Lihat CONTEXT.md "Aturan
-    Pemetaan".
+    """Satu baris per Tingkat Seleksi (id caller-supplied, bukan FK — lihat
+    catatan di atas) — ambang correctness & representasi yang dipakai algoritma
+    Pemetaan Kompetensi (FR-07). Lihat CONTEXT.md "Aturan Pemetaan".
     """
 
     __tablename__ = "aturan_pemetaan"
@@ -211,9 +258,7 @@ class AturanPemetaan(Base):
     )
 
     id: Mapped[int] = mapped_column(primary_key=True)
-    tingkat_seleksi_id: Mapped[int] = mapped_column(
-        ForeignKey("tingkat_seleksi.id", ondelete="CASCADE")
-    )
+    tingkat_seleksi_id: Mapped[str]
     ambang_cukup_persen: Mapped[float] = mapped_column(Numeric(5, 2, asdecimal=False))
     ambang_representasi_persen: Mapped[float] = mapped_column(
         Numeric(5, 2, asdecimal=False)
@@ -262,3 +307,34 @@ class Soal(Base):
     pertanyaan: Mapped[str]
     pilihan_jawaban: Mapped[dict[str, str]] = mapped_column(JSON)
     kunci_jawaban: Mapped[str]
+    # Ambang waktu ideal pengerjaan (resolusi tiket 05). Tidak dibaca langsung
+    # oleh endpoint submit (tiket 11) — Fullstack mengirim batas_waktu_detik per
+    # jawaban di request-nya sendiri (ADR 0002: stateless, caller-supplied),
+    # kolom ini hanya untuk konsistensi data uji/seed lokal.
+    batas_waktu_detik: Mapped[int] = mapped_column(default=60, server_default="60")
+
+
+class JawabanSiswa(Base):
+    """Log jawaban per butir soal dalam satu attempt (resolusi tiket 05) — dipakai
+    untuk menghitung is_lambat & flag butuh_optimasi saat submit (tiket 11), dan
+    tersedia untuk drill-down Dashboard Admin nanti. soal_id caller-supplied,
+    tanpa FK ke Soal lokal (tiket 09 hanya data uji) — lihat catatan "Katalog
+    lokal" di atas. Tidak ada UniqueConstraint(hasil_tes_id, soal_id): baris ini
+    murni log kiriman Fullstack, dipercaya apa adanya.
+    """
+
+    __tablename__ = "jawaban_siswa"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    hasil_tes_id: Mapped[int] = mapped_column(
+        ForeignKey("hasil_tes.id", ondelete="CASCADE")
+    )
+    soal_id: Mapped[str]
+    subkompetensi_id: Mapped[str]
+    jawaban_dipilih: Mapped[str]
+    is_benar: Mapped[bool]
+    durasi_detik: Mapped[int]
+    is_lambat: Mapped[bool]
+    dibuat_pada: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), server_default=func.now()
+    )

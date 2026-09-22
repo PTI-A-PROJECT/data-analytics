@@ -14,12 +14,15 @@ from sqlalchemy import delete, select
 from sqlalchemy.orm import Session
 
 from data_analytics.models import (
+    AturanPemetaan,
     AturanPredikat,
     HasilTes,
     HasilTesSubkompetensi,
+    JawabanSiswa,
     JenisTes,
     ProgressMateri,
 )
+from data_analytics.pemetaan import tentukan_butuh_optimasi, tentukan_status_pemetaan
 from data_analytics.progress import persentase_selesai, validasi_halaman
 from data_analytics.scoring import hitung_skor, tentukan_predikat
 
@@ -29,6 +32,10 @@ DEFAULT_ATURAN_PREDIKAT: Final[tuple[tuple[str, float], ...]] = (
     ("Cukup", 70),
     ("Perlu Latihan", 0),
 )
+
+# (ambang_cukup_persen, ambang_representasi_persen) — sama dengan default yang
+# dipakai seed script (tiket 09); lihat CONTEXT.md "Aturan Pemetaan".
+DEFAULT_ATURAN_PEMETAAN: Final[tuple[float, float]] = (70.0, 20.0)
 
 
 def _validasi_aturan(aturan: Sequence[tuple[str, float]]) -> None:
@@ -44,7 +51,7 @@ def _validasi_aturan(aturan: Sequence[tuple[str, float]]) -> None:
 
 
 def get_or_create_aturan_predikat(
-    session: Session, tingkat_seleksi_id: int
+    session: Session, tingkat_seleksi_id: str
 ) -> list[AturanPredikat]:
     """Aturan predikat milik satu Tingkat Seleksi. Kalau belum pernah dikonfigurasi
     Super Admin (lewat set_aturan_predikat), di-seed otomatis dengan
@@ -71,7 +78,7 @@ def get_or_create_aturan_predikat(
 
 
 def set_aturan_predikat(
-    session: Session, tingkat_seleksi_id: int, aturan: Sequence[tuple[str, float]]
+    session: Session, tingkat_seleksi_id: str, aturan: Sequence[tuple[str, float]]
 ) -> list[AturanPredikat]:
     """Super Admin mengganti seluruh Aturan Predikat suatu Tingkat Seleksi
     (menggantikan default hasil seed maupun aturan kustom sebelumnya). Hasil tes
@@ -96,30 +103,63 @@ def set_aturan_predikat(
     return baru
 
 
+def get_or_create_aturan_pemetaan(
+    session: Session, tingkat_seleksi_id: str
+) -> AturanPemetaan:
+    """Aturan pemetaan milik satu Tingkat Seleksi. Kalau belum pernah
+    dikonfigurasi Super Admin, di-seed otomatis dengan DEFAULT_ATURAN_PEMETAAN
+    — pola yang sama dengan get_or_create_aturan_predikat, supaya Pemetaan
+    Kompetensi tidak gagal/terblokir karena config belum diisi.
+    """
+    existing = session.scalars(
+        select(AturanPemetaan).where(
+            AturanPemetaan.tingkat_seleksi_id == tingkat_seleksi_id
+        )
+    ).one_or_none()
+    if existing is not None:
+        return existing
+
+    ambang_cukup, ambang_representasi = DEFAULT_ATURAN_PEMETAAN
+    baru = AturanPemetaan(
+        tingkat_seleksi_id=tingkat_seleksi_id,
+        ambang_cukup_persen=ambang_cukup,
+        ambang_representasi_persen=ambang_representasi,
+    )
+    session.add(baru)
+    session.flush()
+    return baru
+
+
 @dataclass(frozen=True, slots=True)
 class BreakdownSubkompetensi:
-    subkompetensi_id: int
+    subkompetensi_id: str
     jumlah_soal: int
     jumlah_benar: int
+    # Dari jumlah_benar, berapa yang durasi_detik > batas_waktu_detik (tiket 05)
+    # — dipakai menghitung flag butuh_optimasi. Default 0 untuk pemanggil yang
+    # tidak melacak kecepatan (mis. seed data).
+    jumlah_benar_lambat: int = 0
 
 
 def catat_hasil_tes(
     session: Session,
     *,
-    siswa_id: int,
-    tingkat_seleksi_id: int,
+    siswa_id: str,
+    tingkat_seleksi_id: str,
     jenis_tes: JenisTes,
     total_soal: int,
     jumlah_benar: int,
     breakdown_subkompetensi: Sequence[BreakdownSubkompetensi],
     diselesaikan_pada: datetime,
-    simulasi_id: int | None = None,
-    sekolah_id: int | None = None,
+    simulasi_id: str | None = None,
+    sekolah_id: str | None = None,
 ) -> HasilTes:
     """Hitung skor & predikat satu attempt (Pre-Test atau Simulasi), lalu simpan
-    sebagai HasilTes + breakdown HasilTesSubkompetensi-nya. predikat_label
-    dibekukan pada baris HasilTes saat fungsi ini dipanggil — perubahan
-    AturanPredikat setelahnya tidak memengaruhi hasil yang sudah tersimpan.
+    sebagai HasilTes + breakdown HasilTesSubkompetensi-nya (termasuk Status
+    Pemetaan & flag butuh_optimasi per Subkompetensi — FR-07/tiket 11).
+    predikat_label & status_pemetaan/butuh_optimasi dibekukan pada baris ini
+    saat fungsi dipanggil — perubahan AturanPredikat/AturanPemetaan setelahnya
+    tidak memengaruhi hasil yang sudah tersimpan.
     """
     if jenis_tes is JenisTes.SIMULASI and simulasi_id is None:
         raise ValueError("simulasi_id wajib diisi untuk jenis_tes='simulasi'")
@@ -135,8 +175,36 @@ def catat_hasil_tes(
 
     skor = hitung_skor(jumlah_benar=jumlah_benar, total_soal=total_soal)
 
-    aturan = get_or_create_aturan_predikat(session, tingkat_seleksi_id)
-    predikat_label = tentukan_predikat(skor, [(a.label, a.batas_bawah) for a in aturan])
+    aturan_predikat = get_or_create_aturan_predikat(session, tingkat_seleksi_id)
+    predikat_label = tentukan_predikat(
+        skor, [(a.label, a.batas_bawah) for a in aturan_predikat]
+    )
+
+    aturan_pemetaan = get_or_create_aturan_pemetaan(session, tingkat_seleksi_id)
+
+    breakdown_rows = []
+    for b in breakdown_subkompetensi:
+        status = tentukan_status_pemetaan(
+            jumlah_soal_subkompetensi=b.jumlah_soal,
+            jumlah_benar=b.jumlah_benar,
+            total_soal_tes=total_soal,
+            ambang_cukup_persen=aturan_pemetaan.ambang_cukup_persen,
+            ambang_representasi_persen=aturan_pemetaan.ambang_representasi_persen,
+        )
+        butuh_optimasi = tentukan_butuh_optimasi(
+            status=status,
+            jumlah_benar=b.jumlah_benar,
+            jumlah_benar_lambat=b.jumlah_benar_lambat,
+        )
+        breakdown_rows.append(
+            HasilTesSubkompetensi(
+                subkompetensi_id=b.subkompetensi_id,
+                jumlah_soal=b.jumlah_soal,
+                jumlah_benar=b.jumlah_benar,
+                status_pemetaan=status,
+                butuh_optimasi=butuh_optimasi,
+            )
+        )
 
     hasil = HasilTes(
         siswa_id=siswa_id,
@@ -150,18 +218,97 @@ def catat_hasil_tes(
         skor=skor,
         predikat_label=predikat_label,
         diselesaikan_pada=diselesaikan_pada,
-        breakdown_subkompetensi=[
-            HasilTesSubkompetensi(
-                subkompetensi_id=b.subkompetensi_id,
-                jumlah_soal=b.jumlah_soal,
-                jumlah_benar=b.jumlah_benar,
-            )
-            for b in breakdown_subkompetensi
-        ],
+        breakdown_subkompetensi=breakdown_rows,
     )
 
     session.add(hasil)
     session.flush()
+    return hasil
+
+
+@dataclass(frozen=True, slots=True)
+class JawabanInput:
+    """Satu jawaban butir soal dari payload submit (tiket 11/endpoint
+    POST /api/v1/analytics/assessment/submit). batas_waktu_detik caller-supplied
+    per jawaban (bukan dibaca dari Soal.batas_waktu_detik lokal) — konsisten
+    dengan prinsip stateless ADR 0002 yang disebut resolusi tiket 11 poin 1.
+    """
+
+    soal_id: str
+    subkompetensi_id: str
+    jawaban_dipilih: str
+    is_benar: bool
+    durasi_detik: int
+    batas_waktu_detik: int
+
+
+def catat_submission_tes(
+    session: Session,
+    *,
+    siswa_id: str,
+    tingkat_seleksi_id: str,
+    jenis_tes: JenisTes,
+    jawaban_siswa: Sequence[JawabanInput],
+    diselesaikan_pada: datetime,
+    simulasi_id: str | None = None,
+    sekolah_id: str | None = None,
+) -> HasilTes:
+    """Orkestrasi endpoint submit (tiket 11): kelompokkan jawaban_siswa per
+    Subkompetensi (menghitung is_lambat & rasio benar-tapi-lambat), delegasikan
+    ke catat_hasil_tes untuk skor/predikat/Peta Kompetensi, lalu simpan log
+    JawabanSiswa (tiket 05) terhubung ke HasilTes yang dihasilkan.
+    """
+    if not jawaban_siswa:
+        raise ValueError("jawaban_siswa tidak boleh kosong")
+
+    per_subkompetensi: dict[str, list[JawabanInput]] = defaultdict(list)
+    for jawaban in jawaban_siswa:
+        per_subkompetensi[jawaban.subkompetensi_id].append(jawaban)
+
+    breakdown = [
+        BreakdownSubkompetensi(
+            subkompetensi_id=subkompetensi_id,
+            jumlah_soal=len(daftar),
+            jumlah_benar=sum(1 for j in daftar if j.is_benar),
+            jumlah_benar_lambat=sum(
+                1
+                for j in daftar
+                if j.is_benar and j.durasi_detik > j.batas_waktu_detik
+            ),
+        )
+        for subkompetensi_id, daftar in per_subkompetensi.items()
+    ]
+
+    # total_soal/jumlah_benar diturunkan dari breakdown (bukan dihitung ulang
+    # dari jawaban_siswa mentah) supaya hanya ada satu sumber kebenaran untuk
+    # agregat ini — sama-sama berasal dari pengelompokan per_subkompetensi.
+    hasil = catat_hasil_tes(
+        session,
+        siswa_id=siswa_id,
+        sekolah_id=sekolah_id,
+        tingkat_seleksi_id=tingkat_seleksi_id,
+        jenis_tes=jenis_tes,
+        simulasi_id=simulasi_id,
+        total_soal=sum(b.jumlah_soal for b in breakdown),
+        jumlah_benar=sum(b.jumlah_benar for b in breakdown),
+        breakdown_subkompetensi=breakdown,
+        diselesaikan_pada=diselesaikan_pada,
+    )
+
+    session.add_all(
+        JawabanSiswa(
+            hasil_tes_id=hasil.id,
+            soal_id=j.soal_id,
+            subkompetensi_id=j.subkompetensi_id,
+            jawaban_dipilih=j.jawaban_dipilih,
+            is_benar=j.is_benar,
+            durasi_detik=j.durasi_detik,
+            is_lambat=j.durasi_detik > j.batas_waktu_detik,
+        )
+        for j in jawaban_siswa
+    )
+    session.flush()
+
     return hasil
 
 

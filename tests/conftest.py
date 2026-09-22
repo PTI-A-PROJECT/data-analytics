@@ -32,12 +32,12 @@ def buat_hasil_tes(session: Session) -> Callable[..., HasilTes]:
     """
 
     def _buat(
-        *, dibuat_pada: datetime, siswa_id: int = 1, sekolah_id: int | None = 7
+        *, dibuat_pada: datetime, siswa_id: str = "1", sekolah_id: str | None = "7"
     ) -> HasilTes:
         hasil = HasilTes(
             siswa_id=siswa_id,
             sekolah_id=sekolah_id,
-            tingkat_seleksi_id=1,
+            tingkat_seleksi_id="1",
             jenis_tes=JenisTes.PRE_TEST,
             simulasi_id=None,
             total_soal=10,
