@@ -1,7 +1,7 @@
 # Task: Kumpulkan Fakta dari Tim Fullstack
 
 Type: task
-Status: open
+Status: resolved
 Blocked by: none
 
 ## Question
