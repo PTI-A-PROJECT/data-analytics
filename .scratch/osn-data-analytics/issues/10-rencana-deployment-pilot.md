@@ -1,7 +1,7 @@
 # Rencana Deployment/Hosting untuk Sekolah Pilot
 
 Type: grilling
-Status: open
+Status: resolved
 Blocked by: 08
 
 ## Question
@@ -52,85 +52,85 @@ Seluruh keputusan deployment untuk tahap pilot multi-sekolah telah disepakati me
 
 ## Implementation
 
-> **⚠️ Belum terverifikasi (dicatat 2026-09-22).** Diperiksa ulang terhadap git
-> history (seluruh branch lokal & remote yang sudah di-fetch: `main`, `razaq`,
-> `fakhri`, `falih`, `hilmi`, `mahanaim`) dan filesystem repo saat ini — commit
-> `feat(#10)` yang disebut di bawah **tidak ditemukan**, dan tidak satu pun file
-> yang didaftarkan (`docker-compose.yml`, `Dockerfile`, `src/config.py`,
-> `src/routers/admin.py`, migrasi Alembic, `tests/test_deployment_infra.py`, dst.)
-> benar-benar ada di repo ini. `Status` tiket ini juga masih `open`, bukan
-> `resolved`, yang tidak konsisten dengan klaim "telah diimplementasikan" di
-> bawah. Jangan anggap endpoint/infrastruktur di bawah ini tersedia sampai
-> diverifikasi ulang dengan penulis aslinya — bagian di bawah dibiarkan apa
-> adanya untuk ditelusuri, bukan dihapus.
+Diimplementasikan di commit `6088b7a` (branch `main`, setelah `git log
+--oneline 9707645..6088b7a`), **diverifikasi nyata** — bukan sekadar dicatat.
+Klaim "Implementation" versi sebelumnya di bagian ini (menyebut commit
+`feat(#10)`) terkonfirmasi fiktif (dicatat 2026-09-22): tidak ada commit atau
+file seperti itu di branch manapun. Perbedaan dengan versi lama juga dicatat
+di sini karena beberapa nama file tidak persis sama dengan yang diklaim dulu.
 
-Seluruh keputusan di atas telah diimplementasikan dalam commit `feat(#10)` di branch `main`.
+Verifikasi konkret yang dilakukan (bukan cuma menulis file):
+- `docker compose config` untuk `docker-compose.yml` **dan** gabungan dengan
+  `docker-compose.dev.yml` — keduanya valid.
+- `docker build` sungguhan (bukan cuma ditulis) — image berhasil dibuat.
+- Container dijalankan sungguhan: `GET /health` merespons `{"status":"ok"}`,
+  Docker `HEALTHCHECK` melaporkan `healthy`, startup cepat (~0.1 detik ke
+  endpoint pertama, tanpa re-sync dependency dev yang sebelumnya diam-diam
+  terjadi — lihat catatan `--no-sync` di bawah).
+- Dikonfirmasi `.git/`, `.scratch/`, `.claude/`, dan `brief 2.txt` **tidak**
+  ikut ter-bake ke image (lewat `.dockerignore`).
+- Migrasi Alembic 0002 dijalankan `upgrade head` **dan** `downgrade -1` lalu
+  `upgrade head` lagi terhadap SQLite sungguhan — dua arah berfungsi.
 
-### File yang dibuat
+### File yang dibuat/diubah
 
 #### Infrastruktur Docker
 
 | File | Keputusan yang Diimplementasikan |
 |---|---|
 | `docker-compose.yml` | Container `analytics-api` + `analytics-db`, resource limits (1 CPU/1GB each), `expose:` tanpa `ports:` (port tidak ke publik), volume `analytics_pgdata`, `app-network` external |
-| `docker-compose.dev.yml` | Override dev: port diekspos ke host, hot-reload `--reload`, limits dinonaktifkan, `app-network` dibuat lokal |
-| `Dockerfile` | Python 3.11-slim, non-root user, `curl` untuk healthcheck |
-| `.env.example` | Template variabel wajib: `INTERNAL_API_TOKEN`, `POSTGRES_*`, `DATABASE_URL`, `DATA_RETENTION_MONTHS` |
-| `Makefile` | Perintah `make up`, `make dev-up`, `make migrate`, `make test`, `make anonymize`, `make backup-db` |
+| `docker-compose.dev.yml` | Override dev: port diekspos ke host, hot-reload `--reload`, limit dilonggarkan (4 CPU/4GB — bukan "dihapus"; Compose merge mapping per-key, `limits: {}` tidak menghapus limit dari file dasar, lihat catatan di file), `app-network` dibuat lokal |
+| `Dockerfile` | `python:3.11.9-slim` (dipin, bukan tag mengambang `3.11-slim`), `uv==0.12.5` dipin, non-root user, `curl` untuk healthcheck, CMD pakai `uv run --no-sync` (tanpa ini, tiap start container diam-diam `uv sync` ulang termasuk dependency dev seperti mypy — nambah puluhan detik startup) |
+| `.dockerignore` | Baru — `.git/`, `.claude/`, `.scratch/`, `tests/`, `.env`, dll tidak ikut masuk image. `README.md` sengaja **tidak** diabaikan (dibaca `uv sync` dari `pyproject.toml`'s `readme = "README.md"` saat build paket — sempat bikin build gagal sebelum ini disadari) |
+| `.env.example` | Variabel: `INTERNAL_API_TOKEN`, `POSTGRES_*`, `DATABASE_URL`, `DATA_RETENTION_MONTHS` |
+| `Makefile` | Perintah `make up`, `make dev-up`, `make migrate` (pakai `--no-sync` juga), `make anonymize`, `make anonymize-dry-run`, `make backup-db` |
+| `README.md` | Bagian "Deployment (VPS pilot)" — cara jalan, cron anonymize, backup, jalur skalabilitas |
 
-#### Aplikasi FastAPI (`src/`)
+#### Aplikasi FastAPI (`src/data_analytics/` — paket datar, bukan `src/routers/` seperti klaim versi lama; lihat ADR 0003/tiket 09 soal keputusan struktur ini)
 
 | File | Fungsi |
 |---|---|
-| `src/config.py` | `Settings` via pydantic-settings: membaca `DATABASE_URL`, `INTERNAL_API_TOKEN`, `DATA_RETENTION_MONTHS` dari env |
-| `src/database.py` | SQLAlchemy engine + `SessionLocal` + `get_db` dependency |
-| `src/auth.py` | Dependency `verify_internal_token` — validasi header `X-Internal-Token`, raise 403 jika salah |
-| `src/models.py` | ORM: `AturanPredikat`, `HasilTes` (dengan `sekolah_id` snapshot + `is_anonymized`), `HasilTesSubkompetensi`, `ProgressMateri` |
-| `src/routers/health.py` | `GET /health` — public, cek koneksi DB, dipakai Docker healthcheck |
-| `src/routers/admin.py` | `POST /api/v1/admin/anonymize-expired` — UU PDP cleanup: null-kan `siswa_id`, set `is_anonymized=True`, data agregat tetap utuh; support `?dry_run=true` |
-| `src/main.py` | FastAPI app: mount semua router, docs hanya aktif di non-production |
+| `config.py` | Ditambah `internal_api_token`, `data_retention_months` (default 24 — lihat riset tiket 12) di `Settings` yang sudah ada dari tiket 09 |
+| `db.py` | Sudah ada dari tiket 09 (bukan `database.py`) — engine + `SessionLocal` + `get_db` |
+| `auth.py` | Baru — dependency `verify_internal_token`: header hilang → 422 otomatis dari FastAPI, token salah → 403 |
+| `models.py` | `HasilTes` ditambah `is_anonymized` (default+server_default False) dan `siswa_id` dibuat nullable |
+| `repository.py` | Baru — `anonimkan_hasil_tes_kedaluwarsa` (bukan nama Inggris seperti draft awal — semua fungsi repository lain Indonesia-first) |
+| `api.py` | Sudah ada dari tiket 09 (bukan `main.py`/`routers/` terpisah) — ditambah `POST /api/v1/admin/anonymize-expired` |
 
 #### Migrasi Database (Alembic)
 
 | File | Fungsi |
 |---|---|
-| `alembic.ini` | Konfigurasi Alembic; `sqlalchemy.url` di-override dari `Settings` |
-| `alembic/env.py` | Baca `DATABASE_URL` dari `Settings`, autogenerate dari `Base.metadata` |
-| `alembic/versions/0001_initial_schema.py` | Buat tabel: `aturan_predikat`, `hasil_tes`, `hasil_tes_subkompetensi`, `progress_materi` |
+| `alembic/env.py` | Ditambah `render_as_batch=True` — dibutuhkan SQLite untuk `ALTER COLUMN` nullability |
+| `alembic/versions/0002_anonymisasi_hasil_tes.py` | `siswa_id` nullable, tambah `is_anonymized`; upgrade & downgrade diverifikasi jalan |
+
+(`alembic.ini`, `alembic/versions/0001_...`: sudah ada dari tiket 09, bukan bagian tiket ini.)
 
 #### Tests (`tests/`)
 
 | File | Coverage |
 |---|---|
-| `tests/test_deployment_infra.py` | 6 test: `/health` → 200, auth tanpa token → 422, token salah → 403, `dry_run` tidak mutasi, live run null-kan `siswa_id` + pertahankan `sekolah_id`/`skor`, skip baris non-expired, idempoten |
+| `tests/test_anonymization.py` | 6 test level repository: lama dianonimkan, agregat tetap utuh, baru tidak disentuh, dry-run tidak mutasi, idempoten, hanya baris kedaluwarsa yang terdampak |
+| `tests/test_api.py` (ditambah `TestAnonymizeExpired`) | 5 test level API: tanpa token → 422, token salah → 403, dry-run, live-run, data belum kedaluwarsa dilewati |
+| `tests/conftest.py` | Ditambah fixture `buat_hasil_tes` (factory, dipakai kedua file test di atas — sebelumnya duplikat) |
 
 ### Cara menjalankan di VPS pilot
 
 ```bash
-# 1. Salin dan isi environment variables
 cp .env.example .env
-# Edit .env: ganti INTERNAL_API_TOKEN dan POSTGRES_PASSWORD dengan nilai aman
+# WAJIB ganti INTERNAL_API_TOKEN dan POSTGRES_PASSWORD dari nilai default dev
 
-# 2. Buat shared network (sekali saja, dilakukan tim aplikasi utama)
-docker network create app-network
+docker network create app-network   # sekali saja, biasanya sudah dibuat tim aplikasi utama
 
-# 3. Jalankan stack
-make up          # docker compose up -d --build
+make up
+make migrate
 
-# 4. Jalankan migrasi skema database
-make migrate     # alembic upgrade head
-
-# 5. Verifikasi layanan sehat
 docker compose ps
-curl http://localhost:8000/health   # dari dalam VPS; port tidak terbuka ke luar
+docker compose exec analytics-api curl -sf http://localhost:8000/health
 ```
 
 ### Jadwal UU PDP anonymization (cron job)
 
-Tambahkan ke crontab VPS untuk menjalankan anonymisasi tiap bulan:
-
 ```cron
-0 2 1 * * docker exec analytics-api \
-  curl -s -X POST http://localhost:8000/api/v1/admin/anonymize-expired \
-  -H "X-Internal-Token: <token>" >> /var/log/analytics-anonymize.log 2>&1
+0 2 1 * * cd /path/ke/repo && INTERNAL_API_TOKEN=<token> make anonymize >> /var/log/analytics-anonymize.log 2>&1
 ```
