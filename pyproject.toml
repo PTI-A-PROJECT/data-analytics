@@ -1,0 +1,18 @@
+[project]
+name = "osn-data-analytics"
+version = "0.1.0"
+description = "Data & Analytics Service for OSN Informatika Test-Prep Platform"
+authors = [{ name = "OSN Analytics Team" }]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.115.0",
+    "uvicorn>=0.30.0",
+    "pydantic>=2.8.0",
+    "pydantic-settings>=2.4.0",
+    "sqlalchemy>=2.0.30",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
