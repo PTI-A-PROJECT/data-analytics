@@ -66,3 +66,4 @@ class DashboardResponse(BaseModel):
     distribusi_predikat: List[DistribusiPredikatItem]
     analisis_kompetensi: AnalisisKompetensiResponse
     komparasi_sekolah: List[KomparasiSekolahItem]
+

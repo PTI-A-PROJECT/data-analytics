@@ -108,3 +108,4 @@ def hitung_peta_kompetensi(
         )
 
     return result_kompetensi
+

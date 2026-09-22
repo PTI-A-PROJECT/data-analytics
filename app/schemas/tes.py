@@ -59,3 +59,4 @@ class SubmitTesResponse(BaseModel):
     jumlah_salah: int
     peta_kompetensi: List[KompetensiMapItem]
     kenaikan_tingkat: Optional[KenaikanTingkatDetail] = None
+

@@ -108,3 +108,4 @@ def test_subkompetensi_cukup_tanpa_butuh_optimasi(client, db):
     assert sk1["status"] == "Cukup"
     assert sk1["total_benar_lambat"] == 0
     assert sk1["butuh_optimasi"] is False
+

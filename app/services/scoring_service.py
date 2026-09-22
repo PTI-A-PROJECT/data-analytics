@@ -61,3 +61,4 @@ def evaluasi_jawaban_dan_durasi(
     predikat = tentukan_predikat(skor)
 
     return evaluated_answers, total_soal, jumlah_benar, skor, predikat
+

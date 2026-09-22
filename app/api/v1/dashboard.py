@@ -30,3 +30,4 @@ def get_admin_dashboard(
         tingkat_seleksi_id=tingkat_seleksi_id,
         rentang_waktu=rentang_waktu,
     )
+

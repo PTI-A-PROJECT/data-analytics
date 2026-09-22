@@ -49,3 +49,4 @@ class Soal(Base):
     batas_waktu_detik = Column(Integer, default=60, nullable=False)
 
     subkompetensi = relationship("Subkompetensi", back_populates="soal")
+

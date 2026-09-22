@@ -86,3 +86,4 @@ def root():
         "status": "healthy",
         "docs_url": "/docs",
     }
+
