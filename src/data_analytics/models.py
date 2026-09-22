@@ -21,10 +21,11 @@ class JenisTes(enum.StrEnum):
     SIMULASI = "simulasi"
 
 
-# tingkat_seleksi_id, simulasi_id, dan subkompetensi_id (di bawah) merujuk ke
-# entitas yang dikelola tim fullstack, bukan tabel di database ini — sengaja
-# tanpa ForeignKey() SQLAlchemy, sama seperti pola di ADR 0002 (layanan ini
-# tidak memiliki katalog Materi/Tingkat Seleksi/Simulasi/Subkompetensi sendiri).
+# tingkat_seleksi_id, simulasi_id, subkompetensi_id, dan sekolah_id (di bawah)
+# merujuk ke entitas yang dikelola tim fullstack, bukan tabel di database ini —
+# sengaja tanpa ForeignKey() SQLAlchemy, sama seperti pola di ADR 0002 (layanan
+# ini tidak memiliki katalog Materi/Tingkat Seleksi/Simulasi/Subkompetensi/
+# Sekolah sendiri).
 class AturanPredikat(Base):
     """Config Super Admin, per Tingkat Seleksi. Di-seed otomatis dengan 4 predikat
     default saat sebuah Tingkat Seleksi belum punya aturan sendiri — lihat
@@ -69,6 +70,8 @@ class HasilTes(Base):
 
     id: Mapped[int] = mapped_column(primary_key=True)
     siswa_id: Mapped[int]
+    # Nullable: siswa tanpa afiliasi sekolah formal. Lihat resolusi tiket 08.
+    sekolah_id: Mapped[int | None]
     tingkat_seleksi_id: Mapped[int]
     jenis_tes: Mapped[JenisTes] = mapped_column(
         SqlEnum(

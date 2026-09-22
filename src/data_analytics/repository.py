@@ -114,6 +114,7 @@ def catat_hasil_tes(
     breakdown_subkompetensi: Sequence[BreakdownSubkompetensi],
     diselesaikan_pada: datetime,
     simulasi_id: int | None = None,
+    sekolah_id: int | None = None,
 ) -> HasilTes:
     """Hitung skor & predikat satu attempt (Pre-Test atau Simulasi), lalu simpan
     sebagai HasilTes + breakdown HasilTesSubkompetensi-nya. predikat_label
@@ -139,6 +140,7 @@ def catat_hasil_tes(
 
     hasil = HasilTes(
         siswa_id=siswa_id,
+        sekolah_id=sekolah_id,
         tingkat_seleksi_id=tingkat_seleksi_id,
         jenis_tes=jenis_tes,
         simulasi_id=simulasi_id,

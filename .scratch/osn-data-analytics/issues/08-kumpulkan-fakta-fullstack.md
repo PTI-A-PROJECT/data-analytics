@@ -1,7 +1,7 @@
 # Task: Kumpulkan Fakta dari Tim Fullstack
 
 Type: task
-Status: open
+Status: resolved
 Blocked by: none
 
 ## Question
@@ -24,6 +24,7 @@ Seluruh 4 fakta arsitektural telah diselaraskan melalui sesi grilling terstruktu
    - Terdapat entitas `Sekolah` eksplisit di skema database aplikasi utama. Siswa terafiliasi ke sekolah tertentu.
    - Backend fullstack selalu menyertakan `sekolah_id` bersama `siswa_id` dalam setiap payload submission tes (`POST /api/v1/hasil-tes` dan endpoint pemetaan).
    - Layanan Data & Analytics membekukan `sekolah_id` sebagai snapshot pada tabel `hasil_tes` (nullable) saat attempt diselesaikan. Ini memungkinkan agregasi dan filter performa per sekolah di Dashboard Super Admin (FR-51) tanpa layanan analytics perlu mengelola CRUD data sekolah.
+   - **Diimplementasikan**: kolom `sekolah_id` sudah ada di `HasilTes` (`src/data_analytics/models.py`) dan parameter `sekolah_id` di `catat_hasil_tes` (`src/data_analytics/repository.py`).
 
 2. **Lokasi & Topologi Hosting**:
    - Layanan Data & Analytics akan **co-located** di 1 VPS (Ubuntu) yang sama dengan aplikasi utama menggunakan Docker Compose untuk fase pilot multi-sekolah.

@@ -32,6 +32,7 @@ def _catat_hasil_tes_default(
     total_soal: int = 10,
     jumlah_benar: int = 8,
     breakdown_subkompetensi: Sequence[BreakdownSubkompetensi] | None = None,
+    sekolah_id: int | None = None,
 ) -> HasilTes:
     return catat_hasil_tes(
         session,
@@ -43,6 +44,7 @@ def _catat_hasil_tes_default(
         jumlah_benar=jumlah_benar,
         breakdown_subkompetensi=breakdown_subkompetensi or _breakdown((1, total_soal, jumlah_benar)),
         diselesaikan_pada=datetime.now(timezone.utc),
+        sekolah_id=sekolah_id,
     )
 
 
@@ -157,6 +159,16 @@ class TestCatatHasilTes:
                 jumlah_benar=8,
                 breakdown_subkompetensi=_breakdown((1, 5, 4)),  # cuma 5, bukan 10
             )
+
+    def test_sekolah_id_disimpan_sebagai_snapshot(self, session: Session) -> None:
+        hasil = _catat_hasil_tes_default(session, sekolah_id=7)
+
+        assert hasil.sekolah_id == 7
+
+    def test_sekolah_id_opsional_default_none(self, session: Session) -> None:
+        hasil = _catat_hasil_tes_default(session)
+
+        assert hasil.sekolah_id is None
 
     def test_predikat_dibekukan_tidak_berubah_saat_aturan_diubah_admin(
         self, session: Session
