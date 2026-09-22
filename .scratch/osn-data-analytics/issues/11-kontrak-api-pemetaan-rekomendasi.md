@@ -15,11 +15,6 @@ fullstack sebagai kontrak data. Ditunggu sampai tiket "Peran Kecepatan Pengerjaa
 "Selaraskan Field Subkompetensi di Materi" selesai karena bentuk payload bergantung
 pada keduanya.
 
-Berikut adalah rumusan final **Resolusi dan Implementasi untuk Issue #11** yang sudah diselaraskan sepenuhnya dengan keputusan dari Issue 5 (Kecepatan & flag `butuh_optimasi`) dan Issue 6 (Materi ber-tag Subkompetensi dengan format UUID).
-
-Kamu bisa langsung *copy-paste* teks di bawah ini ke kolom komentar **Issue #11** di GitHub kamu!
-
----
 
 ### 📝 Resolusi Issue #11: Kontrak API Pemetaan Kompetensi & Rekomendasi Materi
 
