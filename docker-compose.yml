@@ -1,0 +1,62 @@
+# Deployment pilot (co-located di VPS yang sama dengan aplikasi utama) — lihat
+# resolusi .scratch/osn-data-analytics/issues/10-rencana-deployment-pilot.md.
+#
+# Port analytics-api dan analytics-db SENGAJA tidak di-bind ke host (`expose:`,
+# bukan `ports:`) — hanya bisa diakses container lain di app-network lewat DNS
+# internal Docker (mis. http://analytics-api:8000). app-network dibuat oleh
+# stack aplikasi utama terlebih dahulu:
+#   docker network create app-network
+#
+# Untuk dev lokal (port diekspos, hot-reload), pakai bersama docker-compose.dev.yml:
+#   docker compose -f docker-compose.yml -f docker-compose.dev.yml up
+
+services:
+  analytics-api:
+    build: .
+    expose:
+      - "8000"
+    env_file: .env
+    environment:
+      DATABASE_URL: postgresql+psycopg://${POSTGRES_USER}:${POSTGRES_PASSWORD}@analytics-db:5432/${POSTGRES_DB}
+    depends_on:
+      analytics-db:
+        condition: service_healthy
+    networks:
+      - app-network
+    deploy:
+      resources:
+        limits:
+          cpus: "1.0"
+          memory: 1G
+    restart: unless-stopped
+
+  analytics-db:
+    image: postgres:16-alpine
+    expose:
+      - "5432"
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+    volumes:
+      - analytics_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+    networks:
+      - app-network
+    deploy:
+      resources:
+        limits:
+          cpus: "1.0"
+          memory: 1G
+    restart: unless-stopped
+
+networks:
+  app-network:
+    external: true
+
+volumes:
+  analytics_pgdata:

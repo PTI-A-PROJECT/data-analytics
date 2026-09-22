@@ -1,0 +1,18 @@
+.git/
+.claude/
+.venv/
+__pycache__/
+*.pyc
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+.env
+*.db
+.scratch/
+docs/
+tests/
+CONTEXT.md
+brief 2.txt
+# README.md TIDAK diabaikan — pyproject.toml `readme = "README.md"` dibaca
+# `uv sync` saat build paket, hilang berarti build gagal.

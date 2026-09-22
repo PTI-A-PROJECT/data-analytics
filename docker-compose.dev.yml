@@ -1,0 +1,37 @@
+# Override dev lokal — jalankan bersama docker-compose.yml:
+#   docker compose -f docker-compose.yml -f docker-compose.dev.yml up --build
+#
+# Beda dari deployment pilot: port diekspos ke host, hot-reload aktif, limit
+# resource dilonggarkan (Compose me-merge mapping secara rekursif — key-per-key
+# — jadi limit dari docker-compose.yml tidak bisa benar-benar "dihapus" di
+# sini, hanya ditimpa dengan nilai lebih besar), dan app-network dibuat lokal
+# (tidak perlu `docker network create app-network` manual dulu seperti di
+# pilot).
+
+services:
+  analytics-api:
+    ports:
+      - "8000:8000"
+    command:
+      [
+        "uv", "run", "--no-sync", "uvicorn", "data_analytics.api:app",
+        "--host", "0.0.0.0", "--port", "8000", "--reload",
+      ]
+    deploy:
+      resources:
+        limits:
+          cpus: "4.0"
+          memory: 4G
+
+  analytics-db:
+    ports:
+      - "5432:5432"
+    deploy:
+      resources:
+        limits:
+          cpus: "4.0"
+          memory: 4G
+
+networks:
+  app-network:
+    external: false

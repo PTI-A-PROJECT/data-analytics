@@ -14,6 +14,7 @@ from sqlalchemy import (
     ForeignKey,
     Numeric,
     UniqueConstraint,
+    false,
     func,
 )
 from sqlalchemy import Enum as SqlEnum
@@ -77,7 +78,10 @@ class HasilTes(Base):
     )
 
     id: Mapped[int] = mapped_column(primary_key=True)
-    siswa_id: Mapped[int]
+    # Nullable: di-null-kan permanen oleh anonimkan_hasil_tes_kedaluwarsa (tiket
+    # 10, kepatuhan UU PDP tiket 12) setelah retention_months lewat — lihat
+    # is_anonymized. Selain itu selalu diisi.
+    siswa_id: Mapped[int | None]
     # Nullable: siswa tanpa afiliasi sekolah formal. Lihat resolusi tiket 08.
     sekolah_id: Mapped[int | None]
     tingkat_seleksi_id: Mapped[int]
@@ -98,6 +102,10 @@ class HasilTes(Base):
     dibuat_pada: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), server_default=func.now()
     )
+    # True setelah anonimkan_hasil_tes_kedaluwarsa menghapus siswa_id baris ini.
+    # skor/predikat_label/breakdown_subkompetensi/sekolah_id tetap utuh untuk
+    # agregasi Dashboard Admin — hanya identitas siswa yang dihapus.
+    is_anonymized: Mapped[bool] = mapped_column(default=False, server_default=false())
 
     breakdown_subkompetensi: Mapped[list[HasilTesSubkompetensi]] = relationship(
         back_populates="hasil_tes", cascade="all, delete-orphan"

@@ -7,7 +7,7 @@ from __future__ import annotations
 from collections import defaultdict
 from collections.abc import Sequence
 from dataclasses import dataclass
-from datetime import datetime
+from datetime import datetime, timedelta, timezone
 from typing import Final
 
 from sqlalchemy import delete, select
@@ -288,3 +288,39 @@ def hitung_progress_belajar(
         )
         for subkompetensi_id, persentase_list in sorted(materi_per_subkompetensi.items())
     ]
+
+
+def anonimkan_hasil_tes_kedaluwarsa(
+    session: Session,
+    *,
+    retention_months: int,
+    sekarang: datetime | None = None,
+    dry_run: bool = False,
+) -> int:
+    """Null-kan siswa_id pada baris HasilTes yang dibuat lebih dari
+    retention_months bulan lalu (UU PDP, lihat riset tiket 12 — pengendali
+    data wajib menetapkan & menegakkan periode retensinya sendiri). Baris
+    yang sudah is_anonymized dilewati (idempoten). Data agregat (skor,
+    predikat_label, sekolah_id, breakdown_subkompetensi) tidak disentuh —
+    tetap dipakai Dashboard Admin. dry_run=True hanya menghitung tanpa
+    mengubah apa pun.
+
+    Bulan didekati 30 hari — cukup presisi untuk siklus retensi tahunan,
+    tidak perlu kalender bulan sungguhan.
+    """
+    batas = (sekarang or datetime.now(timezone.utc)) - timedelta(days=retention_months * 30)
+
+    kedaluwarsa = session.scalars(
+        select(HasilTes).where(
+            HasilTes.dibuat_pada < batas,
+            HasilTes.is_anonymized.is_(False),
+        )
+    ).all()
+
+    if not dry_run:
+        for hasil in kedaluwarsa:
+            hasil.siswa_id = None
+            hasil.is_anonymized = True
+        session.flush()
+
+    return len(kedaluwarsa)
