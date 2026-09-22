@@ -23,3 +23,20 @@ class OverrideAksesRequest(BaseModel):
     tingkat_seleksi_id: int
     status: str = "terbuka"  # 'terbuka', 'terkunci'
     catatan: Optional[str] = None
+
+
+class AturanKenaikanItem(BaseModel):
+    id: int
+    tingkat_asal_id: int
+    tingkat_tujuan_id: int
+    skor_simulasi_min: float
+    persentase_kompetensi_cukup_min: float
+    aktif: bool
+
+
+class UpdateAturanKenaikanRequest(BaseModel):
+    skor_simulasi_min: Optional[float] = None
+    persentase_kompetensi_cukup_min: Optional[float] = None
+    aktif: Optional[bool] = None
+
+

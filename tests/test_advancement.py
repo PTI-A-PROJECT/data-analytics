@@ -202,3 +202,25 @@ def test_advancement_nasional_no_next_tier(client, db):
     assert resp.status_code == 201
     data = resp.json()
     assert data["kenaikan_tingkat"]["evaluasi_dilakukan"] is False
+
+
+def test_crud_aturan_kenaikan_super_admin(client, db):
+    """
+    Tiket 03: Super Admin dapat melihat dan mengubah ambang batas aturan kenaikan tingkat.
+    """
+    # 1. Get semua aturan
+    resp_get = client.get("/api/v1/tingkat/admin/aturan")
+    assert resp_get.status_code == 200
+    aturan_list = resp_get.json()
+    assert len(aturan_list) >= 2
+
+    # 2. Update aturan id=1 (Kabupaten -> Provinsi)
+    payload_update = {
+        "skor_simulasi_min": 80.0,
+        "persentase_kompetensi_cukup_min": 85.0,
+    }
+    resp_put = client.put("/api/v1/tingkat/admin/aturan/1", json=payload_update)
+    assert resp_put.status_code == 200
+    updated = resp_put.json()
+    assert updated["skor_simulasi_min"] == 80.0
+    assert updated["persentase_kompetensi_cukup_min"] == 85.0

@@ -1,9 +1,16 @@
+from typing import List
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
 from app.api.deps import get_db
 from app.models.master import TingkatSeleksi
-from app.models.kenaikan_tingkat import AksesTingkatSiswa
-from app.schemas.tingkat import AksesTingkatItem, AksesTingkatSiswaResponse, OverrideAksesRequest
+from app.models.kenaikan_tingkat import AksesTingkatSiswa, AturanKenaikanTingkat
+from app.schemas.tingkat import (
+    AksesTingkatItem,
+    AksesTingkatSiswaResponse,
+    OverrideAksesRequest,
+    AturanKenaikanItem,
+    UpdateAturanKenaikanRequest,
+)
 from app.services.advancement_service import inisialisasi_akses_siswa, override_akses_admin
 
 router = APIRouter()
@@ -65,3 +72,35 @@ def admin_override_akses(payload: OverrideAksesRequest, db: Session = Depends(ge
         dibuka_pada=aks.dibuka_pada,
         catatan=aks.catatan,
     )
+
+
+@router.get("/admin/aturan", response_model=List[AturanKenaikanItem])
+def get_semua_aturan_kenaikan(db: Session = Depends(get_db)):
+    """Melihat daftar seluruh aturan kenaikan tingkat (Tiket 03)."""
+    return db.query(AturanKenaikanTingkat).order_by(AturanKenaikanTingkat.id).all()
+
+
+@router.put("/admin/aturan/{aturan_id}", response_model=AturanKenaikanItem)
+def update_aturan_kenaikan(
+    aturan_id: int,
+    payload: UpdateAturanKenaikanRequest,
+    db: Session = Depends(get_db),
+):
+    """Mengubah parameter ambang batas skor atau persentase kompetensi cukup (Tiket 03)."""
+    aturan = db.get(AturanKenaikanTingkat, aturan_id)
+    if not aturan:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail=f"Aturan kenaikan tingkat ID {aturan_id} tidak ditemukan",
+        )
+
+    if payload.skor_simulasi_min is not None:
+        aturan.skor_simulasi_min = payload.skor_simulasi_min
+    if payload.persentase_kompetensi_cukup_min is not None:
+        aturan.persentase_kompetensi_cukup_min = payload.persentase_kompetensi_cukup_min
+    if payload.aktif is not None:
+        aturan.aktif = payload.aktif
+
+    db.commit()
+    db.refresh(aturan)
+    return aturan
