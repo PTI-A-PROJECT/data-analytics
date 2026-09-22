@@ -31,16 +31,19 @@ Seluruh 4 fakta arsitektural telah diselaraskan melalui sesi grilling terstruktu
    - Komunikasi antar-layanan berjalan privat di dalam Docker bridge network (`http://analytics:8000`), port 8000 tidak diekspos ke internet publik luar VPS.
    - Autentikasi panggilan antar-service diamankan dengan static shared secret pada header HTTP (`X-Internal-Token`).
    - Database PostgreSQL terpisah (dedicated container di Docker Compose atau database `analytics_db` terpisah) agar isolasi data dan eksekusi migrasi skema analytics mandiri dari skema aplikasi utama.
+   - **Belum diimplementasikan di sini** — fakta ini adalah input untuk tiket [10-rencana-deployment-pilot.md](10-rencana-deployment-pilot.md) (Docker Compose, topologi VPS, database terpisah). Lihat catatan verifikasi di tiket 10 — bagian "## Implementation"-nya belum terkonfirmasi ada di repo.
 
 3. **Kebijakan Consent Orang Tua & Retensi Data (UU PDP)**:
    - Backend fullstack bertindak sebagai *gatekeeper* kepatuhan UU PDP Pasal 25(2) (menangani verifikasi dan pencatatan consent eksplisit orang tua/wali untuk siswa minor sebelum mengizinkan pengerjaan tes).
    - Durasi retensi data performa/hasil tes siswa ditetapkan **1 siklus tahun ajaran OSN** (12 bulan).
    - Mekanisme pembersihan: Layanan Data & Analytics menyediakan endpoint internal pembersihan terjadwal (`POST /api/v1/admin/anonymize-expired`). Saat retensi kedaluwarsa, baris data tidak di-hard delete melainkan di-**anonimkan** (`siswa_id` di-set `NULL` / di-hash searah) agar data statistik agregat sekolah dan nasional tetap utuh untuk historis platform.
+   - **Belum diimplementasikan di sini** — kebijakan consent gatekeeper adalah scope tiket [13-selaraskan-consent-orang-tua.md](13-selaraskan-consent-orang-tua.md); mekanisme pembersihan/anonymize-expired disebut sudah dibuat di tiket 10 (lihat catatan verifikasi di sana — belum terkonfirmasi ada di repo, jangan dianggap tersedia sampai diverifikasi).
 
 4. **Timeline & Pola Beban Konkurensi Pilot**:
    - Timeline: Target go-live pilot dijadwalkan dalam **1–2 bulan ke depan** untuk 2–3 sekolah mitra (total ~100 siswa aktif).
    - Pola Beban: Simulasi dikerjakan secara **serentak di lab komputer sekolah**, menghasilkan lonjakan beban puncak (peak burst) ~50 request submission dalam jendela 5–10 menit saat waktu tes habis.
    - Performa: Pemrosesan skor dan pemetaan kompetensi tetap diproses secara **sinkron instan (<500ms)**. Komputasi matriks pilihan ganda sangat ringan di CPU Python; FastAPI (Gunicorn/Uvicorn workers + connection pool PostgreSQL) mampu menangani konkurensi ini tanpa membutuhkan antrean pesan asinkron (Kafka/Celery) yang berlebihan.
+   - **Belum diimplementasikan di sini** — murni input kapasitas/perencanaan, tidak ada tiket kode spesifik yang menjadi tujuannya. Relevan sebagai konteks kapasitas untuk tiket 10 (topologi hosting) saat menentukan resource limits VPS.
 
 ### Dependensi turunan yang terbuka
 

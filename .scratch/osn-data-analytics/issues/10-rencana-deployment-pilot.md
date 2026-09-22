@@ -52,6 +52,18 @@ Seluruh keputusan deployment untuk tahap pilot multi-sekolah telah disepakati me
 
 ## Implementation
 
+> **⚠️ Belum terverifikasi (dicatat 2026-09-22).** Diperiksa ulang terhadap git
+> history (seluruh branch lokal & remote yang sudah di-fetch: `main`, `razaq`,
+> `fakhri`, `falih`, `hilmi`, `mahanaim`) dan filesystem repo saat ini — commit
+> `feat(#10)` yang disebut di bawah **tidak ditemukan**, dan tidak satu pun file
+> yang didaftarkan (`docker-compose.yml`, `Dockerfile`, `src/config.py`,
+> `src/routers/admin.py`, migrasi Alembic, `tests/test_deployment_infra.py`, dst.)
+> benar-benar ada di repo ini. `Status` tiket ini juga masih `open`, bukan
+> `resolved`, yang tidak konsisten dengan klaim "telah diimplementasikan" di
+> bawah. Jangan anggap endpoint/infrastruktur di bawah ini tersedia sampai
+> diverifikasi ulang dengan penulis aslinya — bagian di bawah dibiarkan apa
+> adanya untuk ditelusuri, bukan dihapus.
+
 Seluruh keputusan di atas telah diimplementasikan dalam commit `feat(#10)` di branch `main`.
 
 ### File yang dibuat
