@@ -46,7 +46,9 @@ Untuk menjaga konsistensi dengan DTO Pydantic yang sudah disahkan pada **Issue #
   "halaman_dibuka": 5,
   "timestamp": "2026-09-22T06:30:00Z"
 }
-*
+
+
+```
 
 ## Implementasi: Skema Database & Logika *High-Water Mark*
 
@@ -75,5 +77,4 @@ Tim Data & Analytics akan membuat *endpoint* internal (misal: `POST /api/v1/anal
 4. **Kondisi Update (Data Lama):** Jika data sudah ada, sistem hanya akan melakukan `UPDATE` jika angka `payload.halaman_dibuka` **lebih besar** dari `halaman_tertinggi_dicapai` yang tersimpan di *database*.
 * *(Contoh: Jika di database tercatat halaman 5, lalu siswa kembali mundur membaca halaman 2 dan frontend mengirim event halaman 2, sistem akan mengabaikan update ini).*
 5. **Kalkulasi Progress Subkompetensi:** Data `halaman_tertinggi_dicapai` ini nantinya akan diolah secara agregat oleh mesin rekomendasi untuk menghitung metrik *Progress Belajar* (FR-10) per Subkompetensi.
-
 
