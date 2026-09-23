@@ -1,7 +1,8 @@
 """FastAPI app — health endpoints (tiket 09), endpoint admin internal
 (tiket 10), endpoint submit Pre-Test/Simulasi (tiket 11), Kenaikan Tingkat
-(tiket 03), dan Dashboard Super Admin (tiket 04). Endpoint Rekomendasi Materi
-belum diimplementasikan — bergantung tiket 06 yang masih direview ulang.
+(tiket 03), Dashboard Super Admin (tiket 04), dan event Progress Halaman
+Materi (tiket 14). Endpoint Rekomendasi Materi belum diimplementasikan —
+bergantung tiket 06 yang masih direview ulang.
 """
 
 from __future__ import annotations
@@ -17,9 +18,11 @@ from data_analytics.auth import verify_internal_token
 from data_analytics.config import get_settings
 from data_analytics.dashboard import hitung_metrik_dashboard
 from data_analytics.db import get_db
+from data_analytics.progress import persentase_selesai
 from data_analytics.repository import (
     JawabanInput,
     anonimkan_hasil_tes_kedaluwarsa,
+    catat_progress_halaman,
     catat_submission_tes,
     evaluasi_dan_catat_kenaikan,
     get_akses_siswa,
@@ -36,6 +39,8 @@ from data_analytics.schemas import (
     DashboardResponse,
     EvaluasiKenaikanRequest,
     EvaluasiKenaikanResponse,
+    HalamanMateriEventRequest,
+    HalamanMateriEventResponse,
     OverrideAksesRequest,
     PetaKompetensiItem,
     SubmitAssessmentData,
@@ -303,3 +308,43 @@ def get_dashboard(
     di dashboard.py soal section 'analisis_kompetensi' yang belum diimplementasikan.
     """
     return hitung_metrik_dashboard(db, sekolah_id=sekolah_id, rentang_waktu=rentang_waktu)
+
+
+@app.post(
+    "/api/v1/analytics/events/materi-progress",
+    dependencies=[Depends(verify_internal_token)],
+    response_model=HalamanMateriEventResponse,
+)
+def catat_event_materi_progress(
+    payload: HalamanMateriEventRequest, db: Annotated[Session, Depends(get_db)]
+) -> HalamanMateriEventResponse:
+    """Terima event 'siswa mencapai halaman Materi' dari Fullstack (resolusi
+    tiket 14), upsert high-water mark `progress_materi` (tiket 02) —
+    `catat_progress_halaman` sudah menegakkan aturan "tidak pernah turun
+    walau navigasi mundur".
+    """
+    try:
+        progress = catat_progress_halaman(
+            db,
+            siswa_id=payload.siswa_id,
+            materi_id=payload.materi_id,
+            subkompetensi_id=payload.subkompetensi_id,
+            tingkat_seleksi_id=payload.tingkat_seleksi_id,
+            total_halaman=payload.total_halaman,
+            halaman_dicapai=payload.halaman_dibuka,
+        )
+    except ValueError as exc:
+        raise HTTPException(status_code=422, detail=str(exc)) from exc
+
+    db.commit()
+
+    return HalamanMateriEventResponse(
+        siswa_id=progress.siswa_id,
+        materi_id=progress.materi_id,
+        halaman_tertinggi_dicapai=progress.halaman_tertinggi_dicapai,
+        total_halaman=progress.total_halaman,
+        persentase_selesai=persentase_selesai(
+            halaman_tertinggi_dicapai=progress.halaman_tertinggi_dicapai,
+            total_halaman=progress.total_halaman,
+        ),
+    )

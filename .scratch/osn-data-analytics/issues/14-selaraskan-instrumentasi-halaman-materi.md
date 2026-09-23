@@ -1,7 +1,7 @@
 # Task: Selaraskan Instrumentasi Halaman Materi dengan Tim Fullstack
 
 Type: task
-Status: open
+Status: resolved
 Blocked by: none
 
 ## Question
@@ -77,4 +77,52 @@ Tim Data & Analytics akan membuat *endpoint* internal (misal: `POST /api/v1/anal
 4. **Kondisi Update (Data Lama):** Jika data sudah ada, sistem hanya akan melakukan `UPDATE` jika angka `payload.halaman_dibuka` **lebih besar** dari `halaman_tertinggi_dicapai` yang tersimpan di *database*.
 * *(Contoh: Jika di database tercatat halaman 5, lalu siswa kembali mundur membaca halaman 2 dan frontend mengirim event halaman 2, sistem akan mengabaikan update ini).*
 5. **Kalkulasi Progress Subkompetensi:** Data `halaman_tertinggi_dicapai` ini nantinya akan diolah secara agregat oleh mesin rekomendasi untuk menghitung metrik *Progress Belajar* (FR-10) per Subkompetensi.
+
+## Implementation
+
+**Diimplementasikan** — endpoint `POST /api/v1/analytics/events/materi-progress`
+(dilindungi `X-Internal-Token`, pola sama endpoint lain) sudah live di
+`src/data_analytics/api.py`. Logika high-water-mark-nya **sudah ada sejak
+tiket 02** (`repository.catat_progress_halaman` + tabel `progress_materi`,
+lengkap dengan test-nya di `tests/test_progress_repository.py`) — gap
+sebenarnya di tiket ini murni lapisan HTTP: fungsinya belum pernah dipanggil
+lewat endpoint. Yang ditambahkan di sini: `HalamanMateriEventRequest`/
+`HalamanMateriEventResponse` (`schemas.py`) dan endpoint itu sendiri
+(`api.py`), plus test API baru (`tests/test_api_materi_progress.py`).
+
+### Deviasi dari skema di atas — tabel & tipe id TIDAK diganti
+
+Skema `progress_materi_siswa` (UUID) di bagian "Skema Tabel" di atas **tidak
+dibuat** — dipetakan ke tabel `progress_materi` yang sudah ada (tiket
+02/09), yang kolom id-nya (`siswa_id`/`materi_id`/`subkompetensi_id`/
+`tingkat_seleksi_id`) bertipe **int**, bukan UUID string. Payload request
+endpoint mengikuti tipe int yang sama, BUKAN format UUID pada contoh JSON
+resolusi di atas. `last_accessed_at` juga tidak jadi kolom terpisah — kolom
+`diperbarui_pada` (server-side, `progress_materi`) sudah menangkap "kapan
+terakhir disentuh" setiap kali baris di-upsert.
+
+Ini bukan penyimpangan baru — migrasi `progress_materi` ke UUID sudah
+dicatat sebagai utang teknis terpisah sejak resolusi tiket 11 ("sengaja
+belum diselaraskan... kalau/ketika tiket 02 disentuh ulang"). Sesuai arahan
+implementasi tiket ini (fokus hanya pada endpoint yang belum ada, isu tiket
+12/13 diabaikan), migrasi id itu **tidak** dilakukan di sini supaya blast
+radius tetap kecil — endpoint memakai tipe yang sudah ada di
+`ProgressMateri`, bukan menambah skema baru yang tidak terhubung. Kapan
+`progress_materi` benar-benar dimigrasikan ke UUID tetap jadi keputusan
+terpisah.
+
+**Field `timestamp` pada payload**: divalidasi (wajib ada, tipe datetime)
+tapi tidak dipakai untuk apa pun di luar itu — *Dwell Time Trigger* (poin 2
+resolusi) adalah logika sisi UI/frontend (kapan event ditembak), bukan
+sesuatu yang divalidasi ulang di endpoint ini.
+
+### File yang dibuat/diubah
+
+| File | Fungsi |
+|---|---|
+| `src/data_analytics/schemas.py` | `HalamanMateriEventRequest`/`HalamanMateriEventResponse` (baru) |
+| `src/data_analytics/api.py` | Endpoint `POST /api/v1/analytics/events/materi-progress` (baru) |
+| `tests/test_api_materi_progress.py` | Test baru: baris baru, high-water mark, navigasi mundur, validasi 422, auth |
+
+Diverifikasi: full test suite (135 test, 6 baru) dan `mypy` bersih.
 

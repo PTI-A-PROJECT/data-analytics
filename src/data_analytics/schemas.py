@@ -1,12 +1,13 @@
 """DTO Pydantic untuk kontrak API publik: endpoint submit Pre-Test/Simulasi
-(tiket 11) dan endpoint Kenaikan Tingkat (tiket 03). Terpisah dari model
-SQLAlchemy (models.py) supaya bentuk wire format (mis. jenis_tes UPPERCASE,
-label status_pemetaan berkapital) tidak membocorkan representasi penyimpanan
-internal.
+(tiket 11), Kenaikan Tingkat (tiket 03), dan event Progress Halaman Materi
+(tiket 14). Terpisah dari model SQLAlchemy (models.py) supaya bentuk wire
+format (mis. jenis_tes UPPERCASE, label status_pemetaan berkapital) tidak
+membocorkan representasi penyimpanan internal.
 """
 
 from __future__ import annotations
 
+from datetime import datetime
 from typing import Literal
 
 from pydantic import BaseModel, Field
@@ -175,3 +176,35 @@ class DashboardResponse(BaseModel):
     tren_aktivitas: list[TrenAktivitasItem]
     distribusi_predikat: list[DistribusiPredikatItem]
     komparasi_sekolah: list[KomparasiSekolahItem]
+
+
+# --- Progress Halaman Materi (tiket 14) ---------------------------------------
+# Field id di sini int, mengikuti tipe kolom ProgressMateri yang sudah ada
+# (tiket 02/09) — BUKAN UUID string seperti diusulkan resolusi tiket 14/06.
+# Migrasi progress_materi ke UUID sudah dicatat sebagai utang teknis terpisah
+# sejak tiket 11 ("sengaja belum diselaraskan"); tidak dilakukan di sini
+# supaya blast radius tiket ini tetap terbatas pada endpoint yang belum ada
+# (lihat resolusi/Implementation tiket 14).
+
+
+class HalamanMateriEventRequest(BaseModel):
+    siswa_id: int
+    materi_id: int
+    subkompetensi_id: int
+    tingkat_seleksi_id: int
+    total_halaman: int = Field(gt=0)
+    halaman_dibuka: int = Field(ge=1)
+    # Divalidasi (payload wajib menyertakannya, sesuai kontrak tiket 14) tapi
+    # tidak disimpan sebagai kolom terpisah — diperbarui_pada (server-side,
+    # ProgressMateri) sudah menangkap "kapan terakhir disentuh", konsisten
+    # dengan pola diselesaikan_pada di endpoint submit (tiket 11).
+    timestamp: datetime
+
+
+class HalamanMateriEventResponse(BaseModel):
+    status: Literal["success"] = "success"
+    siswa_id: int
+    materi_id: int
+    halaman_tertinggi_dicapai: int
+    total_halaman: int
+    persentase_selesai: float
