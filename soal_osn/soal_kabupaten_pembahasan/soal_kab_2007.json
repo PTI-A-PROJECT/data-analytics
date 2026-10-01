@@ -12,7 +12,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "b",
-    "pembahasan": "Kita hitung masing-masing kombinasi:\n- C(7, 3) = 7! / (3! * 4!) = (7 x 6 x 5) / (3 x 2 x 1) = 35\n- C(4, 2) = 4! / (2! * 2!) = (4 x 3) / (2 x 1) = 6\n- C(2, 1) = 2! / (1! * 1!) = 2\n- C(1, 1) = 1! / (1! * 0!) = 1\n\nHasil perkalian = 35 x 6 x 2 x 1 = 420."
+    "pembahasan": "Kita hitung masing-masing kombinasi:\n- C(7, 3) = 7! / (3! * 4!) = (7 x 6 x 5) / (3 x 2 x 1) = 35\n- C(4, 2) = 4! / (2! * 2!) = (4 x 3) / (2 x 1) = 6\n- C(2, 1) = 2! / (1! * 1!) = 2\n- C(1, 1) = 1! / (1! * 0!) = 1\n\nHasil perkalian = 35 x 6 x 2 x 1 = 420.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Berapa banyak kemungkinan solusi untuk x + y + z = 11, jika x, y, z adalah bilanganbilangan bulat positif dan tidak ada yang sama harganya?",
@@ -27,7 +28,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "c",
-    "pembahasan": "Cari kombinasi 3 bilangan positif unik (terurut x < y < z) yang jumlahnya 11:\n1. (1, 2, 8)\n2. (1, 3, 7)\n3. (1, 4, 6)\n4. (2, 3, 6)\n5. (2, 4, 5)\nAda 5 kombinasi unik terurut.\nKarena nilai x, y, dan z boleh ditukar-tukar posisinya (permutasi), setiap kombinasi memiliki 3! = 6 cara penyusunan.\nTotal solusi = 5 x 6 = 30."
+    "pembahasan": "Cari kombinasi 3 bilangan positif unik (terurut x < y < z) yang jumlahnya 11:\n1. (1, 2, 8)\n2. (1, 3, 7)\n3. (1, 4, 6)\n4. (2, 3, 6)\n5. (2, 4, 5)\nAda 5 kombinasi unik terurut.\nKarena nilai x, y, dan z boleh ditukar-tukar posisinya (permutasi), setiap kombinasi memiliki 3! = 6 cara penyusunan.\nTotal solusi = 5 x 6 = 30.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Berapa banyak kemungkinan solusi untuk x + y + z = 11, jika x, y, z adalah bilangan-bilangan bulat positif dan memenuhi hubungan x < y < z ?",
@@ -42,7 +44,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "a",
-    "pembahasan": "Karena disyaratkan x < y < z (terurut pasti), kita hanya menghitung kombinasi bilangan bulat positif yang memenuhi:\n1. 1 + 2 + 8 = 11\n2. 1 + 3 + 7 = 11\n3. 1 + 4 + 6 = 11\n4. 2 + 3 + 6 = 11\n5. 2 + 4 + 5 = 11\nTotalnya ada 5 solusi."
+    "pembahasan": "Karena disyaratkan x < y < z (terurut pasti), kita hanya menghitung kombinasi bilangan bulat positif yang memenuhi:\n1. 1 + 2 + 8 = 11\n2. 1 + 3 + 7 = 11\n3. 1 + 4 + 6 = 11\n4. 2 + 3 + 6 = 11\n5. 2 + 4 + 5 = 11\nTotalnya ada 5 solusi.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Berapa banyak kemungkinan solusi untuk x + y + z = 11, jika x, y, z adalah bilangan-bilangan bulat positif dan memenuhi hubungan x y z ?",
@@ -57,7 +60,8 @@
     "gambar_url": "http://latex.codecogs.com/gif.latex?%5Cdpi%7B80%7D%20%5Csmall%20%5Cleq",
     "gambar_lokal": "soal_4.png",
     "jawaban_benar": "b",
-    "pembahasan": "Hubungan yang dimaksud adalah x <= y <= z. Selain 5 kombinasi unik di mana ketiganya berbeda (1,2,8; 1,3,7; 1,4,6; 2,3,6; 2,4,5), kita sertakan kombinasi yang memiliki elemen sama:\n6. 1 + 1 + 9 = 11 (1 <= 1 <= 9)\n7. 1 + 5 + 5 = 11 (1 <= 5 <= 5)\n8. 2 + 2 + 7 = 11 (2 <= 2 <= 7)\n9. 3 + 3 + 5 = 11 (3 <= 3 <= 5)\n10. 3 + 4 + 4 = 11 (3 <= 4 <= 4)\nTotal kemungkinan solusi ada 10."
+    "pembahasan": "Hubungan yang dimaksud adalah x <= y <= z. Selain 5 kombinasi unik di mana ketiganya berbeda (1,2,8; 1,3,7; 1,4,6; 2,3,6; 2,4,5), kita sertakan kombinasi yang memiliki elemen sama:\n6. 1 + 1 + 9 = 11 (1 <= 1 <= 9)\n7. 1 + 5 + 5 = 11 (1 <= 5 <= 5)\n8. 2 + 2 + 7 = 11 (2 <= 2 <= 7)\n9. 3 + 3 + 5 = 11 (3 <= 3 <= 5)\n10. 3 + 4 + 4 = 11 (3 <= 4 <= 4)\nTotal kemungkinan solusi ada 10.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Berapa banyak kemungkinan solusi untuk x + y + z = 11, jika x, y, z adalah bilangan-bilangan bulat positif dan memenuhi hubungan x+z < 2y ?",
@@ -72,7 +76,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "e",
-    "pembahasan": "Diketahui x + y + z = 11, maka x + z = 11 - y.\nSubstitusi ke pertidaksamaan x + z < 2y:\n11 - y < 2y => 3y > 11 => y > 3,66.\nKarena y bilangan bulat positif, nilai y yang mungkin adalah y = 4, 5, 6, 7, ...\n\n- Untuk y = 4: x + z = 7. Karena x, z >= 1, nilai x yang mungkin: 1, 2, 3, 4, 5, 6 (ada 6 pasangan).\n- Untuk y = 5: x + z = 6. Nilai x yang mungkin: 1, 2, 3, 4, 5 (ada 5 pasangan).\n- Untuk y = 6: x + z = 5. Nilai x yang mungkin: 1, 2, 3, 4 (ada 4 pasangan).\n- Untuk y = 7: x + z = 4. Nilai x yang mungkin: 1, 2, 3 (ada 3 pasangan).\n- Untuk y = 8: x + z = 3. Nilai x yang mungkin: 1, 2 (ada 2 pasangan).\n- Untuk y = 9: x + z = 2. Nilai x yang mungkin: 1 (ada 1 pasangan).\n\nTotal kemungkinan solusi = 6 + 5 + 4 + 3 + 2 + 1 = 21."
+    "pembahasan": "Diketahui x + y + z = 11, maka x + z = 11 - y.\nSubstitusi ke pertidaksamaan x + z < 2y:\n11 - y < 2y => 3y > 11 => y > 3,66.\nKarena y bilangan bulat positif, nilai y yang mungkin adalah y = 4, 5, 6, 7, ...\n\n- Untuk y = 4: x + z = 7. Karena x, z >= 1, nilai x yang mungkin: 1, 2, 3, 4, 5, 6 (ada 6 pasangan).\n- Untuk y = 5: x + z = 6. Nilai x yang mungkin: 1, 2, 3, 4, 5 (ada 5 pasangan).\n- Untuk y = 6: x + z = 5. Nilai x yang mungkin: 1, 2, 3, 4 (ada 4 pasangan).\n- Untuk y = 7: x + z = 4. Nilai x yang mungkin: 1, 2, 3 (ada 3 pasangan).\n- Untuk y = 8: x + z = 3. Nilai x yang mungkin: 1, 2 (ada 2 pasangan).\n- Untuk y = 9: x + z = 2. Nilai x yang mungkin: 1 (ada 1 pasangan).\n\nTotal kemungkinan solusi = 6 + 5 + 4 + 3 + 2 + 1 = 21.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Enam ekor ayam masuk ke dalam 3 buah kandang yang semula kosong. Berapa jumlah maksimum yang mungkin ayam-ayam dalam satu kandang?",
@@ -87,7 +92,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "e",
-    "pembahasan": "Karena tidak ada syarat bahwa setiap kandang harus terisi, seluruh 6 ekor ayam bisa saja masuk ke dalam 1 kandang yang sama, sehingga 2 kandang lainnya kosong. Maksimum ayam dalam satu kandang adalah 6."
+    "pembahasan": "Karena tidak ada syarat bahwa setiap kandang harus terisi, seluruh 6 ekor ayam bisa saja masuk ke dalam 1 kandang yang sama, sehingga 2 kandang lainnya kosong. Maksimum ayam dalam satu kandang adalah 6.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Enam ekor ayam masuk ke dalam 3 buah kandang yang semula kosong. Berapa jumlah maksimum yang mungkin ayam-ayam dalam satu kandang jika setiap kandang pasti ada ayam di dalamnya?",
@@ -102,7 +108,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "d",
-    "pembahasan": "Agar 1 kandang memiliki jumlah ayam semaksimal mungkin, 2 kandang sisanya diisi dengan jumlah ayam seminimal mungkin, yaitu masing-masing 1 ekor ayam.\nMaka kandang pertama dapat berisi: 6 - 1 - 1 = 4 ekor ayam."
+    "pembahasan": "Agar 1 kandang memiliki jumlah ayam semaksimal mungkin, 2 kandang sisanya diisi dengan jumlah ayam seminimal mungkin, yaitu masing-masing 1 ekor ayam.\nMaka kandang pertama dapat berisi: 6 - 1 - 1 = 4 ekor ayam.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Satu lembar kertas berukuran 19 cm x 30 cm akan ditempeli prangko-prangko yang berbentuk sama. Ukuran masing-masing dari perangko-perangko tersebut adalah 3 cm x 3 cm. Jarak antar perangko di kertas tidak boleh kurang dari 1 cm. Dari pinggiran kertas selebar minimal 2 cm harus dikosongkan. Berapa banyak perangko (utuh!) yang bisa ditempelkan paling banyak?",
@@ -117,7 +124,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "c",
-    "pembahasan": "Area efektif penempelan prangko setelah dikurangi marjin pinggir minimal 2 cm di setiap sisi:\n- Lebar efektif = 19 - 2(2) = 15 cm\n- Panjang efektif = 30 - 2(2) = 26 cm\n\nSetiap prangko butuh 3 cm plus jarak antar prangko 1 cm (efektif per prangko butuh slot 4 cm, kecuali prangko terakhir di ujung hanya butuh 3 cm):\n- Jumlah prangko pada arah lebar (15 cm): 4 x k - 1 <= 15 => 4k <= 16 => k = 4 prangko.\n- Jumlah prangko pada arah panjang (26 cm): 4 x m - 1 <= 26 => 4m <= 27 => m = 6 prangko.\n\nTotal prangko maksimal = 4 x 6 = 24 buah."
+    "pembahasan": "Area efektif penempelan prangko setelah dikurangi marjin pinggir minimal 2 cm di setiap sisi:\n- Lebar efektif = 19 - 2(2) = 15 cm\n- Panjang efektif = 30 - 2(2) = 26 cm\n\nSetiap prangko butuh 3 cm plus jarak antar prangko 1 cm (efektif per prangko butuh slot 4 cm, kecuali prangko terakhir di ujung hanya butuh 3 cm):\n- Jumlah prangko pada arah lebar (15 cm): 4 x k - 1 <= 15 => 4k <= 16 => k = 4 prangko.\n- Jumlah prangko pada arah panjang (26 cm): 4 x m - 1 <= 26 => 4m <= 27 => m = 6 prangko.\n\nTotal prangko maksimal = 4 x 6 = 24 buah.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Sebuah roda menggelinding (tanpa slip) dilintasan no 1 yang berbentuk lingkaran sempurna. Jika roda memiliki jari-jari 30cm, dan untuk kembali keposisi semula roda berputar sebanyak tepat 10 kali. Sebuah lintasan lain yaitu lintasan no 2 sejajar lintasan no 1 tetapi berdiameter 1 meter lebih pendek dari no 1 (Catatan: berarti keduanya berbentuk lingkaran yang bertitik pusat sama). Jika roda tsb digelindingkan pada lintasan no 2 berapa banyakkah putaran yang dialami roda tersebut sekarang untuk kembali ke posisi semula?",
@@ -131,8 +139,9 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "c",
-    "pembahasan": "Keliling roda = 2 x pi x 30 = 60pi cm = 0.6pi meter.\nPanjang lintasan 1 = 10 x keliling roda = 10 x 0.6pi = 6pi meter.\nKeliling lintasan 1 = pi x D1 = 6pi meter => Diameter lintasan 1 (D1) = 6 meter.\n\nLintasan 2 berdiameter 1 meter lebih pendek, maka D2 = 6 - 1 = 5 meter.\nPanjang lintasan 2 = pi x D2 = 5pi meter.\n\nBanyaknya putaran pada lintasan 2 = Panjang lintasan 2 / Keliling roda\n= 5pi / 0.6pi = 5 / 0.6 = 8.33 kali.\nNilai 8.33 berada di antara 8 - 9 kali (jawaban d, atau sesuai rentang antara 8 - 9 kali)."
+    "jawaban_benar": "d",
+    "pembahasan": "Keliling roda = 2 x pi x 30 = 60pi cm = 0.6pi meter.\nPanjang lintasan 1 = 10 x keliling roda = 10 x 0.6pi = 6pi meter.\nKeliling lintasan 1 = pi x D1 = 6pi meter => Diameter lintasan 1 (D1) = 6 meter.\n\nLintasan 2 berdiameter 1 meter lebih pendek, maka D2 = 6 - 1 = 5 meter.\nPanjang lintasan 2 = pi x D2 = 5pi meter.\n\nBanyaknya putaran pada lintasan 2 = Panjang lintasan 2 / Keliling roda\n= 5pi / 0.6pi = 5 / 0.6 = 8.33 kali.\nNilai 8.33 berada di antara 8 - 9 kali (jawaban d, atau sesuai rentang antara 8 - 9 kali).",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Seutas benang yang semula memiliki panjang 1 meter dilipat dua dengan mempertemukan kedua ujungnya, dari hasilnya lalu dilipatdua lagi beberapa kali hingga terlipat-lipat dengan panjang lipatan terakhir adalah yang paling panjang tetapi kurang dari 1 cm. Berapa kali pelipatan yang telah dilakukan hingga ukuran tersebut?",
@@ -147,7 +156,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "b",
-    "pembahasan": "Panjang awal = 1 meter = 100 cm.\nSetiap pelipatan membagi panjang menjadi setengahnya (100 / 2^n cm).\nKita mencari n terkecil sehingga 100 / 2^n < 1 cm:\n- n = 6: 100 / 64 = 1.5625 cm (masih > 1 cm)\n- n = 7: 100 / 128 = 0.78125 cm (sudah < 1 cm)\n\nJadi pelipatan dilakukan sebanyak 7 kali."
+    "pembahasan": "Panjang awal = 1 meter = 100 cm.\nSetiap pelipatan membagi panjang menjadi setengahnya (100 / 2^n cm).\nKita mencari n terkecil sehingga 100 / 2^n < 1 cm:\n- n = 6: 100 / 64 = 1.5625 cm (masih > 1 cm)\n- n = 7: 100 / 128 = 0.78125 cm (sudah < 1 cm)\n\nJadi pelipatan dilakukan sebanyak 7 kali.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Berapakah 7 450 mod 100 ? (Catatan: n mod m adalah sisa pembagian n oleh m, misalnya 41 mod 7 = 6 karena 41 - (7 x 5) = 6).",
@@ -162,7 +172,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "c",
-    "pembahasan": "Menghitung 7^450 mod 100:\n- 7^1 mod 100 = 7\n- 7^2 mod 100 = 49\n- 7^3 mod 100 = 43\n- 7^4 mod 100 = 01\nPola berulang setiap periode 4.\n\n450 mod 4 = 2.\nMaka 7^450 mod 100 ≡ 7^2 mod 100 = 49."
+    "pembahasan": "Menghitung 7^450 mod 100:\n- 7^1 mod 100 = 7\n- 7^2 mod 100 = 49\n- 7^3 mod 100 = 43\n- 7^4 mod 100 = 01\nPola berulang setiap periode 4.\n\n450 mod 4 = 2.\nMaka 7^450 mod 100 ≡ 7^2 mod 100 = 49.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Jika a dan b adalah bilangan prima terbesar yang dapat membagi 7007, berapakah a+b?",
@@ -177,7 +188,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "a",
-    "pembahasan": "Faktorisasi prima dari 7007:\n7007 = 7 x 1001\n1001 = 7 x 11 x 13\nJadi 7007 = 7^2 x 11 x 13.\n\nFaktor-faktor prima dari 7007 adalah 7, 11, dan 13.\n2 bilangan prima terbesar adalah a = 13 dan b = 11.\nMaka a + b = 13 + 11 = 24."
+    "pembahasan": "Faktorisasi prima dari 7007:\n7007 = 7 x 1001\n1001 = 7 x 11 x 13\nJadi 7007 = 7^2 x 11 x 13.\n\nFaktor-faktor prima dari 7007 adalah 7, 11, dan 13.\n2 bilangan prima terbesar adalah a = 13 dan b = 11.\nMaka a + b = 13 + 11 = 24.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Deskripsi Untuk Soal Nomor 13 dan 17",
@@ -186,8 +198,9 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": null,
-    "pembahasan": "Merupakan teks deskripsi untuk kelompok soal nomor 13 sampai 17."
+    "jawaban_benar": "Informasi Deskripsi",
+    "pembahasan": "Merupakan teks deskripsi untuk kelompok soal nomor 13 sampai 17.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Jika hari ini biasa-biasa saja lalu 4 malam berturut turun hujan kecuali malam ke 3 tidak turun hujan, bagaimanakah suasana hatinya pada hari berikutnya setelah 4 malam tersebut?",
@@ -201,8 +214,9 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "a",
-    "pembahasan": "Aturan transisi saat Hujan (H) dan Tidak Hujan (T):\n- Berseri (B) -> H: Pemurung (M), T: Biasa (S)\n- Biasa (S) -> H: Apatis (A), T: B\n- Pemurung (M) -> H: Pemarah (R), T: S\n- Pemarah (R) -> H: A, T: S\n- Apatis (A) -> H: M, T: B\n\nKondisi: Awal = Biasa (S), Urutan malam = [Hujan, Hujan, Tidak Hujan, Hujan]\n- Hari 0: Biasa (S)\n- Malam 1 (Hujan): S -> Apatis (A)\n- Malam 2 (Hujan): A -> Pemurung (M)\n- Malam 3 (Tidak Hujan): M -> Biasa (S)\n- Malam 4 (Hujan): S -> Apatis (A) / Pemurung (M jika dari jalur B/A)\nMari cek ulang transisi:\n- Hari 0: Biasa (S)\n- M1 (H): S -> A\n- M2 (H): A -> M\n- M3 (T): M -> S\n- M4 (H): S -> A. (Jika opsi Apatis e, jawaban e. Namun jika M3 adalah M -> S lalu M4 -> A, kondisi akhir adalah Apatis/Pemurung)."
+    "jawaban_benar": "e",
+    "pembahasan": "Aturan transisi saat Hujan (H) dan Tidak Hujan (T):\n- Berseri (B) -> H: Pemurung (M), T: Biasa (S)\n- Biasa (S) -> H: Apatis (A), T: B\n- Pemurung (M) -> H: Pemarah (R), T: S\n- Pemarah (R) -> H: A, T: S\n- Apatis (A) -> H: M, T: B\n\nKondisi: Awal = Biasa (S), Urutan malam = [Hujan, Hujan, Tidak Hujan, Hujan]\n- Hari 0: Biasa (S)\n- Malam 1 (Hujan): S -> Apatis (A)\n- Malam 2 (Hujan): A -> Pemurung (M)\n- Malam 3 (Tidak Hujan): M -> Biasa (S)\n- Malam 4 (Hujan): S -> Apatis (A) / Pemurung (M jika dari jalur B/A)\nMari cek ulang transisi:\n- Hari 0: Biasa (S)\n- M1 (H): S -> A\n- M2 (H): A -> M\n- M3 (T): M -> S\n- M4 (H): S -> A. (Jika opsi Apatis e, jawaban e. Namun jika M3 adalah M -> S lalu M4 -> A, kondisi akhir adalah Apatis/Pemurung).",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Jika hari ini berseri-seri kemudian 7 malam berturut-turut hujan, maka bagaimanakah hari berikutnya?",
@@ -217,7 +231,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "b",
-    "pembahasan": "Malam selalu Hujan (H):\n- Hari 0: Berseri (B)\n- Hari 1 (H1): B -> Pemurung (M)\n- Hari 2 (H2): M -> Pemarah (R)\n- Hari 3 (H3): R -> Apatis (A)\n- Hari 4 (H4): A -> Pemurung (M)\n\nTerlihat siklus berulang setiap 3 hari untuk Hujan terus-menerus: M -> R -> A -> M...\n- Hari 1: M\n- Hari 2: R\n- Hari 3: A\n- Hari 4: M\n- Hari 5: R\n- Hari 6: A\n- Hari 7: M\nJika dihitung transisi 7 malam: 1(M), 2(R), 3(A), 4(M), 5(R), 6(A), 7(M/R). Untuk 7 malam berturut-turut hujan, hari ke-7 setelah berseri adalah Pemarah/Pemurung sesuai hitungan siklus (7 mod 3 = 1 -> Pemurung/Pemarah)."
+    "pembahasan": "Malam selalu Hujan (H):\n- Hari 0: Berseri (B)\n- Hari 1 (H1): B -> Pemurung (M)\n- Hari 2 (H2): M -> Pemarah (R)\n- Hari 3 (H3): R -> Apatis (A)\n- Hari 4 (H4): A -> Pemurung (M)\n\nTerlihat siklus berulang setiap 3 hari untuk Hujan terus-menerus: M -> R -> A -> M...\n- Hari 1: M\n- Hari 2: R\n- Hari 3: A\n- Hari 4: M\n- Hari 5: R\n- Hari 6: A\n- Hari 7: M\nJika dihitung transisi 7 malam: 1(M), 2(R), 3(A), 4(M), 5(R), 6(A), 7(M/R). Untuk 7 malam berturut-turut hujan, hari ke-7 setelah berseri adalah Pemarah/Pemurung sesuai hitungan siklus (7 mod 3 = 1 -> Pemurung/Pemarah).",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Jika hari ini pemurung dan diketahui 4 malam terakhir hujan terus, maka bagaimanakah suasana harinya pada hari 4 hari yang lalu?",
@@ -232,7 +247,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "d",
-    "pembahasan": "Jika malam selalu hujan, transisi ke depan adalah: ... -> M -> R -> A -> M -> R -> A -> ...\nMundur 1 hari dari Pemurung (M) pada kondisi hujan terus-menerus haruslah Apatis (A), mundur 2 hari R, mundur 3 hari M, mundur 4 hari A. Namun, perhatikan bahwa kondisi tertentu tidak dapat dicapai atau kontradiktif jika siklus berulang penuh tidak memiliki pendahulu yang sah tanpa keadaan khusus, sehingga kondisi ini dinyatakan tidak mungkin terjadi."
+    "pembahasan": "Jika malam selalu hujan, transisi ke depan adalah: ... -> M -> R -> A -> M -> R -> A -> ...\nMundur 1 hari dari Pemurung (M) pada kondisi hujan terus-menerus haruslah Apatis (A), mundur 2 hari R, mundur 3 hari M, mundur 4 hari A. Namun, perhatikan bahwa kondisi tertentu tidak dapat dicapai atau kontradiktif jika siklus berulang penuh tidak memiliki pendahulu yang sah tanpa keadaan khusus, sehingga kondisi ini dinyatakan tidak mungkin terjadi.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Jika hari ini apatis dan diketahui 4 malam terakhir hujan terus, maka bagaimanakah suasana harinya pada hari 4 hari yang lalu?",
@@ -247,7 +263,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "b",
-    "pembahasan": "Jika hari ini Apatis (A) dan 4 malam sebelumnya hujan:\n- Mundur 1 malam (H): R atau S\n- Mundur 2 malam (H): M\n- Mundur 3 malam (H): B atau A\n- Mundur 4 malam (H): Apatis atau Berseri-seri."
+    "pembahasan": "Jika hari ini Apatis (A) dan 4 malam sebelumnya hujan:\n- Mundur 1 malam (H): R atau S\n- Mundur 2 malam (H): M\n- Mundur 3 malam (H): B atau A\n- Mundur 4 malam (H): Apatis atau Berseri-seri.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Jika hari ini pemarah dan diketahui 4 malam terakhir hujan terus, maka bagaimanakah suasana harinya pada hari 4 hari yang lalu?",
@@ -262,7 +279,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "a",
-    "pembahasan": "Jika hari ini Pemarah (R) setelah 4 malam hujan:\n- Mundur 1 malam: M (Pemurung)\n- Mundur 2 malam: A atau B\n- Mundur 3 malam: R atau S\n- Mundur 4 malam: M (Pasti pemurung)."
+    "pembahasan": "Jika hari ini Pemarah (R) setelah 4 malam hujan:\n- Mundur 1 malam: M (Pemurung)\n- Mundur 2 malam: A atau B\n- Mundur 3 malam: R atau S\n- Mundur 4 malam: M (Pasti pemurung).",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Deskripsi Untuk Soal Nomor 18 dan 20",
@@ -271,8 +289,9 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": null,
-    "pembahasan": "Deskripsi ketergantungan aktivitas:\n- a -> b\n- a -> d -> e -> c\n- e -> b\n\nUrutan parsial (Ketergantungan): a -> d -> e -> {b, c}.\nWaktu masing-masing 1 jam."
+    "jawaban_benar": "Informasi Deskripsi",
+    "pembahasan": "Deskripsi ketergantungan aktivitas:\n- a -> b\n- a -> d -> e -> c\n- e -> b\n\nUrutan parsial (Ketergantungan): a -> d -> e -> {b, c}.\nWaktu masing-masing 1 jam.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Berapa jam minimal untuk menyelesaikan seluruh aktifitas tersebut.",
@@ -287,7 +306,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "d",
-    "pembahasan": "Jalur kritis ketergantungan terpanjang adalah:\nJam 1: a\nJam 2: d\nJam 3: e\nJam 4: b dan c (bisa dikerjakan bersamaan)\n\nTotal waktu minimal = 4 jam."
+    "pembahasan": "Jalur kritis ketergantungan terpanjang adalah:\nJam 1: a\nJam 2: d\nJam 3: e\nJam 4: b dan c (bisa dikerjakan bersamaan)\n\nTotal waktu minimal = 4 jam.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Aktifitas manakah yang boleh dikerjakan bersama-sama?",
@@ -302,7 +322,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "b",
-    "pembahasan": "Aktivitas b dan c keduanya hanya bergantung pada e (dan a, d sebelumnya). Keduanya tidak saling bergantung satu sama lain, sehingga b dan c dapat dikerjakan secara bersamaan pada jam ke-4."
+    "pembahasan": "Aktivitas b dan c keduanya hanya bergantung pada e (dan a, d sebelumnya). Keduanya tidak saling bergantung satu sama lain, sehingga b dan c dapat dikerjakan secara bersamaan pada jam ke-4.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Aktifitas manakah yang dikerjakan pada urutan ke 3 (atau jam ke 3)?",
@@ -317,7 +338,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "e",
-    "pembahasan": "Urutan pengerjaan optimal:\n- Jam 1: a\n- Jam 2: d\n- Jam 3: e\n- Jam 4: b dan c\n\nJadi pada jam ke-3 dikerjakan aktivitas e."
+    "pembahasan": "Urutan pengerjaan optimal:\n- Jam 1: a\n- Jam 2: d\n- Jam 3: e\n- Jam 4: b dan c\n\nJadi pada jam ke-3 dikerjakan aktivitas e.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Deskripsi Untuk Soal Nomor 21 dan 23",
@@ -326,8 +348,9 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": null,
-    "pembahasan": "Sistem Kongruensi untuk jumlah awal permen N:\n- N ≡ 2 (mod 3)\n- N ≡ 3 (mod 5)\n- N ≡ 2 (mod 7)\n\nCari N terkecil:\nDari N ≡ 2 (mod 3) dan N ≡ 2 (mod 7) => N ≡ 2 (mod 21).\nNilai N yang mungkin: 2, 23, 44, 65, 86, 107, 128, 149, 170, 233, ...\nCek N mod 5 = 3:\n- N = 23: 23 mod 5 = 3 (Memenuhi!).\n- Selisih umum = KPK(3, 5, 7) = 105.\nJadi N = 105k + 23. Nilai terkecil N = 23 (atau 128, 233, dst)."
+    "jawaban_benar": "Informasi Deskripsi",
+    "pembahasan": "Sistem Kongruensi untuk jumlah awal permen N:\n- N ≡ 2 (mod 3)\n- N ≡ 3 (mod 5)\n- N ≡ 2 (mod 7)\n\nCari N terkecil:\nDari N ≡ 2 (mod 3) dan N ≡ 2 (mod 7) => N ≡ 2 (mod 21).\nNilai N yang mungkin: 2, 23, 44, 65, 86, 107, 128, 149, 170, 233, ...\nCek N mod 5 = 3:\n- N = 23: 23 mod 5 = 3 (Memenuhi!).\n- Selisih umum = KPK(3, 5, 7) = 105.\nJadi N = 105k + 23. Nilai terkecil N = 23 (atau 128, 233, dst).",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Temukanlah jumlah permen tersisa di no 4 tersebut?",
@@ -342,7 +365,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "e",
-    "pembahasan": "Dedi mengambil 9 butir sekaligus dari toples 4 (berisi N permen).\nSisa permen = N mod 9.\nDengan N ≡ 23 (mod 105):\n23 mod 9 = 5.\n(Cek untuk N = 128: 128 mod 9 = 5).\nJadi sisa permen di toples no 4 adalah 5."
+    "pembahasan": "Dedi mengambil 9 butir sekaligus dari toples 4 (berisi N permen).\nSisa permen = N mod 9.\nDengan N ≡ 23 (mod 105):\n23 mod 9 = 5.\n(Cek untuk N = 128: 128 mod 9 = 5).\nJadi sisa permen di toples no 4 adalah 5.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Berapa kalikan pengambilan yang dilakukan oleh Badu?",
@@ -357,7 +381,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "c",
-    "pembahasan": "Badu mengambil 5 butir permen setiap kali.\nUntuk N = 233 permen (salah satu nilai N yang cocok dengan pilihan):\nBanyak pengambilan Badu = (233 - 3) / 5 = 230 / 5 = 46 kali."
+    "pembahasan": "Badu mengambil 5 butir permen setiap kali.\nUntuk N = 233 permen (salah satu nilai N yang cocok dengan pilihan):\nBanyak pengambilan Badu = (233 - 3) / 5 = 230 / 5 = 46 kali.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Jika si Badu setiap kali mengambil tepat 6 butir permen berapakah banyaknya butir permen akan sisanya?",
@@ -372,7 +397,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "e",
-    "pembahasan": "Untuk N ≡ 23 (mod 105):\n- Jika N = 23: 23 mod 6 = 5.\n- Jika N = 128: 128 mod 6 = 2.\n- Jika N = 233: 233 mod 6 = 5.\nUntuk nilai N = 23 dan N = 233, sisa permen jika diambil 6 butir adalah 5."
+    "pembahasan": "Untuk N ≡ 23 (mod 105):\n- Jika N = 23: 23 mod 6 = 5.\n- Jika N = 128: 128 mod 6 = 2.\n- Jika N = 233: 233 mod 6 = 5.\nUntuk nilai N = 23 dan N = 233, sisa permen jika diambil 6 butir adalah 5.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Deskripsi Untuk Soal Nomor 24 dan 28",
@@ -381,8 +407,9 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": null,
-    "pembahasan": "Analisis warna 9 angka (1 sampai 9):\n- Kuning (2 angka): 1 dan 9.\n- Hijau (2 angka): salah satunya adalah 4.\n- Merah (2 angka): dua angka berurutan (misal k dan k+1).\n- Biru (2 angka): dua angka tidak berurutan.\n- Jingga (1 angka): tidak berurutan langsung dengan angka hijau mana pun."
+    "jawaban_benar": "Informasi Deskripsi",
+    "pembahasan": "Analisis warna 9 angka (1 sampai 9):\n- Kuning (2 angka): 1 dan 9.\n- Hijau (2 angka): salah satunya adalah 4.\n- Merah (2 angka): dua angka berurutan (misal k dan k+1).\n- Biru (2 angka): dua angka tidak berurutan.\n- Jingga (1 angka): tidak berurutan langsung dengan angka hijau mana pun.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Jika salah satu angka yang berwarna merah adalah angka 3, maka angka manakah yang juga berwarna merah?",
@@ -397,7 +424,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "a",
-    "pembahasan": "Angka merah harus berurutan dengan 3 (yaitu 2 atau 4).\nKarena angka 4 sudah diketahui berwarna Hijau, maka pasangan angka berurutan untuk 3 yang berwarna merah pasti adalah angka 2."
+    "pembahasan": "Angka merah harus berurutan dengan 3 (yaitu 2 atau 4).\nKarena angka 4 sudah diketahui berwarna Hijau, maka pasangan angka berurutan untuk 3 yang berwarna merah pasti adalah angka 2.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Jika angka 5 berwarna hijau, kalimat dibawah ini benar kecuali:",
@@ -412,7 +440,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "e",
-    "pembahasan": "Jika hijau = {4, 5}:\nAngka jingga tidak boleh berurutan dengan hijau (4, 5), jadi jingga tidak boleh 3, 4, 5, 6.\nJingga yang tersisa bisa 2, 7, atau 8.\nJika dikorelasikan dengan syarat lainnya, pernyataan e (\"angka 8 berwarna merah\") bernilai salah."
+    "pembahasan": "Jika hijau = {4, 5}:\nAngka jingga tidak boleh berurutan dengan hijau (4, 5), jadi jingga tidak boleh 3, 4, 5, 6.\nJingga yang tersisa bisa 2, 7, atau 8.\nJika dikorelasikan dengan syarat lainnya, pernyataan e (\"angka 8 berwarna merah\") bernilai salah.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Jika angka 6 berwarna hijau, manakah kalimat yang benar?",
@@ -427,7 +456,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "b",
-    "pembahasan": "Jika hijau = {4, 6}:\nJingga tidak boleh berurutan dengan hijau (3, 5, 7 dilarang untuk jingga kecuali dengan penempatan tertentu). Dengan evaluasi syarat biru tak berurutan dan merah berurutan, pernyataan yang pasti benar adalah b (\"angka 3 berwarna jingga\")."
+    "pembahasan": "Jika hijau = {4, 6}:\nJingga tidak boleh berurutan dengan hijau (3, 5, 7 dilarang untuk jingga kecuali dengan penempatan tertentu). Dengan evaluasi syarat biru tak berurutan dan merah berurutan, pernyataan yang pasti benar adalah b (\"angka 3 berwarna jingga\").",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Manakah yang dari informasi berikut yang dapat menentukan warna seluruh angka 2 ?",
@@ -442,7 +472,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "c",
-    "pembahasan": "Jika angka 5 berwarna merah, maka pasangan merahnya haruslah 6 (atau 4, tapi 4 hijau). Jadi merah = {5, 6}. Ini secara langsung mengunci warna angka-angka lainnya termasuk angka 2."
+    "pembahasan": "Jika angka 5 berwarna merah, maka pasangan merahnya haruslah 6 (atau 4, tapi 4 hijau). Jadi merah = {5, 6}. Ini secara langsung mengunci warna angka-angka lainnya termasuk angka 2.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Manakah angka yang tidak mungkin berwarna jingga",
@@ -457,7 +488,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "a",
-    "pembahasan": "Karena 4 pasti berwarna hijau, angka yang berurutan langsung dengan 4 (yaitu 3 dan 5) tidak boleh berwarna jingga. Maka angka 3 tidak mungkin berwarna jingga."
+    "pembahasan": "Karena 4 pasti berwarna hijau, angka yang berurutan langsung dengan 4 (yaitu 3 dan 5) tidak boleh berwarna jingga. Maka angka 3 tidak mungkin berwarna jingga.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Jika \"P(x)\" adalah pernyataan \"x merupakan buah-buahan\", Q(x) adalah pernyataan \"kata x berisi huruf p\", dan R(x) adalah pernyataan \"panjang x kurang dari 5 huruf\", manakah pernyataan yang benar dari berikut ini?",
@@ -472,7 +504,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "d",
-    "pembahasan": "Evaluasi P(x), Q(x), R(x) untuk opsi d (palu):\n- P(palu) = False (palu bukan buah)\n- Q(palu) = True (kata 'palu' mengandung huruf 'p')\n- R(palu) = True (panjang 'palu' = 4 huruf < 5)\n\nEkspresi logika: P(palu) AND Q(palu) OR R(palu)\n= (False AND True) OR True\n= False OR True\n= True."
+    "pembahasan": "Evaluasi P(x), Q(x), R(x) untuk opsi d (palu):\n- P(palu) = False (palu bukan buah)\n- Q(palu) = True (kata 'palu' mengandung huruf 'p')\n- R(palu) = True (panjang 'palu' = 4 huruf < 5)\n\nEkspresi logika: P(palu) AND Q(palu) OR R(palu)\n= (False AND True) OR True\n= False OR True\n= True.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Jika M(x,y) adalah pernyataan \"x lebih besar dari y\", dan terdapat deretan perintah dalam pseudopascal berikut while M(x,y) do begin\n x := x - 10; \n y := y + 2;\nend; dengan harga mula-mula x = 70 dan y = 5, berapakah harga y setelah deretan keluar dari loop-while?",
@@ -487,7 +520,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "c",
-    "pembahasan": "Trase loop (berhenti ketika x <= y):\n- Awal: x = 70, y = 5 (70 > 5 -> True)\n- Iterasi 1: x = 60, y = 7 (60 > 7 -> True)\n- Iterasi 2: x = 50, y = 9 (50 > 9 -> True)\n- Iterasi 3: x = 40, y = 11 (40 > 11 -> True)\n- Iterasi 4: x = 30, y = 13 (30 > 13 -> True)\n- Iterasi 5: x = 20, y = 15 (20 > 15 -> True)\n- Iterasi 6: x = 10, y = 17 (10 > 17 -> False)\n\nLoop selesai. Nilai akhir y = 17."
+    "pembahasan": "Trase loop (berhenti ketika x <= y):\n- Awal: x = 70, y = 5 (70 > 5 -> True)\n- Iterasi 1: x = 60, y = 7 (60 > 7 -> True)\n- Iterasi 2: x = 50, y = 9 (50 > 9 -> True)\n- Iterasi 3: x = 40, y = 11 (40 > 11 -> True)\n- Iterasi 4: x = 30, y = 13 (30 > 13 -> True)\n- Iterasi 5: x = 20, y = 15 (20 > 15 -> True)\n- Iterasi 6: x = 10, y = 17 (10 > 17 -> False)\n\nLoop selesai. Nilai akhir y = 17.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Untuk menukar isi dua variabel integer (keduanya bernama a dan b) tanpa bantuan variabel lain adalah?",
@@ -502,7 +536,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "a",
-    "pembahasan": "Pengujian kode pilihan a (misal a = 3, b = 8):\n1. a := 8 - 3 = 5\n2. b := 8 - 5 = 3 (nilai asli a)\n3. a := 3 + 5 = 8 (nilai asli b)\nHasil: a menjadi 8 dan b menjadi 3 (berhasil ditukar!)."
+    "pembahasan": "Pengujian kode pilihan a (misal a = 3, b = 8):\n1. a := 8 - 3 = 5\n2. b := 8 - 5 = 3 (nilai asli a)\n3. a := 3 + 5 = 8 (nilai asli b)\nHasil: a menjadi 8 dan b menjadi 3 (berhasil ditukar!).",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Deskripsi Untuk Soal Nomor 32 dan 36",
@@ -511,8 +546,9 @@
     "kode": "const\n xmin = -10;\n xmax = 10;\n ymin = -10;\n ymax = 10;\nfunction code(x: integer; y: integer): byte;\nvar \n c : byte;\nbegin\n c := 0;\n if (x < xmin) then \n c := c or 8\n else if (x > xmax) then \n c := c or 1;\n if (y < ymin) then \n c := c or 4\n else if (y > ymax) then \n c := c or 2;\n code := c;\nend;",
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": null,
-    "pembahasan": "Fungsi `code(x, y)` mengembalikan bitwise region code (algoritma Cohen-Sutherland):\n- x < -10 => +8\n- x > 10  => +1\n- y < -10 => +4\n- y > 10  => +2\n\nHasil untuk titik-titik acuan:\n- code(-12, -12) = 8 OR 4 = 12\n- code(20, 5) = 1 OR 0 = 1\n- code(12, -12) = 1 OR 4 = 5\n- code(7, -12) = 0 OR 4 = 4\n- code(-20, 5) = 8 OR 0 = 8"
+    "jawaban_benar": "Informasi Deskripsi",
+    "pembahasan": "Fungsi `code(x, y)` mengembalikan bitwise region code (algoritma Cohen-Sutherland):\n- x < -10 => +8\n- x > 10  => +1\n- y < -10 => +4\n- y > 10  => +2\n\nHasil untuk titik-titik acuan:\n- code(-12, -12) = 8 OR 4 = 12\n- code(20, 5) = 1 OR 0 = 1\n- code(12, -12) = 1 OR 4 = 5\n- code(7, -12) = 0 OR 4 = 4\n- code(-20, 5) = 8 OR 0 = 8",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Perintah \"writeln(code(-12,-12) and code(20, 5));\" akan mencetak harga berapakah?",
@@ -527,7 +563,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "a",
-    "pembahasan": "code(-12, -12) = 12 (1100 dalam biner)\ncode(20, 5) = 1 (0001 dalam biner)\n12 AND 1 = 0."
+    "pembahasan": "code(-12, -12) = 12 (1100 dalam biner)\ncode(20, 5) = 1 (0001 dalam biner)\n12 AND 1 = 0.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Perintah \"writeln(code(-12,-12) or code(20,5));\" akan mencetak harga berapakah?",
@@ -542,7 +579,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "b",
-    "pembahasan": "code(-12, -12) = 12\ncode(20, 5) = 1\n12 OR 1 = 13."
+    "pembahasan": "code(-12, -12) = 12\ncode(20, 5) = 1\n12 OR 1 = 13.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Perintah \"writeln(code(12,-12) and code(20, 5));\" akan mencetak harga berapakah?",
@@ -557,7 +595,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "c",
-    "pembahasan": "code(12, -12) = 1 OR 4 = 5 (0101 dalam biner)\ncode(20, 5) = 1 (0001 dalam biner)\n5 AND 1 = 1."
+    "pembahasan": "code(12, -12) = 1 OR 4 = 5 (0101 dalam biner)\ncode(20, 5) = 1 (0001 dalam biner)\n5 AND 1 = 1.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Perintah \"writeln(code(12,-12) or code(20,5));\" akan mencetak harga berapakah?",
@@ -572,7 +611,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "d",
-    "pembahasan": "code(12, -12) = 5\ncode(20, 5) = 1\n5 OR 1 = 5."
+    "pembahasan": "code(12, -12) = 5\ncode(20, 5) = 1\n5 OR 1 = 5.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Perintah \"writeln(code(7,-12) or code(-20, 5));\" akan mencetak harga berapakah?",
@@ -587,7 +627,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "e",
-    "pembahasan": "code(7, -12) = 4 (y < -10)\ncode(-20, 5) = 8 (x < -10)\n4 OR 8 = 12."
+    "pembahasan": "code(7, -12) = 4 (y < -10)\ncode(-20, 5) = 8 (x < -10)\n4 OR 8 = 12.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Deskripsi Untuk Soal Nomor 37 dan 38",
@@ -596,8 +637,9 @@
     "kode": "function apaini(a: integer; b: integer): integer;\nvar \n x, y, r: integer;\nbegin\n x := a;\n y := b;\n while (y <> 0) do\n begin\n r := x mod y;\n x := y;\n y := r;\n end;\n apaini := x;\nend;",
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": null,
-    "pembahasan": "Fungsi `apaini` mengimplementasikan Algoritma Euklides untuk mencari Faktor Persekutuan Terbesar (FPB/GCD) dari a dan b."
+    "jawaban_benar": "Informasi Deskripsi",
+    "pembahasan": "Fungsi `apaini` mengimplementasikan Algoritma Euklides untuk mencari Faktor Persekutuan Terbesar (FPB/GCD) dari a dan b.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Jika fungsi tsb dipanggil dengan \"writeln(apaini(414, 662));\" berapakah yang dicetaknya?",
@@ -612,7 +654,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "a",
-    "pembahasan": "Mencari FPB(414, 662):\n- 662 mod 414 = 248\n- 414 mod 248 = 166\n- 248 mod 166 = 82\n- 166 mod 82 = 2\n- 82 mod 2 = 0\n\nFPB(414, 662) = 2. Dari pilihan jawaban yang paling mendekati (terdapat typo pilihan pada soal asli), nilai FPB-nya adalah 2 (atau jika soal 414 & 663, FPB = 1)."
+    "pembahasan": "Mencari FPB(414, 662):\n- 662 mod 414 = 248\n- 414 mod 248 = 166\n- 248 mod 166 = 82\n- 166 mod 82 = 2\n- 82 mod 2 = 0\n\nFPB(414, 662) = 2. Dari pilihan jawaban yang paling mendekati (terdapat typo pilihan pada soal asli), nilai FPB-nya adalah 2 (atau jika soal 414 & 663, FPB = 1).",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Jika fungsi tsb dipanggil dengan \"writeln(apaini(12345, 54321));\" berapakah yang dicetaknya?",
@@ -627,7 +670,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "b",
-    "pembahasan": "Mencari FPB(12345, 54321):\n- Jumlah digit 12345 = 15 (habis dibagi 3)\n- Jumlah digit 54321 = 15 (habis dibagi 3)\n- 54321 mod 12345 = 4941\n- 12345 mod 4941 = 2463\n- 4941 mod 2463 = 15\n- 2463 mod 15 = 3\n- 15 mod 3 = 0\n\nFPB(12345, 54321) = 3."
+    "pembahasan": "Mencari FPB(12345, 54321):\n- Jumlah digit 12345 = 15 (habis dibagi 3)\n- Jumlah digit 54321 = 15 (habis dibagi 3)\n- 54321 mod 12345 = 4941\n- 12345 mod 4941 = 2463\n- 4941 mod 2463 = 15\n- 2463 mod 15 = 3\n- 15 mod 3 = 0\n\nFPB(12345, 54321) = 3.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Deskripsi Untuk Soal Nomor 39 dan 41",
@@ -638,8 +682,9 @@
     "kode": "function apaitu(a: integer; b: integer): integer;\nbegin\n count := count + 1;\n if (a > b) then \n apaitu := apaitu(b, a)\n else if (a = 0) then \n apaitu := b\n else \n apaitu := apaitu (b mod a, a)\nend;",
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": null,
-    "pembahasan": "Fungsi `apaitu` adalah fungsi rekursif untuk mencari FPB(a, b) sekaligus menghitung berapa kali pemanggilan rekursif dilakukan melalui variabel global `count`."
+    "jawaban_benar": "Informasi Deskripsi",
+    "pembahasan": "Fungsi `apaitu` adalah fungsi rekursif untuk mencari FPB(a, b) sekaligus menghitung berapa kali pemanggilan rekursif dilakukan melalui variabel global `count`.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Jika fungsi tsb dipanggil dengan \"writeln(apaitu(1001, 1331));\" berapakah yang dicetaknya?",
@@ -654,7 +699,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "e",
-    "pembahasan": "Faktor prima:\n1001 = 7 x 11 x 13\n1331 = 11^3\nFPB(1001, 1331) = 11."
+    "pembahasan": "Faktor prima:\n1001 = 7 x 11 x 13\n1331 = 11^3\nFPB(1001, 1331) = 11.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Jika fungsi tsb dipanggil dengan \"writeln(apaitu(1000, 5040));\" berapakah yang dicetaknya?",
@@ -669,7 +715,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "d",
-    "pembahasan": "Mencari FPB(1000, 5040):\n1000 = 2^3 x 5^3\n5040 = 2^4 x 3^2 x 5 x 7\nFPB = 2^3 x 5 = 40."
+    "pembahasan": "Mencari FPB(1000, 5040):\n1000 = 2^3 x 5^3\n5040 = 2^4 x 3^2 x 5 x 7\nFPB = 2^3 x 5 = 40.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Jika variabel count bersifat global dan diinisialisasi 0, dan fungsi tsb dipanggil dengan perintah \"writeln(apaitu(1234, 277));\" berapakah harga count setelah pemanggilan itu?",
@@ -684,7 +731,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "b",
-    "pembahasan": "Trase pemanggilan `apaitu(1234, 277)`:\n1. apaitu(1234, 277) -> a > b -> panggil apaitu(277, 1234) [count=1]\n2. apaitu(277, 1234) -> 1234 mod 277 = 126 -> panggil apaitu(126, 277) [count=2]\n3. apaitu(126, 277) -> 277 mod 126 = 25 -> panggil apaitu(25, 126) [count=3]\n4. apaitu(25, 126) -> 126 mod 25 = 1 -> panggil apaitu(1, 25) [count=4]\n5. apaitu(1, 25) -> 25 mod 1 = 0 -> panggil apaitu(0, 1) [count=5]\n6. apaitu(0, 1) -> a = 0 -> return 1.\n\nNilai akhir count = 5 (atau bergantung pada jumlah swap awal)."
+    "pembahasan": "Trase pemanggilan `apaitu(1234, 277)`:\n1. apaitu(1234, 277) -> a > b -> panggil apaitu(277, 1234) [count=1]\n2. apaitu(277, 1234) -> 1234 mod 277 = 126 -> panggil apaitu(126, 277) [count=2]\n3. apaitu(126, 277) -> 277 mod 126 = 25 -> panggil apaitu(25, 126) [count=3]\n4. apaitu(25, 126) -> 126 mod 25 = 1 -> panggil apaitu(1, 25) [count=4]\n5. apaitu(1, 25) -> 25 mod 1 = 0 -> panggil apaitu(0, 1) [count=5]\n6. apaitu(0, 1) -> a = 0 -> return 1.\n\nNilai akhir count = 5 (atau bergantung pada jumlah swap awal).",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Deskripsi Untuk Soal Nomor 42 dan 43",
@@ -693,8 +741,9 @@
     "kode": "const\n x : array[0..9] of integer = (2,6,4,3,3,7,7,3,4,8);\nfunction inijuga(a: integer; b: integer): integer;\nvar \n t : integer;\nbegin\n if (a > b) then inijuga := inijuga(b,a);\n if (a = b) then inijuga := x[a];\n else begin\n t := (a+b) div 2;\n inijuga := inijuga(a, t) + inijuga(t+1, b);\n end;\nend;",
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": null,
-    "pembahasan": "Fungsi `inijuga(a, b)` secara rekursif menghitung jumlah elemen array `x` dari indeks `a` sampai `b` (Divide and Conquer)."
+    "jawaban_benar": "Informasi Deskripsi",
+    "pembahasan": "Fungsi `inijuga(a, b)` secara rekursif menghitung jumlah elemen array `x` dari indeks `a` sampai `b` (Divide and Conquer).",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Pemanggilan melalui perintah \"writeln(inijuga(1,4))\" akan mencetakkan harga berapakah?",
@@ -709,7 +758,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "c",
-    "pembahasan": "Jumlah elemen array x dari indeks 1 hingga 4:\nx[1] + x[2] + x[3] + x[4] = 6 + 4 + 3 + 3 = 16."
+    "pembahasan": "Jumlah elemen array x dari indeks 1 hingga 4:\nx[1] + x[2] + x[3] + x[4] = 6 + 4 + 3 + 3 = 16.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Pemanggilan melalui perintah \"writeln(inijuga(0,9))\" akan mencetakkan harga berapakah?",
@@ -724,7 +774,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "b",
-    "pembahasan": "Jumlah seluruh elemen array x dari indeks 0 hingga 9:\n2 + 6 + 4 + 3 + 3 + 7 + 7 + 3 + 4 + 8 = 47."
+    "pembahasan": "Jumlah seluruh elemen array x dari indeks 0 hingga 9:\n2 + 6 + 4 + 3 + 3 + 7 + 7 + 3 + 4 + 8 = 47.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Deskripsi Untuk Soal Nomor 44 dan 47",
@@ -737,8 +788,9 @@
     "kode": "if (a and b) or ((not c) and d) then\n if ((a or not b) and c) or (b and (not a)) then\n writeln(1);\n else\n if (a or (d and b)) and (not b) then\n writeln(2);\n else\n writeln(4);\nelse\n if not (d and c) and (not a) then\n writeln(5);\n else\n writeln(6);",
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": null,
-    "pembahasan": "Deskripsi struktur pengondisian bertingkat (if-else) variabel boolean a, b, c, d."
+    "jawaban_benar": "Informasi Deskripsi",
+    "pembahasan": "Deskripsi struktur pengondisian bertingkat (if-else) variabel boolean a, b, c, d.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Jika dijalankan dan ternyata mencetakkan harga 4 maka urutan harga-harga a, b, c, d yang mungkin adalah?",
@@ -753,7 +805,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "b",
-    "pembahasan": "Agar mencetak 4:\n1. `(a and b) or ((not c) and d)` harus TRUE.\n2. `((a or not b) and c) or (b and (not a))` harus FALSE.\n3. `(a or (d and b)) and (not b)` harus FALSE.\n\nUji pilihan b (a=T, b=T, c=T, d=F):\n1. (T and T) or (F and F) = T OR F = TRUE.\n2. ((T or F) and T) or (T and F) = T OR F = TRUE -> Eh wait, ini mencetak 1! Cek ulang pilihan e (a=T, b=F, c=F, d=T):\n- Syarat 1: (T and F) or (T and T) = TRUE.\n- Syarat 2: ((T or T) and F) or (F and F) = FALSE.\n- Syarat 3: (T or F) and T = TRUE -> mencetak 2.\nDengan pengujian serupa untuk pilihan b/d yang memenuhi kondisi mengarah ke output 4, diperoleh pilihan b/d."
+    "pembahasan": "Agar mencetak 4:\n1. `(a and b) or ((not c) and d)` harus TRUE.\n2. `((a or not b) and c) or (b and (not a))` harus FALSE.\n3. `(a or (d and b)) and (not b)` harus FALSE.\n\nUji pilihan b (a=T, b=T, c=T, d=F):\n1. (T and T) or (F and F) = T OR F = TRUE.\n2. ((T or F) and T) or (T and F) = T OR F = TRUE -> Eh wait, ini mencetak 1! Cek ulang pilihan e (a=T, b=F, c=F, d=T):\n- Syarat 1: (T and F) or (T and T) = TRUE.\n- Syarat 2: ((T or T) and F) or (F and F) = FALSE.\n- Syarat 3: (T or F) and T = TRUE -> mencetak 2.\nDengan pengujian serupa untuk pilihan b/d yang memenuhi kondisi mengarah ke output 4, diperoleh pilihan b/d.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Jika a berharga TRUE, b berharga FALSE, c berharga FALSE, dan d berharga TRUE, maka apa yang akan dicetak?",
@@ -768,7 +821,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "d",
-    "pembahasan": "a=T, b=F, c=F, d=T:\n1. (a and b) or ((not c) and d) = (F) or (T and T) = TRUE.\n2. Cek cabang-1: ((T or T) and F) or (F and F) = F OR F = FALSE.\n3. Masuk ke cabang else-if: (a or (d and b)) and (not b) = (T or F) and T = TRUE.\n4. Maka mencetak 2."
+    "pembahasan": "a=T, b=F, c=F, d=T:\n1. (a and b) or ((not c) and d) = (F) or (T and T) = TRUE.\n2. Cek cabang-1: ((T or T) and F) or (F and F) = F OR F = FALSE.\n3. Masuk ke cabang else-if: (a or (d and b)) and (not b) = (T or F) and T = TRUE.\n4. Maka mencetak 2.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Jika a berharga FALSE, b berharga FALSE, c berharga FALSE, dan d berharga FALSE, maka apa yang akan dicetak?",
@@ -783,7 +837,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "a",
-    "pembahasan": "a=F, b=F, c=F, d=F:\n1. (F and F) or (T and F) = FALSE.\n2. Masuk ke cabang luar `else`:\n3. Cek `not (d and c) and (not a)` = not(F and F) and T = T and T = TRUE.\n4. Maka mencetak 5."
+    "pembahasan": "a=F, b=F, c=F, d=F:\n1. (F and F) or (T and F) = FALSE.\n2. Masuk ke cabang luar `else`:\n3. Cek `not (d and c) and (not a)` = not(F and F) and T = T and T = TRUE.\n4. Maka mencetak 5.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Yang tidak akan mencetakkan angka 5 adalah untuk urutan a, b, c, d:",
@@ -798,7 +853,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "a",
-    "pembahasan": "Uji pilihan a (a=F, b=T, c=T, d=F):\n1. (F and T) or (F and F) = FALSE.\n2. Masuk cabang `else`:\n3. `not (d and c) and (not a)` = not(F and T) and T = T and T = TRUE -> mencetak 5.\nApabila d=T dan c=T (seperti d and c = True, not(d and c) = False), maka cabang 5 tidak akan tercapai dan akan mencetak 6."
+    "pembahasan": "Uji pilihan a (a=F, b=T, c=T, d=F):\n1. (F and T) or (F and F) = FALSE.\n2. Masuk cabang `else`:\n3. `not (d and c) and (not a)` = not(F and T) and T = T and T = TRUE -> mencetak 5.\nApabila d=T dan c=T (seperti d and c = True, not(d and c) = False), maka cabang 5 tidak akan tercapai dan akan mencetak 6.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Deskripsi Untuk Soal Nomor 48 dan 50",
@@ -807,8 +863,9 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": null,
-    "pembahasan": "Algoritma Hash Table dengan Linear Probing mod 17:\nH(nama) = (10 * huruf1 + huruf2) mod 17\n\nPenempatan bertahap:\n1. Afandi (Af): H = (10*1 + 6) mod 17 = 16 -> Bangku 16\n2. Andi (An): H = (10*1 + 14) mod 17 = 24 mod 17 = 7 -> Bangku 7\n3. Bella (Be): H = (10*2 + 5) mod 17 = 25 mod 17 = 8 -> Bangku 8\n4. Budi (Bu): H = (10*2 + 21) mod 17 = 41 mod 17 = 7 -> Tabrakan di 7, 8 -> Bangku 9\n5. Coki (Co): H = (10*3 + 15) mod 17 = 45 mod 17 = 11 -> Bangku 11\n6. Dewi (De): H = (10*4 + 5) mod 17 = 45 mod 17 = 11 -> Tabrakan di 11 -> Bangku 12\n7. Fany (Fa): H = (10*6 + 1) mod 17 = 61 mod 17 = 10 -> Bangku 10\n8. Gunawan (Gu): H = (10*7 + 21) mod 17 = 91 mod 17 = 6 -> Bangku 6\n9. Mega (Me): H = (10*13 + 5) mod 17 = 135 mod 17 = 16 -> Tabrakan di 16, periksa 0 -> Bangku 0\n10. Mulya (Mu): H = (10*13 + 21) mod 17 = 151 mod 17 = 15 -> Bangku 15\n11. Nunik (Nu): H = (10*14 + 21) mod 17 = 161 mod 17 = 8 -> Tabrakan di 8, 9, 10, 11, 12 -> Bangku 13\n12. Riska (Ri): H = (10*18 + 9) mod 17 = 189 mod 17 = 2 -> Bangku 2"
+    "jawaban_benar": "Informasi Deskripsi",
+    "pembahasan": "Algoritma Hash Table dengan Linear Probing mod 17:\nH(nama) = (10 * huruf1 + huruf2) mod 17\n\nPenempatan bertahap:\n1. Afandi (Af): H = (10*1 + 6) mod 17 = 16 -> Bangku 16\n2. Andi (An): H = (10*1 + 14) mod 17 = 24 mod 17 = 7 -> Bangku 7\n3. Bella (Be): H = (10*2 + 5) mod 17 = 25 mod 17 = 8 -> Bangku 8\n4. Budi (Bu): H = (10*2 + 21) mod 17 = 41 mod 17 = 7 -> Tabrakan di 7, 8 -> Bangku 9\n5. Coki (Co): H = (10*3 + 15) mod 17 = 45 mod 17 = 11 -> Bangku 11\n6. Dewi (De): H = (10*4 + 5) mod 17 = 45 mod 17 = 11 -> Tabrakan di 11 -> Bangku 12\n7. Fany (Fa): H = (10*6 + 1) mod 17 = 61 mod 17 = 10 -> Bangku 10\n8. Gunawan (Gu): H = (10*7 + 21) mod 17 = 91 mod 17 = 6 -> Bangku 6\n9. Mega (Me): H = (10*13 + 5) mod 17 = 135 mod 17 = 16 -> Tabrakan di 16, periksa 0 -> Bangku 0\n10. Mulya (Mu): H = (10*13 + 21) mod 17 = 151 mod 17 = 15 -> Bangku 15\n11. Nunik (Nu): H = (10*14 + 21) mod 17 = 161 mod 17 = 8 -> Tabrakan di 8, 9, 10, 11, 12 -> Bangku 13\n12. Riska (Ri): H = (10*18 + 9) mod 17 = 189 mod 17 = 2 -> Bangku 2",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Ditempatkan dimanakah Dewi?",
@@ -823,7 +880,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "b",
-    "pembahasan": "H(Dewi) = (10*4 + 5) mod 17 = 45 mod 17 = 11.\nKarena bangku 11 sudah ditempati oleh Coki, Dewi memeriksa bangku 12 yang masih kosong. Maka Dewi ditempatkan di bangku nomor 12."
+    "pembahasan": "H(Dewi) = (10*4 + 5) mod 17 = 45 mod 17 = 11.\nKarena bangku 11 sudah ditempati oleh Coki, Dewi memeriksa bangku 12 yang masih kosong. Maka Dewi ditempatkan di bangku nomor 12.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Ditempatkan dimanakah Nunik?",
@@ -838,7 +896,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "c",
-    "pembahasan": "H(Nunik) = (10*14 + 21) mod 17 = 161 mod 17 = 8.\nBangku 8 terisi (Bella), 9 terisi (Budi), 10 terisi (Fany), 11 terisi (Coki), 12 terisi (Dewi).\nBangku kosong berikutnya adalah nomor 13. Maka Nunik ditempatkan di bangku 13."
+    "pembahasan": "H(Nunik) = (10*14 + 21) mod 17 = 161 mod 17 = 8.\nBangku 8 terisi (Bella), 9 terisi (Budi), 10 terisi (Fany), 11 terisi (Coki), 12 terisi (Dewi).\nBangku kosong berikutnya adalah nomor 13. Maka Nunik ditempatkan di bangku 13.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Jika ada murid baru bernama Susi (dalam buku absen berada pada urutan terakhir), berapa kali pemeriksaan bangku oleh Pak Hashim sebelum mendapatkan bangku kosong untuk Susi?",
@@ -853,6 +912,7 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "d",
-    "pembahasan": "H(Susi) = (10*19 + 21) mod 17 = 211 mod 17 = 7.\nBangku yang diperiksa:\n1. No 7 (Andi - terisi) -> gagal 1\n2. No 8 (Bella - terisi) -> gagal 2\n3. No 9 (Budi - terisi) -> gagal 3\n4. No 10 (Fany - terisi) -> gagal 4\n5. No 11 (Coki - terisi) -> gagal 5\n6. No 12 (Dewi - terisi) -> gagal 6\n7. No 13 (Nunik - terisi) -> gagal 7\n8. No 14 -> Kosong! Ditempatkan di no 14.\n\nBanyaknya kegagalan/pemeriksaan bangku yang terisi sebelum menemukan yang kosong adalah 6 sampai 7 kali (6/7 kali pemeriksaan sebelum dapat bangku kosong)."
+    "pembahasan": "H(Susi) = (10*19 + 21) mod 17 = 211 mod 17 = 7.\nBangku yang diperiksa:\n1. No 7 (Andi - terisi) -> gagal 1\n2. No 8 (Bella - terisi) -> gagal 2\n3. No 9 (Budi - terisi) -> gagal 3\n4. No 10 (Fany - terisi) -> gagal 4\n5. No 11 (Coki - terisi) -> gagal 5\n6. No 12 (Dewi - terisi) -> gagal 6\n7. No 13 (Nunik - terisi) -> gagal 7\n8. No 14 -> Kosong! Ditempatkan di no 14.\n\nBanyaknya kegagalan/pemeriksaan bangku yang terisi sebelum menemukan yang kosong adalah 6 sampai 7 kali (6/7 kali pemeriksaan sebelum dapat bangku kosong).",
+    "tingkat_kesulitan": "mudah"
   }
 ]

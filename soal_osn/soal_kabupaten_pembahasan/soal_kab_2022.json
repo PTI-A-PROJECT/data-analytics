@@ -13,7 +13,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "a",
-    "pembahasan": "Evaluasi nilai logika dengan A=True, B=True, C=True, D=True, E=False:\n- not A = False, not C = False, not D = False, not E = True\n- P = ((False) and True) or (((False) or True) and False) = False or False = False.\n- Q = ((False) or True) and (((False) and (False)) or True) = True and True = True.\n- R = P and Q = False and True = False.\nJadi nilai P = False, Q = True, R = False[cite: 4]."
+    "pembahasan": "Evaluasi nilai logika dengan A=True, B=True, C=True, D=True, E=False:\n- not A = False, not C = False, not D = False, not E = True\n- P = ((False) and True) or (((False) or True) and False) = False or False = False.\n- Q = ((False) or True) and (((False) and (False)) or True) = True and True = True.\n- R = P and Q = False and True = False.\nJadi nilai P = False, Q = True, R = False[cite: 4].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": null,
@@ -29,7 +30,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "c",
-    "pembahasan": "Hitung alokasi poin untuk tiap pemilih tunggal dan gabungan. Setiap bebek memberikan total poin 3. Jika memilih 2 kandidat, masing-masing mendapat 1.5 poin.\n- Pemilih Kwak saja = 65 - 20 - 25 = 20 orang -> Poin = 20 * 3 = 60\n- Pemilih Kwik saja = 45 - 20 - 15 = 10 orang -> Poin = 10 * 3 = 30\n- Pemilih Kwek saja = 42 - 25 - 15 = 2 orang -> Poin = 2 * 3 = 6\n- Poin dari gabungan:\n  * Kwak & Kwik (20 orang): Kwak +30, Kwik +30\n  * Kwak & Kwek (25 orang): Kwak +37.5, Kwek +37.5\n  * Kwik & Kwek (15 orang): Kwik +22.5, Kwek +22.5\n- Total Poin:\n  * Kwak = 60 + 30 + 37.5 = 127.5 (Ketua)\n  * Kwik = 30 + 30 + 22.5 = 82.5 (Wakil Ketua)\n  * Kwek = 6 + 37.5 + 22.5 = 66 (Sekretaris)\nOleh karena itu, Kwek akan menjadi Sekretaris[cite: 4]."
+    "pembahasan": "Hitung alokasi poin untuk tiap pemilih tunggal dan gabungan. Setiap bebek memberikan total poin 3. Jika memilih 2 kandidat, masing-masing mendapat 1.5 poin.\n- Pemilih Kwak saja = 65 - 20 - 25 = 20 orang -> Poin = 20 * 3 = 60\n- Pemilih Kwik saja = 45 - 20 - 15 = 10 orang -> Poin = 10 * 3 = 30\n- Pemilih Kwek saja = 42 - 25 - 15 = 2 orang -> Poin = 2 * 3 = 6\n- Poin dari gabungan:\n  * Kwak & Kwik (20 orang): Kwak +30, Kwik +30\n  * Kwak & Kwek (25 orang): Kwak +37.5, Kwek +37.5\n  * Kwik & Kwek (15 orang): Kwik +22.5, Kwek +22.5\n- Total Poin:\n  * Kwak = 60 + 30 + 37.5 = 127.5 (Ketua)\n  * Kwik = 30 + 30 + 22.5 = 82.5 (Wakil Ketua)\n  * Kwek = 6 + 37.5 + 22.5 = 66 (Sekretaris)\nOleh karena itu, Kwek akan menjadi Sekretaris[cite: 4].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": null,
@@ -45,7 +47,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "e",
-    "pembahasan": "Agar 7^x = 11^x untuk bilangan real/bulat, pangkatnya harus bernilai 0.\nSehingga n^4 - 3n^2 - 4 = 0.\nMisalkan u = n^2, maka u^2 - 3u - 4 = 0 => (u - 4)(u + 1) = 0.\nKarena n adalah bilangan bulat positif, u = n^2 = 4 => n = 2.\nMencari digit terakhir dari n^2022 = 2^2022.\nPola digit terakhir dari 2^k berulang setiap periode 4: 2, 4, 8, 6.\n2022 mod 4 = 2, sehingga digit terakhir dari 2^2022 sama dengan 2^2 = 4 (atau jika dipangkatkan n^2022 = (2^2)^1011 = 4^1011 yang digit terakhirnya 4/6). Pada deret bilangan genap berbasis 2^2022, digit terakhir bernilai 4 atau 6 (sesuai opsi e)[cite: 4]."
+    "pembahasan": "Agar 7^x = 11^x untuk bilangan real/bulat, pangkatnya harus bernilai 0.\nSehingga n^4 - 3n^2 - 4 = 0.\nMisalkan u = n^2, maka u^2 - 3u - 4 = 0 => (u - 4)(u + 1) = 0.\nKarena n adalah bilangan bulat positif, u = n^2 = 4 => n = 2.\nMencari digit terakhir dari n^2022 = 2^2022.\nPola digit terakhir dari 2^k berulang setiap periode 4: 2, 4, 8, 6.\n2022 mod 4 = 2, sehingga digit terakhir dari 2^2022 sama dengan 2^2 = 4 (atau jika dipangkatkan n^2022 = (2^2)^1011 = 4^1011 yang digit terakhirnya 4/6). Pada deret bilangan genap berbasis 2^2022, digit terakhir bernilai 4 atau 6 (sesuai opsi e)[cite: 4].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": null,
@@ -61,7 +64,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "d",
-    "pembahasan": "Digit terakhir ditentukan oleh 7^5 * 7^9 = 7^14 mod 10.\nPola digit terakhir dari 7^k berulang dengan siklus 4: 7, 9, 3, 1.\n14 mod 4 = 2, sehingga digit terakhir dari 7^14 adalah 7^2 mod 10 = 9[cite: 4]."
+    "pembahasan": "Digit terakhir ditentukan oleh 7^5 * 7^9 = 7^14 mod 10.\nPola digit terakhir dari 7^k berulang dengan siklus 4: 7, 9, 3, 1.\n14 mod 4 = 2, sehingga digit terakhir dari 7^14 adalah 7^2 mod 10 = 9[cite: 4].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -77,7 +81,8 @@
     "gambar_url": null,
     "gambar_lokal": "../gambar_kabupaten/soal_5_kab_2022.png",
     "jawaban_benar": "a",
-    "pembahasan": "Masalah ini mencari Minimum Spanning Tree (MST) dari graf 6 kota. Menggunakan Algoritma Kruskal/Prim untuk memilih 5 jalan berbobot terkecil yang menghubungkan seluruh kota tanpa membentuk siklus. Total panjang kabel minimal yang didapat adalah 25 km[cite: 4]."
+    "pembahasan": "Masalah ini mencari Minimum Spanning Tree (MST) dari graf 6 kota. Menggunakan Algoritma Kruskal/Prim untuk memilih 5 jalan berbobot terkecil yang menghubungkan seluruh kota tanpa membentuk siklus. Total panjang kabel minimal yang didapat adalah 25 km[cite: 4].",
+    "tingkat_kesulitan": "sulit"
   },
   {
     "deskripsi_soal": null,
@@ -93,7 +98,8 @@
     "gambar_url": null,
     "gambar_lokal": "../gambar_kabupaten/soal_6_kab_2022.png",
     "jawaban_benar": "c",
-    "pembahasan": "Menggunakan Algoritma Dijkstra untuk mencari jarak terpendek dari titik awal 0 ke seluruh titik lainnya. Kota dengan waktu tempuh lintasan terpendek paling besar dari kota 0 adalah kota 5[cite: 4]."
+    "pembahasan": "Menggunakan Algoritma Dijkstra untuk mencari jarak terpendek dari titik awal 0 ke seluruh titik lainnya. Kota dengan waktu tempuh lintasan terpendek paling besar dari kota 0 adalah kota 5[cite: 4].",
+    "tingkat_kesulitan": "sulit"
   },
   {
     "deskripsi_soal": null,
@@ -112,7 +118,8 @@
       "../gambar_kabupaten/soal_7_2_kab_2022.png"
     ],
     "jawaban_benar": "c",
-    "pembahasan": "Rotasi gambar setara dengan pemetaan arah yang konsisten:\n- Rotasi 90 derajat searah jarum jam: T->S, S->B, B->U, U->T\n- Rotasi 180 derajat: T->B, B->T, U->S, S->U\n- Rotasi 270 derajat: T->U, U->B, B->S, S->T\nString awal: `TTTSBSTTSBBBUBUU` (panjang 16).\nUji pemetaan rotasi atau titik awal bergeser: String `TTTSTSSBBBUTUBBU` secara geometris membentuk kontur yang kongruen/isomorfik dengan pola rotasi dari gambar asli[cite: 4]."
+    "pembahasan": "Rotasi gambar setara dengan pemetaan arah yang konsisten:\n- Rotasi 90 derajat searah jarum jam: T->S, S->B, B->U, U->T\n- Rotasi 180 derajat: T->B, B->T, U->S, S->U\n- Rotasi 270 derajat: T->U, U->B, B->S, S->T\nString awal: `TTTSBSTTSBBBUBUU` (panjang 16).\nUji pemetaan rotasi atau titik awal bergeser: String `TTTSTSSBBBUTUBBU` secara geometris membentuk kontur yang kongruen/isomorfik dengan pola rotasi dari gambar asli[cite: 4].",
+    "tingkat_kesulitan": "sulit"
   },
   {
     "deskripsi_soal": null,
@@ -128,7 +135,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "d",
-    "pembahasan": "Total bebek = 15. Diperlukan 10 peserta.\n- Kwak dan Kwik PASTI dipilih (2 bebek).\n- Kwek dan Kwok TIDAK BISA dipilih (2 bebek).\n- Sisa bebek yang tersedia untuk dipilih = 15 - 4 = 11 bebek.\n- Sisa posisi peserta yang harus diisi = 10 - 2 = 8 peserta.\nBanyak cara = C(11, 8) = C(11, 3) = (11 * 10 * 9) / (3 * 2 * 1) = 165 cara[cite: 4]."
+    "pembahasan": "Total bebek = 15. Diperlukan 10 peserta.\n- Kwak dan Kwik PASTI dipilih (2 bebek).\n- Kwek dan Kwok TIDAK BISA dipilih (2 bebek).\n- Sisa bebek yang tersedia untuk dipilih = 15 - 4 = 11 bebek.\n- Sisa posisi peserta yang harus diisi = 10 - 2 = 8 peserta.\nBanyak cara = C(11, 8) = C(11, 3) = (11 * 10 * 9) / (3 * 2 * 1) = 165 cara[cite: 4].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -144,7 +152,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "a",
-    "pembahasan": "Misal berat oleh-oleh Kwak = A, Kwik = B, Kwek = C.\n- A + B = 13\n- A + C = 21\n- B + C = 32\nJumlahkan ketiga persamaan:\n2(A + B + C) = 13 + 21 + 32 = 66\nA + B + C = 33 kg.\nTotal berat barang bawaan = 33 kg.\nJatah bagasi gratis = 20 kg.\nTambahan berat bagasi yang harus dibayar = 33 - 20 = 13 kg[cite: 4]."
+    "pembahasan": "Misal berat oleh-oleh Kwak = A, Kwik = B, Kwek = C.\n- A + B = 13\n- A + C = 21\n- B + C = 32\nJumlahkan ketiga persamaan:\n2(A + B + C) = 13 + 21 + 32 = 66\nA + B + C = 33 kg.\nTotal berat barang bawaan = 33 kg.\nJatah bagasi gratis = 20 kg.\nTambahan berat bagasi yang harus dibayar = 33 - 20 = 13 kg[cite: 4].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": null,
@@ -160,7 +169,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "c",
-    "pembahasan": "Misalkan total bebek = N, dan posisi Kwak dari kiri = k.\n- Barisan dari kiri: beda = 3, suku pertama = 1. U_k = 1 + (k - 1) * 3 = 46 => 3(k - 1) = 45 => k - 1 = 15 => k = 16 (Kwak adalah bebek ke-16 dari kiri).\n- Barisan dari kanan: beda = 5, suku pertama = 1. Misalkan Kwak adalah bebek ke-m dari kanan.\n  U_m = 1 + (m - 1) * 5 = 46 => 5(m - 1) = 45 => m - 1 = 9 => m = 10 (Kwak adalah bebek ke-10 dari kanan).\n- Total bebek N = k + m - 1 = 16 + 10 - 1 = 25 bebek[cite: 4]."
+    "pembahasan": "Misalkan total bebek = N, dan posisi Kwak dari kiri = k.\n- Barisan dari kiri: beda = 3, suku pertama = 1. U_k = 1 + (k - 1) * 3 = 46 => 3(k - 1) = 45 => k - 1 = 15 => k = 16 (Kwak adalah bebek ke-16 dari kiri).\n- Barisan dari kanan: beda = 5, suku pertama = 1. Misalkan Kwak adalah bebek ke-m dari kanan.\n  U_m = 1 + (m - 1) * 5 = 46 => 5(m - 1) = 45 => m - 1 = 9 => m = 10 (Kwak adalah bebek ke-10 dari kanan).\n- Total bebek N = k + m - 1 = 16 + 10 - 1 = 25 bebek[cite: 4].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -176,7 +186,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "b",
-    "pembahasan": "Jumlah n bilangan ganjil pertama adalah n^2.\n- Suku terakhir 51: 2n - 1 = 51 => n = 26. Jumlah = 26^2 = 676.\n- Suku ganjil a: 2k - 1 = a => Jumlah = k^2.\n- Suku ganjil b: 2m - 1 = b => Jumlah = m^2.\nPersamaan: k^2 + m^2 = 26^2 = 676.\nTripel Pythagoras dengan hipotenusa 26 adalah (10, 24, 26) karena 10^2 + 24^2 = 100 + 576 = 676.\nMaka k = 10 dan m = 24.\n- a = 2(10) - 1 = 19\n- b = 2(24) - 1 = 47\nNilai a + b = 19 + 47 = 66[cite: 4]."
+    "pembahasan": "Jumlah n bilangan ganjil pertama adalah n^2.\n- Suku terakhir 51: 2n - 1 = 51 => n = 26. Jumlah = 26^2 = 676.\n- Suku ganjil a: 2k - 1 = a => Jumlah = k^2.\n- Suku ganjil b: 2m - 1 = b => Jumlah = m^2.\nPersamaan: k^2 + m^2 = 26^2 = 676.\nTripel Pythagoras dengan hipotenusa 26 adalah (10, 24, 26) karena 10^2 + 24^2 = 100 + 576 = 676.\nMaka k = 10 dan m = 24.\n- a = 2(10) - 1 = 19\n- b = 2(24) - 1 = 47\nNilai a + b = 19 + 47 = 66[cite: 4].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": null,
@@ -192,7 +203,8 @@
     "gambar_url": null,
     "gambar_lokal": "../gambar_kabupaten/soal_12_kab_2022.png",
     "jawaban_benar": "b",
-    "pembahasan": "Menganalisis strategi permainan kombinatorial (Nim / Game Theory). Karena Kwak bergerak lebih dahulu namun posisi relatif dan jarak antar papan menguntungkan pemain kedua jika bermain optimal, Kwek dapat selalu membalas setiap pergerakan Kwak hingga Kwak kehabisan langkah legal. Maka Kwek yang akan menang[cite: 4]."
+    "pembahasan": "Menganalisis strategi permainan kombinatorial (Nim / Game Theory). Karena Kwak bergerak lebih dahulu namun posisi relatif dan jarak antar papan menguntungkan pemain kedua jika bermain optimal, Kwek dapat selalu membalas setiap pergerakan Kwak hingga Kwak kehabisan langkah legal. Maka Kwek yang akan menang[cite: 4].",
+    "tingkat_kesulitan": "sulit"
   },
   {
     "deskripsi_soal": null,
@@ -208,7 +220,8 @@
     "gambar_url": null,
     "gambar_lokal": "../gambar_kabupaten/soal_13_kab_2022.png",
     "jawaban_benar": "d",
-    "pembahasan": "Potongan maksimal oleh n garis pada bidang datar/poligon sederhana mengikuti prinsip pemotongan maksimal L(n) = L(n-1) + n. Untuk bidang dasar 1 area utuh dan 5 garis lurus yang memotong seluruh wilayah dan garis-garis lain secara optimal, potongan maksimal yang dihasilkan adalah 26[cite: 4]."
+    "pembahasan": "Potongan maksimal oleh n garis pada bidang datar/poligon sederhana mengikuti prinsip pemotongan maksimal L(n) = L(n-1) + n. Untuk bidang dasar 1 area utuh dan 5 garis lurus yang memotong seluruh wilayah dan garis-garis lain secara optimal, potongan maksimal yang dihasilkan adalah 26[cite: 4].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": null,
@@ -224,7 +237,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "e",
-    "pembahasan": "Urutan 5 email (posisi 1 sampai 5):\n- Adi paling akhir -> Posisi 5: Adi.\n- Budi sebelum Adi tetapi bukan pertama -> Budi bisa di posisi 2, 3, atau 4.\n- Carli dan Dudung dibaca berurutan di antara Eman dan Budi -> Struktur blok: Eman, [Carli, Dudung], Budi atau kebalikannya.\nKarena Budi bukan pertama dan Adi di posisi 5, maka urutan yang memenuhi adalah 1: Eman, 2: Carli/Dudung, 3: Dudung/Carli, 4: Budi, 5: Adi.\nJadi email yang pertama kali dibaca adalah email Pak Eman[cite: 4]."
+    "pembahasan": "Urutan 5 email (posisi 1 sampai 5):\n- Adi paling akhir -> Posisi 5: Adi.\n- Budi sebelum Adi tetapi bukan pertama -> Budi bisa di posisi 2, 3, atau 4.\n- Carli dan Dudung dibaca berurutan di antara Eman dan Budi -> Struktur blok: Eman, [Carli, Dudung], Budi atau kebalikannya.\nKarena Budi bukan pertama dan Adi di posisi 5, maka urutan yang memenuhi adalah 1: Eman, 2: Carli/Dudung, 3: Dudung/Carli, 4: Budi, 5: Adi.\nJadi email yang pertama kali dibaca adalah email Pak Eman[cite: 4].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -240,7 +254,8 @@
     "gambar_url": null,
     "gambar_lokal": "../gambar_kabupaten/soal_15_kab_2022.png",
     "jawaban_benar": "c",
-    "pembahasan": "Mengambil piring secara berurutan pada meja melingkar dari ukuran 6 ke 5 (pilih 5 terdekat), lalu ke 4, 3, 2, dan 1. Menghitung jarak langkah terpendek pada siklus 9 elemen menghasilkan total 20 langkah minimal[cite: 4]."
+    "pembahasan": "Mengambil piring secara berurutan pada meja melingkar dari ukuran 6 ke 5 (pilih 5 terdekat), lalu ke 4, 3, 2, dan 1. Menghitung jarak langkah terpendek pada siklus 9 elemen menghasilkan total 20 langkah minimal[cite: 4].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": null,
@@ -250,7 +265,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "16",
-    "pembahasan": "Gunakan Prinsip Inklusi-Eksklusi:\n|A ∪ B ∪ C| = |A| + |B| + |C| - (|A ∩ B| + |B ∩ C| + |A ∩ C|) + |A ∩ B ∩ C|\n|A ∪ B ∪ C| = 20 + 30 + 45 - (5 + 6 + 1) + 1 = 95 - 12 + 1 = 84 orang suka setidaknya satu makanan.\nBanyaknya orang yang tidak suka ketiga jenis makanan = 100 - 84 = 16 orang[cite: 4]."
+    "pembahasan": "Gunakan Prinsip Inklusi-Eksklusi:\n|A ∪ B ∪ C| = |A| + |B| + |C| - (|A ∩ B| + |B ∩ C| + |A ∩ C|) + |A ∩ B ∩ C|\n|A ∪ B ∪ C| = 20 + 30 + 45 - (5 + 6 + 1) + 1 = 95 - 12 + 1 = 84 orang suka setidaknya satu makanan.\nBanyaknya orang yang tidak suka ketiga jenis makanan = 100 - 84 = 16 orang[cite: 4].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": null,
@@ -260,7 +276,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "0",
-    "pembahasan": "Faktorisasi pembagi: 707 = 7 * 101.\nKarena 100! = 100 * 99 * ... * 7 * ... * 1, maka 100! habis dibagi 7.\nBegitu juga dalam ekspresi 100!, perkalian faktor-faktornya mencakup semua bilangan hingga 100. Untuk mod 707, karena 707 = 7 * 101 dan 100! mengandung kelipatan 7 serta sifat keterbagian faktorial besar, hasil 2022^2000 * 100! mod 707 bernilai 0[cite: 4]."
+    "pembahasan": "Faktorisasi pembagi: 707 = 7 * 101.\nKarena 100! = 100 * 99 * ... * 7 * ... * 1, maka 100! habis dibagi 7.\nBegitu juga dalam ekspresi 100!, perkalian faktor-faktornya mencakup semua bilangan hingga 100. Untuk mod 707, karena 707 = 7 * 101 dan 100! mengandung kelipatan 7 serta sifat keterbagian faktorial besar, hasil 2022^2000 * 100! mod 707 bernilai 0[cite: 4].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -270,7 +287,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "320",
-    "pembahasan": "Mencari Pohon Rentang Minimum (Minimum Spanning Tree) yang menghubungkan ke-10 kota dengan titik awal Jakarta:\nJalur terpillih:\n- Jakarta - Bogor (30)\n- Jakarta - Bandung (20)\n- Bandung - Tasikmalaya (20)\n- Bandung - Purwakarta (30)\n- Purwakarta - Cirebon (60)\n- Cirebon - Yogya (50)\n- Yogya - Solo (20)\n- Solo - Semarang (20)\n- Solo - Surabaya (50)\nTotal biaya minimal = 30 + 20 + 20 + 30 + 60 + 50 + 20 + 20 + 50 = 320[cite: 4]."
+    "pembahasan": "Mencari Pohon Rentang Minimum (Minimum Spanning Tree) yang menghubungkan ke-10 kota dengan titik awal Jakarta:\nJalur terpillih:\n- Jakarta - Bogor (30)\n- Jakarta - Bandung (20)\n- Bandung - Tasikmalaya (20)\n- Bandung - Purwakarta (30)\n- Purwakarta - Cirebon (60)\n- Cirebon - Yogya (50)\n- Yogya - Solo (20)\n- Solo - Semarang (20)\n- Solo - Surabaya (50)\nTotal biaya minimal = 30 + 20 + 20 + 30 + 60 + 50 + 20 + 20 + 50 = 320[cite: 4].",
+    "tingkat_kesulitan": "sulit"
   },
   {
     "deskripsi_soal": null,
@@ -280,7 +298,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "169",
-    "pembahasan": "Gunakan persamaan relasi rekurensi: f(n) = f(n-1) + f(n-2) + f(n-4).\nBase cases:\n- f(0) = 1\n- f(1) = 1\n- f(2) = f(1) + f(0) = 2\n- f(3) = f(2) + f(1) = 3\n- f(4) = f(3) + f(2) + f(0) = 3 + 2 + 1 = 6\n- f(5) = 6 + 3 + 1 = 10\n- f(6) = 10 + 6 + 2 = 18\n- f(7) = 18 + 10 + 3 = 31\n- f(8) = 31 + 18 + 6 = 55\n- f(9) = 55 + 31 + 10 = 96\n- f(10) = 96 + 55 + 18 = 169.\nBanyaknya cara penyusunan adalah 169[cite: 4]."
+    "pembahasan": "Gunakan persamaan relasi rekurensi: f(n) = f(n-1) + f(n-2) + f(n-4).\nBase cases:\n- f(0) = 1\n- f(1) = 1\n- f(2) = f(1) + f(0) = 2\n- f(3) = f(2) + f(1) = 3\n- f(4) = f(3) + f(2) + f(0) = 3 + 2 + 1 = 6\n- f(5) = 6 + 3 + 1 = 10\n- f(6) = 10 + 6 + 2 = 18\n- f(7) = 18 + 10 + 3 = 31\n- f(8) = 31 + 18 + 6 = 55\n- f(9) = 55 + 31 + 10 = 96\n- f(10) = 96 + 55 + 18 = 169.\nBanyaknya cara penyusunan adalah 169[cite: 4].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": null,
@@ -290,7 +309,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "76",
-    "pembahasan": "Memilih 3 titik dari 9 titik kisi 3x3:\n- Total kombinasi memilih 3 titik = C(9, 3) = (9 * 8 * 7) / 6 = 84.\n- Dikurangi kombinasi 3 titik yang segaris (kolinear):\n  * 3 garis horizontal = 3\n  * 3 garis vertikal = 3\n  * 2 garis diagonal utama = 2\n  Total segaris = 3 + 3 + 2 = 8.\nBanyaknya segitiga valid = 84 - 8 = 76[cite: 4]."
+    "pembahasan": "Memilih 3 titik dari 9 titik kisi 3x3:\n- Total kombinasi memilih 3 titik = C(9, 3) = (9 * 8 * 7) / 6 = 84.\n- Dikurangi kombinasi 3 titik yang segaris (kolinear):\n  * 3 garis horizontal = 3\n  * 3 garis vertikal = 3\n  * 2 garis diagonal utama = 2\n  Total segaris = 3 + 3 + 2 = 8.\nBanyaknya segitiga valid = 84 - 8 = 76[cite: 4].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -300,7 +320,8 @@
     "gambar_url": null,
     "gambar_lokal": "../gambar_kabupaten/soal_21_kab_2022.png",
     "jawaban_benar": "12",
-    "pembahasan": "Menghitung pasangan posisi awal (Kwak, Kwek) pada papan sedemikian sehingga bebek di posisi kanan memiliki strategi menang pasti (P-position / Winning Position) bagi pemain kedua/kanan. Terdapat 12 kombinasi posisi awal yang memenuhi[cite: 4]."
+    "pembahasan": "Menghitung pasangan posisi awal (Kwak, Kwek) pada papan sedemikian sehingga bebek di posisi kanan memiliki strategi menang pasti (P-position / Winning Position) bagi pemain kedua/kanan. Terdapat 12 kombinasi posisi awal yang memenuhi[cite: 4].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -310,7 +331,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "besok juga belajar tatap muka",
-    "pembahasan": "Penerjemahan kata per kata:\n- \"wik\" = belajar\n- \"waak\" = hari ini\n- \"wak\" = online\n- \"wuk\" = kemarin\n- \"kwik\" = juga\n- \"nwuk\" = tatap muka\n- \"mwuk\" = besok\nKalimat \"Nwuk wik mwuk kwik\" = \"Tatap muka (nwuk) belajar (wik) besok (mwuk) juga (kwik)\" -> \"Besok juga belajar tatap muka\"[cite: 4]."
+    "pembahasan": "Penerjemahan kata per kata:\n- \"wik\" = belajar\n- \"waak\" = hari ini\n- \"wak\" = online\n- \"wuk\" = kemarin\n- \"kwik\" = juga\n- \"nwuk\" = tatap muka\n- \"mwuk\" = besok\nKalimat \"Nwuk wik mwuk kwik\" = \"Tatap muka (nwuk) belajar (wik) besok (mwuk) juga (kwik)\" -> \"Besok juga belajar tatap muka\"[cite: 4].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": null,
@@ -320,7 +342,8 @@
     "gambar_url": null,
     "gambar_lokal": "../gambar_kabupaten/soal_23_kab_2022.png",
     "jawaban_benar": "6",
-    "pembahasan": "Mencari lintasan terpendek (Breadth-First Search) dari kiri bawah (5) ke kanan atas (7) dengan syarat |tinggi_1 - tinggi_2| <= 1.\nPath: (baris 5, kol 1): 5 -> (baris 4, kol 2): 6 -> (baris 4, kol 3): 7 -> (baris 4, kol 4): 7 -> (baris 3, kol 5): 8 (atau lewat 6/7) -> (baris 1, kol 6): 7.\nJumlah kandang minimal yang dilalui adalah 6 kandang[cite: 4]."
+    "pembahasan": "Mencari lintasan terpendek (Breadth-First Search) dari kiri bawah (5) ke kanan atas (7) dengan syarat |tinggi_1 - tinggi_2| <= 1.\nPath: (baris 5, kol 1): 5 -> (baris 4, kol 2): 6 -> (baris 4, kol 3): 7 -> (baris 4, kol 4): 7 -> (baris 3, kol 5): 8 (atau lewat 6/7) -> (baris 1, kol 6): 7.\nJumlah kandang minimal yang dilalui adalah 6 kandang[cite: 4].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -330,7 +353,8 @@
     "gambar_url": null,
     "gambar_lokal": "../gambar_kabupaten/soal_24_kab_2022.png",
     "jawaban_benar": "18",
-    "pembahasan": "Mencari Longest Path (Lintasan Terpanjang tanpa mengunjungi kandang yang sama) pada grid dengan bobot selisih <= 1. Jumlah kandang terbanyak yang dapat dilalui Kwak adalah 18 kandang[cite: 4]."
+    "pembahasan": "Mencari Longest Path (Lintasan Terpanjang tanpa mengunjungi kandang yang sama) pada grid dengan bobot selisih <= 1. Jumlah kandang terbanyak yang dapat dilalui Kwak adalah 18 kandang[cite: 4].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -340,7 +364,8 @@
     "gambar_url": null,
     "gambar_lokal": "../gambar_kabupaten/soal_25_kab_2022.png",
     "jawaban_benar": "9",
-    "pembahasan": "Menganalisis matriks tinggi minimum/maksimum dari gambar proyeksi tampak depan, atas, dan samping kiri. Jumlah kubus penyusun susunan 3D tersebut adalah 9 kubus[cite: 4]."
+    "pembahasan": "Menganalisis matriks tinggi minimum/maksimum dari gambar proyeksi tampak depan, atas, dan samping kiri. Jumlah kubus penyusun susunan 3D tersebut adalah 9 kubus[cite: 4].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Perhatikan potongan program berikut!",
@@ -350,7 +375,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "56",
-    "pembahasan": "Diberikan A=11, B=6, C=7:\n- B = 11 - 6 = 5\n- C = 11 - 7 = 4\n- A = 5 + 4 = 9\n- Cetak (A + B) * C = (9 + 5) * 4 = 14 * 4 = 56[cite: 4]."
+    "pembahasan": "Diberikan A=11, B=6, C=7:\n- B = 11 - 6 = 5\n- C = 11 - 7 = 4\n- A = 5 + 4 = 9\n- Cetak (A + B) * C = (9 + 5) * 4 = 14 * 4 = 56[cite: 4].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Perhatikan potongan program berikut!",
@@ -360,7 +386,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "100",
-    "pembahasan": "Input: A=89, B=78, C=100, D=105.\n- A >= B (89 >= 78) -> TRUE.\n- A >= C (89 >= 100) -> FALSE.\n- Masuk ke cabang else: C >= D (100 >= 105) -> FALSE.\n- Masuk ke cabang else: cetak C.\nMaka program mencetak 100[cite: 4]."
+    "pembahasan": "Input: A=89, B=78, C=100, D=105.\n- A >= B (89 >= 78) -> TRUE.\n- A >= C (89 >= 100) -> FALSE.\n- Masuk ke cabang else: C >= D (100 >= 105) -> FALSE.\n- Masuk ke cabang else: cetak C.\nMaka program mencetak 100[cite: 4].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Pak Dengklek memiliki dua buah array A dan B yang masing-masing berisi lima buah bilangan yang sudah terurut secara menaik. Pak Dengklek ingin menggabungkan kedua array tersebut dalam sebuah array C, di mana kesepuluh bilangan dalam array C hasil penggabungan juga harus terurut secara menaik.",
@@ -370,7 +397,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "9",
-    "pembahasan": "Kesalahan ada pada baris 9: `while (i < 5 || j < 5)`. Seharusnya kondisi penggabungan dua array terurut (Merge Step) menggunakan operator AND (`while (i < 5 && j < 5)`), karena jika salah satu indeks mencapai 5 (out of bounds), mengakses `A[5]` atau `B[5]` akan menyebabkan error/out of bound access[cite: 4]."
+    "pembahasan": "Kesalahan ada pada baris 9: `while (i < 5 || j < 5)`. Seharusnya kondisi penggabungan dua array terurut (Merge Step) menggunakan operator AND (`while (i < 5 && j < 5)`), karena jika salah satu indeks mencapai 5 (out of bounds), mengakses `A[5]` atau `B[5]` akan menyebabkan error/out of bound access[cite: 4].",
+    "tingkat_kesulitan": "sulit"
   },
   {
     "deskripsi_soal": "Perhatikan potongan program berikut!",
@@ -380,7 +408,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "350",
-    "pembahasan": "- Loop pertama menghitung Kelipatan Persekutuan Terkecil (KPK) dari A=5000 dan B=700.\n  KPK(5000, 700) = 35000, sehingga C = D = 35000.\n- Loop kedua menghitung Faktor Persekutuan Terbesar (FPB) dari A=5000 dan B=700.\n  FPB(5000, 700) = 100, sehingga A = B = 100.\n- Hasil yang dicetak = (C + D) / (A + B) = (35000 + 35000) / (100 + 100) = 70000 / 200 = 350[cite: 4]."
+    "pembahasan": "- Loop pertama menghitung Kelipatan Persekutuan Terkecil (KPK) dari A=5000 dan B=700.\n  KPK(5000, 700) = 35000, sehingga C = D = 35000.\n- Loop kedua menghitung Faktor Persekutuan Terbesar (FPB) dari A=5000 dan B=700.\n  FPB(5000, 700) = 100, sehingga A = B = 100.\n- Hasil yang dicetak = (C + D) / (A + B) = (35000 + 35000) / (100 + 100) = 70000 / 200 = 350[cite: 4].",
+    "tingkat_kesulitan": "sulit"
   },
   {
     "deskripsi_soal": "Perhatikan potongan program berikut!",
@@ -390,7 +419,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "AKITAMROFNI",
-    "pembahasan": "Aturan pergantian karakter pada string x bertipe pembalikan string (reverse). Hasil akhir penukaran seluruh karakter membuat string \"INFORMATIKA\" terbalik menjadi \"AKITAMROFNI\"[cite: 4]."
+    "pembahasan": "Aturan pergantian karakter pada string x bertipe pembalikan string (reverse). Hasil akhir penukaran seluruh karakter membuat string \"INFORMATIKA\" terbalik menjadi \"AKITAMROFNI\"[cite: 4].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Perhatikan potongan program berikut!",
@@ -400,7 +430,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "990",
-    "pembahasan": "Perhatikan bahwa setiap pertambahan variabel `kiri` selalu sama dengan pertambahan variabel `energi` (ditambah 1 saat mod 7, ditambah 2 saat mod 3, dan ditambah 3 saat kondisi else).\nKarena pergerakan `kiri` persis sejalan dengan nilai `energi` dari awal `kiri = 10` sampai `kiri >= 1000`, maka total `energi` yang dikumpulkan sama dengan 1000 - 10 = 990[cite: 4]."
+    "pembahasan": "Perhatikan bahwa setiap pertambahan variabel `kiri` selalu sama dengan pertambahan variabel `energi` (ditambah 1 saat mod 7, ditambah 2 saat mod 3, dan ditambah 3 saat kondisi else).\nKarena pergerakan `kiri` persis sejalan dengan nilai `energi` dari awal `kiri = 10` sampai `kiri >= 1000`, maka total `energi` yang dikumpulkan sama dengan 1000 - 10 = 990[cite: 4].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Perhatikan fungsi berikut!",
@@ -410,7 +441,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "184",
-    "pembahasan": "Menelusuri pemanggilan fungsi:\n1. `kwak(10)` memanggil `i = 0, 2, 4, 6, 8`:\n   - i = 0: kwek(0) + kwik(0) = 0\n   - i = 2: kwek(2) [i=0 -> 0] + kwik(4) [i=0 -> 0] = 0\n   - i = 4: kwek(4) [i=0,3 -> kwik(0)+kwik(9)] + kwik(8) [i=0,4 -> 0+4=4]\n     * kwik(9): i=0,4,8 -> sum=12. kwek(4) = 12.\n     * total i=4: 12 + 4 = 16.\n   - i = 6: kwek(6) [i=0,3 -> kwik(9)=12] + kwik(12) [i=0,4,8 -> 12]\n     * total i=6: 12 + 12 = 24.\n   - i = 8: kwek(8) [i=0,3,6 -> kwik(0)+kwik(9)+kwik(18)] + kwik(16) [i=0,4,8,12 -> 24]\n     * kwik(18): i=0,4,8,12,16 -> sum=40. kwek(8) = 12 + 40 = 52.\n     * total i=8: 52 + 24 = 76.\nTotal kwak(10) = 0 + 0 + 16 + 24 + 144 = 184[cite: 4]."
+    "pembahasan": "Menelusuri pemanggilan fungsi:\n1. `kwak(10)` memanggil `i = 0, 2, 4, 6, 8`:\n   - i = 0: kwek(0) + kwik(0) = 0\n   - i = 2: kwek(2) [i=0 -> 0] + kwik(4) [i=0 -> 0] = 0\n   - i = 4: kwek(4) [i=0,3 -> kwik(0)+kwik(9)] + kwik(8) [i=0,4 -> 0+4=4]\n     * kwik(9): i=0,4,8 -> sum=12. kwek(4) = 12.\n     * total i=4: 12 + 4 = 16.\n   - i = 6: kwek(6) [i=0,3 -> kwik(9)=12] + kwik(12) [i=0,4,8 -> 12]\n     * total i=6: 12 + 12 = 24.\n   - i = 8: kwek(8) [i=0,3,6 -> kwik(0)+kwik(9)+kwik(18)] + kwik(16) [i=0,4,8,12 -> 24]\n     * kwik(18): i=0,4,8,12,16 -> sum=40. kwek(8) = 12 + 40 = 52.\n     * total i=8: 52 + 24 = 76.\nTotal kwak(10) = 0 + 0 + 16 + 24 + 144 = 184[cite: 4].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Perhatikan fungsi berikut!",
@@ -420,7 +452,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "11110101001",
-    "pembahasan": "Fungsi `bahagia(A)` mencetak digit biner dari A dari LSB ke MSB (kebalikan dari representasi biner standar).\nNilai 1111 dalam biner adalah `10001010111`_2.\nDiurutkan/dicetak dari digit terakhir (LSB) ke depan:\n1111 mod 2 = 1, div 2 = 555\n555 mod 2 = 1, div 2 = 277\n277 mod 2 = 1, div 2 = 138\n138 mod 2 = 0, div 2 = 69\n69 mod 2 = 1, div 2 = 34\n34 mod 2 = 0, div 2 = 17\n17 mod 2 = 1, div 2 = 8\n8 mod 2 = 0, div 2 = 4\n4 mod 2 = 0, div 2 = 2\n2 mod 2 = 0, div 2 = 1\n1 mod 2 = 1, div 2 = 0\nOutput yang tercetak berturut-turut adalah: 11110101001[cite: 4]."
+    "pembahasan": "Fungsi `bahagia(A)` mencetak digit biner dari A dari LSB ke MSB (kebalikan dari representasi biner standar).\nNilai 1111 dalam biner adalah `10001010111`_2.\nDiurutkan/dicetak dari digit terakhir (LSB) ke depan:\n1111 mod 2 = 1, div 2 = 555\n555 mod 2 = 1, div 2 = 277\n277 mod 2 = 1, div 2 = 138\n138 mod 2 = 0, div 2 = 69\n69 mod 2 = 1, div 2 = 34\n34 mod 2 = 0, div 2 = 17\n17 mod 2 = 1, div 2 = 8\n8 mod 2 = 0, div 2 = 4\n4 mod 2 = 0, div 2 = 2\n2 mod 2 = 0, div 2 = 1\n1 mod 2 = 1, div 2 = 0\nOutput yang tercetak berturut-turut adalah: 11110101001[cite: 4].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Diketahui dua buah fungsi merah() dan putih() sebagai berikut:",
@@ -430,7 +463,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "56",
-    "pembahasan": "- `merah(100, 50)` memanggil `1 + merah(99, 50) + ... + merah(50, 50)`.\n  Pengurangan dari 100 ke 50 memberikan 1 * (100 - 50) = 50 panggilan rekursif + `putih(50)`.\n- `putih(50)`:\n  * putih(50) = 1 + putih(25)\n  * putih(25) = 1 + putih(12)\n  * putih(12) = 1 + putih(6)\n  * putih(6) = 1 + putih(3)\n  * putih(3) = 1 + putih(1)\n  * putih(1) = 1 + putih(0) = 1\n  Total `putih(50)` = 6.\n- Nilai akhir `merah(100, 50)` = 50 + 6 = 56[cite: 4]."
+    "pembahasan": "- `merah(100, 50)` memanggil `1 + merah(99, 50) + ... + merah(50, 50)`.\n  Pengurangan dari 100 ke 50 memberikan 1 * (100 - 50) = 50 panggilan rekursif + `putih(50)`.\n- `putih(50)`:\n  * putih(50) = 1 + putih(25)\n  * putih(25) = 1 + putih(12)\n  * putih(12) = 1 + putih(6)\n  * putih(6) = 1 + putih(3)\n  * putih(3) = 1 + putih(1)\n  * putih(1) = 1 + putih(0) = 1\n  Total `putih(50)` = 6.\n- Nilai akhir `merah(100, 50)` = 50 + 6 = 56[cite: 4].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Didefinisikan sebuah fungsi rekursif sebagai berikut:",
@@ -440,6 +474,7 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "5115",
-    "pembahasan": "- Fase 1 (x >= 0): Selama x berkurang dari 10 menjadi 0 (11 langkah: 10, 9, ..., 0), nilai y dikalikan 2 sebanyak 11 kali.\n  y_baru = 5 * 2^11 = 5 * 2048 = 10240, dan x menjadi -1.\n- Fase 2 (x < 0): Rekursi memanggil `hitung(x - 1, y - 1) + 1` hingga `x + y == 0` yang mengembalikan y.\nTracing lengkap pada kondisi batas mengembalikan nilai 5115[cite: 4]."
+    "pembahasan": "- Fase 1 (x >= 0): Selama x berkurang dari 10 menjadi 0 (11 langkah: 10, 9, ..., 0), nilai y dikalikan 2 sebanyak 11 kali.\n  y_baru = 5 * 2^11 = 5 * 2048 = 10240, dan x menjadi -1.\n- Fase 2 (x < 0): Rekursi memanggil `hitung(x - 1, y - 1) + 1` hingga `x + y == 0` yang mengembalikan y.\nTracing lengkap pada kondisi batas mengembalikan nilai 5115[cite: 4].",
+    "tingkat_kesulitan": "sedang"
   }
 ]

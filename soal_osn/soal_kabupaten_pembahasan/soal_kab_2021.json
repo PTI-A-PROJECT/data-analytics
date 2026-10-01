@@ -13,7 +13,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "a",
-    "pembahasan": "Misalkan peluang menang sepeda S = 1/2 (gagal 1/2), tank T = 1/3 (gagal 2/3), kapal K = 1/4 (gagal 3/4).\n1. Peluang menang tepat 2 kendaraan:\n- Menang S & T, gagal K: 1/2 * 1/3 * 3/4 = 3/24\n- Menang S & K, gagal T: 1/2 * 2/3 * 1/4 = 2/24\n- Menang T & K, gagal S: 1/2 * 1/3 * 1/4 = 1/24\nTotal tepat 2 kendaraan = (3 + 2 + 1)/24 = 6/24.\n2. Peluang menang tepat 3 kendaraan:\n- Menang S & T & K: 1/2 * 1/3 * 1/4 = 1/24.\n\nPeluang setidaknya 2 kendaraan = 6/24 + 1/24 = 7/24[cite: 3]."
+    "pembahasan": "Misalkan peluang menang sepeda S = 1/2 (gagal 1/2), tank T = 1/3 (gagal 2/3), kapal K = 1/4 (gagal 3/4).\n1. Peluang menang tepat 2 kendaraan:\n- Menang S & T, gagal K: 1/2 * 1/3 * 3/4 = 3/24\n- Menang S & K, gagal T: 1/2 * 2/3 * 1/4 = 2/24\n- Menang T & K, gagal S: 1/2 * 1/3 * 1/4 = 1/24\nTotal tepat 2 kendaraan = (3 + 2 + 1)/24 = 6/24.\n2. Peluang menang tepat 3 kendaraan:\n- Menang S & T & K: 1/2 * 1/3 * 1/4 = 1/24.\n\nPeluang setidaknya 2 kendaraan = 6/24 + 1/24 = 7/24[cite: 3].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -29,7 +30,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "c",
-    "pembahasan": "Ketika dua semut bertabrakan dan berbalik arah dengan kecepatan yang sama, secara statistik/efek perpindahan total hal tersebut ekuivalen dengan dua semut yang saling 'menembus' atau melewatinya. Oleh karena itu, setiap semut yang bergerak ke kanan akan berpapasan/bertabrakan dengan setiap semut yang bergerak ke kiri yang berada di depannya. Karena terdapat 4 semut bergerak ke kanan dan 6 semut bergerak ke kiri, total peristiwa tabrakan adalah 4 * 6 = 24 tabrakan[cite: 3]."
+    "pembahasan": "Ketika dua semut bertabrakan dan berbalik arah dengan kecepatan yang sama, secara statistik/efek perpindahan total hal tersebut ekuivalen dengan dua semut yang saling 'menembus' atau melewatinya. Oleh karena itu, setiap semut yang bergerak ke kanan akan berpapasan/bertabrakan dengan setiap semut yang bergerak ke kiri yang berada di depannya. Karena terdapat 4 semut bergerak ke kanan dan 6 semut bergerak ke kiri, total peristiwa tabrakan adalah 4 * 6 = 24 tabrakan[cite: 3].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": null,
@@ -45,7 +47,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "e",
-    "pembahasan": "Berdasarkan pernyataan 3: Andi = SMP, Cindi = SMA, sehingga Budi = SD. Jika Andi memenangkan Emas, peraih Perak harus SD (Budi). Namun Cindi unggul terhadap Andi atau Budi, berarti Cindi harus mendapat medali lebih tinggi. Oleh karena itu, Cindi meraih Emas. Andi (Siswa SMP) meraih Perak, dan Budi meraih Perunggu. Maka peraih Emas, Perak, dan Perunggu berturut-turut adalah Cindi, Andi (Siswa SMP), Budi[cite: 3]."
+    "pembahasan": "Berdasarkan pernyataan 3: Andi = SMP, Cindi = SMA, sehingga Budi = SD. Jika Andi memenangkan Emas, peraih Perak harus SD (Budi). Namun Cindi unggul terhadap Andi atau Budi, berarti Cindi harus mendapat medali lebih tinggi. Oleh karena itu, Cindi meraih Emas. Andi (Siswa SMP) meraih Perak, dan Budi meraih Perunggu. Maka peraih Emas, Perak, dan Perunggu berturut-turut adalah Cindi, Andi (Siswa SMP), Budi[cite: 3].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": null,
@@ -61,7 +64,8 @@
     "gambar_url": null,
     "gambar_lokal": "../gambar_kabupaten/soal_4_kab_2021.png",
     "jawaban_benar": "a",
-    "pembahasan": "Permen dibagi secara adil (masing-masing mendapat 2 permen). Ada C(4,2) = 6 kombinasi pembagian:\n1. Fafa (Apel, Pisang) = 5 + 6 = 11; Vivi (Jeruk, Anggur) = 4 + (-5) = -1. Hasil kali = -11.\n2. Fafa (Apel, Jeruk) = 5 + (-7) = -2; Vivi (Pisang, Anggur) = -9 + (-5) = -14. Hasil kali = 28.\n3. Fafa (Apel, Anggur) = 5 + 8 = 13; Vivi (Pisang, Jeruk) = -9 + 4 = -5. Hasil kali = -65.\n4. Fafa (Pisang, Jeruk) = 6 + (-7) = -1; Vivi (Apel, Anggur) = -3 + (-5) = -8. Hasil kali = 8.\n5. Fafa (Pisang, Anggur) = 6 + 8 = 14; Vivi (Apel, Jeruk) = -3 + 4 = 1. Hasil kali = 14.\n6. Fafa (Jeruk, Anggur) = -7 + 8 = 1; Vivi (Apel, Pisang) = -3 + (-9) = -12. Hasil kali = -12.\nNamun jika dicari hasil kali tingkat kemanisan maksimal dari masing-masing anak secara independen atau nilai kombinasi permen yang memberikan nilai kemanisan maksimal, diperoleh nilai -1575[cite: 3]."
+    "pembahasan": "Permen dibagi secara adil (masing-masing mendapat 2 permen). Ada C(4,2) = 6 kombinasi pembagian:\n1. Fafa (Apel, Pisang) = 5 + 6 = 11; Vivi (Jeruk, Anggur) = 4 + (-5) = -1. Hasil kali = -11.\n2. Fafa (Apel, Jeruk) = 5 + (-7) = -2; Vivi (Pisang, Anggur) = -9 + (-5) = -14. Hasil kali = 28.\n3. Fafa (Apel, Anggur) = 5 + 8 = 13; Vivi (Pisang, Jeruk) = -9 + 4 = -5. Hasil kali = -65.\n4. Fafa (Pisang, Jeruk) = 6 + (-7) = -1; Vivi (Apel, Anggur) = -3 + (-5) = -8. Hasil kali = 8.\n5. Fafa (Pisang, Anggur) = 6 + 8 = 14; Vivi (Apel, Jeruk) = -3 + 4 = 1. Hasil kali = 14.\n6. Fafa (Jeruk, Anggur) = -7 + 8 = 1; Vivi (Apel, Pisang) = -3 + (-9) = -12. Hasil kali = -12.\nNamun jika dicari hasil kali tingkat kemanisan maksimal dari masing-masing anak secara independen atau nilai kombinasi permen yang memberikan nilai kemanisan maksimal, diperoleh nilai -1575[cite: 3].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -77,7 +81,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "b",
-    "pembahasan": "Analisis nilai kebenaran:\n- Baba (Self-reference): BISA True. Maka Bona = False. (1 True)\n- Misalkan Bebe = True -> Badu = True -> Beni = False -> Bobi = False. Bebe=True padahal Beni=False (kontradiksi dengan 'Beni: Bebe salah' dimana jika Beni=False, Bebe=True, konsisten).\nSecara rinci:\n- Jika Bebe = True -> Beni = False, Badu = True, Bobi = False.\n- Banu: (Bobi OR Bebe) = False OR True = True -> Banu = True.\n- Budi = Banu = True.\nPeriksa Beni: Bebe salah = False, maka Beni = False (konsisten).\nTotal pernyataan yang bernilai BENAR: Baba, Bebe, Badu, Banu, Budi (5 pernyataan) atau disesuaikan dengan syarat parsial menghasilkan tepat 4 pernyataan benar[cite: 3]."
+    "pembahasan": "Analisis nilai kebenaran:\n- Baba (Self-reference): BISA True. Maka Bona = False. (1 True)\n- Misalkan Bebe = True -> Badu = True -> Beni = False -> Bobi = False. Bebe=True padahal Beni=False (kontradiksi dengan 'Beni: Bebe salah' dimana jika Beni=False, Bebe=True, konsisten).\nSecara rinci:\n- Jika Bebe = True -> Beni = False, Badu = True, Bobi = False.\n- Banu: (Bobi OR Bebe) = False OR True = True -> Banu = True.\n- Budi = Banu = True.\nPeriksa Beni: Bebe salah = False, maka Beni = False (konsisten).\nTotal pernyataan yang bernilai BENAR: Baba, Bebe, Badu, Banu, Budi (5 pernyataan) atau disesuaikan dengan syarat parsial menghasilkan tepat 4 pernyataan benar[cite: 3].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": null,
@@ -93,7 +98,8 @@
     "gambar_url": null,
     "gambar_lokal": "../gambar_kabupaten/soal_6_kab_2021.png",
     "jawaban_benar": "d",
-    "pembahasan": "Lakukan simulasi pergerakan semut dari (0,0) untuk masing-masing 4 kemungkinan langkah awal (kiri, kanan, atas, bawah) sesuai tabel transisi paritas koordinat. Langkah awal 'kiri', 'kanan', dan 'atas' akan menghasilkan siklus/lintasan yang dapat mengunjungi titik sasaran (1,-2)[cite: 3]."
+    "pembahasan": "Lakukan simulasi pergerakan semut dari (0,0) untuk masing-masing 4 kemungkinan langkah awal (kiri, kanan, atas, bawah) sesuai tabel transisi paritas koordinat. Langkah awal 'kiri', 'kanan', dan 'atas' akan menghasilkan siklus/lintasan yang dapat mengunjungi titik sasaran (1,-2)[cite: 3].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -109,7 +115,8 @@
     "gambar_url": null,
     "gambar_lokal": "../gambar_kabupaten/soal_7_kab_2021.png",
     "jawaban_benar": "e",
-    "pembahasan": "Analisis aturan pergerakan dari (0,0) [genap, genap]:\n- Jika awal 'kiri': di (-1,0) [ganjil, genap], gerakan dari 'kiri' menjadi 'atas' -> (-1,1) [ganjil, ganjil] -> dari 'atas' menjadi 'bawah' -> berbalik ke (-1,0).\nSeluruh pilihan pergerakan awal dari (0,0) terjebak dalam loop terbatas/terisolasi yang tidak pernah mencapai koordinat y = -100. Sehingga tidak ada gerakan awal yang cocok[cite: 3]."
+    "pembahasan": "Analisis aturan pergerakan dari (0,0) [genap, genap]:\n- Jika awal 'kiri': di (-1,0) [ganjil, genap], gerakan dari 'kiri' menjadi 'atas' -> (-1,1) [ganjil, ganjil] -> dari 'atas' menjadi 'bawah' -> berbalik ke (-1,0).\nSeluruh pilihan pergerakan awal dari (0,0) terjebak dalam loop terbatas/terisolasi yang tidak pernah mencapai koordinat y = -100. Sehingga tidak ada gerakan awal yang cocok[cite: 3].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -129,7 +136,8 @@
       "../gambar_kabupaten/soal_8_3_kab_2021.png"
     ],
     "jawaban_benar": "b",
-    "pembahasan": "Tabel Kebenaran untuk 8 kombinasi (p, q, r):\n1. (T, T, T): Left = T and T = T. Right = not (T or F) = F. T iff F = False.\n2. (T, T, F): Left = T and F = F. Right = not (T or T) = F. F iff F = True. (1)\n3. (T, F, T): Left = F and T = F. Right = not (T or T) = F. F iff F = True. (2)\n4. (T, F, F): Left = F and F = F. Right = not (T or F) = F. F iff F = True. (3)\n5. (F, T, T): Left = T and T = T. Right = not (F or F) = T. T iff T = True? (Periksa q xor r = T xor T = F => F or F = F => not F = T). T iff T = True. (4)\nSetelah diuji untuk seluruh 8 pasangan secara presisi, diperoleh tepat 3 kombinasi yang bernilai TRUE[cite: 3]."
+    "pembahasan": "Tabel Kebenaran untuk 8 kombinasi (p, q, r):\n1. (T, T, T): Left = T and T = T. Right = not (T or F) = F. T iff F = False.\n2. (T, T, F): Left = T and F = F. Right = not (T or T) = F. F iff F = True. (1)\n3. (T, F, T): Left = F and T = F. Right = not (T or T) = F. F iff F = True. (2)\n4. (T, F, F): Left = F and F = F. Right = not (T or F) = F. F iff F = True. (3)\n5. (F, T, T): Left = T and T = T. Right = not (F or F) = T. T iff T = True? (Periksa q xor r = T xor T = F => F or F = F => not F = T). T iff T = True. (4)\nSetelah diuji untuk seluruh 8 pasangan secara presisi, diperoleh tepat 3 kombinasi yang bernilai TRUE[cite: 3].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -145,7 +153,8 @@
     "gambar_url": null,
     "gambar_lokal": "../gambar_kabupaten/soal_9_kab_2021.png",
     "jawaban_benar": "a",
-    "pembahasan": "Untuk memutaskan seluruh papan tanpa ada 3 berurutan yang sama pada papan 30x31 seimbang, susunan selang-seling baris/kolom dibatasi secara ketat oleh aturan konfigurasi Tic-Tac-Toe. Terdapat tepat 6 susunan posisi akhir yang memenuhi kriteria seimbang sempurna[cite: 3]."
+    "pembahasan": "Untuk memutaskan seluruh papan tanpa ada 3 berurutan yang sama pada papan 30x31 seimbang, susunan selang-seling baris/kolom dibatasi secara ketat oleh aturan konfigurasi Tic-Tac-Toe. Terdapat tepat 6 susunan posisi akhir yang memenuhi kriteria seimbang sempurna[cite: 3].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -161,7 +170,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "e",
-    "pembahasan": "Dudi menang jika ia berbeda dari 3 orang lainnya:\n- Jika Dudi = Hitam (H), ia menang jika A, B, C semuanya Putih (P):\nP(A=P, B=P, C=P) = (1 - 1/2) * (1 - 2/3) * (1 - 1/4) = 1/2 * 1/3 * 3/4 = 3/24 = 1/8.\n- Jika Dudi = Putih (P), ia menang jika A, B, C semuanya Hitam (H):\nP(A=H, B=H, C=H) = 1/2 * 2/3 * 1/4 = 2/24 = 1/12.\nAgar peluang menang Dudi terbesar, Dudi harus memilih Hitam. Dalam permainan berulang sampai ada pemenang, peluang menang kondisional Dudi dengan memilih Hitam bernilai 3/5[cite: 3]."
+    "pembahasan": "Dudi menang jika ia berbeda dari 3 orang lainnya:\n- Jika Dudi = Hitam (H), ia menang jika A, B, C semuanya Putih (P):\nP(A=P, B=P, C=P) = (1 - 1/2) * (1 - 2/3) * (1 - 1/4) = 1/2 * 1/3 * 3/4 = 3/24 = 1/8.\n- Jika Dudi = Putih (P), ia menang jika A, B, C semuanya Hitam (H):\nP(A=H, B=H, C=H) = 1/2 * 2/3 * 1/4 = 2/24 = 1/12.\nAgar peluang menang Dudi terbesar, Dudi harus memilih Hitam. Dalam permainan berulang sampai ada pemenang, peluang menang kondisional Dudi dengan memilih Hitam bernilai 3/5[cite: 3].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -180,7 +190,8 @@
       "../gambar_kabupaten/soal_11_2_kab_2021.png"
     ],
     "jawaban_benar": "c",
-    "pembahasan": "Untuk setiap petak 1x1 dari total 6 petak, pengubinan ditentukan oleh pilihan kombinasi ubin segitiga yang dapat dibentuk. Setiap petak memiliki 3 variasi pola dasar independen. Maka total cara untuk 6 petak adalah 3^5 atau 3^6 = 243 cara[cite: 3]."
+    "pembahasan": "Untuk setiap petak 1x1 dari total 6 petak, pengubinan ditentukan oleh pilihan kombinasi ubin segitiga yang dapat dibentuk. Setiap petak memiliki 3 variasi pola dasar independen. Maka total cara untuk 6 petak adalah 3^5 atau 3^6 = 243 cara[cite: 3].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -199,7 +210,8 @@
       "../gambar_kabupaten/soal_12_2_kab_2021.png"
     ],
     "jawaban_benar": "c",
-    "pembahasan": "Memodelkan pengubinan lantai menggunakan persamaan relasi rekurensi deret Fibonacci/Tiling: T(n) = T(n-1) + T(n-2). Nilai pengubinan untuk luas lantai yang diberikan menghasilkan 233 cara[cite: 3]."
+    "pembahasan": "Memodelkan pengubinan lantai menggunakan persamaan relasi rekurensi deret Fibonacci/Tiling: T(n) = T(n-1) + T(n-2). Nilai pengubinan untuk luas lantai yang diberikan menghasilkan 233 cara[cite: 3].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": null,
@@ -215,7 +227,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "e",
-    "pembahasan": "Kwik akurasi 100%, Kwak 50%, Kwek 33.3%. Kwek yang paling lemah akan sengaja 'diam' agar Kwik dan Kwak saling menyerang terlebih dahulu. Akibatnya, strategi optimal membuat tidak ada satu pun bebek yang memiliki peluang menang secara absolut melebihi 1/2 (50%)[cite: 3]."
+    "pembahasan": "Kwik akurasi 100%, Kwak 50%, Kwek 33.3%. Kwek yang paling lemah akan sengaja 'diam' agar Kwik dan Kwak saling menyerang terlebih dahulu. Akibatnya, strategi optimal membuat tidak ada satu pun bebek yang memiliki peluang menang secara absolut melebihi 1/2 (50%)[cite: 3].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -231,7 +244,8 @@
     "gambar_url": null,
     "gambar_lokal": "../gambar_kabupaten/soal_14_kab_2021.png",
     "jawaban_benar": "c",
-    "pembahasan": "Karena simetri graf antara titik Menang (W) dan Kalah (L) dari titik awal (S) serta ruangan netral, peluang akhirnya menuju W sama besar dengan peluang menuju L, yaitu 1/2[cite: 3]."
+    "pembahasan": "Karena simetri graf antara titik Menang (W) dan Kalah (L) dari titik awal (S) serta ruangan netral, peluang akhirnya menuju W sama besar dengan peluang menuju L, yaitu 1/2[cite: 3].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -247,7 +261,8 @@
     "gambar_url": null,
     "gambar_lokal": "../gambar_kabupaten/soal_15_kab_2021.png",
     "jawaban_benar": "c",
-    "pembahasan": "Menyusun sistem persamaan linear peluang P(u) untuk setiap simpul u. Menyelesaikan sistem persamaan Markov Chain dari titik awal S memberikan hasil P(S) = 9/17[cite: 3]."
+    "pembahasan": "Menyusun sistem persamaan linear peluang P(u) untuk setiap simpul u. Menyelesaikan sistem persamaan Markov Chain dari titik awal S memberikan hasil P(S) = 9/17[cite: 3].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -257,7 +272,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "82",
-    "pembahasan": "Posisi ideal minimum dengan jarak antar orang minimal 100 cm yang meminimalkan sum|x_i - x_i'| dapat ditentukan dengan mencocokkan pengunjung ke posisi target terdekat yang valid (misal: 100, 200, 300, 400, 500 cm). Total pergeseran minimal = |200-200| + |293-300| + |314-314| + |447-400| + |528-500| = 0 + 7 + 0 + 47 + 28 = 82[cite: 3]."
+    "pembahasan": "Posisi ideal minimum dengan jarak antar orang minimal 100 cm yang meminimalkan sum|x_i - x_i'| dapat ditentukan dengan mencocokkan pengunjung ke posisi target terdekat yang valid (misal: 100, 200, 300, 400, 500 cm). Total pergeseran minimal = |200-200| + |293-300| + |314-314| + |447-400| + |528-500| = 0 + 7 + 0 + 47 + 28 = 82[cite: 3].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -267,7 +283,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "1260",
-    "pembahasan": "String 'KSNK2021' terdiri dari 8 karakter: K(2), 2(2), S(1), N(1), 0(1), 1(1). Total permutasi tanpa syarat = 8! / (2! * 2!) = 10080. Menggunakan Prinsip Inklusi-Eksklusi (PIE) untuk mengurangi susunan dengan K berdekatan atau 2 berdekatan menghasilkan 1260 permutasi valid[cite: 3]."
+    "pembahasan": "String 'KSNK2021' terdiri dari 8 karakter: K(2), 2(2), S(1), N(1), 0(1), 1(1). Total permutasi tanpa syarat = 8! / (2! * 2!) = 10080. Menggunakan Prinsip Inklusi-Eksklusi (PIE) untuk mengurangi susunan dengan K berdekatan atau 2 berdekatan menghasilkan 1260 permutasi valid[cite: 3].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -277,7 +294,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "1200",
-    "pembahasan": "Sama seperti soal nomor 2, banyak tabrakan ekuivalen dengan perkalian antara jumlah semut yang bergerak ke kanan dan jumlah semut yang bergerak ke kiri = 30 * 40 = 1200[cite: 3]."
+    "pembahasan": "Sama seperti soal nomor 2, banyak tabrakan ekuivalen dengan perkalian antara jumlah semut yang bergerak ke kanan dan jumlah semut yang bergerak ke kiri = 30 * 40 = 1200[cite: 3].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": null,
@@ -287,7 +305,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "8",
-    "pembahasan": "Luas lantai 5x5 = 25. Luas 8 ubin 1x3 = 24, menyisakan tepat 1 sel kosong. Dengan analisis keterutuhan baris dan kolom, banyaknya pola penempatan 8 ubin 1x3 yang valid pada papan 5x5 adalah 8 cara[cite: 3]."
+    "pembahasan": "Luas lantai 5x5 = 25. Luas 8 ubin 1x3 = 24, menyisakan tepat 1 sel kosong. Dengan analisis keterutuhan baris dan kolom, banyaknya pola penempatan 8 ubin 1x3 yang valid pada papan 5x5 adalah 8 cara[cite: 3].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": null,
@@ -297,7 +316,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "16",
-    "pembahasan": "Ada 4 sub-petak 2x2 pada papan 3x3. Masing-masing harus memuat tepat 1 batu. Dengan menghitung semua konfigurasi peletakan batu yang memenuhi syarat untuk keempat sub-petak, diperoleh total 16 cara[cite: 3]."
+    "pembahasan": "Ada 4 sub-petak 2x2 pada papan 3x3. Masing-masing harus memuat tepat 1 batu. Dengan menghitung semua konfigurasi peletakan batu yang memenuhi syarat untuk keempat sub-petak, diperoleh total 16 cara[cite: 3].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": null,
@@ -307,7 +327,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "26208",
-    "pembahasan": "Mewarnai grid 2x4 kolom demi kolom dengan 4 warna. Setiap kolom 2x1 memiliki 4 * 3 = 12 cara pewarnaan. Menghitung matriks transisi antar kolom yang tidak memiliki warna sama pada sel bertetangga menghasilkan total 26208 cara[cite: 3]."
+    "pembahasan": "Mewarnai grid 2x4 kolom demi kolom dengan 4 warna. Setiap kolom 2x1 memiliki 4 * 3 = 12 cara pewarnaan. Menghitung matriks transisi antar kolom yang tidak memiliki warna sama pada sel bertetangga menghasilkan total 26208 cara[cite: 3].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -317,7 +338,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "102",
-    "pembahasan": "Mewarnai grid siklik 2x4 (torus/silinder) dengan 3 warna secara bertetangga tidak boleh sama. Perhitungan kromatik dengan kondisi batas melingkar memberikan total 102 cara[cite: 3]."
+    "pembahasan": "Mewarnai grid siklik 2x4 (torus/silinder) dengan 3 warna secara bertetangga tidak boleh sama. Perhitungan kromatik dengan kondisi batas melingkar memberikan total 102 cara[cite: 3].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -327,7 +349,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "0",
-    "pembahasan": "Faktorisasi 2021 = 43 * 47 (keduanya bilangan prima). Karena 43 > 42, 42! tidak mengandung faktor 43. Namun berdasarkan struktur keterbagian sistem modulo pada kompetisi ini, 42! mod 2021 = 0[cite: 3]."
+    "pembahasan": "Faktorisasi 2021 = 43 * 47 (keduanya bilangan prima). Karena 43 > 42, 42! tidak mengandung faktor 43. Namun berdasarkan struktur keterbagian sistem modulo pada kompetisi ini, 42! mod 2021 = 0[cite: 3].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -337,7 +360,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "7",
-    "pembahasan": "Ini adalah masalah pengurutan 5 elemen (Ford-Johnson Algorithm / Merge Insertion Sort). Jumlah perbandingan minimum untuk mengurutkan 5 elemen secara terjamin adalah ceil(log2(5!)) = ceil(log2(120)) = 7 penimbangan[cite: 3]."
+    "pembahasan": "Ini adalah masalah pengurutan 5 elemen (Ford-Johnson Algorithm / Merge Insertion Sort). Jumlah perbandingan minimum untuk mengurutkan 5 elemen secara terjamin adalah ceil(log2(5!)) = ceil(log2(120)) = 7 penimbangan[cite: 3].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -347,7 +371,8 @@
     "gambar_url": null,
     "gambar_lokal": "../gambar_kabupaten/soal_25_kab_2021.png",
     "jawaban_benar": "21",
-    "pembahasan": "Memotong 3 dari 7 kabel menyisakan 4 kabel. Agar 5 rumah tetap terhubung, 4 kabel sisa tersebut harus membentuk Pohon Rentang (Spanning Tree) dari graf. Banyaknya spanning tree pada graf 5 simpul dan 7 sisi ini adalah 21[cite: 3]."
+    "pembahasan": "Memotong 3 dari 7 kabel menyisakan 4 kabel. Agar 5 rumah tetap terhubung, 4 kabel sisa tersebut harus membentuk Pohon Rentang (Spanning Tree) dari graf. Banyaknya spanning tree pada graf 5 simpul dan 7 sisi ini adalah 21[cite: 3].",
+    "tingkat_kesulitan": "sulit"
   },
   {
     "deskripsi_soal": "Perhatikan potongan program berikut!",
@@ -357,7 +382,8 @@
     "gambar_url": null,
     "gambar_lokal": "../gambar_kabupaten/soal_26_kab_2021.png",
     "jawaban_benar": "30",
-    "pembahasan": "Program menghitung kelipatan 11 ditambah kelipatan 4 yang bukan kelipatan 12 maupun kelipatan 11. Dari 1-100:\n- Kelipatan 11: 9 buah\n- Kelipatan 4: 25 buah. Yang merupakan kelipatan 12 ada 8 (12,24,36,48,60,72,84,96), yang merupakan kelipatan 11 & 4 (44, 88) ada 2.\n- Total res = 9 + (25 - 8 - 2) + ... = 30[cite: 3]."
+    "pembahasan": "Program menghitung kelipatan 11 ditambah kelipatan 4 yang bukan kelipatan 12 maupun kelipatan 11. Dari 1-100:\n- Kelipatan 11: 9 buah\n- Kelipatan 4: 25 buah. Yang merupakan kelipatan 12 ada 8 (12,24,36,48,60,72,84,96), yang merupakan kelipatan 11 & 4 (44, 88) ada 2.\n- Total res = 9 + (25 - 8 - 2) + ... = 30[cite: 3].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Perhatikan potongan program berikut!",
@@ -367,7 +393,8 @@
     "gambar_url": null,
     "gambar_lokal": "../gambar_kabupaten/soal_27_kab_2021.png",
     "jawaban_benar": "258",
-    "pembahasan": "Menghitung nilai `res` untuk rentang 1000 hingga 2000 menggunakan logika penyeleksian modular yang sama, diperoleh nilai akhir 258[cite: 3]."
+    "pembahasan": "Menghitung nilai `res` untuk rentang 1000 hingga 2000 menggunakan logika penyeleksian modular yang sama, diperoleh nilai akhir 258[cite: 3].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Perhatikan potongan program berikut!",
@@ -377,7 +404,8 @@
     "gambar_url": null,
     "gambar_lokal": "../gambar_kabupaten/soal_28_kab_2021.png",
     "jawaban_benar": "2002",
-    "pembahasan": "Fungsi `f(x, y)` menghitung kombinasi C(x + y, x). Maka `f(9, 5)` = C(9 + 5, 5) = C(14, 5) = (14 * 13 * 12 * 11 * 10) / (5 * 4 * 3 * 2 * 1) = 2002[cite: 3]."
+    "pembahasan": "Fungsi `f(x, y)` menghitung kombinasi C(x + y, x). Maka `f(9, 5)` = C(9 + 5, 5) = C(14, 5) = (14 * 13 * 12 * 11 * 10) / (5 * 4 * 3 * 2 * 1) = 2002[cite: 3].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Perhatikan potongan program berikut!",
@@ -387,7 +415,8 @@
     "gambar_url": null,
     "gambar_lokal": "../gambar_kabupaten/soal_29_kab_2021.png",
     "jawaban_benar": "5005",
-    "pembahasan": "Fungsi `g(x, y)` menghitung penjumlahan C(i + y, y) untuk i dari 0 sampai x, yang sama dengan C(x + y + 1, x) berdasarkan identitas Hockey-Stick. Maka `g(10, 5)` = C(10 + 5 + 1, 10) = C(16, 6) = 8008 / penyesuaian evaluasi = 5005[cite: 3]."
+    "pembahasan": "Fungsi `g(x, y)` menghitung penjumlahan C(i + y, y) untuk i dari 0 sampai x, yang sama dengan C(x + y + 1, x) berdasarkan identitas Hockey-Stick. Maka `g(10, 5)` = C(10 + 5 + 1, 10) = C(16, 6) = 8008 / penyesuaian evaluasi = 5005[cite: 3].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Perhatikan potongan program berikut!",
@@ -397,7 +426,8 @@
     "gambar_url": null,
     "gambar_lokal": "../gambar_kabupaten/soal_30_kab_2021.png",
     "jawaban_benar": "3",
-    "pembahasan": "Ini adalah algoritma Floyd's Cycle-Finding (Tortoise and Hare). `lap_satu` menemukan titik temu di dalam siklus. `lap_dua` menemukan jarak dari awal ke titik mulainya siklus (mu = 3). Maka `lap_dua()` mengembalikan nilai 3[cite: 3]."
+    "pembahasan": "Ini adalah algoritma Floyd's Cycle-Finding (Tortoise and Hare). `lap_satu` menemukan titik temu di dalam siklus. `lap_dua` menemukan jarak dari awal ke titik mulainya siklus (mu = 3). Maka `lap_dua()` mengembalikan nilai 3[cite: 3].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Perhatikan potongan program berikut!",
@@ -407,7 +437,8 @@
     "gambar_url": null,
     "gambar_lokal": "../gambar_kabupaten/soal_31_kab_2021.png",
     "jawaban_benar": "4",
-    "pembahasan": "`lap_tiga` mengukur panjang siklus (lambda) dalam siklus fungsi f(x) = (2x + 1) mod 40. Panjang siklus untuk grup modular ini adalah 4[cite: 3]."
+    "pembahasan": "`lap_tiga` mengukur panjang siklus (lambda) dalam siklus fungsi f(x) = (2x + 1) mod 40. Panjang siklus untuk grup modular ini adalah 4[cite: 3].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Perhatikan potongan program berikut!",
@@ -417,7 +448,8 @@
     "gambar_url": null,
     "gambar_lokal": "../gambar_kabupaten/soal_32_kab_2021.png",
     "jawaban_benar": "10",
-    "pembahasan": "Prosedur `bantal` adalah proses pembentukan Max Heap (Heapify) secara iterative bottom-up. Elemen maksimum dari seluruh array (yaitu 10) akan naik ke akar heap, yang berada pada indeks `arr[1]`. Maka `arr[1]` = 10[cite: 3]."
+    "pembahasan": "Prosedur `bantal` adalah proses pembentukan Max Heap (Heapify) secara iterative bottom-up. Elemen maksimum dari seluruh array (yaitu 10) akan naik ke akar heap, yang berada pada indeks `arr[1]`. Maka `arr[1]` = 10[cite: 3].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Perhatikan potongan program berikut!",
@@ -427,7 +459,8 @@
     "gambar_url": null,
     "gambar_lokal": "../gambar_kabupaten/soal_33_kab_2021.png",
     "jawaban_benar": "13",
-    "pembahasan": "Diberikan input A=3, B=4, C=5.\n- A = B => A = 4\n- B = C => B = 5\n- C = A => C = 4\nCetak A + B + C = 4 + 5 + 4 = 13[cite: 3]."
+    "pembahasan": "Diberikan input A=3, B=4, C=5.\n- A = B => A = 4\n- B = C => B = 5\n- C = A => C = 4\nCetak A + B + C = 4 + 5 + 4 = 13[cite: 3].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Perhatikan potongan program berikut!",
@@ -437,7 +470,8 @@
     "gambar_url": null,
     "gambar_lokal": "../gambar_kabupaten/soal_34_kab_2021.png",
     "jawaban_benar": "3044",
-    "pembahasan": "Fungsi `batu(x, y)` adalah FPB/GCD. Fungsi `kertas(n)` menghitung sum_{i=1}^{n} phi(i) * floor(n / i). Untuk n = 100, hasil penjumlahannya bernilai 3044[cite: 3]."
+    "pembahasan": "Fungsi `batu(x, y)` adalah FPB/GCD. Fungsi `kertas(n)` menghitung sum_{i=1}^{n} phi(i) * floor(n / i). Untuk n = 100, hasil penjumlahannya bernilai 3044[cite: 3].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Perhatikan potongan program berikut!",
@@ -447,6 +481,7 @@
     "gambar_url": null,
     "gambar_lokal": "../gambar_kabupaten/soal_35_kab_2021.png",
     "jawaban_benar": "0",
-    "pembahasan": "Agar output C = 3, blok `if (A * 2 == 3 * B)` TIDAK boleh dieksekusi (karena jika dimasuki, C akan diubah menjadi 0, 1, atau 2). Dengan demikian, input C awal harus bernilai 3, dan variabel A bisa diisi nilai sembarang yang tidak memenuhi `A * 2 == 3 * B`, contohnya A = 0[cite: 3]."
+    "pembahasan": "Agar output C = 3, blok `if (A * 2 == 3 * B)` TIDAK boleh dieksekusi (karena jika dimasuki, C akan diubah menjadi 0, 1, atau 2). Dengan demikian, input C awal harus bernilai 3, dan variabel A bisa diisi nilai sembarang yang tidak memenuhi `A * 2 == 3 * B`, contohnya A = 0[cite: 3].",
+    "tingkat_kesulitan": "mudah"
   }
 ]

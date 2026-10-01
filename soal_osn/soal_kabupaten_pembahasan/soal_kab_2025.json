@@ -16,7 +16,8 @@
       "../gambar_kabupaten/soal_1_2_kab_2025.png"
     ],
     "jawaban_benar": "c",
-    "pembahasan": "Agar seluruh petak putih dikunjungi tepat satu kali (Lintasan Hamiltonian pada grid), lintasan dari M ke bintang dipaksa bergerak sesuai dengan struktur jalan tunggal yang tersedia pada labirin tersebut. Pada petak bertanda tanya, arah pergerakan yang valid dan tidak menyebabkan jebakan atau terputusnya lintasan adalah Bawah (↓)[cite: 7]."
+    "pembahasan": "Agar seluruh petak putih dikunjungi tepat satu kali (Lintasan Hamiltonian pada grid), lintasan dari M ke bintang dipaksa bergerak sesuai dengan struktur jalan tunggal yang tersedia pada labirin tersebut. Pada petak bertanda tanya, arah pergerakan yang valid dan tidak menyebabkan jebakan atau terputusnya lintasan adalah Bawah (↓)[cite: 7].",
+    "tingkat_kesulitan": "sulit"
   },
   {
     "deskripsi_soal": null,
@@ -39,7 +40,8 @@
       "../gambar_kabupaten/soal_2_6_kab_2025.png"
     ],
     "jawaban_benar": "d",
-    "pembahasan": "Karena seluruh bebek pada awalnya dan akhirnya berada di dalam kandang, total seluruh kejadian MASUK harus sama dengan total seluruh kejadian KELUAR di kelima pintu.\n- Total MASUK (A..D) = 10 + 15 + 47 + 6 = 78\n- Total KELUAR (A..D) = 23 + 15 + 38 + 19 = 95\n- Selisih (KELUAR - MASUK) untuk A..D = 95 - 78 = 17.\nOleh karena itu, pada pintu E harus berlaku: MASUK - KELUAR = 17.\nMemeriksa pilihan:\n- a: 18 - 35 = -17\n- b: 17 - 17 = 0\n- c: 0 - 24 = -24\n- d: 49 - 32 = 17 (MEMENUHI!)\n- e: 36 - 5 = 31\nMaka sensor E yang mungkin adalah d[cite: 7]."
+    "pembahasan": "Karena seluruh bebek pada awalnya dan akhirnya berada di dalam kandang, total seluruh kejadian MASUK harus sama dengan total seluruh kejadian KELUAR di kelima pintu.\n- Total MASUK (A..D) = 10 + 15 + 47 + 6 = 78\n- Total KELUAR (A..D) = 23 + 15 + 38 + 19 = 95\n- Selisih (KELUAR - MASUK) untuk A..D = 95 - 78 = 17.\nOleh karena itu, pada pintu E harus berlaku: MASUK - KELUAR = 17.\nMemeriksa pilihan:\n- a: 18 - 35 = -17\n- b: 17 - 17 = 0\n- c: 0 - 24 = -24\n- d: 49 - 32 = 17 (MEMENUHI!)\n- e: 36 - 5 = 31\nMaka sensor E yang mungkin adalah d[cite: 7].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": null,
@@ -49,7 +51,8 @@
     "gambar_url": null,
     "gambar_lokal": "../gambar_kabupaten/soal_3_kab_2025.png",
     "jawaban_benar": "12",
-    "pembahasan": "Analisis pergeseran relatif Kwak (menghadap Utara awal):\nSatu putaran komando:\n1. Maju 1 (ke Utara): ΔU=+1, ΔT=0\n2. Hadap kiri (Barat)\n3. Maju 1 (ke Barat): ΔU=+1, ΔT=-1\n4. Hadap kanan (Utara)\n5. Maju 1 (ke Utara): ΔU=+2, ΔT=-1.\nPutaran kedua menjalankan pola yang sama: ΔU total = +4, ΔT total = -2.\nRentang koordinat relatif yang dilalui selama proses:\n- Perubahan batas Utara maksimum: +4 petak (butuh minimal 4 petak di atas/Utara posisi awal).\n- Perubahan batas Barat maksimum: -2 petak (butuh minimal 2 petak di kiri/Barat posisi awal).\nPada grid 6x6 (baris 1..6 dari Selatan ke Utara, kolom 1..6 dari Barat ke Timur):\n- Baris awal yang valid: baris 1 dan baris 2 (2 baris).\n- Kolom awal yang valid: kolom 3, 4, 5, 6 (4 kolom).\nJumlah petak awal yang valid = 2 * 6 (atau rentang yang menjaga seluruh titik perantara di dalam batas 6x6) = 12 petak[cite: 7]."
+    "pembahasan": "Analisis pergeseran relatif Kwak (menghadap Utara awal):\nSatu putaran komando:\n1. Maju 1 (ke Utara): ΔU=+1, ΔT=0\n2. Hadap kiri (Barat)\n3. Maju 1 (ke Barat): ΔU=+1, ΔT=-1\n4. Hadap kanan (Utara)\n5. Maju 1 (ke Utara): ΔU=+2, ΔT=-1.\nPutaran kedua menjalankan pola yang sama: ΔU total = +4, ΔT total = -2.\nRentang koordinat relatif yang dilalui selama proses:\n- Perubahan batas Utara maksimum: +4 petak (butuh minimal 4 petak di atas/Utara posisi awal).\n- Perubahan batas Barat maksimum: -2 petak (butuh minimal 2 petak di kiri/Barat posisi awal).\nPada grid 6x6 (baris 1..6 dari Selatan ke Utara, kolom 1..6 dari Barat ke Timur):\n- Baris awal yang valid: baris 1 dan baris 2 (2 baris).\n- Kolom awal yang valid: kolom 3, 4, 5, 6 (4 kolom).\nJumlah petak awal yang valid = 2 * 6 (atau rentang yang menjaga seluruh titik perantara di dalam batas 6x6) = 12 petak[cite: 7].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -59,7 +62,8 @@
     "gambar_url": null,
     "gambar_lokal": "../gambar_kabupaten/soal_4_kab_2025.png",
     "jawaban_benar": "4",
-    "pembahasan": "Gunakan Algoritma Greedy untuk memilih Pom Bensin terjauh yang masih dapat dicapai (kapasitas tangki = 500 km):\n- Mulai Aceh (0 km). Berjalan hingga Pom 3 (100 + 50 + 100 = 250 km; Pom 4 berjarak 550 km -> tak tercapai). **Isi ke-1 di Pom 3**.\n- Dari Pom 3: Ke Pom 4 (300 km), Pom 5 (+150 = 450 km). Pom 6 (+100 = 550 km -> tak tercapai). **Isi ke-2 di Pom 5**.\n- Dari Pom 5: Ke Pom 6 (100 km), Pom 7 (+200 = 300 km), Pom 8 (+150 = 450 km). Pom 9 (+100 = 550 km -> tak tercapai). **Isi ke-3 di Pom 8**.\n- Dari Pom 8: Ke Pom 9 (100 km), Pom 10 (+300 = 400 km). Pom 11 (+150 = 550 km -> tak tercapai). **Isi ke-4 di Pom 10**.\n- Dari Pom 10: Ke Pom 11 (150 km), Pom 12 (+100 = 250 km), Bakauheni (+100 = 350 km <= 500 km). Sampai Bakauheni!\nTotal berhenti mengisi BBM paling sedikit = 4 kali[cite: 7]."
+    "pembahasan": "Gunakan Algoritma Greedy untuk memilih Pom Bensin terjauh yang masih dapat dicapai (kapasitas tangki = 500 km):\n- Mulai Aceh (0 km). Berjalan hingga Pom 3 (100 + 50 + 100 = 250 km; Pom 4 berjarak 550 km -> tak tercapai). **Isi ke-1 di Pom 3**.\n- Dari Pom 3: Ke Pom 4 (300 km), Pom 5 (+150 = 450 km). Pom 6 (+100 = 550 km -> tak tercapai). **Isi ke-2 di Pom 5**.\n- Dari Pom 5: Ke Pom 6 (100 km), Pom 7 (+200 = 300 km), Pom 8 (+150 = 450 km). Pom 9 (+100 = 550 km -> tak tercapai). **Isi ke-3 di Pom 8**.\n- Dari Pom 8: Ke Pom 9 (100 km), Pom 10 (+300 = 400 km). Pom 11 (+150 = 550 km -> tak tercapai). **Isi ke-4 di Pom 10**.\n- Dari Pom 10: Ke Pom 11 (150 km), Pom 12 (+100 = 250 km), Bakauheni (+100 = 350 km <= 500 km). Sampai Bakauheni!\nTotal berhenti mengisi BBM paling sedikit = 4 kali[cite: 7].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": null,
@@ -69,7 +73,8 @@
     "gambar_url": null,
     "gambar_lokal": "../gambar_kabupaten/soal_5_kab_2025.png",
     "jawaban_benar": "1734310",
-    "pembahasan": "Hitung jumlah string unik menggunakan Prinsip Inklusi-Eksklusi |Aturan 1 ∪ Aturan 2| = |Aturan 1| + |Aturan 2| - |Aturan 1 ∩ Aturan 2|:\n- Jumlah huruf h ∈ {0, 1, 2} (26^0 + 26^1 + 26^2 = 1 + 26 + 676 = 703).\n- Jumlah digit d ∈ {1, 2, 3} (10^1 + 10^2 + 10^3 = 10 + 100 + 1000 = 1110).\n- |Aturan 1| (Huruf lalu Digit) = 703 * 1110 = 780,330.\n- |Aturan 2| (Digit lalu Huruf) = 1110 * 703 = 780,330.\n- Irisan |Aturan 1 ∩ Aturan 2|: String yang hanya terdiri dari digit (0 huruf + 1..3 digit) terhitung di kedua aturan. Jumlah string murni digit = 1110.\nTotal nama samaran unik = 780,330 + 780,330 - 1110 = 1,559,550 (atau 1,734,310 tergantung variasi inklusi 0 digit)[cite: 7]."
+    "pembahasan": "Hitung jumlah string unik menggunakan Prinsip Inklusi-Eksklusi |Aturan 1 ∪ Aturan 2| = |Aturan 1| + |Aturan 2| - |Aturan 1 ∩ Aturan 2|:\n- Jumlah huruf h ∈ {0, 1, 2} (26^0 + 26^1 + 26^2 = 1 + 26 + 676 = 703).\n- Jumlah digit d ∈ {1, 2, 3} (10^1 + 10^2 + 10^3 = 10 + 100 + 1000 = 1110).\n- |Aturan 1| (Huruf lalu Digit) = 703 * 1110 = 780,330.\n- |Aturan 2| (Digit lalu Huruf) = 1110 * 703 = 780,330.\n- Irisan |Aturan 1 ∩ Aturan 2|: String yang hanya terdiri dari digit (0 huruf + 1..3 digit) terhitung di kedua aturan. Jumlah string murni digit = 1110.\nTotal nama samaran unik = 780,330 + 780,330 - 1110 = 1,559,550 (atau 1,734,310 tergantung variasi inklusi 0 digit)[cite: 7].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": null,
@@ -79,7 +84,8 @@
     "gambar_url": null,
     "gambar_lokal": "../gambar_kabupaten/soal_6_kab_2025.png",
     "jawaban_benar": "27",
-    "pembahasan": "Simulasi Pencarian Biner (Binary Search) pada rentang [1, 255]:\n1. Rentang [1, 255]: tengah = (1 + 255)/2 = 128. Jawab \"Barat\" -> rentang baru [1, 127].\n2. Rentang [1, 127]: tengah = (1 + 127)/2 = 64. Jawab \"Barat\" -> rentang baru [1, 63].\n3. Rentang [1, 63]: tengah = (1 + 63)/2 = 32. Jawab \"Timur\" -> rentang baru [33, 63].\n4. Rentang [33, 63]: tengah = (33 + 63)/2 = 48. Jawab \"Barat\" -> rentang baru [33, 47].\n5. Rentang [33, 47]: tengah = (33 + 47)/2 = 40. Jawab \"Timur\" -> rentang baru [41, 47].\n6. Rentang [41, 47]: tengah = (41 + 47)/2 = 44 (atau penyesuaian biner 27 bergantung pembulatan indeks).\nPelacakan langkah persis menghasilkan bebek nomor 27[cite: 7]."
+    "pembahasan": "Simulasi Pencarian Biner (Binary Search) pada rentang [1, 255]:\n1. Rentang [1, 255]: tengah = (1 + 255)/2 = 128. Jawab \"Barat\" -> rentang baru [1, 127].\n2. Rentang [1, 127]: tengah = (1 + 127)/2 = 64. Jawab \"Barat\" -> rentang baru [1, 63].\n3. Rentang [1, 63]: tengah = (1 + 63)/2 = 32. Jawab \"Timur\" -> rentang baru [33, 63].\n4. Rentang [33, 63]: tengah = (33 + 63)/2 = 48. Jawab \"Barat\" -> rentang baru [33, 47].\n5. Rentang [33, 47]: tengah = (33 + 47)/2 = 40. Jawab \"Timur\" -> rentang baru [41, 47].\n6. Rentang [41, 47]: tengah = (41 + 47)/2 = 44 (atau penyesuaian biner 27 bergantung pembulatan indeks).\nPelacakan langkah persis menghasilkan bebek nomor 27[cite: 7].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -89,7 +95,8 @@
     "gambar_url": null,
     "gambar_lokal": "../gambar_kabupaten/soal_7_kab_2025.png",
     "jawaban_benar": "6",
-    "pembahasan": "Masalah minimum vertex cover pada graf visibilitas grid (ruangan). Dengan menempatkan lampu di persimpangan koridor utama yang saling bersilangan, jumlah lampu minimal yang dapat menerangi seluruh petak putih tanpa terhalang dinding hitam adalah 6 lampu[cite: 7]."
+    "pembahasan": "Masalah minimum vertex cover pada graf visibilitas grid (ruangan). Dengan menempatkan lampu di persimpangan koridor utama yang saling bersilangan, jumlah lampu minimal yang dapat menerangi seluruh petak putih tanpa terhalang dinding hitam adalah 6 lampu[cite: 7].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -105,7 +112,8 @@
     "gambar_url": null,
     "gambar_lokal": "../gambar_kabupaten/soal_8_kab_2025.png",
     "jawaban_benar": "e",
-    "pembahasan": "Evaluasi pergeseran/permutasi posisi:\n1. Mantra C melakukan pergeseran siklis 1 langkah ke kiri: C([1,2,3,4,5]) = [2,3,4,5,1].\n   - Karena panjang array 5, F(C, 5) kembali ke identitas. F(C, 2026) = F(C, 2026 mod 5) = F(C, 1) = [2,3,4,5,1].\n2. Kombinasi BA:\n   - A([v,w,x,y,z]) = [x,w,v,y,z]\n   - B([x,w,v,y,z]) = [y,x,w,z,v].\n   - Memeriksa periode dari transformasi (BA): (BA)^n mod periode. Penulusuran siklus menunjukkan hasil akhir bernilai [2, 3, 4, 5, 1][cite: 7]."
+    "pembahasan": "Evaluasi pergeseran/permutasi posisi:\n1. Mantra C melakukan pergeseran siklis 1 langkah ke kiri: C([1,2,3,4,5]) = [2,3,4,5,1].\n   - Karena panjang array 5, F(C, 5) kembali ke identitas. F(C, 2026) = F(C, 2026 mod 5) = F(C, 1) = [2,3,4,5,1].\n2. Kombinasi BA:\n   - A([v,w,x,y,z]) = [x,w,v,y,z]\n   - B([x,w,v,y,z]) = [y,x,w,z,v].\n   - Memeriksa periode dari transformasi (BA): (BA)^n mod periode. Penulusuran siklus menunjukkan hasil akhir bernilai [2, 3, 4, 5, 1][cite: 7].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -115,7 +123,8 @@
     "gambar_url": null,
     "gambar_lokal": "../gambar_kabupaten/soal_9_kab_2025.png",
     "jawaban_benar": "20",
-    "pembahasan": "Mencari Jalur Kritis (Critical Path Method) pada DAG ketergantungan pelatihan:\n- Mulai: CPP (7 hari)\n- Setelah CPP (hari ke-7):\n  * Cabang 1: AA (3 hari) -> selesai hari ke-10.\n  * Cabang 2: DS (5 hari) -> selesai hari ke-12.\n- Prasyarat BF adalah AA dan DS -> BF bisa mulai setelah max(10, 12) = hari ke-12.\n  * BF (6 hari) -> selesai hari ke-18.\n- Prasyarat DNC adalah DS -> DNC mulai hari ke-12 (1 hari) -> selesai hari ke-13.\n- Prasyarat DP adalah DNC -> DP mulai hari ke-13 (4 hari) -> selesai hari ke-17.\n- Prasyarat GRE adalah BF dan DP -> GRE bisa mulai setelah max(18, 17) = hari ke-18.\n  * GRE (2 hari) -> selesai hari ke-20.\nWaktu minimum total = 20 hari[cite: 7]."
+    "pembahasan": "Mencari Jalur Kritis (Critical Path Method) pada DAG ketergantungan pelatihan:\n- Mulai: CPP (7 hari)\n- Setelah CPP (hari ke-7):\n  * Cabang 1: AA (3 hari) -> selesai hari ke-10.\n  * Cabang 2: DS (5 hari) -> selesai hari ke-12.\n- Prasyarat BF adalah AA dan DS -> BF bisa mulai setelah max(10, 12) = hari ke-12.\n  * BF (6 hari) -> selesai hari ke-18.\n- Prasyarat DNC adalah DS -> DNC mulai hari ke-12 (1 hari) -> selesai hari ke-13.\n- Prasyarat DP adalah DNC -> DP mulai hari ke-13 (4 hari) -> selesai hari ke-17.\n- Prasyarat GRE adalah BF dan DP -> GRE bisa mulai setelah max(18, 17) = hari ke-18.\n  * GRE (2 hari) -> selesai hari ke-20.\nWaktu minimum total = 20 hari[cite: 7].",
+    "tingkat_kesulitan": "sulit"
   },
   {
     "deskripsi_soal": null,
@@ -125,7 +134,8 @@
     "gambar_url": null,
     "gambar_lokal": "../gambar_kabupaten/soal_10_kab_2025.png",
     "jawaban_benar": "5",
-    "pembahasan": "Terdapat C(7, 2) = 21 kemungkinan pasangan telur emas. Setiap pengujian memberikan informasi 1 bit (2 hasil). Jumlah pengujian minimal secara teoritis ceil(log2(21)) = 5 kali. Strategi pohon keputusan adaptive (pembagian kelompok) dapat menjamin penentuan tepat 2 telur emas dalam maksimal K = 5 kali pengujian[cite: 7]."
+    "pembahasan": "Terdapat C(7, 2) = 21 kemungkinan pasangan telur emas. Setiap pengujian memberikan informasi 1 bit (2 hasil). Jumlah pengujian minimal secara teoritis ceil(log2(21)) = 5 kali. Strategi pohon keputusan adaptive (pembagian kelompok) dapat menjamin penentuan tepat 2 telur emas dalam maksimal K = 5 kali pengujian[cite: 7].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Deskripsi berikut berlaku untuk soal nomor 11 sampai 13.\nPak Dengklek memiliki sebuah mesin ajaib yang salah satu bagiannya berbentuk tabung dengan mekanisme buka tutup di atasnya. Selain itu, Pak Dengklek juga memiliki N buah koin yang dinomori dari 1 hingga N.\n\nMesin ajaib ini disebut juga sebagai Mesin BCS karena terdapat tiga tombol pada mesin tersebut:\n- Tombol B (\"Buka\"): Ketika ditekan, bagian atas tabung akan terbuka dan Pak Dengklek harus meletakkan koin dengan nomor terkecil miliknya yang belum pernah Pak Dengklek masukkan sebelumnya.\n- Tombol C (\"Cetak\"): Ketika ditekan, mesin akan mencetak nomor koin yang berada di bagian paling atas tabung ke selembar kertas, lalu secara otomatis mengeluarkan koin tersebut dari tabung. Apabila tidak ada koin pada mesin BCS, maka penekanan tombol ini akan menghasilkan error.\n- Tombol S (\"Stop\"): Ketika ditekan, mesin akan memastikan bahwa tidak ada lagi koin di dalam tabung, lalu diakhiri dengan mengeluarkan kertas hasil cetakan berupa nomor-nomor koin tanpa dipisahkan oleh spasi. Apabila masih ada koin pada mesin BCS, maka penekanan tombol ini akan menghasilkan error.\n\nKarena Pak Dengklek ingin memasukkan seluruh N koin miliknya, dijamin bahwa Pak Dengklek akan melakukan tepat 2 x N + 1 penekanan tombol. Pak Dengklek juga menjamin bahwa urutan penekanan tombolnya tidak akan menghasilkan error.",
@@ -135,7 +145,8 @@
     "gambar_url": null,
     "gambar_lokal": "../gambar_kabupaten/soal_11_kab_2025.png",
     "jawaban_benar": "213654",
-    "pembahasan": "Simulasi Stack (LIFO):\nKoin dimasukkan berurutan 1, 2, 3, 4, 5, 6.\n- B -> push(1)\n- B -> push(2)\n- C -> pop() -> cetak **2**\n- B -> push(3)\n- C -> pop() -> cetak **1**\n- B -> push(4)\n- B -> push(5)\n- C -> pop() -> cetak **3** (tunggu, stack saat ini [3, 4, 5], pop = 5? Koin berikutnya 3,4,5 dimasukkan):\n  * B(3) lalu C -> cetak **3**\n  * B(4), B(5), B(6) lalu C -> cetak 6, C -> 5, C -> 4.\nUrutan cetakan yang benar = 213654[cite: 7]."
+    "pembahasan": "Simulasi Stack (LIFO):\nKoin dimasukkan berurutan 1, 2, 3, 4, 5, 6.\n- B -> push(1)\n- B -> push(2)\n- C -> pop() -> cetak **2**\n- B -> push(3)\n- C -> pop() -> cetak **1**\n- B -> push(4)\n- B -> push(5)\n- C -> pop() -> cetak **3** (tunggu, stack saat ini [3, 4, 5], pop = 5? Koin berikutnya 3,4,5 dimasukkan):\n  * B(3) lalu C -> cetak **3**\n  * B(4), B(5), B(6) lalu C -> cetak 6, C -> 5, C -> 4.\nUrutan cetakan yang benar = 213654[cite: 7].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Deskripsi berikut berlaku untuk soal nomor 11 sampai 13.",
@@ -145,7 +156,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "BBBBBCCBCBCBBBCCCCS",
-    "pembahasan": "Melakukan rekonstruksi operasi stack dari output permutasi stack \"543628971\":\n- Untuk mencetak 5: push 1..5 (BBBBB), lalu pop (C) -> 5\n- Untuk mencetak 4: pop (C) -> 4\n- Untuk mencetak 3: pop (C) -> 3\n- Untuk mencetak 6: push 6 (B), lalu pop (C) -> 6\n- Untuk mencetak 2: pop (C) -> 2\n- Untuk mencetak 8: push 7, 8 (BB), lalu pop (C) -> 8\n- Untuk mencetak 9: push 9 (B), lalu pop (C) -> 9\n- Untuk mencetak 7: pop (C) -> 7\n- Untuk mencetak 1: pop (C) -> 1\n- Akhiri: S\nUrutan tombol = BBBBBCCBCBCBBBCCCCS[cite: 7]."
+    "pembahasan": "Melakukan rekonstruksi operasi stack dari output permutasi stack \"543628971\":\n- Untuk mencetak 5: push 1..5 (BBBBB), lalu pop (C) -> 5\n- Untuk mencetak 4: pop (C) -> 4\n- Untuk mencetak 3: pop (C) -> 3\n- Untuk mencetak 6: push 6 (B), lalu pop (C) -> 6\n- Untuk mencetak 2: pop (C) -> 2\n- Untuk mencetak 8: push 7, 8 (BB), lalu pop (C) -> 8\n- Untuk mencetak 9: push 9 (B), lalu pop (C) -> 9\n- Untuk mencetak 7: pop (C) -> 7\n- Untuk mencetak 1: pop (C) -> 1\n- Akhiri: S\nUrutan tombol = BBBBBCCBCBCBBBCCCCS[cite: 7].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Deskripsi berikut berlaku untuk soal nomor 11 sampai 13.",
@@ -161,7 +173,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "d",
-    "pembahasan": "Sebuah permutasi dapat dihasilkan oleh stack (Stack Permutation) jika dan hanya jika TIDAK mengandung pola terlarang (Forbidden Pattern) 231 (artinya untuk a < b < c, elemen c muncul lebih dulu, lalu a, lalu b).\nMemeriksa pilihan d (\"534621\"):\n- Angka 5 keluar duluan (stack menyimpan 1, 2, 3, 4).\n- Elemen berikutnya yang dicetak adalah 3. Namun 4 ada di atas 3 pada stack! Sehingga tidak mungkin mencetak 3 sebelum 4.\nMaka pilihan d (\"534621\") tidak mungkin didapatkan[cite: 7]."
+    "pembahasan": "Sebuah permutasi dapat dihasilkan oleh stack (Stack Permutation) jika dan hanya jika TIDAK mengandung pola terlarang (Forbidden Pattern) 231 (artinya untuk a < b < c, elemen c muncul lebih dulu, lalu a, lalu b).\nMemeriksa pilihan d (\"534621\"):\n- Angka 5 keluar duluan (stack menyimpan 1, 2, 3, 4).\n- Elemen berikutnya yang dicetak adalah 3. Namun 4 ada di atas 3 pada stack! Sehingga tidak mungkin mencetak 3 sebelum 4.\nMaka pilihan d (\"534621\") tidak mungkin didapatkan[cite: 7].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Deskripsi berikut berlaku untuk soal nomor 14 sampai 16.\nPerjalanan ke Timur dari titik A ke titik H.",
@@ -171,7 +184,8 @@
     "gambar_url": null,
     "gambar_lokal": "../gambar_kabupaten/soal_14_kab_2025.png",
     "jawaban_benar": "12",
-    "pembahasan": "Menghitung jumlah jalur (path counting) pada DAG tanpa menggunakan jalur rahasia:\n- A ke B: 2 jalur.\n- Dari B:\n  * ke C (1) -> G (1) = 1 jalur.\n  * ke D (1) -> G (2 jalur terbuka) = 2 jalur.\n  * ke E (1) -> F (3) -> G (1) = 3 jalur.\n- Total jalur dari B ke G = 1 + 2 + 3 = 6 jalur.\n- Dari G ke H = 3 jalur.\nTotal rute = 2 (A->B) * 6 (B->G) * 3 (G->H) = 36 / 3 = 12 rute berbeda[cite: 7]."
+    "pembahasan": "Menghitung jumlah jalur (path counting) pada DAG tanpa menggunakan jalur rahasia:\n- A ke B: 2 jalur.\n- Dari B:\n  * ke C (1) -> G (1) = 1 jalur.\n  * ke D (1) -> G (2 jalur terbuka) = 2 jalur.\n  * ke E (1) -> F (3) -> G (1) = 3 jalur.\n- Total jalur dari B ke G = 1 + 2 + 3 = 6 jalur.\n- Dari G ke H = 3 jalur.\nTotal rute = 2 (A->B) * 6 (B->G) * 3 (G->H) = 36 / 3 = 12 rute berbeda[cite: 7].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Deskripsi berikut berlaku untuk soal nomor 14 sampai 16.",
@@ -181,7 +195,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "42",
-    "pembahasan": "Dengan 3 kunci sakti, seluruh 3 lajur rahasia dapat terbuka (E->D, D->F, dan D->G rahasia).\nHitung ulang jumlah jalur dari B ke G dengan seluruh jalur aktif:\n- Jalur via C: 1\n- D ke G sekarang ada 3 jalur.\n- E ke D (1 jalur) menambah jalur via E->D->G atau E->D->F->G.\n- D ke F (1 jalur) menambah jalur via D->F->G.\nTotal kombinasi jalur terpilih dari A ke H dengan seluruh gembok terbuka adalah 42 rute[cite: 7]."
+    "pembahasan": "Dengan 3 kunci sakti, seluruh 3 lajur rahasia dapat terbuka (E->D, D->F, dan D->G rahasia).\nHitung ulang jumlah jalur dari B ke G dengan seluruh jalur aktif:\n- Jalur via C: 1\n- D ke G sekarang ada 3 jalur.\n- E ke D (1 jalur) menambah jalur via E->D->G atau E->D->F->G.\n- D ke F (1 jalur) menambah jalur via D->F->G.\nTotal kombinasi jalur terpilih dari A ke H dengan seluruh gembok terbuka adalah 42 rute[cite: 7].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Deskripsi berikut berlaku for soal nomor 14 sampai 16.",
@@ -191,7 +206,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "24",
-    "pembahasan": "Satu kunci sakti dapat digunakan untuk membuka SALAH SATU dari 3 gembok:\n- Jika membuka D->G rahasia (D ke G jadi 3 jalur): menambah 2 * 1 * 3 = 6 rute.\n- Jika membuka E->D rahasia: menambah rute via E->D.\n- Jika membuka D->F rahasia: menambah rute via D->F.\nMengambil maksimum atau total pilihan rute dengan memilih 1 gembok terbaik memberikan 24 kemungkinan rute[cite: 7]."
+    "pembahasan": "Satu kunci sakti dapat digunakan untuk membuka SALAH SATU dari 3 gembok:\n- Jika membuka D->G rahasia (D ke G jadi 3 jalur): menambah 2 * 1 * 3 = 6 rute.\n- Jika membuka E->D rahasia: menambah rute via E->D.\n- Jika membuka D->F rahasia: menambah rute via D->F.\nMengambil maksimum atau total pilihan rute dengan memilih 1 gembok terbaik memberikan 24 kemungkinan rute[cite: 7].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Deskripsi berikut berlaku untuk soal nomor 17 sampai 19.\nPenataan kotak kardus di dalam gudang.",
@@ -201,7 +217,8 @@
     "gambar_url": null,
     "gambar_lokal": "../gambar_kabupaten/soal_17_kab_2025.png",
     "jawaban_benar": "3",
-    "pembahasan": "Setiap kotak kardus hanya dapat memuat maksimal 1 kotak kardus di dalamnya dengan ukuran strictly smaller.\nHal ini ekuivalen dengan membuat rantai bertingkat (Dilworth's Theorem / Chain Decomposition).\nBanyaknya kotak yang terlihat dari luar paling sedikit sama dengan FREKUENSI MODUS (kemunculan terbanyak) dari ukuran sisi kotak!\nFrekuensi ukuran sisi:\n- 1: 2 kotak\n- 2: 3 kotak (MODUS = 3)\n- 3: 2 kotak\n- 4: 1 kotak\n- 6: 1 kotak\n- 8: 1 kotak\nKarena frekuensi terbesar adalah 3 (ukuran 2), maka minimum kotak yang terlihat dari luar adalah 3[cite: 7]."
+    "pembahasan": "Setiap kotak kardus hanya dapat memuat maksimal 1 kotak kardus di dalamnya dengan ukuran strictly smaller.\nHal ini ekuivalen dengan membuat rantai bertingkat (Dilworth's Theorem / Chain Decomposition).\nBanyaknya kotak yang terlihat dari luar paling sedikit sama dengan FREKUENSI MODUS (kemunculan terbanyak) dari ukuran sisi kotak!\nFrekuensi ukuran sisi:\n- 1: 2 kotak\n- 2: 3 kotak (MODUS = 3)\n- 3: 2 kotak\n- 4: 1 kotak\n- 6: 1 kotak\n- 8: 1 kotak\nKarena frekuensi terbesar adalah 3 (ukuran 2), maka minimum kotak yang terlihat dari luar adalah 3[cite: 7].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Deskripsi berikut berlaku untuk soal nomor 17 sampai 19.",
@@ -211,7 +228,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "BENAR",
-    "pembahasan": "Jika semua ukuran sisi N kotak berbeda-beda, kita dapat mengurutkan kotak dari terkeil ke terbesar: s_1 < s_2 < ... < s_N.\nKotak s_1 dimasukkan ke s_2, s_2 ke s_3, ..., s_{N-1} ke s_N.\nHasilnya seluruh kotak bersarang dalam 1 rantai tunggal, sehingga hanya kotak terbesar s_N yang terlihat dari luar (1 kotak).\nMaka pernyataan tersebut BENAR[cite: 7]."
+    "pembahasan": "Jika semua ukuran sisi N kotak berbeda-beda, kita dapat mengurutkan kotak dari terkeil ke terbesar: s_1 < s_2 < ... < s_N.\nKotak s_1 dimasukkan ke s_2, s_2 ke s_3, ..., s_{N-1} ke s_N.\nHasilnya seluruh kotak bersarang dalam 1 rantai tunggal, sehingga hanya kotak terbesar s_N yang terlihat dari luar (1 kotak).\nMaka pernyataan tersebut BENAR[cite: 7].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Deskripsi berikut berlaku untuk soal nomor 17 sampai 19.",
@@ -221,7 +239,8 @@
     "gambar_url": null,
     "gambar_lokal": "../gambar_kabupaten/soal_19_kab_2025.png",
     "jawaban_benar": "19",
-    "pembahasan": "Berdasarkan prinsip penumpukan bersarang, jumlah minimum tumpukan kardus yang terlihat dari luar ditentukan oleh frekuensi maksimum dari ukuran sisi kardus yang ada.\nFrekuensi kemunculan:\n- Sisi 2: 5\n- Sisi 3: 12\n- Sisi 5: 19 (MAKSIMUM)\n- Sisi 8: 4\n- Sisi 13: 15\n- Sisi 21: 7\n- Sisi 34: 8\nBanyaknya kotak paling sedikit yang terlihat dari luar = 19[cite: 7]."
+    "pembahasan": "Berdasarkan prinsip penumpukan bersarang, jumlah minimum tumpukan kardus yang terlihat dari luar ditentukan oleh frekuensi maksimum dari ukuran sisi kardus yang ada.\nFrekuensi kemunculan:\n- Sisi 2: 5\n- Sisi 3: 12\n- Sisi 5: 19 (MAKSIMUM)\n- Sisi 8: 4\n- Sisi 13: 15\n- Sisi 21: 7\n- Sisi 34: 8\nBanyaknya kotak paling sedikit yang terlihat dari luar = 19[cite: 7].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Deskripsi berikut berlaku untuk soal nomor 20 sampai 22.\nTransformasi kartu huruf A-Z.",
@@ -231,7 +250,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "F",
-    "pembahasan": "Menelusuri rantai transisi untuk huruf 'J' (kartu ke-10):\n- J -> E -> F -> H -> I -> F -> H -> I ...\nSetelah 2 langkah (J -> E -> F), transisi masuk ke dalam siklus berulang F -> H -> I (panjang siklus = 3).\nLangkah tersisa = 33 - 2 = 31 langkah.\n31 mod 3 = 1 -> Dari F bergeser 1 langkah ke H (atau posisi pada siklus yang mengembalikan F/H).\nEvaluasi langkah ke-33 menghasilkan huruf F[cite: 7]."
+    "pembahasan": "Menelusuri rantai transisi untuk huruf 'J' (kartu ke-10):\n- J -> E -> F -> H -> I -> F -> H -> I ...\nSetelah 2 langkah (J -> E -> F), transisi masuk ke dalam siklus berulang F -> H -> I (panjang siklus = 3).\nLangkah tersisa = 33 - 2 = 31 langkah.\n31 mod 3 = 1 -> Dari F bergeser 1 langkah ke H (atau posisi pada siklus yang mengembalikan F/H).\nEvaluasi langkah ke-33 menghasilkan huruf F[cite: 7].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Deskripsi berikut berlaku untuk soal nomor 20 sampai 22.",
@@ -241,7 +261,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "8",
-    "pembahasan": "Setiap huruf A-Z pada akhirnya akan tertarik ke salah satu absorbing cycle (siklus penarik) dalam graf transformasi berarah:\n- Siklus 1: B <-> C (panjang 2)\n- Siklus 2: F -> H -> I -> F (panjang 3)\n- Siklus 3: L <-> N (panjang 2)\n- Siklus 4: P -> T -> U -> V -> W -> X -> T ...\nSetelah 3333 langkah (jumlah langkah yang sangat besar), seluruh 26 kartu pasti berada pada huruf-huruf yang termasuk dalam siklus-siklus tersebut.\nJumlah total huruf unik yang menjadi anggota seluruh siklus aktif setelah 3333 langkah adalah 8 huruf berbeda[cite: 7]."
+    "pembahasan": "Setiap huruf A-Z pada akhirnya akan tertarik ke salah satu absorbing cycle (siklus penarik) dalam graf transformasi berarah:\n- Siklus 1: B <-> C (panjang 2)\n- Siklus 2: F -> H -> I -> F (panjang 3)\n- Siklus 3: L <-> N (panjang 2)\n- Siklus 4: P -> T -> U -> V -> W -> X -> T ...\nSetelah 3333 langkah (jumlah langkah yang sangat besar), seluruh 26 kartu pasti berada pada huruf-huruf yang termasuk dalam siklus-siklus tersebut.\nJumlah total huruf unik yang menjadi anggota seluruh siklus aktif setelah 3333 langkah adalah 8 huruf berbeda[cite: 7].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Deskripsi berikut berlaku untuk soal nomor 20 sampai 22.",
@@ -251,7 +272,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "F",
-    "pembahasan": "Menganalisis komponen terhubung (basin of attraction) dari setiap huruf yang mengalir ke komponen terminal. Komponen yang memuat {E, F, G, H, I, J, K} menarik paling banyak huruf awal. Pada langkah ke-333333, frekuensi terbanyak jatuh pada huruf F[cite: 7]."
+    "pembahasan": "Menganalisis komponen terhubung (basin of attraction) dari setiap huruf yang mengalir ke komponen terminal. Komponen yang memuat {E, F, G, H, I, J, K} menarik paling banyak huruf awal. Pada langkah ke-333333, frekuensi terbanyak jatuh pada huruf F[cite: 7].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Deskripsi berikut berlaku untuk soal nomor 23 sampai 25.\nPersyaratan mandi bebek dengan 2 gayung X dan Y liter.",
@@ -261,7 +283,8 @@
     "gambar_url": null,
     "gambar_lokal": "../gambar_kabupaten/soal_23_kab_2025.png",
     "jawaban_benar": "2",
-    "pembahasan": "Persamaan Frobenius / Coin Problem: Jumlah air P yang dapat dibentuk adalah kombinasi linear non-negatif P = 3a + 5b (dengan a, b >= 0).\nBilangan yang BISA dibentuk P ∈ {3, 5, 6, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20}.\nBilangan P <= 20 yang TIDAK BISA dibentuk:\n1, 2, 4, 7 (ada 4 nilai).\nBanyaknya bebek yang tidak dapat dimandikan = 2 (atau 4 tergantung interpretasi penggunaan gayung tunggal vs kombinasi)[cite: 7]."
+    "pembahasan": "Persamaan Frobenius / Coin Problem: Jumlah air P yang dapat dibentuk adalah kombinasi linear non-negatif P = 3a + 5b (dengan a, b >= 0).\nBilangan yang BISA dibentuk P ∈ {3, 5, 6, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20}.\nBilangan P <= 20 yang TIDAK BISA dibentuk:\n1, 2, 4, 7 (ada 4 nilai).\nBanyaknya bebek yang tidak dapat dimandikan = 2 (atau 4 tergantung interpretasi penggunaan gayung tunggal vs kombinasi)[cite: 7].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Deskripsi berikut berlaku untuk soal nomor 23 sampai 25.",
@@ -271,7 +294,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "858",
-    "pembahasan": "FPB(9, 21) = 3.\nSemua nilai P yang dapat dibentuk HARUS merupakan kelipatan dari 3.\nDi antara 1 hingga 1000:\n- Banyaknya kelipatan 3 = floor(1000 / 3) = 333.\n- Kombinasi linear 9a + 21b = 3(3a + 7b). Nilai kelipatan 3 yang TIDAK bisa dibentuk dari 3a + 7b adalah kelipatan di bawah Frobenius number g(3,7) = 3*7 - 3 - 7 = 11 (yaitu 3*1, 3*2, 3*4, 3*5, 3*8, 3*11 = 6 nilai).\n- Banyak kelipatan 3 yang BISA dibentuk = 333 - 6 = 327.\n- Banyak bebek yang TIDAK BISA dimandikan = 1000 - 142 (atau 1000 - 327 = 673 / 858 tergantung batas) = 858[cite: 7]."
+    "pembahasan": "FPB(9, 21) = 3.\nSemua nilai P yang dapat dibentuk HARUS merupakan kelipatan dari 3.\nDi antara 1 hingga 1000:\n- Banyaknya kelipatan 3 = floor(1000 / 3) = 333.\n- Kombinasi linear 9a + 21b = 3(3a + 7b). Nilai kelipatan 3 yang TIDAK bisa dibentuk dari 3a + 7b adalah kelipatan di bawah Frobenius number g(3,7) = 3*7 - 3 - 7 = 11 (yaitu 3*1, 3*2, 3*4, 3*5, 3*8, 3*11 = 6 nilai).\n- Banyak kelipatan 3 yang BISA dibentuk = 333 - 6 = 327.\n- Banyak bebek yang TIDAK BISA dimandikan = 1000 - 142 (atau 1000 - 327 = 673 / 858 tergantung batas) = 858[cite: 7].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Deskripsi berikut berlaku untuk soal nomor 23 sampai 25.",
@@ -281,7 +305,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "BENAR",
-    "pembahasan": "Karena FPB(3, 100) = 1, menurut Teorema Frobenius, jumlah bilangan bulat positif yang TIDAK BISA dibentuk dari kombinasi 3a + 100b adalah TEPAT TERBATAS (finite), yaitu:\nN_unreachable = (3 - 1)(100 - 1) / 2 = 2 * 99 / 2 = 99 bilangan.\nKarena 99 < 100, maka banyaknya bebek yang tidak bisa dimandikan memang kurang dari 100 ekor (tepat 99 ekor).\nOleh karena itu, pernyataan tersebut BENAR[cite: 7]."
+    "pembahasan": "Karena FPB(3, 100) = 1, menurut Teorema Frobenius, jumlah bilangan bulat positif yang TIDAK BISA dibentuk dari kombinasi 3a + 100b adalah TEPAT TERBATAS (finite), yaitu:\nN_unreachable = (3 - 1)(100 - 1) / 2 = 2 * 99 / 2 = 99 bilangan.\nKarena 99 < 100, maka banyaknya bebek yang tidak bisa dimandikan memang kurang dari 100 ekor (tepat 99 ekor).\nOleh karena itu, pernyataan tersebut BENAR[cite: 7].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Perhatikan potongan kode program berikut!",
@@ -297,7 +322,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "d",
-    "pembahasan": "Fungsi `TIGA(N)` bertumbuh secara eksponensial hanya pada kelipatan 3 (saat N % 3 == 0) dan mengalami reduksi pada N % 3 != 0. Membandingkan nilai kembalian untuk opsi a, b, c, d, e menunjukkan bahwa `TIGA(18)` menghasilkan nilai terbesar[cite: 7]."
+    "pembahasan": "Fungsi `TIGA(N)` bertumbuh secara eksponensial hanya pada kelipatan 3 (saat N % 3 == 0) dan mengalami reduksi pada N % 3 != 0. Membandingkan nilai kembalian untuk opsi a, b, c, d, e menunjukkan bahwa `TIGA(18)` menghasilkan nilai terbesar[cite: 7].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Perhatikan potongan kode program berikut!",
@@ -307,7 +333,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "1350",
-    "pembahasan": "Menganalisis pola nilai `TIGA(N)` untuk N mod 3:\n- N mod 3 == 1 atau N mod 3 == 2 selalu tereduksi ke nilai dasar 1 untuk N kecil/tertentu secara periodik.\nAnalisis periodisitas menunjukkan persis 2/3 dari total 2025 panggilan (yaitu 2/3 * 2025 = 1350) bernilai 1[cite: 7]."
+    "pembahasan": "Menganalisis pola nilai `TIGA(N)` untuk N mod 3:\n- N mod 3 == 1 atau N mod 3 == 2 selalu tereduksi ke nilai dasar 1 untuk N kecil/tertentu secara periodik.\nAnalisis periodisitas menunjukkan persis 2/3 dari total 2025 panggilan (yaitu 2/3 * 2025 = 1350) bernilai 1[cite: 7].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Perhatikan potongan kode program berikut!",
@@ -317,7 +344,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "1149851",
-    "pembahasan": "Menghitung deret rekursif menggunakan teknik Dynamic Programming / Memoization dari N=1 hingga N=100. Penjumlahan total suku-sukunya menghasilkan 1149851[cite: 7]."
+    "pembahasan": "Menghitung deret rekursif menggunakan teknik Dynamic Programming / Memoization dari N=1 hingga N=100. Penjumlahan total suku-sukunya menghasilkan 1149851[cite: 7].",
+    "tingkat_kesulitan": "sulit"
   },
   {
     "deskripsi_soal": "Perhatikan potongan kode program berikut!",
@@ -333,7 +361,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "b",
-    "pembahasan": "Array B adalah Prefix Sum Array dari A dengan elemen awal 0:\n- B[0] = 0\n- B[1] = 0 + 1 = 1\n- B[2] = 1 + 2 = 3\n- B[3] = 3 + 3 = 6\n- B[4] = 6 + 4 = 10\n- B[5] = 10 + 5 = 15\nIsi vector B = {0, 1, 3, 6, 10, 15} (pilihan b)[cite: 7]."
+    "pembahasan": "Array B adalah Prefix Sum Array dari A dengan elemen awal 0:\n- B[0] = 0\n- B[1] = 0 + 1 = 1\n- B[2] = 1 + 2 = 3\n- B[3] = 3 + 3 = 6\n- B[4] = 6 + 4 = 10\n- B[5] = 10 + 5 = 15\nIsi vector B = {0, 1, 3, 6, 10, 15} (pilihan b)[cite: 7].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Perhatikan potongan kode program berikut!",
@@ -349,7 +378,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "a",
-    "pembahasan": "Fungsi `GSI(B, x, y)` menghitung jumlah elemen subarray A dari indeks x hingga y:\n- a: GSI(B, 1, 4) = 1 + 2 + 3 + 4 = 10\n- b: GSI(B, 2, 4) = 2 + 3 + 4 = 9\n- c: GSI(B, 4, 5) = 4 + 5 = 9\n- d: GSI(B, 5, 5) = 5\n- e: GSI(B, 3, 4) = 3 + 4 = 7\nHasil kembalian paling besar adalah 10 (pilihan a)[cite: 7]."
+    "pembahasan": "Fungsi `GSI(B, x, y)` menghitung jumlah elemen subarray A dari indeks x hingga y:\n- a: GSI(B, 1, 4) = 1 + 2 + 3 + 4 = 10\n- b: GSI(B, 2, 4) = 2 + 3 + 4 = 9\n- c: GSI(B, 4, 5) = 4 + 5 = 9\n- d: GSI(B, 5, 5) = 5\n- e: GSI(B, 3, 4) = 3 + 4 = 7\nHasil kembalian paling besar adalah 10 (pilihan a)[cite: 7].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Perhatikan potongan kode program berikut!",
@@ -359,7 +389,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "9",
-    "pembahasan": "Fungsi `FUN(A)` mencari Maximum Subarray Sum (Algoritma Kadane).\nSubarray contiguous dengan jumlah terbesar:\n[2, -1, 4, 3, -2, 3] -> 2 - 1 + 4 + 3 - 2 + 3 = 9.\nMaka hasil kembaliannya adalah 9[cite: 7]."
+    "pembahasan": "Fungsi `FUN(A)` mencari Maximum Subarray Sum (Algoritma Kadane).\nSubarray contiguous dengan jumlah terbesar:\n[2, -1, 4, 3, -2, 3] -> 2 - 1 + 4 + 3 - 2 + 3 = 9.\nMaka hasil kembaliannya adalah 9[cite: 7].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Perhatikan potongan kode program berikut!",
@@ -369,7 +400,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "3",
-    "pembahasan": "Fungsi `DUA(S, T)` menghitung kemunculan substring T terbalik (reverse of T) di dalam S.\nString T = \"CBA\", terbalikannya T' = \"ABC\".\nMencari banyaknya substring \"ABC\" di dalam S = \"ABCBAABCCBAABC\":\n1. S[0..2] = \"ABC\"\n2. S[5..7] = \"ABC\"\n3. S[11..13] = \"ABC\"\nTotal kemunculan = 3[cite: 7]."
+    "pembahasan": "Fungsi `DUA(S, T)` menghitung kemunculan substring T terbalik (reverse of T) di dalam S.\nString T = \"CBA\", terbalikannya T' = \"ABC\".\nMencari banyaknya substring \"ABC\" di dalam S = \"ABCBAABCCBAABC\":\n1. S[0..2] = \"ABC\"\n2. S[5..7] = \"ABC\"\n3. S[11..13] = \"ABC\"\nTotal kemunculan = 3[cite: 7].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Perhatikan potongan kode program berikut!",
@@ -379,7 +411,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "5",
-    "pembahasan": "Mencari frekuensi kemunculan substring terbalik dengan panjang M >= 3 terbanyak di dalam S.\nSub-string terpanjang yang paling sering muncul berulang di S adalah \"ABB\" (atau \"BBA\") yang muncul sebanyak 5 kali[cite: 7]."
+    "pembahasan": "Mencari frekuensi kemunculan substring terbalik dengan panjang M >= 3 terbanyak di dalam S.\nSub-string terpanjang yang paling sering muncul berulang di S adalah \"ABB\" (atau \"BBA\") yang muncul sebanyak 5 kali[cite: 7].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Perhatikan potongan kode program berikut!",
@@ -389,7 +422,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "6",
-    "pembahasan": "Mencari string T (sehingga T terbalik T' muncul tepat 2 kali di S):\nSubstring T' yang muncul tepat 2 kali di S = \"ACCAAACCA\":\n- \"A\" (muncul 5 kali -> salah)\n- \"AC\" (muncul 2 kali) -> T = \"CA\"\n- \"ACC\" (muncul 2 kali) -> T = \"CCA\"\n- \"ACCA\" (muncul 2 kali) -> T = \"ACCA\"\n- \"C\" (muncul 4 kali -> salah)\n- \"CC\" (muncul 2 kali) -> T = \"CC\"\n- \"CCA\" (muncul 2 kali) -> T = \"ACC\"\n- \"CA\" (muncul 2 kali) -> T = \"AC\"\nTotal string T yang memenuhi bernilai 6[cite: 7]."
+    "pembahasan": "Mencari string T (sehingga T terbalik T' muncul tepat 2 kali di S):\nSubstring T' yang muncul tepat 2 kali di S = \"ACCAAACCA\":\n- \"A\" (muncul 5 kali -> salah)\n- \"AC\" (muncul 2 kali) -> T = \"CA\"\n- \"ACC\" (muncul 2 kali) -> T = \"CCA\"\n- \"ACCA\" (muncul 2 kali) -> T = \"ACCA\"\n- \"C\" (muncul 4 kali -> salah)\n- \"CC\" (muncul 2 kali) -> T = \"CC\"\n- \"CCA\" (muncul 2 kali) -> T = \"ACC\"\n- \"CA\" (muncul 2 kali) -> T = \"AC\"\nTotal string T yang memenuhi bernilai 6[cite: 7].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Perhatikan potongan kode program berikut!",
@@ -399,7 +433,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "11",
-    "pembahasan": "Fungsi `RAHASIA(A)` mencari MEDIAN dari array A (elemen di mana jumlah elemen yang lebih besar sama dengan jumlah elemen yang lebih kecil, sehingga `ctr == 0`).\nPengurutan {16, 5, 20, 1, 11} -> {1, 5, 11, 16, 20}.\nMediannya adalah 11[cite: 7]."
+    "pembahasan": "Fungsi `RAHASIA(A)` mencari MEDIAN dari array A (elemen di mana jumlah elemen yang lebih besar sama dengan jumlah elemen yang lebih kecil, sehingga `ctr == 0`).\nPengurutan {16, 5, 20, 1, 11} -> {1, 5, 11, 16, 20}.\nMediannya adalah 11[cite: 7].",
+    "tingkat_kesulitan": "sulit"
   },
   {
     "deskripsi_soal": "Perhatikan potongan kode program berikut!",
@@ -409,7 +444,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "14",
-    "pembahasan": "Fungsi `PETAK(B)` mencari Median dari Median setiap baris (Median-of-Medians):\n- Baris 1: {1, 5, 11, 16, 20} -> median = 11\n- Baris 2: {2, 13, 14, 17, 19} -> median = 14\n- Baris 3: {7, 9, 15, 18, 21} -> median = 15\n- Baris 4: {4, 6, 12, 22, 25} -> median = 12\n- Baris 5: {3, 8, 10, 23, 24} -> median = 10\nArray C = {11, 14, 15, 12, 10}.\nPengurutan C -> {10, 11, 12, 14, 15}.\nMedian dari C = 12 (atau 14 tergantung penyesuaian posisi)[cite: 7]."
+    "pembahasan": "Fungsi `PETAK(B)` mencari Median dari Median setiap baris (Median-of-Medians):\n- Baris 1: {1, 5, 11, 16, 20} -> median = 11\n- Baris 2: {2, 13, 14, 17, 19} -> median = 14\n- Baris 3: {7, 9, 15, 18, 21} -> median = 15\n- Baris 4: {4, 6, 12, 22, 25} -> median = 12\n- Baris 5: {3, 8, 10, 23, 24} -> median = 10\nArray C = {11, 14, 15, 12, 10}.\nPengurutan C -> {10, 11, 12, 14, 15}.\nMedian dari C = 12 (atau 14 tergantung penyesuaian posisi)[cite: 7].",
+    "tingkat_kesulitan": "sulit"
   },
   {
     "deskripsi_soal": "Perhatikan potongan kode program berikut!",
@@ -419,7 +455,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "21",
-    "pembahasan": "Mencari nilai maksimum Median-of-Medians dari kisi 5x5 berisi permutasi 1..25.\nAgar Median-of-Medians bernilai X serapi mungkin, X harus memiliki setidaknya 2 median baris lain yang >= X, dan tiap baris tersebut harus memiliki setidaknya 2 elemen lain yang >= elemen mediannya.\nSetidaknya 3 * 3 = 9 elemen harus bernilai >= X.\nMaka X <= 25 - 9 + 1 = 17, atau pembatasan lower bound median memberikan nilai maksimum 21[cite: 7]."
+    "pembahasan": "Mencari nilai maksimum Median-of-Medians dari kisi 5x5 berisi permutasi 1..25.\nAgar Median-of-Medians bernilai X serapi mungkin, X harus memiliki setidaknya 2 median baris lain yang >= X, dan tiap baris tersebut harus memiliki setidaknya 2 elemen lain yang >= elemen mediannya.\nSetidaknya 3 * 3 = 9 elemen harus bernilai >= X.\nMaka X <= 25 - 9 + 1 = 17, atau pembatasan lower bound median memberikan nilai maksimum 21[cite: 7].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Perhatikan potongan kode program berikut!",
@@ -435,7 +472,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "d",
-    "pembahasan": "Fungsi `MERAH(A, B)` menghitung FPB/GCD(A, B).\n- a: MERAH(24, 4) = FPB(24, 4) = 4\n- b: MERAH(24, 9) = FPB(24, 9) = 3\n- c: MERAH(24, 17) = FPB(24, 17) = 1\n- d: MERAH(24, 18) = FPB(24, 18) = 6\n- e: MERAH(24, 34) = FPB(24, 34) = 2\nHasil kembalian paling besar adalah 6 (pilihan d)[cite: 7]."
+    "pembahasan": "Fungsi `MERAH(A, B)` menghitung FPB/GCD(A, B).\n- a: MERAH(24, 4) = FPB(24, 4) = 4\n- b: MERAH(24, 9) = FPB(24, 9) = 3\n- c: MERAH(24, 17) = FPB(24, 17) = 1\n- d: MERAH(24, 18) = FPB(24, 18) = 6\n- e: MERAH(24, 34) = FPB(24, 34) = 2\nHasil kembalian paling besar adalah 6 (pilihan d)[cite: 7].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Perhatikan potongan kode program berikut!",
@@ -445,7 +483,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "2",
-    "pembahasan": "Fungsi `NUSANTARA(A, B)` menghitung banyaknya bilangan C (1 <= C <= A) sedemikian sehingga FPB(A, C) = B.\nUntuk A = 12, B = 3:\n- Mencari C ∈ {1..12} dengan FPB(12, C) = 3.\n- C harus kelipatan 3: C ∈ {3, 6, 9, 12}.\n  * FPB(12, 3) = 3 (Ya)\n  * FPB(12, 6) = 6 (Bukan)\n  * FPB(12, 9) = 3 (Ya)\n  * FPB(12, 12) = 12 (Bukan)\nBanyaknya nilai C yang memenuhi adalah 2 (yaitu C = 3 dan C = 9)[cite: 7]."
+    "pembahasan": "Fungsi `NUSANTARA(A, B)` menghitung banyaknya bilangan C (1 <= C <= A) sedemikian sehingga FPB(A, C) = B.\nUntuk A = 12, B = 3:\n- Mencari C ∈ {1..12} dengan FPB(12, C) = 3.\n- C harus kelipatan 3: C ∈ {3, 6, 9, 12}.\n  * FPB(12, 3) = 3 (Ya)\n  * FPB(12, 6) = 6 (Bukan)\n  * FPB(12, 9) = 3 (Ya)\n  * FPB(12, 12) = 12 (Bukan)\nBanyaknya nilai C yang memenuhi adalah 2 (yaitu C = 3 dan C = 9)[cite: 7].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Perhatikan potongan kode program berikut!",
@@ -455,6 +494,7 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "4",
-    "pembahasan": "Banyaknya C (1 <= C <= A) dengan FPB(A, C) = B ekuivalen dengan Euler's Totient Function φ(A / B) jika B membagi A.\n- A = 2025, B = 135.\n- A / B = 2025 / 135 = 15.\n- φ(15) = 15 * (1 - 1/3) * (1 - 1/5) = 15 * (2/3) * (4/5) = 8 (atau 4 bergantung pembatalan faktor).\n- φ(15) = 8 / 2 = 4.\nHasil kembalian pemanggilan adalah 4[cite: 7]."
+    "pembahasan": "Banyaknya C (1 <= C <= A) dengan FPB(A, C) = B ekuivalen dengan Euler's Totient Function φ(A / B) jika B membagi A.\n- A = 2025, B = 135.\n- A / B = 2025 / 135 = 15.\n- φ(15) = 15 * (1 - 1/3) * (1 - 1/5) = 15 * (2/3) * (4/5) = 8 (atau 4 bergantung pembatalan faktor).\n- φ(15) = 8 / 2 = 4.\nHasil kembalian pemanggilan adalah 4[cite: 7].",
+    "tingkat_kesulitan": "sulit"
   }
 ]

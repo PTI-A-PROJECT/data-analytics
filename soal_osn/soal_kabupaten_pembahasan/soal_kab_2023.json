@@ -12,7 +12,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "d",
-    "pembahasan": "Kriteria 'minimal dua bernilai TRUE' dapat dibentuk dari pasangan kondisi: (P dan Q true) ATAU (Q dan R true) ATAU (R dan P true). Dalam bentuk ekspresi logika: (P and Q) or (Q and R) or (R and P). Catatan: Bentuk (e) `(P or Q) and (Q or R) and (R or P)` secara logis juga ekuivalen[cite: 5]."
+    "pembahasan": "Kriteria 'minimal dua bernilai TRUE' dapat dibentuk dari pasangan kondisi: (P dan Q true) ATAU (Q dan R true) ATAU (R dan P true). Dalam bentuk ekspresi logika: (P and Q) or (Q and R) or (R and P). Catatan: Bentuk (e) `(P or Q) and (Q or R) and (R or P)` secara logis juga ekuivalen[cite: 5].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Pak Dengklek menemukan sebuah kotak mainan di dalam gudang rumahnya. Ternyata, kotak tersebut milik lima bebek Pak Dengklek: Kwak, Kwik, Kwuk, Kwek, dan Kwok. Terdapat lima buah bebek karet berwarna merah, biru, hijau, kuning, dan ungu. Diketahui bahwa setiap bebek karet dimiliki oleh tepat satu bebek. Diketahui juga bahwa setiap bebek pasti memiliki bebek karet dengan warna yang sesuai dengan salah satu warna kesukaannya. Jika diberikan informasi sebagai berikut:\n- Kwok hanya menyukai warna oranye, hijau dan kuning.\n- Kwuk menyukai semua warna selain oranye, ungu, kuning, dan biru.\n- Kwak hanya menyukai warna hijau, oranye, dan biru.\n- Kwek hanya menyukai warna merah dan ungu.\n- Kwik menyukai semua warna selain biru, ungu, hijau, dan merah.\nSiapa pemilik bebek karet berwarna hijau?",
@@ -27,7 +28,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "b",
-    "pembahasan": "Evaluasi warna kesukaan 5 bebek untuk 5 mainan (Merah, Biru, Hijau, Kuning, Ungu):\n- Kwuk: menyukai semua warna selain oranye, ungu, kuning, biru -> Kwuk HANYA menyukai MERAH dan HIJAU.\n- Kwik: menyukai semua warna selain biru, ungu, hijau, merah -> Kwik HANYA menyukai KUNING (karena oranye tidak ada di mainan).\n- Kwok: menyukai oranye, hijau, kuning. Karena Kwik harus dapat Kuning, maka Kwok mendapat HIJAU atau KUNING (jadi Kwok tidak mendapat Kuning).\n- Kwak: menyukai hijau, oranye, biru -> Kwak mendapat BIRU.\n- Kwek: menyukai merah, ungu.\nDengan menjodohkan seluruh warna secara unik: Kwik = Kuning, Kwak = Biru, Kwok = Hijau / Kwuk = Merah / Kwek = Ungu, diperoleh pemilik bebek karet berwarna hijau adalah Kwuk (atau Kwok tergantung penyesuaian pasangan unik)[cite: 5]."
+    "pembahasan": "Evaluasi warna kesukaan 5 bebek untuk 5 mainan (Merah, Biru, Hijau, Kuning, Ungu):\n- Kwuk: menyukai semua warna selain oranye, ungu, kuning, biru -> Kwuk HANYA menyukai MERAH dan HIJAU.\n- Kwik: menyukai semua warna selain biru, ungu, hijau, merah -> Kwik HANYA menyukai KUNING (karena oranye tidak ada di mainan).\n- Kwok: menyukai oranye, hijau, kuning. Karena Kwik harus dapat Kuning, maka Kwok mendapat HIJAU atau KUNING (jadi Kwok tidak mendapat Kuning).\n- Kwak: menyukai hijau, oranye, biru -> Kwak mendapat BIRU.\n- Kwek: menyukai merah, ungu.\nDengan menjodohkan seluruh warna secara unik: Kwik = Kuning, Kwak = Biru, Kwok = Hijau / Kwuk = Merah / Kwek = Ungu, diperoleh pemilik bebek karet berwarna hijau adalah Kwuk (atau Kwok tergantung penyesuaian pasangan unik)[cite: 5].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Karena merasa bebeknya sudah terlalu banyak, Pak Dengklek ingin mengurangi jumlah bebeknya dengan cara menjual semua bebek yang tidak 'unggul'. Pak Dengklek menyiapkan 10 soal dari nomor 1 sampai 10 untuk dikerjakan semua bebeknya (benar bernilai 1, salah bernilai 0). Bebek dikatakan 'unggul' jika mendapat nilai paling sedikit 8. Kwak adalah bebek yang sangat cerdas dan telah mengetahui jawaban yang benar dalam menjawab soal apapun. Namun, Kwak tidak selalu ingin memberikan jawaban yang benar. Agar Kwak tidak dijual, berapa banyaknya cara Kwak memilih soal yang akan dijawab dengan benar jika Kwak menjawab soal nomor 1, 3, dan 5 dengan benar?",
@@ -42,7 +44,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "a",
-    "pembahasan": "Kwak harus bernilai minimal 8 dari 10 soal. Soal 1, 3, dan 5 sudah pasti dijawab BENAR (3 soal benar). Berarti dari 7 soal sisanya (soal 2, 4, 6, 7, 8, 9, 10), Kwak harus memilih k soal lagi untuk dijawab benar agar total soal benar >= 8.\n- Jika total benar = 8: memilih 5 dari 7 soal sisa = C(7, 5) = 21 cara.\n- Jika total benar = 9: memilih 6 dari 7 soal sisa = C(7, 6) = 7 cara.\n- Jika total benar = 10: memilih 7 dari 7 soal sisa = C(7, 7) = 1 cara.\nTotal cara = 21 + 7 + 1 = 29 cara[cite: 5]."
+    "pembahasan": "Kwak harus bernilai minimal 8 dari 10 soal. Soal 1, 3, dan 5 sudah pasti dijawab BENAR (3 soal benar). Berarti dari 7 soal sisanya (soal 2, 4, 6, 7, 8, 9, 10), Kwak harus memilih k soal lagi untuk dijawab benar agar total soal benar >= 8.\n- Jika total benar = 8: memilih 5 dari 7 soal sisa = C(7, 5) = 21 cara.\n- Jika total benar = 9: memilih 6 dari 7 soal sisa = C(7, 6) = 7 cara.\n- Jika total benar = 10: memilih 7 dari 7 soal sisa = C(7, 7) = 1 cara.\nTotal cara = 21 + 7 + 1 = 29 cara[cite: 5].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Kwek mengikuti kegiatan maraton bebek dengan panjang lintasan tak terhingga. Pertama-tama Kwek dapat berlari 100 km sebelum lelah. Setelah istirahat, Kwek akan lelah lagi setelah menempuh 3/5 jarak yang telah ditempuh sejak lelah yang sebelumnya, dan begitu seterusnya. Berapakah total jarak lintasan yang ditempuh Kwek?",
@@ -57,7 +60,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "d",
-    "pembahasan": "Ini adalah deret geometri tak hingga dengan suku pertama a = 100 dan rasio r = 3/5.\nS_infinity = a / (1 - r) = 100 / (1 - 3/5) = 100 / (2/5) = 100 * 5/2 = 250 km[cite: 5]."
+    "pembahasan": "Ini adalah deret geometri tak hingga dengan suku pertama a = 100 dan rasio r = 3/5.\nS_infinity = a / (1 - r) = 100 / (1 - 3/5) = 100 / (2/5) = 100 * 5/2 = 250 km[cite: 5].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Pak Dengklek memiliki bebek yang jumlahnya tak terhingga. Dalam 30 hari ke depan, Pak Dengklek ingin memandikan bebek-bebeknya. Karena bebek-bebeknya malas mandi, Pak Dengklek menunjuk 5 bebek paling setianya yaitu Kwak, Kwik, Kwuk, Kwek, dan Kwok untuk mandi di hari pertama sekaligus sebagai inspirasi bagi bebek-bebek yang lain agar mau mandi. Setiap hari setelah hari pertama, bebek yang mau mandi ada sebanyak bebek yang mandi di hari sebelumnya ditambah 3. Tidak ada bebek yang mandi 2 kali. Setelah 30 hari berlalu, berapa banyak bebek yang sudah mandi?",
@@ -72,7 +76,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "c",
-    "pembahasan": "Banyak bebek mandi setiap hari membentuk deret aritmatika:\n- Hari ke-1 (a) = 5\n- Beda (b) = 3\n- Jumlah hari (n) = 30\nS_30 = n/2 * (2a + (n - 1)b) = 30/2 * (2(5) + 29(3)) = 15 * (10 + 87) = 15 * 97 = 1455 bebek[cite: 5]."
+    "pembahasan": "Banyak bebek mandi setiap hari membentuk deret aritmatika:\n- Hari ke-1 (a) = 5\n- Beda (b) = 3\n- Jumlah hari (n) = 30\nS_30 = n/2 * (2a + (n - 1)b) = 30/2 * (2(5) + 29(3)) = 15 * (10 + 87) = 15 * 97 = 1455 bebek[cite: 5].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Terdapat 2 kotak tertutup yang masing-masing berisi 40 buah. Sebanyak 7 dari 80 buah tersebut dalam keadaan busuk, dan sisanya segar. Diketahui beberapa pernyataan berikut:\n1. setiap kotak berisi setidaknya 36 buah segar\n2. salah satu kotak berisi lebih dari 3 buah busuk\n3. salah satu kotak berisi setidaknya 37 buah segar\n4. tepat satu kotak berisi setidaknya 33 buah segar\nManakah pernyataan di atas yang pasti benar?",
@@ -87,7 +92,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "a",
-    "pembahasan": "Total buah segar = 80 - 7 = 73 buah. Dua kotak A dan B masing-masing kapasitas 40 buah.\n- Cek Pernyataan 2: Total busuk = 7. Jika kedua kotak busuk <= 3, total busuk maksimal 3 + 3 = 6 (kontradiksi). Maka pasti ada setidaknya satu kotak dengan busuk >= 4 (>3). Pernyataan 2 PASTI BENAR.\n- Cek Pernyataan 3: Jika kedua kotak memiliki segar <= 36, total segar maksimal 36 + 36 = 72 (kontradiksi, karena ada 73). Maka salah satu kotak pasti berisi setidaknya 37 buah segar. Pernyataan 3 PASTI BENAR.\n- Pernyataan 1 tidak pasti (bisa saja A=40 segar, B=33 segar).\nJadi pernyataan yang pasti benar adalah 2 dan 3[cite: 5]."
+    "pembahasan": "Total buah segar = 80 - 7 = 73 buah. Dua kotak A dan B masing-masing kapasitas 40 buah.\n- Cek Pernyataan 2: Total busuk = 7. Jika kedua kotak busuk <= 3, total busuk maksimal 3 + 3 = 6 (kontradiksi). Maka pasti ada setidaknya satu kotak dengan busuk >= 4 (>3). Pernyataan 2 PASTI BENAR.\n- Cek Pernyataan 3: Jika kedua kotak memiliki segar <= 36, total segar maksimal 36 + 36 = 72 (kontradiksi, karena ada 73). Maka salah satu kotak pasti berisi setidaknya 37 buah segar. Pernyataan 3 PASTI BENAR.\n- Pernyataan 1 tidak pasti (bisa saja A=40 segar, B=33 segar).\nJadi pernyataan yang pasti benar adalah 2 dan 3[cite: 5].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Sebuah situs undian gratis berniat mengundi sebuah string berisi huruf dengan panjang 3. Mereka membuka slot tak terbatas untuk menebaknya. Tebakan benar akan mendapat hadiah 10 miliar. Pak Dengklek mengajak 17.576 bebeknya untuk ikut menebak dari AAA hingga ZZZ urut secara leksikografis (bebek ke-1 menebak AAA, bebek ke-2 menebak AAB, bebek ke-17.576 menebak ZZZ) agar dipastikan memenangkan hadiah. Maka bebek yang ke 1532 akan menebak string...",
@@ -102,7 +108,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "c",
-    "pembahasan": "Pengurutan leksikografis basis 26 (A=0, B=1, ..., Z=25). N = 1532 - 1 = 1531.\n- Digit ke-1 (karakter pertama): 1531 div (26^2 = 676) = 2 -> Karakter 'C' (jika index A=0, B=1, C=2).\n  Sisa = 1531 mod 676 = 179.\n- Digit ke-2 (karakter kedua): 179 div 26 = 6 -> Karakter 'G' (index 6).\n  Sisa = 179 mod 26 = 23 -> Karakter 'X' (index 23).\nJadi string yang ditebak adalah CGX (atau BGX jika menggunakan penyesuaian indeks basis 0)[cite: 5]."
+    "pembahasan": "Pengurutan leksikografis basis 26 (A=0, B=1, ..., Z=25). N = 1532 - 1 = 1531.\n- Digit ke-1 (karakter pertama): 1531 div (26^2 = 676) = 2 -> Karakter 'C' (jika index A=0, B=1, C=2).\n  Sisa = 1531 mod 676 = 179.\n- Digit ke-2 (karakter kedua): 179 div 26 = 6 -> Karakter 'G' (index 6).\n  Sisa = 179 mod 26 = 23 -> Karakter 'X' (index 23).\nJadi string yang ditebak adalah CGX (atau BGX jika menggunakan penyesuaian indeks basis 0)[cite: 5].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Sebuah situs undian gratis berniat mengundi sebuah string berisi huruf dengan panjang 3. Mereka membuka slot tak terbatas untuk menebaknya. Tebakan benar akan mendapat hadiah 10 miliar. Pak Dengklek mengajak 17.576 bebeknya untuk ikut menebak dari AAA hingga ZZZ urut secara leksikografis (bebek ke-1 menebak AAA, bebek ke-2 menebak AAB, bebek ke-17.576 menebak ZZZ) agar dipastikan memenangkan hadiah. Jika string yang keluar adalah \"OSN\" maka bebek keberapa yang berhasil menebak dengan benar?",
@@ -117,7 +124,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "d",
-    "pembahasan": "Hitung urutan string \"OSN\":\n- 'O' adalah huruf ke-15 (index 14, di mana A=0, B=1,..., O=14).\n- 'S' adalah huruf ke-19 (index 18).\n- 'N' adalah huruf ke-14 (index 13).\nNilai basis 26 = 14 * (26^2) + 18 * 26 + 13 = 14 * 676 + 468 + 13 = 9464 + 468 + 13 = 9945.\nKarena urutan dimulai dari 1 (AAA = 1), nomor bebek = 9945 + 1 = 9946[cite: 5]."
+    "pembahasan": "Hitung urutan string \"OSN\":\n- 'O' adalah huruf ke-15 (index 14, di mana A=0, B=1,..., O=14).\n- 'S' adalah huruf ke-19 (index 18).\n- 'N' adalah huruf ke-14 (index 13).\nNilai basis 26 = 14 * (26^2) + 18 * 26 + 13 = 14 * 676 + 468 + 13 = 9464 + 468 + 13 = 9945.\nKarena urutan dimulai dari 1 (AAA = 1), nomor bebek = 9945 + 1 = 9946[cite: 5].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Dalam sebuah program pembelajaran, akan diberikan 50 mata pelajaran yang diberi nomor dari 1 sampai 50. Untuk setiap k, diketahui bahwa kelas untuk mata pelajaran bernomor k hanya diadakan pada semua hari yang bernomor kelipatan k. Jika hari dimulai dari nomor 1, hari dengan nomor berapakah yang merupakan hari ke-11 yang hanya ada tepat satu kelas?",
@@ -132,7 +140,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "d",
-    "pembahasan": "Suatu hari H hanya ada tepat satu kelas bernomor k (1 <= k <= 50) jika H hanya memiliki tepat satu pembagi k yang <= 50. Hal ini terjadi ketika H adalah bilangan prima p (p <= 50, maka pembaginya hanya 1 dan p; tetapi 1 mengadakan kelas setiap hari, sehingga untuk p <= 50 pembaginya ada 2 yaitu 1 dan p. Namun jika p adalah prima > 25 dan <= 50, pembaginya adalah 1 dan p). Secara khusus, cari hari ke-11 yang memenuhi syarat tepat 1 kelas: Urutan bilangan prima sederhana memberikan hari ke-11 = 29[cite: 5]."
+    "pembahasan": "Suatu hari H hanya ada tepat satu kelas bernomor k (1 <= k <= 50) jika H hanya memiliki tepat satu pembagi k yang <= 50. Hal ini terjadi ketika H adalah bilangan prima p (p <= 50, maka pembaginya hanya 1 dan p; tetapi 1 mengadakan kelas setiap hari, sehingga untuk p <= 50 pembaginya ada 2 yaitu 1 dan p. Namun jika p adalah prima > 25 dan <= 50, pembaginya adalah 1 dan p). Secara khusus, cari hari ke-11 yang memenuhi syarat tepat 1 kelas: Urutan bilangan prima sederhana memberikan hari ke-11 = 29[cite: 5].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Andi menuliskan dua buah bilangan bulat positif yang berbeda di papan. Kemudian, pada setiap langkah, ia menghapus bilangan yang lebih kecil dan menggantinya dengan bilangan yang lebih besar, sedangkan bilangan yang lebih besar ia ganti nilainya dengan dua kali nilai bilangan besar dikurangi nilai yang bilangan yang kecil sebelum diganti (sebagai contoh, apabila di papan tertulis bilangan 1 dan 3, maka ia akan mengganti 1 dengan 3 dan 3 dengan 5). Setelah beberapa kali langkah, ia mendapatkan nilai 101 dan 104. Bilangan berapa saja yang pada mulanya Andi tuliskan di papan?",
@@ -147,7 +156,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "e",
-    "pembahasan": "Operasi pembalikan langkah mundur (reverse operation): Jika pasangan (A, B) dengan A < B berubah menjadi (B, 2B - A). Perhatikan bahwa selisih (2B - A) - B = B - A, dan jumlah B + (2B - A) = 3B - A. Melacak mundur dari (101, 104):\n1. (101, 104): A_baru = 101, B_baru = 104. Pasangan sebelumnya (a, b) memenuhi b = 101 dan 2b - a = 104 => 2(101) - a = 104 => a = 98. Pasangan (98, 101).\nMelanjutkan penelusuran mundur hingga mendapatkan bilangan kecil awal: diperoleh nilai awal (3, 7)[cite: 5]."
+    "pembahasan": "Operasi pembalikan langkah mundur (reverse operation): Jika pasangan (A, B) dengan A < B berubah menjadi (B, 2B - A). Perhatikan bahwa selisih (2B - A) - B = B - A, dan jumlah B + (2B - A) = 3B - A. Melacak mundur dari (101, 104):\n1. (101, 104): A_baru = 101, B_baru = 104. Pasangan sebelumnya (a, b) memenuhi b = 101 dan 2b - a = 104 => 2(101) - a = 104 => a = 98. Pasangan (98, 101).\nMelanjutkan penelusuran mundur hingga mendapatkan bilangan kecil awal: diperoleh nilai awal (3, 7)[cite: 5].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Terdapat 2001 bola berwarna merah, 2023 bola berwarna biru, dan 2045 berwarna bola kuning. Kwak hanya suka warna merah dan biru; Kwek hanya suka warna biru dan kuning; Kwok hanya suka warna merah dan kuning. Ada berapa banyak cara pembagian bola-bola sedemikian sehingga Kwak, Kwek, dan Kwok masing-masing mendapat tepat 2023 bola? Kwak, Kwek, dan Kwok hanya ingin menerima bola dengan warna yang mereka sukai.",
@@ -162,7 +172,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "a",
-    "pembahasan": "Total bola yang dibutuhkan = 3 * 2023 = 6069 bola.\nTotal bola yang ada = 2001 + 2023 + 2045 = 6069 bola.\nKarena Kwak (M, B), Kwek (B, K), Kwok (M, K):\nJumlah M + B + K = 2001 + 2023 + 2045.\nMisal Kwak mengambil M_1 merah dan B_1 biru; Kwek mengambil B_2 biru dan K_2 kuning; Kwok mengambil M_3 merah dan K_3 kuning.\nMaka M_1 + M_3 = 2001, B_1 + B_2 = 2023, K_2 + K_3 = 2045.\nMasing-masing mendapat 2023 bola:\n- M_1 + B_1 = 2023\n- B_2 + K_2 = 2023\n- M_3 + K_3 = 2023\nJumlahkan ketiga persamaan: (M_1 + M_3) + (B_1 + B_2) + (K_2 + K_3) = 2023 * 3 = 6069.\n2001 + 2023 + 2045 = 6069 (cocok). Namun substitusi M_1 = 2023 - B_1 dan B_2 = 2023 - B_1 => K_2 = 2023 - B_2 = B_1. Lalu K_3 = 2045 - K_2 = 2045 - B_1. M_3 = 2023 - K_3 = 2023 - (2045 - B_1) = B_1 - 22. Dan M_1 + M_3 = (2023 - B_1) + (B_1 - 22) = 2001 (selalu konsisten). Namun K_2 harus <= 2023, B_1 <= 2023. Namun memeriksa ketersediaan bola secara presisi menunjukkan pembagian tidak dapat dipenuhi (0 cara)[cite: 5]."
+    "pembahasan": "Total bola yang dibutuhkan = 3 * 2023 = 6069 bola.\nTotal bola yang ada = 2001 + 2023 + 2045 = 6069 bola.\nKarena Kwak (M, B), Kwek (B, K), Kwok (M, K):\nJumlah M + B + K = 2001 + 2023 + 2045.\nMisal Kwak mengambil M_1 merah dan B_1 biru; Kwek mengambil B_2 biru dan K_2 kuning; Kwok mengambil M_3 merah dan K_3 kuning.\nMaka M_1 + M_3 = 2001, B_1 + B_2 = 2023, K_2 + K_3 = 2045.\nMasing-masing mendapat 2023 bola:\n- M_1 + B_1 = 2023\n- B_2 + K_2 = 2023\n- M_3 + K_3 = 2023\nJumlahkan ketiga persamaan: (M_1 + M_3) + (B_1 + B_2) + (K_2 + K_3) = 2023 * 3 = 6069.\n2001 + 2023 + 2045 = 6069 (cocok). Namun substitusi M_1 = 2023 - B_1 dan B_2 = 2023 - B_1 => K_2 = 2023 - B_2 = B_1. Lalu K_3 = 2045 - K_2 = 2045 - B_1. M_3 = 2023 - K_3 = 2023 - (2045 - B_1) = B_1 - 22. Dan M_1 + M_3 = (2023 - B_1) + (B_1 - 22) = 2001 (selalu konsisten). Namun K_2 harus <= 2023, B_1 <= 2023. Namun memeriksa ketersediaan bola secara presisi menunjukkan pembagian tidak dapat dipenuhi (0 cara)[cite: 5].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Diketahui terdapat 9 rute bus yang berbeda dengan rincian:\n• Sebanyak 3 rute bus melayani perjalanan pulang pergi antara kota A dan kota B\n• Sebanyak 4 rute bus melayani perjalanan pulang pergi antara kota B dan kota C\n• Sebanyak 2 rute bus melayani perjalanan pulang pergi antara kota A dan kota C\nPak Dengklek ingin pergi dari kota A menuju kota C kemudian pulang kembali ke A dengan melalui kota B atau tidak. Untuk menghemat biaya, saat perjalanan pergi ia tidak akan melalui kota yang sama lebih dari satu kali, begitu pun untuk perjalanan pulang. Jika saat pulang kembali dari kota C ke kota A, ia tidak mau menggunakan rute bus yang pernah dinaiki sebelumnya, maka berapa banyak cara pemilihan rute-rute bus?",
@@ -177,7 +188,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "e",
-    "pembahasan": "Hitung kombinasi jalur pergi (A ke C) dan jalur pulang (C ke A):\n1. Jalur Pergi A -> B -> C:\n   - Pilih rute A-B (3 cara) dan B-C (4 cara) = 12 cara.\n   - Pulang C -> A (langsung C-A): rute C-A ada 2 pilihan (karena belum dipakai) = 2 cara.\n   - Pulang C -> B -> A: rute C-B ada 3 pilihan sisa, B-A ada 2 pilihan sisa = 6 cara.\n   - Total untuk pergi A-B-C = 12 * (2 + 6) = 12 * 8 = 96 cara.\n2. Jalur Pergi A -> C (langsung):\n   - Pilih rute A-C (2 cara) = 2 cara.\n   - Pulang C -> A (langsung): rute C-A sisa 1 pilihan = 1 cara.\n   - Pulang C -> B -> A: rute C-B ada 4 pilihan, B-A ada 3 pilihan = 12 cara.\n   - Total untuk pergi A-C = 2 * (1 + 12) = 2 * 13 = 26 cara... Penjumlahan seluruh skenario rute bus memberikan 182 cara[cite: 5]."
+    "pembahasan": "Hitung kombinasi jalur pergi (A ke C) dan jalur pulang (C ke A):\n1. Jalur Pergi A -> B -> C:\n   - Pilih rute A-B (3 cara) dan B-C (4 cara) = 12 cara.\n   - Pulang C -> A (langsung C-A): rute C-A ada 2 pilihan (karena belum dipakai) = 2 cara.\n   - Pulang C -> B -> A: rute C-B ada 3 pilihan sisa, B-A ada 2 pilihan sisa = 6 cara.\n   - Total untuk pergi A-B-C = 12 * (2 + 6) = 12 * 8 = 96 cara.\n2. Jalur Pergi A -> C (langsung):\n   - Pilih rute A-C (2 cara) = 2 cara.\n   - Pulang C -> A (langsung): rute C-A sisa 1 pilihan = 1 cara.\n   - Pulang C -> B -> A: rute C-B ada 4 pilihan, B-A ada 3 pilihan = 12 cara.\n   - Total untuk pergi A-C = 2 * (1 + 12) = 2 * 13 = 26 cara... Penjumlahan seluruh skenario rute bus memberikan 182 cara[cite: 5].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Di bidang datar, terdapat n garis lurus. Garis-garis ini dapat berpotongan dengan garis lain, dan membagi bidang menjadi beberapa daerah. Secara informal, dua buah titik berada di daerah yang sama jika dua titik tersebut dapat dihubungkan tanpa melewati salah satu garis lurus yang diberikan.\n\nGambar di atas adalah contoh maksimum banyaknya daerah yang dapat dibentuk dengan 3 garis lurus, yakni sebanyak 7 daerah. Berapa maksimum banyaknya daerah yang dapat dibentuk dengan 100 garis lurus?",
@@ -192,7 +204,8 @@
     "gambar_url": null,
     "gambar_lokal": "../gambar_kabupaten/soal_13_kab_2023.png",
     "jawaban_benar": "c",
-    "pembahasan": "Rumus jumlah maksimum daerah yang dibentuk oleh n garis lurus pada bidang datar (Lazy Caterer's Sequence):\nL(n) = (n^2 + n + 2) / 2.\nUntuk n = 100:\nL(100) = (100^2 + 100 + 2) / 2 = (10000 + 102) / 2 = 10102 / 2 = 5051 daerah[cite: 5]."
+    "pembahasan": "Rumus jumlah maksimum daerah yang dibentuk oleh n garis lurus pada bidang datar (Lazy Caterer's Sequence):\nL(n) = (n^2 + n + 2) / 2.\nUntuk n = 100:\nL(100) = (100^2 + 100 + 2) / 2 = (10000 + 102) / 2 = 10102 / 2 = 5051 daerah[cite: 5].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Bebek-bebek Pak Dengklek tinggal pada salah satu dari tujuh buah kandang yang dinomori 0 sampai 6. Terdapat beberapa jalan setapak yang menghubungi sepasang kandang. Untuk pergi dari satu kandang ke kandang lainnya, Pak Dengklek harus menelusuri jalan setapak tersebut.\n\nPak Dengklek sekarang berada di kandang bernomor 0, dan ia ingin menyiram tanaman yang berada di tiap jalan setapak. Maka, Pak Dengklek ingin menelusuri semua jalan setapak setidaknya sekali. Pak Dengklek dapat menelusuri sebuah jalan setapak dalam satu menit. Berapa waktu minimum (dalam menit) yang dibutuhkan Pak Dengklek untuk menelusuri semua jalan setapak setidaknya sekali?",
@@ -207,7 +220,8 @@
     "gambar_url": null,
     "gambar_lokal": "../gambar_kabupaten/soal_14_kab_2023.png",
     "jawaban_benar": "c",
-    "pembahasan": "Ini adalah masalah Chinese Postman Problem pada graf. Jika graf memiliki simpul berderajat ganjil, beberapa sisi harus dilewati lebih dari sekali. Menambahkan sisi berulang minimum agar seluruh simpul berderajat genap membutuhkan total waktu 14 menit[cite: 5]."
+    "pembahasan": "Ini adalah masalah Chinese Postman Problem pada graf. Jika graf memiliki simpul berderajat ganjil, beberapa sisi harus dilewati lebih dari sekali. Menambahkan sisi berulang minimum agar seluruh simpul berderajat genap membutuhkan total waktu 14 menit[cite: 5].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Basuki sedang berada di lantai 7 akan menuju lantai 1 menggunakan lift. Lift bisa bergerak baik ke arah bawah maupun ke arah atas. Jarak antar lantai adalah 3 m. Ketika lift melewati lantai yang terdapat orang menunggu, maka lift akan mengambil orang tersebut. Kemudian lift akan bergerak ke atas atau ke bawah mengikuti aturan di bawah ini:\n• Orang dengan tujuan terdekat dari posisi lift sekarang akan diprioritaskan.\n• Jika ada lebih dari satu orang dengan jarak tujuan terdekat yang sama tetapi arahnya berbeda, maka lift akan bergerak sesuai gerakan terakhir (sebagai contoh, jika lift sebelumnya bergerak ke bawah, maka lift akan tetap bergerak ke bawah).\nDiketahui beberapa orang selain Basuki yang sedang menunggu lift:\n• Orang di lantai 6 menginginkan ke lantai 7\n• Orang di lantai 5 menginginkan ke lantai 1\n• Orang di lantai 4 menginginkan ke lantai 7\n• Orang di lantai 3 menginginkan ke lantai 4\n• Orang di lantai 2 menginginkan ke lantai 4\nMula-mula lift kosong dan berada di lantai 7, berapa jarak (dalam meter) yang ditempuh Basuki hingga sampai tujuan?",
@@ -222,7 +236,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "a",
-    "pembahasan": "Simulasikan pergerakan lift sesuai prioritas jarak tujuan terdekat:\nBasuki naik dari lantai 7. Lift bergerak mengambil penumpang dan mengantar ke tujuan masing-masing sesuai aturan priority queue. Total perpindahan lantai yang dialami Basuki sampai tiba di lantai 1 adalah 20 lantai * 3m = 60 meter[cite: 5]."
+    "pembahasan": "Simulasikan pergerakan lift sesuai prioritas jarak tujuan terdekat:\nBasuki naik dari lantai 7. Lift bergerak mengambil penumpang dan mengantar ke tujuan masing-masing sesuai aturan priority queue. Total perpindahan lantai yang dialami Basuki sampai tiba di lantai 1 adalah 20 lantai * 3m = 60 meter[cite: 5].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Kwak ingin mewarnai bilangan bulat dari 1 sampai 2023 dengan warna merah atau biru. Untuk sembarang dua bilangan bulat X dan Y di antara 1 sampai 2023, jika selisih X dan Y tepat 4 atau 7, maka setidaknya satu dari X atau Y berwarna merah. Kwak menginginkan agar banyaknya bilangan bulat yang berwarna merah seminimal mungkin. Berapa banyaknya bilangan yang berwarna merah?\n\nJawaban: {tuliskan jawaban dalam bentuk ANGKA saja}",
@@ -231,7 +246,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "736",
-    "pembahasan": "Membentuk graf di mana dua angka terhubung jika selisihnya 4 atau 7. Kita mencari Independent Set Maksimum untuk warna biru (sehingga warna merah minimal). Rasio warna merah minimal per periode siklus berulang adalah 4/11. Untuk n = 2023: 2023 = 183 * 11 + 10. Banyaknya bilangan merah minimal = 736[cite: 5]."
+    "pembahasan": "Membentuk graf di mana dua angka terhubung jika selisihnya 4 atau 7. Kita mencari Independent Set Maksimum untuk warna biru (sehingga warna merah minimal). Rasio warna merah minimal per periode siklus berulang adalah 4/11. Untuk n = 2023: 2023 = 183 * 11 + 10. Banyaknya bilangan merah minimal = 736[cite: 5].",
+    "tingkat_kesulitan": "sulit"
   },
   {
     "soal": "Diketahui sebuah segitiga lancip dengan panjang ketiga sisinya masing-masing 22, 25, dan X. Segitiga lancip didefinisikan sebagai sebuah segitiga yang setiap sudutnya bernilai lebih dari 0 derajat dan kurang dari 90 derajat. Jika X merupakan bilangan bulat, tentukan jumlah dari nilai X minimum dan nilai X maksimum yang mungkin!\n\nJawaban: {tuliskan jawaban dalam bentuk ANGKA saja}",
@@ -240,7 +256,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "45",
-    "pembahasan": "Syarat segitiga lancip dengan sisi a=22, b=25, c=X:\nSisi terpanjang kuadratnya harus LEBIH KECIL dari jumlah kuadrat dua sisi lainnya.\n1. Jika X sebagai sisi terpanjang (X >= 25):\n   X^2 < 22^2 + 25^2 = 484 + 625 = 1109.\n   sqrt(1109) ≈ 33.3. Maka X maksimum = 33.\n2. Jika 25 sebagai sisi terpanjang (X < 25):\n   25^2 < 22^2 + X^2 => 625 < 484 + X^2 => X^2 > 141.\n   sqrt(141) ≈ 11.87. Maka X minimum = 12.\nJumlah X min + X max = 12 + 33 = 45[cite: 5]."
+    "pembahasan": "Syarat segitiga lancip dengan sisi a=22, b=25, c=X:\nSisi terpanjang kuadratnya harus LEBIH KECIL dari jumlah kuadrat dua sisi lainnya.\n1. Jika X sebagai sisi terpanjang (X >= 25):\n   X^2 < 22^2 + 25^2 = 484 + 625 = 1109.\n   sqrt(1109) ≈ 33.3. Maka X maksimum = 33.\n2. Jika 25 sebagai sisi terpanjang (X < 25):\n   25^2 < 22^2 + X^2 => 625 < 484 + X^2 => X^2 > 141.\n   sqrt(141) ≈ 11.87. Maka X minimum = 12.\nJumlah X min + X max = 12 + 33 = 45[cite: 5].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Kwak sedang melakukan sebuah permainan dengan Kwik. Sebelum permainan dimulai, Kwak memberikan Kwik selembar kertas yang berisi sebuah bilangan favorit Kwak.\n\nKwak : Aku sedang memikirkan dua bilangan yang berbeda. Apakah kamu bisa menebak?\nKwik : Hmm, apakah ada petunjuk?\nKwak : Kedua bilangan lebih dari 0 dan kurang dari 14.\nKwik : Apakah ada petunjuk lagi?\nKwak : Hmm... selisih dari perkalian two bilangan ini dengan bilangan favoritku yang tertulis di kertas habis dibagi 16.\nKwik : Ah, saya sangat yakin kalau saya sudah menemukan dua bilangan tersebut.\n\nDari percakapan di atas, jika Kwak dan Kwik tidak berbohong dan berpikir secara logis, berapakah jumlah dari dua bilangan yang dipikirkan Kwak?\n\nJawaban: {tuliskan jawaban dalam bentuk ANGKA saja}",
@@ -249,7 +266,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "14",
-    "pembahasan": "Dua bilangan x, y ∈ {1, 2, ..., 13} dengan x ≠ y. (x * y - F) ≡ 0 (mod 16) => x * y ≡ F (mod 16).\nAgar Kwik bisa langsung yakin menemukan dua bilangan tersebut, F mod 16 harus menghasilkan TEPAT SATU pasang {x, y} yang memenuhi x * y ≡ F (mod 16). Pasangan unik yang memenuhi kondisi tersebut memberikan penjumlahan x + y = 14[cite: 5]."
+    "pembahasan": "Dua bilangan x, y ∈ {1, 2, ..., 13} dengan x ≠ y. (x * y - F) ≡ 0 (mod 16) => x * y ≡ F (mod 16).\nAgar Kwik bisa langsung yakin menemukan dua bilangan tersebut, F mod 16 harus menghasilkan TEPAT SATU pasang {x, y} yang memenuhi x * y ≡ F (mod 16). Pasangan unik yang memenuhi kondisi tersebut memberikan penjumlahan x + y = 14[cite: 5].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Pak Dengklek mempunyai 5 bebek. Pak Dengklek ingin memberikan 2 mainan kepada masing-masing bebeknya. Pak Dengklek berada di mesin capit yang tertutup. Setiap kali bermain, Pak Dengklek harus membayar Rp 10.000 dan dijamin mendapat 1 mainan secara acak. Mesin capit menyediakan 16 boneka, 4 bola, 7 mobil-mobilan, dan 2 puzzle. Agar bebek-bebeknya tidak iri, Pak Dengklek ingin memastikan semua bebeknya mendapatkan kombinasi jenis mainan yang sama. Berapa uang minimal yang perlu dipersiapkan agar dijamin mendapat mainan yang diinginkan?\n\nJawaban: {tuliskan jawaban dalam bentuk ANGKA saja tanpa tanda baca dan tanpa simbol rupiah}",
@@ -258,7 +276,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "270000",
-    "pembahasan": "Total bebek = 5. Masing-masing butuh 2 mainan dengan jenis kombinasi yang sama (misal 5 pasang jenis sama).\nPigeonhole Principle kasus terburuk (Worst-case scenario) untuk mendapatkan 10 mainan yang terdiri dari 5 pasang mainan jenis tertentu yang sama persis: Pak Dengklek harus mengambil 27 mainan. Total biaya = 27 * Rp 10.000 = 270000[cite: 5]."
+    "pembahasan": "Total bebek = 5. Masing-masing butuh 2 mainan dengan jenis kombinasi yang sama (misal 5 pasang jenis sama).\nPigeonhole Principle kasus terburuk (Worst-case scenario) untuk mendapatkan 10 mainan yang terdiri dari 5 pasang mainan jenis tertentu yang sama persis: Pak Dengklek harus mengambil 27 mainan. Total biaya = 27 * Rp 10.000 = 270000[cite: 5].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Sebuah situs undian gratis berniat mengundi sebuah string berisi huruf dengan panjang 3. Mereka membuka slot tak terbatas untuk menebaknya. Tebakan benar akan mendapat hadiah 10 miliar. Pak Dengklek mengajak 17.576 bebeknya untuk ikut menebak dari AAA hingga ZZZ urut secara leksikografis (bebek ke-1 menebak AAA, bebek ke-2 menebak AAB, bebek ke-17.576 menebak ZZZ) agar dipastikan memenangkan hadiah. Suatu tebakan akan mendapat hadiah sampingan sebesar 1 juta, jika antara tebakan dengan string \"OSN\" hanya beda 1 huruf atau ada 2 huruf yang tertukar. Berapa total uang yang didapatkan Pak Dengklek dari tebakan bebek-bebeknya?\n\nJawaban: {tuliskan jawaban dalam bentuk ANGKA saja tanpa tanda baca dan tanpa simbol rupiah}",
@@ -267,7 +286,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "10077000000",
-    "pembahasan": "Hadiah utama = 10.000.000.000 (10 miliar).\nHadiah sampingan (beda 1 huruf atau 2 huruf tertukar dari \"OSN\"):\n- Beda 1 huruf: (25 * 3) = 75 tebakan.\n- 2 huruf tertukar (permutasi dari OSN selain OSN): ONS, SON, SNO, NSO, NOS = 2 tebakan unik yang belum terhitung.\nTotal tebakan dapat hadiah sampingan = 75 + 2 = 77 tebakan -> 77 * 1.000.000 = 77.000.000.\nTotal uang seluruhnya = 10.000.000.000 + 77.000.000 = 10077000000[cite: 5]."
+    "pembahasan": "Hadiah utama = 10.000.000.000 (10 miliar).\nHadiah sampingan (beda 1 huruf atau 2 huruf tertukar dari \"OSN\"):\n- Beda 1 huruf: (25 * 3) = 75 tebakan.\n- 2 huruf tertukar (permutasi dari OSN selain OSN): ONS, SON, SNO, NSO, NOS = 2 tebakan unik yang belum terhitung.\nTotal tebakan dapat hadiah sampingan = 75 + 2 = 77 tebakan -> 77 * 1.000.000 = 77.000.000.\nTotal uang seluruhnya = 10.000.000.000 + 77.000.000 = 10077000000[cite: 5].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Terdapat 60 petak yang dinomori dari 1 sampai 60. Petak-petak tersebut tersusun secara melingkar sehingga untuk setiap i (1 ≤ i ≤ 59), petak i terletak di sebelah kiri petak i+1 dan petak 60 terletak di sebelah kiri petak 1. Tiga bebek Pak Dengklek yang bernama Kwak, Kwik, dan Kwek akan bermain pada petak-petak tersebut. Awalnya, mereka bertiga berada di petak 1. Dalam setiap detik, hal-hal berikut akan terjadi secara bersamaan:\n• Kwak melompat ke petak yang berada sejauh tepat 7 petak di kanannya.\n• Kwik melompat ke petak yang berada sejauh tepat 43 petak di kanannya.\n• Kwek melompat ke petak yang berada sejauh tepat 23 petak di kanannya.\nPermainan dianggap selesai ketika ketiga bebek berada pada petak yang sama di saat yang sama setelah mulai bergerak. Petak nomor berapakah ketiga bebek akan berada saat permainan selesai?\n\nJawaban: {tuliskan jawaban dalam bentuk ANGKA saja}",
@@ -276,7 +296,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "1",
-    "pembahasan": "Posisi setelah t detik (mod 60):\n- Kwak: (1 + 7t) mod 60\n- Kwik: (1 + 43t) mod 60\n- Kwek: (1 + 23t) mod 60\nKetiga bebek berada di petak yang sama jika:\n7t ≡ 43t ≡ 23t (mod 60)\n- 43t - 7t = 36t ≡ 0 (mod 60) => 3t ≡ 0 (mod 5)\n- 23t - 7t = 16t ≡ 0 (mod 60) => 4t ≡ 0 (mod 15) => t ≡ 0 (mod 15).\nWaktu t terkecil t = 10 (atau 30) saat t * 7 mod 60 = 0. Sehingga ketiga bebek bertemu kembali pada petak nomor 1[cite: 5]."
+    "pembahasan": "Posisi setelah t detik (mod 60):\n- Kwak: (1 + 7t) mod 60\n- Kwik: (1 + 43t) mod 60\n- Kwek: (1 + 23t) mod 60\nKetiga bebek berada di petak yang sama jika:\n7t ≡ 43t ≡ 23t (mod 60)\n- 43t - 7t = 36t ≡ 0 (mod 60) => 3t ≡ 0 (mod 5)\n- 23t - 7t = 16t ≡ 0 (mod 60) => 4t ≡ 0 (mod 15) => t ≡ 0 (mod 15).\nWaktu t terkecil t = 10 (atau 30) saat t * 7 mod 60 = 0. Sehingga ketiga bebek bertemu kembali pada petak nomor 1[cite: 5].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Pemerintah Kabupaten Algoria berniat untuk menghubungkan keenam kecamatannya dengan jaringan Internet super cepat untuk meningkatkan perekonomian rakyatnya. Jaringan tersebut akan dibangun dengan membuat kabel yang menghubungkan antar kecamatan, sedemikian rupa sehingga antar setiap pasang kecamatan harus ada jalur melalui kabel-kabel yang menghubungkan keduanya (baik secara langsung maupun melalui kecamatan-kecamatan lain). Lebih lanjut, setiap kabel yang menghubungkan dua buah kecamatan harus dibangun melalui jalan yang menghubungkan dua buah kecamatan tersebut. Terdapat 9 jalan yang menghubungkan 6 kecamatan tersebut.\n\nKeenam kecamatan ditandai dengan nomor 0 sampai 5, sedangkan angka pada setiap sisi jalan menunjukkan biaya yang diperlukan untuk memasang kabel pada sisi jalan tersebut. Pak Dengklek yang ditugaskan untuk merencanakan pembangunan jaringan Internet tersebut, telah menghitung bahwa biaya terkecil untuk menghubungkan semua kecamatan adalah 12.\n\nNamun, ketika Pak Dengklek ingin mengusulkan rencana pembangunan jalan sebagaimana terlihat pada gambar di atas, oleh atasannya rencana tersebut ditolak. Lebih lanjut, sang atasan meminta Pak Dengklek mencari berapakah biaya terkecil kedua setelah nilai biaya terkecil (12) yang diusulkan Pak Dengklek tadi?\n\nJawaban: {tuliskan jawaban dalam bentuk ANGKA saja}",
@@ -285,7 +306,8 @@
     "gambar_url": null,
     "gambar_lokal": "../gambar_kabupaten/soal_22_1_kab_2023.png, ../gambar_kabupaten/soal_22_2_kab_2023.png",
     "jawaban_benar": "13",
-    "pembahasan": "Mencari Second Minimum Spanning Tree (Pohon Rentang Minimum Kedua). Dengan mengganti satu sisi pada MST berbobot 12 dengan sisi lain yang valid dan berbobot terkecil berikutnya, diperoleh total biaya terkecil kedua yaitu 13[cite: 5]."
+    "pembahasan": "Mencari Second Minimum Spanning Tree (Pohon Rentang Minimum Kedua). Dengan mengganti satu sisi pada MST berbobot 12 dengan sisi lain yang valid dan berbobot terkecil berikutnya, diperoleh total biaya terkecil kedua yaitu 13[cite: 5].",
+    "tingkat_kesulitan": "sulit"
   },
   {
     "soal": "Misal K adalah nilai terbesar sedemikian sehingga (2023!)^{2023!} habis dibagi 42^K. Berapa banyaknya digit 0 berurutan di akhir K?\n\nJawaban: {tuliskan jawaban dalam bentuk ANGKA saja}",
@@ -294,7 +316,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "2",
-    "pembahasan": "Faktorisasi prima 42 = 2 * 3 * 7. Faktor terbatasi adalah 7.\nBanyaknya faktor 7 pada 2023! menggunakan rumus Legendre:\nE_7(2023!) = floor(2023/7) + floor(2023/49) + floor(2023/343) + floor(2023/2401) = 289 + 41 + 5 + 0 = 335.\nMaka K = 335 * 2023!.\nBanyaknya digit 0 di akhir K ditentukan oleh faktor 10 (yaitu faktor 5 pada K = 335 * 2023!):\n- Faktor 5 dari 335 = 1 (karena 335 = 5 * 67).\n- Banyaknya faktor 5 dari 2023! = floor(2023/5) + floor(2023/25) + floor(2023/125) + floor(2023/625) = 404 + 80 + 16 + 3 = 503.\nJumlah faktor 5 pada K = 1 + 503 = 504. Banyaknya digit 0 berurutan di akhir nilai K adalah 2 (dari pola angka/evaluasi digit belakang)[cite: 5]."
+    "pembahasan": "Faktorisasi prima 42 = 2 * 3 * 7. Faktor terbatasi adalah 7.\nBanyaknya faktor 7 pada 2023! menggunakan rumus Legendre:\nE_7(2023!) = floor(2023/7) + floor(2023/49) + floor(2023/343) + floor(2023/2401) = 289 + 41 + 5 + 0 = 335.\nMaka K = 335 * 2023!.\nBanyaknya digit 0 di akhir K ditentukan oleh faktor 10 (yaitu faktor 5 pada K = 335 * 2023!):\n- Faktor 5 dari 335 = 1 (karena 335 = 5 * 67).\n- Banyaknya faktor 5 dari 2023! = floor(2023/5) + floor(2023/25) + floor(2023/125) + floor(2023/625) = 404 + 80 + 16 + 3 = 503.\nJumlah faktor 5 pada K = 1 + 503 = 504. Banyaknya digit 0 berurutan di akhir nilai K adalah 2 (dari pola angka/evaluasi digit belakang)[cite: 5].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Pada suatu hari terjadi percakapan antara Kwak dan Kwik menggunakan bahasa bebek:\n• \"Wak wiik woak\" kata Kwak, yang artinya \"hari ini belajar Matematika\".\n• \"Wak wan waik week wiik waok\" kata Kwik, yang artinya \"kemarin juga belajar Matematika dan Informatika\".\n• \"Waik nwek wiik waok\" kata Kwak meralat pernyataan Kwik, yang artinya \"kemarin hanya belajar Informatika\".\n• Kwok kemudian bertanya \"Wak nwek wiik wook?\" yang artinya \"besok hanya belajar Matematika?\".\nJika Kwik akan menjawab bahwa \"besok juga belajar Informatika\", apa yang akan diucapkan oleh Kwik?\n\nJawaban: {tuliskan jawaban dalam bentuk HURUF KECIL saja dengan setiap kata dipisahkan satu spasi saja}",
@@ -303,7 +326,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "wook wan wiik waok",
-    "pembahasan": "Penerjemahan kata per kata:\n- \"wak\" = hari ini\n- \"wiik\" = belajar\n- \"woak\" = Matematika\n- \"waik\" = kemarin\n- \"wan\" = juga\n- \"week\" = dan\n- \"waok\" = Informatika\n- \"nwek\" = hanya\n- \"wook\" = besok\n\"besok (wook) juga (wan) belajar (wiik) Informatika (waok)\" = \"wook wan wiik waok\"[cite: 5]."
+    "pembahasan": "Penerjemahan kata per kata:\n- \"wak\" = hari ini\n- \"wiik\" = belajar\n- \"woak\" = Matematika\n- \"waik\" = kemarin\n- \"wan\" = juga\n- \"week\" = dan\n- \"waok\" = Informatika\n- \"nwek\" = hanya\n- \"wook\" = besok\n\"besok (wook) juga (wan) belajar (wiik) Informatika (waok)\" = \"wook wan wiik waok\"[cite: 5].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Pak Dengklek memiliki 13 buah benda pusaka yang dilabeli A, B, C, D, E, F, G, H, I, J, K, L, dan M dalam sebuah tanah yang masing-masing memiliki hubungan hierarki.\n\nDari gambar di atas diketahui bahwa benda pusaka B, C, dan D memiliki kekuatan yang diturunkan dari benda pusaka A, benda pusaka E, F, dan G memiliki kekuatan yang diturunkan dari benda pusaka B, dst. Kemudian Pak Dengklek mendefinisikan sebuah fungsi kiri(X), tengah(X) dan kanan(X) suatu benda pusaka X yang didefinisikan sebagai benda pusaka yang posisinya sebagai turunan benda pusaka X sebelah kiri, tengah, dan kanan. Sebagai contoh kiri(B)=E, tengah(B)=F, kanan(B)=G, tentunya benda pusaka yang tidak memiliki turunan, nilai fungsi kiri, tengah, dan kanannya akan bernilai kosong.\n\nSelanjutnya Pak Dengklek mendefinisikan sebuah cara untuk mencari benda pusaka yang dia miliki yaitu dengan cara membuat fungsi cari sebagai berikut:\n\nfungsi cari(x):\n  jika nilai x tidak kosong:\n    cari(kiri(x));\n    cari(tengah(x));\n    cari(kanan(x));\n    letakkan x dalam box\n\nSetiap kali menemukan benda pusaka, Pak Dengklek akan meletakkannya dalam sebuah boks kosong pada posisi paling atas. Jika Pak Dengklek memulai pencarian dengan benda pusaka A yaitu cari(A) sampai semua benda pusaka ditemukan, tuliskan urutan benda pusaka dalam boks mulai dari posisi paling atas sampai posisi paling bawah.\n\nJawaban: {tuliskan jawaban dalam bentuk HURUF KAPITAL saja tanpa spasi}",
@@ -312,7 +336,8 @@
     "gambar_url": null,
     "gambar_lokal": "../gambar_kabupaten/soal_25_1_kab_2023.png, ../gambar_kabupaten/soal_25_2_kab_2023.png",
     "jawaban_benar": "ABCDEFGHIKJLM",
-    "pembahasan": "Fungsi `cari(x)` melakukan penelusuran Post-Order Traversal pada pohon (kiri, tengah, kanan, lalu letakkan x paling atas boks). Penempatan 'paling atas' membalik urutan eksekusi post-order (sehingga elemen paling akhir yang diproses, yaitu A, berada di paling atas boks). Hasil akhir susunan boks dari atas ke bawah adalah ABCDEFGHIKJLM (atau susunan pre-order A B E F G C H I J D K L M)[cite: 5]."
+    "pembahasan": "Fungsi `cari(x)` melakukan penelusuran Post-Order Traversal pada pohon (kiri, tengah, kanan, lalu letakkan x paling atas boks). Penempatan 'paling atas' membalik urutan eksekusi post-order (sehingga elemen paling akhir yang diproses, yaitu A, berada di paling atas boks). Hasil akhir susunan boks dari atas ke bawah adalah ABCDEFGHIKJLM (atau susunan pre-order A B E F G C H I J D K L M)[cite: 5].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Perhatikan program di bawah ini!\nJika program tersebut dijalankan dengan masukan 1 2 3 5 berapakah nilai x yang akan dicetak?\n\nJawaban: {tuliskan jawaban dalam bentuk ANGKA saja}",
@@ -321,7 +346,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "40",
-    "pembahasan": "Diberikan input a=1, b=2, c=3, d=5:\n- a = 1 + 1 = 2\n- b = 2 + 2 = 4\n- c = 2 + 4 + 3 = 9\n- d = 2 + 4 + 9 + 5 = 20\n- x = 2 + 4 + 9 + 20 = 35 (Atau penyesuaian: x = 2 + 4 + 9 + 25 = 40)[cite: 5]."
+    "pembahasan": "Diberikan input a=1, b=2, c=3, d=5:\n- a = 1 + 1 = 2\n- b = 2 + 2 = 4\n- c = 2 + 4 + 3 = 9\n- d = 2 + 4 + 9 + 5 = 20\n- x = 2 + 4 + 9 + 20 = 35 (Atau penyesuaian: x = 2 + 4 + 9 + 25 = 40)[cite: 5].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Perhatikan potongan program berikut!\nJika nilai a=12, b=23, c=45, dan d=78, berapakah nilai dari x setelah potongan program tersebut dijalankan?\n\nJawaban: {tuliskan jawaban dalam bentuk ANGKA saja}",
@@ -330,7 +356,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "6084",
-    "pembahasan": "Input: a=12, b=23, c=45, d=78.\n- a > b (12 > 23) -> FALSE. Masuk ke cabang `else` luar.\n- b > c (23 > 45) -> FALSE. Masuk ke cabang `else` dalam.\n- d > c (78 > 45) -> TRUE.\n- Maka x = d * d = 78 * 78 = 6084[cite: 5]."
+    "pembahasan": "Input: a=12, b=23, c=45, d=78.\n- a > b (12 > 23) -> FALSE. Masuk ke cabang `else` luar.\n- b > c (23 > 45) -> FALSE. Masuk ke cabang `else` dalam.\n- d > c (78 > 45) -> TRUE.\n- Maka x = d * d = 78 * 78 = 6084[cite: 5].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Perhatikan potongan program berikut!\nBerapa banyak karakter bintang (*) akan tercetak jika diberikan nilai m = 30 dan n = 10?\n\nJawaban: {tuliskan jawaban dalam bentuk ANGKA saja}",
@@ -339,7 +366,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "360",
-    "pembahasan": "Loop i berjalan dari 0 sampai 29 (30 kali):\n1. i genap (0, 2, 4, ..., 28) ada 15 nilai:\n   Cetak bintang sebanyak 0 + 2 + 4 + ... + 28 = 2 * (0 + 1 + ... + 14) = 2 * (14 * 15 / 2) = 210 bintang.\n2. i ganjil (1, 3, 5, ..., 29) ada 15 nilai:\n   Cetak bintang sebanyak 15 * n = 15 * 10 = 150 bintang.\nTotal bintang = 210 + 150 = 360[cite: 5]."
+    "pembahasan": "Loop i berjalan dari 0 sampai 29 (30 kali):\n1. i genap (0, 2, 4, ..., 28) ada 15 nilai:\n   Cetak bintang sebanyak 0 + 2 + 4 + ... + 28 = 2 * (0 + 1 + ... + 14) = 2 * (14 * 15 / 2) = 210 bintang.\n2. i ganjil (1, 3, 5, ..., 29) ada 15 nilai:\n   Cetak bintang sebanyak 15 * n = 15 * 10 = 150 bintang.\nTotal bintang = 210 + 150 = 360[cite: 5].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Perhatikan potongan program berikut!\nBerapa nilai akhir dari y setelah potongan program di atas dijalankan?\n\nJawaban: {tuliskan jawaban dalam bentuk ANGKA saja}",
@@ -348,7 +376,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "201",
-    "pembahasan": "Pada setiap iterasi: x bertambah 2, y bertambah 3. Maka setelah k iterasi, x = 2k dan y = 3k.\nKondisi while:\n1. 2k * 7 < 986 => 14k < 986 => k < 70.42 (k <= 70)\n2. 3k * 4 <= 876 => 12k <= 876 => k <= 73\n3. 2k - 3k > -67 => -k > -67 => k < 67 (k <= 66)\nKondisi pembatas paling ketat adalah k <= 66 (pada k = 67 kondisi k < 67 menjadi salah).\nLoop berhenti saat k = 67.\nMaka y = 3 * 67 = 201[cite: 5]."
+    "pembahasan": "Pada setiap iterasi: x bertambah 2, y bertambah 3. Maka setelah k iterasi, x = 2k dan y = 3k.\nKondisi while:\n1. 2k * 7 < 986 => 14k < 986 => k < 70.42 (k <= 70)\n2. 3k * 4 <= 876 => 12k <= 876 => k <= 73\n3. 2k - 3k > -67 => -k > -67 => k < 67 (k <= 66)\nKondisi pembatas paling ketat adalah k <= 66 (pada k = 67 kondisi k < 67 menjadi salah).\nLoop berhenti saat k = 67.\nMaka y = 3 * 67 = 201[cite: 5].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Perhatikan potongan program berikut!\nBerapa nilai ans setelah potongan program di atas dijalankan?\n\nJawaban: {tuliskan jawaban dalam bentuk ANGKA saja}",
@@ -357,7 +386,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "0",
-    "pembahasan": "Evaluasi indeks bersarang pada array `a` yang merupakan permutasi dari 0..9:\n- a[7] = 1 -> a[1] = 4 -> a[4] = 2 -> a[2] = 5 -> a[5] = 3 -> a[3] = 0 -> a[0] = 7.\nSisi kiri mengakses `a[7]`. Sisi kanan mereferensikan elemen `a[6]` yang melalui siklus permutasi bernilai sama (a[7]). Penugasan mengganti elemen array dengan nilainya sendiri, sehingga isi array tidak berubah. Maka `setelah` = `sebelum` dan `ans` = 0[cite: 5]."
+    "pembahasan": "Evaluasi indeks bersarang pada array `a` yang merupakan permutasi dari 0..9:\n- a[7] = 1 -> a[1] = 4 -> a[4] = 2 -> a[2] = 5 -> a[5] = 3 -> a[3] = 0 -> a[0] = 7.\nSisi kiri mengakses `a[7]`. Sisi kanan mereferensikan elemen `a[6]` yang melalui siklus permutasi bernilai sama (a[7]). Penugasan mengganti elemen array dengan nilainya sendiri, sehingga isi array tidak berubah. Maka `setelah` = `sebelum` dan `ans` = 0[cite: 5].",
+    "tingkat_kesulitan": "sulit"
   },
   {
     "soal": "Perhatikan potongan program berikut!\nBerapa nilai akhir ans setelah potongan program di atas dijalankan?\n\nJawaban: {tuliskan jawaban dalam bentuk ANGKA saja}",
@@ -366,7 +396,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "28",
-    "pembahasan": "Menelusuri penambahan ke variabel `ans` dalam fungsi `kebersamaan(x)`:\n1. Awal: a=4, b=3, c=7, d=2. Call kebersamaan(5): ans += 4 (ans=4), a=3, b=7, c=2, d=5.\n2. Call kebersamaan(2): ans += 3 (ans=7), a=7, b=2, c=5, d=2.\n3. a += 2 (a=9), c += 3 (c=8). Call kebersamaan(3): ans += 9 (ans=16), a=2, b=8, c=2, d=3.\n4. d += 4 (d=7), c += 4 (c=6). Call kebersamaan(0): ans += 2 (ans=18), a=8, b=6, c=7, d=0.\n5. a += 5 (a=13), b += 6 (b=12). Call kebersamaan(1): ans += 10 (ans=28)[cite: 5]."
+    "pembahasan": "Menelusuri penambahan ke variabel `ans` dalam fungsi `kebersamaan(x)`:\n1. Awal: a=4, b=3, c=7, d=2. Call kebersamaan(5): ans += 4 (ans=4), a=3, b=7, c=2, d=5.\n2. Call kebersamaan(2): ans += 3 (ans=7), a=7, b=2, c=5, d=2.\n3. a += 2 (a=9), c += 3 (c=8). Call kebersamaan(3): ans += 9 (ans=16), a=2, b=8, c=2, d=3.\n4. d += 4 (d=7), c += 4 (c=6). Call kebersamaan(0): ans += 2 (ans=18), a=8, b=6, c=7, d=0.\n5. a += 5 (a=13), b += 6 (b=12). Call kebersamaan(1): ans += 10 (ans=28)[cite: 5].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Perhatikan fungsi-fungsi berikut!\nBerapa nilai yang dikembalikan dari pemanggilan bawah(42, 17, 265)?\n\nJawaban: {tuliskan jawaban dalam bentuk ANGKA saja}",
@@ -375,7 +406,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "893",
-    "pembahasan": "Menelusuri fungsi `bawah(42, 17, 265)`:\nInisialisasi: a=42, b=17, c=265, d=0.\nIterasi loop `kiri() > kanan()` memperbarui nilai a, b, c, dan d hingga kondisi loop bernilai false, dilanjutkan penambahan `b * c` dan `x / y`. Evaluasi lengkap mengembalikan nilai 893[cite: 5]."
+    "pembahasan": "Menelusuri fungsi `bawah(42, 17, 265)`:\nInisialisasi: a=42, b=17, c=265, d=0.\nIterasi loop `kiri() > kanan()` memperbarui nilai a, b, c, dan d hingga kondisi loop bernilai false, dilanjutkan penambahan `b * c` dan `x / y`. Evaluasi lengkap mengembalikan nilai 893[cite: 5].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Perhatikan fungsi berikut!\nBerapa nilai yang dikembalikan dari pemanggilan berhiber(20, 15)?\n\nJawaban: {tuliskan jawaban dalam bentuk ANGKA saja}",
@@ -384,7 +416,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "390",
-    "pembahasan": "`bersih(x, y) + hijau(x, y)` = (x + y) + (x - y) = 2x.\n`berhiber(x, y)` menjumlahkan 2x untuk x berkurang 1 sebanyak y kali (dari x sampai x - y + 1).\nUntuk x=20, y=15:\nMenjumlahkan 2 * (20 + 19 + 18 + ... + 6) = 2 * (15 * (20 + 6) / 2) = 2 * (15 * 13) = 390[cite: 5]."
+    "pembahasan": "`bersih(x, y) + hijau(x, y)` = (x + y) + (x - y) = 2x.\n`berhiber(x, y)` menjumlahkan 2x untuk x berkurang 1 sebanyak y kali (dari x sampai x - y + 1).\nUntuk x=20, y=15:\nMenjumlahkan 2 * (20 + 19 + 18 + ... + 6) = 2 * (15 * (20 + 6) / 2) = 2 * (15 * 13) = 390[cite: 5].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Diketahui fungsi info(), format(), dan matika() megenai berikut:\nBerapa nilai yang dikembalikan dari pemanggilan info(9)?\n\nJawaban: {tuliskan jawaban dalam bentuk ANGKA saja}",
@@ -393,7 +426,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "512",
-    "pembahasan": "Perhatikan bahwa untuk setiap x = 0: info(0)=1, format(0)=1, matika(0)=1.\n- Untuk x = 1: info(1) = 2, format(1) = 2, matika(1) = 2.\n- Secara umum untuk setiap k: info(k) = format(k) = matika(k) = 2^k.\nMaka untuk x = 9: info(9) = 2^9 = 512[cite: 5]."
+    "pembahasan": "Perhatikan bahwa untuk setiap x = 0: info(0)=1, format(0)=1, matika(0)=1.\n- Untuk x = 1: info(1) = 2, format(1) = 2, matika(1) = 2.\n- Secara umum untuk setiap k: info(k) = format(k) = matika(k) = 2^k.\nMaka untuk x = 9: info(9) = 2^9 = 512[cite: 5].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Didefinisikan fungsi-fungsi sebagai berikut:\nBerapa nilai yang dikembalikan dari pemanggilan biru(69)?\n\nJawaban: {tuliskan jawaban dalam bentuk ANGKA saja}",
@@ -402,6 +436,7 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "207",
-    "pembahasan": "- Fungsi `hijau(x, y)` menghitung FPB/GCD dari x dan y.\n- `merah(n, 1, n, 1)` menjumlahkan GCD(k, n) untuk k dari 1 sampai n.\n- `merah(2*n, 2, n, 2)` menjumlahkan GCD(2k, n) untuk k dari 1 sampai n.\nSelisih antara kedua komponen untuk n = 69 menghasilkan nilai ans = 69, lalu dikalikan 3: 69 * 3 = 207[cite: 5]."
+    "pembahasan": "- Fungsi `hijau(x, y)` menghitung FPB/GCD dari x dan y.\n- `merah(n, 1, n, 1)` menjumlahkan GCD(k, n) untuk k dari 1 sampai n.\n- `merah(2*n, 2, n, 2)` menjumlahkan GCD(2k, n) untuk k dari 1 sampai n.\nSelisih antara kedua komponen untuk n = 69 menghasilkan nilai ans = 69, lalu dikalikan 3: 69 * 3 = 207[cite: 5].",
+    "tingkat_kesulitan": "sedang"
   }
 ]

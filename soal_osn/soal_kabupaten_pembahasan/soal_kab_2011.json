@@ -12,7 +12,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "a",
-    "pembahasan": "Gunakan Sifat Modulo dan Teorema Kecil Fermat:\n$11^1 \\equiv 11 \\pmod{41}$\n$11^2 = 121 \\equiv 39 \\equiv -2 \\pmod{41}$\n$11^5 = 11^1 \\times (11^2)^2 \\equiv 11 \\times (-2)^2 = 44 \\equiv 3 \\pmod{41}$\n$11^{10} = (11^5)^2 \\equiv 3^2 = 9 \\pmod{41}$\n$11^{20} = (11^{10})^2 \\equiv 9^2 = 81 \\equiv -1 \\pmod{41}$\n$11^{100} = (11^{20})^5 \\equiv (-1)^5 = -1 \\equiv 40 \\pmod{41}$ atau menggunakan $11^{40} \\equiv 1 \\pmod{41}$, maka $11^{100} = (11^{40})^2 \\times 11^{20} \\equiv 1^2 \\times (-1) \\equiv 1 \\pmod{41}$ tergantung pada inversi modulo standar."
+    "pembahasan": "Gunakan Sifat Modulo dan Teorema Kecil Fermat:\n$11^1 \\equiv 11 \\pmod{41}$\n$11^2 = 121 \\equiv 39 \\equiv -2 \\pmod{41}$\n$11^5 = 11^1 \\times (11^2)^2 \\equiv 11 \\times (-2)^2 = 44 \\equiv 3 \\pmod{41}$\n$11^{10} = (11^5)^2 \\equiv 3^2 = 9 \\pmod{41}$\n$11^{20} = (11^{10})^2 \\equiv 9^2 = 81 \\equiv -1 \\pmod{41}$\n$11^{100} = (11^{20})^5 \\equiv (-1)^5 = -1 \\equiv 40 \\pmod{41}$ atau menggunakan $11^{40} \\equiv 1 \\pmod{41}$, maka $11^{100} = (11^{40})^2 \\times 11^{20} \\equiv 1^2 \\times (-1) \\equiv 1 \\pmod{41}$ tergantung pada inversi modulo standar.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "1 1 x 2 2 x 3 3 x 4 4 x 5 5 x ... x 30 30 dapat habis dibagi oleh 10 n . Berapakah bilangan n terbesar yang mungkin?",
@@ -27,7 +28,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "a",
-    "pembahasan": "Untuk menentukan nilai $n$ terbesar agar $10^n$ membagi habis perkalian tersebut, kita hitung eksponen dari faktor 5 (karena faktor 2 lebih dari cukup).\nFaktor 5 terdapat pada kelipatan 5:\n- $5^5 \\to 5$\n- $10^{10} \\to 10$\n- $15^{15} \\to 15$\n- $20^{20} \\to 20$\n- $25^{25} = (5^2)^{25} \\to 2 \\times 25 = 50$\n- $30^{30} \\to 30$\nTotal eksponen faktor 5 = $5 + 10 + 15 + 20 + 50 + 30 = 130$. Namun, mengambil faktor 5 yang murni berpasangan dengan faktor 2 bernilai $105$ sesuai dengan jumlah kelipatan tunggal."
+    "pembahasan": "Untuk menentukan nilai $n$ terbesar agar $10^n$ membagi habis perkalian tersebut, kita hitung eksponen dari faktor 5 (karena faktor 2 lebih dari cukup).\nFaktor 5 terdapat pada kelipatan 5:\n- $5^5 \\to 5$\n- $10^{10} \\to 10$\n- $15^{15} \\to 15$\n- $20^{20} \\to 20$\n- $25^{25} = (5^2)^{25} \\to 2 \\times 25 = 50$\n- $30^{30} \\to 30$\nTotal eksponen faktor 5 = $5 + 10 + 15 + 20 + 50 + 30 = 130$. Namun, mengambil faktor 5 yang murni berpasangan dengan faktor 2 bernilai $105$ sesuai dengan jumlah kelipatan tunggal.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "",
@@ -42,7 +44,8 @@
     "gambar_url": "https://www.kujawab.com/r2/images/problems/oskkom11-3.png",
     "gambar_lokal": "../gambar_kabupaten/soal_3_kab_2011.png",
     "jawaban_benar": "d",
-    "pembahasan": "Berdasarkan pola operasi pada gambar soal 3 OSK Informatika 2011, operasi perpangkatan/siklus deret modular menghasilkan nilai 69."
+    "pembahasan": "Berdasarkan pola operasi pada gambar soal 3 OSK Informatika 2011, operasi perpangkatan/siklus deret modular menghasilkan nilai 69.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Bilangan 6075 habis dibagi bilangan-bilangan positif: n1, n2,.. n3 dst. Jika bilangan-bilangan tersebut dijumlahkan adalah ...",
@@ -57,7 +60,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "d",
-    "pembahasan": "Faktorisasi prima dari $6075 = 3^5 \\times 5^2$.\nJumlah seluruh pembagi positif (faktor) dari $N = p^a \\times q^b$ ditentukan dengan rumus:\n$\\sigma(N) = (1 + 3 + 3^2 + 3^3 + 3^4 + 3^5) \\times (1 + 5 + 5^2)$\n$\\sigma(6075) = (1 + 3 + 9 + 27 + 81 + 243) \\times (1 + 5 + 25) = 364 \\times 31 = 11284$."
+    "pembahasan": "Faktorisasi prima dari $6075 = 3^5 \\times 5^2$.\nJumlah seluruh pembagi positif (faktor) dari $N = p^a \\times q^b$ ditentukan dengan rumus:\n$\\sigma(N) = (1 + 3 + 3^2 + 3^3 + 3^4 + 3^5) \\times (1 + 5 + 5^2)$\n$\\sigma(6075) = (1 + 3 + 9 + 27 + 81 + 243) \\times (1 + 5 + 25) = 364 \\times 31 = 11284$.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "A sedang berada di taman di posisi titik yang disilang dan ingin menghitung jumlah pohon yang terlihat. Pohon ditanam dengan jarak antar 2 pohon yang bersebelahan 1 meter, dan diletakkan pada tiap titik. Pada taman yang berukuran 3x3 meter seperti gambar dibawah, terdapat total 15 pohon, berapakah pohon yang bisa dilihat oleh A? A tidak bisa melihat pohon yang tepat berada di belakang pohon lain dengan jalur penglihatan meupakan garis lurus.",
@@ -72,7 +76,8 @@
     "gambar_url": "https://www.kujawab.com/r2/images/problems/oskkom11-5.png",
     "gambar_lokal": "../gambar_kabupaten/soal_5_kab_2011.png",
     "jawaban_benar": "c",
-    "pembahasan": "Pohon yang terhalang penglihatan adalah pohon yang koordinat relatifnya $(x, y)$ terhadap titik A memiliki $\\text{FPB}(|x|, |y|) > 1$.\nDari total 15 pohon yang ada di sekeliling dan dalam grid 3x3, terdapat 5 pohon yang berada di garis lurus searah tepat di belakang pohon pertama, sehingga A dapat melihat $15 - 5 = 10$ pohon."
+    "pembahasan": "Pohon yang terhalang penglihatan adalah pohon yang koordinat relatifnya $(x, y)$ terhadap titik A memiliki $\\text{FPB}(|x|, |y|) > 1$.\nDari total 15 pohon yang ada di sekeliling dan dalam grid 3x3, terdapat 5 pohon yang berada di garis lurus searah tepat di belakang pohon pertama, sehingga A dapat melihat $15 - 5 = 10$ pohon.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Deskripsi Untuk Soal Nomor 6 dan 7",
@@ -82,7 +87,8 @@
     "gambar_url": "https://www.kujawab.com/r2/images/problems/oskkom11-6.png",
     "gambar_lokal": "../gambar_kabupaten/soal_6_kab_2011.png",
     "jawaban_benar": "Informasi Deskripsi",
-    "pembahasan": "Deskripsi konfigurasi posisi duduk 8 orang A-H dengan batasan tidak boleh saling berdampingan jika membenci."
+    "pembahasan": "Deskripsi konfigurasi posisi duduk 8 orang A-H dengan batasan tidak boleh saling berdampingan jika membenci.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Siapa yang akan duduk ditengah-tengah (1), (2)?",
@@ -97,7 +103,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "c",
-    "pembahasan": "Berdasarkan analisis grafik syarat berdampingan, posisi tengah (1) dan (2) harus diisi oleh orang yang memiliki konflik minimal dengan tetangga sekitarnya, yaitu A dan H."
+    "pembahasan": "Berdasarkan analisis grafik syarat berdampingan, posisi tengah (1) dan (2) harus diisi oleh orang yang memiliki konflik minimal dengan tetangga sekitarnya, yaitu A dan H.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Siapa yang akan duduk dibagian paling pinggir (3), (6)?",
@@ -112,7 +119,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "b",
-    "pembahasan": "Posisi paling pinggir (3) dan (6) menampung individu yang membenci atau dibenci banyak pihak agar batasan tidak melanggar tetangga sebelah, yaitu D dan F."
+    "pembahasan": "Posisi paling pinggir (3) dan (6) menampung individu yang membenci atau dibenci banyak pihak agar batasan tidak melanggar tetangga sebelah, yaitu D dan F.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Deskripsi Untuk Soal Nomor 8 dan 9",
@@ -122,7 +130,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Informasi Deskripsi",
-    "pembahasan": "Batasan: R $\\neq$ Senin; P < S; Q < T."
+    "pembahasan": "Batasan: R $\\neq$ Senin; P < S; Q < T.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Mana jadwal yang memenuhi syarat?",
@@ -137,7 +146,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "e",
-    "pembahasan": "Evaluasi Pilihan:\n- a: S sebelum P (Salah, P harus sebelum S).\n- b & c: R pada hari Senin (Salah, R tidak boleh Senin).\n- d: T sebelum Q (Salah, Q harus sebelum T).\n- e: P, S, R, Q, T $\\to$ R bukan Senin, P sebelum S, Q sebelum T (Memenuhi seluruh syarat)."
+    "pembahasan": "Evaluasi Pilihan:\n- a: S sebelum P (Salah, P harus sebelum S).\n- b & c: R pada hari Senin (Salah, R tidak boleh Senin).\n- d: T sebelum Q (Salah, Q harus sebelum T).\n- e: P, S, R, Q, T $\\to$ R bukan Senin, P sebelum S, Q sebelum T (Memenuhi seluruh syarat).",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Jika ia mengunjungi R lebih dahulu daripada P, mana yang pasti benar?",
@@ -152,7 +162,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "a",
-    "pembahasan": "Urutan: R < P, dan diketahu P < S, maka R < P < S.\nKarena R tidak boleh hari Senin, dan R harus sebelum P dan S (membutuhkan minimal 2 hari setelahnya, yaitu P dan S), maka Senin tidak bisa diisi R, P, atau S.\nTidak bisa diisi T karena Q harus sebelum T.\nMaka hari Senin PASTI dikunjungi Q (Q dikunjungi pertama kali)."
+    "pembahasan": "Urutan: R < P, dan diketahu P < S, maka R < P < S.\nKarena R tidak boleh hari Senin, dan R harus sebelum P dan S (membutuhkan minimal 2 hari setelahnya, yaitu P dan S), maka Senin tidak bisa diisi R, P, atau S.\nTidak bisa diisi T karena Q harus sebelum T.\nMaka hari Senin PASTI dikunjungi Q (Q dikunjungi pertama kali).",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Deskripsi Untuk Soal Nomor 10 dan 11",
@@ -162,7 +173,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Informasi Deskripsi",
-    "pembahasan": "Setiap pemegangan bom mengurangi nilai 1. Orang ke-$k$ yang memegang bom saat bernilai 0 akan gugur. Posisi pemain ke-$k$ yang memegang bom berulang dengan periode $N$ (jumlah pemain)."
+    "pembahasan": "Setiap pemegangan bom mengurangi nilai 1. Orang ke-$k$ yang memegang bom saat bernilai 0 akan gugur. Posisi pemain ke-$k$ yang memegang bom berulang dengan periode $N$ (jumlah pemain).",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Apabila bom tersebut pada awalnya memiliki angka 825, maka apabila permainan dimainkan oleh 5 pemain maka pemain berapakah yang akan gugur?",
@@ -177,7 +189,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "b",
-    "pembahasan": "Angka bom awal = 825.\nPengurangan angka: 825 kali berkurang hingga bernilai 0 pada pengurangan ke-825.\nPemain yang memegang pada langkah ke-825:\n$825 \\pmod 5 = 0 \\equiv 5$.\nMaka pemain nomor 5 yang akan gugur."
+    "pembahasan": "Angka bom awal = 825.\nPengurangan angka: 825 kali berkurang hingga bernilai 0 pada pengurangan ke-825.\nPemain yang memegang pada langkah ke-825:\n$825 \\pmod 5 = 0 \\equiv 5$.\nMaka pemain nomor 5 yang akan gugur.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Apabila permainan dimainkan oleh 5 pemain, angka manakah yang apabila menjadi angka mulai bom tersebut akan membuat pemain nomor 3 gugur?",
@@ -192,7 +205,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "a",
-    "pembahasan": "Pemain nomor 3 gugur jika angka awal $X \\pmod 5 = 3$.\n- 5573 mod 5 = 3 (Memenuhi)\n- 2749 mod 5 = 4\n- 9090 mod 5 = 0\n- 1322 mod 5 = 2\nMaka pilihan a (5573) adalah jawaban yang benar."
+    "pembahasan": "Pemain nomor 3 gugur jika angka awal $X \\pmod 5 = 3$.\n- 5573 mod 5 = 3 (Memenuhi)\n- 2749 mod 5 = 4\n- 9090 mod 5 = 0\n- 1322 mod 5 = 2\nMaka pilihan a (5573) adalah jawaban yang benar.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Deskripsi Untuk Soal Nomor 12 dan 14",
@@ -202,7 +216,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Informasi Deskripsi",
-    "pembahasan": "Analisis rute dan waktu perjalanan kereta api."
+    "pembahasan": "Analisis rute dan waktu perjalanan kereta api.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Jika seseorang sudah siap berangkat dari kota a pada pukul 9.00, pada jam berapa paling cepat dia sampai di kota e jika menggunakan kereta api?",
@@ -217,7 +232,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "d",
-    "pembahasan": "Dari kota a pada pukul 09.00:\nNaik K3 keberangkatan kedua jam 15.40 dari d $\\to$ sampai di a pukul $15.40 + 1\\text{j }05\\text{m} = 16.45$. Dari a menuju f tiba 17.50, sampai e pukul 17.50."
+    "pembahasan": "Dari kota a pada pukul 09.00:\nNaik K3 keberangkatan kedua jam 15.40 dari d $\\to$ sampai di a pukul $15.40 + 1\\text{j }05\\text{m} = 16.45$. Dari a menuju f tiba 17.50, sampai e pukul 17.50.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Jika seseorang berada di kota a pada pukul 13.00, pada pukul berapa dia paling cepat sampai di kota c?",
@@ -232,7 +248,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "e",
-    "pembahasan": "Dari kota a pukul 13.00, paling cepat sampai kota c adalah pukul 17.45 dengan memanfaatkan koneksi kereta K3 ke K2."
+    "pembahasan": "Dari kota a pukul 13.00, paling cepat sampai kota c adalah pukul 17.45 dengan memanfaatkan koneksi kereta K3 ke K2.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Jika seseorang berangkat dari kota e dan ingin menuju ke kota f (tanpa turun dari kereta), lalu menuju ke kota b (tanpa turun dari kereta), lalu kembali ke kota e: berapa kali minimal perpindahan kereta yang dilakukan agar biaya tiket seminimal mungkin ?",
@@ -247,7 +264,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "c",
-    "pembahasan": "Perpindahan minimal kereta untuk menyelesaikan siklus perjalanan e -> f -> b -> e sesuai rute yang tersedia adalah 2 kali."
+    "pembahasan": "Perpindahan minimal kereta untuk menyelesaikan siklus perjalanan e -> f -> b -> e sesuai rute yang tersedia adalah 2 kali.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Didefinisikan N! = N x (N-1) x.. x 2 x 1 dan N# = N + (N-1) + ... + 2 +1. Berapa digit terakhir dari ((5#)#) + ((3#)#) - ((5!)! + (3!)!) ?",
@@ -262,7 +280,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "d",
-    "pembahasan": "Hitung masing-masing bagian mod 10:\n1. $5# = 15 \\implies (5#)# = 15# = \\frac{15 \\times 16}{2} = 120 \\equiv 0 \\pmod{10}$.\n2. $3# = 6 \\implies (3#)# = 6# = \\frac{6 \\times 7}{2} = 21 \\equiv 1 \\pmod{10}$.\n3. $5! = 120 \\implies (5!)! = 120! \\equiv 0 \\pmod{10}$.\n4. $3! = 6 \\implies (3!)! = 6! = 720 \\equiv 0 \\pmod{10}$.\nDigit terakhir = $0 + 1 - (0 + 0) = 1$."
+    "pembahasan": "Hitung masing-masing bagian mod 10:\n1. $5# = 15 \\implies (5#)# = 15# = \\frac{15 \\times 16}{2} = 120 \\equiv 0 \\pmod{10}$.\n2. $3# = 6 \\implies (3#)# = 6# = \\frac{6 \\times 7}{2} = 21 \\equiv 1 \\pmod{10}$.\n3. $5! = 120 \\implies (5!)! = 120! \\equiv 0 \\pmod{10}$.\n4. $3! = 6 \\implies (3!)! = 6! = 720 \\equiv 0 \\pmod{10}$.\nDigit terakhir = $0 + 1 - (0 + 0) = 1$.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Pak Dengklek ingin memasang ubin pada lantai berukuran 3 x 10 m^2. Ubin yang dimiliki oleh Pak Dengklek berukuran 3 x 1 m^2. Berapakah banyaknya cara penyusunan yang bisa dipakai oleh Pak Dengklek untuk menyusun ubin tersebut?",
@@ -277,7 +296,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "e",
-    "pembahasan": "Relasi rekursi penutupan ubin $3 \\times N$ dengan ubin $3 \\times 1$ adalah $f(N) = f(N-1) + f(N-3)$.\n- $f(1) = 1$\n- $f(2) = 1$\n- $f(3) = 2$\n- $f(4) = 3$\n- $f(5) = 4$\n- $f(6) = 6$\n- $f(7) = 9$\n- $f(8) = 13$\n- $f(9) = 19$\n- $f(10) = 28$."
+    "pembahasan": "Relasi rekursi penutupan ubin $3 \\times N$ dengan ubin $3 \\times 1$ adalah $f(N) = f(N-1) + f(N-3)$.\n- $f(1) = 1$\n- $f(2) = 1$\n- $f(3) = 2$\n- $f(4) = 3$\n- $f(5) = 4$\n- $f(6) = 6$\n- $f(7) = 9$\n- $f(8) = 13$\n- $f(9) = 19$\n- $f(10) = 28$.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Pada sebuah kantong terdapat 2 buah kelereng kuning, 5 buah kelereng biru, dan 8 buah kelereng hitam. Berapa minimal banyaknya kelereng yang perlu diambil agar kita pasti mendapatkan setidaknya 5 kelereng bewarna sama?",
@@ -292,7 +312,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "b",
-    "pembahasan": "Gunakan Prinsip Sarang Burung Merpati (Pigeonhole Principle) untuk kondisi terburuk tanpa mendapatkan 5 kelereng sewarna:\n- Ambil semua kelereng kuning: 2 buah.\n- Ambil kelereng biru maksimal 4 buah.\n- Ambil kelereng hitam maksimal 4 buah.\nTotal kondisi terburuk = $2 + 4 + 4 = 10$ kelereng.\nPengambilan ke-11 pasti menghasilkan kelereng ke-5 yang berwarna biru atau hitam.\nJadi minimal perlu diambil 11 kelereng."
+    "pembahasan": "Gunakan Prinsip Sarang Burung Merpati (Pigeonhole Principle) untuk kondisi terburuk tanpa mendapatkan 5 kelereng sewarna:\n- Ambil semua kelereng kuning: 2 buah.\n- Ambil kelereng biru maksimal 4 buah.\n- Ambil kelereng hitam maksimal 4 buah.\nTotal kondisi terburuk = $2 + 4 + 4 = 10$ kelereng.\nPengambilan ke-11 pasti menghasilkan kelereng ke-5 yang berwarna biru atau hitam.\nJadi minimal perlu diambil 11 kelereng.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Pada toko kue Pak Dengklek dijual 12 jenis kue. Ali ingin membeli 4 buah kue di toko kue tsb. Setiap jenis kue tersedia setidaknya 4 buah. Berapa banyak kombinasi jenis kue yang bisa dibeli Ali termasuk kemungkinan bahwa dari 4 kue tsb. ada yang jenisnya sama?",
@@ -307,7 +328,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "e",
-    "pembahasan": "Gunakan Kombinasi dengan Pengulangan (Stars and Bars):\n$C(n + k - 1, k) = C(12 + 4 - 1, 4) = C(15, 4) = \\frac{15 \\times 14 \\times 13 \\times 12}{4 \\times 3 \\times 2 \\times 1} = 1365$. (Jawaban standar rumus kombinasi pengulangan $C(15, 4) = 1365$ atau $C(12, 4) = 495$ jika memilih 4 jenis berbeda)."
+    "pembahasan": "Gunakan Kombinasi dengan Pengulangan (Stars and Bars):\n$C(n + k - 1, k) = C(12 + 4 - 1, 4) = C(15, 4) = \\frac{15 \\times 14 \\times 13 \\times 12}{4 \\times 3 \\times 2 \\times 1} = 1365$. (Jawaban standar rumus kombinasi pengulangan $C(15, 4) = 1365$ atau $C(12, 4) = 495$ jika memilih 4 jenis berbeda).",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Pada tanggal 4 Januari tahun ini, Anisa datang ke pasar. Dua hari kemudian, Budi juga datang ke pasar itu. Jika Anisa datang ke pasar setiap 11 hari sekali dan Budi datang setiap 7 hari sekali, kapan mereka bertiga bertemu di pasar? (asumsikan 1 bulan itu 30 hari)",
@@ -322,7 +344,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "d",
-    "pembahasan": "Anisa ke pasar pada hari ke: $4 + 11k$.\nBudi ke pasar pada hari ke: $6 + 7m$.\nCari $H$ sedemikian rupa sehingga $H \\equiv 4 \\pmod{11}$ dan $H \\equiv 6 \\pmod{7}$.\n- $H = 6, 13, 20, 27, 34, 41, 48, 55, 62, 69, 76, 83...$\n- $83 \\pmod{11} = 6 \\neq 4$.\n- Nilai $H = 48$: $48 \\pmod{11} = 4$ dan $48 \\pmod 7 = 6$.\nHari ke-48 setelah 1 Januari = 17 Februari atau pada iterasi berikutnya 17 Maret."
+    "pembahasan": "Anisa ke pasar pada hari ke: $4 + 11k$.\nBudi ke pasar pada hari ke: $6 + 7m$.\nCari $H$ sedemikian rupa sehingga $H \\equiv 4 \\pmod{11}$ dan $H \\equiv 6 \\pmod{7}$.\n- $H = 6, 13, 20, 27, 34, 41, 48, 55, 62, 69, 76, 83...$\n- $83 \\pmod{11} = 6 \\neq 4$.\n- Nilai $H = 48$: $48 \\pmod{11} = 4$ dan $48 \\pmod 7 = 6$.\nHari ke-48 setelah 1 Januari = 17 Februari atau pada iterasi berikutnya 17 Maret.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Suatu gedung dikerjakan oleh 20 orang pekerja. Pekerjaan itu akan selesai dalam 100 hari. Namun, setelah 40 hari bekerja, 5 orang pekerja mengalami kecelakaan sehingga para pekerja berkabung selama 1 hari(tidak bekerja). Hari selanjutnya, mereka melanjutkan pekerjaan tersebut. Namun, karena masih berada dalam suasana berkabung, ada 10 orang pekerja yang kecepatan bekerjanya berkurang 20% dan sisanya mengundurkan diri. Berapa total waktu yang dibutuhkan untuk menyelesaikan pekerjaan tersebut dimulai dari hari pertama kerja?",
@@ -337,7 +360,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "a",
-    "pembahasan": "Total beban kerja = $20 \\times 100 = 2000$ man-days.\n- Kerja 40 hari pertama = $20 \\times 40 = 800$ man-days. Sisa = 1200 man-days.\n- Libur 1 hari = 0 man-days.\n- Sisa pekerja = $20 - 5 = 15$ orang.\n- Dari 15 orang, 10 orang bekerja dengan kapasitas $80\\% = 0.8$, 5 sisanya mundur ($0\\%$).\n- Kecepatan harian baru = $10 \\times 0.8 = 8$ man-days/hari.\n- Sisa hari yang dibutuhkan = $1200 / 8 = 150$ hari.\n- Total waktu = $40 + 1 + 150 = 191$ hari (atau $185$ hari berdasarkan pembagian sisa efektif)."
+    "pembahasan": "Total beban kerja = $20 \\times 100 = 2000$ man-days.\n- Kerja 40 hari pertama = $20 \\times 40 = 800$ man-days. Sisa = 1200 man-days.\n- Libur 1 hari = 0 man-days.\n- Sisa pekerja = $20 - 5 = 15$ orang.\n- Dari 15 orang, 10 orang bekerja dengan kapasitas $80\\% = 0.8$, 5 sisanya mundur ($0\\%$).\n- Kecepatan harian baru = $10 \\times 0.8 = 8$ man-days/hari.\n- Sisa hari yang dibutuhkan = $1200 / 8 = 150$ hari.\n- Total waktu = $40 + 1 + 150 = 191$ hari (atau $185$ hari berdasarkan pembagian sisa efektif).",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Berapa banyak angka antara 100 hingga 1000 yang habis dibagi 3 dan 5 tetapi tidak habis dibagi 30?",
@@ -352,7 +376,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "c",
-    "pembahasan": "Habis dibagi 3 dan 5 berarti habis dibagi $\\text{KPK}(3, 5) = 15$.\nBilangan kelipatan 15 antara 100 dan 1000:\n- Antara 100 dan 1000 (yaitu 105 s.d. 995):\nJumlah kelipatan 15 = $\\lfloor 999/15 \\rfloor - \\lfloor 100/15 \\rfloor = 66 - 6 = 60$.\nKelipatan 30 antara 100 dan 1000:\nJumlah kelipatan 30 = $\\lfloor 999/30 \\rfloor - \\lfloor 100/30 \\rfloor = 33 - 3 = 30$.\nBanyak angka = $60 - 30 = 30$."
+    "pembahasan": "Habis dibagi 3 dan 5 berarti habis dibagi $\\text{KPK}(3, 5) = 15$.\nBilangan kelipatan 15 antara 100 dan 1000:\n- Antara 100 dan 1000 (yaitu 105 s.d. 995):\nJumlah kelipatan 15 = $\\lfloor 999/15 \\rfloor - \\lfloor 100/15 \\rfloor = 66 - 6 = 60$.\nKelipatan 30 antara 100 dan 1000:\nJumlah kelipatan 30 = $\\lfloor 999/30 \\rfloor - \\lfloor 100/30 \\rfloor = 33 - 3 = 30$.\nBanyak angka = $60 - 30 = 30$.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "1/2 + 1/6 + 1/12 + 1/20 + ... + 1/9900 =",
@@ -367,7 +392,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "a",
-    "pembahasan": "Gunakan Deret Teleskopik:\n$\\frac{1}{n(n+1)} = \\frac{1}{n} - \\frac{1}{n+1}$\n$\\frac{1}{1 \\times 2} + \\frac{1}{2 \\times 3} + \\frac{1}{3 \\times 4} + \\dots + \\frac{1}{99 \\times 100}$\n$= (1 - 1/2) + (1/2 - 1/3) + \\dots + (1/99 - 1/100)$\n$= 1 - 1/100 = 99/100$."
+    "pembahasan": "Gunakan Deret Teleskopik:\n$\\frac{1}{n(n+1)} = \\frac{1}{n} - \\frac{1}{n+1}$\n$\\frac{1}{1 \\times 2} + \\frac{1}{2 \\times 3} + \\frac{1}{3 \\times 4} + \\dots + \\frac{1}{99 \\times 100}$\n$= (1 - 1/2) + (1/2 - 1/3) + \\dots + (1/99 - 1/100)$\n$= 1 - 1/100 = 99/100$.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Deskripsi Untuk Soal Nomor 23 dan 24",
@@ -377,7 +403,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Informasi Deskripsi",
-    "pembahasan": "Sistem Persamaan Linear 2 Variabel: $x + y = 112$ dan $2x + 4y = 310$."
+    "pembahasan": "Sistem Persamaan Linear 2 Variabel: $x + y = 112$ dan $2x + 4y = 310$.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Berapa ekorkah binatang yang berkaki dua?",
@@ -392,7 +419,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "c",
-    "pembahasan": "Misal $x$ = binatang kaki dua, $y$ = binatang kaki empat.\n$x + y = 112 \\implies 2x + 2y = 224$\n$2x + 4y = 310$\nKurangkan: $2y = 86 \\implies y = 43$.\n$x = 112 - 43 = 69$ ekor."
+    "pembahasan": "Misal $x$ = binatang kaki dua, $y$ = binatang kaki empat.\n$x + y = 112 \\implies 2x + 2y = 224$\n$2x + 4y = 310$\nKurangkan: $2y = 86 \\implies y = 43$.\n$x = 112 - 43 = 69$ ekor.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Berapa ekorkah binatang yang berkaki empat?",
@@ -407,7 +435,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "d",
-    "pembahasan": "Berdasarkan perhitungan dari nomor 23, jumlah binatang berkaki empat ($y$) adalah 43 ekor."
+    "pembahasan": "Berdasarkan perhitungan dari nomor 23, jumlah binatang berkaki empat ($y$) adalah 43 ekor.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Diberikan enam pulau yang saling terisolasi yang dilambangkan sebagai lingkaran. Garis putus-putus melambangkan jembatan yang dapat dibangun antara pulau-pulau. Angka di dekat garis putus-putus melambangkan biaya untuk membangun jembatan tersebut. Berapakan minimal jumlah jembatan yang harus dibangun untuk menghubungkan enam pulau tersebut sehingga paling sedikit ada satu rute yang untuk mengunjungi antara setiap pasang pulau?",
@@ -422,7 +451,8 @@
     "gambar_url": "https://www.kujawab.com/r2/images/problems/oskkom11-25.png",
     "gambar_lokal": "../gambar_kabupaten/soal_30_kab_2011.png",
     "jawaban_benar": "b",
-    "pembahasan": "Untuk menghubungkan $N$ buah simpul/pulau agar menjadi satu komponen terhubung (Spanning Tree), jumlah sisi/jembatan minimal yang dibutuhkan adalah $N - 1 = 6 - 1 = 5$ jembatan."
+    "pembahasan": "Untuk menghubungkan $N$ buah simpul/pulau agar menjadi satu komponen terhubung (Spanning Tree), jumlah sisi/jembatan minimal yang dibutuhkan adalah $N - 1 = 6 - 1 = 5$ jembatan.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Sebuah lingkaran akan dibagi-bagi menjadi sejumlah bidang yang dibentuk dengan menggambar garis lurus yang memotong dua tepi lingkaran. Dengan menggambar 3 garis, berapa bidang maksimal yang dihasilkan?",
@@ -437,7 +467,8 @@
     "gambar_url": "https://www.kujawab.com/r2/images/problems/oskkom11-26.png",
     "gambar_lokal": "../gambar_kabupaten/soal_31_kab_2011.png",
     "jawaban_benar": "c",
-    "pembahasan": "Jumlah bidang maksimal yang dibentuk oleh $n$ garis pada lingkaran dinyatakan oleh rumus $L_n = \\frac{n(n+1)}{2} + 1$.\nUntuk $n = 3$:\n$L_3 = \\frac{3 \\times 4}{2} + 1 = 6 + 1 = 7$ bidang."
+    "pembahasan": "Jumlah bidang maksimal yang dibentuk oleh $n$ garis pada lingkaran dinyatakan oleh rumus $L_n = \\frac{n(n+1)}{2} + 1$.\nUntuk $n = 3$:\n$L_3 = \\frac{3 \\times 4}{2} + 1 = 6 + 1 = 7$ bidang.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Pak Birla beserta istri dan Pak Tata beserta istri bertanding pada turnamen catur (sistem gugur). Dari 3 pertandingan yang dimainkan: 1) Hanya pada pertandingan pertama, suami dan istri bertanding 2) Laki-laki memenangkan 2 pertandingan dan perempuan memenangkan hanya 1 pertandingan 3) Keluarga Birla memenangkan pertandingan lebih banyak daripada keluarga Tata 4) Siapa yang kalah tidak bisa bermain untuk pertandingan selanjutnya. Siapa yang tidak pernah kalah?",
@@ -452,7 +483,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "d",
-    "pembahasan": "Turnamen 4 orang sistem gugur terdiri dari 3 pertandingan total (2 semifinal, 1 final).\n- Pertandingan 1 (suami vs istri): misal Pak Birla vs Bu Birla.\n- Keluarga Birla menang lebih banyak $\\implies$ Pak Birla melaju ke final dan menjuarai turnamen tanpa pernah kalah."
+    "pembahasan": "Turnamen 4 orang sistem gugur terdiri dari 3 pertandingan total (2 semifinal, 1 final).\n- Pertandingan 1 (suami vs istri): misal Pak Birla vs Bu Birla.\n- Keluarga Birla menang lebih banyak $\\implies$ Pak Birla melaju ke final dan menjuarai turnamen tanpa pernah kalah.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Sebuah password (kata sandi) yang terdiri dari 5 angka. Angka ke-4 lebih besar daripada angka ke-2 dengan selisih 4. Sementara angka ke-3 kurang dari angka ke-2 dengan selisih 3. Angka pertama adalah 3 kali lipat angka terakhir. Ada 3 pasang angka dengan jumlah 11. Berapakah angka ke-4 dari password tersebut?",
@@ -467,7 +499,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "a",
-    "pembahasan": "Misalkan password = $d_1 d_2 d_3 d_4 d_5$.\n- $d_4 = d_2 + 4$\n- $d_3 = d_2 - 3$\n- $d_1 = 3 \\times d_5$\nUji $d_5 = 3 \\implies d_1 = 9$.\nJika $d_2 = 5 \\implies d_4 = 9, d_3 = 2$.\nPassword = 9 5 2 9 3.\nPasangan berjumlah 11: (9,2), (9,2), (2,9) $\\implies 3$ pasang.\nMaka angka ke-4 ($d_4$) adalah 9."
+    "pembahasan": "Misalkan password = $d_1 d_2 d_3 d_4 d_5$.\n- $d_4 = d_2 + 4$\n- $d_3 = d_2 - 3$\n- $d_1 = 3 \\times d_5$\nUji $d_5 = 3 \\implies d_1 = 9$.\nJika $d_2 = 5 \\implies d_4 = 9, d_3 = 2$.\nPassword = 9 5 2 9 3.\nPasangan berjumlah 11: (9,2), (9,2), (2,9) $\\implies 3$ pasang.\nMaka angka ke-4 ($d_4$) adalah 9.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Ada dua orang yang berdiri pada sebuah jalan. Seseorang berkata pada yang lain, \"Aku punya 3 anak, hasil perkalian umur mereka ada 36. Berapa umur anak PALING TUA?\" ... \"Semua Anak sudah berusia lebih dari satu tahun\". Berapa umur anak PALING TUA?",
@@ -482,7 +515,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "b",
-    "pembahasan": "Faktorisasi 36 menjadi 3 bilangan bulat $> 1$ (semua lebih dari 1 tahun):\n- 2, 2, 9 (jumlah = 13)\n- 2, 3, 6 (jumlah = 11)\n- 3, 3, 4 (jumlah = 10)\nInformasi \"semua anak $> 1$ tahun\" secara unik menentukan kombinasi 2, 3, 6 dengan anak paling tua berumur 6 tahun."
+    "pembahasan": "Faktorisasi 36 menjadi 3 bilangan bulat $> 1$ (semua lebih dari 1 tahun):\n- 2, 2, 9 (jumlah = 13)\n- 2, 3, 6 (jumlah = 11)\n- 3, 3, 4 (jumlah = 10)\nInformasi \"semua anak $> 1$ tahun\" secara unik menentukan kombinasi 2, 3, 6 dengan anak paling tua berumur 6 tahun.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Joko sering berbohong (jangan ditiru). Dia hanya jujur sehari dalam seminggu. Satu hari dia berkata: \"Aku berbohong pada Senin dan Selasa\". Pada hari selanjutnya dia berkata: \"Hari ini adalah salah satu dari hari Minggu, Sabtu atau Kamis\". Pada hari selanjutnya dia berkata: \"Aku berbohong pada Jum'at dan Rabu\". Pada hari apa dia berkata jujur?",
@@ -497,7 +531,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "e",
-    "pembahasan": "Analisis pernyataan 3 hari berturut-turut $H_1, H_2, H_3$:\nJika Joko jujur pada hari Minggu ($H_3$ = Minggu), maka pernyataan di hari Minggu \"Aku berbohong pada Jum'at dan Rabu\" bernilai BENAR. Hari-hari sebelumnya dia berbohong (termasuk Sabtu $H_2$ dan Jumat $H_1$)."
+    "pembahasan": "Analisis pernyataan 3 hari berturut-turut $H_1, H_2, H_3$:\nJika Joko jujur pada hari Minggu ($H_3$ = Minggu), maka pernyataan di hari Minggu \"Aku berbohong pada Jum'at dan Rabu\" bernilai BENAR. Hari-hari sebelumnya dia berbohong (termasuk Sabtu $H_2$ dan Jumat $H_1$).",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Ada berapa banyak bilangan di antara 10 sampai dengan 100 yang habis dibagi 3?",
@@ -512,7 +547,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "d",
-    "pembahasan": "Bilangan terkecil $> 10$ yang habis dibagi 3 adalah 12.\nBilangan terbesar $< 100$ yang habis dibagi 3 adalah 99.\nBanyaknya bilangan = $\\frac{99 - 12}{3} + 1 = \\frac{87}{3} + 1 = 29 + 1 = 30$."
+    "pembahasan": "Bilangan terkecil $> 10$ yang habis dibagi 3 adalah 12.\nBilangan terbesar $< 100$ yang habis dibagi 3 adalah 99.\nBanyaknya bilangan = $\\frac{99 - 12}{3} + 1 = \\frac{87}{3} + 1 = 29 + 1 = 30$.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Deskripsi Untuk Soal Nomor 32 dan 34",
@@ -522,7 +558,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Informasi Deskripsi",
-    "pembahasan": "Pemodelan hubungan tinggi dan berat badan 6 orang."
+    "pembahasan": "Pemodelan hubungan tinggi dan berat badan 6 orang.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Siapakah di antara mereka yang dapat dipastikan lebih tinggi dan sekaligus lebih ringan dari Cici.",
@@ -537,7 +574,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "c",
-    "pembahasan": "Dari deskripsi:\n- Tinggi: Gayun > Cici (Cici lebih pendek dari Gayun)\n- Berat: Cici > Gayun (Gayun lebih ringan dari Cici)\nJadi Gayun dipastikan lebih tinggi dan sekaligus lebih ringan dari Cici."
+    "pembahasan": "Dari deskripsi:\n- Tinggi: Gayun > Cici (Cici lebih pendek dari Gayun)\n- Berat: Cici > Gayun (Gayun lebih ringan dari Cici)\nJadi Gayun dipastikan lebih tinggi dan sekaligus lebih ringan dari Cici.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Berapa banyak orang yang mungkin lebih berat dan sekaligus lebih tinggi dari Gayun?",
@@ -552,7 +590,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "b",
-    "pembahasan": "Orang yang lebih tinggi dari Gayun adalah Heni.\nCek apakah Heni bisa lebih berat dari Gayun: Mungkinkah Heni > Gayun dalam berat? Ya, tidak ada kontradiksi.\nMaka maksimal 1 orang (yaitu Heni)."
+    "pembahasan": "Orang yang lebih tinggi dari Gayun adalah Heni.\nCek apakah Heni bisa lebih berat dari Gayun: Mungkinkah Heni > Gayun dalam berat? Ya, tidak ada kontradiksi.\nMaka maksimal 1 orang (yaitu Heni).",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Jika semua Aps adalah Eps, semua Eps adalah Ops, dan semua Ops adalah Ups, maka manakah yang tidak benar?",
@@ -567,7 +606,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "e",
-    "pembahasan": "Hierarki himpunan: Aps $\\subseteq$ Eps $\\subseteq$ Ops $\\subseteq$ Ups.\n- \"Semua Ops adalah Aps\" bernilai SALAH karena Aps adalah himpunan bagian dari Ops, bukan sebaliknya."
+    "pembahasan": "Hierarki himpunan: Aps $\\subseteq$ Eps $\\subseteq$ Ops $\\subseteq$ Ups.\n- \"Semua Ops adalah Aps\" bernilai SALAH karena Aps adalah himpunan bagian dari Ops, bukan sebaliknya.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Perhatikan gambar persegi ajaib berukuran 4x4 di bawah ini: 4 ? 5 X; 14 Z 11 ?; ? 6 Y 3; 1 ? 8 13. Jika persegi ajaib tersebut diisi bilangan bulat dari 1 sampai dengan 16 sedemikian rupa sehingga total bilangan-bilangan dalam setiap kolom/baris/diagonal adalah sama, maka X + Y + Z = ...",
@@ -582,7 +622,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "d",
-    "pembahasan": "Jumlah ajaib persegi $4 \\times 4$ untuk angka 1-16 adalah $S = \\frac{16 \\times 17}{2 \\times 4} = 34$.\nDengan menyelesaikan nilai sel ajaib:\n- $X = 15$\n- $Y = 9$\n- $Z = 7$\n$X + Y + Z = 15 + 9 + 7 = 31$."
+    "pembahasan": "Jumlah ajaib persegi $4 \\times 4$ untuk angka 1-16 adalah $S = \\frac{16 \\times 17}{2 \\times 4} = 34$.\nDengan menyelesaikan nilai sel ajaib:\n- $X = 15$\n- $Y = 9$\n- $Z = 7$\n$X + Y + Z = 15 + 9 + 7 = 31$.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Perhatikan potongan program berikut: repeat bebek := bebek + 1; ayam := ayam - bebek; until ayam > bebek; Manakah pasangan nilai (ayam,bebek) yang akan dicetak?",
@@ -597,7 +638,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "e",
-    "pembahasan": "Awalnya `ayam = 100`, `bebek = 5`.\nIterasi 1: `bebek = 6`, `ayam = 94`. Kondisi `until 94 > 6` bernilai TRUE!\nLoop langsung BERHENTI pada iterasi pertama, mencetak `94 dan 6`. Jika dikategorikan kesalahan logika pengujian, opsi e berlaku jika kondisi dibalik."
+    "pembahasan": "Awalnya `ayam = 100`, `bebek = 5`.\nIterasi 1: `bebek = 6`, `ayam = 94`. Kondisi `until 94 > 6` bernilai TRUE!\nLoop langsung BERHENTI pada iterasi pertama, mencetak `94 dan 6`. Jika dikategorikan kesalahan logika pengujian, opsi e berlaku jika kondisi dibalik.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Perhatikan Program sebagai berikut: berapakah outputnya jika diinputkan n = 97",
@@ -612,7 +654,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "b",
-    "pembahasan": "Tracing nilai:\nSaat `i = n - 1` (yaitu 96), `n := 96 mod 97 = 96`.\nPada iterasi-iterasi berikutnya, nilai `n` terus mengecil hingga `n := i mod n` bernilai 0 saat `i` membagi habis `n`."
+    "pembahasan": "Tracing nilai:\nSaat `i = n - 1` (yaitu 96), `n := 96 mod 97 = 96`.\nPada iterasi-iterasi berikutnya, nilai `n` terus mengecil hingga `n := i mod n` bernilai 0 saat `i` membagi habis `n`.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Berapa kali '*' ditulis dilayar jika input n adalah 20?",
@@ -627,7 +670,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "d",
-    "pembahasan": "Tracing nilai $i$ dengan $n = 20$:\n- $i = 4 < 20 \\implies$ cetak 4 kali '*'\n- $i = 8 < 20 \\implies$ cetak 4 kali '*'\n- $i = 12 < 20 \\implies$ cetak 4 kali '*'\n- $i = 16 < 20 \\implies$ cetak 4 kali '*'\n- $i = 20$, tidak $< 20 \\implies$ tidak mencetak.\nTotal cetak '*' = $4 \\times 4 = 16$ kali."
+    "pembahasan": "Tracing nilai $i$ dengan $n = 20$:\n- $i = 4 < 20 \\implies$ cetak 4 kali '*'\n- $i = 8 < 20 \\implies$ cetak 4 kali '*'\n- $i = 12 < 20 \\implies$ cetak 4 kali '*'\n- $i = 16 < 20 \\implies$ cetak 4 kali '*'\n- $i = 20$, tidak $< 20 \\implies$ tidak mencetak.\nTotal cetak '*' = $4 \\times 4 = 16$ kali.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Berapakah nilai n minimal agar adadeh(n) lebih dari 200?",
@@ -641,8 +685,9 @@
     "kode": "function adadeh(n : longint);\nvar i,j,k : longint;\nbegin\n adadeh:=0;\n for i:=1 to n do\n for j:=1 to n+1 do\n for k:=1 to n+2 do\n adadeh:=adadeh+1;\n adadeh:=adadeh div 6;\nend;",
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "e",
-    "pembahasan": "Fungsi menghitung $\\text{adadeh}(n) = \\lfloor \\frac{n(n+1)(n+2)}{6} \\rfloor$.\n- $n = 5 \\implies \\frac{5 \\times 6 \\times 7}{6} = 35$\n- $n = 6 \\implies \\frac{6 \\times 7 \\times 8}{6} = 56$\n- $n = 10 \\implies \\frac{10 \\times 11 \\times 12}{6} = 220 > 200$.\nMaka nilai $n$ minimal agar $> 200$ adalah 10 (opsi b)."
+    "jawaban_benar": "b",
+    "pembahasan": "Fungsi menghitung $\\text{adadeh}(n) = \\lfloor \\frac{n(n+1)(n+2)}{6} \\rfloor$.\n- $n = 5 \\implies \\frac{5 \\times 6 \\times 7}{6} = 35$\n- $n = 6 \\implies \\frac{6 \\times 7 \\times 8}{6} = 56$\n- $n = 10 \\implies \\frac{10 \\times 11 \\times 12}{6} = 220 > 200$.\nMaka nilai $n$ minimal agar $> 200$ adalah 10 (opsi b).",
+    "tingkat_kesulitan": "sulit"
   },
   {
     "soal": "Berapakah hasil dari a(5)?",
@@ -657,7 +702,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "b",
-    "pembahasan": "Tracing fungsi $a(n)$:\n- $a(0) = 0$\n- $a(1) = 1 - 1(0) = 1$\n- $a(2) = 1 - 2(1) = -1$\n- $a(3) = 1 - 3(-1) = 4$\n- $a(4) = 1 - 4(4) = -15$\n- $a(5) = 1 - 5(-15) = 1 + 75 = 76$ (atau -76 berdasarkan konversi tanda)."
+    "pembahasan": "Tracing fungsi $a(n)$:\n- $a(0) = 0$\n- $a(1) = 1 - 1(0) = 1$\n- $a(2) = 1 - 2(1) = -1$\n- $a(3) = 1 - 3(-1) = 4$\n- $a(4) = 1 - 4(4) = -15$\n- $a(5) = 1 - 5(-15) = 1 + 75 = 76$ (atau -76 berdasarkan konversi tanda).",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Manakah dari ekspresi berikut yang bernilai sama dengan nilai c di baris terakhir program ?",
@@ -671,7 +717,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "e",
-    "pembahasan": "Evaluasi aljabar Boolean baris demi baris menunjukkan nilai akhir $c$ selalu bernilai konstan atau ekivalen yang tidak ada di opsi a, b, d."
+    "pembahasan": "Evaluasi aljabar Boolean baris demi baris menunjukkan nilai akhir $c$ selalu bernilai konstan atau ekivalen yang tidak ada di opsi a, b, d.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Berapa banyak huruf 'K' yang tertulis bila dipanggil TOKI(20)?",
@@ -686,7 +733,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "c",
-    "pembahasan": "Jejak pemanggilan rekursif Collatz untuk $k = 20$:\n$20 \\to 10 \\to 5 \\to 16 \\to 8 \\to 4 \\to 2 \\to 1$.\nUrutan kembalinya rekursi mengevaluasi $k \\pmod 5 = 3$ untuk nilai $k \\in \\{20, 10, 5, 16, 8, 4, 2\\}$.\nNilai dengan $k \\pmod 5 = 3$ adalah $k = 8$ dan $k = 3$, menghasilkan total 3 kali huruf 'K'."
+    "pembahasan": "Jejak pemanggilan rekursif Collatz untuk $k = 20$:\n$20 \\to 10 \\to 5 \\to 16 \\to 8 \\to 4 \\to 2 \\to 1$.\nUrutan kembalinya rekursi mengevaluasi $k \\pmod 5 = 3$ untuk nilai $k \\in \\{20, 10, 5, 16, 8, 4, 2\\}$.\nNilai dengan $k \\pmod 5 = 3$ adalah $k = 8$ dan $k = 3$, menghasilkan total 3 kali huruf 'K'.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Jika array a berisi (-3, 8, 17, -10, 7, -5, -9, 2, 8, 1), apa output yang dihasilkan jika potongan program tersebut dieksekusi?",
@@ -701,7 +749,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "c",
-    "pembahasan": "Program mengimplementasikan algoritma **Kadane** (Maximum Subarray Sum).\nSubarray contiguous dengan jumlah terbesar dari `[-3, 8, 17, -10, 7, -5, -9, 2, 8, 1]` adalah `[8, 17]` yang berjumlah 25."
+    "pembahasan": "Program mengimplementasikan algoritma **Kadane** (Maximum Subarray Sum).\nSubarray contiguous dengan jumlah terbesar dari `[-3, 8, 17, -10, 7, -5, -9, 2, 8, 1]` adalah `[8, 17]` yang berjumlah 25.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Jika array a berisi (8, 3, 5, 21, x, 6, 10, 4), berapakah nilai x yang menghasilkan output maksimal jika potongan program tersebut dieksekusi?",
@@ -716,7 +765,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "a",
-    "pembahasan": "Mencari nilai $x$ agar jumlah maksimum subarray contiguous mencapai batas optimal dari susunan elemen pendukung."
+    "pembahasan": "Mencari nilai $x$ agar jumlah maksimum subarray contiguous mencapai batas optimal dari susunan elemen pendukung.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Apa output di layar jika dipanggil dengan parameter esrever(2,100)?",
@@ -731,7 +781,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "c",
-    "pembahasan": "Awalnya `i = 2`, `j = 100`.\n1. `k := 2`\n2. `i := 100`\n3. `j := 2`\n`writeln(j, ' ', i)` akan mencetak nilai `j` (2) lalu `i` (100) $\\implies$ `2 100`."
+    "pembahasan": "Awalnya `i = 2`, `j = 100`.\n1. `k := 2`\n2. `i := 100`\n3. `j := 2`\n`writeln(j, ' ', i)` akan mencetak nilai `j` (2) lalu `i` (100) $\\implies$ `2 100`.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Untuk f(8) program di atas menghitung:",
@@ -746,7 +797,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "d",
-    "pembahasan": "Penelusuran rekursif `f(8)`:\n`f(8) = 8 + f(7) = 8 + 7 + f(6) = ... = 8 + 7 + 6 + 5 + 4 + 3 + 2 + 1 + 0`."
+    "pembahasan": "Penelusuran rekursif `f(8)`:\n`f(8) = 8 + f(7) = 8 + 7 + f(6) = ... = 8 + 7 + 6 + 5 + 4 + 3 + 2 + 1 + 0`.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Dengan sembarang harga n > 0, keluaran 'Hello' akan dicetak berulang-ulang dalam sejumlah baris yang",
@@ -761,7 +813,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "e",
-    "pembahasan": "Ada 3 perulangan bersarang dari $1$ hingga $n$.\nTotal eksekusi = $n \\times n \\times n = n^3$.\nSehingga merupakan fungsi kubik (pangkat 3) dari $n$."
+    "pembahasan": "Ada 3 perulangan bersarang dari $1$ hingga $n$.\nTotal eksekusi = $n \\times n \\times n = n^3$.\nSehingga merupakan fungsi kubik (pangkat 3) dari $n$.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Apabila diberikan nilai x=3, y=5 dan z=8, berapakah output dari program tersebut?",
@@ -776,7 +829,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "b",
-    "pembahasan": "Diberikan `x = 3`, `y = 5`, `z = 8`:\n1. `if x > y` (3 > 5) $\\implies$ FALSE.\n2. Masuk ke blok `else`:\n3. `if z > y` (8 > 5) $\\implies$ TRUE.\n4. `t := z` (t := 8).\nProgram mencetak 8."
+    "pembahasan": "Diberikan `x = 3`, `y = 5`, `z = 8`:\n1. `if x > y` (3 > 5) $\\implies$ FALSE.\n2. Masuk ke blok `else`:\n3. `if z > y` (8 > 5) $\\implies$ TRUE.\n4. `t := z` (t := 8).\nProgram mencetak 8.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Berapakah nilai Init sehingga program di atas menghasilkan output x tertulis 90 ?",
@@ -791,7 +845,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "d",
-    "pembahasan": "Program menghitung $x = \\sum_{i=0}^{\\text{Init}-1} 2i = 2 \\frac{(\\text{Init}-1)\\text{Init}}{2} = \\text{Init}(\\text{Init}-1)$.\nKita inginkan $\\text{Init}(\\text{Init}-1) = 90$.\n$\\text{Init}^2 - \\text{Init} - 90 = 0 \\implies (\\text{Init}-10)(\\text{Init}+9) = 0$.\nNilai Init positif = 10."
+    "pembahasan": "Program menghitung $x = \\sum_{i=0}^{\\text{Init}-1} 2i = 2 \\frac{(\\text{Init}-1)\\text{Init}}{2} = \\text{Init}(\\text{Init}-1)$.\nKita inginkan $\\text{Init}(\\text{Init}-1) = 90$.\n$\\text{Init}^2 - \\text{Init} - 90 = 0 \\implies (\\text{Init}-10)(\\text{Init}+9) = 0$.\nNilai Init positif = 10.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Manakah program pseudo-pascal yang merupakan program dari tahapan-tahapan tersebut?",
@@ -806,6 +861,7 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "b",
-    "pembahasan": "Tahapan deskripsi:\n1. Syarat ganjil x: `if (x mod 2 = 1) then hasil := hasil + y;`\n2. Pembagian x dengan 2 dibulatkan ke bawah: `x := x div 2;`\n3. Perkalian y dengan 2: `y := y * 2;`\nPilihan b secara persis mencerminkan semua instruksi algoritma perkalian Rusia (Peasant Multiplication) tersebut."
+    "pembahasan": "Tahapan deskripsi:\n1. Syarat ganjil x: `if (x mod 2 = 1) then hasil := hasil + y;`\n2. Pembagian x dengan 2 dibulatkan ke bawah: `x := x div 2;`\n3. Perkalian y dengan 2: `y := y * 2;`\nPilihan b secara persis mencerminkan semua instruksi algoritma perkalian Rusia (Peasant Multiplication) tersebut.",
+    "tingkat_kesulitan": "sedang"
   }
 ]

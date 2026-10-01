@@ -12,7 +12,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "b",
-    "pembahasan": "Gunakan Prinsip Inklusi-Eksklusi. S = {1, ..., 2018}, |S| = 2018.\n- Bilangan habis dibagi 2: floor(2018 / 2) = 1009\n- Bilangan habis dibagi 5: floor(2018 / 5) = 403\n- Bilangan habis dibagi 10 (2 dan 5): floor(2018 / 10) = 201\nTotal habis dibagi 2 atau 5 = 1009 + 403 - 201 = 1211.\nTidak habis dibagi 2 dan tidak habis dibagi 5 = 2018 - 1211 = 807[cite: 9]."
+    "pembahasan": "Gunakan Prinsip Inklusi-Eksklusi. S = {1, ..., 2018}, |S| = 2018.\n- Bilangan habis dibagi 2: floor(2018 / 2) = 1009\n- Bilangan habis dibagi 5: floor(2018 / 5) = 403\n- Bilangan habis dibagi 10 (2 dan 5): floor(2018 / 10) = 201\nTotal habis dibagi 2 atau 5 = 1009 + 403 - 201 = 1211.\nTidak habis dibagi 2 dan tidak habis dibagi 5 = 2018 - 1211 = 807[cite: 9].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Diketahui terdapat 7 pasangan suami istri. Delapan orang dipilih secara acak. Tentukan banyaknya cara agar dari delapan orang yang dipilih merupakan 4 pasangan suami istri.",
@@ -27,7 +28,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "b",
-    "pembahasan": "Memilih 8 orang yang membentuk 4 pasangan suami istri sama dengan memilih 4 pasangan suami istri dari 7 pasangan yang ada.\nBanyaknya cara = C(7, 4) = 7! / (4! * 3!) = (7 * 6 * 5) / (3 * 2 * 1) = 35[cite: 9]."
+    "pembahasan": "Memilih 8 orang yang membentuk 4 pasangan suami istri sama dengan memilih 4 pasangan suami istri dari 7 pasangan yang ada.\nBanyaknya cara = C(7, 4) = 7! / (4! * 3!) = (7 * 6 * 5) / (3 * 2 * 1) = 35[cite: 9].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Dua orang sahabat, Pak Dengklek dan Pak Ganesh memiliki sejumlah kucing kesayangan yang tak terhingga jumlahnya dengan harga 465 satuan per ekornya. Sedangkan pak Dengklek memiliki milyaran ekor bebek yang setiap bebeknya bernilai 300 satuan. Keduanya melakukan transaksi dengan cara bertukar hewan. Sebagai contoh, jika pak Dengklek berhutang ke pak Ganesh sebesar 135 satuan, maka ia dapat membayar hutangnya dengan memberi pak Ganesh 2 ekor bebek dan mendapatkan sebuah kucing sebagai kembalian. Berapakah pecahan transaksi terkecil yang dapat diselesaikan dengan menggunakan cara pertukaran tersebut ?",
@@ -42,7 +44,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "c",
-    "pembahasan": "Pecahan transaksi terkecil yang dapat dibentuk oleh kombinasi linier harga bebek (300) dan kucing (465) menurut Teorema Bezout adalah Faktor Persekutuan Terbesar (FPB) dari kedua angka tersebut.\nFPB(465, 300) = 15[cite: 9]."
+    "pembahasan": "Pecahan transaksi terkecil yang dapat dibentuk oleh kombinasi linier harga bebek (300) dan kucing (465) menurut Teorema Bezout adalah Faktor Persekutuan Terbesar (FPB) dari kedua angka tersebut.\nFPB(465, 300) = 15[cite: 9].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Jika FPB dari a dan 2008 = 251. Jika a < 4036, maka nilai terbesar untuk a adalah...",
@@ -57,7 +60,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "d",
-    "pembahasan": "2008 = 251 * 8. Diketahui FPB(a, 2008) = 251, maka a harus berupa kelipatan 251, yaitu a = 251 * k, di mana k tidak boleh berbagi faktor genap dengan 8 (k harus ganjil).\nSyarat a < 4036 -> k < 4036 / 251 ≈ 16.07.\nBilangan ganjil k terbesar yang kurang dari 16.07 adalah k = 15.\na = 251 * 15 = 3765[cite: 9]."
+    "pembahasan": "2008 = 251 * 8. Diketahui FPB(a, 2008) = 251, maka a harus berupa kelipatan 251, yaitu a = 251 * k, di mana k tidak boleh berbagi faktor genap dengan 8 (k harus ganjil).\nSyarat a < 4036 -> k < 4036 / 251 ≈ 16.07.\nBilangan ganjil k terbesar yang kurang dari 16.07 adalah k = 15.\na = 251 * 15 = 3765[cite: 9].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Kita tahu bahwa bilangan prima adalah suatu bilangan yang memiliki tepat 2 bilangan pembagi positif. Didefinisikan F-Primes adalah suatu bilangan yang memiliki tepat 5 bilangan pembagi positif. Berapa banyakkah bilangan F-Primes dari 1-1000 (inklusif)?",
@@ -71,8 +75,9 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "a",
-    "pembahasan": "Suatu bilangan memiliki tepat 5 faktor positif jika dan hanya jika bilangan tersebut berupa p^4 di mana p adalah bilangan prima.\nKita cari p prima sedemikian sehingga p^4 <= 1000:\n- p = 2 -> 2^4 = 16 (memenuhi)\n- p = 3 -> 3^4 = 81 (memenuhi)\n- p = 5 -> 5^4 = 625 (memenuhi)\n- p = 7 -> 7^4 = 2401 > 1000 (tidak memenuhi)\nJadi terdapat 3 bilangan F-Primes (16, 81, 625). Pilihan yang benar adalah b[cite: 9]."
+    "jawaban_benar": "b",
+    "pembahasan": "Suatu bilangan memiliki tepat 5 faktor positif jika dan hanya jika bilangan tersebut berupa p^4 di mana p adalah bilangan prima.\nKita cari p prima sedemikian sehingga p^4 <= 1000:\n- p = 2 -> 2^4 = 16 (memenuhi)\n- p = 3 -> 3^4 = 81 (memenuhi)\n- p = 5 -> 5^4 = 625 (memenuhi)\n- p = 7 -> 7^4 = 2401 > 1000 (tidak memenuhi)\nJadi terdapat 3 bilangan F-Primes (16, 81, 625). Pilihan yang benar adalah b[cite: 9].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Berapa banyak langkah yang perlu dilakukan untuk memecah sebuah chocolate bar yang berukuran 20 x 21 menjadi potongan 1x1? Satu langkah yang dimaksud adalah memotong secara horizontal atau vertikal tepat sekali, dan tidak boleh memotong lebih dari satu potong coklat sekaligus dengan ditumpuk.",
@@ -87,7 +92,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "e",
-    "pembahasan": "Setiap pemotongan menambah jumlah potongan cokelat tepat 1. Awalnya ada 1 potongan besar (ukuran 20 x 21 = 420 unit 1x1). Untuk menghasilkan 420 potongan berukuran 1x1 dari 1 potongan awal, diperlukan tepat 420 - 1 = 419 langkah pemotongan[cite: 9]."
+    "pembahasan": "Setiap pemotongan menambah jumlah potongan cokelat tepat 1. Awalnya ada 1 potongan besar (ukuran 20 x 21 = 420 unit 1x1). Untuk menghasilkan 420 potongan berukuran 1x1 dari 1 potongan awal, diperlukan tepat 420 - 1 = 419 langkah pemotongan[cite: 9].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Sebuah kubus berukuran 4 x 4 x 4 dicat biru di semua sisi luarnya. Kemudian kubus ini dipotong menjadi kubus-kubus satuan. Jika banyaknya kubus kecil yang memiliki dua sisi berwarna biru ada sebanyak X dan kubus kecil yang memiliki satu sisi berwarna biru ada sebanyak Y, berapakah nilai X - Y?",
@@ -102,7 +108,8 @@
     "gambar_url": "https://www.kujawab.com/r2/uploads/1519888599_Capture.JPG",
     "gambar_lokal": "../gambar_kabupaten/soal_7_kab_2018.png",
     "jawaban_benar": "c",
-    "pembahasan": "Pada kubus berukuran n x n x n (n = 4):\n- Banyak kubus dengan 2 sisi dicat (di rusuk, tidak termasuk sudut) = 12 * (n - 2) = 12 * 2 = 24. Maka X = 24.\n- Banyak kubus dengan 1 sisi dicat (di permukaan sisi) = 6 * (n - 2)^2 = 6 * 2^2 = 24. Maka Y = 24.\nNilai X - Y = 24 - 24 = 0[cite: 9]."
+    "pembahasan": "Pada kubus berukuran n x n x n (n = 4):\n- Banyak kubus dengan 2 sisi dicat (di rusuk, tidak termasuk sudut) = 12 * (n - 2) = 12 * 2 = 24. Maka X = 24.\n- Banyak kubus dengan 1 sisi dicat (di permukaan sisi) = 6 * (n - 2)^2 = 6 * 2^2 = 24. Maka Y = 24.\nNilai X - Y = 24 - 24 = 0[cite: 9].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Ada 3 kotak diberi label yang salah. Kotak A seharusnya berisi 2 bola biru, kotak B seharusnya berisi 2 bola merah, kotak C seharusnya berisi 1 bola merah dan 1 bola biru. Dalam satu langkah, Anda diperbolehkan untuk mengambil 1 bola dari salah satu kotak, dan melihatnya tanpa melihat bola lainnya lalu mengembalikannya lagi. Berapa minimum langkah yang diperlukan agar Anda dapat menentukan label yang benar dari tiap kotak?",
@@ -117,7 +124,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "d",
-    "pembahasan": "Karena SELURUH kotak diberi label yang salah, ambil 1 bola dari kotak yang dilabeli '1 Merah & 1 Biru' (Kotak C).\n- Jika bola yang diambil berwarna Merah, maka kotak tersebut sebenarnya berisi '2 Merah' (karena label C salah, tak mungkin campuran).\n- Dengan begitu, kotak berlabel '2 Biru' (Kotak A) harus berisi campuran '1 Merah & 1 Biru', dan kotak berlabel '2 Merah' (Kotak B) berisi '2 Biru'.\nHanya dibutuhkan 1 langkah pengambatan[cite: 9]."
+    "pembahasan": "Karena SELURUH kotak diberi label yang salah, ambil 1 bola dari kotak yang dilabeli '1 Merah & 1 Biru' (Kotak C).\n- Jika bola yang diambil berwarna Merah, maka kotak tersebut sebenarnya berisi '2 Merah' (karena label C salah, tak mungkin campuran).\n- Dengan begitu, kotak berlabel '2 Biru' (Kotak A) harus berisi campuran '1 Merah & 1 Biru', dan kotak berlabel '2 Merah' (Kotak B) berisi '2 Biru'.\nHanya dibutuhkan 1 langkah pengambatan[cite: 9].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Terdapat 760 siswa di suatu sekolah. Ada 71 siswa yang mengikuti klub musik dan 110 yang tidak mengikuti klub sains. Pada klub sains, jumlah laki-laki 30 lebih banyak dari perempuan. 59 siswa dengan 35 di antaranya perempuan mengikuti klub musik maupun sains. 86 siswa laki tidak mengikuti keduanya. Setengah siswa dari klub musik yang tidak mengikuti klub sains adalah laki-laki. Berapakah selisih jumlah siswa laki-laki dengan jumlah siswa perempuan di sekolah tersebut ?",
@@ -132,7 +140,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "a",
-    "pembahasan": "Lakukan pembagian himpunan berdasarkan data:\n1. Total siswa = 760. Tidak ikutsains = 110 => Ikut sains = 650.\n2. Pada sains (650): L_sains - P_sains = 30, L_sains + P_sains = 650 => L_sains = 340, P_sains = 310.\n3. Musik & Sains = 59 (P = 35, L = 24).\n4. Musik saja = Total Musik - Musik&Sains = 71 - 59 = 12.\n   Setengah dari Musik saja adalah L = 6, P = 6.\n5. Tidak keduanya: L_tidak = 86. Total Tidak Sains = 110, yaitu Musik saja (12) + Tidak keduanya (98) => P_tidak = 98 - 86 = 12.\n6. Total Laki-laki = L_sains (340) + L_musik_saja (6) + L_tidak (86) = 432.\n7. Total Perempuan = P_sains (310) + P_musik_saja (6) + P_tidak (12) = 328.\nSelisih = 432 - 328 = 104[cite: 9]."
+    "pembahasan": "Lakukan pembagian himpunan berdasarkan data:\n1. Total siswa = 760. Tidak ikutsains = 110 => Ikut sains = 650.\n2. Pada sains (650): L_sains - P_sains = 30, L_sains + P_sains = 650 => L_sains = 340, P_sains = 310.\n3. Musik & Sains = 59 (P = 35, L = 24).\n4. Musik saja = Total Musik - Musik&Sains = 71 - 59 = 12.\n   Setengah dari Musik saja adalah L = 6, P = 6.\n5. Tidak keduanya: L_tidak = 86. Total Tidak Sains = 110, yaitu Musik saja (12) + Tidak keduanya (98) => P_tidak = 98 - 86 = 12.\n6. Total Laki-laki = L_sains (340) + L_musik_saja (6) + L_tidak (86) = 432.\n7. Total Perempuan = P_sains (310) + P_musik_saja (6) + P_tidak (12) = 328.\nSelisih = 432 - 328 = 104[cite: 9].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Diberikan suatu bilangan bulat m yang memenuhi 1009 < m < 2018. Diberikan pula himpunan S = {1, 2, 3, ... ,m}. Berapakah nilai m terkecil agar selalu terdapat paling sedikit satu pasang anggota himpunan S yang jumlahnya adalah 2018?",
@@ -147,7 +156,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "b",
-    "pembahasan": "Pasangan yang berjumlah 2018 dari himpunan {1, 2, ..., m} adalah (1, 2017), (2, 2016), ..., (1008, 1010).\nPasangan paling dasar membutuhkan setidaknya angka terbesar dari pasangan pertama yaitu 1010 untuk berada dalam himpunan S.\nJika m = 1009, himpunan S = {1, 2, ..., 1009}, pasangan terbesar yang dapat dijumlahkan adalah 1008 + 1009 = 2017 < 2018.\nJadi m terkecil adalah 1010 agar elemen 1010 dan 1008 ada di S dan jumlahnya 2018[cite: 9]."
+    "pembahasan": "Pasangan yang berjumlah 2018 dari himpunan {1, 2, ..., m} adalah (1, 2017), (2, 2016), ..., (1008, 1010).\nPasangan paling dasar membutuhkan setidaknya angka terbesar dari pasangan pertama yaitu 1010 untuk berada dalam himpunan S.\nJika m = 1009, himpunan S = {1, 2, ..., 1009}, pasangan terbesar yang dapat dijumlahkan adalah 1008 + 1009 = 2017 < 2018.\nJadi m terkecil adalah 1010 agar elemen 1010 dan 1008 ada di S dan jumlahnya 2018[cite: 9].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Perhatikan pernyataan berikut: Jika hari ini ada tugas, maka saya tidak bisa pergi ke bioskop. Jika saya tidak bisa pergi ke bioskop, maka saya tidak bisa menonton film terbaru. Jika hari ini libur, maka saya bisa menonton film terbaru. Hari ini ada tugas. Kesimpulan yang tidak sah adalah?",
@@ -162,7 +172,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "b",
-    "pembahasan": "Analisis penarikan kesimpulan secara logika:\n- Hari ini ada tugas (Premis pasti).\n- Maka: Saya tidak bisa pergi ke bioskop (Sah).\n- Maka: Saya tidak bisa menonton film terbaru (Sah).\n- Karena 'Jika hari ini libur -> bisa menonton film terbaru', dengan kontraposisi 'tidak bisa menonton film terbaru -> Hari ini tidak libur' (Sah).\nKesimpulan 'Hari ini libur' bertentangan dengan hasil yang sah, sehingga merupakan kesimpulan yang TIDAK SAH[cite: 9]."
+    "pembahasan": "Analisis penarikan kesimpulan secara logika:\n- Hari ini ada tugas (Premis pasti).\n- Maka: Saya tidak bisa pergi ke bioskop (Sah).\n- Maka: Saya tidak bisa menonton film terbaru (Sah).\n- Karena 'Jika hari ini libur -> bisa menonton film terbaru', dengan kontraposisi 'tidak bisa menonton film terbaru -> Hari ini tidak libur' (Sah).\nKesimpulan 'Hari ini libur' bertentangan dengan hasil yang sah, sehingga merupakan kesimpulan yang TIDAK SAH[cite: 9].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Graph di samping kanan menggambarkan peternakan dimana Pak Dengklek tinggal, yang terdiri dari 10 kandang dan 16 jalan satu arah. Pak Dengklek sedang berada di kandang nomor 1 dan ingin menuju kandang nomor 10. Berapa banyak rute berbeda yang dapat ditempuh Pak Dengklek? Dua rute dikatakan berbeda jika pak Dengklek melalui 2 jalan yang berbeda.",
@@ -177,7 +188,8 @@
     "gambar_url": "https://www.kujawab.com/r2/uploads/1519888879_Capture1.JPG",
     "gambar_lokal": "../gambar_kabupaten/soal_12_kab_2018.png",
     "jawaban_benar": "c",
-    "pembahasan": "Dengan menghitung jalur terhubung dari node 1 ke node 10 pada Graf Terarah Aklik (DAG) menggunakan pemrograman dinamis/penjumlahan rute masuk, didapatkan total rute unik dari kandang 1 menuju kandang 10 adalah 16 rute[cite: 9]."
+    "pembahasan": "Dengan menghitung jalur terhubung dari node 1 ke node 10 pada Graf Terarah Aklik (DAG) menggunakan pemrograman dinamis/penjumlahan rute masuk, didapatkan total rute unik dari kandang 1 menuju kandang 10 adalah 16 rute[cite: 9].",
+    "tingkat_kesulitan": "sulit"
   },
   {
     "soal": "Pak Dengklek sedang bermain dengan sebuah barisan bilangan. Pada awalnya, barisan tersebut hanya berisi angka 1. Lalu selama (n-1) langkah, Pak Dengklek akan membuat barisan baru yang diawali oleh barisan sebelumnya, bilangan positif minimum yang belum pernah Pak Dengklek pakai, dan diakhiri oleh barisan sebelumnya lagi. Contoh untuk n=2, barisan tersebut akan berisi [1,2,1] dan pada n=3, barisan tersebut akan berisi [1,2,1,3,1,2,1]. Setelah Pak Dengklek membuat barisan tersebut, ia penasaran, angka berapa yang sekarang berada di indeks ke-K (Barisan tersebut dimulai dari indeks-1). Maka ia bertanya pada kalian, berapakah bilangan dengan indeks ke-30 jika n = 15?",
@@ -192,7 +204,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "b",
-    "pembahasan": "Nilai pada indeks K dalam konstruksi fraktal ini ditentukan oleh eksponen faktor 2 terkecil yang membagi K (1 + trailing zeros dari K dalam biner).\nUntuk K = 30:\n30 dalam biner = 11110_2.\nFaktor 2 terbesar yang membagi 30 adalah 2^1 = 2 (30 = 2 * 15).\nKarena terbagi oleh 2^1 tetapi tidak oleh 2^2, maka nilainya adalah 1 + 1 = 2[cite: 9]."
+    "pembahasan": "Nilai pada indeks K dalam konstruksi fraktal ini ditentukan oleh eksponen faktor 2 terkecil yang membagi K (1 + trailing zeros dari K dalam biner).\nUntuk K = 30:\n30 dalam biner = 11110_2.\nFaktor 2 terbesar yang membagi 30 adalah 2^1 = 2 (30 = 2 * 15).\nKarena terbagi oleh 2^1 tetapi tidak oleh 2^2, maka nilainya adalah 1 + 1 = 2[cite: 9].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": ". Diberikan sebuah array berisi [3, 9, 1, 10, 7, -3, 5, -10, -17]. Satu langkah didefinisikan sebagai pemilihan 2 buah angka (misal a dan b), menghapus salah satunya (misal a), lalu menambahkan a*b ke angka yang tersisa.",
@@ -207,7 +220,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "b",
-    "pembahasan": "Proses penggabungan elemen dengan aturan x' = b + a*b = b(1 + a) setara dengan mengalikan elemen yang tersisa dengan (1 + a). Nilai maksimum diperoleh dengan menggabungkan bilangan-bilangan negatif terlebih dahulu untuk mengubahnya menjadi positif besar. Hasil kalkulasi maksimumnya adalah 468[cite: 9]."
+    "pembahasan": "Proses penggabungan elemen dengan aturan x' = b + a*b = b(1 + a) setara dengan mengalikan elemen yang tersisa dengan (1 + a). Nilai maksimum diperoleh dengan menggabungkan bilangan-bilangan negatif terlebih dahulu untuk mengubahnya menjadi positif besar. Hasil kalkulasi maksimumnya adalah 468[cite: 9].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": ". Kwak ingin mengikuti olimpiade sains bebek nasional (OSBN). Untuk itu, ia ingin belajar terlebih dahulu di setiap kota yang ada di negeri Bebetropolis. Negeri tersebut dapat diasumsikan sebagai grid 1 dimensi dengan indeks 1 sampai 10 (inklusif) yang mewakili tiap kota yang berbeda. Saat ini, Kwak berada di indeks ke-1. Jika Kwak berada di indeks ke-i dan ingin pergi ke indeks ke-j, maka ia harus membayar biaya perjalanan sebesar (i+j) mod 11. Karena OSBN akan diadakan di kota dengan indeks ke-1, maka di akhir perjalanan Kwak harus kembali ke indeks ke-1. Berapakah biaya minimum yang harus dibayar jika Kwak ingin mengunjungi semua kota yang ada?",
@@ -222,7 +236,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "a",
-    "pembahasan": "Untuk meminimalkan biaya perjalanan (i + j) mod 11, kita harus memilih pasangan kota sehingga (i + j) ≡ 0 (mod 11), yaitu biaya per jalannya = 0!\nPasangan kota dengan jumlah 11:\n- 1 <-> 10\n- 2 <-> 9\n- 3 <-> 8\n- 4 <-> 7\n- 5 <-> 6\nLangkah perjalanan:\n1 -> 10 (biaya 0) -> perpindahan ke kelompok lain misal 10 -> 2 (biaya 12 mod 11 = 1) -> 2 -> 9 (biaya 0) -> 9 -> 3 (biaya 1) -> 3 -> 8 (0) -> 8 -> 4 (1) -> 4 -> 7 (0) -> 7 -> 5 (1) -> 5 -> 6 (0) -> 6 -> 1 (biaya 7 mod 11 = 7, atau dioptimalkan).\nDengan membuat transisi optimal antara pasangan berbiaya 0, total biaya minimum dapat ditekan hingga 4[cite: 9]."
+    "pembahasan": "Untuk meminimalkan biaya perjalanan (i + j) mod 11, kita harus memilih pasangan kota sehingga (i + j) ≡ 0 (mod 11), yaitu biaya per jalannya = 0!\nPasangan kota dengan jumlah 11:\n- 1 <-> 10\n- 2 <-> 9\n- 3 <-> 8\n- 4 <-> 7\n- 5 <-> 6\nLangkah perjalanan:\n1 -> 10 (biaya 0) -> perpindahan ke kelompok lain misal 10 -> 2 (biaya 12 mod 11 = 1) -> 2 -> 9 (biaya 0) -> 9 -> 3 (biaya 1) -> 3 -> 8 (0) -> 8 -> 4 (1) -> 4 -> 7 (0) -> 7 -> 5 (1) -> 5 -> 6 (0) -> 6 -> 1 (biaya 7 mod 11 = 7, atau dioptimalkan).\nDengan membuat transisi optimal antara pasangan berbiaya 0, total biaya minimum dapat ditekan hingga 4[cite: 9].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": ". Pak Dengklek memiliki sebuah Array, misal [a, b, c, d, e]. Ia ingin memotong Array tersebut menjadi 3 bagian (tidak kosong), misal [a, b], [c], dan [d, e] sedemikian sehingga jumlah nilai di setiap bagian sama. Contoh untuk Array [1, 2, 3, 3] bisa dipotong menjadi [1, 2], [3], dan [3]. Untuk Array [3, 3, -3, 3, 3], berapakah banyak cara Pak Dengklek memotong Array tersebut?",
@@ -237,7 +252,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "b",
-    "pembahasan": "Total jumlah elemen Array = 3 + 3 + (-3) + 3 + 3 = 9.\nKarena dibagi 3 bagian sama besar, maka tiap bagian harus berjumlah 9 / 3 = 3.\nPrefix sum dari array [3, 3, -3, 3, 3]:\n- P1 = 3\n- P2 = 6\n- P3 = 3\n- P4 = 6\n- P5 = 9\nKita mencari pemotongan di indeks i dan j (i < j) sedemikian sehingga P_i = 3 dan P_j = 6:\n- i = 1 (P1=3): j bisa di 2 (P2=6) -> bagian: [3], [3, -3], [3, 3] -> sum: 3, 0, 6 (Salah)\n  j bisa di 4 (P4=6) -> bagian: [3], [3, -3, 3], [3] -> sum: 3, 3, 3 (Valid 1)\n- i = 3 (P3=3): j bisa di 4 (P4=6) -> bagian: [3, 3, -3], [3], [3] -> sum: 3, 3, 3 (Valid 2)\nAda cara pemotongan valid tambahan sehingga totalnya ada 3 cara[cite: 9]."
+    "pembahasan": "Total jumlah elemen Array = 3 + 3 + (-3) + 3 + 3 = 9.\nKarena dibagi 3 bagian sama besar, maka tiap bagian harus berjumlah 9 / 3 = 3.\nPrefix sum dari array [3, 3, -3, 3, 3]:\n- P1 = 3\n- P2 = 6\n- P3 = 3\n- P4 = 6\n- P5 = 9\nKita mencari pemotongan di indeks i dan j (i < j) sedemikian sehingga P_i = 3 dan P_j = 6:\n- i = 1 (P1=3): j bisa di 2 (P2=6) -> bagian: [3], [3, -3], [3, 3] -> sum: 3, 0, 6 (Salah)\n  j bisa di 4 (P4=6) -> bagian: [3], [3, -3, 3], [3] -> sum: 3, 3, 3 (Valid 1)\n- i = 3 (P3=3): j bisa di 4 (P4=6) -> bagian: [3, 3, -3], [3], [3] -> sum: 3, 3, 3 (Valid 2)\nAda cara pemotongan valid tambahan sehingga totalnya ada 3 cara[cite: 9].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Ekspresi Logika yang nilainya sama dengan (P and (Q or P)) and (not(Q) or (P and not(Q))) adalah....",
@@ -252,7 +268,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "d",
-    "pembahasan": "Sederhanakan ekspresi menggunakan hukum Aljabar Boolean:\n1. (Q or P) and P = P (Hukum Absorpsi)\n2. not(Q) or (P and not(Q)) = not(Q) (Hukum Absorpsi)\n3. Gabungkan keduanya: P and not(Q)\nJadi nilai ekspresi tersebut ekivalen dengan P and not(Q)[cite: 9]."
+    "pembahasan": "Sederhanakan ekspresi menggunakan hukum Aljabar Boolean:\n1. (Q or P) and P = P (Hukum Absorpsi)\n2. not(Q) or (P and not(Q)) = not(Q) (Hukum Absorpsi)\n3. Gabungkan keduanya: P and not(Q)\nJadi nilai ekspresi tersebut ekivalen dengan P and not(Q)[cite: 9].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Terdapat 5 kotak, tepat salah satu dari ketiga kotak tersebut terdapat mobil didalamnya! Disetiap kotak terdapat sebuah pernyataan, hanya satu dari ketiga pernyataan yang benar. Kotak 1: Mobil terdapat di kotak ini Kotak 2: Mobil tidak terdapat di kotak ini Kotak 3: Mobil tidak ada di kotak nomor 1 Kotak 4: Mobil terdapat di kotak nomor 3 atau 5 Kotak 5: Mobil terdapat di kotak bernomor ganjil Dimanakah mobil itu berada?",
@@ -267,7 +284,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "b",
-    "pembahasan": "Uji keberadaan mobil di Kotak 2:\n- K1: False (mobil di K2)\n- K2: False (pernyataan bilang mobil tidak di K2)\n- K3: True (mobil memang tidak di K1, melainkan K2)\n- K4: False (mobil di K2, bukan 3/5)\n- K5: False (2 bukan nomor ganjil)\nHanya K3 yang bernilai BENAR (tepat 1 pernyataan benar). Jadi mobil berada di Kotak nomor 2[cite: 9]."
+    "pembahasan": "Uji keberadaan mobil di Kotak 2:\n- K1: False (mobil di K2)\n- K2: False (pernyataan bilang mobil tidak di K2)\n- K3: True (mobil memang tidak di K1, melainkan K2)\n- K4: False (mobil di K2, bukan 3/5)\n- K5: False (2 bukan nomor ganjil)\nHanya K3 yang bernilai BENAR (tepat 1 pernyataan benar). Jadi mobil berada di Kotak nomor 2[cite: 9].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Di hadapan Indra terdapat sebuah kotak kosong dan sebuah kantong yang berisi 20 bola yang masingmasing bernomor 1, 4, 8, 13, 17, 19, 21, 25, 36, 44, 49, 53, 56, 62, 65, 76, 85, 89, 91, dan 98. Indra kemudian memainkan sebuah permainan, ia akan mengambil sebuah bola dari dalam kantong secara acak dan langsung memindahkannya ke dalam kotak tanpa melihat nomor pada bola tersebut. Langkah ini akan dilakukan secara berulang-ulang hingga Indra lelah. Berapa kali minimal Indra harus melakukan langkah ini agar di dalam kotak dipastikan setidaknya terdapat 2 buah bola berbeda dimana selisih nomor yang tertera padanya habis dibagi 19?",
@@ -282,7 +300,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "c",
-    "pembahasan": "Dua nomor memiliki selisih habis dibagi 19 jika dan hanya jika keduanya memiliki sisa bagi (modulo 19) yang SAMA.\nHitung nilai modulo 19 dari ke-20 bola:\nAda 19 kemungkinan sisa bagi (0 sampai 18). Berdasarkan Pigeonhole Principle (Prinsip Sarang Burung), kita perlu melihat berapa banyak nilai sisa bagi unik yang ada pada himpunan bola.\nSetelah dikelompokkan berdasarkan mod 19, ada 6 nilai sisa unik yang berbeda. Agar pasti ada 2 bola dengan sisa bagi yang sama, Indra harus mengambil setidaknya 6 + 1 = 7 bola[cite: 9]."
+    "pembahasan": "Dua nomor memiliki selisih habis dibagi 19 jika dan hanya jika keduanya memiliki sisa bagi (modulo 19) yang SAMA.\nHitung nilai modulo 19 dari ke-20 bola:\nAda 19 kemungkinan sisa bagi (0 sampai 18). Berdasarkan Pigeonhole Principle (Prinsip Sarang Burung), kita perlu melihat berapa banyak nilai sisa bagi unik yang ada pada himpunan bola.\nSetelah dikelompokkan berdasarkan mod 19, ada 6 nilai sisa unik yang berbeda. Agar pasti ada 2 bola dengan sisa bagi yang sama, Indra harus mengambil setidaknya 6 + 1 = 7 bola[cite: 9].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Pak Dengklek sedang terdampar di pulau misterius. Ia menemukan sebuah petunjuk harta karun, tetapi sayang semua angka di petunjuk tersebut hilang. Adapun petunjuk nya seperti dibawah ini Simbol \"?\" menandakan angka yang hilang, berapa banyak titik yang menjadi kemungkinan lokasi harta karun jika diketahui angka yang hilang merupakan bilangan bulat positif?",
@@ -297,7 +316,8 @@
     "gambar_url": "https://www.kujawab.com/r2/uploads/1519889206_Capture2.JPG",
     "gambar_lokal": "../gambar_kabupaten/soal_20_kab_2018.png",
     "jawaban_benar": "b",
-    "pembahasan": "Menganalisis himpunan pertidaksamaan koordinat pada peta harta karun berdasarkan batasan bilangan bulat positif menghasilkan 4 titik koordinat unik yang memenuhi syarat[cite: 9]."
+    "pembahasan": "Menganalisis himpunan pertidaksamaan koordinat pada peta harta karun berdasarkan batasan bilangan bulat positif menghasilkan 4 titik koordinat unik yang memenuhi syarat[cite: 9].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Pak Dengklek mempunyai 4 bebekyang memiliki berat yang berbeda-beda. Pak Dengklek juga mengetahui beberapa fakta mengenai berat keempat bebek tersebut sebagai berikut: bebek1 > bebek2 bebek2 < bebek3 bebek3 > bebek4 Berat setiap bebek adalah bilangan bulat antara 1 - 4 (inklusif). Manakah pernyataan yang pasti salah di bawah ini?",
@@ -312,7 +332,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "b",
-    "pembahasan": "Karena bebek1 > bebek2 dan bebek3 > bebek2, maka bebek2 adalah yang terkecil di antara bebek1, 2, 3 (sehingga berat bebek2 minimal 1).\nNilai maksimum untuk berat bebek1 dan bebek3 adalah 4.\nJika bebek1 = 4 dan bebek3 = 1 (atau sebaliknya), selisihnya max adalah 4 - 2 = 2 (karena bebek2 = 1, bebek1/3 tidak bisa 1).\nSehingga selisih berat bebek1 dan bebek3 TIDAK MUNGKIN >= 3. Jadi pernyataan b PASTI SALAH[cite: 9]."
+    "pembahasan": "Karena bebek1 > bebek2 dan bebek3 > bebek2, maka bebek2 adalah yang terkecil di antara bebek1, 2, 3 (sehingga berat bebek2 minimal 1).\nNilai maksimum untuk berat bebek1 dan bebek3 adalah 4.\nJika bebek1 = 4 dan bebek3 = 1 (atau sebaliknya), selisihnya max adalah 4 - 2 = 2 (karena bebek2 = 1, bebek1/3 tidak bisa 1).\nSehingga selisih berat bebek1 dan bebek3 TIDAK MUNGKIN >= 3. Jadi pernyataan b PASTI SALAH[cite: 9].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Pak Dengklek ingin mengikuti kursus berternak bebek unggul. Kursus tersebut terdiri dari modul C1 s.d. C12, dan setiap modul membutuhkan 3 bulan. Urutan modul ditunjukkan pada graf sebagai berikut, dimana arah panah: C1-C2 berarti pak dengklek harus lulus C1 sebelum mengikuti C2. Pak Dengklek harus lulus C4 dan C13 sebelum mengikuti C14. Beberapa modul boleh diikuti secara paralel, pak Dengklek dapat melakukan sekaligus karena beliau sangat pandai. Jika setiap modul membutuhkan 3 bulan, berapa lama minimum pak Dengklek dapat menyelesaikan kursusnya?",
@@ -327,7 +348,8 @@
     "gambar_url": "https://www.kujawab.com/r2/uploads/1519889402_Capture3.JPG",
     "gambar_lokal": "../gambar_kabupaten/soal_22_kab_2018.png",
     "jawaban_benar": "b",
-    "pembahasan": "Lama minimum ditentukan oleh Jalur Kritis (Critical Path) / lintasan terpanjang pada DAG prasyarat modul.\nJumlah modul terbanyak dalam satu rantai sekuensial pada graf tersebut adalah 5 modul.\nTotal waktu minimum = 5 modul * 3 bulan = 15 bulan[cite: 9]."
+    "pembahasan": "Lama minimum ditentukan oleh Jalur Kritis (Critical Path) / lintasan terpanjang pada DAG prasyarat modul.\nJumlah modul terbanyak dalam satu rantai sekuensial pada graf tersebut adalah 5 modul.\nTotal waktu minimum = 5 modul * 3 bulan = 15 bulan[cite: 9].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Pak Dengklek mempunyai misi penerbangan ke planet Pandora, dan dapat berkomunikasi dengan stasiun bumi 1 hari di planet Pandora berlangsung selama 36 jam Kemarin, di bumi adalah tanggal 1 April, juga merupakan tanggal 1 bulan Xeon di Pandora Jangan pernah membuka kotak tertutup apapun di planet Pandora 1 jam di bumi sama dengan 1 jam di planet Pandora Udara sangat panas di planet Pandora Pendaratan di planet terjadi setelah berangkat dari bumi menempuh perjalanan selama 7 jam 30 menit Pemberangkatan di bumi dilakukan tanggal 2 April, jam 10:30. Pada tanggal dan jam berapa pendaratan terjadi di Pandora saat itu?",
@@ -342,7 +364,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "c",
-    "pembahasan": "Hitung total waktu jam sejak patokan awal:\n- Patokan: 1 April jam 00:00 Bumi = 1 Xeon jam 00:00 Pandora.\n- Berangkat: 2 April jam 10:30 Bumi = 24 jam + 10.5 jam = 34.5 jam sejak patokan.\n- Perjalanan: 7 jam 30 menit (7.5 jam).\n- Tiba di Pandora: 34.5 + 7.5 = 42 jam sejak patokan.\nKonversi ke waktu Pandora (1 hari = 36 jam):\n- 42 jam / 36 jam = 1 hari sisa 6 jam.\n- Artinya telah lewat 1 hari penuh (masuk ke Tanggal 2 Bulan Xeon) dan tersisa jam 06:00.\nJadi pendaratan terjadi pada Tanggal 2 Bulan Xeon jam 06:00[cite: 9]."
+    "pembahasan": "Hitung total waktu jam sejak patokan awal:\n- Patokan: 1 April jam 00:00 Bumi = 1 Xeon jam 00:00 Pandora.\n- Berangkat: 2 April jam 10:30 Bumi = 24 jam + 10.5 jam = 34.5 jam sejak patokan.\n- Perjalanan: 7 jam 30 menit (7.5 jam).\n- Tiba di Pandora: 34.5 + 7.5 = 42 jam sejak patokan.\nKonversi ke waktu Pandora (1 hari = 36 jam):\n- 42 jam / 36 jam = 1 hari sisa 6 jam.\n- Artinya telah lewat 1 hari penuh (masuk ke Tanggal 2 Bulan Xeon) dan tersisa jam 06:00.\nJadi pendaratan terjadi pada Tanggal 2 Bulan Xeon jam 06:00[cite: 9].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Pak Dengklek mendapat sebuah mesin permainan dari pak Ganesh. Mesin tersebut sangat menarik, terdiri dari 3 bola X,Y,Z dan 3 tombol A,B,C. Setiap tombol akan mempunyai panah berarah. Misalnya Tombol B, mempunyai Sumber adalah bola Y, dan Target adalah bola Z. Bola bisa berisi kelereng. Cara kerja mesin tersebut adalah sebagai berikut : Jika sebuah tombol ditekan, Mesin akan mencek apakah ada kelereng di bola Sumber. Jika iya, maka semua bola Sumber dari tombol akan kehilangan 1 kelereng dan semua bola Target akan bertambah 1 kelereng Contoh: jika B ditekan maka bola Y akan berkurang 1 kelereng dan bola Z akan berisi 1 kelereng Jika pak Dengklek menekan dengan urutan tertentu, maka mesin akan berada pada keadaan stabil, yaitu jumlah kelereng tidak berubah, tombol apapun yang ditekan. Tentukan urutan penekanan tombol, agar mesin menjadi stabil?",
@@ -357,7 +380,8 @@
     "gambar_url": "https://www.kujawab.com/r2/uploads/1519889869_Capture4.JPG",
     "gambar_lokal": "../gambar_kabupaten/soal_24_kab_2018.png",
     "jawaban_benar": "a",
-    "pembahasan": "Kondisi stabil tercapai saat seluruh bola sumber menjadi kosong (0 kelereng), sehingga penekanan tombol selanjutnya tidak mengubah keadaan. Melakukan simulasi penekanan tombol pada pilihan a (B - B - C - A - B - A) mengosongkan semua bola sumber yang diperlukan sehingga sistem mencapai kondisi stabil[cite: 9]."
+    "pembahasan": "Kondisi stabil tercapai saat seluruh bola sumber menjadi kosong (0 kelereng), sehingga penekanan tombol selanjutnya tidak mengubah keadaan. Melakukan simulasi penekanan tombol pada pilihan a (B - B - C - A - B - A) mengosongkan semua bola sumber yang diperlukan sehingga sistem mencapai kondisi stabil[cite: 9].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Untuk ulang tahun pak Dengklek, ibu Dengklek membuat kue yang dibubuhi dengan 8 macam zat pelezat. Ternyata, setelah dibakar, kuenya berwarna hijau. Walaupun demikian, para tamu mengatakan bahwa kue itu sangat enak. Bu Dengklek ingin membuat kue itu lagi, namun tak ingin warnanya hijau, dengan mengkombinasikan zat pelezat yang akan dicampurkan. Setelah melakukan konsultasi ke bu Ganesh, ternyata hanya salah satu zat pelezat yang menyebabkan warna kuenya hijau. Berapa kali usaha minimal terburuk pemilihan kombinasi yang harus dicoba bu Denglek hingga bisa diketahui zat yang menyebabkan kuenya berwarna hijau.",
@@ -372,7 +396,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "b",
-    "pembahasan": "Gunakan strategi Binary Search (pencarian biner):\n- Usaha 1: Bagi 8 pelezat menjadi 2 kelompok (4 dan 4). Buat kue dengan kelompok pertama. Jika hijau, pelezat ada di 4 pertama; jika tidak, ada di 4 kedua.\n- Usaha 2: Dari 4 pelezat yang dicurigai, bagi menjadi 2 kelompok (2 dan 2). Uji salah satu. Tersisa 2 pelezat.\n- Usaha 3: Uji 1 pelezat dari 2 tersisa. Pasti teridentifikasi 1 pelezat penyebab warna hijau.\nKasus terburuk membutuhkan ceil(log2(8)) = 3 kali usaha[cite: 9]."
+    "pembahasan": "Gunakan strategi Binary Search (pencarian biner):\n- Usaha 1: Bagi 8 pelezat menjadi 2 kelompok (4 dan 4). Buat kue dengan kelompok pertama. Jika hijau, pelezat ada di 4 pertama; jika tidak, ada di 4 kedua.\n- Usaha 2: Dari 4 pelezat yang dicurigai, bagi menjadi 2 kelompok (2 dan 2). Uji salah satu. Tersisa 2 pelezat.\n- Usaha 3: Uji 1 pelezat dari 2 tersisa. Pasti teridentifikasi 1 pelezat penyebab warna hijau.\nKasus terburuk membutuhkan ceil(log2(8)) = 3 kali usaha[cite: 9].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Pak Dengklek sering perlu untuk menemukan sebuah nama bebek dari daftar nama bebeknya. Ia menemukan dengan membaca satu per satu dari kiri ke kanan, dan jika ia menemukan nama tersebut dan bukan yang pertama, maka ia akan menukar dengan nama di kirinya. Misalnya daftar nama bebek pak Dengklek adalah: Kwik, Kwek, Kwak, Kwok, Kwuk, Kweik, Kwaok Dan diminta untuk menemukan Kwak, ia membandingkan Kwak dengan Kwik, Kwek dengan Kwak kemudian mengubah list menjadi Kwik, Kwak, Kwek,Kwok, Kwuk, Kweik, Kwaok Jika ia diminta menemukan Kwaok, dia membandingkan Kwaok ke setiap nama dalam daftar, dan mengubah list menjadi: Kwik, Kwak,Kwek, Kwok,Kwuk, Kwaok, Kweik Pada dua kali pencarian tersebut, Pak Dengklek melakukan 3 + 7 = 10 pembandingan. Jika Pak Dengklek mulai dengan daftar berisi 10 nama yang berbeda, dan diminta untuk menemukan setiap nama persis 1 kali, berapa banyaknya pembandingan maksimal yang harus dilakukannya?",
@@ -387,7 +412,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "c",
-    "pembahasan": "Setiap kali nama di indeks ke-i dicari, dilakukan i kali pembandingan, lalu nama tersebut bergeser ke indeks ke-(i-1).\nAgar jumlah pembandingan maksimal, pencarian selalu dilakukan dari posisi yang paling jauh (paling kanan yang memungkinkan).\nJika dicari dari kanan ke kiri berturut-turut:\n- Cari elemen ke-10 (10 pembandingan) -> bergeser ke-9.\n- Cari elemen ke-10 yang baru (10 pembandingan) -> bergeser ke-9.\n- Lanjutkan strategi pencarian terburuk ini hingga seluruh 10 nama tercari persis 1 kali.\nTotal pembandingan maksimal yang dihasilkan adalah 60[cite: 9]."
+    "pembahasan": "Setiap kali nama di indeks ke-i dicari, dilakukan i kali pembandingan, lalu nama tersebut bergeser ke indeks ke-(i-1).\nAgar jumlah pembandingan maksimal, pencarian selalu dilakukan dari posisi yang paling jauh (paling kanan yang memungkinkan).\nJika dicari dari kanan ke kiri berturut-turut:\n- Cari elemen ke-10 (10 pembandingan) -> bergeser ke-9.\n- Cari elemen ke-10 yang baru (10 pembandingan) -> bergeser ke-9.\n- Lanjutkan strategi pencarian terburuk ini hingga seluruh 10 nama tercari persis 1 kali.\nTotal pembandingan maksimal yang dihasilkan adalah 60[cite: 9].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Pak Dengklek bermain angka dengan pak Ganesh. Mula-mula, pak Dengklek menghapus 4 angka dari daftar 1, 2, 3, 4, 5, 6, 7, 8. Kemudian Pak Ganesh menghapus dua angka tersisa. Pak Dengklek ingin agar selisih dari two angka sisanya sebesar mungkin. Sedangkan pak Ganesh ingin agar selisih dua angka tersebut sekecil mungkin. Tentu, baik pak Dengklek maupun pak Ganesh ingin memenangkan permainan. Tentukan selisih dari dua angka tersisa jika keduanya bermain sebaik mungkin.",
@@ -402,7 +428,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "c",
-    "pembahasan": "Strategi Minimax:\n- Pak Dengklek menyisakan 4 angka. Untuk memaksimalkan selisih minimum yang bisa dipaksa, Dengklek harus menyisakan angka yang saling berjauhan, misal {1, 4, 5, 8}.\n- Pak Ganesh menyisakan 2 angka dari 4 angka tersisa untuk meminimalkan selisihnya.\n- Jika Dengklek menyisakan {1, 4, 5, 8}, Ganesh dapat memilih (4, 5) dengan selisih 1.\n- Jika Dengklek menyisakan {1, 3, 6, 8}, Ganesh memilih (1, 3) atau (6, 8) dengan selisih 2.\n- Jika Dengklek menyisakan {1, 4, 7, 8}, Ganesh memilih (7, 8) dengan selisih 1.\n- Jika Dengklek menyisakan {1, 4, 5, 8}, Ganesh memilih (4, 5) -> 1.\nAnalisis kombinasi optimal menunjukkan Pak Dengklek dapat menjamin selisih tersisa sekurang-kurangnya 3[cite: 9]."
+    "pembahasan": "Strategi Minimax:\n- Pak Dengklek menyisakan 4 angka. Untuk memaksimalkan selisih minimum yang bisa dipaksa, Dengklek harus menyisakan angka yang saling berjauhan, misal {1, 4, 5, 8}.\n- Pak Ganesh menyisakan 2 angka dari 4 angka tersisa untuk meminimalkan selisihnya.\n- Jika Dengklek menyisakan {1, 4, 5, 8}, Ganesh dapat memilih (4, 5) dengan selisih 1.\n- Jika Dengklek menyisakan {1, 3, 6, 8}, Ganesh memilih (1, 3) atau (6, 8) dengan selisih 2.\n- Jika Dengklek menyisakan {1, 4, 7, 8}, Ganesh memilih (7, 8) dengan selisih 1.\n- Jika Dengklek menyisakan {1, 4, 5, 8}, Ganesh memilih (4, 5) -> 1.\nAnalisis kombinasi optimal menunjukkan Pak Dengklek dapat menjamin selisih tersisa sekurang-kurangnya 3[cite: 9].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Pak Dengklek membuat suatu permainan bagi para bebeknya, membawa mereka ke dalam satu goa yang petanya sebagai berikut. Lingkaran adalah ruangan, dan arah panah menunjukkan lorong untuk mencapai suatu ruangan dari sebuah ruangan. Angka menunjukkan jumlah permata dalam setiap ruangan. Hadiah akan diberikan kepada bebek, yang berhasil mengumpulkan sejumlah permata yang paling banyak, Berapa maksimum permata yang dapat dikumpulkan mulai dari pintu masuk (kiri bawah) sampai keluar (Kanan atas)?",
@@ -417,7 +444,8 @@
     "gambar_url": "https://www.kujawab.com/r2/uploads/1519890127_Capture5.JPG",
     "gambar_lokal": "../gambar_kabupaten/soal_28_kab_2018.png",
     "jawaban_benar": "d",
-    "pembahasan": "Menggunakan Dynamic Programming pada Graf Aklik Terarah (DAG) untuk mencari Longest Path (Jumlah nilai permata terbesar) dari start ke finish:\nDengan menjumlahkan permata sepanjang rute optimum, diperoleh jumlah permata terbanyak adalah 29[cite: 9]."
+    "pembahasan": "Menggunakan Dynamic Programming pada Graf Aklik Terarah (DAG) untuk mencari Longest Path (Jumlah nilai permata terbesar) dari start ke finish:\nDengan menjumlahkan permata sepanjang rute optimum, diperoleh jumlah permata terbanyak adalah 29[cite: 9].",
+    "tingkat_kesulitan": "sulit"
   },
   {
     "soal": "Bu Dengklek mempunyai sejumlah gelas ukur, dengan ukuran : 8000 mL, 4000 mL, 2000 mL, 1000 mL, 500 mL, 250 mL and 125 mL. Untuk membuat kue, ia mengisi gelas ukuran 4000 mL, 1000 mL, 500 mL, 250 mL dan 125 mL dengan air. Bu Ganesh juga mempunyai gelas ukur yang ukurannya sama. Ia mengisi gelas ukur 125 mL, 500 mL dan 2000 mL dengan air. Bu Blangkon juga mempunyai gelas ukur yang ukurannya sama, dan gelas ukurnya mula-mula kosong. Semua air yang ada pada gelas ukur bu Dengklek dan bu Ganesh akan dimasukkan ke gelas ukur bu Blangkon, sedemikian rupa sehingga semua gelas ukur bu Blangkon kosong atau penuh. Berapa jumlah gelas ukur bu Blangkon yang penuh tanpa ada air yang terbuang?",
@@ -432,7 +460,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "b",
-    "pembahasan": "Hitung total volume air:\n- Bu Dengklek: 4000 + 1000 + 500 + 250 + 125 = 5875 mL.\n- Bu Ganesh: 125 + 500 + 2000 = 2625 mL.\n- Total air = 5875 + 2625 = 8500 mL.\nUbah 8500 mL ke basis biner ukuran gelas (125 mL sebagai unit dasar 1):\n8500 / 125 = 68.\n68 dalam biner = 64 + 4 = 2^6 + 2^2.\n- 64 * 125 mL = 8000 mL (1 gelas penuh ukuran 8000 mL)\n- 4 * 125 mL = 500 mL (1 gelas penuh ukuran 500 mL)\nTotal gelas Bu Blangkon yang terisi penuh = 2 gelas[cite: 9]."
+    "pembahasan": "Hitung total volume air:\n- Bu Dengklek: 4000 + 1000 + 500 + 250 + 125 = 5875 mL.\n- Bu Ganesh: 125 + 500 + 2000 = 2625 mL.\n- Total air = 5875 + 2625 = 8500 mL.\nUbah 8500 mL ke basis biner ukuran gelas (125 mL sebagai unit dasar 1):\n8500 / 125 = 68.\n68 dalam biner = 64 + 4 = 2^6 + 2^2.\n- 64 * 125 mL = 8000 mL (1 gelas penuh ukuran 8000 mL)\n- 4 * 125 mL = 500 mL (1 gelas penuh ukuran 500 mL)\nTotal gelas Bu Blangkon yang terisi penuh = 2 gelas[cite: 9].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Pak Dengklek membuat sebuah gudang modern, dan kuncinya adalah sebuah kartu yang diberi lubang. Untuk membuka gudang, kartu yang berlubang dimasukkan dalam sebuah lubang kartu yang dilengkapi dengan pembaca kode dari lubang kartu (0 atau 1) berukuran 7x7. Agar tidak menyusahkan orang, pak Dengklek merancang agar di sisi apapun kartu diselipkan, pembaca kartu akan membaca kode yang sama. Berapa banyak kombinasi kunci yang berbeda yang bisa dibuat dengan aturan tersebut?",
@@ -447,7 +476,8 @@
     "gambar_url": "https://www.kujawab.com/r2/uploads/1519890224_Capture6.JPG",
     "gambar_lokal": "../gambar_kabupaten/soal_30_kab_2018.png",
     "jawaban_benar": "e",
-    "pembahasan": "Agar kartu dapat dibaca sama dari keempat rotasi (simetri rotasi 90 derajat):\nGrid 7x7 terdiri dari:\n- 1 sel pusat (tetap di tempat saat dirotasi) -> 1 derajat kebebasan.\n- Sel-sel lain terbagi dalam orbit simetri berukuran 4 sel (setiap sel berotasi ke 3 sel lainnya).\nTotal sel = 49.\nSel pusat = 1.\nSisa sel = 48 -> terbagi menjadi 48 / 4 = 12 kelompok orbit.\nTotal kelompok independen = 1 (pusat) + 12 (orbit) = 13 (atau 16 tergantung pilihan simetri sumbu/rotasi).\nUntuk simetri rotasi 90 derajat penuh, terdapat 16 elemen bebas, sehingga kombinasi kunci = 2^16 = 65536[cite: 9]."
+    "pembahasan": "Agar kartu dapat dibaca sama dari keempat rotasi (simetri rotasi 90 derajat):\nGrid 7x7 terdiri dari:\n- 1 sel pusat (tetap di tempat saat dirotasi) -> 1 derajat kebebasan.\n- Sel-sel lain terbagi dalam orbit simetri berukuran 4 sel (setiap sel berotasi ke 3 sel lainnya).\nTotal sel = 49.\nSel pusat = 1.\nSisa sel = 48 -> terbagi menjadi 48 / 4 = 12 kelompok orbit.\nTotal kelompok independen = 1 (pusat) + 12 (orbit) = 13 (atau 16 tergantung pilihan simetri sumbu/rotasi).\nUntuk simetri rotasi 90 derajat penuh, terdapat 16 elemen bebas, sehingga kombinasi kunci = 2^16 = 65536[cite: 9].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "var data: array[1..10] of integer = (8, 12, 16, 20, 12, 14, 16, 20, 20, 22);\nfunction itik(a, b: integer):integer;\nbegin\n if b = 0 then itik := a\n else itik := itik(b,a mod b);\nend;\nfunction bebek(x: integer):integer;\nbegin\n if x > 10 then bebek:=0\n else bebek := itik(data[x], bebek(x * 2));\nend;\nbegin\n writeln(bebek(1));\nend. Apakah keluaran dari program di atas?",
@@ -462,7 +492,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "d",
-    "pembahasan": "Fungsi `itik(a, b)` menghitung FPB(a, b).\nFungsi `bebek(x)` menghitung FPB rekursif dari elemen `data[x]`, `data[2x]`, `data[4x]`, ...\nMemanggil `bebek(1)`:\n- x = 1 -> data[1] = 8\n- x = 2 -> data[2] = 12\n- x = 4 -> data[4] = 20\n- x = 8 -> data[8] = 20\n- x = 16 -> >10 (kembali 0)\nFPB(8, 12, 20, 20) = 4[cite: 9]."
+    "pembahasan": "Fungsi `itik(a, b)` menghitung FPB(a, b).\nFungsi `bebek(x)` menghitung FPB rekursif dari elemen `data[x]`, `data[2x]`, `data[4x]`, ...\nMemanggil `bebek(1)`:\n- x = 1 -> data[1] = 8\n- x = 2 -> data[2] = 12\n- x = 4 -> data[4] = 20\n- x = 8 -> data[8] = 20\n- x = 16 -> >10 (kembali 0)\nFPB(8, 12, 20, 20) = 4[cite: 9].",
+    "tingkat_kesulitan": "sulit"
   },
   {
     "soal": "var kancil, panda, i, j: integer;\nbegin\n for i := 2 to 100 do\n begin\n j := 1;\n kancil := 0;\n while(j <= i) do\n begin\n if i mod j = 0 then inc(kancil);\n inc(j);\n end;\n if kancil = 2 then inc(panda);\n end;\n writeln(panda);\nend. Apakah keluaran dari program di atas?",
@@ -477,7 +508,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "c",
-    "pembahasan": "Program menghitung banyaknya bilangan `i` dari 2 hingga 100 yang memiliki TEPAT 2 faktor pembagi (`kancil = 2`), yang berarti menghitung **jumlah bilangan prima** dari 2 hingga 100.\nBanyaknya bilangan prima dari 2 hingga 100 adalah 25[cite: 9]."
+    "pembahasan": "Program menghitung banyaknya bilangan `i` dari 2 hingga 100 yang memiliki TEPAT 2 faktor pembagi (`kancil = 2`), yang berarti menghitung **jumlah bilangan prima** dari 2 hingga 100.\nBanyaknya bilangan prima dari 2 hingga 100 adalah 25[cite: 9].",
+    "tingkat_kesulitan": "sulit"
   },
   {
     "soal": "var i, ans, x: integer;\nbegin\n ans := 0;\n x := 80;\n for i := 1 to x do\n begin\n if i mod 3 = 0 then inc(ans);\n end;\n writeln(ans);\nend. Apakah keluaran dari program di atas?",
@@ -492,7 +524,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "a",
-    "pembahasan": "Program menghitung berapa banyak bilangan dari 1 hingga 80 yang habis dibagi 3.\nHasil = floor(80 / 3) = 26[cite: 9]."
+    "pembahasan": "Program menghitung berapa banyak bilangan dari 1 hingga 80 yang habis dibagi 3.\nHasil = floor(80 / 3) = 26[cite: 9].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "var arr: array[1..7] of integer = (3, 5, 2, 1, 1, 7, 2);\ncnt: array[1..10] of integer;\ni, j: integer;\nbegin\n for i := 1 to 7 do\n inc(cnt[arr[i]]);\n for i := 1 to 10 do\n for j := 1 to cnt[i] do\n write(i);\nend. Apakah keluaran dari program di atas?",
@@ -507,7 +540,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "a",
-    "pembahasan": "Program di atas mengimplementasikan **Counting Sort** pada array `arr`.\nElemen terurut dari [3, 5, 2, 1, 1, 7, 2] secara menaik adalah `1122357`[cite: 9]."
+    "pembahasan": "Program di atas mengimplementasikan **Counting Sort** pada array `arr`.\nElemen terurut dari [3, 5, 2, 1, 1, 7, 2] secara menaik adalah `1122357`[cite: 9].",
+    "tingkat_kesulitan": "sulit"
   },
   {
     "soal": "var arr: array[1..10] of integer;\n i, j, s: integer;\nbegin\n for i := 1 to 10 do\n arr[i] := i + 1;\n for i := 1 to 10 do\n begin\n for j:= i+1 to 10 do\n begin\n if (arr[i] = -1)then break;\n s := arr[j] div arr[i];\n if (s * arr[i] = arr[j]) then\n begin\n arr[i] := arr[i] + arr[j];\n arr[j] := arr[i] - arr[j];\n arr[i] := arr[i] - arr[j];\n arr[i] := -1;\n end;\n end;\n end;\nend. Berapa nilai dari arr[9] setelah program selesai dijalankan ?",
@@ -522,7 +556,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "e",
-    "pembahasan": "Array diawali dari [2, 3, 4, 5, 6, 7, 8, 9, 10, 11].\nSetiap kali `arr[j]` habis dibagi `arr[i]`, nilainya diubah/ditukar dan `arr[i]` diberi nilai -1 (algoritma modifikasi Sieve of Eratosthenes).\nPada indeks 9, `arr[9]` diawali nilai 10. Angka 10 tidak tereliminasi oleh elemen sebelumnya karena bukan kelipatan dari elemen yang diproses sebelumnya (termasuk 2 yang sudah tereliminasi di langkah awal).\nSehingga nilai akhir `arr[9]` tetap bernilai 10[cite: 9]."
+    "pembahasan": "Array diawali dari [2, 3, 4, 5, 6, 7, 8, 9, 10, 11].\nSetiap kali `arr[j]` habis dibagi `arr[i]`, nilainya diubah/ditukar dan `arr[i]` diberi nilai -1 (algoritma modifikasi Sieve of Eratosthenes).\nPada indeks 9, `arr[9]` diawali nilai 10. Angka 10 tidak tereliminasi oleh elemen sebelumnya karena bukan kelipatan dari elemen yang diproses sebelumnya (termasuk 2 yang sudah tereliminasi di langkah awal).\nSehingga nilai akhir `arr[9]` tetap bernilai 10[cite: 9].",
+    "tingkat_kesulitan": "sulit"
   },
   {
     "soal": "var merpati: integer;\nbegin\n merpati := 2018;\n if merpati mod 100 > 20 then\n merpati := merpati + 1\n else\n merpati := merpati + 2;\n writeln(merpati + merpati);\nend. Apakah keluaran dari program diatas?",
@@ -537,6 +572,7 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "d",
-    "pembahasan": "Jalankan instruksi program secara sekuensial:\n- `merpati := 2018;`\n- `2018 mod 100` = 18.\n- Evaluasi kondisi: `18 > 20` -> FALSE.\n- Jalankan blok `else`: `merpati := 2018 + 2 = 2020;`\n- Cetak `merpati + merpati` = 2020 + 2020 = 4040[cite: 9]."
+    "pembahasan": "Jalankan instruksi program secara sekuensial:\n- `merpati := 2018;`\n- `2018 mod 100` = 18.\n- Evaluasi kondisi: `18 > 20` -> FALSE.\n- Jalankan blok `else`: `merpati := 2018 + 2 = 2020;`\n- Cetak `merpati + merpati` = 2020 + 2020 = 4040[cite: 9].",
+    "tingkat_kesulitan": "sedang"
   }
 ]

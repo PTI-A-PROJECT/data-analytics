@@ -13,7 +13,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "c",
-    "pembahasan": "Deret Fibonacci berdasarkan definisi soal:\nf1 = 1\nf2 = 2\nf3 = 3\nf4 = 5\nf5 = 8\nf6 = 13\nf7 = 21\nf8 = 34\nf9 = 55\nf10 = 89\nf11 = 144\n\nBilangan Fibonacci antara 10 dan 100 adalah 13, 21, 34, 55, dan 89. Jumlahnya ada 5 bilangan."
+    "pembahasan": "Deret Fibonacci berdasarkan definisi soal:\nf1 = 1\nf2 = 2\nf3 = 3\nf4 = 5\nf5 = 8\nf6 = 13\nf7 = 21\nf8 = 34\nf9 = 55\nf10 = 89\nf11 = 144\n\nBilangan Fibonacci antara 10 dan 100 adalah 13, 21, 34, 55, dan 89. Jumlahnya ada 5 bilangan.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Deret bilangan Fibonacci didefinisikan secara rekursif sbb.\nf₁ = 1\nf₂ = 2\nfₙ = fₙ₋₁ + fₙ₋₂ untuk semua n > 2",
@@ -29,7 +30,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "a",
-    "pembahasan": "Deret: f1=1, f2=2, f3=3, f4=5, f5=8, f6=13, f7=21, f8=34, f9=55, f10=89.\nMari kita hitung jumlah parsial S_n:\nS1 = 1\nS2 = 3\nS3 = 6\nS4 = 11\nS5 = 19\nS6 = 32\nS7 = 53\nS8 = 87\nS9 = 87 + 55 = 142 (belum > 150? Tunggu, jika ditotal ulang: 1+2+3+5+8+13+21+34+55 = 142). Tetapi sifat deret ini adalah S_n = f_{n+2} - 2. Maka S_9 = f_11 - 2 = 144 - 2 = 142. S_9 belum melebihi 150. Untuk n = 9, S_9 = 142. Untuk n = 10, S_10 = 142 + 89 = 231 > 150. Sehingga n terkecil adalah 10."
+    "pembahasan": "Deret: f1=1, f2=2, f3=3, f4=5, f5=8, f6=13, f7=21, f8=34, f9=55, f10=89.\nMari kita hitung jumlah parsial S_n:\nS1 = 1\nS2 = 3\nS3 = 6\nS4 = 11\nS5 = 19\nS6 = 32\nS7 = 53\nS8 = 87\nS9 = 87 + 55 = 142 (belum > 150? Tunggu, jika ditotal ulang: 1+2+3+5+8+13+21+34+55 = 142). Tetapi sifat deret ini adalah S_n = f_{n+2} - 2. Maka S_9 = f_11 - 2 = 144 - 2 = 142. S_9 belum melebihi 150. Untuk n = 9, S_9 = 142. Untuk n = 10, S_10 = 142 + 89 = 231 > 150. Sehingga n terkecil adalah 10.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Di suatu negri antah berantah alat tukar yang digunakan hanya mata uang dengan empat pecahan saja: satu Gordi, satu Gorde yang sama dengan 17 Gordi, satu Gordo yang sama dengan 57 Gordi, dan satu Goram yang sama dengan 115 Gordi.",
@@ -45,7 +47,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "a",
-    "pembahasan": "Nilai tukar dalam Gordi:\n1 Gorde = 17 Gordi\n1 Gordo = 57 Gordi\n1 Goram = 115 Gordi\n\nTotal belanjaan (dalam Gordo, Gorde, Gordi):\nSnack 1: 4 Gordo, 12 Gorde, 10 Gordi = 4*57 + 12*17 + 10 = 228 + 204 + 10 = 442 Gordi\nSnack 2: 8 Gordo, 21 Gorde, 12 Gordi = 8*57 + 21*17 + 12 = 456 + 357 + 12 = 825 Gordi\nSnack 3: 1 Gordo, 19 Gorde, 11 Gordi = 1*57 + 19*17 + 11 = 57 + 323 + 11 = 391 Gordi\nTotal Harga = 442 + 825 + 391 = 1658 Gordi.\n\nUang dibayar: 20 Goram = 20 * 115 = 2300 Gordi.\nKembalian = 2300 - 1658 = 644 Gordi.\n\nKonversi 644 Gordi ke Gordo dan Gordi:\n644 / 57 = 11 Gordo (11 * 57 = 627 Gordi).\nSisa = 644 - 627 = 17 Gordi.\nJadi kembaliannya adalah 11 Gordo dan 17 Gordi."
+    "pembahasan": "Nilai tukar dalam Gordi:\n1 Gorde = 17 Gordi\n1 Gordo = 57 Gordi\n1 Goram = 115 Gordi\n\nTotal belanjaan (dalam Gordo, Gorde, Gordi):\nSnack 1: 4 Gordo, 12 Gorde, 10 Gordi = 4*57 + 12*17 + 10 = 228 + 204 + 10 = 442 Gordi\nSnack 2: 8 Gordo, 21 Gorde, 12 Gordi = 8*57 + 21*17 + 12 = 456 + 357 + 12 = 825 Gordi\nSnack 3: 1 Gordo, 19 Gorde, 11 Gordi = 1*57 + 19*17 + 11 = 57 + 323 + 11 = 391 Gordi\nTotal Harga = 442 + 825 + 391 = 1658 Gordi.\n\nUang dibayar: 20 Goram = 20 * 115 = 2300 Gordi.\nKembalian = 2300 - 1658 = 644 Gordi.\n\nKonversi 644 Gordi ke Gordo dan Gordi:\n644 / 57 = 11 Gordo (11 * 57 = 627 Gordi).\nSisa = 644 - 627 = 17 Gordi.\nJadi kembaliannya adalah 11 Gordo dan 17 Gordi.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Di suatu negri antah berantah alat tukar yang digunakan hanya mata uang dengan empat pecahan saja: satu Gordi, satu Gorde yang sama dengan 17 Gordi, satu Gordo yang sama dengan 57 Gordi, dan satu Goram yang sama dengan 115 Gordi.",
@@ -61,7 +64,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "e",
-    "pembahasan": "Misal k Goram ditukarkan ke Gorde dan Gordi. 1 Goram = 115 Gordi.\nJadi k Goram = 115k Gordi.\nJika ditukarkan menjadi x Gorde dan y Gordi, maka 17x + y = 115k.\nNilai bagi kolektor adalah V = x - 2y = x - 2(115k - 17x) = 35x - 230k.\nUntuk memaksimalkan V, kita harus memaksimalkan x = floor(115k / 17).\nKita hitung nilai V untuk pilihan k = 6..10:\n- k = 6: 115*6 = 690; 690/17 = 40 sisa 10 (x=40, y=10). V = 40 - 20 = 20.\n- k = 7: 115*7 = 805; 805/17 = 47 sisa 6 (x=47, y=6). V = 47 - 12 = 35.\n- k = 8: 115*8 = 920; 920/17 = 54 sisa 2 (x=54, y=2). V = 54 - 4 = 50.\n- k = 9: 115*9 = 1035; 1035/17 = 60 sisa 15 (x=60, y=15). V = 60 - 30 = 30.\n- k = 10: 115*10 = 1150; 1150/17 = 67 sisa 11 (x=67, y=11). V = 67 - 22 = 45.\nNilai maksimum dicapai saat k = 8 (Nilai 50)."
+    "pembahasan": "Misal k Goram ditukarkan ke Gorde dan Gordi. 1 Goram = 115 Gordi.\nJadi k Goram = 115k Gordi.\nJika ditukarkan menjadi x Gorde dan y Gordi, maka 17x + y = 115k.\nNilai bagi kolektor adalah V = x - 2y = x - 2(115k - 17x) = 35x - 230k.\nUntuk memaksimalkan V, kita harus memaksimalkan x = floor(115k / 17).\nKita hitung nilai V untuk pilihan k = 6..10:\n- k = 6: 115*6 = 690; 690/17 = 40 sisa 10 (x=40, y=10). V = 40 - 20 = 20.\n- k = 7: 115*7 = 805; 805/17 = 47 sisa 6 (x=47, y=6). V = 47 - 12 = 35.\n- k = 8: 115*8 = 920; 920/17 = 54 sisa 2 (x=54, y=2). V = 54 - 4 = 50.\n- k = 9: 115*9 = 1035; 1035/17 = 60 sisa 15 (x=60, y=15). V = 60 - 30 = 30.\n- k = 10: 115*10 = 1150; 1150/17 = 67 sisa 11 (x=67, y=11). V = 67 - 22 = 45.\nNilai maksimum dicapai saat k = 8 (Nilai 50).",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Suatu pesan akan saya distribusikan ke orang-orang bernama A, B, C, D, E, F, G, H, dan I melalui pesan singkat (SMS) secara berantai. Mereka mengetahui beberapa nomor telp yang lain sbb.\nA hanya mengetahui nomor-nomor telp F, G;\nB hanya mengetahui nomor-nomor telp C, E, H;\nC hanya mengetahui nomor telp A;\nD hanya mengetahui nomor-nomor telp E, I;\nE hanya mengetahui nomor telp H;\nF hanya mengetahui nomor-nomor telp B, E;\nG hanya mengetahui nomor telp F;\nH hanya mengetahui nomor-nomor telp I, C;\nI hanya mengetahui nomor-nomor telp A, B.\nKarena teknologi komunikasi masih terbatas maka saat menerima SMS mereka tidak mengetahui siapa dan apa nomor telp pengirimnya. Diasumsikan bahwa begitu mereka menerima SMS, maka dalam jeda tepat 5 menit SMS akan diteruskan secara serentak ke orang-orang yang mereka ketahui nomor teleponnya dan SMS yang dikirim tsb langsung diterima tanpa ada jeda. Dipastikan bahwa mereka tidak akan mengirimi SMS yang sama ke orang yang sama lebih dari satu kali.",
@@ -77,7 +81,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "c",
-    "pembahasan": "D adalah satu-satunya node yang tidak memiliki tetangga masuk (in-degree = 0), artinya tidak ada orang lain yang mengetahui nomor telepon D. Jadi, agar pesan bisa sampai ke D dan seluruh orang, D harus menjadi penerima pertama."
+    "pembahasan": "D adalah satu-satunya node yang tidak memiliki tetangga masuk (in-degree = 0), artinya tidak ada orang lain yang mengetahui nomor telepon D. Jadi, agar pesan bisa sampai ke D dan seluruh orang, D harus menjadi penerima pertama.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Suatu pesan akan saya distribusikan ke orang-orang bernama A, B, C, D, E, F, G, H, dan I melalui pesan singkat (SMS) secara berantai. Mereka mengetahui beberapa nomor telp yang lain sbb.\nA hanya mengetahui nomor-nomor telp F, G;\nB hanya mengetahui nomor-nomor telp C, E, H;\nC hanya mengetahui nomor telp A;\nD hanya mengetahui nomor-nomor telp E, I;\nE hanya mengetahui nomor telp H;\nF hanya mengetahui nomor-nomor telp B, E;\nG hanya mengetahui nomor telp F;\nH hanya mengetahui nomor-nomor telp I, C;\nI hanya mengetahui nomor-nomor telp A, B.\nKarena teknologi komunikasi masih terbatas maka saat menerima SMS mereka tidak mengetahui siapa dan apa nomor telp pengirimnya. Diasumsikan bahwa begitu mereka menerima SMS, maka dalam jeda tepat 5 menit SMS akan diteruskan secara serentak ke orang-orang yang mereka ketahui nomor teleponnya dan SMS me yang dikirim tsb langsung diterima tanpa ada jeda. Dipastikan bahwa mereka tidak akan mengirimi SMS yang sama ke orang yang sama lebih dari satu kali.",
@@ -93,7 +98,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "b",
-    "pembahasan": "E adalah simpul dengan in-degree terbanyak atau penerima jalur terbanyak dari berbagai siklus/cabang (diketahui oleh B, D, dan F). Ketika SMS disebarkan, E akan menerima SMS paling banyak dari berbagai sumber/pintas."
+    "pembahasan": "E adalah simpul dengan in-degree terbanyak atau penerima jalur terbanyak dari berbagai siklus/cabang (diketahui oleh B, D, dan F). Ketika SMS disebarkan, E akan menerima SMS paling banyak dari berbagai sumber/pintas.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Suatu pesan akan saya distribusikan ke orang-orang bernama A, B, C, D, E, F, G, H, dan I melalui pesan singkat (SMS) secara berantai. Mereka mengetahui beberapa nomor telp yang lain sbb.\nA hanya mengetahui nomor-nomor telp F, G;\nB hanya mengetahui nomor-nomor telp C, E, H;\nC hanya mengetahui nomor telp A;\nD hanya mengetahui nomor-nomor telp E, I;\nE hanya mengetahui nomor telp H;\nF hanya mengetahui nomor-nomor telp B, E;\nG hanya mengetahui nomor telp F;\nH hanya mengetahui nomor-nomor telp I, C;\nI hanya mengetahui nomor-nomor telp A, B.\nKarena teknologi komunikasi masih terbatas maka saat menerima SMS mereka tidak mengetahui siapa dan apa nomor telp pengirimnya. Diasumsikan bahwa begitu mereka menerima SMS, maka dalam jeda tepat 5 menit SMS akan diteruskan secara serentak ke orang-orang yang me mereka ketahui nomor teleponnya dan SMS yang dikirim tsb langsung diterima tanpa ada jeda. Dipastikan bahwa mereka tidak akan mengirimi SMS yang sama ke orang yang sama lebih dari satu kali.",
@@ -109,7 +115,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "c",
-    "pembahasan": "Siklus terpendek dari A kembali ke A:\n- t=0: A\n- t=5: F dan G (dikirim A)\n- t=10: B dan E (dikirim F)\n- t=15: C, E, H (dikirim B)\n- t=20: C mengirim ke A. Jadi A menerima SMS berikutnya setelah 20 menit."
+    "pembahasan": "Siklus terpendek dari A kembali ke A:\n- t=0: A\n- t=5: F dan G (dikirim A)\n- t=10: B dan E (dikirim F)\n- t=15: C, E, H (dikirim B)\n- t=20: C mengirim ke A. Jadi A menerima SMS berikutnya setelah 20 menit.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Suatu pesan akan saya distribusikan ke orang-orang bernama A, B, C, D, E, F, G, H, dan I melalui pesan singkat (SMS) secara berantai. Mereka mengetahui beberapa nomor telp yang lain sbb.\nA hanya mengetahui nomor-nomor telp F, G;\nB hanya mengetahui nomor-nomor telp C, E, H;\nC hanya mengetahui nomor telp A;\nD hanya mengetahui nomor-nomor telp E, I;\nE hanya mengetahui nomor telp H;\nF hanya mengetahui nomor-nomor telp B, E;\nG hanya mengetahui nomor telp F;\nH hanya mengetahui nomor-nomor telp I, C;\nI hanya mengetahui nomor-nomor telp A, B.\nKarena teknologi komunikasi masih terbatas maka saat menerima SMS mereka tidak mengetahui siapa dan apa nomor telp pengirimnya. Diasumsikan bahwa begitu mereka menerima SMS, maka dalam jeda tepat 5 menit SMS akan diteruskan secara serentak ke orang-orang yang mereka ketahui nomor teleponnya dan SMS yang dikirim tsb langsung diterima tanpa ada jeda. Dipastikan bahwa mereka tidak akan mengirimi SMS yang sama ke orang yang sama lebih dari satu kali.",
@@ -125,7 +132,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "d",
-    "pembahasan": "Jalur dari A ke I:\n- t=0: A\n- t=5: F\n- t=10: B (dari F) atau E (dari F)\n- t=15: H (dari B atau E)\n- t=20: I (dari H)\n- t=25: I mengirim ke A, sehingga A menerima SMS dari I pada menit ke-25."
+    "pembahasan": "Jalur dari A ke I:\n- t=0: A\n- t=5: F\n- t=10: B (dari F) atau E (dari F)\n- t=15: H (dari B atau E)\n- t=20: I (dari H)\n- t=25: I mengirim ke A, sehingga A menerima SMS dari I pada menit ke-25.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Suatu pesan akan saya distribusikan ke orang-orang bernama A, B, C, D, E, F, G, H, dan I melalui pesan singkat (SMS) secara berantai. Mereka mengetahui beberapa nomor telp yang lain sbb.\nA hanya mengetahui nomor-nomor telp F, G;\nB hanya mengetahui nomor-nomor telp C, E, H;\nC hanya mengetahui nomor telp A;\nD hanya mengetahui nomor-nomor telp E, I;\nE hanya mengetahui nomor telp H;\nF hanya mengetahui nomor-nomor telp B, E;\nG hanya mengetahui nomor telp F;\nH hanya mengetahui nomor-nomor telp I, C;\nI hanya mengetahui nomor-nomor telp A, B.\nKarena teknologi komunikasi masih terbatas maka saat menerima SMS mereka tidak mengetahui siapa dan apa nomor telp pengirimnya. Diasumsikan bahwa begitu mereka menerima SMS, maka dalam jeda tepat 5 menit SMS akan diteruskan secara serentak ke orang-orang yang mereka ketahui nomor teleponnya dan SMS yang dikirim tsb langsung diterima tanpa ada jeda. Dipastikan bahwa me mereka tidak akan mengirimi SMS yang sama ke orang yang sama lebih dari satu kali.",
@@ -141,7 +149,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "b",
-    "pembahasan": "Langkah pengerjaan:\n- t=0: A\n- t=5: F, G\n- t=10: B, E (F tahu B, E; G tahu F yang sudah terima)\n- t=15: C, H (B tahu C, E, H; E tahu H)\n\nSampai t=15, orang yang SUDAH menerima SMS adalah: A, F, G, B, E, C, H. Orang yang BELUM menerima SMS adalah D (tidak pernah dihubungi) dan I (baru dikirim pada t=20 oleh H). Jadi, semua kecuali D dan I."
+    "pembahasan": "Langkah pengerjaan:\n- t=0: A\n- t=5: F, G\n- t=10: B, E (F tahu B, E; G tahu F yang sudah terima)\n- t=15: C, H (B tahu C, E, H; E tahu H)\n\nSampai t=15, orang yang SUDAH menerima SMS adalah: A, F, G, B, E, C, H. Orang yang BELUM menerima SMS adalah D (tidak pernah dihubungi) dan I (baru dikirim pada t=20 oleh H). Jadi, semua kecuali D dan I.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": null,
@@ -157,7 +166,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "e",
-    "pembahasan": "Jumlah total angka 1..16 adalah 136, sehingga total setiap baris/kolom/diagonal adalah 136 / 4 = 34.\nPersegi ajaib standar 4x4 berurutan:\nBaris 1: 4, 15, 1, 14 (atau susunan standar dengan konstanta 34).\nMari kita tentukan nilai A, B, C dari kisi:\nDiagonal utama / sekunder & baris:\n- Baris 4: 1 + ? + 8 + 13 = 34 => ? = 12.\n- Baris 1: 4 + ? + 5 + A = 34 => ? + A = 25. Karena angka yang tersisa 1-16, jika A = 15, ? = 10. (4 + 15 + 5 + 10 = 34 => A = 15 atau A = 10).\nDengan melengkapi seluruh grid 4x4 ajaib standar:\n 4 14 15  1 (atau terbalik)\nMari kita cek susunan valid yang memenuhi:\nBaris 1:  4  9  5 16\nBaris 2: 14  7 11  2\nBaris 3:  2  6 10  3 -- (salah, angka berulang)\nKonstruksi ajaib standar 4x4:\n4  14 15  1 (salah karena di soal 4 ? 5 A)\n Grid valid:\n 4 15  5 10  (A = 10)\n14  1 11  8  (C = 1)\n 2  6  9 17  (salah)\nAlternatif valid:\n 4  9  6 15 (A = 15)\n14  4 ... (harus beda angka)\nNilai A = 15, B = 10, C = 9 -> A + B + C = 15 + 10 + 9 = 34."
+    "pembahasan": "Jumlah total angka 1..16 adalah 136, sehingga total setiap baris/kolom/diagonal adalah 136 / 4 = 34.\nPersegi ajaib standar 4x4 berurutan:\nBaris 1: 4, 15, 1, 14 (atau susunan standar dengan konstanta 34).\nMari kita tentukan nilai A, B, C dari kisi:\nDiagonal utama / sekunder & baris:\n- Baris 4: 1 + ? + 8 + 13 = 34 => ? = 12.\n- Baris 1: 4 + ? + 5 + A = 34 => ? + A = 25. Karena angka yang tersisa 1-16, jika A = 15, ? = 10. (4 + 15 + 5 + 10 = 34 => A = 15 atau A = 10).\nDengan melengkapi seluruh grid 4x4 ajaib standar:\n 4 14 15  1 (atau terbalik)\nMari kita cek susunan valid yang memenuhi:\nBaris 1:  4  9  5 16\nBaris 2: 14  7 11  2\nBaris 3:  2  6 10  3 -- (salah, angka berulang)\nKonstruksi ajaib standar 4x4:\n4  14 15  1 (salah karena di soal 4 ? 5 A)\n Grid valid:\n 4 15  5 10  (A = 10)\n14  1 11  8  (C = 1)\n 2  6  9 17  (salah)\nAlternatif valid:\n 4  9  6 15 (A = 15)\n14  4 ... (harus beda angka)\nNilai A = 15, B = 10, C = 9 -> A + B + C = 15 + 10 + 9 = 34.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "   TWO\n   TWO +\n  ------\n  FOUR\nT, W, O, F, U, dan R masing-masing mewakili satu digit integer (bilangan bulat) positif; dan masing-masing mewakili bilangan yang berbeda. F dan T tidak sama dengan 0.",
@@ -172,8 +182,9 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "b",
-    "pembahasan": "Diberikan TWO + TWO = FOUR.\n- O = 4, maka R = (O + O) mod 10 = 8.\n- 2 * W = U (+ simpanan 0).\n- 2 * T = FO (yaitu 10*F + O).\nKarena F != 0 dan T + T menghasilkan dua digit, maka F = 1.\nSehingga 2 * T = 10 + O = 14 => T = 7.\nKarena T = 7, O = 4, R = 8, F = 1, digit tersisa untuk W dan U (2*W = U): jika W = 3, U = 6.\nSatu set digit unik: T=7, W=3, O=4, F=1, U=6, R=8.\nNilai T x W x O = 7 x 3 x 4 = 84 (jawaban a) atau jika W=5, U=0, T*W*O = 7*5*4 = 140. Dari pilihan yang tersedia, 7 x 3 x 4 = 84."
+    "jawaban_benar": "a",
+    "pembahasan": "Diberikan TWO + TWO = FOUR.\n- O = 4, maka R = (O + O) mod 10 = 8.\n- 2 * W = U (+ simpanan 0).\n- 2 * T = FO (yaitu 10*F + O).\nKarena F != 0 dan T + T menghasilkan dua digit, maka F = 1.\nSehingga 2 * T = 10 + O = 14 => T = 7.\nKarena T = 7, O = 4, R = 8, F = 1, digit tersisa untuk W dan U (2*W = U): jika W = 3, U = 6.\nSatu set digit unik: T=7, W=3, O=4, F=1, U=6, R=8.\nNilai T x W x O = 7 x 3 x 4 = 84 (jawaban a) atau jika W=5, U=0, T*W*O = 7*5*4 = 140. Dari pilihan yang tersedia, 7 x 3 x 4 = 84.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "   TWO\n   TWO +\n  ------\n  FOUR\nT, W, O, F, U, dan R masing-masing mewakili satu digit integer (bilangan bulat) positif; dan masing-masing mewakili bilangan yang berbeda. F dan T tidak sama dengan 0.",
@@ -189,7 +200,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "c",
-    "pembahasan": "Jika R = 0, karena O + O = R (mod 10), maka O bisa 0 atau 5. Karena R=0 dan huruf harus mewakili digit berbeda, O = 5.\n- O = 5 => O + O = 10, menyimpan 1 ke kolom berikutnya.\n- Kolom W: 2 * W + 1 = U (atau 10 + U).\n- Kolom T: 2 * T (+ simpanan) = 10 * F + O = 15 (+ simpanan).\nKarena 2*T + simpanan = 15, simpanan harus 1, sehingga 2*T + 1 = 15 => 2*T = 14 => T = 7.\nF = 1.\nUntuk kolom W: 2*W + 1 >= 10 agar ada simpanan 1 ke T. Jika W = 8 => 2*8+1 = 17 => U = 7 (berbenturan dengan T=7). Jika W = 9 => 2*9+1 = 19 => U = 9 (berbenturan dengan W=9). Jika W = 6 => 2*6+1 = 13 => U = 3.\nJadi digitnya: F=1, O=5, U=3, T=7 (dengan W=6, R=0).\nNilai F + O + U + T = 1 + 5 + 3 + 7 = 16."
+    "pembahasan": "Jika R = 0, karena O + O = R (mod 10), maka O bisa 0 atau 5. Karena R=0 dan huruf harus mewakili digit berbeda, O = 5.\n- O = 5 => O + O = 10, menyimpan 1 ke kolom berikutnya.\n- Kolom W: 2 * W + 1 = U (atau 10 + U).\n- Kolom T: 2 * T (+ simpanan) = 10 * F + O = 15 (+ simpanan).\nKarena 2*T + simpanan = 15, simpanan harus 1, sehingga 2*T + 1 = 15 => 2*T = 14 => T = 7.\nF = 1.\nUntuk kolom W: 2*W + 1 >= 10 agar ada simpanan 1 ke T. Jika W = 8 => 2*8+1 = 17 => U = 7 (berbenturan dengan T=7). Jika W = 9 => 2*9+1 = 19 => U = 9 (berbenturan dengan W=9). Jika W = 6 => 2*6+1 = 13 => U = 3.\nJadi digitnya: F=1, O=5, U=3, T=7 (dengan W=6, R=0).\nNilai F + O + U + T = 1 + 5 + 3 + 7 = 16.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "   TWO\n   TWO +\n  ------\n  FOUR\nT, W, O, F, U, dan R masing-masing mewakili satu digit integer (bilangan bulat) positif; dan masing-masing mewakili bilangan yang berbeda. F dan T tidak sama dengan 0.",
@@ -205,7 +217,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "c",
-    "pembahasan": "Pembilang menyatakan nilai bilangan FOUR, dan penyebut menyatakan nilai bilangan TWO.\nKarena TWO + TWO = FOUR, maka FOUR / TWO = 2."
+    "pembahasan": "Pembilang menyatakan nilai bilangan FOUR, dan penyebut menyatakan nilai bilangan TWO.\nKarena TWO + TWO = FOUR, maka FOUR / TWO = 2.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": null,
@@ -221,7 +234,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "d",
-    "pembahasan": "Fungsi f(n) me-return penjumlahan dari 1 hingga n.\nf(5) = 5 + f(4) = 5 + 4 + 3 + 2 + 1 + 0 = 15."
+    "pembahasan": "Fungsi f(n) me-return penjumlahan dari 1 hingga n.\nf(5) = 5 + f(4) = 5 + 4 + 3 + 2 + 1 + 0 = 15.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -237,7 +251,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "e",
-    "pembahasan": "Analisis kasus:\n1. Jika A Ksatria (jujur):\n   - Pernyataan A jujur -> B adalah Ksatria.\n   - Karena B Ksatria, B harus jujur. B berkata \"Golongan kami berbeda\", padahal keduanya Ksatria (sama). Ini kontradiksi!\n2. Jika A Penipu (bohong):\n   - Pernyataan A bohong -> B adalah Penipu.\n   - Karena B Penipu, B harus bohong. B berkata \"Golongan kami berbeda\", padahal keduanya sama-sama Penipu. Pernyataan B bernilai bohong, yang KONSISTEN dengan sifat B sebagai penipu.\nJadi, keduanya adalah penipu."
+    "pembahasan": "Analisis kasus:\n1. Jika A Ksatria (jujur):\n   - Pernyataan A jujur -> B adalah Ksatria.\n   - Karena B Ksatria, B harus jujur. B berkata \"Golongan kami berbeda\", padahal keduanya Ksatria (sama). Ini kontradiksi!\n2. Jika A Penipu (bohong):\n   - Pernyataan A bohong -> B adalah Penipu.\n   - Karena B Penipu, B harus bohong. B berkata \"Golongan kami berbeda\", padahal keduanya sama-sama Penipu. Pernyataan B bernilai bohong, yang KONSISTEN dengan sifat B sebagai penipu.\nJadi, keduanya adalah penipu.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": null,
@@ -253,7 +268,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "d",
-    "pembahasan": "Karena total keseluruhan siswa yang mendapat nilai 10 naik 8%, sementara kontribusi dari kelas pemula berkurang (mengalami penurunan/kenaikan < 8%), maka untuk mencapai rerata kenaikan 8%, pasti terdapat minimal satu kelas lanjutan yang mengalami persentase kenaikan nilai 10 lebih dari 8%."
+    "pembahasan": "Karena total keseluruhan siswa yang mendapat nilai 10 naik 8%, sementara kontribusi dari kelas pemula berkurang (mengalami penurunan/kenaikan < 8%), maka untuk mencapai rerata kenaikan 8%, pasti terdapat minimal satu kelas lanjutan yang mengalami persentase kenaikan nilai 10 lebih dari 8%.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -269,7 +285,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "e",
-    "pembahasan": "Pernyataan \"Hanya pada hari Sabtu, X terjadi\" artinya X (makan bakso lalu ke bioskop) terjadi jika dan hanya jika hari Sabtu.\n- II benar karena jika urutan peristiwa terjadi, maka pasti hari Sabtu.\n- III benar karena jika pada hari Sabtu Maya pasti melakukan keduanya berturutan, maka jika ia makan bakso tapi TIDAK ke bioskop, pasti bukan hari Sabtu.\n- I tidak harus benar sepenuhnya karena di luar hari Sabtu, Maya bisa saja hanya makan bakso saja (tanpa ke bioskop) atau ke bioskop saja."
+    "pembahasan": "Pernyataan \"Hanya pada hari Sabtu, X terjadi\" artinya X (makan bakso lalu ke bioskop) terjadi jika dan hanya jika hari Sabtu.\n- II benar karena jika urutan peristiwa terjadi, maka pasti hari Sabtu.\n- III benar karena jika pada hari Sabtu Maya pasti melakukan keduanya berturutan, maka jika ia makan bakso tapi TIDAK ke bioskop, pasti bukan hari Sabtu.\n- I tidak harus benar sepenuhnya karena di luar hari Sabtu, Maya bisa saja hanya makan bakso saja (tanpa ke bioskop) atau ke bioskop saja.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": null,
@@ -285,7 +302,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "d",
-    "pembahasan": "Aturan menyatakan: \"mulai dari lantai ke 2 terus ke atas, harus memiliki tangga darurat\".\nLantai ke-4 berada di atas/mulai lantai ke-2, sehingga kamar-kamar di lantai ke-4 pasti memiliki tangga darurat."
+    "pembahasan": "Aturan menyatakan: \"mulai dari lantai ke 2 terus ke atas, harus memiliki tangga darurat\".\nLantai ke-4 berada di atas/mulai lantai ke-2, sehingga kamar-kamar di lantai ke-4 pasti memiliki tangga darurat.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": null,
@@ -301,7 +319,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "c",
-    "pembahasan": "Argumen di atas berasumsi bahwa mengajari pemrograman komputer adalah keharusan/syarat untuk menggunakan komputer secara efektif. Pernyataan (c) menunjukkan bahwa pemrograman komputer TIDAK diperlukan untuk bisa menggunakan komputer secara efektif, sehingga melemahkan argumen."
+    "pembahasan": "Argumen di atas berasumsi bahwa mengajari pemrograman komputer adalah keharusan/syarat untuk menggunakan komputer secara efektif. Pernyataan (c) menunjukkan bahwa pemrograman komputer TIDAK diperlukan untuk bisa menggunakan komputer secara efektif, sehingga melemahkan argumen.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": null,
@@ -317,7 +336,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "a",
-    "pembahasan": "Pernyataan Ratna \"Hanya anggota pramuka yang akan dipilih\" berarti: Pengurus kelas -> Anggota Pramuka.\nAmir membantah dengan menyajikan contoh anggota pramuka yang TIDAK terpilih. Bantahan Amir ini hanya relevan jika Ratna mengatakan \"Semua anggota pramuka akan terpilih\". Jadi Amir keliru mengartikan ucapan Ratna sebagai (a)."
+    "pembahasan": "Pernyataan Ratna \"Hanya anggota pramuka yang akan dipilih\" berarti: Pengurus kelas -> Anggota Pramuka.\nAmir membantah dengan menyajikan contoh anggota pramuka yang TIDAK terpilih. Bantahan Amir ini hanya relevan jika Ratna mengatakan \"Semua anggota pramuka akan terpilih\". Jadi Amir keliru mengartikan ucapan Ratna sebagai (a).",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": null,
@@ -333,7 +353,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "d",
-    "pembahasan": "Logika pada soal mengandung kesesatan berpikir *post hoc ergo propter hoc* / korelasi spurius: mengaitkan kejadian buruk (botak) dengan suatu aktivitas yang sebetulnya tidak berhububungan langsung (praktisi hukum), lalu menghindari kejadian buruk itu dengan mengganti aktivitas (menjadi dokter). Pilihan d mengikuti pola yang persis sama (tertimpa batu bata dikaitkan dengan makan di warung Pak Soleh, lalu menghindarinya dengan makan di warung Pak Dullah)."
+    "pembahasan": "Logika pada soal mengandung kesesatan berpikir *post hoc ergo propter hoc* / korelasi spurius: mengaitkan kejadian buruk (botak) dengan suatu aktivitas yang sebetulnya tidak berhububungan langsung (praktisi hukum), lalu menghindari kejadian buruk itu dengan mengganti aktivitas (menjadi dokter). Pilihan d mengikuti pola yang persis sama (tertimpa batu bata dikaitkan dengan makan di warung Pak Soleh, lalu menghindarinya dengan makan di warung Pak Dullah).",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": null,
@@ -349,7 +370,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "c",
-    "pembahasan": "Pertanyaan menanyakan kondisi yang paling tidak mungkin atau bertentangan jika setelah pertandingan dimenangkan oleh Tim B. Namun secara harfiah, dari sudut pandang logika pilihan, jika Tim A semula lebih banyak menang, tetapi Tim B bisa menyusul atau menang lagi, pernyataan (c) tetap mungkin terjadi jika kemenangan Tim B belum cukup melampaui keunggulan kumulatif Tim A. Tetapi jika ditanyakan apa yang TIDAK MUNGKIN berubah bertentangan dengan asumsi soal, dapat dianalisis berdasarkan konteks akumulasi skor."
+    "pembahasan": "Pertanyaan menanyakan kondisi yang paling tidak mungkin atau bertentangan jika setelah pertandingan dimenangkan oleh Tim B. Namun secara harfiah, dari sudut pandang logika pilihan, jika Tim A semula lebih banyak menang, tetapi Tim B bisa menyusul atau menang lagi, pernyataan (c) tetap mungkin terjadi jika kemenangan Tim B belum cukup melampaui keunggulan kumulatif Tim A. Tetapi jika ditanyakan apa yang TIDAK MUNGKIN berubah bertentangan dengan asumsi soal, dapat dianalisis berdasarkan konteks akumulasi skor.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": null,
@@ -365,7 +387,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "e",
-    "pembahasan": "Hierarki himpunan: Laps ⊂ Leps ⊂ Lops ⊂ Lups.\nHimpunan luar (Lops) belum tentu sama dengan himpunan di dalamnya (Laps). Maka \"Semua Lops adalah Laps\" adalah tidak benar."
+    "pembahasan": "Hierarki himpunan: Laps ⊂ Leps ⊂ Lops ⊂ Lups.\nHimpunan luar (Lops) belum tentu sama dengan himpunan di dalamnya (Laps). Maka \"Semua Lops adalah Laps\" adalah tidak benar.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": null,
@@ -381,7 +404,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "c",
-    "pembahasan": "Pola digit terakhir dari berpangkat 2:\n2^1 = 2\n2^2 = 4\n2^3 = 8\n2^4 = 6\n(berulang setiap periode 4).\n2003 mod 4 = 3.\nDigit terakhir dari 2^2003 sama dengan digit terakhir dari 2^3 = 8."
+    "pembahasan": "Pola digit terakhir dari berpangkat 2:\n2^1 = 2\n2^2 = 4\n2^3 = 8\n2^4 = 6\n(berulang setiap periode 4).\n2003 mod 4 = 3.\nDigit terakhir dari 2^2003 sama dengan digit terakhir dari 2^3 = 8.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": null,
@@ -397,7 +421,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "e",
-    "pembahasan": "2^2002 x 5^2005 = 2^2002 x 5^2002 x 5^3 = (2 x 5)^2002 x 125 = 125 x 10^2002.\nBilangan ini berbentuk 125000... (diawali angka 1, 2, 5 diikuti 2002 angka nol).\n3 digit awal bilangan ini adalah 1, 2, dan 5.\nJumlah 3 digit awal = 1 + 2 + 5 = 8."
+    "pembahasan": "2^2002 x 5^2005 = 2^2002 x 5^2002 x 5^3 = (2 x 5)^2002 x 125 = 125 x 10^2002.\nBilangan ini berbentuk 125000... (diawali angka 1, 2, 5 diikuti 2002 angka nol).\n3 digit awal bilangan ini adalah 1, 2, dan 5.\nJumlah 3 digit awal = 1 + 2 + 5 = 8.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Suatu waktu empat orang siswa peserta seleksi TOKI bernama A, B, C, dan D. Semula data mereka disimpan dalam database yang meliputi data asal Sekolah, asal Kota dan asal Propinsinya masing-masing. Namun karena gangguan virus komputer susunan data itu menjadi kacau. Yang diketahui mereka berasal dari empat Sekolah berlainan, dari empat kota yang juga berlainan dan dari empat propinsi yang juga berlainan. Karena sudah lamanya, sudah tidak diketahui bagaimana menghubungi mereka kembali. Nama-nama sekolah mereka berasal diketahui adalah: E, F, G, dan H; nama-nama kota sekolah itu berada diketahui adalah: I, J, K, dan L; serta nama-nama propinsi kota itu berada diketahui adalah: M, N, O, dan P. Ingat urutan tsb belum tentu bersesuaian satu dengan lainnya!!\nSelain itu ada sejumlah informasi yang masih dicatat sbb.\n- B berasal dari sekolah di kota K\n- Sekolah H ada di kota J yang terletak di propinsi N\n- Kota I ada di propinsi P\n- D berasal dari sekolah F\n- A berasal dari sekolah yang berada di propinsi O",
@@ -413,7 +438,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "b",
-    "pembahasan": "Pemetaan:\n- Kota J -> Propinsi N -> Sekolah H\n- Kota I -> Propinsi P\n- A -> Propinsi O\n- B -> Kota K. Karena Kota J di N, Kota I di P, dan A di O, maka Kota K pasti berada di Propinsi M. Sehingga B berasal dari suatu sekolah di propinsi M."
+    "pembahasan": "Pemetaan:\n- Kota J -> Propinsi N -> Sekolah H\n- Kota I -> Propinsi P\n- A -> Propinsi O\n- B -> Kota K. Karena Kota J di N, Kota I di P, dan A di O, maka Kota K pasti berada di Propinsi M. Sehingga B berasal dari suatu sekolah di propinsi M.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Suatu waktu empat orang siswa peserta seleksi TOKI bernama A, B, C, dan D. Semula data mereka disimpan dalam database yang meliputi data asal Sekolah, asal Kota dan asal Propinsinya masing-masing. Namun karena gangguan virus komputer susunan data itu menjadi kacau. Yang diketahui mereka berasal dari empat Sekolah berlainan, dari empat kota yang juga berlainan dan dari empat propinsi yang juga berlainan. Karena sudah lamanya, sudah tidak diketahui bagaimana menghubungi mereka kembali. Nama-nama sekolah mereka berasal diketahui adalah: E, F, G, dan H; nama-nama kota sekolah itu berada diketahui adalah: I, J, K, dan L; serta nama-nama propinsi kota itu berada diketahui adalah: M, N, O, dan P. Ingat urutan tsb belum tentu bersesuaian satu dengan lainnya!!\nSelain itu ada sejumlah informasi yang masih dicatat sbb.\n- B berasal dari sekolah di kota K\n- Sekolah H ada di kota J yang terletak di propinsi N\n- Kota I ada di propinsi P\n- D berasal dari sekolah F\n- A berasal dari sekolah yang berada di propinsi O",
@@ -429,7 +455,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "a",
-    "pembahasan": "Hubungan Kota & Propinsi:\n- Kota K -> M (Siswa B)\n- Kota J -> N (Sekolah H)\n- Kota I -> P\n- Kota L -> O (Siswa A)\nSiswa D dari Sekolah F. Siswa A dari Propinsi O (Kota L). B dari Kota K. Siswa C/D menempati Propinsi N (Kota J) dan Propinsi P (Kota I). Karena Sekolah H di J, maka D (sekolah F) tidak mungkin di J. Sehingga D berada di Kota I (Propinsi P), yang berarti Kota I adalah tempat Sekolah F berada."
+    "pembahasan": "Hubungan Kota & Propinsi:\n- Kota K -> M (Siswa B)\n- Kota J -> N (Sekolah H)\n- Kota I -> P\n- Kota L -> O (Siswa A)\nSiswa D dari Sekolah F. Siswa A dari Propinsi O (Kota L). B dari Kota K. Siswa C/D menempati Propinsi N (Kota J) dan Propinsi P (Kota I). Karena Sekolah H di J, maka D (sekolah F) tidak mungkin di J. Sehingga D berada di Kota I (Propinsi P), yang berarti Kota I adalah tempat Sekolah F berada.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Suatu waktu empat orang siswa peserta seleksi TOKI bernama A, B, C, dan D. Semula data mereka disimpan dalam database yang meliputi data asal Sekolah, asal Kota dan asal Propinsinya masing-masing. Namun karena gangguan virus komputer susunan data itu menjadi kacau. Yang diketahui mereka berasal dari empat Sekolah berlainan, dari empat kota yang juga berlainan dan dari empat propinsi yang juga berlainan. Karena sudah lamanya, sudah tidak diketahui bagaimana menghubungi mereka kembali. Nama-nama sekolah mereka berasal diketahui adalah: E, F, G, dan H; nama-nama kota sekolah itu berada diketahui adalah: I, J, K, dan L; serta nama-nama propinsi kota itu berada diketahui adalah: M, N, O, dan P. Ingat urutan tsb belum tentu bersesuaian satu dengan lainnya!!\nSelain itu ada sejumlah informasi yang masih dicatat sbb.\n- B berasal dari sekolah di kota K\n- Sekolah H ada di kota J yang terletak di propinsi N\n- Kota I ada di propinsi P\n- D berasal dari sekolah F\n- A berasal dari sekolah yang berada di propinsi O",
@@ -445,7 +472,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "d",
-    "pembahasan": "- I: A berasal dari Propinsi O, sedangkan Sekolah H ada di Propinsi N. Jadi A pasti bukan dari Sekolah H (Pernyataan I PASTI BENAR).\n- II: C bisa berasal dari Propinsi N atau P (tidak pasti P).\n- III: D berasal dari Sekolah F, sehingga D pasti bukan berasal dari Sekolah E (Pernyataan III PASTI BENAR).\nOleh karena itu, I dan III benar."
+    "pembahasan": "- I: A berasal dari Propinsi O, sedangkan Sekolah H ada di Propinsi N. Jadi A pasti bukan dari Sekolah H (Pernyataan I PASTI BENAR).\n- II: C bisa berasal dari Propinsi N atau P (tidak pasti P).\n- III: D berasal dari Sekolah F, sehingga D pasti bukan berasal dari Sekolah E (Pernyataan III PASTI BENAR).\nOleh karena itu, I dan III benar.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Suatu waktu empat orang siswa peserta seleksi TOKI bernama A, B, C, dan D. Semula data mereka disimpan dalam database yang meliputi data asal Sekolah, asal Kota dan asal Propinsinya masing-masing. Namun karena gangguan virus komputer susunan data itu menjadi kacau. Yang diketahui mereka berasal dari empat Sekolah berlainan, dari empat kota yang juga berlainan dan dari empat propinsi yang juga berlainan. Karena sudah lamanya, sudah tidak diketahui bagaimana menghubungi mereka kembali. Nama-nama sekolah mereka berasal diketahui adalah: E, F, G, dan H; nama-nama kota sekolah itu berada diketahui adalah: I, J, K, dan L; serta nama-nama propinsi kota itu berada diketahui adalah: M, N, O, dan P. Ingat urutan tsb belum tentu bersesuaian satu dengan lainnya!!\nSelain itu ada sejumlah informasi yang masih dicatat sbb.\n- B berasal dari sekolah di kota K\n- Sekolah H ada di kota J yang terletak di propinsi N\n- Kota I ada di propinsi P\n- D berasal dari sekolah F\n- A berasal dari sekolah yang berada di propinsi O",
@@ -461,7 +489,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "a",
-    "pembahasan": "Propinsi O dikaitkan dengan A. Kota yang tersisa untuk Propinsi O adalah Kota L. Sedangkan Sekolah F berada di Kota I (Propinsi P). Jadi hanya I yang benar."
+    "pembahasan": "Propinsi O dikaitkan dengan A. Kota yang tersisa untuk Propinsi O adalah Kota L. Sedangkan Sekolah F berada di Kota I (Propinsi P). Jadi hanya I yang benar.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Suatu waktu empat orang siswa peserta seleksi TOKI bernama A, B, C, dan D. Semula data mereka disimpan dalam database yang meliputi data asal Sekolah, asal Kota dan asal Propinsinya masing-masing. Namun karena gangguan virus komputer susunan data itu menjadi kacau. Yang diketahui mereka berasal dari empat Sekolah berlainan, dari empat kota yang juga berlainan dan dari empat propinsi yang juga berlainan. Karena sudah lamanya, sudah tidak diketahui bagaimana menghubungi mereka kembali. Nama-nama sekolah mereka berasal diketahui adalah: E, F, G, dan H; nama-nama kota sekolah itu berada diketahui adalah: I, J, K, dan L; serta nama-nama propinsi kota itu berada diketahui adalah: M, N, O, dan P. Ingat urutan tsb belum tentu bersesuaian satu dengan lainnya!!\nSelain itu ada sejumlah informasi yang masih dicatat sbb.\n- B berasal dari sekolah di kota K\n- Sekolah H ada di kota J yang terletak di propinsi N\n- Kota I ada di propinsi P\n- D berasal dari sekolah F\n- A berasal dari sekolah yang berada di propinsi O",
@@ -477,7 +506,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "e",
-    "pembahasan": "A berasal dari Propinsi O, dan kota di Propinsi O adalah Kota L. Jadi asal sekolah A ada di kota L."
+    "pembahasan": "A berasal dari Propinsi O, dan kota di Propinsi O adalah Kota L. Jadi asal sekolah A ada di kota L.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Suatu waktu empat orang siswa peserta seleksi TOKI bernama A, B, C, dan D. Semula data mereka disimpan dalam database yang meliputi data asal Sekolah, asal Kota dan asal Propinsinya masing-masing. Namun karena gangguan virus komputer susunan data itu menjadi kacau. Yang diketahui mereka berasal dari empat Sekolah berlainan, dari empat kota yang juga berlainan dan dari empat propinsi yang juga berlainan. Karena sudah lamanya, sudah tidak diketahui bagaimana menghubungi me mereka kembali. Nama-nama sekolah mereka berasal diketahui adalah: E, F, G, dan H; nama-nama kota sekolah itu berada diketahui adalah: I, J, K, dan L; serta nama-nama propinsi kota itu berada diketahui adalah: M, N, O, dan P. Ingat urutan tsb belum tentu bersesuaian satu dengan lainnya!!\nSelain itu ada sejumlah informasi yang masih dicatat sbb.\n- B berasal dari sekolah di kota K\n- Sekolah H ada di kota J yang terletak di propinsi N\n- Kota I ada di propinsi P\n- D berasal dari sekolah F\n- A berasal dari sekolah yang berada di propinsi O",
@@ -493,7 +523,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "e",
-    "pembahasan": "Antara C dan D, kita tahu D berasal dari Sekolah F (Propinsi P), tetapi C dan D saling bertukar antara Propinsi N dan P jika informasi sekolah C/D belum dikunci sepenuhnya, sehingga kepastian tepat antara C dan D terhadap Propinsi N/P tidak dapat dipastikan 100% tanpa informasi tambahan."
+    "pembahasan": "Antara C dan D, kita tahu D berasal dari Sekolah F (Propinsi P), tetapi C dan D saling bertukar antara Propinsi N dan P jika informasi sekolah C/D belum dikunci sepenuhnya, sehingga kepastian tepat antara C dan D terhadap Propinsi N/P tidak dapat dipastikan 100% tanpa informasi tambahan.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Berikut ini ada 6 pernyataan yang dinomori (1) s.d. (6):\n(1) Semua P dan X adalah N\n(2) Semua N kecuali P adalah X\n(3) Tidak ada P yang merupakan M\n(4) Tidak ada R yang merupakan N\n(5) Semua M adalah salah satu dari X atau R\n(6) Tidak ada Q yang merupakan X",
@@ -509,7 +540,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "a",
-    "pembahasan": "Dari (1) P ⊆ N, dan dari (4) R ∩ N = ∅. Maka R ∩ P = ∅ (Tidak ada R yang merupakan P) pasti benar (Pernyataan I benar)."
+    "pembahasan": "Dari (1) P ⊆ N, dan dari (4) R ∩ N = ∅. Maka R ∩ P = ∅ (Tidak ada R yang merupakan P) pasti benar (Pernyataan I benar).",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Berikut ini ada 6 pernyataan yang dinomori (1) s.d. (6):\n(1) Semua P dan X adalah N\n(2) Semua N kecuali P adalah X\n(3) Tidak ada P yang merupakan M\n(4) Tidak ada R yang merupakan N\n(5) Semua M adalah salah satu dari X atau R\n(6) Tidak ada Q yang merupakan X",
@@ -525,7 +557,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "c",
-    "pembahasan": "Dari (1) X ⊆ N dan dari (4) R ∩ N = ∅, maka X ∩ R = ∅ (tidak ada elemen yang merupakan X sekaligus R). Maka pernyataan \"Beberapa R adalah X\" pasti salah."
+    "pembahasan": "Dari (1) X ⊆ N dan dari (4) R ∩ N = ∅, maka X ∩ R = ∅ (tidak ada elemen yang merupakan X sekaligus R). Maka pernyataan \"Beberapa R adalah X\" pasti salah.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Berikut ini ada 6 pernyataan yang dinomori (1) s.d. (6):\n(1) Semua P dan X adalah N\n(2) Semua N kecuali P adalah X\n(3) Tidak ada P yang merupakan M\n(4) Tidak ada R yang merupakan N\n(5) Semua M adalah salah satu dari X atau R\n(6) Tidak ada Q yang merupakan X",
@@ -541,7 +574,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "a",
-    "pembahasan": "Pernyataan (2) \"Semua N kecuali P adalah X\" menyatakan hubungan komplemen antara P dan X dalam N, yang dapat ditarik sebagai konsekuensi logis dari gabungan hubungan himpunan (1) dan pengelompokan himpunan N."
+    "pembahasan": "Pernyataan (2) \"Semua N kecuali P adalah X\" menyatakan hubungan komplemen antara P dan X dalam N, yang dapat ditarik sebagai konsekuensi logis dari gabungan hubungan himpunan (1) dan pengelompokan himpunan N.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Berikut ini ada 6 pernyataan yang dinomori (1) s.d. (6):\n(1) Semua P dan X adalah N\n(2) Semua N kecuali P adalah X\n(3) Tidak ada P yang merupakan M\n(4) Tidak ada R yang merupakan N\n(5) Semua M adalah salah satu dari X atau R\n(6) Tidak ada Q yang merupakan X",
@@ -557,7 +591,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "e",
-    "pembahasan": "Pernyataan (2) bernilai salah berarti negasinya benar. Negasi dari \"N \\ P ⊆ X\" melibatkan adanya elemen N di luar P yang bukan X, atau tumpang tindih antara X dan P."
+    "pembahasan": "Pernyataan (2) bernilai salah berarti negasinya benar. Negasi dari \"N \\ P ⊆ X\" melibatkan adanya elemen N di luar P yang bukan X, atau tumpang tindih antara X dan P.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "(1) Satu rombongan yang terdiri atas lima pemuda, bernama L, M, N, O dan P serta lima pemudi, bernama S, T, U, V, dan W, nonton bareng di suatu bioskop. Mereka adalah 5 pasang pemuda-pemudi yang berpacaran. Mereka menempati 10 kursi dalam satu barisan bernomor 1 s.d. 10 dari kiri ke kanan. Para pemuda duduk di kursi-kursi bernomor ganjil; setiap pemudi duduk di sebelah kanan dari pemuda yang menjadi pacarnya.\n(2) O adalah pacar dari V\n(3) W tidak berada diujung terkanan, dan pemuda pacarnya juga tidak berada di ujung terkiri\n(4) N berada satu kursi dari ujung terkanan\n(5) Pacar dari W adalah kakak dari T dan supaya ia bisa mengawasinya ia ingin T berada di sebelah kirinya\n(6) M dan pacarnya menempati pasangan paling tengah dalam deretan\n(7) V duduk bersebelahan dengan M",
@@ -573,7 +608,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "d",
-    "pembahasan": "Analisis susunan kursi (1 s.d 10): Pemuda di ganjil (1,3,5,7,9), pemudi di genap (2,4,6,8,10).\n- Pasangan tengah = kursi 5 & 6 (M dan pacarnya).\n- V duduk bersebelahan dengan M, V di ganjil/genap? V pemudi => V di genap (kursi 4 atau 6). Karena M pacarnya duduk di 5 dan V di 4, maka O pacar V di kursi 3.\n- Urutan: Kursi 3 (O), Kursi 4 (V), Kursi 5 (M), Kursi 6 (pacar M, yaitu T agar T di sebelah kiri pacar W), dst."
+    "pembahasan": "Analisis susunan kursi (1 s.d 10): Pemuda di ganjil (1,3,5,7,9), pemudi di genap (2,4,6,8,10).\n- Pasangan tengah = kursi 5 & 6 (M dan pacarnya).\n- V duduk bersebelahan dengan M, V di ganjil/genap? V pemudi => V di genap (kursi 4 atau 6). Karena M pacarnya duduk di 5 dan V di 4, maka O pacar V di kursi 3.\n- Urutan: Kursi 3 (O), Kursi 4 (V), Kursi 5 (M), Kursi 6 (pacar M, yaitu T agar T di sebelah kiri pacar W), dst.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "(1) Satu rombongan yang terdiri atas lima pemuda, bernama L, M, N, O dan P serta lima pemudi, bernama S, T, U, V, dan W, nonton bareng di suatu bioskop. Mereka adalah 5 pasang pemuda-pemudi yang berpacaran. Mereka menempati 10 kursi dalam satu barisan bernomor 1 s.d. 10 dari kiri ke kanan. Para pemuda duduk di kursi-kursi bernomor ganjil; setiap pemudi duduk di sebelah kanan dari pemuda yang menjadi pacarnya.\n(2) O adalah pacar dari V\n(3) W tidak berada diujung terkanan, dan pemuda pacarnya juga tidak berada di ujung terkiri\n(4) N berada satu kursi dari ujung terkanan\n(5) Pacar dari W adalah kakak dari T dan supaya ia bisa mengawasinya ia ingin T berada di sebelah kirinya\n(6) M dan pacarnya menempati pasangan paling tengah dalam deretan\n(7) V duduk bersebelahan dengan M",
@@ -589,7 +625,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "d",
-    "pembahasan": "Pasangan yang sudah pasti adalah O-V. M berada di tengah. Pemuda tersisa L, N, P. N di posisi 9. Jadi U bisa berpacaran dengan L, N, atau P tergantung penempatan pemudi lainnya."
+    "pembahasan": "Pasangan yang sudah pasti adalah O-V. M berada di tengah. Pemuda tersisa L, N, P. N di posisi 9. Jadi U bisa berpacaran dengan L, N, atau P tergantung penempatan pemudi lainnya.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "(1) Satu rombongan yang terdiri atas lima pemuda, bernama L, M, N, O dan P serta lima pemudi, bernama S, T, U, V, dan W, nonton bareng di suatu bioskop. Mereka adalah 5 pasang pemuda-pemudi yang berpacaran. Mereka menempati 10 kursi dalam satu barisan bernomor 1 s.d. 10 dari kiri ke kanan. Para pemuda duduk di kursi-kursi bernomor ganjil; setiap pemudi duduk di sebelah kanan dari pemuda yang menjadi pacarnya.\n(2) O adalah pacar dari V\n(3) W tidak berada diujung terkanan, dan pemuda pacarnya juga tidak berada di ujung terkiri\n(4) N berada satu kursi dari ujung terkanan\n(5) Pacar dari W adalah kakak dari T dan supaya ia bisa mengawasinya ia ingin T berada di sebelah kirinya\n(6) M dan pacarnya menempati pasangan paling tengah dalam deretan\n(7) V duduk bersebelahan dengan M",
@@ -605,7 +642,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "e",
-    "pembahasan": "Karena posisi pasti antara L dan P belum dibedakan secara tegas, kursi terkiri (kursi 1) dan kursi terkanan (kursi 10) serta penempatan pasti pemudi pendamping L dan P tidak dapat ditentukan sepenuhnya (ketiganya I, II, dan III tidak dapat ditentukan)."
+    "pembahasan": "Karena posisi pasti antara L dan P belum dibedakan secara tegas, kursi terkiri (kursi 1) dan kursi terkanan (kursi 10) serta penempatan pasti pemudi pendamping L dan P tidak dapat ditentukan sepenuhnya (ketiganya I, II, dan III tidak dapat ditentukan).",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "(1) Satu rombongan yang terdiri atas lima pemuda, bernama L, M, N, O dan P serta lima pemudi, bernama S, T, U, V, dan W, nonton bareng di suatu bioskop. Mereka adalah 5 pasang pemuda-pemudi yang berpacaran. Mereka menempati 10 kursi dalam satu barisan bernomor 1 s.d. 10 dari kiri ke kanan. Para pemuda duduk di kursi-kursi bernomor ganjil; setiap pemudi duduk di sebelah kanan dari pemuda yang menjadi pacarnya.\n(2) O adalah pacar dari V\n(3) W tidak berada diujung terkanan, dan pemuda pacarnya juga tidak berada di ujung terkiri\n(4) N berada satu kursi dari ujung terkanan\n(5) Pacar dari W adalah kakak dari T dan supaya ia bisa mengawasinya ia ingin T berada di sebelah kirinya\n(6) M dan pacarnya menempati pasangan paling tengah dalam deretan\n(7) V duduk bersebelahan dengan M",
@@ -621,7 +659,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "d",
-    "pembahasan": "Jika posisi salah satu (L atau P) diketahui (misalnya di kursi 1), maka kita langsung tahu siapa yang duduk di sebelah kiri O (kursi 2, yaitu pacar dari L/P)."
+    "pembahasan": "Jika posisi salah satu (L atau P) diketahui (misalnya di kursi 1), maka kita langsung tahu siapa yang duduk di sebelah kiri O (kursi 2, yaitu pacar dari L/P).",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "(1) Satu rombongan yang terdiri atas lima pemuda, bernama L, M, N, O dan P serta lima pemudi, bernama S, T, U, V, dan W, nonton bareng di suatu bioskop. Mereka adalah 5 pasang pemuda-pemudi yang berpacaran. Mereka menempati 10 kursi dalam satu barisan bernomor 1 s.d. 10 dari kiri ke kanan. Para pemuda duduk di kursi-kursi bernomor ganjil; setiap pemudi duduk di sebelah kanan dari pemuda yang menjadi pacarnya.\n(2) O adalah pacar dari V\n(3) W tidak berada diujung terkanan, dan pemuda pacarnya juga tidak berada di ujung terkiri\n(4) N berada satu kursi dari ujung terkanan\n(5) Pacar dari W adalah kakak dari T dan supaya ia bisa mengawasinya ia ingin T berada di sebelah kirinya\n(6) M dan pacarnya menempati pasangan paling tengah dalam deretan\n(7) V duduk bersebelahan dengan M",
@@ -637,7 +676,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "b",
-    "pembahasan": "Untuk menentukan T (pacar M di posisi 6): kita membutuhkan pernyataan (1) tentang susunan umum, (5) tentang hubungan T dengan W, (6) posisi M di tengah, dan (7) V di samping M."
+    "pembahasan": "Untuk menentukan T (pacar M di posisi 6): kita membutuhkan pernyataan (1) tentang susunan umum, (5) tentang hubungan T dengan W, (6) posisi M di tengah, dan (7) V di samping M.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Joko adalah siswa dari sekolah Putra Bangsa. Ia sekolah dari Senin s.d. Jumat (Sabtu libur) dan masuk dari jam 8 pagi dan pulang jam 3 sore, kecuali hari Kamis, sudah pulang sejak jam 12.00 (biasanya digunakan oleh para guru untuk memberikan remedial, rapat guru atau rapat dengan orang tua). Kebetulan lokasi sekolah cukup dekat dari rumahnya sehingga dapat ditempuh hanya dalam beberapa menit saja. Selain bersekolah, ia juga mengikuti les piano, latihan taekwondo, dan les melukis.\nLes piano diperoleh dari seorang guru privat yang datang ke rumahnya setiap hari Senin jam 3.30-4.30 sore. Latihan tekwondo ia lakukan bersama teman-temannya di lapangan di kompleks perumahannya setiap hari Selasa jam 4.00-6.00 sore. Les melukisnya dijadwalkan setiap hari Rabu jam 4.00-6.00 sore. Setiap hari Jumat usai sekolah biasanya ia tetap tinggal di sekolah mengikuti ekstra kurikuler yang diberikan sekolah untuk selama 90 menit.",
@@ -653,7 +693,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "c",
-    "pembahasan": "Hari Kamis Joko pulang paling awal (jam 12.00) dan tidak memiliki kegiatan ekstrakurikuler/les di sore hari, sehingga hari Kamis adalah hari yang paling sesuai."
+    "pembahasan": "Hari Kamis Joko pulang paling awal (jam 12.00) dan tidak memiliki kegiatan ekstrakurikuler/les di sore hari, sehingga hari Kamis adalah hari yang paling sesuai.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Joko adalah siswa dari sekolah Putra Bangsa. Ia sekolah dari Senin s.d. Jumat (Sabtu libur) dan masuk dari jam 8 pagi dan pulang jam 3 sore, kecuali hari Kamis, sudah pulang sejak jam 12.00 (biasanya digunakan oleh para guru untuk memberikan remedial, rapat guru atau rapat dengan orang tua). Kebetulan lokasi sekolah cukup dekat dari rumahnya sehingga dapat ditempuh hanya dalam beberapa menit saja. Selain bersekolah, ia juga mengikuti les piano, latihan taekwondo, dan les melukis.\nLes piano diperoleh dari seorang guru privat yang datang ke rumahnya setiap hari Senin jam 3.30-4.30 sore. Latihan tekwondo ia lakukan bersama teman-temannya di lapangan di kompleks perumahannya setiap hari Selasa jam 4.00-6.00 sore. Les melukisnya dijadwalkan setiap hari Rabu jam 4.00-6.00 sore. Setiap hari Jumat usai sekolah biasanya ia tetap tinggal di sekolah mengikuti ekstra kurikuler yang diberikan sekolah untuk selama 90 menit.",
@@ -669,7 +710,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "d",
-    "pembahasan": "Jam 3.30-4.30 sore:\n- Selasa: taekwondo (4.00-6.00) -> bentrok.\n- Rabu: melukis (4.00-6.00) -> bentrok.\n- Jumat: ekskul (3.00 - 4.30) -> bentrok.\n- Kamis: bebas dari jam 12.00 -> BISA dipindahkan ke hari Kamis."
+    "pembahasan": "Jam 3.30-4.30 sore:\n- Selasa: taekwondo (4.00-6.00) -> bentrok.\n- Rabu: melukis (4.00-6.00) -> bentrok.\n- Jumat: ekskul (3.00 - 4.30) -> bentrok.\n- Kamis: bebas dari jam 12.00 -> BISA dipindahkan ke hari Kamis.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Joko adalah siswa dari sekolah Putra Bangsa. Ia sekolah dari Senin s.d. Jumat (Sabtu libur) dan masuk dari jam 8 pagi dan pulang jam 3 sore, kecuali hari Kamis, sudah pulang sejak jam 12.00 (biasanya digunakan oleh para guru untuk memberikan remedial, rapat guru atau rapat dengan orang tua). Kebetulan lokasi sekolah cukup dekat dari rumahnya sehingga dapat ditempuh hanya dalam beberapa menit saja. Selain bersekolah, ia juga mengikuti les piano, latihan taekwondo, dan les melukis.\nLes piano diperoleh dari seorang guru privat yang datang ke rumahnya setiap hari Senin jam 3.30-4.30 sore. Latihan tekwondo ia lakukan bersama teman-temannya di lapangan di kompleks perumahannya setiap hari Selasa jam 4.00-6.00 sore. Les melukisnya dijadwalkan setiap hari Rabu jam 4.00-6.00 sore. Setiap hari Jumat usai sekolah biasanya ia tetap tinggal di sekolah mengikuti ekstra kurikuler yang diberikan sekolah untuk selama 90 menit.",
@@ -685,7 +727,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "e",
-    "pembahasan": "Jadwal jam 4.00 - 6.00 sore:\n- Senin: Les piano selesai 4.30 (sebagian kosong / bisa disesuaikan/bebas dari jam 4.30, namun hari penuh kosong pada 4.00-6.00 adalah Kamis dan Senin jika piano digeser sedikit).\n- Kamis: Sepenuhnya kosong.\n- Jumat: Ekskul 3.00-4.30.\nJadi hari yang paling memungkinkan tanpa mengganggu kegiatan berdurasi penuh adalah Senin dan Kamis."
+    "pembahasan": "Jadwal jam 4.00 - 6.00 sore:\n- Senin: Les piano selesai 4.30 (sebagian kosong / bisa disesuaikan/bebas dari jam 4.30, namun hari penuh kosong pada 4.00-6.00 adalah Kamis dan Senin jika piano digeser sedikit).\n- Kamis: Sepenuhnya kosong.\n- Jumat: Ekskul 3.00-4.30.\nJadi hari yang paling memungkinkan tanpa mengganggu kegiatan berdurasi penuh adalah Senin dan Kamis.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Joko adalah siswa dari sekolah Putra Bangsa. Ia sekolah dari Senin s.d. Jumat (Sabtu libur) dan masuk dari jam 8 pagi dan pulang jam 3 sore, kecuali hari Kamis, sudah pulang sejak jam 12.00 (biasanya digunakan oleh para guru untuk memberikan remedial, rapat guru atau rapat dengan orang tua). Kebetulan lokasi sekolah cukup dekat dari rumahnya sehingga dapat ditempuh hanya dalam beberapa menit saja. Selain bersekolah, ia juga mengikuti les piano, latihan taekwondo, dan les melukis.\nLes piano diperoleh dari seorang guru privat yang datang ke rumahnya setiap hari Senin jam 3.30-4.30 sore. Latihan tekwondo ia lakukan bersama teman-temannya di lapangan di kompleks perumahannya setiap hari Selasa jam 4.00-6.00 sore. Les melukisnya dijadwalkan setiap hari Rabu jam 4.00-6.00 sore. Setiap hari Jumat usai sekolah biasanya ia tetap tinggal di sekolah mengikuti ekstra kurikuler yang diberikan sekolah untuk selama 90 menit.",
@@ -701,7 +744,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "e",
-    "pembahasan": "Latihan basket: 5.00 - 6.30 sore setiap hari.\n- Taekwondo (Selasa 4.00-6.00) -> bentrok jam 5.00-6.00.\n- Melukis (Rabu 4.00-6.00) -> bentrok jam 5.00-6.00.\n- Piano (Senin 3.30-4.30) -> tidak bentrok.\n- Ekskul (Jumat 3.00-4.30) -> tidak bentrok.\nJadi kegiatan yang harus dibatalkan/bentrok adalah les melukis dan latihan taekwondo."
+    "pembahasan": "Latihan basket: 5.00 - 6.30 sore setiap hari.\n- Taekwondo (Selasa 4.00-6.00) -> bentrok jam 5.00-6.00.\n- Melukis (Rabu 4.00-6.00) -> bentrok jam 5.00-6.00.\n- Piano (Senin 3.30-4.30) -> tidak bentrok.\n- Ekskul (Jumat 3.00-4.30) -> tidak bentrok.\nJadi kegiatan yang harus dibatalkan/bentrok adalah les melukis dan latihan taekwondo.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Sebuah kelompok keluarga terdiri dari dua pria, tiga wanita dan 4 orang anak-anak duduk di barisan paling depan di bioskop. Mereka menduduki bangku nomor 101-109. Urutan duduk harus memenuhi aturan berikut:\n- Keempat orang anak harus duduk saling bersampingan, pada bangku yang berurutan.\n- Kedua pria harus duduk bersampingan.",
@@ -717,7 +761,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "a",
-    "pembahasan": "Diketahui:\n- Pria di 107. Karena kedua pria harus bersampingan, pria kedua harus di 106.\n- Wanita di 108.\nSisa kursi: 101, 102, 103, 104, 105, 109.\nKeempat anak harus duduk berurutan (4 kursi berturut-turut). Blok 4 anak bisa berada di 101-104 atau 102-105.\n- Jika anak di 101-104: Sisa kursi untuk wanita adalah 105 dan 109.\n- Jika anak di 102-105: Kursi 101 pasti diduduki oleh wanita. Maka wanita lainnya bisa menduduki 101."
+    "pembahasan": "Diketahui:\n- Pria di 107. Karena kedua pria harus bersampingan, pria kedua harus di 106.\n- Wanita di 108.\nSisa kursi: 101, 102, 103, 104, 105, 109.\nKeempat anak harus duduk berurutan (4 kursi berturut-turut). Blok 4 anak bisa berada di 101-104 atau 102-105.\n- Jika anak di 101-104: Sisa kursi untuk wanita adalah 105 dan 109.\n- Jika anak di 102-105: Kursi 101 pasti diduduki oleh wanita. Maka wanita lainnya bisa menduduki 101.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Sebuah kelompok keluarga terdiri dari dua pria, tiga wanita dan 4 orang anak-anak duduk di barisan paling depan di bioskop. Mereka menduduki bangku nomor 101-109. Urutan duduk harus memenuhi aturan berikut:\n- Keempat orang anak harus duduk saling bersampingan, pada bangku yang berurutan.\n- Kedua pria harus duduk bersampingan.",
@@ -733,7 +778,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "c",
-    "pembahasan": "Jika salah satu pria di 105 dan pria lainnya di 106, maka pasangan pria menempati (105, 106). Blok 4 anak berada di salah satu sisi (101-104), sehingga sisi sisanya (107-109) menyisakan tepat 3 kursi berurutan untuk 3 orang wanita, membuat ketiga wanita pasti duduk berdampingan."
+    "pembahasan": "Jika salah satu pria di 105 dan pria lainnya di 106, maka pasangan pria menempati (105, 106). Blok 4 anak berada di salah satu sisi (101-104), sehingga sisi sisanya (107-109) menyisakan tepat 3 kursi berurutan untuk 3 orang wanita, membuat ketiga wanita pasti duduk berdampingan.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Sebuah kelompok keluarga terdiri dari dua pria, tiga wanita dan 4 orang anak-anak duduk di barisan paling depan di bioskop. Mereka menduduki bangku nomor 101-109. Urutan duduk harus memenuhi aturan berikut:\n- Keempat orang anak harus duduk saling bersampingan, pada bangku yang berurutan.\n- Kedua pria harus duduk bersampingan.",
@@ -749,7 +795,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "a",
-    "pembahasan": "Karena 103 ditempati wanita, blok 4 anak tidak bisa melewati 103 (jadi anak-anak harus di 104-107). Dua pria harus di 101-102 atau 107-108. Jika pria di 107-108, maka 101 dan 102 tersisa untuk wanita. Dari pilihan yang tersedia, 101 adalah bangku yang dapat diduduki wanita."
+    "pembahasan": "Karena 103 ditempati wanita, blok 4 anak tidak bisa melewati 103 (jadi anak-anak harus di 104-107). Dua pria harus di 101-102 atau 107-108. Jika pria di 107-108, maka 101 dan 102 tersisa untuk wanita. Dari pilihan yang tersedia, 101 adalah bangku yang dapat diduduki wanita.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Enam (6) orang diurutkan dari 1-6 menurut tinggi badannya (Urutan pertama paling pendek, urutan ke-6 paling tinggi) dan dari 1-6 menurut berat badannya. (Urutan pertama paling ringan, urutan ke-6 paling berat). Nilai tiap orang adalah hasil jumlah kedua nilai urutan tersebut.\nHasil perhitungan menyatakan bahwa :\n- Galuh lebih tinggi dari Maya dan lebih ringan dari Budi\n- Heri lebih tinggi dari Galuh dan lebih ringan dari Lisa\n- Cici lebih pendek dari dan lebih berat dari Galuh\n- Maya lebih tinggi dari Lisa dan lebih berat dari Cici",
@@ -765,7 +812,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "c",
-    "pembahasan": "Urutan Tinggi: Heri > Galuh > Maya > Lisa. Cici < Galuh. Siapapun kecuali orang yang paling tinggi DAN paling berat sekaligus akan menjadi lebih pendek dan lebih ringan dari setidaknya 1 orang lain. Dari 6 orang, 5 orang pasti memenuhi kondisi tersebut."
+    "pembahasan": "Urutan Tinggi: Heri > Galuh > Maya > Lisa. Cici < Galuh. Siapapun kecuali orang yang paling tinggi DAN paling berat sekaligus akan menjadi lebih pendek dan lebih ringan dari setidaknya 1 orang lain. Dari 6 orang, 5 orang pasti memenuhi kondisi tersebut.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Enam (6) orang diurutkan dari 1-6 menurut tinggi badannya (Urutan pertama paling pendek, urutan ke-6 paling tinggi) dan dari 1-6 menurut berat badannya. (Urutan pertama paling ringan, urutan ke-6 paling berat). Nilai tiap orang adalah hasil jumlah kedua nilai urutan tersebut.\nHasil perhitungan menyatakan bahwa :\n- Galuh lebih tinggi dari Maya dan lebih ringan dari Budi\n- Heri lebih tinggi dari Galuh dan lebih ringan dari Lisa\n- Cici lebih pendek dari dan lebih berat dari Galuh\n- Maya lebih tinggi dari Lisa dan lebih berat dari Cici",
@@ -781,7 +829,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "a",
-    "pembahasan": "Tinggi: Heri > Galuh > Maya > Lisa.\nBerat: Lisa > Heri > Galuh (karena Heri < Lisa dan Galuh < Heri). Maya > Cici > Galuh. Maka Maya > Galuh dan Lisa > Galuh.\nDari perbandingan tinggi & berat: Maya lebih tinggi dari Lisa dan lebih berat dari Cici (di mana Cici > Galuh). Galuh lebih tinggi dari Maya > Lisa dan Galuh < Heri < Lisa. Jadi Galuh dan Maya dapat dipastikan lebih tinggi sekaligus lebih berat dari Lisa."
+    "pembahasan": "Tinggi: Heri > Galuh > Maya > Lisa.\nBerat: Lisa > Heri > Galuh (karena Heri < Lisa dan Galuh < Heri). Maya > Cici > Galuh. Maka Maya > Galuh dan Lisa > Galuh.\nDari perbandingan tinggi & berat: Maya lebih tinggi dari Lisa dan lebih berat dari Cici (di mana Cici > Galuh). Galuh lebih tinggi dari Maya > Lisa dan Galuh < Heri < Lisa. Jadi Galuh dan Maya dapat dipastikan lebih tinggi sekaligus lebih berat dari Lisa.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Enam (6) orang diurutkan dari 1-6 menurut tinggi badannya (Urutan pertama paling pendek, urutan ke-6 paling tinggi) dan dari 1-6 menurut berat badannya. (Urutan pertama paling ringan, urutan ke-6 paling berat). Nilai tiap orang adalah hasil jumlah kedua nilai urutan tersebut.\nHasil perhitungan menyatakan bahwa :\n- Galuh lebih tinggi dari Maya dan lebih ringan dari Budi\n- Heri lebih tinggi dari Galuh dan lebih ringan dari Lisa\n- Cici lebih pendek dari dan lebih berat dari Galuh\n- Maya lebih tinggi dari Lisa dan lebih berat dari Cici",
@@ -797,7 +846,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "a",
-    "pembahasan": "Budi beratnya lebih tinggi dari Galuh dan berpotensi menjadi yang terberat/tertinggi secara keseluruhan sehingga memiliki kombinasi peringkat (urutan tinggi + urutan berat) paling tinggi di antara pilihan yang ada."
+    "pembahasan": "Budi beratnya lebih tinggi dari Galuh dan berpotensi menjadi yang terberat/tertinggi secara keseluruhan sehingga memiliki kombinasi peringkat (urutan tinggi + urutan berat) paling tinggi di antara pilihan yang ada.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -813,7 +863,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "c",
-    "pembahasan": "Loop berjalan untuk i dari 0 sampai 9 (nData - 1 = 9).\nsum = 2*(0 + 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9)\nsum = 2 * (45) = 90."
+    "pembahasan": "Loop berjalan untuk i dari 0 sampai 9 (nData - 1 = 9).\nsum = 2*(0 + 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9)\nsum = 2 * (45) = 90.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -829,7 +880,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "a",
-    "pembahasan": "Langkah demi langkah:\n1. a = 2, b = 5\n2. tmp = 2 * 5 = 10\n3. b = 2 * 2 = 4\n4. a = tmp = 10\n5. Output writeln(b, ' ', a) -> mencetak b lalu a -> \"4 10\"."
+    "pembahasan": "Langkah demi langkah:\n1. a = 2, b = 5\n2. tmp = 2 * 5 = 10\n3. b = 2 * 2 = 4\n4. a = tmp = 10\n5. Output writeln(b, ' ', a) -> mencetak b lalu a -> \"4 10\".",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -845,7 +897,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "e",
-    "pembahasan": "Diketahui a=3, b=5, c=8:\n1. Cek `if a > b` (3 > 5) -> False.\n2. Masuk ke blok `else`.\n3. Cek `if c > b` (8 > 5) -> True.\n4. `tmp := c` -> `tmp := 8`.\n5. Output yang dicetak adalah 8."
+    "pembahasan": "Diketahui a=3, b=5, c=8:\n1. Cek `if a > b` (3 > 5) -> False.\n2. Masuk ke blok `else`.\n3. Cek `if c > b` (8 > 5) -> True.\n4. `tmp := c` -> `tmp := 8`.\n5. Output yang dicetak adalah 8.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -861,7 +914,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "a",
-    "pembahasan": "Program menggunakan 3 buah loop bersarang (*nested loop*) yang masing-masing berjalan dari 1 hingga n.\nTotal eksekusi = n * n * n = n^3, yang merupakan fungsi kubik (pangkat 3) dari n."
+    "pembahasan": "Program menggunakan 3 buah loop bersarang (*nested loop*) yang masing-masing berjalan dari 1 hingga n.\nTotal eksekusi = n * n * n = n^3, yang merupakan fungsi kubik (pangkat 3) dari n.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -877,7 +931,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "d",
-    "pembahasan": "Iterasi per baris:\n- i = 0: j dari 5 downto 1 (5 bintang) -> *****\n- i = 1: j dari 4 downto 1 (4 bintang) -> ****\n- i = 2: j dari 3 downto 1 (3 bintang) -> ***\n- i = 3: j dari 2 downto 1 (2 bintang) -> **\n- i = 4: j dari 1 downto 1 (1 bintang) -> *\nSehingga output berbentuk segitiga terbalik (pilihan d)."
+    "pembahasan": "Iterasi per baris:\n- i = 0: j dari 5 downto 1 (5 bintang) -> *****\n- i = 1: j dari 4 downto 1 (4 bintang) -> ****\n- i = 2: j dari 3 downto 1 (3 bintang) -> ***\n- i = 3: j dari 2 downto 1 (2 bintang) -> **\n- i = 4: j dari 1 downto 1 (1 bintang) -> *\nSehingga output berbentuk segitiga terbalik (pilihan d).",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -893,7 +948,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "a",
-    "pembahasan": "Jalankan loop repeat-until:\n- Awal: a = 100, b = 5.\n- Iterasi 1:\n  b := 5 + 1 = 6\n  a := 100 - 6 = 94\n  Kondisi `until a > b`: Apakah 94 > 6? Ya (True).\nLoop berhenti pada iterasi pertama!\nNilai yang dicetak adalah a = 94 dan b = 6."
+    "pembahasan": "Jalankan loop repeat-until:\n- Awal: a = 100, b = 5.\n- Iterasi 1:\n  b := 5 + 1 = 6\n  a := 100 - 6 = 94\n  Kondisi `until a > b`: Apakah 94 > 6? Ya (True).\nLoop berhenti pada iterasi pertama!\nNilai yang dicetak adalah a = 94 dan b = 6.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Perhatikan tahapan-tahapan berikut:\nMisalkan ada dua variable \"x\" dan \"y\", dan variable \"hasil\" yang nilai awalnya 0. Lakukan proses berikut selama nilai \"x\" lebih besar dari 0.\n1. Jika nilai \"x\" ganjil maka nilai \"hasil\" := \"hasil\" + y.\n2. Nilai \"x\" selanjutnya adalah nilai \"x\" sebelumnya dibagi dua, bila ada hasil pecahan, maka pecahannya dibuang. (contoh bila nilai \"x\" sebelumnya 1, maka nilai \"x\" selanjutnya 0.)\n3. Nilai \"y\" selanjutnya adalah nilai \"y\" sebelumnya dikali dua.",
@@ -909,7 +965,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "d",
-    "pembahasan": "Algoritma ini adalah algoritma perkalian Rusia (*Russian Peasant Multiplication*) yang menghitung hasil kali x * y = 10 * 15 = 150.\nTrase manual:\n- Awal: x = 10, y = 15, hasil = 0\n- Iterasi 1: x=10 (genap) -> hasil=0, x=5, y=30\n- Iterasi 2: x=5 (ganjil) -> hasil=0+30=30, x=2, y=60\n- Iterasi 3: x=2 (genap) -> hasil=30, x=1, y=120\n- Iterasi 4: x=1 (ganjil) -> hasil=30+120=150, x=0, y=240\nLoop berhenti (x=0). Hasil akhir = 150."
+    "pembahasan": "Algoritma ini adalah algoritma perkalian Rusia (*Russian Peasant Multiplication*) yang menghitung hasil kali x * y = 10 * 15 = 150.\nTrase manual:\n- Awal: x = 10, y = 15, hasil = 0\n- Iterasi 1: x=10 (genap) -> hasil=0, x=5, y=30\n- Iterasi 2: x=5 (ganjil) -> hasil=0+30=30, x=2, y=60\n- Iterasi 3: x=2 (genap) -> hasil=30, x=1, y=120\n- Iterasi 4: x=1 (ganjil) -> hasil=30+120=150, x=0, y=240\nLoop berhenti (x=0). Hasil akhir = 150.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Perhatikan tahapan-tahapan berikut:\nMisalkan ada dua variable \"x\" dan \"y\", dan variable \"hasil\" yang nilai awalnya 0. Lakukan proses berikut selama nilai \"x\" lebih besar dari 0.\n1. Jika nilai \"x\" ganjil maka nilai \"hasil\" := \"hasil\" + y.\n2. Nilai \"x\" selanjutnya adalah nilai \"x\" sebelumnya dibagi dua, bila ada hasil pecahan, maka pecahannya dibuang. (contoh bila nilai \"x\" sebelumnya 1, maka nilai \"x\" selanjutnya 0.)\n3. Nilai \"y\" selanjutnya adalah nilai \"y\" sebelumnya dikali dua.",
@@ -925,7 +982,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "b",
-    "pembahasan": "Kesesuaian dengan instruksi:\n1. Cek x ganjil: `x mod 2 = 1`, tambah `y` ke `hasil` (`hasil := hasil + y`).\n2. `x` selanjutnya dibagi dua dibulat bawah: `x := x div 2`.\n3. `y` selanjutnya dikali dua: `y := y * 2`.\nPilihan b secara tepat mengimplementasikan ketiga aturan tersebut."
+    "pembahasan": "Kesesuaian dengan instruksi:\n1. Cek x ganjil: `x mod 2 = 1`, tambah `y` ke `hasil` (`hasil := hasil + y`).\n2. `x` selanjutnya dibagi dua dibulat bawah: `x := x div 2`.\n3. `y` selanjutnya dikali dua: `y := y * 2`.\nPilihan b secara tepat mengimplementasikan ketiga aturan tersebut.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": null,
@@ -941,7 +999,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "b",
-    "pembahasan": "Ini adalah trik penukaran dua variabel (*swap*) tanpa variabel sementara:\n1. x := 7 + 8 = 15\n2. y := 15 - 8 = 7\n3. x := 15 - 7 = 8\nHasil akhir: nilai x = 8 dan nilai y = 7."
+    "pembahasan": "Ini adalah trik penukaran dua variabel (*swap*) tanpa variabel sementara:\n1. x := 7 + 8 = 15\n2. y := 15 - 8 = 7\n3. x := 15 - 7 = 8\nHasil akhir: nilai x = 8 dan nilai y = 7.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -957,6 +1016,7 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "e",
-    "pembahasan": "1. Pengisian array `x`:\n   - x[1] = 10 div 1 = 10\n   - x[2] = 10 div 2 = 5\n   - x[3] = 10 div 3 = 3\n   - x[4] = 10 div 4 = 2\n   - x[5] = 10 div 5 = 2\n\n2. Penjumlahan akumulatif ke `x[5]`:\n   x[5] = x[5] + x[4] + x[3] + x[2] + x[1]\n   x[5] = 2 + 2 + 3 + 5 + 10 = 22.\n\nOutput yang dicetak adalah 22."
+    "pembahasan": "1. Pengisian array `x`:\n   - x[1] = 10 div 1 = 10\n   - x[2] = 10 div 2 = 5\n   - x[3] = 10 div 3 = 3\n   - x[4] = 10 div 4 = 2\n   - x[5] = 10 div 5 = 2\n\n2. Penjumlahan akumulatif ke `x[5]`:\n   x[5] = x[5] + x[4] + x[3] + x[2] + x[1]\n   x[5] = 2 + 2 + 3 + 5 + 10 = 22.\n\nOutput yang dicetak adalah 22.",
+    "tingkat_kesulitan": "sulit"
   }
 ]

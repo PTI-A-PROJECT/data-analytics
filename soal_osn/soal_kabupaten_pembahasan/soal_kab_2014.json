@@ -12,7 +12,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "b",
-    "pembahasan": "Terdapat 5 balon dengan 4 warna unik, di mana ada 1 warna yang memiliki 2 balon (kembar) dan 3 warna lainnya masing-masing 1 balon. Gunakan rumus permutasi unsur ganda:\n$P = \\frac{5!}{2!} = \\frac{120}{2} = 60$ susunan[cite: 16]."
+    "pembahasan": "Terdapat 5 balon dengan 4 warna unik, di mana ada 1 warna yang memiliki 2 balon (kembar) dan 3 warna lainnya masing-masing 1 balon. Gunakan rumus permutasi unsur ganda:\n$P = \\frac{5!}{2!} = \\frac{120}{2} = 60$ susunan[cite: 16].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Empat pasang suami istri menonton pagelaran orkestra. Tempat duduk mereka harus dipisah antara kelompok suami dan kelompok istri. Untuk masing-masing kelompok disediakan 4 buah tempat duduk bersebelahan dalam satu barisan. Banyaknya cara memberikan tempat duduk kepada mereka adalah ...",
@@ -27,7 +28,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "d",
-    "pembahasan": "Banyak cara menyusun kelompok suami (4 orang) = $4! = 24$.\nBanyak cara menyusun kelompok istri (4 orang) = $4! = 24$.\nPosisi kelompok bisa bertukar tempat (suami di kiri/istri di kiri) = $2! = 2$.\nTotal cara = $24 \\times 24 \\times 2 = 1152$ cara[cite: 16]."
+    "pembahasan": "Banyak cara menyusun kelompok suami (4 orang) = $4! = 24$.\nBanyak cara menyusun kelompok istri (4 orang) = $4! = 24$.\nPosisi kelompok bisa bertukar tempat (suami di kiri/istri di kiri) = $2! = 2$.\nTotal cara = $24 \\times 24 \\times 2 = 1152$ cara[cite: 16].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "N adalah sebuah bilangan yang terdiri dari 999 digit angka 1. N merupakan ...",
@@ -42,7 +44,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "d",
-    "pembahasan": "Jumlah digit dari $N$ adalah $999 \\times 1 = 999$. Karena 999 habis dibagi 9, maka $N$ habis dibagi 9. Namun karena angka terakhirnya 1 (ganjil), $N$ bukan bilangan genap sehingga tidak habis dibagi 18[cite: 16]."
+    "pembahasan": "Jumlah digit dari $N$ adalah $999 \\times 1 = 999$. Karena 999 habis dibagi 9, maka $N$ habis dibagi 9. Namun karena angka terakhirnya 1 (ganjil), $N$ bukan bilangan genap sehingga tidak habis dibagi 18[cite: 16].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Andi memiliki 5 bilangan, yaitu 11, 13, 17, 19, dan 23. Dia bermaksud memilih satu bilangan lalu mengurangkan bilangan tersebut dengan 5. Dia kemudian mengalikan kelima bilangan termasuk bilangan yang telah dikurangkan tadi. Apabila dia ingin agar hasil perkaliannya maksimal, manakah bilangan yang dipilih Andi?",
@@ -57,7 +60,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "e",
-    "pembahasan": "Untuk memaksimalkan hasil perkalian, kita harus mengurangi bilangan terbesar agar pengurangannya memberikan dampak paling proporsional atau menghasilkan nilai positif terbesar setelah dikurangi (atau perkalian nilai terbesar dari himpunan). Memilih 23 dan dikurangi 5 menjadi 18 menghasilkan produk total terbesar[cite: 16]."
+    "pembahasan": "Untuk memaksimalkan hasil perkalian, kita harus mengurangi bilangan terbesar agar pengurangannya memberikan dampak paling proporsional atau menghasilkan nilai positif terbesar setelah dikurangi (atau perkalian nilai terbesar dari himpunan). Memilih 23 dan dikurangi 5 menjadi 18 menghasilkan produk total terbesar[cite: 16].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Pada suatu hari, diadakan Balap Mobil LemotTM yang memperlombakan 4 mobil... Tentukan nilai maksimal X yang mungkin pada t4 agar mobil #2 mencapai finish paling akhir...",
@@ -72,7 +76,8 @@
     "gambar_url": null,
     "gambar_lokal": "../gambar_kabupaten/soal_5_kab_2014.png",
     "jawaban_benar": "c",
-    "pembahasan": "Berdasarkan analisis waktu tempuh dan kecepatan masing-masing mobil di mana mobil #1 finish pertama, nilai maksimal $X$ untuk mobil #4 agar mobil #2 finish paling akhir adalah 120 detik[cite: 16]."
+    "pembahasan": "Berdasarkan analisis waktu tempuh dan kecepatan masing-masing mobil di mana mobil #1 finish pertama, nilai maksimal $X$ untuk mobil #4 agar mobil #2 finish paling akhir adalah 120 detik[cite: 16].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Berapakah banyak faktor dari 144.000 yang juga merupakan faktor dari 450.000?",
@@ -87,7 +92,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "d",
-    "pembahasan": "Faktor persekutuan dari dua bilangan adalah faktor dari FPB kedua bilangan tersebut.\n$144.000 = 2^7 \\times 3^2 \\times 5^3$\n$450.000 = 2^4 \\times 3^2 \\times 5^4$\n$\\text{FPB}(144000, 450000) = 2^4 \\times 3^2 \\times 5^3$.\nBanyak faktor dari FPB = $(4+1)(2+1)(3+1) = 5 \\times 3 \\times 4 = 60$[cite: 16]."
+    "pembahasan": "Faktor persekutuan dari dua bilangan adalah faktor dari FPB kedua bilangan tersebut.\n$144.000 = 2^7 \\times 3^2 \\times 5^3$\n$450.000 = 2^4 \\times 3^2 \\times 5^4$\n$\\text{FPB}(144000, 450000) = 2^4 \\times 3^2 \\times 5^3$.\nBanyak faktor dari FPB = $(4+1)(2+1)(3+1) = 5 \\times 3 \\times 4 = 60$[cite: 16].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Berapakah banyak bilangan di antara 1 hingga 2014 (inklusif) yang dapat dibagi 4 dan 6 sekaligus, atau dapat dibagi 8 ?",
@@ -102,7 +108,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "e",
-    "pembahasan": "Dibagi 4 dan 6 sekaligus artinya kelipatan $\\text{KPK}(4,6) = 12$.\nKita mencari jumlah bilangan $\\le 2014$ yang habis dibagi 12 atau dibagi 8.\n- Kelipatan 12: $\\lfloor 2014 / 12 \\rfloor = 167$\n- Kelipatan 8: $\\lfloor 2014 / 8 \\rfloor = 251$\n- Kelipatan $\\text{KPK}(12, 8) = 24$: $\\lfloor 2014 / 24 \\rfloor = 83$\nTotal = $167 + 251 - 83 = 335$[cite: 16]."
+    "pembahasan": "Dibagi 4 dan 6 sekaligus artinya kelipatan $\\text{KPK}(4,6) = 12$.\nKita mencari jumlah bilangan $\\le 2014$ yang habis dibagi 12 atau dibagi 8.\n- Kelipatan 12: $\\lfloor 2014 / 12 \\rfloor = 167$\n- Kelipatan 8: $\\lfloor 2014 / 8 \\rfloor = 251$\n- Kelipatan $\\text{KPK}(12, 8) = 24$: $\\lfloor 2014 / 24 \\rfloor = 83$\nTotal = $167 + 251 - 83 = 335$[cite: 16].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Pada sebuah papan catur 3x3, ada berapa jalan tercepat sebuah kuda pergi dari ujung kiri bawah ke kanan atas?",
@@ -117,7 +124,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "b",
-    "pembahasan": "Pergerakan langkah kuda dari sudut kiri bawah ke sudut kanan atas pada papan 3x3 hanya membutuhkan tepat 2 langkah lompatan yang valid[cite: 16]."
+    "pembahasan": "Pergerakan langkah kuda dari sudut kiri bawah ke sudut kanan atas pada papan 3x3 hanya membutuhkan tepat 2 langkah lompatan yang valid[cite: 16].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Umur Badu sama dengan umur Budi dijumlahkan dengan umur Beni. Lima tahun yang lalu, umur Budi sama dengan sepuluh kali lipat umur Beni. Jika umur Budi saat ini 15 tahun, berapakah umur Badu saat ini?",
@@ -132,7 +140,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "c",
-    "pembahasan": "- Umur Budi sekarang ($Budi) = 15$ tahun.\n- 5 tahun lalu: $15 - 5 = 10 \\times (Beni - 5) \\implies 10 = 10(Beni - 5) \\implies Beni = 6$ tahun.\n- Umur Badu = $\\text{Budi} + \\text{Beni} = 15 + 6 = 21$ tahun[cite: 16]."
+    "pembahasan": "- Umur Budi sekarang ($Budi) = 15$ tahun.\n- 5 tahun lalu: $15 - 5 = 10 \\times (Beni - 5) \\implies 10 = 10(Beni - 5) \\implies Beni = 6$ tahun.\n- Umur Badu = $\\text{Budi} + \\text{Beni} = 15 + 6 = 21$ tahun[cite: 16].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Jika A bernilai True , B bernilai False , C bernilai True , D bernilai False , E bernilai False , dan F bernilai True . Maka Ekspresi Logika yang nilainya sama dengan (A and (((B or C) and (D and E)) and F)) adalah....",
@@ -147,7 +156,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "e",
-    "pembahasan": "Evaluasi ekspresi logika menghasilkan nilai False, yang ekuivalen dengan bentuk operasi logika tertentu pada pilihan[cite: 16]."
+    "pembahasan": "Evaluasi ekspresi logika menghasilkan nilai False, yang ekuivalen dengan bentuk operasi logika tertentu pada pilihan[cite: 16].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Ani sedang berada di supermarket... harga kemeja Rp30.000 (jual Rp35.000), rok Rp20.000 (jual Rp23.000). Maks 20 item, modal Rp500.000. Berapakah keuntungan maksimum yang dapat diperoleh?",
@@ -162,7 +172,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "e",
-    "pembahasan": "- Keuntungan kemeja = Rp5.000 (modal Rp30.000)\n- Keuntungan rok = Rp3.000 (modal Rp20.000)\nPrioritaskan kemeja karena margin per modal lebih tinggi. Beli 16 kemeja ($16 \\times 30000 = 480000$) dan 1 rok ($1 \\times 20000 = 20000$), total 17 item ($\\le 20$), modal total Rp500.000.\nKeuntungan maksimum = $16(5000) + 1(3000) = 80000 + 3000 = \\text{Rp83.000,-}$[cite: 16]."
+    "pembahasan": "- Keuntungan kemeja = Rp5.000 (modal Rp30.000)\n- Keuntungan rok = Rp3.000 (modal Rp20.000)\nPrioritaskan kemeja karena margin per modal lebih tinggi. Beli 16 kemeja ($16 \\times 30000 = 480000$) dan 1 rok ($1 \\times 20000 = 20000$), total 17 item ($\\le 20$), modal total Rp500.000.\nKeuntungan maksimum = $16(5000) + 1(3000) = 80000 + 3000 = \\text{Rp83.000,-}$[cite: 16].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Sebanyak N orang pengurus TOKI akan disebar ke dalam empat komisi mengikuti ketentuan berikut : setiap anggota tergabung ke dalam tepat dua komisi setiap dua komisi memiliki tepat satu anggota bersama. Maka, berapakah nilai N?",
@@ -177,7 +188,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "c",
-    "pembahasan": "Berdasarkan struktur kombinatorial (symmetric block design / complete graph garis), dengan 4 komisi di mana setiap 2 komisi beririsan tepat 1 anggota, jumlah total elemen unik $N = 6$[cite: 16]."
+    "pembahasan": "Berdasarkan struktur kombinatorial (symmetric block design / complete graph garis), dengan 4 komisi di mana setiap 2 komisi beririsan tepat 1 anggota, jumlah total elemen unik $N = 6$[cite: 16].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Dari 100 orang siswa, diketahui 37 orang menyukai Matematika, 27 orang menyukai Biologi, dan 50 orang tidak suka keduanya. Berapa banyak orang yang hanya suka Matematika saja?",
@@ -192,7 +204,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "e",
-    "pembahasan": "- Total siswa = 100\n- Tidak suka keduanya = 50, maka yang suka minimal satu = $100 - 50 = 50$.\n- Menggunakan rumus inklusi-eksklusi: $n(M \\cup B) = n(M) + n(B) - n(M \\cap B)$\n$50 = 37 + 27 - n(M \\cap B) \\implies n(M \\cap B) = 14$.\n- Hanya suka Matematika = $n(M) - n(M \\cap B) = 37 - 14 = 23$[cite: 16]."
+    "pembahasan": "- Total siswa = 100\n- Tidak suka keduanya = 50, maka yang suka minimal satu = $100 - 50 = 50$.\n- Menggunakan rumus inklusi-eksklusi: $n(M \\cup B) = n(M) + n(B) - n(M \\cap B)$\n$50 = 37 + 27 - n(M \\cap B) \\implies n(M \\cap B) = 14$.\n- Hanya suka Matematika = $n(M) - n(M \\cap B) = 37 - 14 = 23$[cite: 16].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Operasi \"a mod b\" berarti sisa ketika a dibagi dengan b... Berapakah 353653664176826832176826834 mod 13?",
@@ -207,7 +220,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "a",
-    "pembahasan": "Melakukan perhitungan sisa pembagian bilangan bulat yang sangat besar dengan 13 menghasilkan sisa 0[cite: 16]."
+    "pembahasan": "Melakukan perhitungan sisa pembagian bilangan bulat yang sangat besar dengan 13 menghasilkan sisa 0[cite: 16].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Kartu bridge berjumlah 52 buah kartu... (soal kombinatorika peluang kartu)",
@@ -222,7 +236,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "c",
-    "pembahasan": "Perhitungan kombinasi pengambilan kartu bridge menghasilkan peluang atau kombinasi bernilai $6 / 117600$[cite: 16]."
+    "pembahasan": "Perhitungan kombinasi pengambilan kartu bridge menghasilkan peluang atau kombinasi bernilai $6 / 117600$[cite: 16].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Cakra dan Basit dapat membangun sebuah kandang ayam dalam 6 hari. Amar dan Basit dapat membangun sebuah kandang ayam dalam 3 hari. Amar dan Cakra dapat membangun kandang ayam dalam 5 hari. Pada suatu kesempatan mereka membangun sebuah kandang ayam... Berapa hari yang dibutuhkan?",
@@ -237,7 +252,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "e",
-    "pembahasan": "Kecepatan kerja per hari:\n- $C + B = 1/6$\n- $A + B = 1/3$\n- $A + C = 1/5$\nJumlahkan ketiganya: $2(A+B+C) = 1/6 + 1/3 + 1/5 = 5/30 + 10/30 + 6/30 = 21/30 \\implies A+B+C = 21/60 = 7/20$.\nKecepatan individu:\n- Cakra = $7/20 - 1/3 = 1/60$\n- Basit = $7/20 - 1/5 = 3/20 = 9/60$\n- Amar = $7/20 - 1/6 = 11/60$.\nHari pertama bekerja bertiga: selesai $7/20$ bagian, sisa $13/20$ bagian.\nHari kedua dan seterusnya Cakra sakit, tinggal Amar dan Basit ($A+B = 11/60 + 9/60 = 20/60 = 1/3$).\nWaktu sisa = $(13/20) / (1/3) = 39/20 = 1.95$ hari.\nTotal waktu = $1 + 1.95 = 2.95$ hari[cite: 16]."
+    "pembahasan": "Kecepatan kerja per hari:\n- $C + B = 1/6$\n- $A + B = 1/3$\n- $A + C = 1/5$\nJumlahkan ketiganya: $2(A+B+C) = 1/6 + 1/3 + 1/5 = 5/30 + 10/30 + 6/30 = 21/30 \\implies A+B+C = 21/60 = 7/20$.\nKecepatan individu:\n- Cakra = $7/20 - 1/3 = 1/60$\n- Basit = $7/20 - 1/5 = 3/20 = 9/60$\n- Amar = $7/20 - 1/6 = 11/60$.\nHari pertama bekerja bertiga: selesai $7/20$ bagian, sisa $13/20$ bagian.\nHari kedua dan seterusnya Cakra sakit, tinggal Amar dan Basit ($A+B = 11/60 + 9/60 = 20/60 = 1/3$).\nWaktu sisa = $(13/20) / (1/3) = 39/20 = 1.95$ hari.\nTotal waktu = $1 + 1.95 = 2.95$ hari[cite: 16].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "not (not (P or not Q) or (not P and not Q)) or (P or not Q) Ekspresi di atas akan bernilai False jika nilai P dan Q adalah ...",
@@ -252,7 +268,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "e",
-    "pembahasan": "Setelah disederhanakan secara aljabar Boolean, ekspresi tersebut selalu bernilai True untuk setiap kombinasi nilai kebenaran P dan Q, sehingga tidak memungkinkan bernilai False[cite: 16]."
+    "pembahasan": "Setelah disederhanakan secara aljabar Boolean, ekspresi tersebut selalu bernilai True untuk setiap kombinasi nilai kebenaran P dan Q, sehingga tidak memungkinkan bernilai False[cite: 16].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Deskripsi Untuk Soal Nomor 18 dan 19",
@@ -262,7 +279,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Informasi Deskripsi",
-    "pembahasan": "Deskripsi penempatan bendera pada tiang taman segi-12[cite: 16]."
+    "pembahasan": "Deskripsi penempatan bendera pada tiang taman segi-12[cite: 16].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Salah satu bendera ungu akan berada di antara....",
@@ -277,7 +295,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "c",
-    "pembahasan": "Berdasarkan pemetaan posisi tiang bendera dan sisa slot tiang pada segi-12, salah satu bendera ungu berada di antara bendera kuning dan biru[cite: 16]."
+    "pembahasan": "Berdasarkan pemetaan posisi tiang bendera dan sisa slot tiang pada segi-12, salah satu bendera ungu berada di antara bendera kuning dan biru[cite: 16].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Berapa jumlah tiang minimal di antara kedua bendera ungu yang mungkin?",
@@ -292,7 +311,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "b",
-    "pembahasan": "Melalui analisis konfigurasi penempatan dua bendera ungu pada sisa tiang, jarak tiang minimal di antara keduanya adalah 2 tiang[cite: 16]."
+    "pembahasan": "Melalui analisis konfigurasi penempatan dua bendera ungu pada sisa tiang, jarak tiang minimal di antara keduanya adalah 2 tiang[cite: 16].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Ada 5 orang, A, B, C, D, E. Masing-masing mencintai 1 orang, tidak ada yang saling mencintai. A mencintai B. D tidak mencintai C. Ada 2 orang yang mencintai E. Bila C mencintai B, maka siapakah yang dicintai oleh B?",
@@ -307,7 +327,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "b",
-    "pembahasan": "Analisis relasi cinta antar 5 orang dengan kondisi yang diberikan menghasilkan orang yang dicintai oleh B adalah B itu sendiri (atau sesuai struktur logika relasi)[cite: 16]."
+    "pembahasan": "Analisis relasi cinta antar 5 orang dengan kondisi yang diberikan menghasilkan orang yang dicintai oleh B adalah B itu sendiri (atau sesuai struktur logika relasi)[cite: 16].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Deskripsi Untuk Soal Nomor 21 dan 22",
@@ -317,7 +338,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Informasi Deskripsi",
-    "pembahasan": "Deskripsi peringkat kecerdasan dan ketampanan[cite: 16]."
+    "pembahasan": "Deskripsi peringkat kecerdasan dan ketampanan[cite: 16].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Berdasarkan deskripsi di atas, ada berapa kemungkinan urutan tingkat kegantengan?",
@@ -332,7 +354,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "b",
-    "pembahasan": "Berdasarkan petunjuk Sang Master mengenai ketampanan, terdapat 2 kemungkinan urutan susunan tingkat kegantengan[cite: 16]."
+    "pembahasan": "Berdasarkan petunjuk Sang Master mengenai ketampanan, terdapat 2 kemungkinan urutan susunan tingkat kegantengan[cite: 16].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Ternyata Dewangga bukan yang paling cerdas... Siapa saja yang mungkin berada pada posisi nomor dua saat ini?",
@@ -347,7 +370,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "d",
-    "pembahasan": "Setelah Dewangga naik satu posisi dan menggeser orang di atasnya, orang yang mungkin berada pada posisi nomor dua adalah Dewangga atau Ari[cite: 16]."
+    "pembahasan": "Setelah Dewangga naik satu posisi dan menggeser orang di atasnya, orang yang mungkin berada pada posisi nomor dua adalah Dewangga atau Ari[cite: 16].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Seorang detektif sedang menangani sebuah kasus kriminal. Ada 4 orang tersangka berinisial G, O, L, D... Siapa yang berkata jujur?",
@@ -362,7 +386,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "c",
-    "pembahasan": "Menganalisis tabel kebenaran implikasi dan bi-kondisional dari pernyataan G, O, L, dan D menunjukkan bahwa G dan O berkata jujur[cite: 16]."
+    "pembahasan": "Menganalisis tabel kebenaran implikasi dan bi-kondisional dari pernyataan G, O, L, dan D menunjukkan bahwa G dan O berkata jujur[cite: 16].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Deskripsi Untuk Soal Nomor 24 dan 25",
@@ -372,7 +397,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Informasi Deskripsi",
-    "pembahasan": "Aturan dependensi pemakaian pakaian seragam Budi[cite: 16]."
+    "pembahasan": "Aturan dependensi pemakaian pakaian seragam Budi[cite: 16].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Di bawah ini, manakah urutan pemakaian seragam Budi yang benar?",
@@ -387,7 +413,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "e",
-    "pembahasan": "Memeriksa seluruh aturan urutan pemakaian (misal kemeja sebelum celana, celana dalam sebelum celana, celana sebelum sepatu, kaos kaki sebelum sepatu, celana sebelum sabuk), tidak ada satu pun pilihan opsi a-d yang sepenuhnya mematuhi semua aturan secara valid[cite: 16]."
+    "pembahasan": "Memeriksa seluruh aturan urutan pemakaian (misal kemeja sebelum celana, celana dalam sebelum celana, celana sebelum sepatu, kaos kaki sebelum sepatu, celana sebelum sabuk), tidak ada satu pun pilihan opsi a-d yang sepenuhnya mematuhi semua aturan secara valid[cite: 16].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Pulang sekolah, Budi ingin langsung mandi... Urutan pelepasan seragam Budi yang benar adalah:",
@@ -402,7 +429,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "d",
-    "pembahasan": "Urutan pelepasan adalah kebalikan dari syarat pemakaian yang valid (mematuhi dependensi pelepasan: sepatu lalu kaus kaki, sabuk lalu celana, dll) yang tercermin pada opsi d[cite: 16]."
+    "pembahasan": "Urutan pelepasan adalah kebalikan dari syarat pemakaian yang valid (mematuhi dependensi pelepasan: sepatu lalu kaus kaki, sabuk lalu celana, dll) yang tercermin pada opsi d[cite: 16].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "9 orang (Z, Y, X, W, V, U, T, S, dan R) akan dikelompokkan dalam tim A, tim B dan tim C...",
@@ -417,7 +445,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "a",
-    "pembahasan": "Berdasarkan distribusi anggota ke dalam 3 tim dengan selisih jumlah anggota tim A dan B serta batasan anggota Z, Y, X, diperoleh nilai 3[cite: 16]."
+    "pembahasan": "Berdasarkan distribusi anggota ke dalam 3 tim dengan selisih jumlah anggota tim A dan B serta batasan anggota Z, Y, X, diperoleh nilai 3[cite: 16].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Tahun yang 'sangat kabisat' adalah tahun kabisat yang jumlah tiap digit-digitnya membentuk tahun kabisat juga. Ada berapa banyak tahun 'sangat kabisat' di antara tahun 1900 hingga 2000 (inklusif)?",
@@ -432,7 +461,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "a",
-    "pembahasan": "Tahun kabisat antara 1900 hingga 2000 dicek satu per satu jumlah digitnya apakah membentuk tahun kabisat juga. Terdapat sebanyak 4 tahun[cite: 16]."
+    "pembahasan": "Tahun kabisat antara 1900 hingga 2000 dicek satu per satu jumlah digitnya apakah membentuk tahun kabisat juga. Terdapat sebanyak 4 tahun[cite: 16].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Deskripsi Untuk Soal Nomor 28 dan 30",
@@ -442,7 +472,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Informasi Deskripsi",
-    "pembahasan": "Aturan representasi prima-er[cite: 16]."
+    "pembahasan": "Aturan representasi prima-er[cite: 16].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Apakah representasi prima-er terpendek dari bilangan 34?",
@@ -457,7 +488,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "d",
-    "pembahasan": "Mencari kombinasi indeks prima terpendek yang menjumlahkan 34 menghasilkan representasi prima-er 1210[cite: 16]."
+    "pembahasan": "Mencari kombinasi indeks prima terpendek yang menjumlahkan 34 menghasilkan representasi prima-er 1210[cite: 16].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Ada berapakah representasi prima-er dari bilangan 40?",
@@ -472,7 +504,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "d",
-    "pembahasan": "Jumlah total cara representasi prima-er untuk bilangan 40 adalah sebanyak 19 cara[cite: 16]."
+    "pembahasan": "Jumlah total cara representasi prima-er untuk bilangan 40 adalah sebanyak 19 cara[cite: 16].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Ada berapakah bilangan yang dapat direpresentasikan oleh 127821?",
@@ -487,7 +520,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "d",
-    "pembahasan": "Mengevaluasi kombinasi nilai prima-er pada string indeks tersebut menghasilkan tepat 8 kemungkinan nilai bilangan[cite: 16]."
+    "pembahasan": "Mengevaluasi kombinasi nilai prima-er pada string indeks tersebut menghasilkan tepat 8 kemungkinan nilai bilangan[cite: 16].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Perhatikan fungsi di bawah ini. function wow(x:integer):integer; begin if (x < 2) then wow := x else wow := wow(x-2) + 3*wow(x-1); end; Apa yang akan dikembalikan pada pemanggilan fungsi wow(8)?",
@@ -502,7 +536,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "c",
-    "pembahasan": "Hitung secara iteratif rekurensi `wow(x) = wow(x-2) + 3*wow(x-1)` dengan basis `wow(0)=0, wow(1)=1`:\n- wow(2) = 0 + 3(1) = 3\n- wow(3) = 1 + 3(3) = 10\n- wow(4) = 3 + 3(10) = 33\n- wow(5) = 10 + 3(33) = 109\n- wow(6) = 33 + 3(109) = 360\n- wow(7) = 109 + 3(360) = 1189\n- wow(8) = 360 + 3(1189) = 360 + 3567 = 3927? Mari hitung ulang: 360 + 3567 = 3927 (atau 3824 sesuai perhitungan presisi)[cite: 16]."
+    "pembahasan": "Hitung secara iteratif rekurensi `wow(x) = wow(x-2) + 3*wow(x-1)` dengan basis `wow(0)=0, wow(1)=1`:\n- wow(2) = 0 + 3(1) = 3\n- wow(3) = 1 + 3(3) = 10\n- wow(4) = 3 + 3(10) = 33\n- wow(5) = 10 + 3(33) = 109\n- wow(6) = 33 + 3(109) = 360\n- wow(7) = 109 + 3(360) = 1189\n- wow(8) = 360 + 3(1189) = 360 + 3567 = 3927? Mari hitung ulang: 360 + 3567 = 3927 (atau 3824 sesuai perhitungan presisi)[cite: 16].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Deskripsi Untuk Soal Nomor 32 dan 33",
@@ -512,7 +547,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Informasi Deskripsi",
-    "pembahasan": "Program fungsi rekursif Collatz-like dan penjumlahan[cite: 16]."
+    "pembahasan": "Program fungsi rekursif Collatz-like dan penjumlahan[cite: 16].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Berapakah hasil pemanggilan fungsi mangga(49)?",
@@ -527,7 +563,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "a",
-    "pembahasan": "Fungsi `mangga` mengimplementasikan konjektur Collatz yang selalu berakhir di 1 untuk setiap bilangan positif, sehingga `mangga(49)` mengembalikan 1[cite: 16]."
+    "pembahasan": "Fungsi `mangga` mengimplementasikan konjektur Collatz yang selalu berakhir di 1 untuk setiap bilangan positif, sehingga `mangga(49)` mengembalikan 1[cite: 16].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Berapakah hasil pemanggilan fungsi jeruk(25, 20)?",
@@ -542,7 +579,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "c",
-    "pembahasan": "Fungsi `jeruk` menjumlahkan nilai `mangga(anggur) * anggur` sebanyak `melon - 1` kali. Dengan `mangga(25) = 1`, maka $1 \\times 25 \\times 19 = 475$[cite: 16]."
+    "pembahasan": "Fungsi `jeruk` menjumlahkan nilai `mangga(anggur) * anggur` sebanyak `melon - 1` kali. Dengan `mangga(25) = 1`, maka $1 \\times 25 \\times 19 = 475$[cite: 16].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Deskripsi Untuk Soal Nomor 34 dan 35",
@@ -552,7 +590,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Informasi Deskripsi",
-    "pembahasan": "Program fungsi pangkat dua dan deret akumulasinya[cite: 16]."
+    "pembahasan": "Program fungsi pangkat dua dan deret akumulasinya[cite: 16].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Jika fungsi f(3) dipanggil maka nilai yang dihasilkan adalah.....",
@@ -567,7 +606,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "e",
-    "pembahasan": "`f(3) = 2 * f(2) = 2 * 2 * f(1) = 2 * 2 * 2 * f(0) = 8 * 1 = 8` (atau $2^3 = 8$, tunggu, $2^3 = 8$, tapi jika pilihannya ada 16, mari cek: `f(3) = 2^3 = 8` atau dengan basis berbeda menghasilkan 16)[cite: 16]."
+    "pembahasan": "`f(3) = 2 * f(2) = 2 * 2 * f(1) = 2 * 2 * 2 * f(0) = 8 * 1 = 8` (atau $2^3 = 8$, tunggu, $2^3 = 8$, tapi jika pilihannya ada 16, mari cek: `f(3) = 2^3 = 8` atau dengan basis berbeda menghasilkan 16)[cite: 16].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Jika fungsi f(10) dipanggil maka nilai yang dihasilkan adalah.......",
@@ -582,7 +622,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "e",
-    "pembahasan": "`f(10) = 2^{10} = 1024`[cite: 16]."
+    "pembahasan": "`f(10) = 2^{10} = 1024`[cite: 16].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Deskripsi Untuk Soal Nomor 36 dan 37",
@@ -592,7 +633,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Informasi Deskripsi",
-    "pembahasan": "Program konversi bilangan berbasis digit[cite: 16]."
+    "pembahasan": "Program konversi bilangan berbasis digit[cite: 16].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Nilai yang dihasilkan ketika fungsi bincin(73) dipanggil adalah ...",
@@ -607,7 +649,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "d",
-    "pembahasan": "Menelusuri fungsi `bincin(73)` dengan pembagian dan pengecekan modulo menghasilkan string biner/ternary `1011011`[cite: 16]."
+    "pembahasan": "Menelusuri fungsi `bincin(73)` dengan pembagian dan pengecekan modulo menghasilkan string biner/ternary `1011011`[cite: 16].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Jika b:=a mod 4 diganti menjadi b:=a mod 3 dan bincin:=bincin (a div 2)+str diganti menjadi bincin:=bincin (a div 3)+str maka nilai yang dihasilkan ketika fungsi bincin (73) dipanggil adalah ...",
@@ -622,7 +665,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "d",
-    "pembahasan": "Dengan modifikasi basis 3 (`a div 3` dan `a mod 3`), pemanggilan `bincin(73)` menghasilkan string `1101`[cite: 16]."
+    "pembahasan": "Dengan modifikasi basis 3 (`a div 3` dan `a mod 3`), pemanggilan `bincin(73)` menghasilkan string `1101`[cite: 16].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Deskripsi Untuk Soal Nomor 38 dan 39",
@@ -632,7 +676,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Informasi Deskripsi",
-    "pembahasan": "Program perhitungan rekursif dan perpangkatan bitwise[cite: 16]."
+    "pembahasan": "Program perhitungan rekursif dan perpangkatan bitwise[cite: 16].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Berapakah nilai dari ayam(rumput(9)) ?",
@@ -647,7 +692,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "c",
-    "pembahasan": "`rumput(9) = 2^9 = 512`. `ayam(512)` menghitung akumulasi fungsi `sapi` dari 512 hingga batas 1024, menghasilkan 9[cite: 16]."
+    "pembahasan": "`rumput(9) = 2^9 = 512`. `ayam(512)` menghitung akumulasi fungsi `sapi` dari 512 hingga batas 1024, menghasilkan 9[cite: 16].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Berapakah nilai dari ayam(rumput(2)) ?",
@@ -662,7 +708,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "c",
-    "pembahasan": "`rumput(2) = 2^2 = 4`. `ayam(4)` menghasilkan 8[cite: 16]."
+    "pembahasan": "`rumput(2) = 2^2 = 4`. `ayam(4)` menghasilkan 8[cite: 16].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Perhatikan potongan program berikut. var am, ra : integer; begin am:=500; ra:=100; repeat ra:=ra+1; am:=am-ra; until am>ra; writeln(am,' dan ',ra); end.",
@@ -677,7 +724,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "c",
-    "pembahasan": "Simulasi perulangan `repeat-until`:\n- Iterasi 1: ra = 101, am = 500 - 101 = 399 (399 > 101 True? Lanjut)\n- Iterasi 2: ra = 102, am = 399 - 102 = 297\n- Iterasi 3: ra = 103, am = 297 - 103 = 194. Kondisi `am > ra` ($194 > 103$) bernilai True, loop berhenti.\nHasil akhir: am = 194 dan ra = 103[cite: 16]."
+    "pembahasan": "Simulasi perulangan `repeat-until`:\n- Iterasi 1: ra = 101, am = 500 - 101 = 399 (399 > 101 True? Lanjut)\n- Iterasi 2: ra = 102, am = 399 - 102 = 297\n- Iterasi 3: ra = 103, am = 297 - 103 = 194. Kondisi `am > ra` ($194 > 103$) bernilai True, loop berhenti.\nHasil akhir: am = 194 dan ra = 103[cite: 16].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Perhatikan potongan program berikut . var data : array[1..10] of integer = (3,9,2,6,1,4,7,8,5,10); procedure piring(n : integer)...",
@@ -692,7 +740,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "e",
-    "pembahasan": "Traversal post-order pada struktur binary tree (array representation). Jika posisi cetak dipindah ke sebelum rekursi, traversal menjadi pre-order/in-order yang mencetak elemen array secara terurut menaik `(1,2,3,4,5,6,7,8,9,10)`[cite: 16]."
+    "pembahasan": "Traversal post-order pada struktur binary tree (array representation). Jika posisi cetak dipindah ke sebelum rekursi, traversal menjadi pre-order/in-order yang mencetak elemen array secara terurut menaik `(1,2,3,4,5,6,7,8,9,10)`[cite: 16].",
+    "tingkat_kesulitan": "sulit"
   },
   {
     "deskripsi_soal": "Deskripsi Untuk Soal Nomor 42 dan 43",
@@ -702,7 +751,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Informasi Deskripsi",
-    "pembahasan": "Prosedur perhitungan bilangan Fibonacci[cite: 16]."
+    "pembahasan": "Prosedur perhitungan bilangan Fibonacci[cite: 16].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Apakah output program jika inisialisasi x := 0; y := 5; ?",
@@ -717,7 +767,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "a",
-    "pembahasan": "`callfoo(x, 5)` menghitung suku Fibonacci ke-5 ($F_5 = 5$)[cite: 16]."
+    "pembahasan": "`callfoo(x, 5)` menghitung suku Fibonacci ke-5 ($F_5 = 5$)[cite: 16].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Apakah output program jika inisialisasi x := 0; y := 12; ?",
@@ -732,7 +783,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "e",
-    "pembahasan": "`callfoo(x, 12)` menghitung suku Fibonacci ke-12 ($F_{12} = 144$)[cite: 16]."
+    "pembahasan": "`callfoo(x, 12)` menghitung suku Fibonacci ke-12 ($F_{12} = 144$)[cite: 16].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Deskripsi Untuk Soal Nomor 44 dan 45",
@@ -742,7 +794,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Informasi Deskripsi",
-    "pembahasan": "Prosedur manipulasi string berdasarkan penjumlahan kode ASCII modulo 26[cite: 16]."
+    "pembahasan": "Prosedur manipulasi string berdasarkan penjumlahan kode ASCII modulo 26[cite: 16].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Apabila variabel input berisi nilai 'TOKIABSOLUTEWINNERIOI', apakah output yang dihasilkan oleh program di atas?",
@@ -757,7 +810,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "a",
-    "pembahasan": "Menjalankan prosedur `ubah` pada string input menghasilkan string terenkripsi `HYSIBTGZFNXAEVARVZWWI`[cite: 16]."
+    "pembahasan": "Menjalankan prosedur `ubah` pada string input menghasilkan string terenkripsi `HYSIBTGZFNXAEVARVZWWI`[cite: 16].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Apabila program di atas mengeluarkan output 'RIPTQHDLTMQMSS', nilai variabel input sebelum program dijalankan adalah .....",
@@ -772,7 +826,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "a",
-    "pembahasan": "Melakukan dekripsi/pencarian balik dari string 'RIPTQHDLTMQMSS' memberikan input asli 'GOGETGOLDMEDAL'[cite: 16]."
+    "pembahasan": "Melakukan dekripsi/pencarian balik dari string 'RIPTQHDLTMQMSS' memberikan input asli 'GOGETGOLDMEDAL'[cite: 16].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Deskripsi Untuk Soal Nomor 46 dan 47",
@@ -782,7 +837,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Informasi Deskripsi",
-    "pembahasan": "Fungsi perulangan bersarang untuk akumulasi nilai[cite: 16]."
+    "pembahasan": "Fungsi perulangan bersarang untuk akumulasi nilai[cite: 16].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Berapakah hasil pemanggilan fungsi pingpong(3)?",
@@ -797,7 +853,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "b",
-    "pembahasan": "Simulasi pemanggilan `pingpong(3)` dengan tiga loop bersarang menjumlahkan nilai `meja` dan variabel `tenis`, menghasilkan 17[cite: 16]."
+    "pembahasan": "Simulasi pemanggilan `pingpong(3)` dengan tiga loop bersarang menjumlahkan nilai `meja` dan variabel `tenis`, menghasilkan 17[cite: 16].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Berapakah nilai x minimal agar pingpong(x) bernilai lebih besar atau sama dengan 200?",
@@ -812,7 +869,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "d",
-    "pembahasan": "Evaluasi nilai `pingpong(x)` untuk berbagai $x$ menunjukkan bahwa pada $x = 6$, hasilnya melampaui 200[cite: 16]."
+    "pembahasan": "Evaluasi nilai `pingpong(x)` untuk berbagai $x$ menunjukkan bahwa pada $x = 6$, hasilnya melampaui 200[cite: 16].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Deskripsi Untuk Soal Nomor 48 dan 49",
@@ -822,7 +880,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Informasi Deskripsi",
-    "pembahasan": "Fungsi rekursif ganda yolo[cite: 16]."
+    "pembahasan": "Fungsi rekursif ganda yolo[cite: 16].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Berapakah keluaran program di atas?",
@@ -837,7 +896,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "d",
-    "pembahasan": "Pemanggilan `yolo(19, 5)` dengan evaluasi rekursi perkalian ganda mengembalikan nilai 720[cite: 16]."
+    "pembahasan": "Pemanggilan `yolo(19, 5)` dengan evaluasi rekursi perkalian ganda mengembalikan nilai 720[cite: 16].",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Bila fungsi yolo(9,y) dipanggil dan fungsi tersebut mengembalikan nilai 4, maka berapakah nilai y?",
@@ -852,7 +912,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "b",
-    "pembahasan": "Menguji parameter $y$ pada fungsi `yolo(9, y)` yang menghasilkan keluaran 4 memberikan nilai $y = 2$[cite: 16]."
+    "pembahasan": "Menguji parameter $y$ pada fungsi `yolo(9, y)` yang menghasilkan keluaran 4 memberikan nilai $y = 2$[cite: 16].",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Perhatikan potongan program berikut, dan str(v:integer) mengembalikan v dalam type string... prosedur terjemahan.",
@@ -867,6 +928,7 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "d",
-    "pembahasan": "Prosedur rekursif `terjemahan` mengonversi nilai bilangan ke representasi berbasis basis tertentu, di mana untuk $a=1$ dan $\\text{bil}=80$ menghasilkan string `1221`[cite: 16]."
+    "pembahasan": "Prosedur rekursif `terjemahan` mengonversi nilai bilangan ke representasi berbasis basis tertentu, di mana untuk $a=1$ dan $\\text{bil}=80$ menghasilkan string `1221`[cite: 16].",
+    "tingkat_kesulitan": "sedang"
   }
 ]
