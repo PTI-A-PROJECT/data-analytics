@@ -4,6 +4,10 @@ Revision ID: 0003
 Revises: 0002
 Create Date: 2026-09-22 21:59:42.786468
 
+Diedit setelah dibuat (fase 2 issue 01): revisi ini sebelumnya hanya pernah
+jalan di SQLite dan GAGAL di Postgres (urutan DROP FK/ALTER TYPE, default
+boolean). Karena tidak ada database Postgres yang pernah berhasil melewati
+revisi ini, perbaikannya aman diterapkan di tempat.
 """
 from typing import Sequence, Union
 
@@ -35,11 +39,13 @@ def upgrade() -> None:
     sa.PrimaryKeyConstraint('id', name=op.f('pk_jawaban_siswa'))
     )
     with op.batch_alter_table('aturan_pemetaan', schema=None) as batch_op:
+        # FK dilepas SEBELUM tipe kolom diubah — Postgres menolak ALTER TYPE
+        # selama FK int->int masih melekat (SQLite batch mode tidak peduli).
+        batch_op.drop_constraint(batch_op.f('fk_aturan_pemetaan_tingkat_seleksi_id_tingkat_seleksi'), type_='foreignkey')
         batch_op.alter_column('tingkat_seleksi_id',
                existing_type=sa.INTEGER(),
                type_=sa.String(),
                existing_nullable=False)
-        batch_op.drop_constraint(batch_op.f('fk_aturan_pemetaan_tingkat_seleksi_id_tingkat_seleksi'), type_='foreignkey')
 
     with op.batch_alter_table('aturan_predikat', schema=None) as batch_op:
         batch_op.alter_column('tingkat_seleksi_id',
@@ -67,7 +73,7 @@ def upgrade() -> None:
 
     with op.batch_alter_table('hasil_tes_subkompetensi', schema=None) as batch_op:
         batch_op.add_column(sa.Column('status_pemetaan', sa.Enum('cukup', 'belum_cukup', 'belum_teruji', name='statuspemetaan', native_enum=False), nullable=False))
-        batch_op.add_column(sa.Column('butuh_optimasi', sa.Boolean(), server_default=sa.text('0'), nullable=False))
+        batch_op.add_column(sa.Column('butuh_optimasi', sa.Boolean(), server_default=sa.false(), nullable=False))
         batch_op.alter_column('subkompetensi_id',
                existing_type=sa.INTEGER(),
                type_=sa.String(),
@@ -118,11 +124,12 @@ def downgrade() -> None:
                existing_nullable=False)
 
     with op.batch_alter_table('aturan_pemetaan', schema=None) as batch_op:
-        batch_op.create_foreign_key(batch_op.f('fk_aturan_pemetaan_tingkat_seleksi_id_tingkat_seleksi'), 'tingkat_seleksi', ['tingkat_seleksi_id'], ['id'], ondelete='CASCADE')
         batch_op.alter_column('tingkat_seleksi_id',
                existing_type=sa.String(),
                type_=sa.INTEGER(),
-               existing_nullable=False)
+               existing_nullable=False,
+               postgresql_using='tingkat_seleksi_id::integer')
+        batch_op.create_foreign_key(batch_op.f('fk_aturan_pemetaan_tingkat_seleksi_id_tingkat_seleksi'), 'tingkat_seleksi', ['tingkat_seleksi_id'], ['id'], ondelete='CASCADE')
 
     op.drop_table('jawaban_siswa')
     # ### end Alembic commands ###

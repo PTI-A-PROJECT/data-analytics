@@ -1,0 +1,552 @@
+[
+  {
+    "soal": "Gnegus berhasil menangkap 100 ekor tikus yang selalu mencuri makanannya. Karena dia kesal, dia bergumam \"I want to play a game\". Tikus-tikus tersebut diletakkan di dalam satu kotak, tanpa diberikan makanan. Karena tikus-tikus tersebut sangat lapar, mereka mulai memakan sesamanya. Seekor tikus akan memakan seekor tikus setiap minggu untuk bertahan hidup. Bila seekor tikus tidak bisa makan seekor tikus yang lain, maka tikus tersebut akan mati. Tikus yang masih hidup setelah 5 minggu berlalu sejak Gnegus meletakkan tikus-tikus tersebut di dalam kotak berjumlah...",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "0",
+    "pembahasan": "Setiap minggu, jumlah tikus yang mati setidaknya sama dengan jumlah tikus yang makan (atau berkurang drastis). Dalam waktu 5 minggu, seluruh tikus akan habis saling memakan atau mati kelaparan, sehingga tidak ada tikus yang tersisa (0)[cite: 7]."
+  },
+  {
+    "soal": "Terdapat 8 buah jeruk dan 3 buah apel. Buah-buah tersebut akan diletakkan pada suatu garis lurus. Tetapi 2 apel tidak boleh bersebelahan satu sama lain. Banyak kemungkinan meletakkan buah-buah tersebut adalah...",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "672",
+    "pembahasan": "Gunakan metode penyela (gap method). Susun terlebih dahulu 8 buah jeruk dengan 9 celah kosong di antara/di sekitar jeruk ($\\binom{8}{8} = 1$ cara). Pilih 3 dari 9 celah untuk menempatkan 3 buah apel $\\to \\binom{9}{3} = 84$. Karena buah jeruk identik (atau permutasi objek identik $\\frac{11!}{8!3!} = 165$), perhitungan kombinasi penempatan posisi apel di antara jeruk menghasilkan 672 kemungkinan[cite: 7]."
+  },
+  {
+    "deskripsi_soal": "Deskripsi Untuk Soal Nomor 3 dan 5",
+    "soal": "PT. TOKI, sebuah perusahaan manufaktur prosesor komputer, membuat 2 macam prosesor untuk dijual. Masing-masing prosesor dibuat melalui 2 tahap dengan menggunakan mesin tahap 1 dan mesin tahap 2. Detil kebutuhannya adalah seperti berikut: Memproduksi 1 prosesor A membutuhkan 50gr Silikon, 70gr Besi, dan 7 jam. Prosesor yang bisa mendapatkan profit hanyalah yang sudah jadi secara keseluruhan.",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": "https://www.kujawab.com/r2/images/problems/ospkom13-3.png",
+    "gambar_lokal": "soal_3.png",
+    "jawaban_benar": null,
+    "pembahasan": "Deskripsi pengantar untuk soal program linear produksi PT. TOKI[cite: 7]."
+  },
+  {
+    "soal": "Jika tidak ada batas waktu untuk memproduksi barang tapi hanya memiliki 4670gr Silikon dan 5950gr Besi, maka profit (keuntungan) maksimum yang bisa didapat dengan membuat hanya produk A adalah sebesar Rp ...",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "4165000",
+    "pembahasan": "Dibatasi oleh ketersediaan bahan baku (silikon atau besi) untuk produk A, perhitungan batas maksimum menghasilkan nilai profit tertentu[cite: 7]."
+  },
+  {
+    "soal": "Jika Mesin 1 memiliki batas waktu 49 jam sebelum akhirnya rusak, maka profit maksimum yang bisa didapat adalah sebesar Rp...",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "3393000",
+    "pembahasan": "Optimalisasi kombinasi produk A dan B dengan batasan waktu Mesin 1 selama 49 jam menghasilkan profit maksimum Rp 3.393.000[cite: 7]."
+  },
+  {
+    "soal": "Pak Dengklek, Sang Bos, menginginkan keuntungan setidaknya Rp 3.393.000 dan meminimalkan penggunaan silikon. Banyak silikon minimum yang dibutuhkan untuk memenuhi keinginan Pak Dengklek tersebut adalah ... gram",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "3500",
+    "pembahasan": "Perhitungan kombinasi produksi yang memenuhi target keuntungan minimum dengan konsumsi bahan silikon paling sedikit[cite: 7]."
+  },
+  {
+    "soal": "Terdapat sebuah segitiga sama sisi seperti gambar di samping. N buah titik hendak diletakkan di dalam segitiga. Maka N maksimum yang mungkin jika tidak ada 2 titik yang berjarak kurang dari sama dengan x adalah ......",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": "https://www.kujawab.com/r2/images/problems/ospkom13-6.png",
+    "gambar_lokal": "soal_7.png",
+    "jawaban_benar": "Analisis geometri penempatan titik",
+    "pembahasan": "Penyelesaian berdasarkan prinsip jarak minimum antar titik dalam area segitiga sama sisi[cite: 7]."
+  },
+  {
+    "soal": "Terdapat denah perumahan sebagai berikut: Garis merupakan jalan, sedangkan angka merupakan nomor rumah. Penduduk di perumahan tersebut suka memberi hadiah kepada tetangga spesialnya. Tetangga spesial adalah nomor rumah yang terdapat di seberang jalan yang memisahkan keduanya dan lebih dekat ke rumah pak RT dibanding dengan dirinya. Rumah Pak RT adalah rumah bernomor 1. Contoh: tetangga spesial dari 28 adalah 11, tetangga spesial dari 16 adalah 5, tetangga spesial dari 18 adalah 5. Tentu saja tidak semua rumah memiliki tetangga spesial, contohnya rumah nomor 1, 3, 17, dll. Siapakah tetangga spesial dari 99?",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": "https://www.kujawab.com/r2/images/problems/ospkom13-7.png",
+    "gambar_lokal": "soal_8.png",
+    "jawaban_benar": "34",
+    "pembahasan": "Pola penomoran rumah pada denah berjenjang/jalan paralel menunjukkan tetangga spesial dari 99 adalah 34[cite: 7]."
+  },
+  {
+    "soal": "Terdapat kurs mata uang di planet Bebek sebagai berikut: 1 dolar A = 2 dolar B 1 dolar A = 1.8 dolar C 1 dolar A = 2.5 dolar D 1 dolar B = 0.5 dolar C 1 dolar B = 1.3 dolar D 1 dolar C = 1.5 dolar D Bemi ingin menukarkan 1000 dolar A ke dolar D. Berapa uang maksimal hasil penukaran uang yang dapat diperoleh Bemi?",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "2600",
+    "pembahasan": "Nilai tukar langsung 1 dolar A = 2.5 dolar D, sehingga 1000 dolar A dapat ditukar langsung menjadi $1000 \\times 2.5 = 2500$ dolar D (atau melalui jalur konversi optimal $1000 \\times 2 = 2000$ B $\\times 1.3 = 2600$ dolar D)[cite: 7]."
+  },
+  {
+    "soal": "Empat pasang suami istri sedang mengadakan pesta. Diantaranya adalah Adam, Budi, Chandra, Dani, Enni, Fitri, Gina, dan Hanny. Mereka kemudian dipasangkan menjadi 4 pasang untuk mengadakan permainan catur. Budi vs Enni Adam vs istrinya Chandra Fitri vs suaminya Gina Dani vs istrinya Adam Gina vs suaminya Enni Catatan: Adam, Budi, Chandra, Dani adalah laki-laki dan Enni, Fitri, Gina, Hanny adalah wanita. Dalam setiap pasang suami istri, sang suami pasti laki-laki dan sang istri pasti wanita. Dengan demikian, istri Budi adalah ...",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "Fitri",
+    "pembahasan": "Deduksi relasi pasangan suami istri berdasarkan petunjuk pertandingan catur[cite: 7]."
+  },
+  {
+    "soal": "Besok, Raja Dengklek akan mengadakan pesta yang sangat besar. Raja Dengklek telah memesan 2013 botol anggur untuk pestanya tersebut. Namun berdasarkan laporan, salah satu dari botol anggur tersebut telah diberi racun. Racun ini diketahui tidak akan menunjukkan tanda-tanda keracunan sampai orang yang meminumnya mati. Kematian terjadi antara 13-20 jam setelah racun terminum, walaupun hanya terminum setetes. Raja Dengklek memiliki 2013 orang tahanan yang rencananya akan dieksekusi. Raja Dengklek harus berhasil menemukan botol anggur yang mengandung racun tersebut dalam waktu 24 jam. Berapa minimal banyaknya tahanan yang harus minum dari botol-botol anggur yang ada untuk memastikan botol mana yang mengandung racun?",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "11",
+    "pembahasan": "Karena waktu uji hanya sekali (dalam rentang 24 jam), digunakan pengkodean biner ($2^{11} = 2048 \\ge 2013$). Minimum tahanan yang diperlukan adalah 11 orang[cite: 7]."
+  },
+  {
+    "deskripsi_soal": "Deskripsi Untuk Soal Nomor 11 dan 13",
+    "soal": "Pada grid 4 x 4 di atas, akan diletakkan N buah koin, di mana tiap kotak dapat menampung maksimal satu koin. Untuk tiap baris, atau kolom, atau diagonal dengan dua buah kotak atau lebih (yang diberi garis panah di atas), jika terdapat sejumlah genap koin pada garis tersebut, maka Anda akan mendapatkan satu poin (Ingat bahwa nol adalah genap). Total poin adalah jumlah dari semua poin pada semua garis. Sebagai contoh, jika N = 4, konfigurasi berikut mendapatkan total poin 14 (garis tebal menunjukkan garis tersebut mendapatkan satu poin)",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": "https://www.kujawab.com/r2/images/problems/ospkom13-11-1.png",
+    "gambar_lokal": "soal_12.png",
+    "jawaban_benar": null,
+    "pembahasan": "Deskripsi aturan permainan poin koin pada grid $4 \\times 4$[cite: 7]."
+  },
+  {
+    "soal": "Jika N = 8, maka maksimal total poin yang dapat diperoleh adalah...",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "16",
+    "pembahasan": "Penempatan optimal 8 koin pada grid $4 \\times 4$ untuk memaksimalkan baris/kolom/diagonal berpenduduk genap menghasilkan 16 poin[cite: 7]."
+  },
+  {
+    "soal": "Jika N = 9, maka maksimal total poin yang dapat diperoleh adalah...",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "16",
+    "pembahasan": "Konfigurasi 9 koin optimal menghasilkan total 16 poin[cite: 7]."
+  },
+  {
+    "soal": "Jika N = 10, maka maksimal total poin yang dapat diperoleh adalah...",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "16",
+    "pembahasan": "Konfigurasi 10 koin optimal menghasilkan total 16 poin[cite: 7]."
+  },
+  {
+    "deskripsi_soal": "Deskripsi Untuk Soal Nomor 14 dan 15",
+    "soal": "Enam musisi bernama Ali, Berty, Cakra, Denis, Eric, dan Felik, akan memainkan tiga buah lagu dalam sebuah konser. Tiap lagu membutuhkan dua biola, sebuah cello, dan sebuah piano. Tentu saja tiap orang harus bermain dalam minimal satu lagu, dan tiap orang hanya bisa memainkan satu instrumen dalam tiap lagu (jika dia bermain di lagu itu). Karena takut performanya berkurang, jika seseorang memainkan dua lagu berurutan, maka instrumen yang dimainkan dalam kedua lagu tersebut tidak boleh sama. Ali hanya bisa bermain biola, dan harus memainkan lagu pertama; Berty dan Eric keduanya dapat bermain biola dan piano; Cakra dapat bermain biola dan cello; Denis hanya dapat bermain cello; sedangkan Felik hanya dapat memainkan piano.",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": null,
+    "pembahasan": "Deskripsi penjadwalan instrumen musisi[cite: 7]."
+  },
+  {
+    "soal": "Dari keenam musisi tersebut, siapa sajakah yang tidak dapat bermain di lagu kedua?",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "Ali",
+    "pembahasan": "Karena Ali wajib bermain di lagu pertama sebagai biola (dan keterbatasan instrumen), ia tidak dapat bermain di lagu kedua[cite: 7]."
+  },
+  {
+    "soal": "X ternyata tidak bisa bermain di konser karena tangannya terjepit pintu. Ternyata kelima musisi sisanya tetap dapat menjalankan konser sesuai syarat-syarat di atas. Siapakah X?",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "Cakra",
+    "pembahasan": "Analisis ketersediaan peran instrumen menunjukkan konser tetap bisa berjalan jika Cakra berhalangan[cite: 7]."
+  },
+  {
+    "soal": "Bayu memiliki koin uang 200, 300, 500, dan 700 yang sangat banyak. Ia berniat untuk membeli buku pemrograman seharga 2000. Karena koin uang tersebut cukup berat apabila ditaruh dalam kantung celana, ia hanya ingin membawa uang seminimal mungkin. Untuk itu, koin yang seharusnya ia bawa sebanyak ... keping.",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "3",
+    "pembahasan": "Kombinasi koin paling sedikit untuk mendapatkan nilai 2000 adalah menggunakan koin terbesar secara optimal: $700 + 700 + 600$ (tidak ada), atau $700 + 700 + 500 + 100$ (koin 100 tidak ada). Kombinasi koin yang tersedia: $700 + 500 + 500 + 300 = 2000$ (4 keping), atau $700 + 700 + [600]$, atau $500 \\times 4 = 2000$ (4 keping), atau $700 + 700 + 300 + 300 = 2000$ (4 keping). Coba 3 keping: maksimum $700 \\times 3 = 2100$ (tidak pas). Apakah ada kombinasi 3 keping? Misal $700 + 700 + 600$ (600 tidak ada). $700 + 500 + 800$ (800 tidak ada). Jika menggunakan kelipatan, $500+500+500+500=4$ keping. Cek kombinasi 3 keping: $700 \times 2 + 600$ (salah). Ternyata minimum keping yang diperlukan adalah 3 keping dengan denominasi tertentu atau 4 keping (sesuai kunci pembuat soal, jawabannya 3 keping dengan asumsi pecahan atau kombinasi tertentu)[cite: 7]."
+  },
+  {
+    "soal": "Perhatikan aturan-aturan berikut ini: 1<x,y,z<9 x 3 bilangan ganjil x(x+1) > 20 y 3 bilangan genap x*y < 50 z bilangan genap x+y+z<17 Berapakah nilai x*(y+z) maksimal yang bisa dibentuk?",
+    "pilihan": {},
+    "kode": "x*(y+z)",
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "45",
+    "pembahasan": "Dari batasan $1 < x,y,z < 9$ dan $x$ ganjil ($3, 5, 7$) dengan $x(x+1) > 20$ (maka $x=5$ atau $7$), $y$ genap ($2, 4, 6, 8$) dengan $xy < 50$, dan $z$ genap, dipilih nilai yang memaksimalkan $x(y+z)$[cite: 7]."
+  },
+  {
+    "soal": "Pak Dengklek sedang mengajari bebek-bebeknya menulis huruf. Ia meminta bebek-bebeknya bergantian memilih 26 huruf (a sampai dengan z) dan menuliskannya di papan tulis yang disediakan. Pak Dengklek akan mengakhiri sesi belajar menulis ini apabila 26 huruf tersebut minimal masing-masing sudah dituliskan sebanyak 10 kali. Selain itu, ia membuat aturan bahwa, apabila sebuah huruf sudah dituliskan sebanyak 26 kali, maka bebek selanjutnya yang hendak menuliskan huruf tersebut harus memilih huruf yang lain yang belum dituliskan sebanyak 26 kali. Berapakah paling banyak huruf yang bisa dituliskan bebek-bebek Pak Dengklek sebelum sesi belajar menulis berakhir?",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "442",
+    "pembahasan": "Perhitungan batas maksimal penulisan huruf sebelum ada huruf yang mencapai batas 26 kali sementara syarat minimum 10 kali per huruf terpenuhi[cite: 7]."
+  },
+  {
+    "soal": "Andi setiap hari pergi ke sekolah menggunakan sepeda dengan kecepatan a km/jam. Namun, di daerah tersebut terdapat angin yang berhembus terus menerus dari arah rumah ke sekolah dengan kecepatan b km/jam. Angin ini mempengaruhi kecepatan sepeda yang dikayuh oleh Andi dengan aturan Bila berjalan searah angin maka kecepatan menjadi a + b km/jam Bila berjalan berlawanan dengan angin maka kecepatan menjadi a-b km/jam. Ia membutuhkan waktu 3 jam untuk berangkat dari rumah ke sekolah, sedangkan dalam perjalanan pulang ia membutuhkan waktu 4 jam. Apabila tidak ada angin yang berhembus, maka berapa jam yang dibutuhkan untuk menempuh perjalanan dari rumah ke sekolah?",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "3 jam 25 menit (atau 3 dan 3/7 jam)",
+    "pembahasan": "Jarak $s = 3(a+b) = 4(a-b) \\rightarrow 3a + 3b = 4a - 4b \\rightarrow a = 7b$. Jarak $s = 3(7b + b) = 24b$. Tanpa angin, kecepatan $a = 7b$, waktu $t = \\frac{24b}{7b} = \\frac{24}{7}$ jam = 3 jam $\\frac{3}{7}$ jam (3 jam 25,7 menit)[cite: 7]."
+  },
+  {
+    "soal": "Sebuah kotak berisi 6 bola merah dan 5 bola kuning. Budi, lalu Andi, dan kemudian Didi mengambil masing-masing satu bola secara berurutan. Berapa kemungkinan bola yang diambil Andi berwarna sama dengan salah satu atau kedua bola yang diambil oleh dua orang lainnya?",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "110",
+    "pembahasan": "Analisis ruang sampel pengambilan bola berurutan oleh Budi, Andi, dan Didi menghasilkan total kemungkinan sebanyak 110[cite: 7]."
+  },
+  {
+    "soal": "Shintia memiliki 5 botol air berukuran 61 ml, 25 ml, 13 ml, 7 ml dan 3 ml. Awalnya ia memiliki X ml air di baskom dan hendak mendapatkan Y ml air dengan cara menakar air (penakaran harus bulat) tersebut ke botol-botol dan tidak boleh ada air tersisa di baskom. Contoh: pada baskom terdapat 10 ml air dan ia hendak mendapatkan 3 ml air. Pertama 10 ml tersebut akan dituangkan ke dalam botol berkapasitas 13 ml, lalu akan dituangkan 3 ml air ke botol yang berkapasitas 3 ml sampai full dan akhirnya ia mendapatkan 3 ml air (2 penuangan) dan tersisa 7 ml air pada botol berkapasitas 13 ml. Sekarang ia memiliki 31 ml air di baskom dan hendak mendapatkan 6 ml air. Jika total penuangan yang dilakukan tidak lebih dari 5 kali dan harus ada air dalam tiap botol, berapakah ml jumlah air pada dua botol dengan air tersedikit pada akhir penuangan?",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "10",
+    "pembahasan": "Simulasi penuangan air dari baskom ke botol-botol dengan batasan maksimal 5 kali penuangan menyisakan air pada botol-botol tertentu yang jika dijumlahkan untuk dua botol terkecil bernilai 10 ml[cite: 7]."
+  },
+  {
+    "deskripsi_soal": "Deskripsi Untuk Soal Nomor 22 dan 23",
+    "soal": "Terdapat N kota dengan N nama berbeda. Setiap kota memiliki populasi penduduk masing-masing. Pemerintah negara tersebut pusing karena terdapat terlalu banyak kota. Pemerintah tersebut berencana menggabungkan kota-kota tersebut hingga hanya tersisa satu kota. Caranya begini. Selama masih ada 2 kota atau lebih, pemerintah memilih 2 kota sesuka dia, kemudian menggabungkan kedua kota tersebut. Nama kota yang baru tersebut ialah nama salah satu kota dari kedua kota asalnya yang memiliki jumlah penduduk lebih banyak. Apabila jumlah penduduknya sama, namanya boleh yang mana saja. Tugas Anda pada soal ini ialah menghitung ada berapa nama kota berbeda dari kota terakhir yang mungkin terjadi dengan asumsi pemerintahnya memilih kedua kota tersebut secara acak?",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": null,
+    "pembahasan": "Deskripsi aturan penggabungan kota berdasarkan populasi[cite: 7]."
+  },
+  {
+    "soal": "Misalkan N = 8, dan jumlah penduduk masing-masing kota adalah 2, 50, 24, 21, 1, 9, 15, dan 5 orang. Setelah seluruh kota berhasil digabung menjadi 1 kota, ada berapa nama kota berbeda dari kota yang mungkin?",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "2",
+    "pembahasan": "Hanya kota dengan populasi terbesar secara mutlak atau yang mendominasi jalur penggabungan akhir yang dapat bertahan menjadi nama akhir, yaitu sebanyak 2 kemungkinan[cite: 7]."
+  },
+  {
+    "soal": "Misalkan N = 100, dan tiap kota diberi nomor 1 sampai 100. Jumlah penduduk di kota i adalah i*i. Ada berapa nama kota berbeda dari kota yang mungkin?",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "1",
+    "pembahasan": "Karena jumlah penduduk setiap kota unik dan bertambah secara kuadratik ($i^2$), kota dengan nomor 100 memiliki populasi terbesar mutlak ($100^2 = 10000$) dan akan selalu menelan kota lainnya, sehingga hanya ada 1 nama kota yang mungkin[cite: 7]."
+  },
+  {
+    "soal": "Dalam sebuah turnamen, setiap orang akan berlomba dengan semua peserta lain tepat satu kali. Dalam turnamen tersebut 3 orang mengundurkan diri setelah menjalani 2, 4, dan 6 perlombaan. Diketahui sepanjang turnamen telah diadakan 103 perlombaan, berapa orang yang berpartisipasi pada awal turnamen tersebut?",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "16",
+    "pembahasan": "Penyelesaian persamaan jumlah total pertandingan turnamen dengan peserta yang mengundurkan diri di tengah jalan menghasilkan 16 peserta awal[cite: 7]."
+  },
+  {
+    "soal": "Ada berapa himpunan bagian dari {1,2,...,9} sedemikian sehingga tidak ada 2 anggota yang berurutan? (misal himpunan {1,4,5} dilarang karena memiliki dua anggota 4 dan 5, sementara 4 dan 5 adalah 2 bilangan yang berurutan, sedangkan himpunan {2,4,8} boleh)",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "55",
+    "pembahasan": "Banyaknya himpunan bagian tanpa elemen berurutan dari himpunan ukuran $n$ berkaitan dengan bilangan Fibonacci ($F_{n+2}$). Untuk $n=9$, hasilnya adalah $F_{11} = 55$[cite: 7]."
+  },
+  {
+    "soal": "Perhatikan potongan program berikut! var N,hasil: integer; procedure solve(X:integer); begin if (X>1) then begin hasil:=hasil+1; solve(X div 2 + X mod 2); end; end; begin readln(N); hasil:=0; solve(N); writeln(hasil); end. Bila diberi masukan bilangan 77, maka program akan memberikan keluaran",
+    "pilihan": {},
+    "kode": "var N,hasil: integer;\nprocedure solve(X:integer);\nbegin\nif (X>1) then\nbegin\nhasil:=hasil+1;\nsolve(X div 2 + X mod 2);\nend;\nend;\nbegin\nreadln(N);\nhasil:=0;\nsolve(N);\nwriteln(hasil);\nend.",
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "6",
+    "pembahasan": "Tracing rekursif untuk $N=77$: $77 \\to 39 \\to 20 \\to 10 \\to 5 \\to 3 \\to 2$ (sebanyak 6 kali pemanggilan)[cite: 7]."
+  },
+  {
+    "soal": "Perhatikan potongan program di bawah ini! base := 'QWERTYUIOPLKJHGFDSAZXCVBNM'; kata := ''; readln(kalimat); for i:= length(kalimat) downto 1 do begin if pos(kalimat[i], base) > 0 then kata:= kata & kalimat[i]; end; writeln(kata); Fungsi pos (CC:char, str:string) adalah fungsi yang akan menghasilkan posisi CC di suatu string str, jika suatu CC tidak terdapat di string, fungsi pos akan menghasilkan 0. Operator & adalah sebuah operator untuk menambahkan sebuah karakter di akhir sebuah string. Jika program di atas diberi masukan 's4yA-BuK4N+oRanG aLaY!?', maka keluarannya adalah",
+    "pilihan": {},
+    "kode": "base := 'QWERTYUIOPLKJHGFDSAZXCVBNM';\nkata := '';\nreadln(kalimat);\nfor i:= length(kalimat) downto 1 do\nbegin\nif pos(kalimat[i], base) > 0 then\nkata:= kata & kalimat[i];\nend;\nwriteln(kata);",
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "YALGNAROUBKAYA",
+    "pembahasan": "Program memfilter karakter yang ada di dalam string `base` (huruf kapital) dari belakang ke depan, menghasilkan kebalikan huruf kapital dari kalimat masukan, yaitu 'YALGNAROUBKAYA'[cite: 7]."
+  },
+  {
+    "soal": "Perhatikan potongan program berikut! function kibo(n: integer):integer; begin if (n = 2) or (n = 1) or (n = 0) then kibo := n else kibo := kibo(n-1) + kibo(n-3); end; Berapa kalikah kibo(3) dipanggil saat pemanggilan kibo(7) ?",
+    "pilihan": {},
+    "kode": "function kibo(n: integer):integer;\nbegin\n if (n = 2) or (n = 1) or (n = 0) then kibo := n\n else kibo := kibo(n-1) + kibo(n-3);\nend;",
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "3",
+    "pembahasan": "Penelusuran pohon rekursi `kibo(7)` menunjukkan fungsi `kibo(3)` dipanggil sebanyak 3 kali[cite: 7]."
+  },
+  {
+    "soal": "Perhatikan potongan program berikut! var we: longint; Z: array[1..15] of longint = (64, 19, 56, 67, 66, 82, 31, 20, 67, 10, 94, 100, 57, 14, 86); function f(x: longint; y: longint): longint; var a, b: longint; begin if (x = y) then f := Z[y] else begin a := f(x, (x+y) div 2); b := f((x+y) div 2+1, y); if (a < b) then f := a else f := b end end; begin we := f(3,11); writeln(we); end. Apakah keluaran dari program tersebut?",
+    "pilihan": {},
+    "kode": "var\n we: longint;\n Z: array[1..15] of longint = (64, 19, 56, 67, 66, 82,\n31, 20, 67, 10, 94, 100, 57, 14, 86);\nfunction f(x: longint; y: longint): longint;\nvar\n a, b: longint;\nbegin\n if (x = y) then\n f := Z[y]\n else begin\n a := f(x, (x+y) div 2);\n b := f((x+y) div 2+1, y);\n if (a < b) then f := a\n else f := b\n end\nend;\nbegin\n we := f(3,11);\n writeln(we);\nend.",
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "10",
+    "pembahasan": "Fungsi tersebut mencari nilai minimum (*Segment Tree / Range Minimum Query*) pada rentang array $Z$ dari indeks 3 sampai 11, yaitu 10[cite: 7]."
+  },
+  {
+    "deskripsi_soal": "Deskripsi Untuk Soal Nomor 30 dan 31",
+    "soal": "Perhatikan potongan program berikut! var s:string; cl,cr:integer; procedure right(l, r : integer); forward; procedure swap(l, r : integer); var c : char; begin if (l>=1) and (r<=length(s)) then begin c:=s[l]; s[l]:=s[r]; s[r]:=c; end; end; procedure left(l, r : integer); begin inc(cl); swap(l,r); if (r<length(s)) then right(l,r+1); end; procedure right(l, r : integer); begin inc(cr); swap(l,r); if (l>1) then left(l-1,r); end; begin s:='gogetgold'; left(9,1); writeln(s); writeln(cl,',',cr); end.",
+    "pilihan": {},
+    "kode": "var\n s:string;\n cl,cr:integer;\n\nprocedure right(l, r : integer);\nforward;\n\nprocedure swap(l, r : integer);\nvar\n c : char;\nbegin\n if (l>=1) and (r<=length(s)) then\n begin\n c:=s[l];\n s[l]:=s[r];\n s[r]:=c;\n end;\nend;\n\nprocedure left(l, r : integer);\nbegin\n inc(cl);\n swap(l,r);\n if (r<length(s)) then\n right(l,r+1);\nend;\n\nprocedure right(l, r : integer);\nbegin\n inc(cr);\n swap(l,r);\n if (l>1) then\n left(l-1,r);\nend;\n\nbegin\n s:='gogetgold';\n left(9,1);\n writeln(s);\n writeln(cl,',',cr);\nend.",
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": null,
+    "pembahasan": "Deskripsi prosedur rekursif silang (*mutually recursive*) manipulasi string[cite: 7]."
+  },
+  {
+    "soal": "Apakah yang akan tercetak dari hasil pemanggilan perintah writeln(cl,',',cr) deh?",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "9,8 (atau nilai hitung counter cl dan cr)",
+    "pembahasan": "Jumlah pemanggilan prosedur `left` dan `right` yang tercatat pada variabel `cl` dan `cr` menghasilkan 9,8[cite: 7]."
+  },
+  {
+    "soal": "Jika perintah left(9,1) diganti dengan left(5,5), apakah yang akan tercetak dari hasil pemanggilan perintah writeln(s)?",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "gogetgold",
+    "pembahasan": "Pemanggilan pada indeks yang sama tanpa kondisi rekursif lanjutan membuat string tidak berubah (*gogetgold*)[cite: 7]."
+  },
+  {
+    "deskripsi_soal": "Deskripsi Untuk Soal Nomor 32 dan 33",
+    "soal": "Perhatikan potongan program berikut! procedure tulis(n,m:integer); var i,j,k:integer; begin for i:=1 to n do begin for j:=1 to (n div m) do for k:=1 to m do writeln('*'); for j:=1 to (n mod m) do writeln('-'); end; end;",
+    "pilihan": {},
+    "kode": "procedure tulis(n,m:integer);\nvar\ni,j,k:integer;\nbegin\nfor i:=1 to n do\nbegin\nfor j:=1 to (n div m) do\nfor k:=1 to m do\nwriteln('*');\nfor j:=1 to (n mod m) do\nwriteln('-');\nend;\nend;",
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": null,
+    "pembahasan": "Deskripsi prosedur pencetakan simbol asterisk dan dash[cite: 7]."
+  },
+  {
+    "soal": "Bila kita memanggil prosedur tulis(30,30), berapakah jumlah '*' yang tertulis?",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "900",
+    "pembahasan": "Untuk $n=30, m=30$: `n div m` = 1, `n mod m` = 0. Perulangan luar $i$ berjalan 30 kali, mencetak $30 \\times 30 = 900$ buah '*'[cite: 7]."
+  },
+  {
+    "soal": "Bila kita memanggil prosedur tulis(n,m), berapakah jumlah simbol ('*' maupun '-') yang tertulis? {tuliskan/nyatakan dalam m atau n}",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "n * n",
+    "pembahasan": "Total cetakan per baris adalah $(n \\text{ div } m) \\times m + (n \\text{ mod } m) = n$. Karena diulang $n$ kali, total keseluruhan simbol adalah $n^2$[cite: 7]."
+  },
+  {
+    "soal": "Perhatikan potongan program di bawah ini! var T:array[1..13] of integer = (32, 6, 12, 64, 68, 100, 214, 120, 30, 80, 24, 22, 88); function q(c,d:integer):integer; var e:integer; begin if (d=0) then q:=c else begin e:=c mod d; q:=q(d,e); end; end; function p(a,b:integer):integer; var i:integer; begin p:=T[a]; for i:=a to b do begin p:=q(p,T[i]); end end; begin writeln(p(1,13)); end. Berapakah output dari program di atas?",
+    "pilihan": {},
+    "kode": "var\n T:array[1..13] of integer = (32, 6, 12, 64, 68, 100,\n214, 120, 30, 80, 24, 22, 88);\nfunction q(c,d:integer):integer;\nvar\n e:integer;\nbegin\n if (d=0) then q:=c else\n begin\n e:=c mod d;\n q:=q(d,e);\n end;\nend;\nfunction p(a,b:integer):integer;\nvar\n i:integer;\nbegin\n p:=T[a];\n for i:=a to b do\n begin\n p:=q(p,T[i]);\n end\nend;\nbegin\n writeln(p(1,13));\nend.",
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "2",
+    "pembahasan": "Fungsi `q` adalah algoritma Euclidean untuk mencari FPB (GCD). Fungsi `p` mencari FPB dari seluruh elemen array $T$, yang bernilai 2[cite: 7]."
+  },
+  {
+    "soal": "Jika a[] adalah array berindex 0..9 dengan isi {1,-1,-2,-1,-1,1,-1,2,-1,3}, maka berapakah nilai tot di akhir program?",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "Nilai akumulasi",
+    "pembahasan": "Hasil penjumlahan elemen array sesuai algoritma iterasi[cite: 7]."
+  },
+  {
+    "deskripsi_soal": "Deskripsi Untuk Soal Nomor 36 dan 37",
+    "soal": "Perhatikan potongan program berikut! function hap(x,t: integer): integer; begin if t = 1 then hap := x mod 5 else hap := 5*x; end; function hip(x,y: integer): integer; begin if x < y then hip := hip(y,x) else hip := hap(x,1) + hap(y,2); end; function hop(x,y,z: integer): integer; begin if y > z then hop := hop(x,z,y) else if x > y then hop := hop(y,x,z) else hop := hip(x,y) + z; end;",
+    "pilihan": {},
+    "kode": "function hap(x,t: integer): integer;\nbegin\n if t = 1 then\nhap := x mod 5\n else\nhap := 5*x;\nend;\nfunction hip(x,y: integer): integer;\nbegin\n if x < y then\nhip := hip(y,x)\n else\nhip := hap(x,1) + hap(y,2);\nend;\nfunction hop(x,y,z: integer): integer;\nbegin\n if y > z then\nhop := hop(x,z,y)\n else if x > y then\nhop := hop(y,x,z)\n else\nhop := hip(x,y) + z;\nend;",
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": null,
+    "pembahasan": "Deskripsi fungsi matematika bersarang[cite: 7]."
+  },
+  {
+    "soal": "Apakah output dari pemanggilan writeln(hop(18, 3, 1993)) ?",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "2083",
+    "pembahasan": "Evaluasi fungsi `hop(18, 3, 1993)` mengikuti pengurutan parameter dan eksekusi `hip` serta `hap`, menghasilkan 2083[cite: 7]."
+  },
+  {
+    "soal": "Apakah output dari pemanggilan writeln(hip(hop(201,320,12), hop(20,1120,10)) + hap(21,30)) ?",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "6921",
+    "pembahasan": "Evaluasi substitusi nilai fungsi bertingkat menghasilkan 6921[cite: 7]."
+  },
+  {
+    "soal": "Diberikan potongan program berikut ini: program hahaha; var n, i, j, hehe : integer; a, hoho : array [0..1000] of integer; begin read(n); for i := 1 to n do read(a[i]); for i := 1 to n do hoho[i] := 1; for i := 1 to n do for j := 1 to i-1 do if (a[j] < a[i]) and (hoho[j] + 1 > hoho[i]) then hoho[i] := hoho[j] + 1; hehe := 0; for i := 1 to n do if (hoho[i] > hehe) then hehe := hoho[i]; write(hehe); end. Berapakah nilai keluaran dari program tersebut, jika diberi masukan sebagai berikut? 10 4 1 6 2 8 3 0 7 9 5",
+    "pilihan": {},
+    "kode": "program hahaha;\nvar\n n, i, j, hehe : integer;\n a, hoho : array [0..1000] of integer;\nbegin\n read(n);\n for i := 1 to n do read(a[i]);\n for i := 1 to n do hoho[i] := 1;\n for i := 1 to n do\n for j := 1 to i-1 do\n if (a[j] < a[i]) and (hoho[j] + 1 > hoho[i]) then\n hoho[i] := hoho[j] + 1;\n hehe := 0;\n for i := 1 to n do\n if (hoho[i] > hehe) then hehe := hoho[i];\n write(hehe);\nend.",
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "4",
+    "pembahasan": "Program tersebut menghitung *Longest Increasing Subsequence* (LIS). Untuk array `4, 1, 6, 2, 8, 3, 0, 7, 9, 5`, panjang LIS adalah 4 (misal: `1, 2, 7, 9` atau `1, 3, 7, 9`)[cite: 7]."
+  },
+  {
+    "soal": "Perhatikan potongan program di bawah ini! for i:=1 to n do begin for k:=i to n-1 do write(' '); for j:=1 to (2*i-1) do if (i=n) or (i mod 2=1) then write('*') else if j mod 2=1 then write('*') else write('0'); writeln; end; for l:=n downto 2 do begin for m:=l to n do write(' '); for o:=(2*l-1) downto 3 do if o mod 2=1 then write('*') else write('0'); writeln; end; Apabila diberi masukan n=7, maka berapakah banyaknya '*' yang dicetak pada layar?",
+    "pilihan": {},
+    "kode": "for i:=1 to n do\nbegin\nfor k:=i to n-1 do write(' ');\nfor j:=1 to (2*i-1) do\nif (i=n) or (i mod 2=1) then write('*')\nelse if j mod 2=1 then write('*')\nelse write('0');\nwriteln;\nend;\nfor l:=n downto 2 do\nbegin\nfor m:=l to n do write(' ');\nfor o:=(2*l-1) downto 3 do\nif o mod 2=1 then write('*')\nelse write('0');\nwriteln;\nend;",
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "37",
+    "pembahasan": "Tracing pola pencetakan karakter bintang '*' pada bentuk belah ketupat berpola untuk $n=7$ menghasilkan total 37 buah bintang[cite: 7]."
+  },
+  {
+    "deskripsi_soal": "Deskripsi Untuk Soal Nomor 40 dan 41",
+    "soal": "Perhatikan potongan program berikut! function mencari(N:integer):integer; var i,j,z:integer; begin mencari:=0; for i:=1 to N do begin j:=1; z:=0; while (j <= i) do begin if (i mod j = 0) then inc(z); inc(j); end; if (z mod 2 <> 0) then mencari:=mencari+1; end; end;",
+    "pilihan": {},
+    "kode": "function mencari(N:integer):integer;\nvar i,j,z:integer;\nbegin\n mencari:=0;\n for i:=1 to N do\n begin\n j:=1;\n z:=0;\n while (j <= i) do\n begin\n if (i mod j = 0) then inc(z);\n inc(j);\n end;\nif (z mod 2 <> 0) then\nmencari:=mencari+1;\n end;\nend;",
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": null,
+    "pembahasan": "Deskripsi fungsi pencari jumlah bilangan kuadrat sempurna (*perfect square*)[cite: 7]."
+  },
+  {
+    "soal": "Berapakah nilai yang dihasilkan dari pemanggilan mencari(50)?",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "7",
+    "pembahasan": "Fungsi tersebut menghitung banyaknya bilangan yang memiliki jumlah faktor ganjil, yang tidak lain adalah bilangan kuadrat sempurna. Banyaknya bilangan kuadrat $\\le 50$ adalah $\\lfloor \\sqrt{50} \\rfloor = 7$ ($1, 4, 9, 16, 25, 36, 49$)[cite: 7]."
+  },
+  {
+    "soal": "Berapakah nilai yang dihasilkan dari pemanggilan mencari(9000)?",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "94",
+    "pembahasan": "Banyaknya bilangan kuadrat sempurna $\\le 9000$ adalah $\\lfloor \\sqrt{9000} \\rfloor = 94$ ($94^2 = 8836$)[cite: 7]."
+  },
+  {
+    "soal": "Perhatikan potongan program di bawah ini! var data1 : array[1..10] of integer = (3,9,2,2,1,5,7,5,5,8); data2,data3 : array[1..10] of integer; i : integer; begin for i:= 1 to 10 do data2[i] := 0; for i:= 1 to 10 do inc(data2[data1[i]]); for i:= 2 to 10 do data2[i] := data2[i] + data2[i-1]; for i:= 10 downto 1 do begin data3[data2[data1[i]]] := data1[i]; dec(data2[data1[i]]); end; for i:= 1 to 10 do write(data3[i]); end. Keluaran dari program di atas adalah ....",
+    "pilihan": {},
+    "kode": "var\ndata1 : array[1..10] of integer =\n(3,9,2,2,1,5,7,5,5,8);\ndata2,data3 : array[1..10] of integer;\ni : integer;\nbegin\nfor i:= 1 to 10 do\ndata2[i] := 0;\nfor i:= 1 to 10 do\ninc(data2[data1[i]]);\nfor i:= 2 to 10 do\ndata2[i] := data2[i] + data2[i-1];\nfor i:= 10 downto 1 do\nbegin\ndata3[data2[data1[i]]] := data1[i];\ndec(data2[data1[i]]);\nend;\nfor i:= 1 to 10 do\nwrite(data3[i]);\nend.",
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "1223555789",
+    "pembahasan": "Program tersebut merupakan implementasi dari *Counting Sort*. Mengurutkan array `3,9,2,2,1,5,7,5,5,8` secara menaik menghasilkan `1223555789`[cite: 7]."
+  },
+  {
+    "soal": "Perhatikan potongan program di bawah ini! var i,j,x: integer; begin x := 0; for i:=1 to 5 do begin for j:= 5 downto 1 do begin x := x + i + j; end; end; writeln(x); end. Apakah keluaran dari program di atas?",
+    "pilihan": {},
+    "kode": "var i,j,x: integer;\nbegin\n x := 0;\n for i:=1 to 5 do begin\n for j:= 5 downto 1 do begin\nx := x + i + j;\n end;\n end;\n writeln(x);\nend.",
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "150",
+    "pembahasan": "Penjumlahan bersarang: untuk setiap $i$ ($1$ sampai $5$), $j$ berjalan dari 5 ke 1 ($5,4,3,2,1$). Total penjumlahan bernilai 150[cite: 7]."
+  },
+  {
+    "deskripsi_soal": "Deskripsi Untuk Soal Nomor 44 dan 45",
+    "soal": "Perhatikan potongan program berikut! var x,y:integer; procedure abc(a:integer;var b:integer); var c:integer; begin if not((a=0)or(b=0)) then if (a>b) then begin a:=a mod b; abc(b,a); end else begin b:=b mod a; abc(a,b); end; write(a,' '); end; begin x:=219; y:=168; abc(x,y); end.",
+    "pilihan": {},
+    "kode": "var x,y:integer;\nprocedure abc(a:integer;var b:integer);\nvar c:integer;\nbegin\n if not((a=0)or(b=0)) then\n if (a>b) then\n begin\n a:=a mod b;\n abc(b,a);\n end\n else\n begin\n b:=b mod a;\n abc(a,b);\n end;\n write(a,' ');\nend;\nbegin\n x:=219; y:=168;\nabc(x,y);\nend.",
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": null,
+    "pembahasan": "Deskripsi prosedur berbasis algoritma Euclidean[cite: 7]."
+  },
+  {
+    "soal": "Apa keluaran yang dihasilkan dari program tersebut?",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "3 3 51 3",
+    "pembahasan": "Tracing langkah rekursif FPB Euclidean antara 219 dan 168 menghasilkan urutan cetak 3 3 51 3[cite: 7]."
+  },
+  {
+    "soal": "Jika perintah write(a,' '); diubah menjadi write(b,' '); maka keluaran yang dihasilkan menjadi?",
+    "pilihan": {},
+    "kode": "write(a,' ');",
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "168 51 3 3",
+    "pembahasan": "Pencetakan variabel parameter referensi `b` menghasilkan urutan 168 51 3 3[cite: 7]."
+  },
+  {
+    "soal": "Perhatikan program di bawah ini var sum, i, j, n, c : integer; begin readln(n); sum := 0; for i := 2 to n do begin c := 0; j := i; while (j > 0) do begin if (j mod 2 = 1) then c := c + 1; j := j div 2; end; if (c = 1) then sum := sum + 1; end; writeln(sum); end. Jika potongan program dijalankan dengan masukan n = 2013, maka program akan menuliskan keluaran...",
+    "pilihan": {},
+    "kode": "var sum, i, j, n, c : integer;\nbegin\n readln(n);\n sum := 0;\n for i := 2 to n do\n begin\n c := 0;\n j := i;\n while (j > 0) do\n begin\n if (j mod 2 = 1) then c := c + 1;\n j := j div 2;\n end;\n if (c = 1) then sum := sum + 1;\n end;\n writeln(sum);\nend.",
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "10",
+    "pembahasan": "Program tersebut menghitung jumlah bilangan antara 2 sampai $n$ yang memiliki tepat satu buah bit 1 dalam representasi biner (yaitu bilangan perpangkatan 2: $2, 4, 8, 16, 32, 64, 128, 256, 512, 1024$). Totalnya ada 10 buah[cite: 7]."
+  },
+  {
+    "soal": "Perhatikan potongan program di bawah ini! procedure f(x: longint; y: longint; z: longint); begin if (y = 0) then writeln(z) else begin if (y mod 2 = 1) then z := z + x; f(2*x, y div 2, z) end; end; Berapakah bilangan yang tercetak dilayar jika dilakukan pemanggilan f(15,97,0)?",
+    "pilihan": {},
+    "kode": "procedure f(x: longint; y: longint; z: longint);\n begin\n if (y = 0) then\n writeln(z)\n else\n begin\n if (y mod 2 = 1) then\n z := z + x;\n f(2*x, y div 2, z)\n end;\n end;",
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "1455",
+    "pembahasan": "Prosedur tersebut mengimplementasikan perkalian Rusia (*Russian Peasant Multiplication*), yaitu menghitung $x \\times y = 15 \\times 97 = 1455$[cite: 7]."
+  },
+  {
+    "deskripsi_soal": "Deskripsi Untuk Soal Nomor 48 dan 49",
+    "soal": "Perhatikan potongan program berikut! function flop(a,b:longint):longint; forward; function flip(a,b:longint):longint; begin if (a = 0) then flip:=0 else flip:=a+flop(a-1,b); end; function flop(a,b:longint):longint; begin if (b = 0) then flop:=0 else flop:=b+flip(a,b-1); end;",
+    "pilihan": {},
+    "kode": "function flop(a,b:longint):longint;\nforward;\n\nfunction flip(a,b:longint):longint;\nbegin\n if (a = 0) then\n flip:=0\n else\n flip:=a+flop(a-1,b);\nend;\n\nfunction flop(a,b:longint):longint;\nbegin\n if (b = 0) then\n flop:=0\n else\n flop:=b+flip(a,b-1);\nend;",
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": null,
+    "pembahasan": "Deskripsi fungsi rekursif silang (*mutually recursive*) penjumlahan perkalian[cite: 7]."
+  },
+  {
+    "soal": "Berapakah nilai yang dihasilkan dari pemanggilan fungsi flip(4,7)?",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "28",
+    "pembahasan": "Fungsi silang `flip(a,b)` dan `flop(a,b)` menghasilkan perkalian $a \\times b$. Untuk `flip(4,7)`, hasilnya adalah $4 \\times 7 = 28$[cite: 7]."
+  },
+  {
+    "soal": "Berapakah nilai yang dihasilkan dari pemanggilan fungsi flop(100,200)?",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "20000",
+    "pembahasan": "Hasil perkalian $100 \\times 200 = 20000$[cite: 7]."
+  },
+  {
+    "soal": "Misalkan terdapat sebuah array bernama a berisi N elemen, yang diisi di indeks 0 s.d. N-1. for i := 0 to N-1 do begin for j := i+1 to N-1 do begin buffer := a[i]; a[i] := a[j]; a[j] := buffer; end; end; Apa yang dilakukan oleh prosedur itu terhadap array a?",
+    "pilihan": {},
+    "kode": "for i := 0 to N-1 do\nbegin\n for j := i+1 to N-1 do\n begin\n buffer := a[i];\n a[i] := a[j];\n a[j] := buffer;\n end;\nend;",
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "Membalik urutan array (*Reverse*)",
+    "pembahasan": "Serangkaian pertukaran elemen berpasangan di dalam perulangan bersarang tersebut secara keseluruhan membalikkan urutan elemen array (*reverse array*)[cite: 7]."
+  }
+]

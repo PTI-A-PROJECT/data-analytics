@@ -18,6 +18,14 @@ if config.config_file_name is not None:
 
 target_metadata = Base.metadata
 
+# Tabel arsip fase 1 yang sengaja dipertahankan tanpa model (lihat migrasi
+# 0010) — jangan sampai autogenerate mengusulkan menghapusnya.
+TABEL_ARSIP = {"progress_materi_fase1"}
+
+
+def include_object(object, name, type_, reflected, compare_to):  # type: ignore[no-untyped-def]
+    return not (type_ == "table" and name in TABEL_ARSIP)
+
 # sqlalchemy.url di alembic.ini sengaja kosong. Kalau pemanggil sudah
 # menyetelnya secara eksplisit (mis. test migrasi lewat Alembic Python API),
 # pakai itu; kalau tidak (jalur CLI normal), baca dari Settings — sumber
@@ -50,6 +58,7 @@ def run_migrations_offline() -> None:
         literal_binds=True,
         dialect_opts={"paramstyle": "named"},
         render_as_batch=True,
+        include_object=include_object,
     )
 
     with context.begin_transaction():
@@ -74,6 +83,7 @@ def run_migrations_online() -> None:
             connection=connection,
             target_metadata=target_metadata,
             render_as_batch=True,
+            include_object=include_object,
         )
 
         with context.begin_transaction():

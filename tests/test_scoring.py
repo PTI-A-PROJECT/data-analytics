@@ -1,6 +1,7 @@
 import pytest
 
-from data_analytics.scoring import hitung_skor, tentukan_predikat
+from data_analytics.models import TipeSoal
+from data_analytics.scoring import cocokkan_jawaban, hitung_skor, tentukan_predikat
 
 
 class TestHitungSkor:
@@ -70,3 +71,28 @@ class TestTentukanPredikat:
         tanpa_dasar = [("Sangat Baik", 90), ("Baik", 80)]
         with pytest.raises(ValueError, match="batas_bawah=0"):
             tentukan_predikat(50.0, tanpa_dasar)
+
+
+class TestCocokkanJawaban:
+    def test_pilihan_ganda_huruf_tanpa_peduli_kapital(self) -> None:
+        assert cocokkan_jawaban("C", "c", TipeSoal.PILIHAN_GANDA) is True
+        assert cocokkan_jawaban("C", "B", TipeSoal.PILIHAN_GANDA) is False
+
+    def test_tidak_dijawab_selalu_salah(self) -> None:
+        assert cocokkan_jawaban("C", None, TipeSoal.PILIHAN_GANDA) is False
+        assert cocokkan_jawaban("12", None, TipeSoal.ISIAN_SINGKAT) is False
+        assert cocokkan_jawaban("12", "   ", TipeSoal.ISIAN_SINGKAT) is False
+
+    def test_isian_mengabaikan_spasi_tepi_dan_kapital(self) -> None:
+        assert cocokkan_jawaban("BENAR", " benar ", TipeSoal.ISIAN_SINGKAT) is True
+        assert cocokkan_jawaban("Lisa dan Marta", "lisa  dan marta", TipeSoal.ISIAN_SINGKAT) is True
+        assert cocokkan_jawaban("OSSNNN", "OSNSNN", TipeSoal.ISIAN_SINGKAT) is False
+
+    def test_isian_angka_dibandingkan_sebagai_bilangan(self) -> None:
+        assert cocokkan_jawaban("1260", "1260.0", TipeSoal.ISIAN_SINGKAT) is True
+        assert cocokkan_jawaban("0.5", "0,5", TipeSoal.ISIAN_SINGKAT) is True
+        assert cocokkan_jawaban("1260", "1261", TipeSoal.ISIAN_SINGKAT) is False
+
+    def test_isian_daftar_mengabaikan_spasi_sekitar_koma(self) -> None:
+        assert cocokkan_jawaban("26, 17, 11", "26,17,11", TipeSoal.ISIAN_SINGKAT) is True
+        assert cocokkan_jawaban("B, G, C", "b ,g, c", TipeSoal.ISIAN_SINGKAT) is True

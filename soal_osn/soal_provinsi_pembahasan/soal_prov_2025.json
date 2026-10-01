@@ -1,0 +1,242 @@
+[
+  {
+    "deskripsi_soal": "A. String Cantik OSN-P...",
+    "soal": "Soal A1\nManakah dari 5 pilihan string berikut yang merupakan string cantik OSN-P?\nA. \"OSN\"\nB. \"SSNOSOPP\"\nC. \"OSNPOP\"\nD. \"NOWOSP\"\nE. \"OSOPP\"",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "C",
+    "pembahasan": "Mengecek apakah string hanya terdiri dari huruf 'O', 'S', 'N', dan 'P' (masing-masing muncul minimal sekali) serta tidak ada huruf selain 'P' setelah huruf 'P'."
+  },
+  {
+    "deskripsi_soal": "A. String Cantik OSN-P...",
+    "soal": "Soal A2\nBENAR atau SALAH: Diberikan string awal S = \"SOPRANOSATPOLPP\", Pak Dengklek dapat membuat sebuah string cantik OSN-P (tidak harus yang terpanjang) yang terdiri atas tepat 3 huruf 'P'.",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "Benar / Salah",
+    "pembahasan": "Pemeriksaan sekuens karakter pada string awal untuk membentuk string cantik dengan jumlah huruf 'P' tertentu."
+  },
+  {
+    "deskripsi_soal": "A. String Cantik OSN-P...",
+    "soal": "Soal A3\nDiberikan string awal S = \"SOPRANOSATPOLPP\", apa string cantik OSN-P terpanjang yang mungkin dibuat? Jika terdapat lebih dari satu kemungkinan jawaban, pilih yang paling kecil secara leksikografis.",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "String leksikografis terkecil",
+    "pembahasan": "Pencarian subsequence terpanjang yang memenuhi aturan string cantik OSN-P dan diurutkan secara leksikografis."
+  },
+  {
+    "deskripsi_soal": "A. String Cantik OSN-P...",
+    "soal": "Soal Pemrograman A\nTulislah sebuah program dengan bahasa C++ untuk mencari panjang string cantik OSN-P terpanjang.",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "Program / Solusi Algoritma",
+    "pembahasan": "Implementasi pemrograman dinamis (*dynamic programming*) untuk melacak status kemunculan huruf O, S, N, dan transisi ke huruf P."
+  },
+  {
+    "deskripsi_soal": "B. Gudang Penyimpanan Kardus...",
+    "soal": "Soal B1\nApabila kardus-kardus Pak Dengklek memiliki panjang 17 satuan dan lebar 8 satuan, berapakah paling banyak kardus yang bisa Pak Dengklek simpan di dalam gudang dengan panjang sisi 45 satuan dengan estetik?",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": "soal_1.png",
+    "jawaban_benar": "Jumlah kardus maksimal",
+    "pembahasan": "Perhitungan kapasitas tata letak orientasi seragam (*estetik*) dalam gudang persegi."
+  },
+  {
+    "deskripsi_soal": "B. Gudang Penyimpanan Kardus...",
+    "soal": "Soal B2\nBENAR atau SALAH: Apabila Pak Dengklek dapat menyimpan seluruh kardus di dalam gudang dengan panjang sisi S satuan dengan estetik, maka Pak Dengklek pasti dapat menyimpan seluruh kardus di dalam gudang dengan panjang sisi S + 1 satuan dengan estetik pula.",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": "soal_1.png",
+    "jawaban_benar": "Benar / Salah",
+    "pembahasan": "Analisis monotonisitas kapasitas penyimpanan terhadap penambahan ukuran sisi gudang."
+  },
+  {
+    "deskripsi_soal": "B. Gudang Penyimpanan Kardus...",
+    "soal": "Soal B3\nApabila Pak Dengklek memiliki 31 kardus dengan panjang 3 satuan dan lebar 1 satuan, maka berapa panjang sisi gudang terkecil sehingga Pak Dengklek dapat menyimpan seluruh kardus dengan estetik?",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "Panjang sisi gudang terkecil",
+    "pembahasan": "Optimasi dimensi persegi untuk memuat jumlah kardus dengan orientasi tetap."
+  },
+  {
+    "deskripsi_soal": "B. Gudang Penyimpanan Kardus...",
+    "soal": "Soal Pemrograman B\nTulislah sebuah program dengan bahasa C++ untuk menentukan panjang sisi gudang terkecil...",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "Program / Solusi Algoritma",
+    "pembahasan": "Implementasi pencarian biner (*binary search*) pada panjang sisi gudang dengan validasi matematis tata letak."
+  },
+  {
+    "deskripsi_soal": "C. Balada Kemasan Telur...",
+    "soal": "Soal C1\nApabila Pak Dengklek pada awalnya memiliki modal uang sebesar 111.111 rupiah, lalu ia memilih tipe telur 7 untuk dibelanjakan, maka berapakah banyak telur yang akan dijual kembali pada akhirnya?",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": "soal_2.png",
+    "jawaban_benar": "Jumlah total telur",
+    "pembahasan": "Perhitungan jumlah kemasan yang dibeli dikalikan dengan isi kemasan prima $p \\times p$."
+  },
+  {
+    "deskripsi_soal": "C. Balada Kemasan Telur...",
+    "soal": "Soal C2\nDari 5 skenario berikut, manakah banyak telur yang menghasilkan banyak kemungkinan kemasan yang paling banyak?",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": "soal_2.png",
+    "jawaban_benar": "Pilihan skenario",
+    "pembahasan": "Analisis jumlah faktor pembagi positif dari total telur untuk memaksimalkan variasi bentuk kemasan $s \\times t$."
+  },
+  {
+    "deskripsi_soal": "C. Balada Kemasan Telur...",
+    "soal": "Soal C3\nApabila Pak Dengklek pada awalnya memiliki modal uang sebesar 45 rupiah, maka tipe telur apakah yang perlu Pak Dengklek pilih agar ketika ia menjual kembali seluruh telurnya, banyak kemungkinan kemasan yang mungkin adalah sebanyak-banyaknya?",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": "soal_2.png",
+    "jawaban_benar": "Tipe telur optimal",
+    "pembahasan": "Pengecekan faktor prima pembagi modal N yang menghasilkan jumlah faktor total telur terbanyak."
+  },
+  {
+    "deskripsi_soal": "C. Balada Kemasan Telur...",
+    "soal": "Soal Pemrograman C\nTulislah sebuah program dengan bahasa C++ untuk menentukan tipe telur pilihan...",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": "soal_2.png",
+    "jawaban_benar": "Program / Solusi Algoritma",
+    "pembahasan": "Implementasi faktorisasi prima untuk mengevaluasi jumlah kombinasi kemasan bagi setiap pilihan tipe telur."
+  },
+  {
+    "deskripsi_soal": "D. Telur Kemasan Balado...",
+    "soal": "Soal D1\nApabila Pak Dengklek hanya boleh melakukan operasi penyembunyian paling banyak 1 kali, manakah dari 5 pilihan string S berikut yang memungkinkan Raja Bebek memborong telur varian Balado paling banyak?",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": "soal_3.png",
+    "jawaban_benar": "Pilihan string",
+    "pembahasan": "Evaluasi penghapusan rentang karakter 'A' untuk menyisakan jumlah karakter 'B' terbanyak dalam sekali operasi."
+  },
+  {
+    "deskripsi_soal": "D. Telur Kemasan Balado...",
+    "soal": "Soal D2\nApabila penataan telur direpresentasikan dengan string \"BAABBBAAAABBBBAAABBA\", dengan melakukan operasi penyembunyian paling banyak 2 kali, berapakah banyaknya telur varian Balado terbanyak...",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "Jumlah telur Balado maksimal",
+    "pembahasan": "Simulasi pemangkasan segmen karakter non-balado dengan batas maksimal 2 operasi."
+  },
+  {
+    "deskripsi_soal": "D. Telur Kemasan Balado...",
+    "soal": "Soal D3\nApabila penataan telur direpresentasikan dengan string \"BAABBBAAAABBBBAAABBA\", dengan melakukan operasi penyembunyian paling banyak 3 kali, berapakah banyaknya telur varian Balado terbanyak...",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "Jumlah telur Balado maksimal",
+    "pembahasan": "Optimasi penghapusan elemen menggunakan hingga 3 rentang operasi untuk memaksimalkan sisa huruf 'B'."
+  },
+  {
+    "deskripsi_soal": "D. Telur Kemasan Balado...",
+    "soal": "Soal Pemrograman D\nTulislah sebuah program untuk menentukan banyaknya telur varian Balado terbanyak...",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "Program / Solusi Algoritma",
+    "pembahasan": "Implementasi pemrograman dinamis atau algoritma *greedy* bersyarat untuk penggabungan segmen string."
+  },
+  {
+    "deskripsi_soal": "E. Tebas Tebang Bambu...",
+    "soal": "Soal E1\nApabila Pak Dengklek tidak dapat memangkas bambu-bambunya (K = 0) dan setiap ikat minimal 3 bilah, manakah pilihan yang memungkinkan penjualan seluruh bambu dengan ikat terbanyak?",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "Pilihan skenario",
+    "pembahasan": "Pemeriksaan frekuensi kemunculan panjang bambu yang memenuhi syarat minimal M tanpa pemangkasan."
+  },
+  {
+    "deskripsi_soal": "E. Tebas Tebang Bambu...",
+    "soal": "Soal E2\nBENAR atau SALAH: Pada kasus yang memungkinkan Pak Dengklek menjual seluruh bambu, maka untuk memaksimumkan ikat bambu, setiap ikat pasti terdiri dari kurang dari 2 × M bilah bambu.",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "Benar / Salah",
+    "pembahasan": "Analisis properti partisi jumlah elemen kelompok bambu dengan panjang seragam."
+  },
+  {
+    "deskripsi_soal": "E. Tebas Tebang Bambu...",
+    "soal": "Soal E3\nPak Dengklek akan menjual 18 bilah bambu dengan panjang tertentu... pemangkasan paling banyak 2 satuan, minimal 3 bilah per ikat... berapakah ikat maksimum?",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "Jumlah ikat maksimum",
+    "pembahasan": "Simulasi pemangkasan rentang nilai panjang bambu dengan batas toleransi K."
+  },
+  {
+    "deskripsi_soal": "E. Tebas Tebang Bambu...",
+    "soal": "Soal Pemrograman E\nTulislah program untuk menghitung banyaknya ikat bambu maksimum...",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "Program / Solusi Algoritma",
+    "pembahasan": "Implementasi pemrograman dinamis (*DP*) dengan transisi rentang panjang bambu yang valid setelah dipangkas."
+  },
+  {
+    "deskripsi_soal": "F. Kandang Ayam Kandang Bebek...",
+    "soal": "Soal F1\nAsumsikan pekarangan Pak Dengklek berukuran 2 baris dan 5 kolom. Manakah dari 5 kondisi hewan berikut yang pasti terjadi perselisihan ketika seluruh hewan pulang ke kandang?",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": "soal_4.png, soal_5.png",
+    "jawaban_benar": "Pilihan kondisi",
+    "pembahasan": "Analisis persilangan jalur gerak rute pulang hewan tanpa bersinggungan pada grid 2x5."
+  },
+  {
+    "deskripsi_soal": "F. Kandang Ayam Kandang Bebek...",
+    "soal": "Soal F2\nAsumsikan pekarangan 2 baris dan 1000 kolom dengan 1 ayam di (2, 500). Berapa banyak posisi awal bebek yang mungkin tidak mengakibatkan perselisihan?",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": "soal_4.png, soal_5.png",
+    "jawaban_benar": "Jumlah posisi awal bebek",
+    "pembahasan": "Pemeriksaan batasan geometris rute agar jalur pulang ayam dan bebek tidak saling memotong."
+  },
+  {
+    "deskripsi_soal": "F. Kandang Ayam Kandang Bebek...",
+    "soal": "Soal F3\nAsumsikan pekarangan 2 baris dan 6 kolom dengan matriks kebecekan tertentu... ayam di (1, 1) dan 4 bebek di kolom 5-6... berapakah total nilai kerisihan paling kecil?",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": "soal_6.png",
+    "jawaban_benar": "Total nilai kerisihan",
+    "pembahasan": "Perhitungan bobot minimum jalur perpindahan hewan pada matriks kebecekan tanpa konflik."
+  },
+  {
+    "deskripsi_soal": "F. Kandang Ayam Kandang Bebek...",
+    "soal": "Soal Pemrograman F\nTulislah program untuk menghitung total nilai kerisihan paling kecil tanpa perselisihan...",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "Program / Solusi Algoritma",
+    "pembahasan": "Implementasi algoritma graf atau pemrograman dinamis tingkat lanjut untuk rute non-intersek pada grid 2 x N."
+  }
+]

@@ -1,5 +1,5 @@
 ---
-Status: accepted
+Status: superseded by 0004
 ---
 
 # Data & analytics does not own a Materi catalog — callers supply Materi metadata per event

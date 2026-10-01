@@ -1,4 +1,4 @@
-.PHONY: up dev-up down migrate test anonymize anonymize-dry-run backup-db
+.PHONY: up dev-up down migrate test test-db-up test-db-down anonymize anonymize-dry-run backup-db
 
 # Deployment pilot (co-located, port tidak diekspos ke host) — butuh
 # `docker network create app-network` sekali saja, dibuat oleh stack aplikasi
@@ -18,6 +18,15 @@ migrate:
 
 test:
 	uv run pytest
+
+# Postgres + pgvector untuk test suite (tests/conftest.py, TEST_DATABASE_URL).
+test-db-up:
+	docker run -d --name analytics-test-db -p 5433:5432 \
+		-e POSTGRES_USER=analytics -e POSTGRES_PASSWORD=analytics \
+		-e POSTGRES_DB=analytics_test pgvector/pgvector:pg16
+
+test-db-down:
+	docker rm -f analytics-test-db
 
 # Cron bulanan UU PDP (lihat .scratch/osn-data-analytics/issues/12-...) —
 # contoh crontab ada di bawah.

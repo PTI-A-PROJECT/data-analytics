@@ -1,0 +1,242 @@
+[
+  {
+    "deskripsi_soal": "A. String Cantik OSN...",
+    "soal": "Soal A1\nManakah dari 5 pilihan string berikut yang bukan merupakan string cantik OSN?\nA. \"NSO\"\nB. \"SNOS\"\nC. \"SONSO\"\nD. \"ONSONS\"\nE. \"NOSNOSO\"",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "B",
+    "pembahasan": "Mengecek apakah setiap 3 huruf berurutan terdiri dari tepat satu 'O', satu 'S', dan satu 'N'."
+  },
+  {
+    "deskripsi_soal": "A. String Cantik OSN...",
+    "soal": "Soal A2\nAda berapa banyak string berbeda dengan panjang 100 huruf yang juga merupakan string cantik OSN?",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "Jumlah string",
+    "pembahasan": "Analisis kombinasi karakter string cantik OSN sepanjang 100 huruf."
+  },
+  {
+    "deskripsi_soal": "A. String Cantik OSN...",
+    "soal": "Soal A3\nBENAR atau SALAH: Diberikan string awal berupa \"CONTOHSTRINGUNTUKSOALBENARATAUSALAH\", Pak Dengklek dapat membuatkan Anda string cantik OSN berupa \"OSNOSN\" dari string awal tersebut.",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "Benar / Salah",
+    "pembahasan": "Pengecekan keberadaan urutan huruf O-S-N secara parsial dari string awal."
+  },
+  {
+    "deskripsi_soal": "A. String Cantik OSN...",
+    "soal": "Soal Pemrograman A\nTulislah sebuah program dengan bahasa C/C++ sesuai deskripsi... mencari panjang string cantik OSN terpanjang.",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "Program / Solusi Algoritma",
+    "pembahasan": "Implementasi pemrograman dinamis atau pencocokan pola karakter O, S, dan N."
+  },
+  {
+    "deskripsi_soal": "B. Berbagi Banyak Candil...",
+    "soal": "Soal B1\nAsumsikan Pak Dengklek membeli 100 butir candil dan banyaknya candil yang akhirnya dimakan oleh Pak Dengklek adalah 10. Dari 5 skenario berikut, manakah yang sebenarnya tidak mungkin?",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "Pilihan skenario",
+    "pembahasan": "Pemeriksaan sisa pembagian (modulo) jumlah candil terhadap jumlah bebek."
+  },
+  {
+    "deskripsi_soal": "B. Berbagi Banyak Candil...",
+    "soal": "Soal B2\nAsumsikan Pak Dengklek memiliki paling banyak 100 ekor bebek... membeli 20 butir candil dan sisa 2...",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "Jumlah kemungkinan",
+    "pembahasan": "Mencari faktor dari selisih total candil dan sisa candil yang dimakan."
+  },
+  {
+    "deskripsi_soal": "B. Berbagi Banyak Candil...",
+    "soal": "Soal B3\nBENAR atau SALAH: Banyaknya kemungkinan banyaknya bebek berbeda milik Pak Dengklek yang mungkin pasti dijamin kurang dari atau sama dengan banyaknya butir candil yang Pak Dengklek beli.",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "Benar / Salah",
+    "pembahasan": "Evaluasi batas matematis jumlah faktor pembagi."
+  },
+  {
+    "deskripsi_soal": "B. Berbagi Banyak Candil...",
+    "soal": "Soal Pemrograman B\nTulislah sebuah program dengan bahasa C/C++ untuk menghitung banyaknya kemungkinan bebek berbeda...",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "Program / Solusi Algoritma",
+    "pembahasan": "Implementasi pencarian faktor dan rentang batasan jumlah bebek B."
+  },
+  {
+    "deskripsi_soal": "C. Tebas Tebang Pohon...",
+    "soal": "Soal C1\nAsumsikan terdapat 20 pohon dengan ketinggian sebesar 1, 2, 3, dan seterusnya hingga 20. Apabila Pak Dengklek menebang dengan batas ketinggian maksimum sebesar 7, berapa jumlah panjang potongan pohon...",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": "soal_1.png",
+    "jawaban_benar": "Jumlah panjang potongan",
+    "pembahasan": "Penjumlahan selisih ketinggian pohon yang melebihi batas 7."
+  },
+  {
+    "deskripsi_soal": "C. Tebas Tebang Pohon...",
+    "soal": "Soal C2\nBENAR atau SALAH: Untuk setiap kemungkinan pohon-pohon... apabila Pak Dengklek dapat membangun sebuah kandang jika ia menebang dengan batas ketinggian Z, maka Z - 1 juga pasti dapat.",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": "soal_1.png",
+    "jawaban_benar": "Benar / Salah",
+    "pembahasan": "Analisis monotonisitas jumlah kayu hasil penebangan terhadap penurunan batas ketinggian."
+  },
+  {
+    "deskripsi_soal": "C. Tebas Tebang Pohon...",
+    "soal": "Soal C3\nAsumsikan terdapat 10 pohon dengan ketinggian 10, 20, 30, hingga 100... minimal potongan 111, berapakah batas ketinggian maksimum tertinggi...",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": "soal_1.png",
+    "jawaban_benar": "Batas ketinggian",
+    "pembahasan": "Pencarian nilai X optimal menggunakan pencarian biner (*binary search*)."
+  },
+  {
+    "deskripsi_soal": "C. Tebas Tebang Pohon...",
+    "soal": "Soal Pemrograman C\nTulislah sebuah program dengan bahasa C/C++ untuk menentukan batas ketinggian maksimum...",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": "soal_1.png",
+    "jawaban_benar": "Program / Solusi Algoritma",
+    "pembahasan": "Implementasi *binary search on answer* untuk mencari batas ketinggian maksimum."
+  },
+  {
+    "deskripsi_soal": "D. Kalkulator Pengubah Basis...",
+    "soal": "Soal D1\nApabila Pak Dengklek memerintahkan kalkulatornya untuk mengubah nilai 15.015 ke dalam basis 13, maka string apa yang akan ditampilkan...",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "String basis",
+    "pembahasan": "Konversi bilangan basis 10 ke basis 13 dengan aturan penggantian digit di atas 9."
+  },
+  {
+    "deskripsi_soal": "D. Kalkulator Pengubah Basis...",
+    "soal": "Soal D2\nAsumsikan Pak Dengklek mengubah suatu bilangan ke basis 14 dan kalkulator menampilkan \"123010\". Manakah yang tidak mungkin?",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "Pilihan skenario",
+    "pembahasan": "Evaluasi nilai desimal yang menghasilkan string representasi pada kalkulator basis khusus."
+  },
+  {
+    "deskripsi_soal": "D. Kalkulator Pengubah Basis...",
+    "soal": "Soal D3\nBerapa banyak bilangan berbeda yang jika diubah ke dalam basis 16 maka kalkulator akan menampilkan hasil berupa string \"71112016\"?",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "Jumlah bilangan",
+    "pembahasan": "Analisis ambiguitas pemecahan string digit ganda pada kalkulator."
+  },
+  {
+    "deskripsi_soal": "D. Kalkulator Pengubah Basis...",
+    "soal": "Soal Pemrograman D\nTulislah sebuah program untuk menghitung banyaknya X berbeda...",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "Program / Solusi Algoritma",
+    "pembahasan": "Implementasi pemrograman dinamis untuk menghitung cara valid pemecahan string digit modulo 1.000.000.007."
+  },
+  {
+    "deskripsi_soal": "E. Gosip Gulali...",
+    "soal": "Soal E1\nAsumsikan bahwa bebek-bebek Pak Dengklek tidak saling bergosip... 5 ekor bebek dengan tingkat kemanisan favorit 10, 20, 30, 40, 50... Berapa total rasa ketidakpuasan terkecil?",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "Total ketidakpuasan",
+    "pembahasan": "Pencarian nilai gulali terdekat untuk setiap bebek tanpa kendala gosip."
+  },
+  {
+    "deskripsi_soal": "E. Gosip Gulali...",
+    "soal": "Soal E2\nAsumsikan ada 4 ekor bebek... hubungan gosip antar pasangan... berapa total rasa ketidakpuasan terkecil?",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "Total ketidakpuasan",
+    "pembahasan": "Pengelompokan bebek yang terhubung dalam komponen gosip untuk mendapatkan jenis gulali yang sama."
+  },
+  {
+    "deskripsi_soal": "E. Gosip Gulali...",
+    "soal": "Soal E3\nBENAR atau SALAH: Apabila terdapat 3 ekor bebek yang harus mendapatkan gulali jenis sama, maka pasti optimal memberi mereka nilai median (atau terdekat rata-rata)...",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "Benar / Salah",
+    "pembahasan": "Analisis properti matematika minimisasi selisih mutlak (*absolute deviation*)."
+  },
+  {
+    "deskripsi_soal": "E. Gosip Gulali...",
+    "soal": "Soal Pemrograman E\nTulislah program untuk menghitung total rasa ketidakpuasan terkecil dengan hubungan gosip...",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "Program / Solusi Algoritma",
+    "pembahasan": "Implementasi struktur data Union-Find dan pemrograman dinamis / optimasi konveks."
+  },
+  {
+    "deskripsi_soal": "F. Maju Tak Papan...",
+    "soal": "Soal F1\nAsumsikan papan Pak Dengklek berukuran 3 baris dan 4 kolom dengan konfigurasi angka tertentu... Berapa jumlah angka pada petak yang dikunjungi robot?",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "Jumlah angka",
+    "pembahasan": "Simulasi pergerakan robot bebek berdasarkan perbandingan nilai petak kanan dan bawah."
+  },
+  {
+    "deskripsi_soal": "F. Maju Tak Papan...",
+    "soal": "Soal F2\nApabila papan Pak Dengklek berukuran 5 baris dan 2 kolom, berapa jumlah terkecil yang mungkin secara optimal?",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "Jumlah terkecil",
+    "pembahasan": "Penyusunan pola matriks angka untuk meminimalkan jalur kunjungan robot pada grid 5x2."
+  },
+  {
+    "deskripsi_soal": "F. Maju Tak Papan...",
+    "soal": "Soal F3\nApabila papan Pak Dengklek berukuran 3 baris dan 3 kolom, berapa jumlah terkecil yang mungkin secara optimal?",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "Jumlah terkecil",
+    "pembahasan": "Strategi pengisian grid 3x3 untuk membatasi jumlah akumulasi angka yang dikunjungi robot."
+  },
+  {
+    "deskripsi_soal": "F. Maju Tak Papan...",
+    "soal": "Soal Pemrograman F\nTulislah program untuk menentukan jumlah terkecil pada papan N x M secara optimal...",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "Program / Solusi Algoritma",
+    "pembahasan": "Analisis pola konstruktif pengisian matriks untuk meminimalkan jumlah nilai pada jalur robot bebek."
+  }
+]

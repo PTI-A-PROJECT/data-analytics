@@ -1,5 +1,5 @@
 ---
-Status: accepted
+Status: accepted — extended by 0004 (seed tables replaced by the production content bank)
 ---
 
 # This service owns a local Kompetensi/Subkompetensi/Soal/TingkatSeleksi/AturanPemetaan schema, seeded for dev/test bootstrap

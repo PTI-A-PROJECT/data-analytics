@@ -23,7 +23,6 @@ from data_analytics.schemas import (
     DashboardFilter,
     DashboardKPI,
     DashboardResponse,
-    DistribusiPredikatItem,
     DistribusiTingkatItem,
     KomparasiSekolahItem,
     TrenAktivitasItem,
@@ -53,7 +52,6 @@ def hitung_metrik_dashboard(
     kpi = _hitung_kpi(session, hasil_tes_records)
     distribusi_tingkat = _hitung_distribusi_tingkat(session, sekolah_id)
     tren_aktivitas = _hitung_tren_aktivitas(hasil_tes_records)
-    distribusi_predikat = _hitung_distribusi_predikat(hasil_tes_records)
     komparasi_sekolah = _hitung_komparasi_sekolah(session)
 
     return DashboardResponse(
@@ -62,7 +60,6 @@ def hitung_metrik_dashboard(
         kpi=kpi,
         distribusi_tingkat=distribusi_tingkat,
         tren_aktivitas=tren_aktivitas,
-        distribusi_predikat=distribusi_predikat,
         komparasi_sekolah=komparasi_sekolah,
     )
 
@@ -157,26 +154,6 @@ def _hitung_tren_aktivitas(hasil_tes_records: list[HasilTes]) -> list[TrenAktivi
     return [
         TrenAktivitasItem(tanggal=tanggal, pre_test=v["pre_test"], simulasi=v["simulasi"])
         for tanggal, v in sorted(per_tanggal.items())
-    ]
-
-
-def _hitung_distribusi_predikat(
-    hasil_tes_records: list[HasilTes],
-) -> list[DistribusiPredikatItem]:
-    simulasi_records = [ht for ht in hasil_tes_records if ht.jenis_tes is JenisTes.SIMULASI]
-    total_simulasi = len(simulasi_records)
-
-    jumlah_per_label: dict[str, int] = defaultdict(int)
-    for ht in simulasi_records:
-        jumlah_per_label[ht.predikat_label] += 1
-
-    return [
-        DistribusiPredikatItem(
-            label=label,
-            jumlah=jumlah,
-            persentase=round((jumlah / total_simulasi) * 100, 2) if total_simulasi > 0 else 0.0,
-        )
-        for label, jumlah in sorted(jumlah_per_label.items())
     ]
 
 

@@ -4,6 +4,10 @@ Revision ID: 0004
 Revises: 0003
 Create Date: 2026-09-22 23:06:32.000824
 
+Diedit setelah dibuat (fase 2 issue 01): revisi ini sebelumnya hanya pernah
+jalan di SQLite dan GAGAL di Postgres (urutan DROP FK/ALTER TYPE, default
+boolean). Karena tidak ada database Postgres yang pernah berhasil melewati
+revisi ini, perbaikannya aman diterapkan di tempat.
 """
 from typing import Sequence, Union
 
@@ -43,7 +47,7 @@ def upgrade() -> None:
     sa.Column('tingkat_tujuan_id', sa.Integer(), nullable=False),
     sa.Column('skor_simulasi_min', sa.Numeric(precision=5, scale=2, asdecimal=False), nullable=False),
     sa.Column('persentase_kompetensi_cukup_min', sa.Numeric(precision=5, scale=2, asdecimal=False), nullable=False),
-    sa.Column('aktif', sa.Boolean(), server_default=sa.text('1'), nullable=False),
+    sa.Column('aktif', sa.Boolean(), server_default=sa.true(), nullable=False),
     sa.CheckConstraint('persentase_kompetensi_cukup_min >= 0 AND persentase_kompetensi_cukup_min <= 100', name=op.f('ck_aturan_kenaikan_tingkat_ck_aturan_kenaikan_persentase_rentang')),
     sa.CheckConstraint('skor_simulasi_min >= 0 AND skor_simulasi_min <= 100', name=op.f('ck_aturan_kenaikan_tingkat_ck_aturan_kenaikan_skor_rentang')),
     sa.ForeignKeyConstraint(['tingkat_asal_id'], ['tingkat_seleksi.id'], name=op.f('fk_aturan_kenaikan_tingkat_tingkat_asal_id_tingkat_seleksi'), ondelete='CASCADE'),

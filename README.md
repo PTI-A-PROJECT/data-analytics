@@ -8,18 +8,69 @@ keputusan) sebelum mengerjakan tiket apa pun.
 
 ```bash
 uv sync
-cp .env.example .env   # sesuaikan DATABASE_URL kalau tidak pakai SQLite dev
+cp .env.example .env   # DATABASE_URL harus PostgreSQL + pgvector (SQLite tidak didukung)
 ```
 
-## Menjalankan migrasi & seed data uji
+## Menjalankan migrasi
 
 ```bash
 uv run alembic upgrade head
-uv run python -m data_analytics.scripts.seed
 ```
 
-`seed` idempotent — aman dijalankan berulang, tidak menduplikasi data kalau
-`tingkat_seleksi` sudah pernah terisi.
+Migrasi `0005` memasang extension `vector` dan mengisi tingkat seleksi
+Kabupaten & Provinsi. Tidak ada lagi seed data uji: bank soal & materi diisi
+lewat ingest offline (lihat di bawah).
+
+## Bank konten (fase 2)
+
+Soal & materi disimpan di katalog lokal dengan embedding pgvector — lihat
+`docs/adr/0004-layanan-memiliki-bank-konten.md` dan
+`.scratch/osn-fase-2/issues/01-bank-konten-soal-materi.md`. Inti ingest ada di
+`data_analytics.ingest.ingest_bank_konten`. Sumber data ada di `soal_osn/`:
+JSON soal per tahun (Kabupaten & Provinsi 2006–2026), gambar, `materi.json`
+(kelompok Materi mengikuti silabus osn.toki.id), dan `label_materi_level.json`
+(Materi & Level per soal, dilabeli manual — data sumber tidak membawanya).
+Embedder (`embedding.EmbedderMiniLM`,
+`paraphrase-multilingual-MiniLM-L12-v2` int8 lewat ONNX Runtime, tanpa PyTorch,
+~555 MB RAM puncak, ~35 detik / 1.800 soal) hanya dipakai saat ingest dan butuh
+dependency group `ingest`:
+
+```bash
+uv sync --group ingest
+```
+
+Ingest (idempoten; embedding hanya dihitung untuk soal baru/berubah):
+
+```bash
+uv run python -m data_analytics.scripts.ingest            # --recompute untuk hitung ulang semua
+```
+
+Soal tanpa kunci, soal pemrograman, jawaban isian yang tidak bisa dinilai
+otomatis, dan entri di `dikecualikan` dilewati; ringkasannya dicetak. Gambar soal
+disajikan `GET /api/v1/konten/gambar/{tingkat}/{file}` dari folder yang sama
+(`FOLDER_SOAL`, default `soal_osn`). Perbandingan model & kualitas: `uv run --group ingest python -m
+data_analytics.scripts.benchmark_embedding`.
+
+### Dokumen Materi
+
+Halaman Materi diambil dari `Materi/<Kabupaten|Provinsi>/Topik N_*.docx`
+(`FOLDER_MATERI`, default `Materi`; parser `data_analytics.materi_docx`) oleh
+ingest yang sama. Nomor topik di nama file dicocokkan ke field `topik` di
+`soal_osn/materi.json`; setiap judul bagian tebal ("1. ...", "Studi Kasus ...",
+"Bagian A: ...") membuka satu halaman. Konten disimpan sebagai Markdown dengan
+rumus LaTeX (`$...$`, `$$...$$`) dan blok kode — render di frontend dengan
+Markdown + KaTeX. Menambah/mengganti dokumen: taruh file-nya, sesuaikan
+`materi.json` kalau topiknya baru, lalu jalankan ingest ulang.
+
+Endpoint (header `X-Internal-Token`):
+
+- `GET /api/v1/materi?tingkat_seleksi_id=&siswa_id=` — daftar Materi urut
+  tingkat & topik; dengan `siswa_id` ikut `halaman_dibaca`/`persentase_dibaca`.
+- `GET /api/v1/materi/{materi_id}?siswa_id=` — detail + daftar isi (nomor &
+  judul halaman, `sudah_dibaca` kalau `siswa_id` dikirim).
+- `GET /api/v1/materi/{materi_id}/halaman/{nomor}` — konten satu halaman +
+  `nomor_sebelumnya`/`nomor_berikutnya`. Hanya membaca; catat progres lewat
+  `POST /api/v1/analytics/events/materi-progress`.
 
 ## Menjalankan server dev
 
@@ -32,7 +83,11 @@ database).
 
 ## Test & typecheck
 
+Test berjalan di PostgreSQL + pgvector sungguhan (container Docker, port
+5433 — override lewat env `TEST_DATABASE_URL`):
+
 ```bash
+make test-db-up        # sekali saja; `make test-db-down` untuk membuang
 uv run pytest
 uv run mypy src tests
 ```

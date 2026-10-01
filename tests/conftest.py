@@ -1,28 +1,47 @@
 from collections.abc import Callable, Iterator
 from datetime import datetime
+import os
 
 import pytest
-from sqlalchemy import create_engine
+from sqlalchemy import Engine, create_engine, text
 from sqlalchemy.orm import Session
-from sqlalchemy.pool import StaticPool
 
 from data_analytics.models import Base, HasilTes, JenisTes
 
+# Test memakai PostgreSQL + pgvector sungguhan (fase 2, issue 01) — bukan SQLite
+# lagi, karena kolom vector(384) dan operator <=> hanya ada di Postgres.
+# Jalankan `make test-db-up` sekali untuk menyalakan container-nya.
+TEST_DATABASE_URL = os.environ.get(
+    "TEST_DATABASE_URL",
+    "postgresql+psycopg://analytics:analytics@localhost:5433/analytics_test",
+)
+
+
+@pytest.fixture(scope="session")
+def engine() -> Iterator[Engine]:
+    engine = create_engine(TEST_DATABASE_URL)
+    with engine.begin() as conn:
+        conn.execute(text("CREATE EXTENSION IF NOT EXISTS vector"))
+    Base.metadata.drop_all(engine)
+    Base.metadata.create_all(engine)
+    yield engine
+    engine.dispose()
+
 
 @pytest.fixture
-def session() -> Iterator[Session]:
-    # StaticPool + check_same_thread=False: satu koneksi in-memory yang sama
-    # dipakai di semua thread, supaya fixture ini juga bisa dipakai lewat
-    # FastAPI TestClient (jalan di thread terpisah via anyio portal).
-    engine = create_engine(
-        "sqlite:///:memory:",
-        connect_args={"check_same_thread": False},
-        poolclass=StaticPool,
-    )
-    Base.metadata.create_all(engine)
-    with Session(engine) as db_session:
-        yield db_session
-    engine.dispose()
+def session(engine: Engine) -> Iterator[Session]:
+    # Satu transaksi luar per test yang selalu di-rollback; commit() di kode
+    # yang dites hanya melepas SAVEPOINT (join_transaction_mode) sehingga
+    # setiap test mulai dari database kosong. Koneksi yang sama dipakai
+    # FastAPI TestClient lewat override get_db.
+    with engine.connect() as connection:
+        transaksi = connection.begin()
+        db_session = Session(bind=connection, join_transaction_mode="create_savepoint")
+        try:
+            yield db_session
+        finally:
+            db_session.close()
+            transaksi.rollback()
 
 
 @pytest.fixture

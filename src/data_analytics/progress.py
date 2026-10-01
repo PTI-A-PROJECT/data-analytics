@@ -1,31 +1,14 @@
-"""Formula progress murni — lihat resolusi tiket 02 (Definisi & Formula Progress
-Belajar) di .scratch/osn-data-analytics/issues/02-definisi-progress-belajar.md.
+"""Formula progress baca Materi murni. Sejak fase 2 issue 04 progres dihitung
+dari jumlah halaman UNIK yang pernah dibuka (navigasi bebas), bukan high-water
+mark halaman tertinggi.
 """
 
 
-def validasi_halaman(*, halaman: int, total_halaman: int, nama_field: str) -> None:
-    """Guard bersama: halaman (baik halaman_dicapai yang masuk maupun
-    halaman_tertinggi_dicapai yang tersimpan) harus di antara 1 dan
-    total_halaman inklusif.
-    """
+def persentase_selesai(*, halaman_dibuka: int, total_halaman: int) -> float:
+    """Persentase halaman unik yang pernah dibuka dari total_halaman,
+    dibulatkan dua desimal."""
     if total_halaman <= 0:
         raise ValueError("total_halaman harus lebih dari 0")
-    if halaman < 1:
-        raise ValueError(f"{nama_field} harus minimal 1")
-    if halaman > total_halaman:
-        raise ValueError(f"{nama_field} tidak boleh melebihi total_halaman")
-
-
-def persentase_selesai(*, halaman_tertinggi_dicapai: int, total_halaman: int) -> float:
-    """Persentase halaman_tertinggi_dicapai/total_halaman, dibulatkan dua desimal.
-
-    Materi yang belum pernah dibuka tidak punya baris progress_materi sama
-    sekali (lihat repository.catat_progress_halaman) — fungsi ini hanya dipanggil
-    untuk Materi yang sudah punya baris, jadi halaman_tertinggi_dicapai minimal 1.
-    """
-    validasi_halaman(
-        halaman=halaman_tertinggi_dicapai,
-        total_halaman=total_halaman,
-        nama_field="halaman_tertinggi_dicapai",
-    )
-    return round((halaman_tertinggi_dicapai / total_halaman) * 100, 2)
+    if not 0 <= halaman_dibuka <= total_halaman:
+        raise ValueError("halaman_dibuka harus di antara 0 dan total_halaman")
+    return round(halaman_dibuka / total_halaman * 100, 2)

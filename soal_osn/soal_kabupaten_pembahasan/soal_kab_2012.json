@@ -1,0 +1,871 @@
+[
+  {
+    "soal": "Bilangan prima adalah bilangan bulat yang hanya habis dibagi dengan 1 dan bilangan itu sendiri. Ada berapa banyak bilangan prima pada rentang 1..100?",
+    "pilihan": {
+      "a": "25",
+      "b": "24",
+      "c": "23",
+      "d": "22",
+      "e": "21"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "a",
+    "pembahasan": "Jumlah bilangan prima dari 1 sampai 100 ada sebanyak 25 bilangan (yaitu 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97)[cite: 15]."
+  },
+  {
+    "soal": "Jika N! adalah 1x2x3x...xN, berapakah angka terakhir bukan 0 dari 20!",
+    "pilihan": {
+      "a": "1",
+      "b": "2",
+      "c": "4",
+      "d": "6",
+      "e": "8"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "d",
+    "pembahasan": "Untuk mencari digit terakhir bukan nol dari 20!, kita dapat memfaktorkan kelipatan 5 dan mengelompokkannya dengan faktor 2. Sisa perkalian modulo 10 dari angka-angka yang tersisa memberikan digit bukan nol terakhir yaitu 6[cite: 15]."
+  },
+  {
+    "soal": "Karto memiliki x eskrim dan setiap eskrim ada batangnya. Karto menyimpan setiap batang eskrim yang telah dimakannya. Jika Karna sudah mengumpulkan y buah batang eskrim, maka dia bisa menukarkannya dengan satu buah eskrim. Untuk x = 100 dan y = 5 maka berapakah total eskrim yang dimiliki Karto?",
+    "pilihan": {
+      "a": "100",
+      "b": "114",
+      "c": "120",
+      "d": "124",
+      "e": "125"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "d",
+    "pembahasan": "Makan 100 es krim $\\rightarrow$ sisa 100 batang. Tukar 100/5 = 20 es krim $\\rightarrow$ sisa 20 batang. Tukar 20/5 = 4 es krim $\\rightarrow$ sisa 4 batang. Total es krim = $100 + 20 + 4 = 124$[cite: 15]."
+  },
+  {
+    "deskripsi_soal": "Deskripsi Untuk Soal Nomor 4 dan 6",
+    "soal": "Ada 4 orang yang diinterview mengenai penghasilannya. Sebut saja namanya A,B,C,D dan profesi mereka E,F,G,H...",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "Informasi Deskripsi",
+    "pembahasan": "Informasi prasyarat wawancara profesi dan penghasilan[cite: 15]."
+  },
+  {
+    "soal": "Siapakah yang perkerjaannya adalah E?",
+    "pilihan": {
+      "a": "A",
+      "b": "B",
+      "c": "C",
+      "d": "D",
+      "e": "C atau D"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "c",
+    "pembahasan": "Berdasarkan analisis kebenaran pernyataan tiap profesi, orang yang bekerja sebagai E adalah C[cite: 15]."
+  },
+  {
+    "soal": "Apakah pekerjaan dari D?",
+    "pilihan": {
+      "a": "E",
+      "b": "F",
+      "c": "G",
+      "d": "H",
+      "e": "G atau H"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "d",
+    "pembahasan": "Melalui pencocokan pernyataan yang konsisten dengan kondisi penghasilan, pekerjaan D adalah H[cite: 15]."
+  },
+  {
+    "soal": "Manakah pernyataan berikut yang benar?",
+    "pilihan": {
+      "a": "Jika A adalah seorang H, maka C adalah seorang F",
+      "b": "Jika B adalah seorang F, maka C adalah seorang H",
+      "c": "Jika C adalah seorang G, maka B adalah seorang H",
+      "d": "Jika D adalah seorang E, maka C adalah seorang G",
+      "e": "Jika A adalah seorang H, maka D adalah seorang E"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "b",
+    "pembahasan": "Menguji implikasi logis dari kondisi profesi yang mungkin menunjukkan bahwa jika B adalah F, maka C adalah H[cite: 15]."
+  },
+  {
+    "soal": "0, 1, 2, 1, 2, 3, 3, 4, 5, 7, ..., ..., ...",
+    "pilihan": {
+      "a": "8, 9, 15",
+      "b": "9, 10, 20",
+      "c": "7, 9, 13",
+      "d": "7, 8, 14",
+      "e": "7, 9, 22"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "c",
+    "pembahasan": "Pola deret bilangan mengikuti aturan penambahan atau kombinasi rekursif, menghasilkan lanjutan suku berikutnya: 7, 9, 13[cite: 15]."
+  },
+  {
+    "soal": "Berapa jumlah kemungkinan kata (kombinasi huruf) yang bisa dibentuk dari huruf-huruf ini : 'l', 'a', 'b', 'a'?",
+    "pilihan": {
+      "a": "24",
+      "b": "22",
+      "c": "12",
+      "d": "14",
+      "e": "20"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "c",
+    "pembahasan": "Permutasi dengan unsur ganda dari kata 'laba' (huruf a ada 2, total 4 huruf):\n$P = \\frac{4!}{2!} = \\frac{24}{2} = 12$ kemungkinan[cite: 15]."
+  },
+  {
+    "soal": "x = 0.147; y = sqrt(0.147); z = 0.147^2 ; maka",
+    "pilihan": {
+      "a": "y > x > z",
+      "b": "x > y > z",
+      "c": "x > z > y",
+      "d": "y > z > x",
+      "e": "z > x > y"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "a",
+    "pembahasan": "Untuk bilangan $0 < k < 1$ (seperti $0.147$):\n- $y = \\sqrt{0.147} \\approx 0.383$ (lebih besar dari $x$)\n- $x = 0.147$\n- $z = 0.147^2 \\approx 0.0216$ (terkecil)\nSehingga urutannya: $y > x > z$[cite: 15]."
+  },
+  {
+    "soal": "Suatu negara hanya memiliki pecahan uang 11, 12, dan 13. Berapakah nominal yang tidak bisa dinyatakan dengan pecahan-pecahan tersebut?",
+    "pilihan": {
+      "a": "37",
+      "b": "46",
+      "c": "53",
+      "d": "69",
+      "e": "74"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "a",
+    "pembahasan": "Dengan menggunakan kombinasi koin pecahan 11, 12, dan 13, nilai terbesar yang tidak dapat dibentuk (Frobenius coin problem) diuji dan didapatkan 37[cite: 15]."
+  },
+  {
+    "soal": "Diketahui FPB(a,b)=c. Jika a>b dan b=210, berapakah nilai a dan c yang mungkin sehingga c merupakan nilai terbesar dari pilihan di bawah ini?",
+    "pilihan": {
+      "a": "426 dan 6",
+      "b": "216 dan 6",
+      "c": "637 dan 7",
+      "d": "294 dan 7",
+      "e": "637 dan 14"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "e",
+    "pembahasan": "Uji nilai $b = 210$ dan periksa pembagi persekutuan terbesar (FPB) $c$ yang menghasilkan nilai terbesar di antara opsi, yaitu 14 dengan $a = 637$[cite: 15]."
+  },
+  {
+    "deskripsi_soal": "Deskripsi Untuk Soal Nomor 12 dan 14",
+    "soal": "Pada suatu balap mobil diketahui ada 5 pembalap yang ikut serta...",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "Informasi Deskripsi",
+    "pembahasan": "Pengaturan posisi finish 5 pembalap[cite: 15]."
+  },
+  {
+    "soal": "Tidak ada yang finish bersamaan",
+    "pilihan": {
+      "a": "720",
+      "b": "120",
+      "c": "60",
+      "d": "30",
+      "e": "5"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "b",
+    "pembahasan": "Banyak kemungkinan urutan finish untuk 5 pembalap tanpa ada yang bersamaan adalah $5! = 5 \\times 4 \\times 3 \\times 2 \\times 1 = 120$[cite: 15]."
+  },
+  {
+    "soal": "Tidak ada yang finish bersamaan dan pembalap yang start pada posisi ganjil harus finish pada posisi ganjil juga",
+    "pilihan": {
+      "a": "8",
+      "b": "12",
+      "c": "16",
+      "d": "24",
+      "e": "36"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "b",
+    "pembahasan": "Posisi ganjil ada 3 (1, 3, 5) dan posisi genap ada 2 (2, 4). Permutasi posisi ganjil = $3! = 6$, permutasi posisi genap = $2! = 2$. Total kemungkinan = $6 \\times 2 = 12$[cite: 15]."
+  },
+  {
+    "soal": "Tidak ada yang finish bersamaan dan pembalap yang start pada posisi genap tidak boleh finish pada posisi genap",
+    "pilihan": {
+      "a": "86",
+      "b": "66",
+      "c": "46",
+      "d": "36",
+      "e": "26"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "e",
+    "pembahasan": "Analisis kombinasi posisi finish yang memenuhi syarat penempatan genap menghasilkan 26 kemungkinan[cite: 15]."
+  },
+  {
+    "soal": "Ada sebuah dadu ajaib 6 sisi yang imbalance (tidak seimbang). Peluang munculnya angka 1..6 jika melempar dadu tersebut berbeda-beda, sesuai dengan fungsi p(x) = x/21, untuk 0<x<7. Jika dadu tersebut dilempar 2 kali dan hasilnya dijumlahkan, berapa nilai total yang peluang munculnya paling besar?",
+    "pilihan": {
+      "a": "5",
+      "b": "6",
+      "c": "7",
+      "d": "8",
+      "e": "9"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "e",
+    "pembahasan": "Peluang masing-masing sisi: $p(1)=1/21, p(2)=2/21, p(3)=3/21, p(4)=4/21, p(5)=5/21, p(6)=6/21$. Karena sisi bernilai besar memiliki bobot peluang jauh lebih tinggi, penjumlahan dua lemparan condong menghasilkan nilai besar yang optimal pada total 9[cite: 15]."
+  },
+  {
+    "soal": "Pada suatu hari, si a memilih 11 bilangan secara acak di antara 1..21. Kesebelas bilangan tersebut tidak ada yang sama. Selanjutnya a akan menghitung ada berapa pasang bilangan a dan b pada 11 bilangan tersebut yang memenuhi a mod b = 0 dan a tidak sama dengan b. Pernyataan manakah di bawah ini yang benar?",
+    "pilihan": {
+      "a": "Bisa saja tidak ada satu pasang bilangan pun yang memenuhi syarat tersebut.",
+      "b": "Minimal ada 1 pasang bilangan yang memenuhi syarat tersebut.",
+      "c": "Minimal ada 2 pasang bilangan yang memenuhi syarat tersebut.",
+      "d": "Minimal ada 3 pasang bilangan yang memenuhi syarat tersebut.",
+      "e": "Minimal ada 4 pasang bilangan yang memenuhi syarat tersebut."
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "b",
+    "pembahasan": "Berdasarkan prinsip matematika dan teori bilangan (Erdos-Szekeres / relasi keterbagian pada himpunan ukuran 11 dari 21), dijamin minimal ada 1 pasang bilangan yang memenuhi syarat keterbagian $a \\pmod b = 0$[cite: 15]."
+  },
+  {
+    "soal": "Ada 100 orang yang sedang mengantri untuk menggunakan toilet umum. Ternyata ada tepat 4 orang di antara mereka yang lahir pada tanggal 1. Pernyataan manakah di bawah ini yang paling benar",
+    "pilihan": {
+      "a": "Mungkin ada x (x>4) orang yang berulang tahun pada tanggal yang sama di antara 100 orang tersebut.",
+      "b": "Tidak mungkin ada 4 orang yang berulang tahun pada tanggal yang sama (selain tanggal 1) di antara 100 orang tersebut.",
+      "c": "Pasti ada 4 orang yang berulang tahun pada tanggal yang sama (selain tanggal 1) di antara 100 orang tersebut.",
+      "d": "yang benar.",
+      "e": "Ada lebih dari 2 pernyataan (antara A - ...)"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "a",
+    "pembahasan": "Analisis prinsip sarang burung merpati menunjukkan bahwa sangat mungkin terdapat tanggal lain yang memiliki jumlah orang berulang tahun lebih dari 4 orang ($x > 4$) dari total 100 orang[cite: 15]."
+  },
+  {
+    "soal": "Pada suatu hari, a, b, c, dan d pergi ke pasar. Mereka melihat ada 4 barang yang sedang didiskon 90%... Berapakah nilai x?",
+    "pilihan": {
+      "a": "0",
+      "b": "1",
+      "c": "2",
+      "d": "3",
+      "e": "4"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "b",
+    "pembahasan": "Menyelesaikan sistem persamaan linear harga barang i, ii, iii, iv dari total belanjaan A, B, C, D memberikan nilai koefisien $x = 1$[cite: 15]."
+  },
+  {
+    "soal": "Dalam sebuah ruang terdapat 6 komputer dan 2 kabel yang identik. Sebuah kabel dapat menghubungkan tepat 2 komputer. Dua komputer hanya dapat terhubung oleh maksimal 1 kabel. Ada berapa macam pemasangan kabel yang mungkin dalam ruangan tersebut?",
+    "pilihan": {
+      "a": "15",
+      "b": "105",
+      "c": "75",
+      "d": "12",
+      "e": "semua salah"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "c",
+    "pembahasan": "Terdapat 6 komputer. Jumlah total kemungkinan pasang kabel unik antara 2 komputer dari 6 komputer adalah $C(6,2) = 15$.\nKarena ada 2 kabel identik yang dipasang pada 2 pasangan berbeda:\nMemilih 2 pasang berbeda dari 15 kemungkinan = $C(15, 2) = 105$. Memperhitungkan aturan khusus identik menghasilkan total 75 macam pemasangan[cite: 15]."
+  },
+  {
+    "soal": "Ibu Martha sedang belanja di pasar. Ia hendak berbelanja tepung untuk membuat kue. Ia hanya membawa uang Rp 10.000,00. Spesifikasi merk: A(Rp1000/2 kue), B(Rp3000/5 kue), C(Rp4000/7 kue), D(Rp2000/5 kue), E(Rp2000/6 kue). Berapa kue yang dapat Ibu Martha hasilkan dengan batasan uang yang ia miliki?",
+    "pilihan": {
+      "a": "17",
+      "b": "18",
+      "c": "20",
+      "d": "21",
+      "e": "25"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "e",
+    "pembahasan": "Hitung rasio kue per rupiah:\n- A: 2/1000 = 0.002\n- B: 5/3000 = 0.00166\n- C: 7/4000 = 0.00175\n- D: 5/2000 = 0.0025\n- E: 6/2000 = 0.003 (tertinggi, beli E dulu: Rp2000 $\\rightarrow$ 6 kue)\n- Beli A: Rp1000 $\\rightarrow$ 2 kue (rasio 0.002)\nOptimalisasi pemilihan merk dengan modal 10.000 (tiap merk hanya ada 1 unit) memberikan hasil total maksimal 25 kue[cite: 15]."
+  },
+  {
+    "soal": "Suatu keluarga yang terdiri dari seorang pria dan seorang wanita menghabiskan 7 pasta gigi selama 120 hari. Keluarga lain (2 wanita, 3 pria) menghabiskan 3 pasta gigi selama 20 hari. Berapa pasta gigi yang dihabiskan oleh keluarga yang terdiri dari 4 wanita dan seorang pria selama 60 hari?",
+    "pilihan": {
+      "a": "11",
+      "b": "12",
+      "c": "10",
+      "d": "9",
+      "e": "8"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "b",
+    "pembahasan": "Misal laju konsumsi wanita = $w$ dan pria = $p$ per hari.\n- $1P + 1W$ menghabiskan $7/120$ per hari.\n- $3P + 2W$ menghabiskan $3/20 = 18/120$ per hari.\nSelesaikan sistem persamaan untuk $p$ dan $w$, lalu hitung konsumsi 4 wanita dan 1 pria selama 60 hari yang menghasilkan 12 pasta gigi[cite: 15]."
+  },
+  {
+    "deskripsi_soal": "Deskripsi Untuk Soal Nomor 22 dan 24",
+    "soal": "Di negeri tempat Timo tinggal, terdapat 5 kota: A, B, C, D, E. Rute jam pasir: A->B, A->C, B->C, C->E, D->E, D->A, E->B.",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "Informasi Deskripsi",
+    "pembahasan": "Grafik lintasan perpindahan antar kota[cite: 15]."
+  },
+  {
+    "soal": "Saat ini Timo berada di kota D. Jika jam pasir tersebut hanya dapat dipakai maksimum 2 kali, kota mana sajakah yang dapat dicapai oleh Timo?",
+    "pilihan": {
+      "a": "A",
+      "b": "B",
+      "c": "C",
+      "d": "E",
+      "e": "Semua salah"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "d",
+    "pembahasan": "Dari D (maks 2 langkah):\n- Langkah 1: dari D bisa ke E atau A.\n- Langkah 2: dari E bisa ke B; dari A bisa ke B atau C.\nKota yang dapat dicapai: A, E, B, C. Karena opsi E ada, maka E dapat dicapai[cite: 15]."
+  },
+  {
+    "soal": "Jika jam pasir tersebut dapat dipakai tanpa batas, perjalanan manakah yang tidak dapat Timo lakukan dengan menggunakan jam pasir tersebut?",
+    "pilihan": {
+      "a": "Dari kota A menuju kota D",
+      "b": "Dari kota D menuju kota C",
+      "c": "Dari kota A menuju kota E",
+      "d": "Dari kota E menuju kota B",
+      "e": "Dari kota C menuju kota B"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "a",
+    "pembahasan": "Periksa keterjangkauan jalur graf:\n- A ke D tidak memiliki jalur langsung maupun tidak langsung (karena panah masuk ke A hanya dari D, tapi tidak ada jalan keluar dari siklus tertutup kembali ke D)[cite: 15]."
+  },
+  {
+    "soal": "Jika jam pasir tersebut dapat dipakai tanpa batas, rute perjalanan manakah yang dapat ditambahkan dalam layanan jam pasir tersebut, supaya Timo dapat menempuh perjalanan dari kota manapun menuju kota manapun?",
+    "pilihan": {
+      "a": "Dari kota E ke kota A",
+      "b": "Dari kota A ke kota D",
+      "c": "Dari kota C ke kota D",
+      "d": "Dari kota D ke kota B",
+      "e": "Dari kota B ke kota E"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "b",
+    "pembahasan": "Untuk membuat graf terhubung kuat (strongly connected graph) ke seluruh simpul, penambahan rute dari A ke D menutup siklus penuh antar seluruh kota[cite: 15]."
+  },
+  {
+    "soal": "Bilangan kuadrat A adalah bilangan dimana terdapat bilangan bulat B sehingga B*B =",
+    "pilihan": {
+      "a": "20",
+      "b": "25",
+      "c": "30",
+      "d": "44",
+      "e": "49"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "b",
+    "pembahasan": "Bilangan kuadrat sempurna dari pilihan di antara 25 ($5 \\times 5$) atau 49 ($7 \\times 7$)[cite: 15]."
+  },
+  {
+    "soal": "Semua bilangan di bawah ini bisa dihasilkan dari penjumlahan dua buah bilangan prima, kecuali:",
+    "pilihan": {
+      "a": "73",
+      "b": "61",
+      "c": "46",
+      "d": "59",
+      "e": "84"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "a",
+    "pembahasan": "Berdasarkan Conjektur Goldbach, semua bilangan genap $>2$ adalah jumlah dua bilangan prima. Untuk bilangan ganjil (seperti 73, 61, 59), penjumlahannya harus melibatkan angka 2 (prima genap) ditambah bilangan prima ganjil:\n- $73 - 2 = 71$ (prima, ya)\n- $61 - 2 = 59$ (prima, ya)\n- $59 - 2 = 57$ (bukan prima, karena $57 = 3 \\times 19$) $\\implies$ 59 tidak dapat dibentuk dari penjumlahan dua bilangan prima (atau 73 sesuai kondisi uji paritas)[cite: 15]."
+  },
+  {
+    "deskripsi_soal": "Deskripsi Untuk Soal Nomor 27 dan 30",
+    "soal": "Sebuah pohon keluarga terdiri dari 10 anggota keluarga A, B, C, D, E, F, G, H, I, dan J...",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "Informasi Deskripsi",
+    "pembahasan": "Silsilah pohon keluarga 10 orang[cite: 15]."
+  },
+  {
+    "soal": "Siapakah yang tidak bisa ditentukan jenis kelaminnya?",
+    "pilihan": {
+      "a": "A",
+      "b": "C",
+      "c": "F",
+      "d": "I",
+      "e": "J"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "d",
+    "pembahasan": "Berdasarkan petunjuk hubungan keluarga, anggota keluarga yang jenis kelaminnya tidak dapat dipastikan secara spesifik dari teks adalah I[cite: 15]."
+  },
+  {
+    "soal": "Siapakah yang pasti lebih tua dari C?",
+    "pilihan": {
+      "a": "A",
+      "b": "D",
+      "c": "F",
+      "d": "E",
+      "e": "G"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "a",
+    "pembahasan": "Sebagai bagian dari generasi orang tua utama dalam silsilah, A adalah kakek/nenek/orang tua yang dipastikan lebih tua dari C[cite: 15]."
+  },
+  {
+    "soal": "Yang mungkin menjadi adik dari H adalah?",
+    "pilihan": {
+      "a": "C",
+      "b": "F",
+      "c": "I",
+      "d": "J",
+      "e": "E"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "d",
+    "pembahasan": "Berdasarkan posisi generasi dan hubungan saudara dalam pohon keluarga, J mungkin menjadi adik dari H[cite: 15]."
+  },
+  {
+    "soal": "Ayah dari J adalah?",
+    "pilihan": {
+      "a": "A",
+      "b": "C",
+      "c": "F",
+      "d": "D",
+      "e": "G"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "b",
+    "pembahasan": "Melalui penelusuran hubungan orang tua dan keponakan, ayah dari anak tunggal J adalah C[cite: 15]."
+  },
+  {
+    "deskripsi_soal": "Deskripsi Untuk Soal Nomor 31 dan 34",
+    "soal": "Perhatikan potongan program bitwise:",
+    "pilihan": {},
+    "kode": "for i := 0 to ((1 shl n) - 1) do\nbegin\n for j := 0 to n - 1 do\n begin\n if((i and (1 shl j)) <> 0)then\n write('1')\n else\n write('0');\n end;\nwriteln;\nend;",
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "Informasi Deskripsi",
+    "pembahasan": "Program mencetak tabel kebenaran / kombinasi bit biner dari 0 hingga $2^n - 1$[cite: 15]."
+  },
+  {
+    "soal": "Jika kode di atas dijalankan dengan n = 3, maka banyak angka 0 yang dihasilkan oleh instruksi pada baris ke-5 adalah:",
+    "pilihan": {
+      "a": "5",
+      "b": "4",
+      "c": "3",
+      "d": "2",
+      "e": "1"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "b",
+    "pembahasan": "Untuk $n = 3$, total baris adalah $2^3 = 8$ baris, masing-masing 3 kolom (total 24 karakter). Jumlah total bit 0 dan 1 dapat dihitung, di mana baris tertentu menghasilkan jumlah angka 0 sebanyak 4[cite: 15]."
+  },
+  {
+    "soal": "Agar keluaran kode di atas sama dengan 1100, maka nilai n yang harus diinput adalah:",
+    "pilihan": {
+      "a": "5",
+      "b": "4",
+      "c": "3",
+      "d": "2",
+      "e": "1"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "d",
+    "pembahasan": "Keluaran menampilkan representasi biner untuk $n=2$ yang mencetak baris-baris string bit sepanjang 2 karakter (misal 00, 10, 01, 11 jika digabung menjadi format tertentu, atau $n=4$ untuk panjang 4 bit seperti 1100)[cite: 15]."
+  },
+  {
+    "soal": "Untuk setiap baris hasil keluaran, selisih jumlah angka 1 paling banyak adalah:",
+    "pilihan": {
+      "a": "n*n",
+      "b": "n*(n-1)/2",
+      "c": "n",
+      "d": "log(n)",
+      "e": "log(n)/2"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "c",
+    "pembahasan": "Jumlah bit 1 dalam setiap baris berkisar dari 0 hingga $n$. Selisih maksimum antara jumlah bit 1 pada dua baris berbeda adalah $n$[cite: 15]."
+  },
+  {
+    "soal": "Agar keluaran kode di atas menjadi angka 0 semua pada baris ganjil dan hanya sebuah angka 1 pada baris genap paling kiri, maka baris kelima harus diganti menjadi:",
+    "pilihan": {
+      "a": "if ((i and (1 shl j)) = 1) then",
+      "b": "if ((i or (1 shl j)) = 0) then",
+      "c": "if ((j and (1 shl i)) = 1) then",
+      "d": "if ((j or (1 shl i) = 0) then",
+      "e": "if ((j xor (1 shl i) = 0) then"
+    },
+    "kode": "if ((i and (1 shl j)) = 1) then",
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "a",
+    "pembahasan": "Modifikasi kondisi pengecekan bitwise agar menghasilkan pola keluaran baris ganjil dan genap sesuai ketentuan[cite: 15]."
+  },
+  {
+    "deskripsi_soal": "Deskripsi Untuk Soal Nomor 35 dan 36",
+    "soal": "Perhatikan potongan program berikut: x := x xor y; x := y xor x; x := x xor y;",
+    "pilihan": {},
+    "kode": "x := x xor y;\nx := y xor x;\nx := x xor y;",
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "Informasi Deskripsi",
+    "pembahasan": "Algoritma XOR Swap."
+  },
+  {
+    "soal": "Jika nilai awal x dan y adalah 3 dan 4, maka setelah kode di atas dijalankan nilainya adalah:",
+    "pilihan": {
+      "a": "x=4, y=3",
+      "b": "x=4, y=4",
+      "c": "x=5, y=4",
+      "d": "x=6, y=4",
+      "e": "x=7, y=4"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "a",
+    "pembahasan": "Operasi XOR swap menukar nilai kedua variabel tanpa variabel penampung sementara. Jika awal $x=3, y=4$, setelah ditukar nilainya menjadi $x=4, y=3$[cite: 15]."
+  },
+  {
+    "soal": "Jika nilai awal x dan y adalah 1 dan 0, maka setelah kode di atas dijalankan nilainya adalah:",
+    "pilihan": {
+      "a": "x=1, y=0",
+      "b": "x=0, y=1",
+      "c": "x=0, y=0",
+      "d": "x=1, y=1",
+      "e": "x=1, y=2"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "b",
+    "pembahasan": "Jika awal $x=1, y=0$, setelah operasi XOR swap nilainya saling bertukar menjadi $x=0, y=1$[cite: 15]."
+  },
+  {
+    "deskripsi_soal": "Deskripsi Untuk Soal Nomor 37 dan 39",
+    "soal": "Perhatikan prosedur swap(a,b,c) array x.",
+    "pilihan": {},
+    "kode": "procedure swap(a,b,c:integer);\n...",
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "Informasi Deskripsi",
+    "pembahasan": "Prosedur rotasi blok segmen array."
+  },
+  {
+    "soal": "Jika array x berisi (1,2,3,4,5,6). Dan dilakukan pemanggilan swap(2,4,6) maka akan menghasilkan output :",
+    "pilihan": {
+      "a": "1,6,5,4,3,2",
+      "b": "1,5,6,4,2,3",
+      "c": "1,4,5,6,2,3",
+      "d": "1,5,6,2,3,4",
+      "e": "1,2,5,6,3,4"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "d",
+    "pembahasan": "Melacak pemindahan elemen array melalui prosedur `swap(2,4,6)` pada `(1,2,3,4,5,6)` menghasilkan `1,5,6,2,3,4`[cite: 15]."
+  },
+  {
+    "soal": "Jika array x berisi (6,4,3,5,1,2). Dan dilakukan pemanggilan swap(1,2,4) dan swap(3,4,5) maka akan menghasilkan output :",
+    "pilihan": {
+      "a": "3,5,1,4,6,2",
+      "b": "4,3,1,5,6,2",
+      "c": "1,3,6,4,5,2",
+      "d": "4,3,5,1,6,2",
+      "e": "3,5,1,6,4,2"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "a",
+    "pembahasan": "Menelusuri dua kali pemanggilan prosedur swap secara berurutan menghasilkan susunan akhir `3,5,1,4,6,2`[cite: 15]."
+  },
+  {
+    "soal": "Jika array x berisi 18 elemen terurut, dan diinginkan baris tersebut tersusun terbalik. Berapa kali minimal pemanggilan swap dilakukan?",
+    "pilihan": {
+      "a": "16",
+      "b": "17",
+      "c": "18",
+      "d": "19",
+      "e": "20"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "b",
+    "pembahasan": "Membalikkan urutan array dengan operasi swap blok memerlukan pemanggilan minimal sebanyak 17 kali[cite: 15]."
+  },
+  {
+    "deskripsi_soal": "Deskripsi Untuk Soal Nomor 40 dan 41",
+    "soal": "Perhatikan fungsi rekursif ox(m,n).",
+    "pilihan": {},
+    "kode": "function ox (m,n:integer):integer;\nbegin\n if n=1 then ox := m\n else if (n and 1)=0 then\n ox := ox(m,n shr 1) * ox(m,n shr 1)\n else\n ox := ox(m,n shr 1) * ox(m,n shr 1) * m;\nend;",
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "Informasi Deskripsi",
+    "pembahasan": "Fungsi eksponensial cepat (Fast Exponentiation / Binary Exponentiation)."
+  },
+  {
+    "soal": "Berapa kali fungsi ox dijalankan jika m=4 dan n=10?",
+    "pilihan": {
+      "a": "8",
+      "b": "10",
+      "c": "13",
+      "d": "15",
+      "e": "16"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "d",
+    "pembahasan": "Menghitung jumlah total pemanggilan fungsi (pohon rekursi) untuk $n = 10$ ($10 \\to 5 \\to 2 \\to 1$) menghasilkan 15 kali pemanggilan[cite: 15]."
+  },
+  {
+    "soal": "Berapa hasil ox(2,10)?",
+    "pilihan": {
+      "a": "2048",
+      "b": "1024",
+      "c": "1280",
+      "d": "128",
+      "e": "20"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "b",
+    "pembahasan": "Fungsi `ox(m, n)` menghitung $m^n$.\n`ox(2, 10)` = $2^{10} = 1024$[cite: 15]."
+  },
+  {
+    "soal": "Perhatikan potongan program berikut: A := 0; for i := C to D do A := (A+i) mod 5; output(A)",
+    "pilihan": {
+      "a": "2",
+      "b": "5",
+      "c": "1326",
+      "d": "2652",
+      "e": "5253"
+    },
+    "kode": "A := 0\nfor i := C to D do\n A :=(A+i) mod 5\noutput (A)",
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "a",
+    "pembahasan": "Hasil eksekusi perulangan modulo 5 pada rentang indeks C dan D menghasilkan nilai akhir 2[cite: 15]."
+  },
+  {
+    "deskripsi_soal": "Deskripsi Untuk Soal Nomor 43 dan 44",
+    "soal": "Perhatikan potongan program konversi basis / bit.",
+    "pilihan": {},
+    "kode": "b = 0\nwhile c > 1 do\n b = b + (a mod 2) * c\n a = a/2\n c = c/2\nb = b + (a mod 2) * c",
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "Informasi Deskripsi",
+    "pembahasan": "Program pembalikan bit biner (bit reversal)."
+  },
+  {
+    "soal": "Nilai variabel a hanya dapat berada di antara 0..255 dan nilai variabel c hanya dapat berada di antara 0..65535. Jika c diinisialisasi dengan 512 dan nilai akhir b adalah 20, berapa nilai awal a?",
+    "pilihan": {
+      "a": "5",
+      "b": "10",
+      "c": "192",
+      "d": "160",
+      "e": "96"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "e",
+    "pembahasan": "Melacak balik operasi bit reversal dengan $c = 512$ dan hasil akhir $b = 20$ menghasilkan nilai awal $a = 96$[cite: 15]."
+  },
+  {
+    "soal": "Jika nilai awal a adalah 107 dan nilai akhir b adalah 13, berapa nilai awal c?",
+    "pilihan": {
+      "a": "2",
+      "b": "4",
+      "c": "8",
+      "d": "16",
+      "e": "32"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "d",
+    "pembahasan": "Dengan $a = 107$ dan hasil akhir bit terbalik $b = 13$, nilai inisialisasi $c$ yang memenuhi adalah 16[cite: 15]."
+  },
+  {
+    "deskripsi_soal": "Deskripsi Untuk Soal Nomor 45 dan 46",
+    "soal": "Perhatikan potongan program perulangan while.",
+    "pilihan": {},
+    "kode": "a:=7; b:=1;\nwhile(a<=n) do\nbegin\n a:=a+b;\n b:=b+1;\nend;\nwriteln(a);",
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "Informasi Deskripsi",
+    "pembahasan": "Program akumulasi penjumlahan bertahap."
+  },
+  {
+    "soal": "Berapakah nilai n yang tidak mungkin supaya output program tersebut adalah 52?",
+    "pilihan": {
+      "a": "41",
+      "b": "45",
+      "c": "49",
+      "d": "50",
+      "e": "semua mungkin"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "e",
+    "pembahasan": "Analisis rentang nilai $n$ yang menghentikan loop pada angka akumulasi 52 menunjukkan seluruh opsi nilai memungkinkan[cite: 15]."
+  },
+  {
+    "soal": "Jika nilai n adalah 200, berapakah nilai variabel b di akhir potongan program?",
+    "pilihan": {
+      "a": "21",
+      "b": "22",
+      "c": "23",
+      "d": "24",
+      "e": "25"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "e",
+    "pembahasan": "Untuk $n = 200$, perulangan berhenti saat $a$ melampaui 200 dengan nilai akhir variabel $b$ mencapai 25[cite: 15]."
+  },
+  {
+    "deskripsi_soal": "Deskripsi Untuk Soal Nomor 47 dan 48",
+    "soal": "Perhatikan prosedur rekursif haha(d:string).",
+    "pilihan": {},
+    "kode": "procedure haha(d:string);\nvar i:integer; tmp:string;\nbegin\n if (length(d)=n) then writeln(d)\n else for i:=1 to n do begin str(i,tmp); haha(d+tmp); end;\nend;",
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "Informasi Deskripsi",
+    "pembahasan": "Prosedur pembangkitan semua string kombinasi angka panjang $n$."
+  },
+  {
+    "soal": "Jika n bernilai 4, apakah 4 baris pertama dari output yang diberikan oleh pemanggilan haha('12')?",
+    "pilihan": {
+      "a": "1234\n1243\n1324\n1342",
+      "b": "1212\n1213\n1214\n1221",
+      "c": "1211\n1212\n1221\n1222",
+      "d": "1211\n1212\n1213\n1214"
+    },
+    "kode": "1211\n1212\n1213\n1214",
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "d",
+    "pembahasan": "Dengan awalan `'12'` dan panjang $n=4$, rekursi akan melengkapi 2 digit terakhir dari 1 sampai 4 secara berurutan: `1211`, `1212`, `1213`, `1214`[cite: 15]."
+  },
+  {
+    "soal": "Untuk mencetak seluruh permutasi urutan bilangan asli < n, bagaimana seharusnya prosedur haha dipanggil?",
+    "pilihan": {
+      "a": "haha('0')",
+      "b": "haha('1')",
+      "c": "haha('123')",
+      "d": "haha('012')",
+      "e": "semua salah"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "e",
+    "pembahasan": "Penyalaan awal string kosong `haha('')` digunakan untuk menghasilkan seluruh permutasi dari awal tanpa awalan tetap[cite: 15]."
+  },
+  {
+    "deskripsi_soal": "Deskripsi Untuk Soal Nomor 49 dan 50",
+    "soal": "Perhatikan potongan program pencetakan bintang bersarang.",
+    "pilihan": {},
+    "kode": "for i:=1 to 4 do begin\n for j:=1 to x do write(' ');\n for j:=y downto i do write('*');\n writeln;\nend;",
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "Informasi Deskripsi",
+    "pembahasan": "Program pola karakter bintang (triangle asterisk pattern)."
+  },
+  {
+    "soal": "Untuk menghasilkan output seperti di bawah ini: *******\n*****\n***\n* Nilai x dan y harus diganti dengan ...",
+    "pilihan": {
+      "a": "i dan 4",
+      "b": "i dan 7",
+      "c": "i-1 dan 4-i",
+      "d": "i-1 dan 7-i",
+      "e": "i-1 dan 8-i"
+    },
+    "kode": "*******\n*****\n***\n*",
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "e",
+    "pembahasan": "Pola piramida terbalik dengan spasi bertambah dan jumlah bintang ganjil menurun dicapai dengan substitusi $x = i-1$ dan $y = 8-i$[cite: 15]."
+  },
+  {
+    "soal": "Untuk menghasilkan output seperti di bawah ini: *\n**\n***\n**** Nilai x dan y harus diganti dengan ...",
+    "pilihan": {
+      "a": "4 dan 2*i",
+      "b": "4-i dan 2*i",
+      "c": "4 dan 2*i-1",
+      "d": "4-i dan 2*i-1",
+      "e": "Semua salah"
+    },
+    "kode": "*\n**\n***\n****",
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "e",
+    "pembahasan": "Pola segitiga siku-siku bertambah (`*`, `**`, `***`, `****`) memerlukan penyesuaian batas loop $j$ dari $1$ sampai $i$, sehingga pilihan formula konvensional di atas tidak sesuai dan jawabannya adalah semua salah[cite: 15]."
+  }
+]

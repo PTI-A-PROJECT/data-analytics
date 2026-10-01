@@ -16,3 +16,4 @@ CONTEXT.md
 brief 2.txt
 # README.md TIDAK diabaikan — pyproject.toml `readme = "README.md"` dibaca
 # `uv sync` saat build paket, hilang berarti build gagal.
+graphify-out/

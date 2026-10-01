@@ -1,60 +1,106 @@
 """FastAPI app — health endpoints (tiket 09), endpoint admin internal
-(tiket 10), endpoint submit Pre-Test/Simulasi (tiket 11), Kenaikan Tingkat
-(tiket 03), Dashboard Super Admin (tiket 04), dan event Progress Halaman
-Materi (tiket 14). Endpoint Rekomendasi Materi belum diimplementasikan —
+(tiket 10), akses tingkat (tiket 03, fase 2 issue 02), Paket Tes pre-test &
+simulasi adaptif & Materi Wajib (fase 2 issue 02-04), Dashboard
+Super Admin (tiket 04), event Progress Halaman Materi (tiket 14), dan katalog
+Materi (daftar, daftar isi, konten halaman). Endpoint Rekomendasi Materi belum diimplementasikan —
 bergantung tiket 06 yang masih direview ulang.
 """
 
 from __future__ import annotations
 
 from datetime import datetime, timezone
+from pathlib import Path
 from typing import Annotated
 
 from fastapi import Depends, FastAPI, HTTPException
-from sqlalchemy import text
+from fastapi.responses import FileResponse, JSONResponse
+from sqlalchemy import select, text
 from sqlalchemy.orm import Session
 
 from data_analytics.auth import verify_internal_token
-from data_analytics.config import get_settings
+from data_analytics.config import Settings, get_settings
 from data_analytics.dashboard import hitung_metrik_dashboard
 from data_analytics.db import get_db
 from data_analytics.progress import persentase_selesai
+from data_analytics.models import (
+    AksesTingkatSiswa,
+    AturanAdaptif,
+    AturanPredikat,
+    AturanKenaikanTingkat,
+    Materi,
+    PaketTes,
+    PaketTesSoal,
+    StatusAkses,
+)
 from data_analytics.repository import (
-    JawabanInput,
+    AksesDitolak,
+    JawabanLatihan,          # ← TAMBAH
+    JawabanPaket,
+    KonflikPaket,
+    MateriTidakDitemukan,
+    PaketTidakDitemukan,
+    TingkatTidakDitemukan,
     anonimkan_hasil_tes_kedaluwarsa,
-    catat_progress_halaman,
-    catat_submission_tes,
-    evaluasi_dan_catat_kenaikan,
-    evaluasi_dan_catat_pre_test,
+    GerbangSimulasiTertutup,
+    StatusGerbangSimulasi,
+    catat_baca_halaman,
+    daftar_materi,
+    ganti_aturan_predikat,
     get_akses_siswa,
-    get_or_create_aturan_pre_test,
+    get_materi,
+    halaman_dibaca_siswa,
+    get_semua_aturan_adaptif,
+    get_semua_aturan_predikat,
+    leaderboard_tingkat,
     get_semua_aturan_kenaikan,
-    get_semua_aturan_pre_test,
     override_akses_admin,
+    status_gerbang_simulasi,
+    submit_latihan,          # ← TAMBAH
+    submit_paket,
+    susun_paket_latihan,     # ← TAMBAH
+    update_aturan_adaptif,
+    susun_paket_pretest,
+    susun_paket_simulasi,
     update_aturan_kenaikan,
-    update_aturan_pre_test,
 )
 from data_analytics.schemas import (
-    JENIS_TES_DARI_WIRE,
     STATUS_PEMETAAN_LABEL,
     AksesTingkatItem,
     AksesTingkatSiswaResponse,
+    AturanAdaptifItem,
+    AturanPredikatItem,
     AturanKenaikanItem,
-    AturanPreTestItem,
     DashboardResponse,
-    EvaluasiKenaikanRequest,
-    EvaluasiKenaikanResponse,
-    EvaluasiPreTestRequest,
-    EvaluasiPreTestResponse,
     HalamanMateriEventRequest,
     HalamanMateriEventResponse,
+    HalamanMateriResponse,
+    HalamanRingkasItem,
+    LeaderboardResponse,
+    MateriDetailResponse,
+    MateriItem,
+    MateriWajibItem,
     OverrideAksesRequest,
-    PetaKompetensiItem,
-    SubmitAssessmentData,
-    SubmitAssessmentRequest,
-    SubmitAssessmentResponse,
+    EvaluasiJalurSimulasiItem,
+    PaketRequest,
+    PerubahanLevelItem,
+    PeringkatItem,
+    PredikatItem,
+    GerbangSimulasiResponse,
+    PaketResponse,
+    PetaMateriItem,
+    ReviewSoalItem,
+    SoalPaketItem,
+    SubmitPaketRequest,
+    SubmitPaketResponse,
+    UpdateAturanAdaptifRequest,
+    UpdateAturanPredikatRequest,
     UpdateAturanKenaikanRequest,
-    UpdateAturanPreTestRequest,
+    JawabanLatihanItem,      # ← TAMBAH
+    LatihanRequest,          # ← TAMBAH
+    LatihanResponse,         # ← TAMBAH
+    SoalLatihanItem,         # ← TAMBAH
+    SubmitLatihanRequest,    # ← TAMBAH
+    SubmitLatihanResponse,   # ← TAMBAH
 )
 
 app = FastAPI(title="Data & Analytics — OSN Informatika")
@@ -93,94 +139,46 @@ def anonymize_expired(
     return {"jumlah_dianonimkan": jumlah, "dry_run": dry_run}
 
 
-@app.post(
-    "/api/v1/analytics/assessment/submit",
-    dependencies=[Depends(verify_internal_token)],
-    response_model=SubmitAssessmentResponse,
-)
-def submit_assessment(
-    payload: SubmitAssessmentRequest, db: Annotated[Session, Depends(get_db)]
-) -> SubmitAssessmentResponse:
-    """Terima jawaban Pre-Test/Simulasi siswa, hitung skor & Peta Kompetensi
-    (FR-07) + flag butuh_optimasi (tiket 05), simpan HasilTes + log
-    JawabanSiswa — lihat resolusi tiket 11.
-    """
-    jenis_tes = JENIS_TES_DARI_WIRE[payload.jenis_tes]
+# --- Akses tingkat & aturan kenaikan (tiket 03, fase 2 issue 02) ------------
 
-    try:
-        hasil = catat_submission_tes(
-            db,
-            siswa_id=payload.siswa_id,
-            sekolah_id=payload.sekolah_id,
-            tingkat_seleksi_id=payload.tingkat_seleksi_id,
-            jenis_tes=jenis_tes,
-            simulasi_id=payload.simulasi_id,
-            jawaban_siswa=[
-                JawabanInput(
-                    soal_id=j.soal_id,
-                    subkompetensi_id=j.subkompetensi_id,
-                    jawaban_dipilih=j.jawaban_dipilih,
-                    is_benar=j.is_benar,
-                    durasi_detik=j.durasi_detik,
-                    batas_waktu_detik=j.batas_waktu_detik,
-                )
-                for j in payload.jawaban_siswa
-            ],
-            diselesaikan_pada=datetime.now(timezone.utc),
-        )
-    except ValueError as exc:
-        raise HTTPException(status_code=422, detail=str(exc)) from exc
 
-    db.commit()
-
-    return SubmitAssessmentResponse(
-        data=SubmitAssessmentData(
-            peta_kompetensi=[
-                PetaKompetensiItem(
-                    subkompetensi_id=b.subkompetensi_id,
-                    status_pemetaan=STATUS_PEMETAAN_LABEL[b.status_pemetaan],
-                    butuh_optimasi=b.butuh_optimasi,
-                )
-                for b in hasil.breakdown_subkompetensi
-            ]
-        )
+def _akses_item(akses: AksesTingkatSiswa) -> AksesTingkatItem:
+    return AksesTingkatItem(
+        tingkat_seleksi_id=akses.tingkat_seleksi_id,
+        nama=akses.tingkat_seleksi.nama,
+        status=StatusAkses(akses.status),
+        dibuka_karena=akses.dibuka_karena,
+        catatan=akses.catatan,
     )
 
 
-# --- Kenaikan Tingkat (tiket 03) ---------------------------------------------
-# tingkat_seleksi_id/tingkat_asal_id di endpoint-endpoint ini merujuk ke
-# katalog TingkatSeleksi LOKAL (int), BUKAN tingkat_seleksi_id UUID yang
-# dikirim di /assessment/submit — lihat catatan gap id di
-# models.AturanKenaikanTingkat. Evaluasi kenaikan karena itu dipanggil
-# terpisah oleh Fullstack (bukan otomatis di dalam /assessment/submit).
+def _aturan_item(aturan: AturanKenaikanTingkat) -> AturanKenaikanItem:
+    return AturanKenaikanItem(
+        id=aturan.id,
+        tingkat_asal_id=aturan.tingkat_asal_id,
+        tingkat_tujuan_id=aturan.tingkat_tujuan_id,
+        skor_simulasi_min=aturan.skor_simulasi_min,
+        skor_pretest_jalur_cepat=aturan.skor_pretest_jalur_cepat,
+        rata_level_min=aturan.rata_level_min,
+        aktif=aturan.aktif,
+    )
 
 
 @app.get(
-    "/api/v1/analytics/tingkat/{siswa_id}/akses",
+    "/api/v1/siswa/{siswa_id}/akses",
     dependencies=[Depends(verify_internal_token)],
     response_model=AksesTingkatSiswaResponse,
 )
 def get_akses_tingkat(
     siswa_id: str, db: Annotated[Session, Depends(get_db)]
 ) -> AksesTingkatSiswaResponse:
-    """Status akses siswa ke seluruh Tingkat Seleksi lokal (inisialisasi
-    otomatis kalau belum pernah ada — resolusi tiket 03).
+    """Status akses siswa per Tingkat Seleksi (inisialisasi otomatis kalau
+    belum pernah ada: Kabupaten pretest_terbuka, sisanya terkunci).
     """
     akses = get_akses_siswa(db, siswa_id)
     db.commit()
     return AksesTingkatSiswaResponse(
-        siswa_id=siswa_id,
-        daftar_akses=[
-            AksesTingkatItem(
-                tingkat_seleksi_id=a.tingkat_seleksi_id,
-                nama=a.tingkat_seleksi.nama if a.tingkat_seleksi else "",
-                status=a.status,
-                simulasi_terbuka=a.simulasi_terbuka,
-                dibuka_karena=a.dibuka_karena,
-                catatan=a.catatan,
-            )
-            for a in akses
-        ],
+        siswa_id=siswa_id, daftar_akses=[_akses_item(a) for a in akses]
     )
 
 
@@ -201,14 +199,7 @@ def override_akses_tingkat(
         catatan=payload.catatan,
     )
     db.commit()
-    return AksesTingkatItem(
-        tingkat_seleksi_id=akses.tingkat_seleksi_id,
-        nama=akses.tingkat_seleksi.nama if akses.tingkat_seleksi else "",
-        status=akses.status,
-        simulasi_terbuka=akses.simulasi_terbuka,
-        dibuka_karena=akses.dibuka_karena,
-        catatan=akses.catatan,
-    )
+    return _akses_item(akses)
 
 
 @app.get(
@@ -219,17 +210,7 @@ def override_akses_tingkat(
 def get_aturan_kenaikan(
     db: Annotated[Session, Depends(get_db)],
 ) -> list[AturanKenaikanItem]:
-    return [
-        AturanKenaikanItem(
-            id=a.id,
-            tingkat_asal_id=a.tingkat_asal_id,
-            tingkat_tujuan_id=a.tingkat_tujuan_id,
-            skor_simulasi_min=a.skor_simulasi_min,
-            persentase_kompetensi_cukup_min=a.persentase_kompetensi_cukup_min,
-            aktif=a.aktif,
-        )
-        for a in get_semua_aturan_kenaikan(db)
-    ]
+    return [_aturan_item(a) for a in get_semua_aturan_kenaikan(db)]
 
 
 @app.put(
@@ -246,7 +227,8 @@ def put_aturan_kenaikan(
         db,
         aturan_id=aturan_id,
         skor_simulasi_min=payload.skor_simulasi_min,
-        persentase_kompetensi_cukup_min=payload.persentase_kompetensi_cukup_min,
+        skor_pretest_jalur_cepat=payload.skor_pretest_jalur_cepat,
+        rata_level_min=payload.rata_level_min,
         aktif=payload.aktif,
     )
     if aturan is None:
@@ -254,143 +236,314 @@ def put_aturan_kenaikan(
             status_code=404, detail=f"Aturan kenaikan tingkat ID {aturan_id} tidak ditemukan"
         )
     db.commit()
-    return AturanKenaikanItem(
-        id=aturan.id,
-        tingkat_asal_id=aturan.tingkat_asal_id,
-        tingkat_tujuan_id=aturan.tingkat_tujuan_id,
-        skor_simulasi_min=aturan.skor_simulasi_min,
-        persentase_kompetensi_cukup_min=aturan.persentase_kompetensi_cukup_min,
-        aktif=aturan.aktif,
+    return _aturan_item(aturan)
+
+
+# --- Aturan predikat (tiket 01) -----------------------------------------------
+
+
+def _aturan_predikat_item(tingkat_seleksi_id: int, aturan: list[AturanPredikat]) -> AturanPredikatItem:
+    return AturanPredikatItem(
+        tingkat_seleksi_id=tingkat_seleksi_id,
+        predikat=[PredikatItem(label=a.label, batas_bawah=a.batas_bawah) for a in aturan],
     )
-
-
-@app.post(
-    "/api/v1/analytics/tingkat/evaluasi",
-    dependencies=[Depends(verify_internal_token)],
-    response_model=EvaluasiKenaikanResponse,
-)
-def evaluasi_kenaikan(
-    payload: EvaluasiKenaikanRequest, db: Annotated[Session, Depends(get_db)]
-) -> EvaluasiKenaikanResponse:
-    """Evaluasi kelayakan kenaikan tingkat siswa (resolusi tiket 03) — dipanggil
-    Fullstack setelah submit Simulasi, membawa jumlah_kompetensi_cukup/
-    total_kompetensi_silabus yang sudah mereka agregasikan dari Peta
-    Kompetensi (caller-supplied, konsisten prinsip stateless ADR 0002).
-    """
-    try:
-        riwayat = evaluasi_dan_catat_kenaikan(
-            db,
-            siswa_id=payload.siswa_id,
-            hasil_tes_id=payload.hasil_tes_id,
-            tingkat_asal_id=payload.tingkat_asal_id,
-            skor=payload.skor,
-            jumlah_kompetensi_cukup=payload.jumlah_kompetensi_cukup,
-            total_kompetensi_silabus=payload.total_kompetensi_silabus,
-        )
-    except ValueError as exc:
-        raise HTTPException(status_code=422, detail=str(exc)) from exc
-
-    db.commit()
-
-    if riwayat is None:
-        return EvaluasiKenaikanResponse(evaluasi_dilakukan=False)
-
-    return EvaluasiKenaikanResponse(
-        evaluasi_dilakukan=True,
-        hasil_evaluasi=riwayat.hasil_evaluasi,
-        syarat_skor_lulus=riwayat.syarat_skor_lulus,
-        syarat_kompetensi_lulus=riwayat.syarat_kompetensi_lulus,
-        persentase_cukup_aktual=riwayat.persentase_cukup_aktual,
-    )
-
-
-# --- Aturan Kelulusan & Akses Pre-Test Berjenjang (tiket 15) -----------------
 
 
 @app.get(
-    "/api/v1/analytics/pre-test/aturan",
+    "/api/v1/analytics/aturan-predikat",
     dependencies=[Depends(verify_internal_token)],
-    response_model=list[AturanPreTestItem],
+    response_model=list[AturanPredikatItem],
 )
-def get_aturan_pre_test_endpoint(
-    db: Annotated[Session, Depends(get_db)],
-) -> list[AturanPreTestItem]:
-    """Daftar aturan kelulusan minimal (passing grade) Pre-Test per tingkat seleksi."""
-    aturan_list = get_semua_aturan_pre_test(db)
-    return [
-        AturanPreTestItem(
-            id=a.id,
-            tingkat_seleksi_id=a.tingkat_seleksi_id,
-            skor_min=a.skor_min,
-            aktif=a.aktif,
-        )
-        for a in aturan_list
-    ]
+def get_aturan_predikat(db: Annotated[Session, Depends(get_db)]) -> list[AturanPredikatItem]:
+    """Kelompok rentang skor → predikat per Tingkat Seleksi. Predikat hanya
+    label di samping skor pada hasil submit."""
+    daftar = get_semua_aturan_predikat(db)
+    db.commit()  # simpan default yang baru dibuat
+    return [_aturan_predikat_item(tingkat_id, aturan) for tingkat_id, aturan in daftar]
 
 
 @app.put(
-    "/api/v1/analytics/pre-test/aturan/{aturan_id}",
+    "/api/v1/analytics/aturan-predikat/{tingkat_seleksi_id}",
     dependencies=[Depends(verify_internal_token)],
-    response_model=AturanPreTestItem,
+    response_model=AturanPredikatItem,
 )
-def put_aturan_pre_test_endpoint(
-    aturan_id: int,
-    payload: UpdateAturanPreTestRequest,
+def put_aturan_predikat(
+    tingkat_seleksi_id: int,
+    payload: UpdateAturanPredikatRequest,
     db: Annotated[Session, Depends(get_db)],
-) -> AturanPreTestItem:
-    """Update konfigurasi passing grade aturan Pre-Test oleh Super Admin."""
-    aturan = update_aturan_pre_test(
-        db,
-        aturan_id=aturan_id,
-        skor_min=payload.skor_min,
-        aktif=payload.aktif,
-    )
-    if aturan is None:
-        raise HTTPException(
-            status_code=404, detail=f"Aturan Pre-Test ID {aturan_id} tidak ditemukan"
+) -> AturanPredikatItem:
+    """Ganti seluruh predikat satu tingkat. Berlaku untuk submit berikutnya;
+    predikat hasil tes yang sudah tersimpan tidak berubah. 422 kalau tidak ada
+    batas_bawah 0 atau label/batas ganda."""
+    try:
+        aturan = ganti_aturan_predikat(
+            db,
+            tingkat_seleksi_id=tingkat_seleksi_id,
+            aturan=[(p.label, p.batas_bawah) for p in payload.predikat],
         )
+    except TingkatTidakDitemukan as exc:
+        raise HTTPException(status_code=404, detail=str(exc)) from exc
+    except ValueError as exc:
+        raise HTTPException(status_code=422, detail=str(exc)) from exc
     db.commit()
-    return AturanPreTestItem(
-        id=aturan.id,
+    return _aturan_predikat_item(tingkat_seleksi_id, aturan)
+
+
+# --- Aturan adaptif (fase 2 issue 03) -----------------------------------------
+
+
+def _aturan_adaptif_item(aturan: AturanAdaptif) -> AturanAdaptifItem:
+    return AturanAdaptifItem(
         tingkat_seleksi_id=aturan.tingkat_seleksi_id,
-        skor_min=aturan.skor_min,
-        aktif=aturan.aktif,
+        jumlah_soal_pretest=aturan.jumlah_soal_pretest,
+        jumlah_soal_simulasi=aturan.jumlah_soal_simulasi,
+        kuota_min=aturan.kuota_min,
+        bobot_lemah=aturan.bobot_lemah,
+        ambang_naik=aturan.ambang_naik,
+        ambang_lemah=aturan.ambang_lemah,
+    )
+
+
+@app.get(
+    "/api/v1/analytics/aturan-adaptif",
+    dependencies=[Depends(verify_internal_token)],
+    response_model=list[AturanAdaptifItem],
+)
+def get_aturan_adaptif(db: Annotated[Session, Depends(get_db)]) -> list[AturanAdaptifItem]:
+    """Parameter penyusunan paket pre-test/simulasi per Tingkat Seleksi."""
+    aturan = get_semua_aturan_adaptif(db)
+    db.commit()  # simpan default yang baru dibuat
+    return [_aturan_adaptif_item(a) for a in aturan]
+
+
+@app.put(
+    "/api/v1/analytics/aturan-adaptif/{tingkat_seleksi_id}",
+    dependencies=[Depends(verify_internal_token)],
+    response_model=AturanAdaptifItem,
+)
+def put_aturan_adaptif(
+    tingkat_seleksi_id: int,
+    payload: UpdateAturanAdaptifRequest,
+    db: Annotated[Session, Depends(get_db)],
+) -> AturanAdaptifItem:
+    """Ubah sebagian parameter adaptif satu tingkat. 422 kalau hasilnya tidak
+    konsisten (mis. kuota_min x jumlah Materi > jumlah_soal_simulasi)."""
+    try:
+        aturan = update_aturan_adaptif(
+            db, tingkat_seleksi_id=tingkat_seleksi_id, **payload.model_dump(exclude_none=True)
+        )
+    except TingkatTidakDitemukan as exc:
+        raise HTTPException(status_code=404, detail=str(exc)) from exc
+    except ValueError as exc:
+        raise HTTPException(status_code=422, detail=str(exc)) from exc
+    db.commit()
+    return _aturan_adaptif_item(aturan)
+
+
+# --- Paket Tes (fase 2 issue 02) ----------------------------------------------
+
+
+URL_GAMBAR = "/api/v1/konten/gambar"
+
+
+def _url_gambar(gambar: str | None) -> str | None:
+    """Gambar lokal disajikan endpoint konten; URL absolut sumber apa adanya."""
+    if gambar is None or gambar.startswith(("http://", "https://")):
+        return gambar
+    return f"{URL_GAMBAR}/{gambar}"
+
+
+@app.get(
+    URL_GAMBAR + "/{tingkat}/{nama_file}",
+    dependencies=[Depends(verify_internal_token)],
+    response_class=FileResponse,
+)
+def get_gambar_soal(
+    tingkat: str, nama_file: str, settings: Annotated[Settings, Depends(get_settings)]
+) -> FileResponse:
+    """File gambar soal dari <folder_soal>/gambar_<tingkat>/. Hanya nama file
+    di folder itu yang dilayani (tanpa sub-path) — 404 selain itu."""
+    folder = (Path(settings.folder_soal) / f"gambar_{tingkat}").resolve()
+    path = (folder / nama_file).resolve()
+    if tingkat not in {"kabupaten", "provinsi"} or path.parent != folder or not path.is_file():
+        raise HTTPException(status_code=404, detail="Gambar tidak ditemukan")
+    return FileResponse(path)
+
+
+def _paket_response(paket: PaketTes) -> PaketResponse:
+    return PaketResponse(
+        paket_id=paket.id,
+        siswa_id=paket.siswa_id,
+        tingkat_seleksi_id=paket.tingkat_seleksi_id,
+        jenis_tes=paket.jenis_tes,
+        jumlah_soal_diminta=paket.jumlah_soal_diminta,
+        soal=[
+            SoalPaketItem(
+                urutan=baris.urutan,
+                soal_id=baris.soal_id,
+                materi_id=baris.materi_id,
+                tipe=baris.soal_ref.tipe,
+                deskripsi=baris.soal_ref.deskripsi,
+                pertanyaan=baris.soal_ref.pertanyaan,
+                kode=baris.soal_ref.kode,
+                gambar=_url_gambar(baris.soal_ref.gambar),
+                pilihan_jawaban=baris.soal_ref.pilihan_jawaban,
+            )
+            for baris in paket.soal
+        ],
     )
 
 
 @app.post(
-    "/api/v1/analytics/pre-test/evaluasi",
+    "/api/v1/pretest/paket",
     dependencies=[Depends(verify_internal_token)],
-    response_model=EvaluasiPreTestResponse,
+    response_model=PaketResponse,
 )
-def evaluasi_pre_test_endpoint(
-    payload: EvaluasiPreTestRequest, db: Annotated[Session, Depends(get_db)]
-) -> EvaluasiPreTestResponse:
-    """Evaluasi skor Pre-Test terhadap passing grade jenjang terkait.
-    Jika lolos: buka akses simulasi jenjang ini & buka akses jenjang berikutnya.
-    Jika gagal: simulasi jenjang ini & jenjang berikutnya tetap terkunci.
+def buat_paket_pretest(
+    payload: PaketRequest, db: Annotated[Session, Depends(get_db)]
+) -> PaketResponse:
+    """Paket pre-test siswa (semua soal Mudah, rata per Materi). Idempoten
+    selama belum disubmit. 403 kalau pre-test tingkat ini belum terbuka, 409
+    kalau sudah dikerjakan.
     """
-    riwayat, simulasi_terbuka, tingkat_berikutnya_terbuka = evaluasi_dan_catat_pre_test(
-        db,
-        siswa_id=payload.siswa_id,
-        hasil_tes_id=payload.hasil_tes_id,
-        tingkat_seleksi_id=payload.tingkat_seleksi_id,
-        skor=payload.skor,
-    )
-    if riwayat is None:
-        return EvaluasiPreTestResponse(evaluasi_dilakukan=False)
-
+    try:
+        paket = susun_paket_pretest(
+            db, siswa_id=payload.siswa_id, tingkat_seleksi_id=payload.tingkat_seleksi_id
+        )
+    except TingkatTidakDitemukan as exc:
+        raise HTTPException(status_code=404, detail=str(exc)) from exc
+    except AksesDitolak as exc:
+        db.commit()  # simpan inisialisasi akses siswa baru
+        raise HTTPException(status_code=403, detail=str(exc)) from exc
+    except KonflikPaket as exc:
+        raise HTTPException(status_code=409, detail=str(exc)) from exc
     db.commit()
-    return EvaluasiPreTestResponse(
-        evaluasi_dilakukan=True,
-        hasil_evaluasi="lulus" if riwayat.lulus else "tidak_lulus",
-        lulus=riwayat.lulus,
-        skor_aktual=riwayat.skor_aktual,
-        passing_grade=riwayat.passing_grade,
-        simulasi_terbuka=simulasi_terbuka,
-        tingkat_berikutnya_terbuka=tingkat_berikutnya_terbuka,
-    )
+    return _paket_response(paket)
 
+
+@app.post(
+    "/api/v1/simulasi/paket",
+    dependencies=[Depends(verify_internal_token)],
+    response_model=PaketResponse,
+    responses={409: {"model": GerbangSimulasiResponse}},
+)
+def buat_paket_simulasi(
+    payload: PaketRequest, db: Annotated[Session, Depends(get_db)]
+) -> PaketResponse | JSONResponse:
+    """Paket simulasi adaptif (fase 2 issue 03). Idempoten selama belum
+    disubmit. 403 kalau materi & simulasi tingkat ini belum terbuka (pre-test
+    belum dikerjakan); 409 (body = GerbangSimulasiResponse) kalau Materi Wajib attempt
+    terakhir belum selesai dipelajari (Gerbang Simulasi, issue 04).
+    """
+    try:
+        paket = susun_paket_simulasi(
+            db, siswa_id=payload.siswa_id, tingkat_seleksi_id=payload.tingkat_seleksi_id
+        )
+    except TingkatTidakDitemukan as exc:
+        raise HTTPException(status_code=404, detail=str(exc)) from exc
+    except AksesDitolak as exc:
+        db.commit()  # simpan inisialisasi akses siswa baru
+        raise HTTPException(status_code=403, detail=str(exc)) from exc
+    except GerbangSimulasiTertutup as exc:
+        db.commit()
+        return JSONResponse(
+            status_code=409, content=_gerbang_simulasi_response(exc.status).model_dump()
+        )
+    db.commit()
+    return _paket_response(paket)
+
+
+@app.post(
+    "/api/v1/paket/{paket_id}/submit",
+    dependencies=[Depends(verify_internal_token)],
+    response_model=SubmitPaketResponse,
+)
+def submit_paket_tes(
+    paket_id: int, payload: SubmitPaketRequest, db: Annotated[Session, Depends(get_db)]
+) -> SubmitPaketResponse:
+    """Nilai Paket Tes: skor, predikat, Peta Kompetensi per Materi, Materi
+    lemah, dan status akses terbaru; untuk simulasi juga perubahan Level Soal
+    Siswa dan evaluasi jalur simulasi. 422 untuk soal di luar paket, 409 kalau
+    paket sudah disubmit.
+    """
+    try:
+        hasil = submit_paket(
+            db,
+            paket_id=paket_id,
+            sekolah_id=payload.sekolah_id,
+            nama_siswa=payload.nama_siswa,
+            nama_sekolah=payload.nama_sekolah,
+            jawaban=[
+                JawabanPaket(
+                    soal_id=j.soal_id,
+                    jawaban_dipilih=j.jawaban_dipilih,
+                    dibuka_pada=j.dibuka_pada,
+                    dijawab_pada=j.dijawab_pada,
+                )
+                for j in payload.jawaban
+            ],
+            diselesaikan_pada=datetime.now(timezone.utc),
+        )
+    except PaketTidakDitemukan as exc:
+        raise HTTPException(status_code=404, detail=str(exc)) from exc
+    except KonflikPaket as exc:
+        raise HTTPException(status_code=409, detail=str(exc)) from exc
+    except ValueError as exc:
+        raise HTTPException(status_code=422, detail=str(exc)) from exc
+    db.commit()
+    return SubmitPaketResponse(
+        hasil_tes_id=hasil.hasil_tes.id,
+        skor=hasil.hasil_tes.skor,
+        predikat=hasil.hasil_tes.predikat_label,
+        peta_kompetensi=[
+            PetaMateriItem(
+                materi_id=p.materi_id,
+                jumlah_soal=p.jumlah_soal,
+                jumlah_benar=p.jumlah_benar,
+                akurasi=p.akurasi,
+                status_pemetaan=STATUS_PEMETAAN_LABEL[p.status],
+            )
+            for p in hasil.peta
+        ],
+        materi_lemah=hasil.materi_lemah,
+        daftar_akses=[_akses_item(a) for a in hasil.akses],
+        perubahan_level=[
+            PerubahanLevelItem(
+                materi_id=p.materi_id,
+                level_sebelum=p.level_sebelum,
+                level_sesudah=p.level_sesudah,
+                lemah=p.lemah,
+                akurasi=p.akurasi,
+                diperbarui=p.diperbarui,
+            )
+            for p in hasil.perubahan_level
+        ],
+        evaluasi_jalur_simulasi=(
+            EvaluasiJalurSimulasiItem(
+                lulus=e.lulus,
+                syarat_skor_lulus=e.syarat_skor_lulus,
+                syarat_level_lulus=e.syarat_level_lulus,
+                rata_level_aktual=e.rata_level_aktual,
+            )
+            if (e := hasil.evaluasi_jalur_simulasi) is not None
+            else None
+        ),
+        review_soal=[
+            ReviewSoalItem(
+                soal_id=baris.soal_id,
+                pertanyaan=baris.soal_ref.pertanyaan,
+                jawaban_siswa=baris.jawaban_dipilih,
+                kunci_jawaban=baris.soal_ref.kunci_jawaban,
+                is_benar=bool(baris.is_benar),
+                pembahasan=baris.soal_ref.pembahasan,
+            )
+            for baris in db.scalars(
+                select(PaketTesSoal)
+                .where(PaketTesSoal.paket_tes_id == paket_id)
+                .order_by(PaketTesSoal.urutan)
+            ).all()
+        ],
+    )
 
 @app.get(
     "/api/v1/admin/dashboard",
@@ -416,33 +569,292 @@ def get_dashboard(
 def catat_event_materi_progress(
     payload: HalamanMateriEventRequest, db: Annotated[Session, Depends(get_db)]
 ) -> HalamanMateriEventResponse:
-    """Terima event 'siswa mencapai halaman Materi' dari Fullstack (resolusi
-    tiket 14), upsert high-water mark `progress_materi` (tiket 02) —
-    `catat_progress_halaman` sudah menegakkan aturan "tidak pernah turun
-    walau navigasi mundur".
+    """Siswa membuka satu halaman Materi (tiket 14, fase 2 issue 04): catat
+    riwayat baca & progres Materi Wajib aktif. 422 kalau Materi tidak ada atau
+    halaman di luar rentang.
     """
     try:
-        progress = catat_progress_halaman(
+        hasil = catat_baca_halaman(
             db,
             siswa_id=payload.siswa_id,
             materi_id=payload.materi_id,
-            subkompetensi_id=payload.subkompetensi_id,
-            tingkat_seleksi_id=payload.tingkat_seleksi_id,
-            total_halaman=payload.total_halaman,
-            halaman_dicapai=payload.halaman_dibuka,
+            halaman=payload.halaman,
+            dibuka_pada=payload.timestamp,
         )
     except ValueError as exc:
         raise HTTPException(status_code=422, detail=str(exc)) from exc
-
     db.commit()
-
     return HalamanMateriEventResponse(
-        siswa_id=progress.siswa_id,
-        materi_id=progress.materi_id,
-        halaman_tertinggi_dicapai=progress.halaman_tertinggi_dicapai,
-        total_halaman=progress.total_halaman,
+        siswa_id=hasil.siswa_id,
+        materi_id=hasil.materi_id,
+        halaman_dibuka=hasil.halaman_dibuka,
+        total_halaman=hasil.total_halaman,
         persentase_selesai=persentase_selesai(
-            halaman_tertinggi_dicapai=progress.halaman_tertinggi_dicapai,
-            total_halaman=progress.total_halaman,
+            halaman_dibuka=hasil.halaman_dibuka, total_halaman=hasil.total_halaman
         ),
+    )
+
+
+def _gerbang_simulasi_response(status: StatusGerbangSimulasi) -> GerbangSimulasiResponse:
+    return GerbangSimulasiResponse(
+        boleh_simulasi=status.boleh_simulasi,
+        jumlah_materi_wajib=len(status.materi_wajib),
+        jumlah_selesai=status.jumlah_selesai,
+        materi_wajib=[
+            MateriWajibItem(
+                materi_id=m.materi_id,
+                judul=m.judul,
+                urutan=m.urutan,
+                akurasi=m.akurasi,
+                halaman_dibuka=m.halaman_dibuka,
+                total_halaman=m.total_halaman,
+                selesai=m.selesai,
+            )
+            for m in status.materi_wajib
+        ],
+    )
+
+
+@app.get(
+    "/api/v1/siswa/{siswa_id}/remedial",
+    dependencies=[Depends(verify_internal_token)],
+    response_model=GerbangSimulasiResponse,
+)
+def get_status_gerbang_simulasi(
+    siswa_id: str, tingkat_seleksi_id: int, db: Annotated[Session, Depends(get_db)]
+) -> GerbangSimulasiResponse:
+    """Materi Wajib attempt terakhir siswa di satu tingkat + apakah simulasi
+    berikutnya boleh dibuat (Gerbang Simulasi, fase 2 issue 04)."""
+    try:
+        status = status_gerbang_simulasi(db, siswa_id=siswa_id, tingkat_seleksi_id=tingkat_seleksi_id)
+    except TingkatTidakDitemukan as exc:
+        raise HTTPException(status_code=404, detail=str(exc)) from exc
+    db.commit()  # simpan inisialisasi akses siswa baru
+    return _gerbang_simulasi_response(status)
+
+
+@app.get(
+    "/api/v1/siswa/{siswa_id}/leaderboard",
+    dependencies=[Depends(verify_internal_token)],
+    response_model=LeaderboardResponse,
+)
+def get_leaderboard(
+    siswa_id: str,
+    db: Annotated[Session, Depends(get_db)],
+    tingkat_seleksi_id: int | None = None,
+) -> LeaderboardResponse:
+    """5 teratas di jenjang yang diikuti siswa (tingkat tertinggi yang sudah
+    terbuka), dari skor gabungan 50% skor + 50% kecepatan attempt simulasi.
+    `tingkat_seleksi_id` opsional untuk melihat tingkat lain."""
+    try:
+        hasil = leaderboard_tingkat(db, siswa_id=siswa_id, tingkat_seleksi_id=tingkat_seleksi_id)
+    except TingkatTidakDitemukan as exc:
+        raise HTTPException(status_code=404, detail=str(exc)) from exc
+    db.commit()  # simpan inisialisasi akses siswa baru
+    return LeaderboardResponse(
+        tingkat_seleksi_id=hasil.tingkat.id,
+        nama_tingkat=hasil.tingkat.nama,
+        peringkat=[
+            PeringkatItem(
+                peringkat=p.peringkat.peringkat,
+                siswa_id=p.peringkat.siswa_id,
+                nama_siswa=p.nama_siswa,
+                sekolah_id=p.sekolah_id,
+                nama_sekolah=p.nama_sekolah,
+                skor=p.peringkat.skor,
+                durasi_detik=p.peringkat.durasi_detik,
+                skor_kecepatan=p.peringkat.skor_kecepatan,
+                skor_gabungan=p.peringkat.skor_gabungan,
+            )
+            for p in hasil.peringkat
+        ],
+    )
+
+
+# --- Katalog Materi -------------------------------------------------------------
+
+
+def _materi_item(
+    materi: Materi, dibaca: dict[str, set[int]] | None
+) -> MateriItem:
+    item = MateriItem(
+        materi_id=materi.id,
+        tingkat_seleksi_id=materi.tingkat_seleksi_id,
+        nama_tingkat=materi.tingkat_seleksi.nama,
+        topik=materi.topik,
+        judul=materi.judul,
+        total_halaman=materi.total_halaman,
+    )
+    if dibaca is not None:
+        jumlah = len(dibaca.get(materi.id, set()) & {h.nomor for h in materi.halaman})
+        item.halaman_dibaca = jumlah
+        # Materi tanpa dokumen (0 halaman) tidak punya persentase.
+        if materi.total_halaman:
+            item.persentase_dibaca = persentase_selesai(
+                halaman_dibuka=jumlah, total_halaman=materi.total_halaman
+            )
+    return item
+
+
+@app.get(
+    "/api/v1/materi",
+    dependencies=[Depends(verify_internal_token)],
+    response_model=list[MateriItem],
+)
+def get_daftar_materi(
+    db: Annotated[Session, Depends(get_db)],
+    tingkat_seleksi_id: int | None = None,
+    siswa_id: str | None = None,
+) -> list[MateriItem]:
+    """Daftar Materi (urut tingkat & nomor topik), opsional difilter satu
+    tingkat. Dengan siswa_id: ikut jumlah halaman yang pernah dibuka siswa."""
+    try:
+        materi = daftar_materi(db, tingkat_seleksi_id=tingkat_seleksi_id)
+    except TingkatTidakDitemukan as exc:
+        raise HTTPException(status_code=404, detail=str(exc)) from exc
+    dibaca = (
+        halaman_dibaca_siswa(db, siswa_id=siswa_id, materi_ids=[m.id for m in materi])
+        if siswa_id is not None
+        else None
+    )
+    return [_materi_item(m, dibaca) for m in materi]
+
+
+@app.get(
+    "/api/v1/materi/{materi_id}",
+    dependencies=[Depends(verify_internal_token)],
+    response_model=MateriDetailResponse,
+)
+def get_detail_materi(
+    materi_id: str, db: Annotated[Session, Depends(get_db)], siswa_id: str | None = None
+) -> MateriDetailResponse:
+    """Satu Materi + daftar isi halamannya (nomor & judul, tanpa konten)."""
+    try:
+        materi = get_materi(db, materi_id)
+    except MateriTidakDitemukan as exc:
+        raise HTTPException(status_code=404, detail=str(exc)) from exc
+    dibaca = (
+        halaman_dibaca_siswa(db, siswa_id=siswa_id, materi_ids=[materi.id])
+        if siswa_id is not None
+        else None
+    )
+    nomor_dibaca = dibaca.get(materi.id, set()) if dibaca is not None else None
+    return MateriDetailResponse(
+        **_materi_item(materi, dibaca).model_dump(),
+        halaman=[
+            HalamanRingkasItem(
+                nomor=h.nomor,
+                judul=h.judul,
+                sudah_dibaca=None if nomor_dibaca is None else h.nomor in nomor_dibaca,
+            )
+            for h in materi.halaman
+        ],
+    )
+
+
+@app.get(
+    "/api/v1/materi/{materi_id}/halaman/{nomor}",
+    dependencies=[Depends(verify_internal_token)],
+    response_model=HalamanMateriResponse,
+)
+def get_halaman_materi(
+    materi_id: str, nomor: int, db: Annotated[Session, Depends(get_db)]
+) -> HalamanMateriResponse:
+    """Konten satu Halaman Materi. Hanya membaca — progres dicatat terpisah
+    lewat POST /api/v1/analytics/events/materi-progress."""
+    try:
+        materi = get_materi(db, materi_id)
+    except MateriTidakDitemukan as exc:
+        raise HTTPException(status_code=404, detail=str(exc)) from exc
+    halaman = next((h for h in materi.halaman if h.nomor == nomor), None)
+    if halaman is None:
+        raise HTTPException(
+            status_code=404, detail=f"Halaman {nomor} Materi {materi_id} tidak ditemukan"
+        )
+    return HalamanMateriResponse(
+        materi_id=materi.id,
+        judul_materi=materi.judul,
+        nomor=halaman.nomor,
+        judul=halaman.judul,
+        konten=halaman.konten,
+        total_halaman=materi.total_halaman,
+        nomor_sebelumnya=nomor - 1 if nomor > 1 else None,
+        nomor_berikutnya=nomor + 1 if nomor < materi.total_halaman else None,
+    )
+
+
+
+# --- Latihan (formatif wajib, gate simulasi >= 50%) --------------------------
+
+
+@app.post(
+    "/api/v1/latihan/paket",
+    dependencies=[Depends(verify_internal_token)],
+    response_model=LatihanResponse,
+)
+def ambil_soal_latihan(
+    payload: LatihanRequest, db: Annotated[Session, Depends(get_db)]
+) -> LatihanResponse:
+    """Ambil soal latihan untuk satu materi. Pembahasan disertakan langsung
+    (latihan = formatif, beda dari simulasi)."""
+    try:
+        soal = susun_paket_latihan(
+            db,
+            siswa_id=payload.siswa_id,
+            materi_id=payload.materi_id,
+            jumlah_soal=payload.jumlah_soal,
+        )
+    except ValueError as exc:
+        raise HTTPException(status_code=404, detail=str(exc)) from exc
+    return LatihanResponse(
+        materi_id=payload.materi_id,
+        jumlah_soal=len(soal),
+        soal=[
+            SoalLatihanItem(
+                soal_id=s.id,
+                tipe=s.tipe,
+                deskripsi=s.deskripsi,
+                pertanyaan=s.pertanyaan,
+                kode=s.kode,
+                gambar=_url_gambar(s.gambar),
+                pilihan_jawaban=s.pilihan_jawaban,
+                pembahasan=s.pembahasan,
+            )
+            for s in soal
+        ],
+    )
+
+
+@app.post(
+    "/api/v1/latihan/submit",
+    dependencies=[Depends(verify_internal_token)],
+    response_model=SubmitLatihanResponse,
+)
+def submit_latihan_endpoint(
+    payload: SubmitLatihanRequest, db: Annotated[Session, Depends(get_db)]
+) -> SubmitLatihanResponse:
+    """Nilai sesi Latihan. Threshold lulus: nilai >= 50%.
+    Pengulangan unlimited — setiap submit bikin baris Latihan baru."""
+    try:
+        hasil = submit_latihan(
+            db,
+            siswa_id=payload.siswa_id,
+            materi_id=payload.materi_id,
+            tingkat_seleksi_id=payload.tingkat_seleksi_id,
+            soal_ids=payload.soal_ids,
+            jawaban=[
+                JawabanLatihan(soal_id=j.soal_id, jawaban_dipilih=j.jawaban_dipilih)
+                for j in payload.jawaban
+            ],
+        )
+    except ValueError as exc:
+        raise HTTPException(status_code=422, detail=str(exc)) from exc
+    db.commit()
+    return SubmitLatihanResponse(
+        latihan_id=hasil.latihan_id,
+        nilai=hasil.nilai,
+        jumlah_benar=hasil.jumlah_benar,
+        jumlah_salah=hasil.jumlah_salah,
+        total_soal=hasil.total_soal,
+        lulus=hasil.lulus,
     )

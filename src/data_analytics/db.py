@@ -1,6 +1,6 @@
 """Engine & session factory SQLAlchemy (tiket 09) — dipakai FastAPI app dan
-alembic/env.py. Unit test model/repository memakai engine SQLite in-memory
-sendiri lewat tests/conftest.py, tidak lewat modul ini.
+alembic/env.py. Test memakai engine Postgres sendiri lewat tests/conftest.py
+(TEST_DATABASE_URL), tidak lewat modul ini.
 """
 
 from __future__ import annotations
