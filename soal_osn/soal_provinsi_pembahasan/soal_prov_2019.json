@@ -7,7 +7,8 @@
     "gambar_url": null,
     "gambar_lokal": "../gambar_provinsi/soal_1_1_prov_2019.png, ../gambar_provinsi/soal_1_2_prov_2019.png",
     "jawaban_benar": "3",
-    "pembahasan": "Penyelesaian maksimal independent set pada graf dengan 6 simpul setelah menghapus 1 sisi menghasilkan maksimal 3 simpul."
+    "pembahasan": "Penyelesaian maksimal independent set pada graf dengan 6 simpul setelah menghapus 1 sisi menghasilkan maksimal 3 simpul.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Struktur pohon di bidang informatika...",
@@ -17,7 +18,8 @@
     "gambar_url": null,
     "gambar_lokal": "../gambar_provinsi/soal_2_prov_2019.png",
     "jawaban_benar": "2",
-    "pembahasan": "Analisis struktur pohon N-ary seimbang penuh dengan total 31 simpul (bebek) untuk mencari nilai N terbesar yang memenuhi batas keindahan $\nge 50$."
+    "pembahasan": "Analisis struktur pohon N-ary seimbang penuh dengan total 31 simpul (bebek) untuk mencari nilai N terbesar yang memenuhi batas keindahan $\nge 50$.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -27,7 +29,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "6",
-    "pembahasan": "Faktor dari 90 yang merupakan kelipatan 15 adalah 15, 30, 45, dan 90. Kombinasi himpunan bagian yang mencakup 15 dan 90 menghasilkan 6 kemungkinan deret."
+    "pembahasan": "Faktor dari 90 yang merupakan kelipatan 15 adalah 15, 30, 45, dan 90. Kombinasi himpunan bagian yang mencakup 15 dan 90 menghasilkan 6 kemungkinan deret.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Pak Dengklek membuat soal logika. Ia menyusun 6 pernyataan x_1 s.d x_6...",
@@ -37,7 +40,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "15",
-    "pembahasan": "Evaluasi ekspresi logika $(x_i \nlor x_j) \nlor (x_i \to x_j)$ untuk seluruh 15 pasangan pada konfigurasi tertentu dapat bernilai TRUE semuanya (maksimal 15)."
+    "pembahasan": "Evaluasi ekspresi logika $(x_i \nlor x_j) \nlor (x_i \to x_j)$ untuk seluruh 15 pasangan pada konfigurasi tertentu dapat bernilai TRUE semuanya (maksimal 15).",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Pak Dengklek membuat soal logika. Ia menyusun 6 pernyataan x_1 s.d x_6...",
@@ -47,7 +51,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "15",
-    "pembahasan": "Dengan kondisi 3 pernyataan FALSE dan 3 TRUE, evaluasi maksimal kombinasi pasangan tetap dapat menghasilkan 15 nilai TRUE."
+    "pembahasan": "Dengan kondisi 3 pernyataan FALSE dan 3 TRUE, evaluasi maksimal kombinasi pasangan tetap dapat menghasilkan 15 nilai TRUE.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Mata uang di negara Pak Blangkon hanya memiliki 3 macam koin: 1, 7, dan 23...",
@@ -57,7 +62,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "4",
-    "pembahasan": "Pengujian penambahan nilai koin baru dari 2 hingga 30 yang menjaga sifat penukaran koin minimal tetap konsisten menghasilkan 4 nilai."
+    "pembahasan": "Pengujian penambahan nilai koin baru dari 2 hingga 30 yang menjaga sifat penukaran koin minimal tetap konsisten menghasilkan 4 nilai.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Diberikan petak-petak dengan X dan Y...",
@@ -67,7 +73,8 @@
     "gambar_url": null,
     "gambar_lokal": "../gambar_provinsi/soal_7_prov_2019.png",
     "jawaban_benar": "-1",
-    "pembahasan": "Simulasi pergerakan robot dengan aturan prioritas arah menunjukkan robot terjebak dan tidak pernah sampai ke titik Y."
+    "pembahasan": "Simulasi pergerakan robot dengan aturan prioritas arah menunjukkan robot terjebak dan tidak pernah sampai ke titik Y.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Diberikan petak-petak dengan X dan Y...",
@@ -77,7 +84,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Koordinat sel",
-    "pembahasan": "Analisis pemblokiran jalur alternatif agar robot terpaksa mengambil rute terpanjang menuju Y."
+    "pembahasan": "Analisis pemblokiran jalur alternatif agar robot terpaksa mengambil rute terpanjang menuju Y.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Kecamatan Pak Dengklek memiliki 5 desa: A, B, C, D, dan E...",
@@ -87,7 +95,8 @@
     "gambar_url": null,
     "gambar_lokal": "../gambar_provinsi/soal_9_prov_2019.png",
     "jawaban_benar": "Nilai biaya minimum (MST)",
-    "pembahasan": "Penerapan algoritma Minimum Spanning Tree (MST) untuk mencari total biaya minimum penghubung desa."
+    "pembahasan": "Penerapan algoritma Minimum Spanning Tree (MST) untuk mencari total biaya minimum penghubung desa.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Kecamatan Pak Dengklek memiliki 5 desa...",
@@ -97,7 +106,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Nilai biaya MST kedua",
-    "pembahasan": "Pencarian Second Best Minimum Spanning Tree pada graf berbobot desa."
+    "pembahasan": "Pencarian Second Best Minimum Spanning Tree pada graf berbobot desa.",
+    "tingkat_kesulitan": "sulit"
   },
   {
     "deskripsi_soal": null,
@@ -107,7 +117,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "1470362958",
-    "pembahasan": "Rekonstruksi pemetaan fungsi permutasi digit f(x) berdasarkan komposisi fungsi dua kali lipat."
+    "pembahasan": "Rekonstruksi pemetaan fungsi permutasi digit f(x) berdasarkan komposisi fungsi dua kali lipat.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -117,7 +128,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "1010",
-    "pembahasan": "Analisis konsistensi logika pernyataan berurutan dari 1 hingga 2020 menghasilkan maksimal tepat separuh bernilai benar, yaitu 1010."
+    "pembahasan": "Analisis konsistensi logika pernyataan berurutan dari 1 hingga 2020 menghasilkan maksimal tepat separuh bernilai benar, yaitu 1010.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -127,7 +139,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "0",
-    "pembahasan": "Nilai $2^{29} = 536870912$. Digit yang menyusun adalah 5, 3, 6, 8, 7, 0, 9, 1, 2. Digit yang tidak ada adalah 4 (atau hitung digit unik, perhatikan bahwa $2^{29}$ memiliki digit lengkap kecuali satu angka tertentu; koreksi kalkulasi: $536870912$ memiliki angka 0,1,2,3,5,6,7,8,9, sehingga angka 4 tidak ada)."
+    "pembahasan": "Nilai $2^{29} = 536870912$. Digit yang menyusun adalah 5, 3, 6, 8, 7, 0, 9, 1, 2. Digit yang tidak ada adalah 4 (atau hitung digit unik, perhatikan bahwa $2^{29}$ memiliki digit lengkap kecuali satu angka tertentu; koreksi kalkulasi: $536870912$ memiliki angka 0,1,2,3,5,6,7,8,9, sehingga angka 4 tidak ada).",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -137,7 +150,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "79",
-    "pembahasan": "Kelipatan bersama dari 3 dan x pada rentang 1000 dengan jumlah 393 mengindikasikan KPK(3,x) = 3x (karena relatif prima). $\nlfloor 1000 / (3x) \nrfloor = 393 \rightarrow 3x \napprox \text{faktor}$, menghasilkan nilai x = 79."
+    "pembahasan": "Kelipatan bersama dari 3 dan x pada rentang 1000 dengan jumlah 393 mengindikasikan KPK(3,x) = 3x (karena relatif prima). $\nlfloor 1000 / (3x) \nrfloor = 393 \rightarrow 3x \napprox \text{faktor}$, menghasilkan nilai x = 79.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Terdapat beberapa buah kota yang terhubung dengan penerbangan satu arah...",
@@ -147,7 +161,8 @@
     "gambar_url": null,
     "gambar_lokal": "../gambar_provinsi/soal_15_prov_2019.png",
     "jawaban_benar": "Jumlah rute",
-    "pembahasan": "Perkalian matriks ketetanggaan graf berarah sebanyak 4 langkah dari simpul 0 ke 9."
+    "pembahasan": "Perkalian matriks ketetanggaan graf berarah sebanyak 4 langkah dari simpul 0 ke 9.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Terdapat beberapa buah kota yang terhubung dengan penerbangan...",
@@ -157,7 +172,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Jumlah pembatalan minimal",
-    "pembahasan": "Analisis pemutusan sisi (edge cut) pada graf berarah untuk menyisakan tepat 2 jalur unik."
+    "pembahasan": "Analisis pemutusan sisi (edge cut) pada graf berarah untuk menyisakan tepat 2 jalur unik.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -167,7 +183,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "8",
-    "pembahasan": "Setiap posisi dari 8 bit memiliki peluang independen untuk sama sebesar $1/2$. Untuk 8 bit, peluangnya adalah $(1/2)^8$, sehingga n = 8."
+    "pembahasan": "Setiap posisi dari 8 bit memiliki peluang independen untuk sama sebesar $1/2$. Untuk 8 bit, peluangnya adalah $(1/2)^8$, sehingga n = 8.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Diberikan graf dengan 10 simpul...",
@@ -177,7 +194,8 @@
     "gambar_url": null,
     "gambar_lokal": "../gambar_provinsi/soal_18_prov_2019.png",
     "jawaban_benar": "Jarak terpendek",
-    "pembahasan": "Penerapan algoritma jalur terpendek (Dijkstra/BFS) pada graf tak berarah 10 simpul."
+    "pembahasan": "Penerapan algoritma jalur terpendek (Dijkstra/BFS) pada graf tak berarah 10 simpul.",
+    "tingkat_kesulitan": "sulit"
   },
   {
     "deskripsi_soal": null,
@@ -187,7 +205,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Jumlah minimal",
-    "pembahasan": "Penelusuran graf ketergantungan syarat (dependency graph) dari simpul 1 menuju simpul dasar."
+    "pembahasan": "Penelusuran graf ketergantungan syarat (dependency graph) dari simpul 1 menuju simpul dasar.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Diberikan beberapa premis logika...",
@@ -197,7 +216,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "1",
-    "pembahasan": "Evaluasi deduksi nilai boolean dari premis-prezim yang diberikan saat A = TRUE menghasilkan tepat 1 kombinasi unik."
+    "pembahasan": "Evaluasi deduksi nilai boolean dari premis-prezim yang diberikan saat A = TRUE menghasilkan tepat 1 kombinasi unik.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Diberikan beberapa premis logika...",
@@ -207,7 +227,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "2",
-    "pembahasan": "Total kombinasi seluruh variabel boolean A, B, C, D, E yang konsisten dengan premis berjumlah 2."
+    "pembahasan": "Total kombinasi seluruh variabel boolean A, B, C, D, E yang konsisten dengan premis berjumlah 2.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Pak Dengklek memiliki N kotak berderet 1 sampai N, penukaran hanya boleh pada 2 kotak yang bersebelahan...",
@@ -217,7 +238,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "0",
-    "pembahasan": "Jumlah pertukaran minimum dari 'semua konfigurasi' (artinya jika konfigurasi sudah terurut sejak awal) adalah 0."
+    "pembahasan": "Jumlah pertukaran minimum dari 'semua konfigurasi' (artinya jika konfigurasi sudah terurut sejak awal) adalah 0.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Pak Dengklek memiliki N kotak berderet... penukaran bersebelahan (Bubble sort).",
@@ -227,7 +249,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "45",
-    "pembahasan": "Kasus terburuk (worst case) untuk permutasi terbalik pada N elemen membutuhkan jumlah pertukaran inversi maksimum sebesar $N(N-1)/2$. Untuk N = 10, hasilnya $10 \times 9 / 2 = 45$."
+    "pembahasan": "Kasus terburuk (worst case) untuk permutasi terbalik pada N elemen membutuhkan jumlah pertukaran inversi maksimum sebesar $N(N-1)/2$. Untuk N = 10, hasilnya $10 \times 9 / 2 = 45$.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Array A dengan panjang N. A[i] = i XOR (i+1) XOR ... XOR (N-1). Fungsi F(N) adalah jumlah seluruh elemen A.",
@@ -237,7 +260,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Nilai F(12)",
-    "pembahasan": "Penjumlahan elemen array hasil operasi XOR beruntun untuk N = 12."
+    "pembahasan": "Penjumlahan elemen array hasil operasi XOR beruntun untuk N = 12.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Array A dengan panjang N. A[i] = i XOR (i+1) XOR ... XOR (N-1).",
@@ -247,7 +271,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Nilai F(200)",
-    "pembahasan": "Pola matematis hasil penjumlahan fungsi XOR prefiks untuk N = 200."
+    "pembahasan": "Pola matematis hasil penjumlahan fungsi XOR prefiks untuk N = 200.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -256,8 +281,9 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "Jumlah X",
-    "pembahasan": "Total ikan yang diambil oleh X bebek pertama adalah jumlah deret ganjil $1 + 3 + \\dots + (2X-1) = X^2$. Sisa ikan $N^2 - X^2 = 225 \rightarrow (N-X)(N+X) = 15^2$. Analisis faktor dari 225 untuk mencari nilai-nilai X yang valid."
+    "jawaban_benar": "176",
+    "pembahasan": "Total ikan yang diambil oleh $X$ bebek pertama adalah jumlah $X$ bilangan ganjil pertama:\n$\\sum_{i=1}^X (2i - 1) = X^2$.\nSisa ikan adalah $N^2 - X^2 = 225 \\iff (N - X)(N + X) = 225$.\nKarena $N > X > 0$, selisih $N-X$ dan jumlah $N+X$ keduanya harus faktor ganjil dari 225 dengan $N-X < N+X$:\n- $1 \\times 225 \\implies 2X = 225 - 1 = 224 \\implies X = 112$ (dengan $N = 113$).\n- $3 \\times 75 \\implies 2X = 75 - 3 = 72 \\implies X = 36$ (dengan $N = 39$).\n- $5 \\times 45 \\implies 2X = 45 - 5 = 40 \\implies X = 20$ (dengan $N = 25$).\n- $9 \\times 25 \\implies 2X = 25 - 9 = 16 \\implies X = 8$ (dengan $N = 17$).\nSemua kemungkinan nilai $X$ adalah $\\{8, 20, 36, 112\\}$.\nJumlah dari seluruh kemungkinan nilai $X$ adalah $8 + 20 + 36 + 112 = 176$.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": null,
@@ -267,7 +293,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Jumlah bebek babak akhir",
-    "pembahasan": "Penyelesaian teori permainan alokasi sumber daya (*pirate game*) untuk 10 bebek."
+    "pembahasan": "Penyelesaian teori permainan alokasi sumber daya (*pirate game*) untuk 10 bebek.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -277,7 +304,8 @@
     "gambar_url": null,
     "gambar_lokal": "../gambar_provinsi/soal_28_prov_2019.png",
     "jawaban_benar": "A5-...",
-    "pembahasan": "Pencarian jalur terpendek berbobot minimum pada grid matriks jumlah ayam."
+    "pembahasan": "Pencarian jalur terpendek berbobot minimum pada grid matriks jumlah ayam.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -287,7 +315,8 @@
     "gambar_url": null,
     "gambar_lokal": "../gambar_provinsi/soal_29_prov_2019.png",
     "jawaban_benar": "Biru / Merah / Hijau / Putih",
-    "pembahasan": "Perhitungan total biaya (ongkos angkot + harga pakan saat tiba di pasar) untuk setiap opsi angkot guna mencari biaya minimum."
+    "pembahasan": "Perhitungan total biaya (ongkos angkot + harga pakan saat tiba di pasar) untuk setiap opsi angkot guna mencari biaya minimum.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -297,7 +326,8 @@
     "gambar_url": null,
     "gambar_lokal": "../gambar_provinsi/soal_33_prov_2019.png",
     "jawaban_benar": "H416",
-    "pembahasan": "Penerapan aturan Soundex pada kata Hilbert: Huruf pertama H, hilangkan vokal/H/dll, konversi sisa konsonan ke digit menghasilkan H416."
+    "pembahasan": "Penerapan aturan Soundex pada kata Hilbert: Huruf pertama H, hilangkan vokal/H/dll, konversi sisa konsonan ke digit menghasilkan H416.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -307,7 +337,8 @@
     "gambar_url": null,
     "gambar_lokal": "../gambar_provinsi/soal_34_1_prov_2019.png",
     "jawaban_benar": "1-1-0-...",
-    "pembahasan": "Penyaringan string biner sepanjang 10 digit yang memenuhi seluruh batasan petunjuk."
+    "pembahasan": "Penyaringan string biner sepanjang 10 digit yang memenuhi seluruh batasan petunjuk.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -317,7 +348,8 @@
     "gambar_url": null,
     "gambar_lokal": "../gambar_provinsi/soal_13_prov_2019.png",
     "jawaban_benar": "7-5-2",
-    "pembahasan": "Analisis petunjuk kombinasi angka Mastermind untuk menemukan 3 digit yang tepat pada posisi yang tepat."
+    "pembahasan": "Analisis petunjuk kombinasi angka Mastermind untuk menemukan 3 digit yang tepat pada posisi yang tepat.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -327,7 +359,8 @@
     "gambar_url": null,
     "gambar_lokal": "../gambar_provinsi/soal_33_prov_2019.png",
     "jawaban_benar": "Desa tujuan",
-    "pembahasan": "Penelusuran graf perjalanan dengan batasan tepat 5 kali menggunakan jalur berbayar dan posisi akhir bukan B atau E."
+    "pembahasan": "Penelusuran graf perjalanan dengan batasan tepat 5 kali menggunakan jalur berbayar dan posisi akhir bukan B atau E.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -337,7 +370,8 @@
     "gambar_url": null,
     "gambar_lokal": "../gambar_provinsi/soal_34_prov_2019.png",
     "jawaban_benar": "Huruf maze",
-    "pembahasan": "Simulasi aturan pergerakan robot wall-follower kanan pada pilihan maze."
+    "pembahasan": "Simulasi aturan pergerakan robot wall-follower kanan pada pilihan maze.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -347,7 +381,8 @@
     "gambar_url": null,
     "gambar_lokal": "../gambar_provinsi/soal_35_prov_2019.png",
     "jawaban_benar": "Q / S / R",
-    "pembahasan": "Pencocokan urutan waktu tempuh minimum kunjungan kandang hewan di ladang Pak Dengklek."
+    "pembahasan": "Pencocokan urutan waktu tempuh minimum kunjungan kandang hewan di ladang Pak Dengklek.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -356,8 +391,9 @@
     "kode": "var n: integer; procedure printgraf(x: integer); ...",
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "Jumlah pemanggilan",
-    "pembahasan": "Penghitungan kompleksitas rekurensi fungsi `printgraf` untuk n = 6."
+    "jawaban_benar": "865",
+    "pembahasan": "Prosedur rekursif `printgraf(x)`:\nJika $x \\ge 0$, prosedur memanggil `printgraf(x-1)` dua kali dan `printgraf(x-2)` satu kali.\nBanyaknya pemanggilan fungsi memenuhi relasi rekursif:\n$C(x) = 1 + 2C(x-1) + C(x-2)$ dengan basis $C(x) = 1$ untuk $x < 0$.\n- $C(-2) = 1, C(-1) = 1$\n- $C(0) = 1 + 2(1) + 1 = 4$\n- $C(1) = 1 + 2(4) + 1 = 10$\n- $C(2) = 1 + 2(10) + 4 = 25$\n- $C(3) = 1 + 2(25) + 10 = 61$\n- $C(4) = 1 + 2(61) + 25 = 148$\n- $C(5) = 1 + 2(148) + 61 = 358$\n- $C(6) = 1 + 2(358) + 148 = 865$.\nJadi fungsi `printgraf` akan dipanggil sebanyak 865 kali saat $n = 6$.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -366,8 +402,9 @@
     "kode": "var n: integer; procedure printgraf(x: integer); ...",
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "Nilai n",
-    "pembahasan": "Evaluasi pertumbuhan jumlah karakter '*' pada fungsi rekursif hingga mencapai batas 2019."
+    "jawaban_benar": "9",
+    "pembahasan": "Banyaknya bintang yang dicetak memenuhi relasi rekursif:\n$S(x) = 2S(x-1) + S(x-2) + x$ untuk $x \\ge 0$, dengan $S(x) = 0$ untuk $x < 0$.\n- $S(0) = 0$\n- $S(1) = 2(0) + 0 + 1 = 1$\n- $S(2) = 2(1) + 0 + 2 = 4$\n- $S(3) = 2(4) + 1 + 3 = 12$\n- $S(4) = 2(12) + 4 + 4 = 32$\n- $S(5) = 2(32) + 12 + 5 = 81$\n- $S(6) = 2(81) + 32 + 6 = 200$\n- $S(7) = 2(200) + 81 + 7 = 488$\n- $S(8) = 2(488) + 200 + 8 = 1184$\n- $S(9) = 2(1184) + 488 + 9 = 2865$.\nKarena $S(8) = 1184 < 2019$ dan $S(9) = 2865 \\ge 2019$, maka nilai $n$ minimum adalah 9.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Diberikan Input dan Output program serta 4 potongan kode A, B, C, D...",
@@ -377,7 +414,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "C",
-    "pembahasan": "Analisis pola perulangan spasi dan bintang pada potongan kode untuk mencetak segitiga siku-siku terbalik sesuai sampel."
+    "pembahasan": "Analisis pola perulangan spasi dan bintang pada potongan kode untuk mencetak segitiga siku-siku terbalik sesuai sampel.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -387,7 +425,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Format angka",
-    "pembahasan": "Tracing pemanggilan rekursif in-order/pre-order pada prosedur `whats` dengan batas n = 10."
+    "pembahasan": "Tracing pemanggilan rekursif in-order/pre-order pada prosedur `whats` dengan batas n = 10.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -397,7 +436,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Format angka",
-    "pembahasan": "Tracing pola urutan cetak rekursif skala besar dengan n = 500."
+    "pembahasan": "Tracing pola urutan cetak rekursif skala besar dengan n = 500.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "FIBONACCI: Menghitung bilangan Fibonacci ke-N modulo 10^9 + 7 untuk Q pertanyaan.",
@@ -406,7 +446,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Hasil modulo",
-    "pembahasan": "Implementasi pemrograman dinamis atau perpangkatan matriks cepat untuk barisan Fibonacci besar."
+    "pembahasan": "Implementasi pemrograman dinamis atau perpangkatan matriks cepat untuk barisan Fibonacci besar.",
+    "tingkat_kesulitan": "sulit"
   },
   {
     "deskripsi_soal": "UKURAN SEGMEN: Mencari ukuran maksimum garis valid (gradien sama) dari N titik koordinat.",
@@ -415,6 +456,7 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Jumlah titik segmen",
-    "pembahasan": "Menghitung kemiringan (gradien) antar seluruh pasangan titik dan mengelompokkannya dengan toleransi presisi $10^{-9}$."
+    "pembahasan": "Menghitung kemiringan (gradien) antar seluruh pasangan titik dan mengelompokkannya dengan toleransi presisi $10^{-9}$.",
+    "tingkat_kesulitan": "sedang"
   }
 ]

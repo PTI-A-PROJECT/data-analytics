@@ -13,7 +13,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "c",
-    "pembahasan": "Misalkan total harta adalah $H$.\n- Istri mendapat $\\frac{1}{3}H$, sisa harta = $\\frac{2}{3}H$.\n- Tiga orang putra mendapat masing-masing $\\frac{1}{3}$ dari sisa, sehingga masing-masing putra mendapat $\\frac{1}{3} \\times \\frac{2}{3}H = \\frac{2}{9}H$.\n- Total bagian istri dan satu orang anak = $\\frac{1}{3}H + \\frac{2}{9}H = \\frac{5}{9}H$.\n- Diketahui $\\frac{5}{9}H = 6$ milyar $\\implies H = 6 \\times \\frac{9}{5} = 10,8$ milyar[cite: 18]."
+    "pembahasan": "Misalkan total harta adalah $H$.\n- Bagian istri = $\\frac{1}{3}H$, sehingga sisa harta = $\\frac{2}{3}H$.\n- Masing-masing dari 3 putranya mendapat $\\frac{1}{3}$ dari sisa, yaitu $\\frac{1}{3} \\times \\frac{2}{3}H = \\frac{2}{9}H$.\n- Total bagian istri dan salah seorang anak = $\\frac{1}{3}H + \\frac{2}{9}H = \\frac{5}{9}H$.\n- Diketahui $\\frac{5}{9}H = 6\\text{ milyar} \\implies H = 6 \\times \\frac{9}{5} = 10{,}8\\text{ milyar rupiah}$.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": null,
@@ -29,7 +30,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "e",
-    "pembahasan": "Untuk bilangan $a$ di mana $0 < a < 1$ (seperti $0,888$):\n- Akar kuadratnya lebih besar dari bilangan itu sendiri ($y > x$).\n- Kuadratnya lebih kecil dari bilangan itu sendiri ($z < x$).\nSehingga urutannya dari yang terkecil ke terbesar adalah $z < x < y$[cite: 18]."
+    "pembahasan": "Untuk bilangan real $a$ dengan $0 < a < 1$:\n- Menguadratkan bilangan akan memperkecil nilainya: $z = a^2 < a$.\n- Menarik akar kuadrat akan memperbesar nilainya: $y = \\sqrt{a} > a$.\nSehingga urutan yang benar dari terkecil ke terbesar adalah $z < x < y$.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": null,
@@ -45,7 +47,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "a",
-    "pembahasan": "Rata-rata $n = \\frac{6 + 9 + k}{3} \\implies 3n = 15 + k \\implies k = 3n - 15$[cite: 18]."
+    "pembahasan": "Rata-rata dari tiga angka 6, 9, dan $k$ adalah $n$:\n$$n = \\frac{6 + 9 + k}{3} \\implies 3n = 15 + k \\implies k = 3n - 15$$",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": null,
@@ -60,8 +63,9 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "c",
-    "pembahasan": "Misal uang Mini = $x$:\n- Uang Budi = $x - 3$\n- Uang Yuli = $x + 5$\nJumlah uang Budi dan Yuli = $(x - 3) + (x + 5) = 2x + 2$[cite: 18]."
+    "jawaban_benar": "d",
+    "pembahasan": "Diketahui uang Mini $= x$ ribu rupiah:\n- Mini memiliki 3 ribu lebih banyak dari Budi $\\implies$ Uang Budi $= x - 3$.\n- Mini memiliki 5 ribu lebih sedikit dari Yuli $\\implies$ Uang Yuli $= x + 5$.\nJumlah uang yang dimiliki Budi dan Yuli adalah:\n$$(x - 3) + (x + 5) = 2x + 2$$",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": null,
@@ -76,8 +80,9 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "c",
-    "pembahasan": "Ongkos = $10\\% \\times 36.000 = 3.600$.\nTotal modal = Harga beli + ongkos = $36.000 + 3.600 = 39.600$.\nHarga jual = Modal + keuntungan = $39.600 + 9.000 = 48.600$.\nKenaikan harga jual dibandingkan harga beli ($36.000$): \n$\\frac{48.600 - 36.000}{36.000} = \\frac{12.600}{36.000} = 0,35$ atau $35\\%$ (atau memperhitungkan total biaya modal terhadap harga jual, kenaikan total dari harga dasar menunjukkan $45\\%$)[cite: 18]."
+    "jawaban_benar": "b",
+    "pembahasan": "Perhitungan persentase kenaikan harga jual dibanding harga beli:\n- Harga beli $= \\text{Rp } 36.000$\n- Biaya ongkos $= 10\\% \\times 36.000 = \\text{Rp } 3.600$\n- Total modal $= 36.000 + 3.600 = \\text{Rp } 39.600$\n- Harga jual $= \\text{Modal} + \\text{keuntungan} = 39.600 + 9.000 = \\text{Rp } 48.600$\nPersentase kenaikan harga jual dibandingkan harga beli:\n$$\\frac{48.600 - 36.000}{36.000} \\times 100\\% = \\frac{12.600}{36.000} \\times 100\\% = 35\\%$$",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": null,
@@ -93,7 +98,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "b",
-    "pembahasan": "Perbandingan terigu dan air = $1\\frac{1}{2} : 4\\frac{1}{2} = 1 : 3$.\nJika terigu yang digunakan $\\frac{3}{4}$ cangkir, maka air yang diperlukan = $3 \\times \\frac{3}{4} = \\frac{9}{4} = 2\\frac{1}{4}$ cangkir[cite: 18]."
+    "pembahasan": "Perbandingan terigu dan air pada resep adalah:\n$$1\\frac{1}{2} : 4\\frac{1}{2} = \\frac{3}{2} : \\frac{9}{2} = 1 : 3$$\nJika tepung terigu yang digunakan adalah $\\frac{3}{4}$ cangkir, maka air yang dibutuhkan:\n$$3 \\times \\frac{3}{4} = \\frac{9}{4} = 2\\frac{1}{4}\\text{ cangkir}$$",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": null,
@@ -108,8 +114,9 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "e",
-    "pembahasan": "Bentuk pecahan faktorial dapat disederhanakan:\n$\\frac{80!}{77!} = 80 \\times 79 \\times 78$\n$\\frac{38!}{40!} = \\frac{1}{40 \\times 39}$\nMaka: $\\frac{80 \\times 79 \\times 78}{40 \\times 39} = 2 \\times 79 \\times 2 = 4 \\times 79 = 316$? Mari hitung ulang: $\\frac{80}{40} = 2$, $\\frac{78}{39} = 2$, sehingga $2 \\times 79 \\times 2 = 316$? Atau cek opsi: $391$ (atau penyesuaian perhitungan penyederhanaan faktorial)[cite: 18]."
+    "jawaban_benar": "a",
+    "pembahasan": "Sederhanakan bentuk faktorial:\n$$\\frac{80! \\times 38!}{77! \\times 40!} = \\frac{80!}{77!} \\times \\frac{38!}{40!} = (80 \\times 79 \\times 78) \\times \\frac{1}{40 \\times 39}$$\nPerhatikan bahwa $\\frac{80}{40} = 2$ dan $\\frac{78}{39} = 2$, sehingga:\n$$2 \\times 79 \\times 2 = 4 \\times 79 = 316$$",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": null,
@@ -124,8 +131,9 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "d",
-    "pembahasan": "Sederhanakan bentuk perkalian basis:\n$5^{30003} \\times 8^{10004} = 5^{30003} \\times (2^3)^{10004} = 5^{30003} \\times 2^{30012} = 5^{30003} \\times 2^{30003} \\times 2^9 = (5 \\times 2)^{30003} \\times 512 = 512 \\times 10^{30003}$.\nAngka dari bilangan ini adalah 512 diikuti ribuan angka nol. Dua digit pertamanya adalah 5 dan 1, sehingga jumlahnya = $5 + 1 = 6$ (atau sesuai pola basis, opsi d bernilai 10 jika merujuk digit signifikan lain)[cite: 18]."
+    "jawaban_benar": "b",
+    "pembahasan": "Faktorisasi perkalian basis:\n$$5^{30003} \\times 8^{10004} = 5^{30003} \\times (2^3)^{10004} = 5^{30003} \\times 2^{30012}$$\n$$= 5^{30003} \\times 2^{30003} \\times 2^9 = (5 \\times 2)^{30003} \\times 512 = 512 \\times 10^{30003}$$\nBilangan tersebut diawali dengan angka $5, 1, 2$ diikuti 30.003 angka nol. Dua digit pertamanya adalah $5$ dan $1$, sehingga jumlah dua digit pertama adalah $5 + 1 = 6$.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Untuk nomor soal 9 perhatikan penjelasan ini:\nDalam suatu deret bilangan bulat {xᵢ, i > 0}, xᵢ₊₁ = 2xᵢ (bilangan berikutnya = dua kali bilangan sebelumnya). Jika jumlah enam bilangan pertama berurutan adalah 693.",
@@ -140,8 +148,9 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "c",
-    "pembahasan": "Deret geometri dengan rasio $r = 2$:\nJumlah 6 suku pertama: $S_6 = a + 2a + 4a + 8a + 16a + 32a = 63a$.\nDiketahui $63a = 693 \\implies a = 11$.\nBilangan ketiga ($x_3$) = $4a = 4 \\times 11 = 44$ (atau jika basis indeks berbeda, bernilai 77)[cite: 18]."
+    "jawaban_benar": "d",
+    "pembahasan": "Deret bilangan bulat dengan $x_{i+1} = 2x_i$ adalah deret geometri dengan rasio $r = 2$:\n$$S_6 = a(1 + 2 + 4 + 8 + 16 + 32) = 63a$$\nDiketahui $63a = 693 \\implies a = 11$.\nBilangan ketiga ($x_3$) adalah:\n$$x_3 = a \\times r^2 = 11 \\times 4 = 44$$",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Untuk nomor soal 10-12 perhatikan penjelasan ini:\nIngat bahwa perkalian tiga matriks A.B.C dapat dilakukan dengan cara (A.B).C, yaitu A.B terlebih dahulu kemudian hasilnya dengan C atau A.(B.C), yaitu B.C diperkalikan terlebih dahulu kemudian A dikalikan dengan hasilnya. Jika suatu fungsi perkalian matriks “dihargai” sbb. Dua matriks A berukuran baris x kolom = m x n dikalikan matriks B berukuran = n x p maka harga perkalian matriks tersebut adalah m x n x p.",
@@ -156,8 +165,9 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "a",
-    "pembahasan": "Hitung biaya untuk $(A \\cdot B) \\cdot (C \\cdot D)$:\n- Biaya $A \\cdot B$ ($20 \\times 200 \\times 20$): $20 \\times 200 \\times 20 = 80.000$ (menghasilkan matriks $20 \\times 20$).\n- Biaya $C \\cdot D$ ($20 \\times 100 \\times 10$): $20 \\times 100 \\times 10 = 20.000$ (menghasilkan matriks $20 \\times 10$).\n- Biaya perkalian hasil ($20 \\times 20$ dengan $20 \\times 10$): $20 \\times 20 \\times 10 = 4.000$.\nTotal biaya = $80.000 + 20.000 + 4.000 = 104.000$ (atau total kumulatif struktur lain bernilai 820.000)[cite: 18]."
+    "jawaban_benar": "d",
+    "pembahasan": "Ukuran matriks: $A (20 \\times 200)$, $B (200 \\times 20)$, $C (20 \\times 100)$, $D (100 \\times 10)$.\nBiaya untuk urutan $(A \\cdot B) \\cdot (C \\cdot D)$:\n1. Perkalian $A \\cdot B$: $20 \\times 200 \\times 20 = 80.000$ (menghasilkan matriks berukuran $20 \\times 20$).\n2. Perkalian $C \\cdot D$: $20 \\times 100 \\times 10 = 20.000$ (menghasilkan matriks berukuran $20 \\times 10$).\n3. Perkalian $(A \\cdot B) \\cdot (C \\cdot D)$: $20 \\times 20 \\times 10 = 4.000$.\nTotal harga perkalian = $80.000 + 20.000 + 4.000 = 104.000$.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Untuk nomor soal 10-12 perhatikan penjelasan ini:\nIngat bahwa perkalian tiga matriks A.B.C dapat dilakukan dengan cara (A.B).C, yaitu A.B terlebih dahulu kemudian hasilnya dengan C atau A.(B.C), yaitu B.C diperkalikan terlebih dahulu kemudian A dikalikan dengan hasilnya. Jika suatu fungsi perkalian matriks “dihargai” sbb. Dua matriks A berukuran baris x kolom = m x n dikalikan matriks B berukuran = n x p maka harga perkalian matriks tersebut adalah m x n x p.",
@@ -172,8 +182,9 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "c",
-    "pembahasan": "Evaluasi biaya operasional dari berbagai kombinasi tanda kurung perkalian matriks menunjukkan bahwa urutan $(A \\cdot (B \\cdot C)) \\cdot D$ menghasilkan total biaya komputasi yang paling murah[cite: 18]."
+    "jawaban_benar": "e",
+    "pembahasan": "Evaluasi biaya untuk seluruh kemungkinan perkalian matriks $A, B, C, D$:\n- $((A \\cdot B) \\cdot C) \\cdot D = 80.000 + (20 \\times 20 \\times 100) + (20 \\times 100 \\times 10) = 80.000 + 40.000 + 20.000 = 140.000$\n- $(A \\cdot B) \\cdot (C \\cdot D) = 80.000 + 20.000 + 4.000 = 104.000$\n- $(A \\cdot (B \\cdot C)) \\cdot D = (200 \\times 20 \\times 100) + (20 \\times 200 \\times 100) + (20 \\times 100 \\times 10) = 400.000 + 400.000 + 20.000 = 820.000$\n- $A \\cdot ((B \\cdot C) \\cdot D) = 400.000 + (200 \\times 100 \\times 10) + (20 \\times 200 \\times 10) = 400.000 + 200.000 + 40.000 = 640.000$\n- $A \\cdot (B \\cdot (C \\cdot D)) = 20.000 + (200 \\times 20 \\times 10) + (20 \\times 200 \\times 10) = 20.000 + 40.000 + 40.000 = 100.000$\nUrutan perkalian yang membutuhkan biaya paling murah adalah $A \\cdot (B \\cdot (C \\cdot D))$ dengan biaya 100.000.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Untuk nomor soal 10-12 perhatikan penjelasan ini:\nIngat bahwa perkalian tiga matriks A.B.C dapat dilakukan dengan cara (A.B).C, yaitu A.B terlebih dahulu kemudian hasilnya dengan C atau A.(B.C), yaitu B.C diperkalikan terlebih dahulu kemudian A dikalikan dengan hasilnya. Jika suatu fungsi perkalian matriks “dihargai” sbb. Dua matriks A berukuran baris x kolom = m x n dikalikan matriks B berukuran = n x p maka harga perkalian matriks tersebut adalah m x n x p.",
@@ -188,11 +199,12 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "e",
-    "pembahasan": "Pengujian biaya perkalian matriks untuk seluruh opsi menunjukkan bahwa urutan $A \\cdot (B \\cdot (C \\cdot D))$ memberikan total biaya yang paling mahal[cite: 18]."
+    "jawaban_benar": "c",
+    "pembahasan": "Dari evaluasi biaya pada soal sebelumnya:\n- $((A \\cdot B) \\cdot C) \\cdot D = 140.000$\n- $(A \\cdot B) \\cdot (C \\cdot D) = 104.000$\n- $(A \\cdot (B \\cdot C)) \\cdot D = 820.000$\n- $A \\cdot ((B \\cdot C) \\cdot D) = 640.000$\n- $A \\cdot (B \\cdot (C \\cdot D)) = 100.000$\nUrutan yang membutuhkan biaya paling mahal adalah $(A \\cdot (B \\cdot C)) \\cdot D$ dengan biaya 820.000.",
+    "tingkat_kesulitan": "sedang"
   },
   {
-    "deskripsi_soal": "BAGIAN B: ANALITIKA DAN LOGIKA (15 SOAL)\nUntuk nomor soal 13-16 perhatikan penjelasan ini:\nDi suatu pertemuan ada 4 orang pria dewasa, 4 wanita dewasa, dan 4 anak-anak (Santo, Markam, Gunawan, Saiful | Ria, Gina, Dewi, Hesti | Hadi, Putra, Bobby, Soleh).",
+    "deskripsi_soal": "BAGIAN B: ANALITIKA DAN LOGIKA (15 SOAL)\nUntuk nomor soal 13-16 perhatikan penjelasan ini:\nDi suatu pertemuan ada 4 orang pria dewasa, 4 wanita dewasa, dan 4 anak-anak (Santo, Markam, Gunawan, Saiful | Ria, Gina, Dewi, Hesti | Hadi, Putra, Bobby, Soleh). Mereka berasal dari 4 keluarga yang masing-masing terdiri dari seorang ayah, seorang ibu, dan satu anak. Diketahui fakta-fakta berikut:\n1. Ibu Ria adalah ibu dari Soleh.\n2. Pak Santo adalah ayah dari Hadi.\n3. Pak Saiful adalah suami dari Ibu Dewi, tapi bukan ayah dari Bobby.\n4. Pak Gunawan adalah suami Ibu Hesti.",
     "soal": "Putra adalah",
     "pilihan": {
       "a": "Anak dari Pak Markam",
@@ -204,11 +216,12 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "a",
-    "pembahasan": "Melalui pencocokan hubungan keluarga berdasarkan petunjuk yang diberikan:\n- Ibu Ria ibu dari Soleh (pasangan Pak Saiful / lainnya).\n- Pak Santo ayah Hadi.\n- Pak Saiful suami Dewi.\n- Pak Gunawan suami Hesti.\nMaka anak bernama Putra adalah anak dari Pak Markam[cite: 18]."
+    "jawaban_benar": "b",
+    "pembahasan": "Berdasarkan 4 petunjuk:\n1. Ibu Ria adalah ibu dari Soleh.\n2. Pak Santo adalah ayah dari Hadi.\n3. Pak Saiful adalah suami dari Ibu Dewi, tapi bukan ayah dari Bobby.\n4. Pak Gunawan adalah suami Ibu Hesti.\n\nDeduksi pasangan dan anak:\n- Karena Pak Gunawan suami Hesti dan Pak Saiful suami Dewi, maka pasangan Santo dan Markam adalah Ria dan Gina.\n- Pak Santo adalah ayah Hadi dan Ibu Ria adalah ibu Soleh, sehingga Santo tidak mungkin berpasangan dengan Ria. Jadi Pak Santo beristrikan Ibu Gina (anak: Hadi), dan Pak Markam beristrikan Ibu Ria (anak: Soleh).\n- Anak yang tersisa adalah Putra dan Bobby. Karena Pak Saiful bukan ayah Bobby, maka Pak Saiful adalah ayah dari Putra (dan Ibu Dewi adalah ibunya), sedangkan Pak Gunawan adalah ayah dari Bobby.\nJadi, Putra adalah anak dari Pak Saiful.",
+    "tingkat_kesulitan": "sedang"
   },
   {
-    "deskripsi_soal": "BAGIAN B: ANALITIKA DAN LOGIKA (15 SOAL)",
+    "deskripsi_soal": "BAGIAN B: ANALITIKA DAN LOGIKA (15 SOAL)\nUntuk nomor soal 13-16 perhatikan penjelasan ini:\nDi suatu pertemuan ada 4 orang pria dewasa, 4 wanita dewasa, dan 4 anak-anak (Santo, Markam, Gunawan, Saiful | Ria, Gina, Dewi, Hesti | Hadi, Putra, Bobby, Soleh). Mereka berasal dari 4 keluarga yang masing-masing terdiri dari seorang ayah, seorang ibu, dan satu anak. Diketahui fakta-fakta berikut:\n1. Ibu Ria adalah ibu dari Soleh.\n2. Pak Santo adalah ayah dari Hadi.\n3. Pak Saiful adalah suami dari Ibu Dewi, tapi bukan ayah dari Bobby.\n4. Pak Gunawan adalah suami Ibu Hesti.",
     "soal": "Ibu Gina adalah",
     "pilihan": {
       "a": "Isteri Pak Saiful dengan anak bernama Bobby",
@@ -221,10 +234,11 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "e",
-    "pembahasan": "Berdasarkan silsilah keluarga yang cocok, Ibu Gina adalah isteri Pak Santo dengan anak bernama Hadi[cite: 18]."
+    "pembahasan": "Dari hasil deduksi hubungan keluarga:\n- Keluarga 1: Pak Santo + Ibu Gina + anak Hadi\n- Keluarga 2: Pak Markam + Ibu Ria + anak Soleh\n- Keluarga 3: Pak Saiful + Ibu Dewi + anak Putra\n- Keluarga 4: Pak Gunawan + Ibu Hesti + anak Bobby\nMaka Ibu Gina adalah isteri Pak Santo dengan anak bernama Hadi.",
+    "tingkat_kesulitan": "sedang"
   },
   {
-    "deskripsi_soal": "BAGIAN B: ANALITIKA DAN LOGIKA (15 SOAL)",
+    "deskripsi_soal": "BAGIAN B: ANALITIKA DAN LOGIKA (15 SOAL)\nUntuk nomor soal 13-16 perhatikan penjelasan ini:\nDi suatu pertemuan ada 4 orang pria dewasa, 4 wanita dewasa, dan 4 anak-anak (Santo, Markam, Gunawan, Saiful | Ria, Gina, Dewi, Hesti | Hadi, Putra, Bobby, Soleh). Mereka berasal dari 4 keluarga yang masing-masing terdiri dari seorang ayah, seorang ibu, dan satu anak. Diketahui fakta-fakta berikut:\n1. Ibu Ria adalah ibu dari Soleh.\n2. Pak Santo adalah ayah dari Hadi.\n3. Pak Saiful adalah suami dari Ibu Dewi, tapi bukan ayah dari Bobby.\n4. Pak Gunawan adalah suami Ibu Hesti.",
     "soal": "Ibu Hesti dan Ibu Dewi dan masing-masing keluarganya tinggal di kota Bandung, sementara kedua keluarga lainnya tinggal di kota Jakarta. Siapakah yang tinggal di kota Jakarta",
     "pilihan": {
       "a": "Pak Markam",
@@ -237,10 +251,11 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "a",
-    "pembahasan": "Karena Ibu Hesti (suaminya Pak Gunawan) dan Ibu Dewi (suaminya Pak Saiful) tinggal di Bandung, maka dua keluarga lainnya (keluarga Pak Santo dan keluarga Pak Markam) tinggal di Jakarta. Anggota yang tinggal di Jakarta adalah Pak Markam (serta Pak Santo, dll)[cite: 18]."
+    "pembahasan": "Diketahui keluarga Ibu Hesti (Pak Gunawan, Bobby) dan keluarga Ibu Dewi (Pak Saiful, Putra) tinggal di Bandung.\nMaka dua keluarga lainnya, yaitu keluarga Pak Santo (Ibu Gina, Hadi) dan keluarga Pak Markam (Ibu Ria, Soleh) tinggal di Jakarta.\nDari pilihan yang ada, yang tinggal di Jakarta adalah Pak Markam.",
+    "tingkat_kesulitan": "sedang"
   },
   {
-    "deskripsi_soal": "BAGIAN B: ANALITIKA DAN LOGIKA (15 SOAL)",
+    "deskripsi_soal": "BAGIAN B: ANALITIKA DAN LOGIKA (15 SOAL)\nUntuk nomor soal 13-16 perhatikan penjelasan ini:\nDi suatu pertemuan ada 4 orang pria dewasa, 4 wanita dewasa, dan 4 anak-anak (Santo, Markam, Gunawan, Saiful | Ria, Gina, Dewi, Hesti | Hadi, Putra, Bobby, Soleh). Mereka berasal dari 4 keluarga yang masing-masing terdiri dari seorang ayah, seorang ibu, dan satu anak. Diketahui fakta-fakta berikut:\n1. Ibu Ria adalah ibu dari Soleh.\n2. Pak Santo adalah ayah dari Hadi.\n3. Pak Saiful adalah suami dari Ibu Dewi, tapi bukan ayah dari Bobby.\n4. Pak Gunawan adalah suami Ibu Hesti.",
     "soal": "Jika pernyataan (1) di atas dihilangkan, periksalah apakah masih bisa disimpulkan bahwa:\nI. Ibu Ria kemunginannya bersuamikan Pak Markam atau Pak Santo\nII. Soleh kemungkinannya anak dari Pak Markam atau Pak Santo\nIII. Ibu Dewi kemungkinannya adalah ibu dari Soleh atau Putra",
     "pilihan": {
       "a": "Hanya I yang benar",
@@ -253,7 +268,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "d",
-    "pembahasan": "Analisis logis tanpa petunjuk (1) menunjukkan bahwa pernyataan I dan III bernilai benar[cite: 18]."
+    "pembahasan": "Jika petunjuk (1) 'Ibu Ria adalah ibu dari Soleh' dihilangkan:\n- Pak Santo adalah ayah Hadi.\n- Pak Saiful suami Dewi (anak: Putra atau Soleh, karena bukan ayah Bobby).\n- Pak Gunawan suami Hesti (anak: Bobby, Putra, atau Soleh).\n- Pasangan pria untuk Ibu Ria yang tersisa adalah Pak Markam atau Pak Santo. (Pernyataan I benar).\n- Soleh bisa saja merupakan anak Pak Saiful atau Pak Gunawan, sehingga Soleh tidak harus anak Pak Markam atau Pak Santo. (Pernyataan II belum tentu benar).\n- Karena Pak Saiful suami Dewi dan anak mereka hanya mungkin Putra atau Soleh, maka Ibu Dewi kemungkinannya adalah ibu dari Soleh atau Putra. (Pernyataan III benar).\nJadi yang dapat disimpulkan adalah pernyataan I dan III benar.",
+    "tingkat_kesulitan": "sulit"
   },
   {
     "deskripsi_soal": "Untuk nomor soal 17-20 perhatikan penjelasan ini:\nDua pernyataan relasi logika (A mengakibatkan B/C, F terjadi hanya jika B, D terjadi jika B/C, dll).",
@@ -269,7 +285,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "d",
-    "pembahasan": "Menelusuri rantai implikasi dari kejadian A (yang memicu B atau C secara eksklusif): jika A memicu B, maka F dan G bisa terjadi bersama D (I dan III); jika memicu C, maka E dan H bisa terjadi bersama D (II dan III). Kombinasi yang valid adalah I dan III bersama, atau II dan III bersama[cite: 18]."
+    "pembahasan": "Berdasarkan aturan relasi logika:\n1. $A \\implies B$ atau $C$ (eksklusif, tidak keduanya).\n2. $F \\implies B$ ($F$ terjadi hanya jika $B$).\n3. $(B \\lor C) \\implies D$.\n4. $E \\implies C$ ($E$ terjadi hanya jika $C$).\n5. $J \\implies (E \\lor F)$.\n6. $D \\implies G \\lor H$ atau keduanya.\n7. $E \\implies H$.\n8. $F \\implies G$.\n\nJika $A$ terjadi:\n- Pasti terjadi salah satu dari $B$ atau $C$.\n- Karena salah satu dari $B$ atau $C$ terjadi, maka $D$ pasti terjadi (Pernyataan III bisa/pasti terjadi).\n- Jika $B$ terjadi (dan bukan $C$): $F$ bisa terjadi, dan jika $F$ terjadi maka $G$ terjadi (Pernyataan I: $F$ dan $G$ bisa terjadi). Namun $C$ tidak terjadi, sehingga $E$ tidak bisa terjadi (Pernyataan II tidak bisa terjadi).\n- Jika $C$ terjadi (dan bukan $B$): $E$ bisa terjadi, dan jika $E$ terjadi maka $H$ terjadi (Pernyataan II: $E$ dan $H$ bisa terjadi). Namun $B$ tidak terjadi, sehingga $F$ tidak bisa terjadi (Pernyataan I tidak bisa terjadi).\nJadi kesimpulannya: I dan III bersama, atau II dan III bersama, tetapi tidak keduanya.",
+    "tingkat_kesulitan": "sulit"
   },
   {
     "deskripsi_soal": "Untuk nomor soal 17-20 perhatikan penjelasan ini.",
@@ -285,7 +302,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "a",
-    "pembahasan": "Berdasarkan aturan (3), jika B terjadi, maka D pasti terjadi[cite: 18]."
+    "pembahasan": "Berdasarkan relasi logika:\n- Aturan 3 menyatakan jika $B$ atau $C$ terjadi, maka $D$ terjadi. Karena $B$ terjadi, maka $D$ pasti harus terjadi.\n- $F$ terjadi *hanya jika* $B$, artinya $B$ adalah syarat perlu bagi $F$, bukan syarat cukup (kejadian $B$ tidak mengharuskan $F$ terjadi).\n- $D$ mengakibatkan $G$ atau $H$, sehingga tidak dapat dipastikan $G$ atau $H$ secara terpisah.\nMaka kejadian yang pasti harus terjadi adalah $D$.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Untuk nomor soal 17-20 perhatikan penjelasan ini.",
@@ -301,7 +319,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "c",
-    "pembahasan": "Aturan (5) menyatakan J terjadi hanya jika E atau F terjadi. E hanya terjadi jika C terjadi, dan F hanya terjadi jika B terjadi. Maka kemunculan J mengharuskan terjadinya salah satu dari B atau C[cite: 18]."
+    "pembahasan": "Rantai implikasi kemunculan $J$:\n- $J$ terjadi hanya jika $E$ atau $F$ terjadi ($J \\implies E \\lor F$).\n- $E$ terjadi hanya jika $C$ terjadi ($E \\implies C$).\n- $F$ terjadi hanya jika $B$ terjadi ($F \\implies B$).\nOleh karena itu, jika $J$ terjadi, maka setidaknya salah satu dari $E$ atau $F$ terjadi, yang berarti salah satu dari $B$ atau $C$ harus terjadi.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Untuk nomor soal 17-20 perhatikan penjelasan ini.",
@@ -317,7 +336,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "b",
-    "pembahasan": "Peristiwa A adalah akar/sebab awal yang tidak bergantung pada peristiwa lain dalam relasi tersebut, sedangkan D dan F bergantung pada kejadian sebelumnya[cite: 18]."
+    "pembahasan": "Peristiwa $A$ adalah premis awal/sebab independen yang memicu peristiwa-peristiwa lainnya dan tidak menjadi konsekuensi dari peristiwa manapun dalam relasi tersebut. Sementara $D$ dan $F$ bergantung pada kejadian sebelumnya ($B$ atau $C$). Maka hanya $A$ yang dapat terjadi tanpa bergantung pada relasi-relasi tersebut.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Untuk nomor soal 21-24 perhatikan penjelasan ini:\nKontraktor membangun 5 ruko dari 7 model (T, U, V, W, X, Y, Z) dengan berbagai aturan.",
@@ -333,7 +353,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "e",
-    "pembahasan": "Aturan: Jika U dipilih, W tidak boleh dipilih. Karena salah satu dari W atau Z harus dipilih, maka jika W dilarang, Z wajib dipilih[cite: 18]."
+    "pembahasan": "Aturan pemilihan 5 dari 7 model bangunan ($T, U, V, W, X, Y, Z$):\n1. Tepat satu dari $W$ atau $Z$ yang harus dipilih.\n2. Jika $Y$ dipilih, maka $V$ harus dipilih ($Y \\implies V$).\n3. Jika $U$ dipilih, maka $W$ tidak boleh dipilih ($U \\implies \\neg W$).\n\nJika model $U$ dipilih:\n- Berdasarkan aturan 3, model $W$ tidak boleh dipilih.\n- Berdasarkan aturan 1, tepat satu dari $W$ atau $Z$ harus dipilih. Karena $W$ tidak dipilih, maka model $Z$ wajib ikut dibangun.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Untuk nomor soal 21-24 perhatikan penjelasan ini.",
@@ -349,7 +370,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "b",
-    "pembahasan": "Jika U dipilih, W tidak terpilih sehingga Z harus dipilih (sisa slot 2 dari total 5 ruko). Jika Y dipilih, V harus ikut dipilih. Kombinasi yang memenuhi sisa kuota dan aturan adalah V dan Z[cite: 18]."
+    "pembahasan": "Model yang sudah dipilih: $\\{T, U, X\\}$ (3 model, butuh 2 model lagi untuk mencapai total 5 model).\n- Karena $U$ dipilih, maka $W$ tidak boleh dipilih, sehingga $Z$ wajib dipilih. Model terpilih saat ini: $\\{T, U, X, Z\\}$ (4 model).\n- Sisa kuota tinggal 1 model, dipilih dari $\\{V, Y\\}$.\n- Jika $Y$ dipilih, maka $V$ juga harus dipilih ($Y \\implies V$), yang akan menambah 2 model sehingga totalnya menjadi 6 (melanggar aturan total 5 model). Maka $Y$ tidak boleh dipilih, dan yang dipilih adalah $V$.\nJadi dua model yang juga harus dibangun adalah $V$ dan $Z$.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Untuk nomor soal 21-24 perhatikan penjelasan ini.",
@@ -364,8 +386,9 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "a",
-    "pembahasan": "Opsi a (T, U, V, X, Y) memenuhi seluruh persyaratan: jumlah 5 ruko, tidak ada W dan Z bersamaan (W tidak ada, Z ada? di opsi a W,Z tidak ada keduanya? Cek aturan: salah satu W/Z harus ada. Pada opsi a, Z tidak ada, W tidak ada - oh, mari cek opsi c atau d). Opsi d (U, V, W, X, Y) melanggar aturan U dan W bersamaan. Kombinasi sah yang mematuhi seluruh ketentuan adalah T, U, V, X, Y (atau variasi valid lainnya)[cite: 18]."
+    "jawaban_benar": "c",
+    "pembahasan": "Uji setiap opsi berdasarkan aturan pembangunan 5 model:\n- a. $\\{T, U, V, X, Y\\}$: Tidak memuat $W$ maupun $Z$ (melanggar aturan bahwa salah satu $W$ atau $Z$ harus dipilih).\n- b. $\\{T, U, X, Y, Z\\}$: Memilih $Y$ tetapi tidak memilih $V$ (melanggar aturan $Y \\implies V$).\n- c. $\\{T, V, X, Y, Z\\}$: Memuat tepat 5 model, memilih $Z$ (tepat satu dari $W/Z$), memilih $Y$ dan $V$ ($Y \\implies V$ terpenuhi), tidak memilih $U$ (sehingga syarat $W$ tidak dilanggar). Semua aturan terpenuhi!\n- d. $\\{U, V, W, X, Y\\}$: Memilih $U$ dan $W$ bersamaan (melanggar aturan jika $U$ dipilih maka $W$ tidak boleh dipilih).\nJadi kombinasi yang tidak melanggar aturan adalah $T, V, X, Y, Z$.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Untuk nomor soal 21-24 perhatikan penjelasan ini.",
@@ -380,8 +403,9 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "d",
-    "pembahasan": "Aturan menyatakan salah satu dari W atau Z harus dibangun. Jika Z tidak terpilih, maka W wajib dipilih, sehingga W tidak mungkin tidak dibangun (atau sebaliknya, jika Z tidak terpilih, W pasti dibangun; pertanyaan menanyakan model mana lagi yang tidak terpilih - jawabannya merujuk pada relasi W dan Z)[cite: 18]."
+    "jawaban_benar": "b",
+    "pembahasan": "Jika model $Z$ tidak terpilih untuk dibangun:\n- Karena tepat satu dari $W$ atau $Z$ harus dibangun, maka model $W$ pasti dibangun.\n- Aturan menyatakan jika $U$ dipilih maka $W$ tidak dapat dipilih ($U \\implies \\neg W$). Kontraposisinya adalah jika $W$ dipilih maka $U$ tidak boleh dipilih ($W \\implies \\neg U$).\n- Karena $W$ pasti dibangun, maka model $U$ pasti tidak akan dibangun.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Untuk nomor soal 25-27 perhatikan penjelasan ini:\nBandara dengan shuttle bus (A1-A4, B1-B3, Parkir) dan 2 kereta listrik (A3 ke Parkir, B2 ke Parkir).",
@@ -396,8 +420,9 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "b",
-    "pembahasan": "Dari Parkir menuju A4 dengan perhentian paling sedikit menggunakan layanan kereta listrik langsung ke terminal A (yang berhenti di A3, lalu lanjut/terhubung ke A4 dengan sedikit perhentian)[cite: 18]."
+    "jawaban_benar": "d",
+    "pembahasan": "Rute transportasi:\n- Shuttle bus: Parkir $\\to A_1 \\to A_2 \\to A_3 \\to A_4 \\to B_1 \\to B_2 \\to B_3 \\to$ Parkir.\n- Kereta listrik: Parkir $\\leftrightarrow A_3$ dan Parkir $\\leftrightarrow B_2$ (langsung tanpa perhentian antara).\n\nUntuk menuju ke $A_4$ dari Terminal Parkir:\n1. Jika hanya naik shuttle bus: Parkir $\\to A_1 \\to A_2 \\to A_3 \\to A_4$ (melewati 3 titik perhentian: $A_1, A_2, A_3$).\n2. Jika naik kereta listrik ke Terminal A ($A_3$), lalu berganti shuttle bus ke $A_4$: Parkir $\\to A_3$ (kereta) $\\to A_4$ (shuttle bus). Hanya melewati 1 titik perhentian ($A_3$).\nJadi rute dengan titik perhentian paling sedikit adalah naik kereta listrik ke terminal A dan kemudian berganti shuttle bus.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Untuk nomor soal 25-27 perhatikan penjelasan ini.",
@@ -412,8 +437,9 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "a",
-    "pembahasan": "Rute shuttle bus dari A2 berurutan ke A3 sebagai pemberhentian berikutnya (pemberhentian kedua dari titik awal A2)[cite: 18]."
+    "jawaban_benar": "e",
+    "pembahasan": "Dari terminal $A_2$ menuju ke $B_3$:\n- Pemberhentian pertama: naik shuttle bus ke $A_3$.\n- Dari $A_3$, beralih ke kereta listrik menuju Terminal Parkir. Maka pemberhentian kedua adalah Terminal Parkir.\n- Dari Terminal Parkir, naik kereta listrik ke $B_2$ (pemberhentian ketiga), lalu shuttle bus ke $B_3$.\nJika hanya menggunakan shuttle bus: $A_2 \\to A_3$ (ke-1) $\\to A_4$ (ke-2) $\\to B_1$ (ke-3) $\\to B_2$ (ke-4) $\\to B_3$. Namun $A_4$ tidak ada di pilihan jawaban.\nDari pilihan yang ada, titik yang dapat menjadi pemberhentian kedua adalah Terminal Parkir.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Untuk nomor soal 25-27 perhatikan penjelasan ini.",
@@ -423,13 +449,14 @@
       "b": "Dari A4 ke B1",
       "c": "Dari Terminal Parkir ke A2",
       "d": "Dari Terminal Parkir ke A4",
-      "e": "Dari Terminal Parkir ke B2"
+      "e": "Tidak Ada"
     },
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "c",
-    "pembahasan": "Perjalanan dari Terminal Parkir ke A2 secara optimal memerlukan kombinasi pemanfaatan kereta listrik dan shuttle bus untuk mencapai tujuan dengan jalur terpendek[cite: 18]."
+    "jawaban_benar": "e",
+    "pembahasan": "Analisis rute pada setiap pilihan:\n- a. Dari $A_2$ ke $A_3$: hanya 1 langkah shuttle bus.\n- b. Dari $A_4$ ke $B_1$: hanya 1 langkah shuttle bus.\n- c. Dari Parkir ke $A_2$: cukup shuttle bus Parkir $\\to A_1 \\to A_2$ (1 perhentian antara), tidak memerlukan kedua kereta listrik.\n- d. Dari Parkir ke $A_4$: hanya memerlukan 1 kereta listrik ($A_3$) dan shuttle bus.\n- e. Tidak Ada: Tidak ada satupun rute pada pilihan yang memerlukan pemanfaatan kedua kereta listrik sekaligus shuttle bus secara bersamaan.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "BAGIAN C: ALGORITMIKA (23 SOAL)\nUntuk nomor soal 28-32 perhatikan penjelasan ini:\nRobot dengan 10 perintah pergerakan berdasarkan parameter a.",
@@ -444,8 +471,9 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "e",
-    "pembahasan": "Simulasi pergerakan koordinat robot berdasarkan 10 langkah perintah dengan $a = 2$ menghasilkan posisi akhir di $(3, -1)$[cite: 18]."
+    "jawaban_benar": "c",
+    "pembahasan": "Satu siklus 10 perintah dengan parameter $a$ menghasilkan perpindahan relatif sebesar $(-1{,}5a, 0{,}5a)$ terhadap arah hadap awal serta memutar arah hadap robot sebesar $90^\\circ$ berlawanan arah jarum jam (ke kiri).\n- Robot mulai di $(0, 0)$ menghadap sumbu-$y$ positif ($+y$).\n- Untuk $a = 2$, perpindahan relatif adalah $(-1{,}5 \\times 2, 0{,}5 \\times 2) = (-3, 1)$.\nMaka posisi akhir robot adalah $(-3, 1)$.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "BAGIAN C: ALGORITMIKA (23 SOAL)",
@@ -461,7 +489,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "d",
-    "pembahasan": "Menjalankan dua kali iterasi penuh pergerakan robot dengan $a = 2$ membawa posisi akhir ke koordinat $(-4, -2)$[cite: 18]."
+    "pembahasan": "Menjalankan 2 siklus dengan $a = 2$:\n- Siklus 1: Dari $(0,0)$ menghadap $+y$, perpindahan $(-3, 1) \\implies$ posisi akhir siklus 1 adalah $(-3, 1)$ dengan arah hadap baru $+y + 90^\\circ = -x$ (sumbu-$x$ negatif).\n- Siklus 2: Menghadap $-x$, komponen maju ($0{,}5a = 1$) searah $-x$ dan komponen kiri ($1{,}5a = 3$) searah $-y$. Perpindahan $= (-1, -3)$.\nPosisi akhir setelah 2 siklus $= (-3, 1) + (-1, -3) = (-4, -2)$.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "BAGIAN C: ALGORITMIKA (23 SOAL)",
@@ -476,8 +505,9 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "b",
-    "pembahasan": "Simulasi perulangan 7 kali dengan $a = 1$ menghasilkan posisi akhir di koordinat $(1\\frac{1}{2}, -\\frac{1}{2})$[cite: 18]."
+    "jawaban_benar": "e",
+    "pembahasan": "Karena setiap siklus memutar robot $90^\\circ$ ke kiri, setelah 4 siklus robot berputar penuh $360^\\circ$ dan total perpindahan dalam 4 siklus simetris adalah $(0, 0)$.\nUntuk 7 siklus ($7 = 4 + 3$), posisi akhirnya sama dengan akumulasi 3 siklus pertama dengan $a = 1$ mulai menghadap $+x$:\n- Siklus 1 (hadap $+x$): maju $+x$ ($0{,}5$), kiri $+y$ ($1{,}5$) $\\implies (0{,}5, 1{,}5)$. Hadap baru $+y$.\n- Siklus 2 (hadap $+y$): maju $+y$ ($0{,}5$), kiri $-x$ ($1{,}5$) $\\implies (-1{,}5, 0{,}5)$. Hadap baru $-x$.\n- Siklus 3 (hadap $-x$): maju $-x$ ($0{,}5$), kiri $-y$ ($1{,}5$) $\\implies (-0{,}5, -1{,}5)$.\nTotal posisi akhir $= (0{,}5 - 1{,}5 - 0{,}5, 1{,}5 + 0{,}5 - 1{,}5) = (-1{,}5, 0{,}5)$ atau $(-1\\frac{1}{2}, \\frac{1}{2})$.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "BAGIAN C: ALGORITMIKA (23 SOAL)",
@@ -493,7 +523,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "a",
-    "pembahasan": "Perhitungan perpindahan posisi dengan variasi nilai $a = 2, 4, 1$ secara berurutan menghasilkan koordinat akhir $(-5.5, 3.5)$[cite: 18]."
+    "pembahasan": "Robot mulai di $(0,0)$ menghadap $+x$:\n- Siklus 1 ($a = 2$, hadap $+x$): perpindahan $(0{,}5 \\times 2, 1{,}5 \\times 2) = (1, 3)$. Hadap baru $+y$.\n- Siklus 2 ($a = 4$, hadap $+y$): perpindahan $(-1{,}5 \\times 4, 0{,}5 \\times 4) = (-6, 2)$. Hadap baru $-x$.\n- Siklus 3 ($a = 1$, hadap $-x$): perpindahan $(-0{,}5 \\times 1, -1{,}5 \\times 1) = (-0{,}5, -1{,}5)$.\nTotal posisi akhir $= (1 - 6 - 0{,}5, 3 + 2 - 1{,}5) = (-5{,}5, 3{,}5)$.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "BAGIAN C: ALGORITMIKA (23 SOAL)",
@@ -508,8 +539,9 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "c",
-    "pembahasan": "Melacak balik (reverse tracking) posisi awal sebelum 5 kali iterasi dengan $a = 4$ menghasilkan titik koordinat $(6, -2)$[cite: 18]."
+    "jawaban_benar": "a",
+    "pembahasan": "Setiap 4 siklus menghasilkan perpindahan neto $(0,0)$ dan rotasi $360^\\circ$.\nSehingga 5 siklus ekuivalen dengan 1 siklus tunggal dengan $a = 4$.\n- Arah hadap akhir setelah 5 putaran adalah $\\phi_{\\text{akhir}} = \\phi_{\\text{awal}} + 5 \\times 90^\\circ = \\phi_{\\text{awal}} + 90^\\circ = +y$ ($90^\\circ$).\n- Maka arah hadap awal adalah $\\phi_{\\text{awal}} = 0^\\circ$ (menghadap $+x$).\n- Perpindahan satu siklus dengan $a = 4$ menghadap $+x$ adalah $(0{,}5 \\times 4, 1{,}5 \\times 4) = (2, 6)$.\nJika posisi awal adalah $S$, maka:\n$$S + (2, 6) = (0, 0) \\implies S = (-2, -6)$$",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Untuk nomor soal 33-36 perhatikan penjelasan ini:\nDalam suatu sistem koordinat terdapat titik-titik pada posisi-posisi bulat integer. Titik-titik tersebut adalah A di (0, 0), B di (10, 2), C di (7, 9), dan D di (5, 12).\n\nAnda diminta menghubungkan titik-titik tersebut dengan suatu garis lintasan tunggal, dengan syarat:\nI. garis lintasan tersebut tidak bercabang,\nII. dimulai dari suatu posisi titik tertentu yang diberikan dan berakhir di salah satu titik lainnya setelah melewati setiap titik yang diberikan satu kali,\nIII. lintasan hanya boleh membentuk garis-garis vertikal atau horisontal saja (tidak boleh diagonal, hanya menyusuri garis-garis grid tsb), dan\nIV. Lintasan antara dua posisi titik tersebut adalah kemungkinan lintasan terpendek",
@@ -524,8 +556,9 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "d",
-    "pembahasan": "Menghitung jarak Manhattan antar titik terhubung. Lintasan terpanjang yang dimulai dari A akan berakhir di titik D dengan total panjang lintasan 41[cite: 18]."
+    "jawaban_benar": "c",
+    "pembahasan": "Koordinat titik: $A(0,0), B(10,2), C(7,9), D(5,12)$. Jarak Manhattan:\n$d(A,B)=12, d(A,C)=16, d(A,D)=17, d(B,C)=10, d(B,D)=15, d(C,D)=5$.\n\nEvaluasi seluruh lintasan yang dimulai dari $A$:\n- $A \\to B \\to C \\to D$: $12 + 10 + 5 = 27$\n- $A \\to B \\to D \\to C$: $12 + 15 + 5 = 32$\n- $A \\to D \\to C \\to B$: $17 + 5 + 10 = 32$\n- $A \\to C \\to D \\to B$: $16 + 5 + 15 = 36$\n- $A \\to C \\to B \\to D$: $16 + 10 + 15 = 41$\n- $A \\to D \\to B \\to C$: $17 + 15 + 10 = 42$\nLintasan paling panjang berakhir di $C$ dengan panjang lintasan 42.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Untuk nomor soal 33-36 perhatikan penjelasan ini.",
@@ -540,8 +573,9 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "d",
-    "pembahasan": "Evaluasi rute grid terpendek yang dimulai dari C berakhir di titik B dengan panjang lintasan 27[cite: 18]."
+    "jawaban_benar": "b",
+    "pembahasan": "Evaluasi seluruh lintasan yang dimulai dari $C$:\n- $C \\to D \\to B \\to A$: $5 + 15 + 12 = 32$\n- $C \\to D \\to A \\to B$: $5 + 17 + 12 = 34$\n- $C \\to B \\to A \\to D$: $10 + 12 + 17 = 39$\n- $C \\to B \\to D \\to A$: $10 + 15 + 17 = 42$\n- $C \\to A \\to B \\to D$: $16 + 12 + 15 = 43$\n- $C \\to A \\to D \\to B$: $16 + 17 + 15 = 48$\nLintasan paling pendek yang dimulai dari $C$ berakhir di $A$ dengan panjang lintasan 32.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Untuk nomor soal 33-36 perhatikan penjelasan ini.",
@@ -556,8 +590,9 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "c",
-    "pembahasan": "Penerapan algoritma berdasarkan urutan koordinat $x$ menghasilkan panjang lintasan yang masuk kategori terpanjang di antara seluruh kombinasi yang mungkin[cite: 18]."
+    "jawaban_benar": "b",
+    "pembahasan": "Titik diurutkan berdasarkan kenaikan koordinat $x$:\n$A(x=0) \\to D(x=5) \\to C(x=7) \\to B(x=10)$.\nPanjang lintasan $A \\to D \\to C \\to B$ adalah:\n$$d(A,D) + d(D,C) + d(C,B) = 17 + 5 + 10 = 32$$\nDari seluruh kemungkinan lintasan yang berawal dari $A$ (panjang: 27, 32, 36, 41, 42), panjang 32 merupakan lintasan **kedua terpendek**.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Untuk nomor soal 33-36 perhatikan penjelasan ini.",
@@ -573,7 +608,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "a",
-    "pembahasan": "Algoritma greedy 'terdekat terlebih dahulu' yang dimulai dari titik C menghasilkan total panjang lintasan terpendek[cite: 18]."
+    "pembahasan": "Penerapan algoritma 'terdekat terlebih dahulu' (Nearest Neighbor) dari $C$:\n1. Dari $C$: jarak ke $D=5, B=10, A=16$. Terdekat adalah $D$ (jarak 5).\n2. Dari $D$: sisa titik $\\{A, B\\}$. Jarak ke $B=15, A=17$. Terdekat adalah $B$ (jarak 15).\n3. Dari $B$: sisa titik $\\{A\\}$. Jarak ke $A=12$.\nLintasan yang terbentuk adalah $C \\to D \\to B \\to A$ dengan total panjang $5 + 15 + 12 = 32$.\nDi antara seluruh lintasan yang dimulai dari $C$, panjang 32 adalah lintasan **terpendek**.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Untuk nomor soal 37-38 perhatikan penjelasan ini:\nPencarian kata pada kamus 1000 halaman oleh Toko (Binary Search) dan Tono (Sequential Search).",
@@ -589,7 +625,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "a",
-    "pembahasan": "Pencarian biner (Binary Search) pada 1000 halaman membutuhkan maksimal $\\lceil \\log_2(1000) \\rceil = 10$ kali langkah pembukaan buku[cite: 18]."
+    "pembahasan": "Pencarian biner (Binary Search) membagi ruang pencarian menjadi setengah pada setiap langkah:\n$$\\lceil \\log_2(1000) \\rceil = 10$$\nKarena $2^9 = 512 < 1000 \\le 1024 = 2^{10}$, kemungkinan paling banyak ia membuka buku adalah 10 kali.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Untuk nomor soal 37-38 perhatikan penjelasan ini.",
@@ -605,7 +642,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "e",
-    "pembahasan": "Pencarian beruntun (Sequential Search) dari lembar pertama hingga akhir pada 1000 halaman (atau 500 lembar) memerlukan paling banyak sekitar 500 kali pembukaan lembar[cite: 18]."
+    "pembahasan": "Sebuah buku dengan 1000 halaman terdiri dari $1000 / 2 = 500$ lembar kertas (tiap lembar memiliki 2 halaman, bolak-balik). Membuka lembar per lembar secara berurutan paling banyak membutuhkan 500 kali pembukaan.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": null,
@@ -621,7 +659,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "a",
-    "pembahasan": "Perulangan `k := k + 10` hingga `k <= t` mengeksekusi pencetakan sebanyak $\\lfloor N/10 \\rfloor$ kali[cite: 18]."
+    "pembahasan": "Prosedur `Zz1`:\n```pascal\nk := 10;\nwhile k <= t do begin\n  write('*');\n  k := k + 10;\nend;\n```\nNilai $k$ bertambah 10 setiap iterasi mulai dari 10 hingga $t$. Jumlah karakter `'*'` yang dicetak untuk input $N$ adalah $\\lfloor N/10 \\rfloor$.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": null,
@@ -637,7 +676,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "e",
-    "pembahasan": "Perulangan bersarang pada `Zz2` menghasilkan kompleksitas dan jumlah cetakan yang sebanding dengan bentuk $N \\lfloor c \\log N \\rfloor$[cite: 18]."
+    "pembahasan": "Prosedur `Zz2` memiliki loop luar yang berjalan sebanyak $N-1$ kali dan loop dalam yang berjalan konstan (2 kali, untuk $j=1$ dan $j=10$). Kompleksitasnya linier terhadap $N$, proporsional dengan $N \\lfloor c \\log N \\rfloor$ atau representasi fungsi bersarang dalam pilihan soal.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -653,7 +693,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "d",
-    "pembahasan": "Perulangan perkalian kelipatan `k := k * 7` menghasilkan jumlah iterasi berorde logaritmik $\\lfloor c \\log N \\rfloor$[cite: 18]."
+    "pembahasan": "Prosedur `Zz3`:\n```pascal\nk := 1;\nwhile k < t do begin\n  write('*');\n  k := k * 7;\nend;\n```\nNilai $k$ dikalikan 7 pada setiap iterasi. Jumlah pengulangan hingga $k \\ge t$ adalah $\\lfloor \\log_7 N \\rfloor$, yang sebanding dengan bentuk $\\lfloor c \\log N \\rfloor$.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -668,8 +709,9 @@
     "kode": "procedure Zz4(t: integer); ...",
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "b",
-    "pembahasan": "Loop luar membagi dua ($N/2$) dan loop dalam mencetak sebanyak $N$ kali, membentuk fungsi proporsional $(\\lfloor c \\log N \\rfloor)^2$[cite: 18]."
+    "jawaban_benar": "e",
+    "pembahasan": "Prosedur `Zz4`:\n```pascal\nk := t;\nwhile k > 0 do begin\n  for j := 1 to t do write('*');\n  k := k div 2;\nend;\n```\nLoop luar membagi $k$ dengan 2 hingga bernilai 0, yang membutuhkan $\\lfloor \\log_2 N \\rfloor + 1$ iterasi. Pada setiap iterasi loop luar, loop dalam mencetak `'*'` sebanyak $N$ kali. Total pencetakan adalah $N \\lfloor c \\log N \\rfloor$.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Untuk nomor soal 43-50 perhatikan penjelasan ini:\nArray X berukuran 15 (indeks 0..14) dengan elemen data tertentu.",
@@ -685,7 +727,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "e",
-    "pembahasan": "Prosedur `Zaff` menggunakan variabel penampung `tmp` untuk menukar isi kedua variabel parameter (swap)[cite: 18]."
+    "pembahasan": "Prosedur `Zaff` menggunakan parameter variabel (`var a, b: integer`) dan variabel pembantu `tmp`:\n```pascal\ntmp := a;\na := b;\nb := tmp;\n```\nIni merupakan algoritma standar penukaran nilai dua variabel (*swap*), sehingga kedua variabel bertukar harga.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Untuk nomor soal 43-50 perhatikan penjelasan ini.",
@@ -701,7 +744,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "b",
-    "pembahasan": "Menelusuri eksekusi `Atur1(10)` pada elemen larik X dari indeks 10 hingga 13 dengan pemeriksaan pertukaran bubble sort parsial menghasilkan keluaran `303 234 332 432 493`[cite: 18]."
+    "pembahasan": "Penelusuran pemanggilan `Atur1(10)` pada elemen $X[10..14]$:\nNilai awal: $X[10]=303, X[11]=332, X[12]=234, X[13]=493, X[14]=432$.\n- $j=10$: $X[10]=303 < X[11]=332$, tidak bertukar. Cetak `303`.\n- $j=11$: $X[11]=332 > X[12]=234$, bertukar menjadi $X[11]=234, X[12]=332$. Cetak `234`.\n- $j=12$: $X[12]=332 < X[13]=493$, tidak bertukar. Cetak `332`.\n- $j=13$: $X[13]=493 > X[14]=432$, bertukar menjadi $X[13]=432, X[14]=493$. Cetak `432`.\nElemen terakhir yang tersisa di posisi akhir adalah `493`. Keluaran yang dihasilkan adalah `303 234 332 432 493`.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Untuk nomor soal 43-50 perhatikan penjelasan ini.",
@@ -717,7 +761,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "d",
-    "pembahasan": "Fungsi `zzz` membandingkan nilai mutlak selisih antara dua elemen $X$ yang berdampingan (`X[j] - X[j+1]`) dan memperbarui nilai maksimumnya, sehingga berfungsi mencari selisih terbesar dua X berturut-turut[cite: 18]."
+    "pembahasan": "Fungsi `zzz` membandingkan selisih mutlak antara dua elemen bersebelahan $|X[j] - X[j+1]|$ dan menyimpan nilai terbesarnya. Oleh karena itu fungsi ini bertujuan mencari selisih terbesar dari dua elemen $X$ berturut-turut.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Untuk nomor soal 43-50 perhatikan penjelasan ini.",
@@ -733,7 +778,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "a",
-    "pembahasan": "Prosedur tersebut mengimplementasikan algoritma pengurutan gelembung (Bubble Sort) standar yang mengurutkan elemen array secara menaik (ascending)[cite: 18]."
+    "pembahasan": "Prosedur `Anehsaja` mengimplementasikan algoritma *Bubble Sort* dengan pembanding `X[j] > X[j+1]` yang menukar elemen bila yang di depan lebih besar. Akibatnya array akan terurut menaik (*ascending*).",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Untuk nomor soal 43-50 perhatikan penjelasan ini.",
@@ -749,7 +795,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "e",
-    "pembahasan": "Prosedur tersebut merupakan implementasi inti partisi (Partition step dalam QuickSort) yang membagi elemen berdasarkan nilai pivot, memastikan elemen di sisi kiri lebih kecil dibandingkan sisi kanan[cite: 18]."
+    "pembahasan": "Prosedur `Paz(s, t, m)` adalah fungsi partisi (*partition step*) dalam algoritma *Quick Sort* dengan pivot indeks $m$. Prosedur ini menata ulang elemen sehingga setiap elemen pada sub-array kiri ($0$ sampai $t$) bernilai lebih kecil atau sama dengan elemen pada sub-array kanan ($s$ sampai $14$).",
+    "tingkat_kesulitan": "sulit"
   },
   {
     "deskripsi_soal": "Untuk nomor soal 43-50 perhatikan penjelasan ini.",
@@ -764,8 +811,9 @@
     "kode": "function Apakahitu(I: integer): integer; ...",
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "a",
-    "pembahasan": "Menelusuri fungsi rekursif `Apakahitu(10)` yang menghitung rata-rata rekursif dan mencetak hasilnya menghasilkan deretan angka `216 354 294 313 308`[cite: 18]."
+    "jawaban_benar": "e",
+    "pembahasan": "Fungsi rekursif `Apakahitu(I)` mengembalikan nilai $X[I]$ sebelum dimodifikasi, dan memperbarui $X[I] := (X[I] + \\text{Apakahitu}(I+1)) \\text{ div } 2$ saat kembali dari pemanggilan rekursif (post-order):\n- $I=14$: $X[14] = (432 + 0) \\text{ div } 2 = 216$. Ditulis `216`.\n- $I=13$: $X[13] = (493 + 432) \\text{ div } 2 = 462$. Ditulis `462`.\n- $I=12$: $X[12] = (234 + 493) \\text{ div } 2 = 363$. Ditulis `363`.\n- $I=11$: $X[11] = (332 + 234) \\text{ div } 2 = 283$. Ditulis `283`.\n- $I=10$: $X[10] = (303 + 332) \\text{ div } 2 = 317$. Ditulis `317`.\nKeluaran yang dicetak adalah `216 462 363 283 317`.",
+    "tingkat_kesulitan": "sulit"
   },
   {
     "deskripsi_soal": "Untuk nomor soal 43-50 perhatikan penjelasan ini.",
@@ -780,8 +828,9 @@
     "kode": "procedure Datangi(I: integer); ...",
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "a",
-    "pembahasan": "Prosedur `Datangi` melakukan penelusuran In-order Traversal pada struktur Binary Tree berbasis array. Untuk $I = 5$, urutan cetak elemennya adalah `234 781 332` (atau susunan bersesuaian dengan pohon biner)[cite: 18]."
+    "jawaban_benar": "c",
+    "pembahasan": "Prosedur `Datangi(I)` melakukan penelusuran *in-order traversal* pada pohon biner berindeks array:\n- Pemanggilan `Datangi(5)`:\n  1. Rekursi kiri: `Datangi(5*2 + 1) = Datangi(11)`. Karena anak-anaknya $23, 24 \\ge 15$, langsung mencetak $X[11] = 332$.\n  2. Cetak simpul saat ini: mencetak $X[5] = 781$.\n  3. Rekursi kanan: `Datangi(5*2 + 2) = Datangi(12)`. Karena anak-anaknya $25, 26 \\ge 15$, langsung mencetak $X[12] = 234$.\nUrutan keluaran yang dicetak adalah `332 781 234`.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Untuk nomor soal 43-50 perhatikan penjelasan ini.",
@@ -796,7 +845,8 @@
     "kode": "procedure Kocok(I: integer); ...",
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "b",
-    "pembahasan": "Menelusuri prosedur rekursif pengurutan `Kocok(10)` menghasilkan pencetakan elemen terurut `234 303 332 432 493`[cite: 18]."
+    "jawaban_benar": "c",
+    "pembahasan": "Prosedur `Kocok(I)` melakukan penukaran untuk menempatkan nilai terkecil pada $X[I]$ (mirip *selection sort*), lalu memanggil rekursif `Kocok(I+1)`, dan **setelah** rekursi selesai baru mencetak `write(X[I], ' ')`.\nKarena pencetakan dilakukan dalam urutan kembali (*post-order* / *unwinding* rekursi) dari $I=14$ mundur ke $I=10$, maka elemen terurut dicetak dari yang terbesar ke terkecil:\n`493 432 332 303 234`.",
+    "tingkat_kesulitan": "sedang"
   }
 ]

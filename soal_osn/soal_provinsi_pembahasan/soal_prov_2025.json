@@ -7,7 +7,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "C",
-    "pembahasan": "Mengecek apakah string hanya terdiri dari huruf 'O', 'S', 'N', dan 'P' (masing-masing muncul minimal sekali) serta tidak ada huruf selain 'P' setelah huruf 'P'."
+    "pembahasan": "Mengecek apakah string hanya terdiri dari huruf 'O', 'S', 'N', dan 'P' (masing-masing muncul minimal sekali) serta tidak ada huruf selain 'P' setelah huruf 'P'.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "A. String Cantik OSN-P...",
@@ -17,7 +18,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Benar / Salah",
-    "pembahasan": "Pemeriksaan sekuens karakter pada string awal untuk membentuk string cantik dengan jumlah huruf 'P' tertentu."
+    "pembahasan": "Pemeriksaan sekuens karakter pada string awal untuk membentuk string cantik dengan jumlah huruf 'P' tertentu.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "A. String Cantik OSN-P...",
@@ -27,7 +29,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "String leksikografis terkecil",
-    "pembahasan": "Pencarian subsequence terpanjang yang memenuhi aturan string cantik OSN-P dan diurutkan secara leksikografis."
+    "pembahasan": "Pencarian subsequence terpanjang yang memenuhi aturan string cantik OSN-P dan diurutkan secara leksikografis.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "A. String Cantik OSN-P...",
@@ -37,7 +40,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Program / Solusi Algoritma",
-    "pembahasan": "Implementasi pemrograman dinamis (*dynamic programming*) untuk melacak status kemunculan huruf O, S, N, dan transisi ke huruf P."
+    "pembahasan": "Implementasi pemrograman dinamis (*dynamic programming*) untuk melacak status kemunculan huruf O, S, N, dan transisi ke huruf P.",
+    "tingkat_kesulitan": "sulit"
   },
   {
     "deskripsi_soal": "B. Gudang Penyimpanan Kardus...",
@@ -47,7 +51,8 @@
     "gambar_url": null,
     "gambar_lokal": "soal_1.png",
     "jawaban_benar": "Jumlah kardus maksimal",
-    "pembahasan": "Perhitungan kapasitas tata letak orientasi seragam (*estetik*) dalam gudang persegi."
+    "pembahasan": "Perhitungan kapasitas tata letak orientasi seragam (*estetik*) dalam gudang persegi.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "B. Gudang Penyimpanan Kardus...",
@@ -57,7 +62,8 @@
     "gambar_url": null,
     "gambar_lokal": "soal_1.png",
     "jawaban_benar": "Benar / Salah",
-    "pembahasan": "Analisis monotonisitas kapasitas penyimpanan terhadap penambahan ukuran sisi gudang."
+    "pembahasan": "Analisis monotonisitas kapasitas penyimpanan terhadap penambahan ukuran sisi gudang.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "B. Gudang Penyimpanan Kardus...",
@@ -67,7 +73,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Panjang sisi gudang terkecil",
-    "pembahasan": "Optimasi dimensi persegi untuk memuat jumlah kardus dengan orientasi tetap."
+    "pembahasan": "Optimasi dimensi persegi untuk memuat jumlah kardus dengan orientasi tetap.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "B. Gudang Penyimpanan Kardus...",
@@ -77,7 +84,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Program / Solusi Algoritma",
-    "pembahasan": "Implementasi pencarian biner (*binary search*) pada panjang sisi gudang dengan validasi matematis tata letak."
+    "pembahasan": "Implementasi pencarian biner (*binary search*) pada panjang sisi gudang dengan validasi matematis tata letak.",
+    "tingkat_kesulitan": "sulit"
   },
   {
     "deskripsi_soal": "C. Balada Kemasan Telur...",
@@ -87,7 +95,8 @@
     "gambar_url": null,
     "gambar_lokal": "soal_2.png",
     "jawaban_benar": "Jumlah total telur",
-    "pembahasan": "Perhitungan jumlah kemasan yang dibeli dikalikan dengan isi kemasan prima $p \\times p$."
+    "pembahasan": "Perhitungan jumlah kemasan yang dibeli dikalikan dengan isi kemasan prima $p \\times p$.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "C. Balada Kemasan Telur...",
@@ -97,7 +106,8 @@
     "gambar_url": null,
     "gambar_lokal": "soal_2.png",
     "jawaban_benar": "Pilihan skenario",
-    "pembahasan": "Analisis jumlah faktor pembagi positif dari total telur untuk memaksimalkan variasi bentuk kemasan $s \\times t$."
+    "pembahasan": "Analisis jumlah faktor pembagi positif dari total telur untuk memaksimalkan variasi bentuk kemasan $s \\times t$.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "C. Balada Kemasan Telur...",
@@ -107,7 +117,8 @@
     "gambar_url": null,
     "gambar_lokal": "soal_2.png",
     "jawaban_benar": "Tipe telur optimal",
-    "pembahasan": "Pengecekan faktor prima pembagi modal N yang menghasilkan jumlah faktor total telur terbanyak."
+    "pembahasan": "Pengecekan faktor prima pembagi modal N yang menghasilkan jumlah faktor total telur terbanyak.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "C. Balada Kemasan Telur...",
@@ -117,7 +128,8 @@
     "gambar_url": null,
     "gambar_lokal": "soal_2.png",
     "jawaban_benar": "Program / Solusi Algoritma",
-    "pembahasan": "Implementasi faktorisasi prima untuk mengevaluasi jumlah kombinasi kemasan bagi setiap pilihan tipe telur."
+    "pembahasan": "Implementasi faktorisasi prima untuk mengevaluasi jumlah kombinasi kemasan bagi setiap pilihan tipe telur.",
+    "tingkat_kesulitan": "sulit"
   },
   {
     "deskripsi_soal": "D. Telur Kemasan Balado...",
@@ -127,7 +139,8 @@
     "gambar_url": null,
     "gambar_lokal": "soal_3.png",
     "jawaban_benar": "Pilihan string",
-    "pembahasan": "Evaluasi penghapusan rentang karakter 'A' untuk menyisakan jumlah karakter 'B' terbanyak dalam sekali operasi."
+    "pembahasan": "Evaluasi penghapusan rentang karakter 'A' untuk menyisakan jumlah karakter 'B' terbanyak dalam sekali operasi.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "D. Telur Kemasan Balado...",
@@ -137,7 +150,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Jumlah telur Balado maksimal",
-    "pembahasan": "Simulasi pemangkasan segmen karakter non-balado dengan batas maksimal 2 operasi."
+    "pembahasan": "Simulasi pemangkasan segmen karakter non-balado dengan batas maksimal 2 operasi.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "D. Telur Kemasan Balado...",
@@ -147,7 +161,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Jumlah telur Balado maksimal",
-    "pembahasan": "Optimasi penghapusan elemen menggunakan hingga 3 rentang operasi untuk memaksimalkan sisa huruf 'B'."
+    "pembahasan": "Optimasi penghapusan elemen menggunakan hingga 3 rentang operasi untuk memaksimalkan sisa huruf 'B'.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "D. Telur Kemasan Balado...",
@@ -157,7 +172,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Program / Solusi Algoritma",
-    "pembahasan": "Implementasi pemrograman dinamis atau algoritma *greedy* bersyarat untuk penggabungan segmen string."
+    "pembahasan": "Implementasi pemrograman dinamis atau algoritma *greedy* bersyarat untuk penggabungan segmen string.",
+    "tingkat_kesulitan": "sulit"
   },
   {
     "deskripsi_soal": "E. Tebas Tebang Bambu...",
@@ -167,7 +183,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Pilihan skenario",
-    "pembahasan": "Pemeriksaan frekuensi kemunculan panjang bambu yang memenuhi syarat minimal M tanpa pemangkasan."
+    "pembahasan": "Pemeriksaan frekuensi kemunculan panjang bambu yang memenuhi syarat minimal M tanpa pemangkasan.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "E. Tebas Tebang Bambu...",
@@ -177,7 +194,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Benar / Salah",
-    "pembahasan": "Analisis properti partisi jumlah elemen kelompok bambu dengan panjang seragam."
+    "pembahasan": "Analisis properti partisi jumlah elemen kelompok bambu dengan panjang seragam.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "E. Tebas Tebang Bambu...",
@@ -187,7 +205,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Jumlah ikat maksimum",
-    "pembahasan": "Simulasi pemangkasan rentang nilai panjang bambu dengan batas toleransi K."
+    "pembahasan": "Simulasi pemangkasan rentang nilai panjang bambu dengan batas toleransi K.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "E. Tebas Tebang Bambu...",
@@ -197,7 +216,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Program / Solusi Algoritma",
-    "pembahasan": "Implementasi pemrograman dinamis (*DP*) dengan transisi rentang panjang bambu yang valid setelah dipangkas."
+    "pembahasan": "Implementasi pemrograman dinamis (*DP*) dengan transisi rentang panjang bambu yang valid setelah dipangkas.",
+    "tingkat_kesulitan": "sulit"
   },
   {
     "deskripsi_soal": "F. Kandang Ayam Kandang Bebek...",
@@ -207,7 +227,8 @@
     "gambar_url": null,
     "gambar_lokal": "soal_4.png, soal_5.png",
     "jawaban_benar": "Pilihan kondisi",
-    "pembahasan": "Analisis persilangan jalur gerak rute pulang hewan tanpa bersinggungan pada grid 2x5."
+    "pembahasan": "Analisis persilangan jalur gerak rute pulang hewan tanpa bersinggungan pada grid 2x5.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "F. Kandang Ayam Kandang Bebek...",
@@ -217,7 +238,8 @@
     "gambar_url": null,
     "gambar_lokal": "soal_4.png, soal_5.png",
     "jawaban_benar": "Jumlah posisi awal bebek",
-    "pembahasan": "Pemeriksaan batasan geometris rute agar jalur pulang ayam dan bebek tidak saling memotong."
+    "pembahasan": "Pemeriksaan batasan geometris rute agar jalur pulang ayam dan bebek tidak saling memotong.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "F. Kandang Ayam Kandang Bebek...",
@@ -227,7 +249,8 @@
     "gambar_url": null,
     "gambar_lokal": "soal_6.png",
     "jawaban_benar": "Total nilai kerisihan",
-    "pembahasan": "Perhitungan bobot minimum jalur perpindahan hewan pada matriks kebecekan tanpa konflik."
+    "pembahasan": "Perhitungan bobot minimum jalur perpindahan hewan pada matriks kebecekan tanpa konflik.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "F. Kandang Ayam Kandang Bebek...",
@@ -237,6 +260,7 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Program / Solusi Algoritma",
-    "pembahasan": "Implementasi algoritma graf atau pemrograman dinamis tingkat lanjut untuk rute non-intersek pada grid 2 x N."
+    "pembahasan": "Implementasi algoritma graf atau pemrograman dinamis tingkat lanjut untuk rute non-intersek pada grid 2 x N.",
+    "tingkat_kesulitan": "sulit"
   }
 ]

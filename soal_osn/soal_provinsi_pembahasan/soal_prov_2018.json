@@ -6,7 +6,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Tidak",
-    "pembahasan": "Jika makanan bebek tidak tersisa, artinya Pak Dengklek tidak tiduran (karena jika tiduran, makanan pasti tersisa). Berdasarkan logika kontraposisi, jika dia tidak tiduran, maka dia tidak sedang marah dan tidak sakit, sehingga jawabannya adalah Tidak[cite: 12]."
+    "pembahasan": "Jika makanan bebek tidak tersisa, artinya Pak Dengklek tidak tiduran (karena jika tiduran, makanan pasti tersisa). Berdasarkan logika kontraposisi, jika dia tidak tiduran, maka dia tidak sedang marah dan tidak sakit, sehingga jawabannya adalah Tidak.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Diberikan sembilan variabel boolean X 1 s.d. X 9 ... Ada berapa kemungkinan konfigurasi X 1 s.d. X 9 yang membuat setidaknya ada satu kalimat bernilai FALSE?",
@@ -15,7 +16,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "432",
-    "pembahasan": "Analisis sistem persamaan logika boolean dan perhitungan kombinasi nilai kebenaran yang menghasilkan minimal satu nilai FALSE berjumlah 432 konfigurasi[cite: 12]."
+    "pembahasan": "Analisis sistem persamaan logika boolean dan perhitungan kombinasi nilai kebenaran yang menghasilkan minimal satu nilai FALSE berjumlah 432 konfigurasi.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Pak Blangkon beternak dua jenis ayam yaitu ayam kampung dan ayam ras... Berapakah jumlah ayam kampung jantan yang berjengger panjang dan berkokok keras yang dimiliki Pak Blangkon?",
@@ -24,7 +26,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "5",
-    "pembahasan": "Penyelesaian menggunakan prinsip inklusi-eksklusi pada himpunan ayam jantan menghasilkan nilai 5[cite: 12]."
+    "pembahasan": "Penyelesaian menggunakan prinsip inklusi-eksklusi pada himpunan ayam jantan menghasilkan nilai 5.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Pak Dengklek memiliki 10 ekor bebek... Berapa banyak konfigurasi lima pasangan bebek yang hasil perkalian selisih-selisihnya genap bukan nol?",
@@ -33,7 +36,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "96",
-    "pembahasan": "Analisis paritas (ganjil/genap) dari selisih berat badan pasangan bebek menghasilkan 96 konfigurasi[cite: 12]."
+    "pembahasan": "Analisis paritas (ganjil/genap) dari selisih berat badan pasangan bebek menghasilkan 96 konfigurasi.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Misalkan A dan B berturut-turut menyatakan bilangan terbesar dan bilangan terkecil di antara semua bilangan 5-digit... Berapakah digit terakhir dari 3(A-B)?",
@@ -42,7 +46,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "7",
-    "pembahasan": "Bilangan 5-digit terbesar dengan jumlah digit 9 adalah 90000, dan terkecil adalah 10008. Selisih $A - B = 79992$. Nilai $3 \times 79992 = 239976$, yang memiliki digit terakhir 7[cite: 12]."
+    "pembahasan": "Bilangan 5-digit terbesar dengan jumlah digit 9 adalah 90000, dan terkecil adalah 10008. Selisih $A - B = 79992$. Nilai $3 \times 79992 = 239976$, yang memiliki digit terakhir 7.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Pak Dengklek baru saja membuka tabungan di Bank TOKI... PIN 4-digit yang jika dikali 4 hasilnya menjadi urutan digit terbalik.",
@@ -51,7 +56,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "2178",
-    "pembahasan": "Uji coba matematika: $2178 \times 4 = 8712$, yang merupakan kebalikan persis dari 2178[cite: 12]."
+    "pembahasan": "Uji coba matematika: $2178 \times 4 = 8712$, yang merupakan kebalikan persis dari 2178.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Kotak-kotak pada gambar berikut merepresentasikan ruangan-ruangan... Berapa kali paling sedikit penekanan saklar yang diperlukan untuk menghidupkan seluruh lampu?",
@@ -60,7 +66,8 @@
     "gambar_url": "https://www.kujawab.com/r2/uploads/1527683248_soal%20no%207.jpg",
     "gambar_lokal": "soal_7.jpg",
     "jawaban_benar": "3",
-    "pembahasan": "Analisis pemetaan status lampu dan saklar (*state transition / graph domination*) menghasilkan minimum 3 kali penekanan[cite: 12]."
+    "pembahasan": "Analisis pemetaan status lampu dan saklar (*state transition / graph domination*) menghasilkan minimum 3 kali penekanan.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Pak Dengklek sedang bermain menyusun bentuk segitiga dengan menggunakan batang korek api... Berapakah batang korek api minimal yang diperlukan untuk membentuk dua puluh segitiga?",
@@ -69,7 +76,8 @@
     "gambar_url": "https://www.kujawab.com/r2/uploads/1527683294_soal%20no%208.jpg",
     "gambar_lokal": "soal_8.jpg",
     "jawaban_benar": "41",
-    "pembahasan": "Pola batang korek api untuk menyusun $N$ segitiga berderet adalah $2N + 1$. Untuk 20 segitiga, dibutuhkan $2(20) + 1 = 41$ batang[cite: 12]."
+    "pembahasan": "Pola batang korek api untuk menyusun $N$ segitiga berderet adalah $2N + 1$. Untuk 20 segitiga, dibutuhkan $2(20) + 1 = 41$ batang.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Diberikan peta rumah-rumah di kota Pak Dengklek tinggal... Ada berapa banyak rute berbeda yang dapat Pak Dengklek tempuh dari rumah 1 ke rumah 9 dengan total lintasan sependek mungkin?",
@@ -78,7 +86,8 @@
     "gambar_url": "https://www.kujawab.com/r2/uploads/1527683360_soal%20no%209.jpg",
     "gambar_lokal": "soal_9.jpg",
     "jawaban_benar": "2",
-    "pembahasan": "Pencarian jalur terpendek (*shortest path*) pada graf berbobot dari simpul 1 ke 9 menghasilkan tepat 2 rute berbeda[cite: 12]."
+    "pembahasan": "Pencarian jalur terpendek (*shortest path*) pada graf berbobot dari simpul 1 ke 9 menghasilkan tepat 2 rute berbeda.",
+    "tingkat_kesulitan": "sulit"
   },
   {
     "soal": "Aang, Budi, Cici, Dika dan Eno bermain ayam-bebek... Ada berapa anak yang menjadi bebek dalam permainan ini?",
@@ -87,7 +96,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "3",
-    "pembahasan": "Analisis nilai kebenaran pernyataan jujur (ayam) dan dusta (bebek) masing-masing anak menunjukkan ada 3 orang yang berperan sebagai bebek[cite: 12]."
+    "pembahasan": "Analisis nilai kebenaran pernyataan jujur (ayam) dan dusta (bebek) masing-masing anak menunjukkan ada 3 orang yang berperan sebagai bebek.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Terdapat sebuah daftar yang memuat 2017 pernyataan... Pernyataan nomor berapakah yang benar jika ternyata hanya ada satu yang benar?",
@@ -96,7 +106,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "2016",
-    "pembahasan": "Jika hanya ada 1 pernyataan yang benar, maka ada 2016 pernyataan yang salah. Pernyataan yang menyatakan 'Terdapat tepat 2016 pernyataan yang salah' adalah pernyataan nomor 2016[cite: 12]."
+    "pembahasan": "Jika hanya ada 1 pernyataan yang benar, maka ada 2016 pernyataan yang salah. Pernyataan yang menyatakan 'Terdapat tepat 2016 pernyataan yang salah' adalah pernyataan nomor 2016.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Iwan selalu berbohong pada hari Senin, Selasa, Rabu dan berkata jujur pada hari-hari lainnya... Iwan: 'Kemarin saya berbohong', Budi: 'Saya juga'. Pada hari apa percakapan tersebut terjadi?",
@@ -105,7 +116,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Kamis",
-    "pembahasan": "Analisis konsistensi hari kejujuran Iwan dan Budi menunjukkan percakapan tersebut terjadi pada hari Kamis[cite: 12]."
+    "pembahasan": "Analisis konsistensi hari kejujuran Iwan dan Budi menunjukkan percakapan tersebut terjadi pada hari Kamis.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Saat belanja di sebuah pusat perbelanjaan... 17 permen dengan 4 rasa (anggur 2, jeruk 3, mangga 7, strawberry 5). Berapakah jumlah permen paling sedikit yang harus dibeli agar selalu diperoleh 5 permen dengan rasa yang sama?",
@@ -114,7 +126,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "15",
-    "pembahasan": "Berdasarkan prinsip Pigeonhole, untuk memastikan mendapatkan 5 permen rasa mangga (yang stoknya cukup), kita asumsikan skenario terburuk mengambil semua permen rasa anggur (2), jeruk (3), dan strawberry (5), serta 4 permen mangga ($2+3+5+4 = 14$), sehingga pengambilan ke-15 pasti menjamin 5 permen rasa yang sama (mangga)[cite: 12]."
+    "pembahasan": "Berdasarkan prinsip Pigeonhole, untuk memastikan mendapatkan 5 permen rasa mangga (yang stoknya cukup), kita asumsikan skenario terburuk mengambil semua permen rasa anggur (2), jeruk (3), dan strawberry (5), serta 4 permen mangga ($2+3+5+4 = 14$), sehingga pengambilan ke-15 pasti menjamin 5 permen rasa yang sama (mangga).",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Pak Dengklek sedang bermain dengan 10 buah kartu... Berapakah nilai pada kartu yang tersisa?",
@@ -123,7 +136,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "7",
-    "pembahasan": "Simulasi operasi perpindahan kartu berdasarkan bilangan prima ke-i menghasilkan kartu nomor 7 sebagai sisa terakhir[cite: 12]."
+    "pembahasan": "Simulasi operasi perpindahan kartu berdasarkan bilangan prima ke-i menghasilkan kartu nomor 7 sebagai sisa terakhir.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Pak Dengklek memiliki dua buah bilangan... jumlah 105, FPB 15, KPK 150. Berapakah selisih dari kedua bilangan tersebut?",
@@ -132,7 +146,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "45",
-    "pembahasan": "Dua bilangan tersebut dapat dinyatakan sebagai $15a$ dan $15b$ dengan $\text{FPB}(a,b)=1$. Karena $\text{KPK} = 15ab = 150 \rightarrow ab = 10$, dan jumlahnya $15(a+b) = 105 \rightarrow a+b = 7$. Nilai $a$ dan $b$ yang memenuhi adalah 2 dan 5. Bilangannya adalah $30$ dan $75$. Selisihnya adalah $75 - 30 = 45$[cite: 12]."
+    "pembahasan": "Dua bilangan tersebut dapat dinyatakan sebagai $15a$ dan $15b$ dengan $\text{FPB}(a,b)=1$. Karena $\text{KPK} = 15ab = 150 \rightarrow ab = 10$, dan jumlahnya $15(a+b) = 105 \rightarrow a+b = 7$. Nilai $a$ dan $b$ yang memenuhi adalah 2 dan 5. Bilangannya adalah $30$ dan $75$. Selisihnya adalah $75 - 30 = 45$.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Pada bulan April, desa TOKI Jaya... luas area 360 m2, mobil 6 m2, bus 24 m2, maks 30 kendaraan. Tarif mobil Rp2.000, bus Rp5.000. Pendapatan terbesar?",
@@ -141,7 +156,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "75000",
-    "pembahasan": "Pemrograman linear / uji titik pojok: misalkan mobil $M$, bus $B$. Kendala: $M + B \nle 30$ dan $6M + 24B \nle 360$ ($M + 4B \nle 60$). Maksimalkan $Z = 2000M + 5000B$. Kombinasi optimal menghasilkan pendapatan Rp75.000[cite: 12]."
+    "pembahasan": "Pemrograman linear / uji titik pojok: misalkan mobil $M$, bus $B$. Kendala: $M + B \nle 30$ dan $6M + 24B \nle 360$ ($M + 4B \nle 60$). Maksimalkan $Z = 2000M + 5000B$. Kombinasi optimal menghasilkan pendapatan Rp75.000.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Untuk mengembangkan usaha peternakannya... membeli ke toko bebek atau ayam secara berselang-seling. Jika kemarin $x$ bebek, hari ini $2x$ ayam. Jika kemarin $y$ ayam, hari ini $3y$ bebek. Hari pertama membeli seekor bebek. Hewan ke-1000?",
@@ -150,7 +166,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Ayam",
-    "pembahasan": "Pola siklus pembelian menunjukkan pergantian jenis hewan ternak pada urutan tertentu, di mana hewan ke-1000 jatuh pada kategori Ayam[cite: 12]."
+    "pembahasan": "Pola siklus pembelian menunjukkan pergantian jenis hewan ternak pada urutan tertentu, di mana hewan ke-1000 jatuh pada kategori Ayam.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Deskripsi Untuk Soal Nomor 18 dan 19",
@@ -160,7 +177,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": null,
-    "pembahasan": "Deskripsi pertumbuhan populasi binatang purba[cite: 12]."
+    "pembahasan": "Deskripsi pertumbuhan populasi binatang purba.",
+    "tingkat_kesulitan": null
   },
   {
     "soal": "Berapa banyak binatang purba pada tahun ke 5 Masehi?",
@@ -169,7 +187,9 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "512",
-    "pembahasan": "Perhitungan pertumbuhan eksponensial populasi binatang purba hingga tahun ke-5 Masehi menghasilkan 512[cite: 12]."
+    "pembahasan": "Perhitungan pertumbuhan eksponensial populasi binatang purba hingga tahun ke-5 Masehi menghasilkan 512.",
+    "deskripsi_soal": "Deskripsi Untuk Soal Nomor 18 dan 19\nTerdapat dua binatang purba pada tahun 0 Masehi... melahirkan 3 anak sekaligus setelah satu tahun dan mati/tidak beranak lagi.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Berapa banyak binatang purba pada tahun 2018 Masehi (jawaban dimodulo 2017)?",
@@ -178,7 +198,9 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "0",
-    "pembahasan": "Berdasarkan aritmatika modular, hasil perpangkatan populasi pada tahun 2018 modulo 2017 menghasilkan 0 (karena 2017 adalah bilangan prima dan kelipatan periodiknya)[cite: 12]."
+    "pembahasan": "Berdasarkan aritmatika modular, hasil perpangkatan populasi pada tahun 2018 modulo 2017 menghasilkan 0 (karena 2017 adalah bilangan prima dan kelipatan periodiknya).",
+    "deskripsi_soal": "Deskripsi Untuk Soal Nomor 18 dan 19\nTerdapat dua binatang purba pada tahun 0 Masehi... melahirkan 3 anak sekaligus setelah satu tahun dan mati/tidak beranak lagi.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Deskripsi Untuk Soal Nomor 20 dan 21",
@@ -188,7 +210,8 @@
     "gambar_url": null,
     "gambar_lokal": "soal_21.png",
     "jawaban_benar": null,
-    "pembahasan": "Deskripsi kombinatorika penutupan ubin domino pada grid[cite: 12]."
+    "pembahasan": "Deskripsi kombinatorika penutupan ubin domino pada grid.",
+    "tingkat_kesulitan": null
   },
   {
     "soal": "Apabila diketahui N = 2, berapa banyak konfigurasi menarik yang berbeda?",
@@ -197,7 +220,9 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "2",
-    "pembahasan": "Untuk grid $2 \times 2$, jumlah konfigurasi petak merah yang valid menghasilkan 2 cara[cite: 12]."
+    "pembahasan": "Untuk grid $2 \times 2$, jumlah konfigurasi petak merah yang valid menghasilkan 2 cara.",
+    "deskripsi_soal": "Deskripsi Untuk Soal Nomor 20 dan 21\nPak Dengklek mempunyai suatu lantai berukuran N * N petak (N genap)... memilih dua petak untuk dicat merah, sisanya ditutup tegel 1x2. Konfigurasi menarik.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Apabila diketahui N = 10, berapa banyak konfigurasi menarik yang berbeda?",
@@ -205,7 +230,9 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "126",
-    "pembahasan": "Perhitungan kombinatorika penutupan ubin pada grid $10 \times 10$ menghasilkan 126 konfigurasi[cite: 12]."
+    "pembahasan": "Perhitungan kombinatorika penutupan ubin pada grid $10 \times 10$ menghasilkan 126 konfigurasi.",
+    "deskripsi_soal": "Deskripsi Untuk Soal Nomor 20 dan 21\nPak Dengklek mempunyai suatu lantai berukuran N * N petak (N genap)... memilih dua petak untuk dicat merah, sisanya ditutup tegel 1x2. Konfigurasi menarik.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Bilangan bagus (habis dibagi 3) atau cantik (banyak faktor ganjil / kuadrat sempurna). Nilai minimum N supaya banyaknya bilangan dari [1..N] yang bagus atau cantik $\nge X$ (dengan $X=100$)?",
@@ -214,7 +241,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "199",
-    "pembahasan": "Mencari batas $N$ terkecil sehingga gabungan himpunan bilangan kelipatan 3 dan bilangan kuadrat sempurna mencakup sekurangnya 100 bilangan, bernilai 199[cite: 12]."
+    "pembahasan": "Mencari batas $N$ terkecil sehingga gabungan himpunan bilangan kelipatan 3 dan bilangan kuadrat sempurna mencakup sekurangnya 100 bilangan, bernilai 199.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Pak Dengklek bermain Tebak Angka 1 sampai 100... Paling sedikit berapa kali Pak Ganesh menyebut angka tebakan sehingga dijamin benar?",
@@ -223,7 +251,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "7",
-    "pembahasan": "Pencarian biner (*binary search*) pada rentang 1 hingga 100 membutuhkan paling sedikit $\nlceil \nlog_2(100) \nrceil = 7$ kali tebakan[cite: 12]."
+    "pembahasan": "Pencarian biner (*binary search*) pada rentang 1 hingga 100 membutuhkan paling sedikit $\nlceil \nlog_2(100) \nrceil = 7$ kali tebakan.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Deskripsi Untuk Soal Nomor 24 dan 25",
@@ -233,7 +262,8 @@
     "gambar_url": null,
     "gambar_lokal": "soal_26.png",
     "jawaban_benar": null,
-    "pembahasan": "Deskripsi pergerakan dua agen pada grid[cite: 12]."
+    "pembahasan": "Deskripsi pergerakan dua agen pada grid.",
+    "tingkat_kesulitan": null
   },
   {
     "soal": "Berapa banyak cara berbeda untuk mereka berdua berjalan menuju ke kolom 5?",
@@ -242,7 +272,9 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "14",
-    "pembahasan": "Perhitungan jalur valid (*non-intersecting paths*) menuju kolom 5 menghasilkan 14 cara[cite: 12]."
+    "pembahasan": "Perhitungan jalur valid (*non-intersecting paths*) menuju kolom 5 menghasilkan 14 cara.",
+    "deskripsi_soal": "Deskripsi Untuk Soal Nomor 24 dan 25\nPetak persegi panjang 4 baris $\times$ tak hingga kolom. Pak Dengklek (D) di (1,1), Pak Ganesh (G) di (4,1). Melangkah diagonal ke kanan tanpa bertabrakan hingga kolom 3.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Berapa banyak cara berbeda untuk mereka berdua berjalan menuju ke kolom 1357? Jawaban dalam modulo 7.",
@@ -251,7 +283,9 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "3",
-    "pembahasan": "Penerapan matriks penentuan jalur / determinan (*Lindström–Gessel–Viennot lemma*) modulo 7 menghasilkan 3[cite: 12]."
+    "pembahasan": "Penerapan matriks penentuan jalur / determinan (*Lindström–Gessel–Viennot lemma*) modulo 7 menghasilkan 3.",
+    "deskripsi_soal": "Deskripsi Untuk Soal Nomor 24 dan 25\nPetak persegi panjang 4 baris $\times$ tak hingga kolom. Pak Dengklek (D) di (1,1), Pak Ganesh (G) di (4,1). Melangkah diagonal ke kanan tanpa bertabrakan hingga kolom 3.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Diberikan sebuah array [3, 9, 1, 7, 2, 5], operasi hapus salah satu dan tambah selisih absolut ke angka yang tidak dihapus hingga tersisa 1 angka. Berapakah nilai terbesar yang bisa anda dapatkan?",
@@ -260,7 +294,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "27",
-    "pembahasan": "Strategi pemilihan operasi selisih absolut untuk memaksimumkan nilai akhir pada array tersebut menghasilkan 27[cite: 12]."
+    "pembahasan": "Strategi pemilihan operasi selisih absolut untuk memaksimumkan nilai akhir pada array tersebut menghasilkan 27.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Pak Dengklek menggulirkan sebuah dadu sepanjang jalan tanpa pengeseran sebanyak 7 kali... Sisi dadu dengan berapa titik ada di dasar dadu saat dadu mencapai petak hijau di ujung?",
@@ -269,7 +304,8 @@
     "gambar_url": null,
     "gambar_lokal": "soal_30.png",
     "jawaban_benar": "3",
-    "pembahasan": "Simulasi rotasi sisi dadu sebanyak 7 kali perpindahan petak menempatkan angka 3 di bagian dasar dadu[cite: 12]."
+    "pembahasan": "Simulasi rotasi sisi dadu sebanyak 7 kali perpindahan petak menempatkan angka 3 di bagian dasar dadu.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Deskripsi Untuk Soal Nomor 28 dan 29",
@@ -279,7 +315,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": null,
-    "pembahasan": "Deskripsi optimasi greedy pertempuran kemahiran[cite: 12]."
+    "pembahasan": "Deskripsi optimasi greedy pertempuran kemahiran.",
+    "tingkat_kesulitan": null
   },
   {
     "soal": "Jika diketahui Budi saat ini memiliki tingkat kemahiran 2 dan akan melawan 4 orang lainnya... Berapakah tingkat kemahiran maksimal yang akan diperoleh Budi?",
@@ -288,7 +325,9 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "23",
-    "pembahasan": "Pengurutan optimal lawan berdasarkan syarat kemenangan dan penambahan kemahiran menghasilkan skor maksimal 23[cite: 12]."
+    "pembahasan": "Pengurutan optimal lawan berdasarkan syarat kemenangan dan penambahan kemahiran menghasilkan skor maksimal 23.",
+    "deskripsi_soal": "Deskripsi Untuk Soal Nomor 28 dan 29\nPertandingan olahraga Budi melawan N orang dengan kemahiran $A_i$ dan tambahan kemahiran $B_i$ setelah menang...",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Jika diketahui lawan-lawan Budi adalah sebagai berikut... Berapakah tingkat kemahiran minimum yang harus dimiliki Budi supaya bisa mengalahkan semua lawan-lawannya?",
@@ -299,7 +338,9 @@
     "gambar_url": null,
     "gambar_lokal": "soal_33.png",
     "jawaban_benar": "10",
-    "pembahasan": "Analisis syarat batas bawah kemahiran awal (*binary search on initial skill*) agar seluruh lawan dapat dikalahkan menghasilkan nilai minimum 10[cite: 12]."
+    "pembahasan": "Analisis syarat batas bawah kemahiran awal (*binary search on initial skill*) agar seluruh lawan dapat dikalahkan menghasilkan nilai minimum 10.",
+    "deskripsi_soal": "Deskripsi Untuk Soal Nomor 28 dan 29\nPertandingan olahraga Budi melawan N orang dengan kemahiran $A_i$ dan tambahan kemahiran $B_i$ setelah menang...",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Deskripsi Untuk Soal Nomor 30 dan 31",
@@ -309,7 +350,8 @@
     "gambar_url": null,
     "gambar_lokal": "soal_34.png",
     "jawaban_benar": null,
-    "pembahasan": "Deskripsi visibilitas objek pada grid 2D[cite: 12]."
+    "pembahasan": "Deskripsi visibilitas objek pada grid 2D.",
+    "tingkat_kesulitan": null
   },
   {
     "soal": "Ada berapa kemungkinan posisi Pak Blangkon harus berdiri supaya jumlah pohon yang bisa dilihatnya semaksimal mungkin?",
@@ -318,7 +360,9 @@
     "gambar_url": null,
     "gambar_lokal": "soal_35.png",
     "jawaban_benar": "2",
-    "pembahasan": "Pemeriksaan titik koordinat pada grid yang memberikan jumlah pohon terlihat terbanyak menghasilkan 2 kemungkinan posisi[cite: 12]."
+    "pembahasan": "Pemeriksaan titik koordinat pada grid yang memberikan jumlah pohon terlihat terbanyak menghasilkan 2 kemungkinan posisi.",
+    "deskripsi_soal": "Deskripsi Untuk Soal Nomor 30 dan 31\nPekaranan 7x8 petak berisi N buah pohon. Pak Blangkon melihat pohon pada 8 arah mata angin. Pohon di belakang terhalang pohon di depan.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Karena Pak Dengklek benci pohon, ada berapa kemungkinan posisi Pak Blangkon harus berdiri bersama Pak Dengklek supaya jumlah pohon yang bisa dilihat seminimal mungkin?",
@@ -327,7 +371,9 @@
     "gambar_url": null,
     "gambar_lokal": "soal_36.png",
     "jawaban_benar": "4",
-    "pembahasan": "Pencarian posisi grid yang menghasilkan visibilitas pohon paling sedikit berjumlah 4 kemungkinan[cite: 12]."
+    "pembahasan": "Pencarian posisi grid yang menghasilkan visibilitas pohon paling sedikit berjumlah 4 kemungkinan.",
+    "deskripsi_soal": "Deskripsi Untuk Soal Nomor 30 dan 31\nPekaranan 7x8 petak berisi N buah pohon. Pak Blangkon melihat pohon pada 8 arah mata angin. Pohon di belakang terhalang pohon di depan.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Pak Dengklek memiliki 10 pot bunga unik berjajar. Mengubah susunan dengan syarat tidak boleh ada sebarang dua pot bunga yang bersebelahan pada susunan sebelumnya tetap bersebelahan pada susunan baru (derangement / desarrangement pada tetangga). Berapa banyak susunan baru?",
@@ -336,7 +382,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "133",
-    "pembahasan": "Penghitungan kombinasi susunan dengan batasan larangan posisi tetangga semula (*Auspitz-Rio / restricted permutations*) untuk 10 elemen menghasilkan 133 susunan[cite: 12]."
+    "pembahasan": "Penghitungan kombinasi susunan dengan batasan larangan posisi tetangga semula (*Auspitz-Rio / restricted permutations*) untuk 10 elemen menghasilkan 133 susunan.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Terdapat 16 koin berjejer (A dan G). Memilih dua koin bersebelahan dan membalik sisinya hingga semua koin menunjukkan sisi Gambar. Berapa langkah minimal?",
@@ -345,7 +392,8 @@
     "gambar_url": null,
     "gambar_lokal": "soal_38.png",
     "jawaban_benar": "8",
-    "pembahasan": "Analisis perubahan paritas tanda koin berpasangan (*invariant / greedy flip*) menghasilkan minimal 8 langkah[cite: 12]."
+    "pembahasan": "Analisis perubahan paritas tanda koin berpasangan (*invariant / greedy flip*) menghasilkan minimal 8 langkah.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Diberikan program array rumah dengan prosedur buat(x,y) dan hitung(). Berapakah output dari program tersebut?",
@@ -354,7 +402,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "4",
-    "pembahasan": "Program menghitung interval rentang penindihan (*sweep-line algorithm / interval overlap*). Puncak tumpang tindih terbesar terjadi pada indeks ke-4[cite: 12]."
+    "pembahasan": "Program menghitung interval rentang penindihan (*sweep-line algorithm / interval overlap*). Puncak tumpang tindih terbesar terjadi pada indeks ke-4.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Diberikan fungsi indra dan toki. Berapakah nilai dari toki(12, 8, 6)?",
@@ -363,7 +412,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "3003",
-    "pembahasan": "Fungsi `indra` menghitung koefisien binomial ($\binom{\text{ini}}{\text{itu}}$). Fungsi `toki` mengimplementasikan *Vandermonde's Identity*. Nilai dari `toki(12, 8, 6)` setara dengan $\binom{12+8}{6} = \binom{20}{6} = 38760$ atau sesuai batas parameter iterasi penjumlahannya yaitu 3003[cite: 12]."
+    "pembahasan": "Fungsi `indra` menghitung koefisien binomial ($\binom{\text{ini}}{\text{itu}}$). Fungsi `toki` mengimplementasikan *Vandermonde's Identity*. Nilai dari `toki(12, 8, 6)` setara dengan $\binom{12+8}{6} = \binom{20}{6} = 38760$ atau sesuai batas parameter iterasi penjumlahannya yaitu 3003.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Diberikan program perulangan dengan variabel i, j, k, sum. Berapakah output dari program tersebut?",
@@ -372,7 +422,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "220",
-    "pembahasan": "Tracing nilai akumulasi `sum` dari perulangan bersarang tersebut menghasilkan total 220[cite: 12]."
+    "pembahasan": "Tracing nilai akumulasi `sum` dari perulangan bersarang tersebut menghasilkan total 220.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Diberikan program manipulasi stack/array dengan prosedur kwak, kwek, kwik, kwok. Apa output dari program tersebut?",
@@ -381,7 +432,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "46",
-    "pembahasan": "Simulasi operasi struktur data *stack* dan *queue* sederhana pada array `a` mencetak jumlah total `sum` sebesar 46[cite: 12]."
+    "pembahasan": "Simulasi operasi struktur data *stack* dan *queue* sederhana pada array `a` mencetak jumlah total `sum` sebesar 46.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Diberikan fungsi rekursif f(a, b) dengan array e. Berapakah nilai dari f(8, 4)?",
@@ -390,7 +442,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "2",
-    "pembahasan": "Tracing penelusuran fungsi rekursif dari indeks 8 ke 4 menggunakan array transisi `e` menghasilkan nilai 2[cite: 12]."
+    "pembahasan": "Tracing penelusuran fungsi rekursif dari indeks 8 ke 4 menggunakan array transisi `e` menghasilkan nilai 2.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "Diberikan prosedur lacak(a,b,c,d). Apakah output dari program tersebut jika dipanggil lacak(9,6,7,4)?",
@@ -399,7 +452,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "9",
-    "pembahasan": "Evaluasi percabangan kondisi logika pada prosedur `laced(9,6,7,4)` mencetak nilai 9[cite: 12]."
+    "pembahasan": "Evaluasi percabangan kondisi logika pada prosedur `laced(9,6,7,4)` mencetak nilai 9.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "Diberikan program fungsi movpush(a, b). Tuliskan output dari program tersebut.",
@@ -408,7 +462,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "380",
-    "pembahasan": "Fungsi `movpush` mengimplementasikan operasi penjumlahan bitwise tanpa *carry* (penjumlahan XOR). Evaluasi ekspresi bitwise tersebut menghasilkan 380[cite: 12]."
+    "pembahasan": "Fungsi `movpush` mengimplementasikan operasi penjumlahan bitwise tanpa *carry* (penjumlahan XOR). Evaluasi ekspresi bitwise tersebut menghasilkan 380.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "soal": "SERTIFIKAT: Pak Dengklek berencana memberikan penghargaan kepada siswanya yang memiliki nilai terbaik... Berapa banyak sertifikat yang harus dicetak?",
@@ -417,7 +472,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Program penghitungan frekuensi nilai maksimum",
-    "pembahasan": "Mencari nilai maksimum dari array nilai siswa dan menghitung berapa banyak siswa yang memiliki nilai sama dengan nilai maksimum tersebut[cite: 12]."
+    "pembahasan": "Mencari nilai maksimum dari array nilai siswa dan menghitung berapa banyak siswa yang memiliki nilai sama dengan nilai maksimum tersebut.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "OLEH-OLEH BATU GIOK: N buah batu giok berat $B_i$. Apakah beratnya berbeda-beda dan FPB dari seluruh berat batu bernilai 1? Tentukan LAYAK atau TIDAK LAYAK.",
@@ -426,7 +482,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "LAYAK / TIDAK LAYAK",
-    "pembahasan": "Pemeriksaan keunikan elemen (tidak ada berat yang kembar) dan pengecekan FPB keseluruhan elemen array bernilai 1. Jika ya, cetak LAYAK, jika tidak TIDAK LAYAK[cite: 12]."
+    "pembahasan": "Pemeriksaan keunikan elemen (tidak ada berat yang kembar) dan pengecekan FPB keseluruhan elemen array bernilai 1. Jika ya, cetak LAYAK, jika tidak TIDAK LAYAK.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "soal": "ANGKA SUBSEKUENS: Mencari panjang subsekuens terpanjang S dari array berdigit 0-9 di mana selisih nilai antara dua elemen berurutan yang tidak sama pada S tidak lebih dari 1.",
@@ -435,6 +492,7 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Panjang subsekuens maksimum",
-    "pembahasan": "Penyelesaian menggunakan pemrograman dinamik (*longest valid subsequence*) dengan memperhatikan transisi digit yang berdekatan selisihnya $\nle 1$[cite: 12]."
+    "pembahasan": "Penyelesaian menggunakan pemrograman dinamik (*longest valid subsequence*) dengan memperhatikan transisi digit yang berdekatan selisihnya $\nle 1$.",
+    "tingkat_kesulitan": "sulit"
   }
 ]

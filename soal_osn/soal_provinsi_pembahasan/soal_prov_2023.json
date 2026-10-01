@@ -7,7 +7,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Jumlah maksimal nomor cantik",
-    "pembahasan": "Penghitungan kombinasi digit ketika sekuens tiga digit awal sama dengan sekuens tengah atau sekuens akhir."
+    "pembahasan": "Penghitungan kombinasi digit ketika sekuens tiga digit awal sama dengan sekuens tengah atau sekuens akhir.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -17,7 +18,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Nilai rata-rata kerapian",
-    "pembahasan": "Ekspektasi linieritas jumlah pergantian jenis kelamin pada permutasi acak barisan bebek."
+    "pembahasan": "Ekspektasi linieritas jumlah pergantian jenis kelamin pada permutasi acak barisan bebek.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": null,
@@ -27,7 +29,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Jumlah kotak minimal",
-    "pembahasan": "Analisis strategi pengambilan kotak untuk menjamin perolehan minimal setengah dari total permen dan buah."
+    "pembahasan": "Analisis strategi pengambilan kotak untuk menjamin perolehan minimal setengah dari total permen dan buah.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -37,7 +40,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Jumlah maksimal asisten",
-    "pembahasan": "Dekomposisi graf lengkap $K_{15}$ menjadi siklus Hamilton terpisah untuk menentukan jumlah maksimal asisten."
+    "pembahasan": "Dekomposisi graf lengkap $K_{15}$ menjadi siklus Hamilton terpisah untuk menentukan jumlah maksimal asisten.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -47,7 +51,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Jumlah bebek maksimum",
-    "pembahasan": "Pencarian bilangan yang bersisa 3 jika dibagi 5 dan habis dibagi 11 dengan batas maksimum 100."
+    "pembahasan": "Pencarian bilangan yang bersisa 3 jika dibagi 5 dan habis dibagi 11 dengan batas maksimum 100.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -57,7 +62,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Luas arena minimal",
-    "pembahasan": "Analisis batas area pergerakan random walk berbelok 90 derajat setiap 10 menit dengan kecepatan konstan."
+    "pembahasan": "Analisis batas area pergerakan random walk berbelok 90 derajat setiap 10 menit dengan kecepatan konstan.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": null,
@@ -67,7 +73,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Jumlah minimal hari",
-    "pembahasan": "Pewarnaan simpul minimum (*graph coloring*) pada graf ketidakcocokan jadwal kelas."
+    "pembahasan": "Pewarnaan simpul minimum (*graph coloring*) pada graf ketidakcocokan jadwal kelas.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -77,7 +84,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Jumlah sapi Kwik",
-    "pembahasan": "Penyelesaian sistem persamaan pembagian hewan ternak pada tiga subarea pengawasan."
+    "pembahasan": "Penyelesaian sistem persamaan pembagian hewan ternak pada tiga subarea pengawasan.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": null,
@@ -87,7 +95,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Digit ke-2023",
-    "pembahasan": "Perhitungan panjang digit dari bilangan 1 digit, 2 digit, dan 3 digit untuk menemukan angka pada posisi ke-2023."
+    "pembahasan": "Perhitungan panjang digit dari bilangan 1 digit, 2 digit, dan 3 digit untuk menemukan angka pada posisi ke-2023.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -97,7 +106,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Poin Kwek vs Kwik",
-    "pembahasan": "Rekonstruksi tabel hasil pertandingan *round-robin* berdasarkan perolehan poin dan riwayat menang/seri."
+    "pembahasan": "Rekonstruksi tabel hasil pertandingan *round-robin* berdasarkan perolehan poin dan riwayat menang/seri.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "B1. Menjual Kentang...",
@@ -107,7 +117,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Total bobot",
-    "pembahasan": "Perhitungan pemindahan kentang dengan bobot 6 beserta konsekuensi aturan bobot $\nge b$."
+    "pembahasan": "Perhitungan pemindahan kentang dengan bobot 6 beserta konsekuensi aturan bobot $\nge b$.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "B1. Menjual Kentang...",
@@ -117,7 +128,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Total bobot minimum",
-    "pembahasan": "Pencarian subset kentang optimal dari truk B ke truk A untuk membalikkan kondisi rata-rata."
+    "pembahasan": "Pencarian subset kentang optimal dari truk B ke truk A untuk membalikkan kondisi rata-rata.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "B1. Menjual Kentang...",
@@ -127,7 +139,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Program / Solusi Algoritma",
-    "pembahasan": "Implementasi pengurutan dan pencarian nilai optimum pemindahan kentang antar truk."
+    "pembahasan": "Implementasi pengurutan dan pencarian nilai optimum pemindahan kentang antar truk.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "B2. Masa Pertumbuhan...",
@@ -137,7 +150,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Jumlah botol berguna",
-    "pembahasan": "Evaluasi penambahan tinggi pohon kelapa dengan pertambahan harian K dan botol air ajaib."
+    "pembahasan": "Evaluasi penambahan tinggi pohon kelapa dengan pertambahan harian K dan botol air ajaib.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "B2. Masa Pertumbuhan...",
@@ -147,7 +161,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Jumlah botol berguna",
-    "pembahasan": "Simulasi penyiraman dengan nilai botol tertentu untuk memaksimalkan jumlah botol berguna."
+    "pembahasan": "Simulasi penyiraman dengan nilai botol tertentu untuk memaksimalkan jumlah botol berguna.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "B2. Masa Pertumbuhan...",
@@ -157,7 +172,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Program / Solusi Algoritma",
-    "pembahasan": "Implementasi algoritma *greedy* atau pemrograman dinamis untuk mengoptimalkan urutan penyiraman pohon kelapa."
+    "pembahasan": "Implementasi algoritma *greedy* atau pemrograman dinamis untuk mengoptimalkan urutan penyiraman pohon kelapa.",
+    "tingkat_kesulitan": "sulit"
   },
   {
     "deskripsi_soal": "B3. Pembangkit Listrik...",
@@ -167,7 +183,8 @@
     "gambar_url": null,
     "gambar_lokal": "soal_1.png",
     "jawaban_benar": "Total biaya",
-    "pembahasan": "Perhitungan biaya perkalian tarif perusahaan dengan tingkat kesulitan desa."
+    "pembahasan": "Perhitungan biaya perkalian tarif perusahaan dengan tingkat kesulitan desa.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "B3. Pembangkit Listrik...",
@@ -177,7 +194,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Total biaya terkecil",
-    "pembahasan": "Pencarian komponen terhubung (*connected components*) dan pemilihan kombinasi tarif minimum."
+    "pembahasan": "Pencarian komponen terhubung (*connected components*) dan pemilihan kombinasi tarif minimum.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "B3. Pembangkit Listrik...",
@@ -187,7 +205,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Program / Solusi Algoritma",
-    "pembahasan": "Implementasi algoritma *Minimum Spanning Tree* atau *Union-Find* untuk menghubungkan komponen desa dengan biaya minimum."
+    "pembahasan": "Implementasi algoritma *Minimum Spanning Tree* atau *Union-Find* untuk menghubungkan komponen desa dengan biaya minimum.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "B4. Mengumpulkan Artefak...",
@@ -197,7 +216,8 @@
     "gambar_url": null,
     "gambar_lokal": "soal_2.png",
     "jawaban_benar": "Jumlah terbesar artefak",
-    "pembahasan": "Simulasi pergerakan mobil satu arah ke kanan dengan batas kapasitas bensin K."
+    "pembahasan": "Simulasi pergerakan mobil satu arah ke kanan dengan batas kapasitas bensin K.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "B4. Mengumpulkan Artefak...",
@@ -207,7 +227,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Jumlah terbesar artefak",
-    "pembahasan": "Optimasi pergerakan bolak-balik (dua arah) untuk mengumpulkan nilai artefak maksimum."
+    "pembahasan": "Optimasi pergerakan bolak-balik (dua arah) untuk mengumpulkan nilai artefak maksimum.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "B4. Mengumpulkan Artefak...",
@@ -217,7 +238,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Program / Solusi Algoritma",
-    "pembahasan": "Implementasi pemrograman dinamis interval atau *greedy* untuk pengumpulan artefak dengan batasan bensin."
+    "pembahasan": "Implementasi pemrograman dinamis interval atau *greedy* untuk pengumpulan artefak dengan batasan bensin.",
+    "tingkat_kesulitan": "sulit"
   },
   {
     "deskripsi_soal": "B5. Membeli Oleh-Oleh...",
@@ -227,7 +249,8 @@
     "gambar_url": null,
     "gambar_lokal": "soal_3",
     "jawaban_benar": "0 atau 1",
-    "pembahasan": "Pengecekan validitas jalur kunjungan kota tanpa mengunjungi kota yang sama lebih dari sekali."
+    "pembahasan": "Pengecekan validitas jalur kunjungan kota tanpa mengunjungi kota yang sama lebih dari sekali.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "B5. Membeli Oleh-Oleh...",
@@ -237,7 +260,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Jumlah rencana berbeda",
-    "pembahasan": "Menghitung total subhimpunan jalur pohon yang valid untuk pembelian oleh-oleh."
+    "pembahasan": "Menghitung total subhimpunan jalur pohon yang valid untuk pembelian oleh-oleh.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "B5. Membeli Oleh-Oleh...",
@@ -247,6 +271,7 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Program / Solusi Algoritma",
-    "pembahasan": "Implementasi *Tree Knapsack* / pemrograman dinamis pada pohon (*Tree DP*) untuk menghitung kombinasi pembelian."
+    "pembahasan": "Implementasi *Tree Knapsack* / pemrograman dinamis pada pohon (*Tree DP*) untuk menghitung kombinasi pembelian.",
+    "tingkat_kesulitan": "sulit"
   }
 ]

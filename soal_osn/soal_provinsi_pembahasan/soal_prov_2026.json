@@ -7,7 +7,8 @@
     "gambar_url": null,
     "gambar_lokal": "soal_1.png",
     "jawaban_benar": "Jumlah kotak maksimum",
-    "pembahasan": "Menghitung kombinasi pengambilan 4 butir telur per kotak dengan syarat minimal 3 butir merupakan telur bebek dari string S."
+    "pembahasan": "Menghitung kombinasi pengambilan 4 butir telur per kotak dengan syarat minimal 3 butir merupakan telur bebek dari string S.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "A. Kotak Telur...",
@@ -17,7 +18,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Jumlah kotak maksimum dengan syarat",
-    "pembahasan": "Analisis pembatasan alokasi telur bebek untuk memastikan terdapat satu kotak berisi penuh 4 telur bebek."
+    "pembahasan": "Analisis pembatasan alokasi telur bebek untuk memastikan terdapat satu kotak berisi penuh 4 telur bebek.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "A. Kotak Telur...",
@@ -27,7 +29,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Nilai x terkecil",
-    "pembahasan": "Pemodelan matematis jumlah minimum telur bebek x agar tercapai kapasitas pembelian 7 kotak."
+    "pembahasan": "Pemodelan matematis jumlah minimum telur bebek x agar tercapai kapasitas pembelian 7 kotak.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "A. Kotak Telur...",
@@ -37,7 +40,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Program / Solusi Algoritma",
-    "pembahasan": "Implementasi algoritma *greedy* atau pemrograman dinamis untuk penghitungan maksimal kotak valid dari string S."
+    "pembahasan": "Implementasi algoritma *greedy* atau pemrograman dinamis untuk penghitungan maksimal kotak valid dari string S.",
+    "tingkat_kesulitan": "sulit"
   },
   {
     "deskripsi_soal": "B. Lagi-Lagi Berbagi Candil...",
@@ -47,7 +51,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Total butir candil maksimum",
-    "pembahasan": "Mencari kombinasi dua kotak candil yang jumlah butirnya habis dibagi M dan bernilai maksimum."
+    "pembahasan": "Mencari kombinasi dua kotak candil yang jumlah butirnya habis dibagi M dan bernilai maksimum.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "B. Lagi-Lagi Berbagi Candil...",
@@ -57,7 +62,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Total butir candil maksimum",
-    "pembahasan": "Pemeriksaan sisa pembagian (*modulo*) terhadap M dari semua kemungkinan pasangan dua kotak candil."
+    "pembahasan": "Pemeriksaan sisa pembagian (*modulo*) terhadap M dari semua kemungkinan pasangan dua kotak candil.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "B. Lagi-Lagi Berbagi Candil...",
@@ -67,7 +73,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Benar / Salah",
-    "pembahasan": "Analisis paritas jumlah butir candil (*ganjil/genap*) untuk pembagian dengan M = 2."
+    "pembahasan": "Analisis paritas jumlah butir candil (*ganjil/genap*) untuk pembagian dengan M = 2.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "B. Lagi-Lagi Berbagi Candil...",
@@ -77,7 +84,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Program / Solusi Algoritma",
-    "pembahasan": "Implementasi pengelolaan sisa modulo untuk menemukan pasangan elemen larik dengan jumlah maksimum yang habis dibagi M."
+    "pembahasan": "Implementasi pengelolaan sisa modulo untuk menemukan pasangan elemen larik dengan jumlah maksimum yang habis dibagi M.",
+    "tingkat_kesulitan": "sulit"
   },
   {
     "deskripsi_soal": "C. Kali Pembagi...",
@@ -87,7 +95,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Pilihan nilai M",
-    "pembahasan": "Simulasi pencarian jalur transformasi perkalian faktor pembagi (*q*) dari N ke M dalam operasi minimum."
+    "pembahasan": "Simulasi pencarian jalur transformasi perkalian faktor pembagi (*q*) dari N ke M dalam operasi minimum.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "C. Kali Pembagi...",
@@ -97,7 +106,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Jumlah kemungkinan M",
-    "pembahasan": "Penyusunan pohon pencarian nilai bilangan melalui operasi penambahan faktor pembagi bertahap."
+    "pembahasan": "Penyusunan pohon pencarian nilai bilangan melalui operasi penambahan faktor pembagi bertahap.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "C. Kali Pembagi...",
@@ -107,7 +117,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Jumlah kemungkinan M",
-    "pembahasan": "Eksplorasi kombinasi faktor pengali bertingkat hingga tiga langkah operasi dari N = 24."
+    "pembahasan": "Eksplorasi kombinasi faktor pengali bertingkat hingga tiga langkah operasi dari N = 24.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "C. Kali Pembagi...",
@@ -117,7 +128,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Program / Solusi Algoritma",
-    "pembahasan": "Implementasi algoritma pencarian jalur terpendek (*BFS* atau *DFS*) pada graf faktor bilangan."
+    "pembahasan": "Implementasi algoritma pencarian jalur terpendek (*BFS* atau *DFS*) pada graf faktor bilangan.",
+    "tingkat_kesulitan": "sulit"
   },
   {
     "deskripsi_soal": "D. Makan Bebek Gratis...",
@@ -127,7 +139,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Nilai S min",
-    "pembahasan": "Penentuan pemilihan dua kelas dengan jumlah murid terkecil di setiap sekolah untuk mencari batas minimum S min."
+    "pembahasan": "Penentuan pemilihan dua kelas dengan jumlah murid terkecil di setiap sekolah untuk mencari batas minimum S min.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "D. Makan Bebek Gratis...",
@@ -137,7 +150,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Jumlah porsi minimum",
-    "pembahasan": "Optimasi pemilihan pasangan kelas per sekolah yang memenuhi batasan S min dengan total porsi sesedikit mungkin."
+    "pembahasan": "Optimasi pemilihan pasangan kelas per sekolah yang memenuhi batasan S min dengan total porsi sesedikit mungkin.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "D. Makan Bebek Gratis...",
@@ -147,7 +161,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Nilai S min terbesar",
-    "pembahasan": "Pencarian biner (*binary search*) pada nilai S min dengan batasan total anggaran porsi P."
+    "pembahasan": "Pencarian biner (*binary search*) pada nilai S min dengan batasan total anggaran porsi P.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "D. Makan Bebek Gratis...",
@@ -157,7 +172,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Program / Solusi Algoritma",
-    "pembahasan": "Implementasi kombinasi pencarian biner pada jawaban (*binary search on answer*) dan pemrograman dinamis."
+    "pembahasan": "Implementasi kombinasi pencarian biner pada jawaban (*binary search on answer*) dan pemrograman dinamis.",
+    "tingkat_kesulitan": "sulit"
   },
   {
     "deskripsi_soal": "E. Pagar Bambu...",
@@ -167,7 +183,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Jumlah pagar estetik",
-    "pembahasan": "Pemeriksaan syarat estetik (terdiri dari tepat dua nilai ketinggian bambu yang berbeda) pada setiap segmen pagar."
+    "pembahasan": "Pemeriksaan syarat estetik (terdiri dari tepat dua nilai ketinggian bambu yang berbeda) pada setiap segmen pagar.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "E. Pagar Bambu...",
@@ -176,7 +193,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Jumlah cara pembagian",
-    "pembahasan": "Perhitungan kombinasi partisi sekuens menggunakan pemrograman dinamis berdasarkan validitas segmen estetik."
+    "pembahasan": "Perhitungan kombinasi partisi sekuens menggunakan pemrograman dinamis berdasarkan validitas segmen estetik.",
+    "tingkat_kesulitan": "sulit"
   },
   {
     "deskripsi_soal": "E. Pagar Bambu...",
@@ -186,7 +204,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Nilai N terkecil",
-    "pembahasan": "Analisis pola pertumbuhan bilangan Fibonacci atau relasi rekurensi dari barisan berselang-seling."
+    "pembahasan": "Analisis pola pertumbuhan bilangan Fibonacci atau relasi rekurensi dari barisan berselang-seling.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "E. Pagar Bambu...",
@@ -196,7 +215,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Program / Solusi Algoritma",
-    "pembahasan": "Implementasi pemrograman dinamis (*DP*) efisien untuk menghitung jumlah cara partisi array dengan batasan kondisi estetik."
+    "pembahasan": "Implementasi pemrograman dinamis (*DP*) efisien untuk menghitung jumlah cara partisi array dengan batasan kondisi estetik.",
+    "tingkat_kesulitan": "sulit"
   },
   {
     "deskripsi_soal": "F. Juru Masak...",
@@ -206,7 +226,8 @@
     "gambar_url": null,
     "gambar_lokal": "soal_2.png",
     "jawaban_benar": "Porsi maksimum",
-    "pembahasan": "Evaluasi aturan pemilihan peminjaman juru masak senior dan junior pada struktur pohon hierarki kecil."
+    "pembahasan": "Evaluasi aturan pemilihan peminjaman juru masak senior dan junior pada struktur pohon hierarki kecil.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "F. Juru Masak...",
@@ -216,7 +237,8 @@
     "gambar_url": null,
     "gambar_lokal": "soal_3.png",
     "jawaban_benar": "Benar / Salah",
-    "pembahasan": "Analisis struktur pohon rantai (*path graph*) untuk aturan senior yang melarang peminjaman asisten langsung."
+    "pembahasan": "Analisis struktur pohon rantai (*path graph*) untuk aturan senior yang melarang peminjaman asisten langsung.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "F. Juru Masak...",
@@ -226,7 +248,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Porsi maksimum",
-    "pembahasan": "Penerapan aturan relasi asisten senior-junior pada struktur pohon besar untuk memaksimalkan jumlah porsi W_i."
+    "pembahasan": "Penerapan aturan relasi asisten senior-junior pada struktur pohon besar untuk memaksimalkan jumlah porsi W_i.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "F. Juru Masak...",
@@ -236,6 +259,7 @@
     "gambar_url": null,
     "gambar_lokal": "soal_4.png, soal_5.png",
     "jawaban_benar": "Program / Solusi Algoritma",
-    "pembahasan": "Implementasi pemrograman dinamis pada pohon (*Tree DP*) dengan status pemilihan node berdasarkan batasan senior dan junior."
+    "pembahasan": "Implementasi pemrograman dinamis pada pohon (*Tree DP*) dengan status pemilihan node berdasarkan batasan senior dan junior.",
+    "tingkat_kesulitan": "sulit"
   }
 ]

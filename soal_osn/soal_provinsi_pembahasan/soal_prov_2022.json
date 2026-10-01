@@ -7,7 +7,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Jumlah maksimal kalori",
-    "pembahasan": "Penyelesaian menggunakan Greedy Knapsack Problem berdasarkan rasio kalori per harga untuk memaksimalkan total kalori dengan batas anggaran Rp. 25.000."
+    "pembahasan": "Penyelesaian menggunakan Greedy Knapsack Problem berdasarkan rasio kalori per harga untuk memaksimalkan total kalori dengan batas anggaran Rp. 25.000.",
+    "tingkat_kesulitan": "sulit"
   },
   {
     "deskripsi_soal": null,
@@ -17,7 +18,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Jumlah pasangan",
-    "pembahasan": "Menganalisis kecocokan bahasa yang dikuasai oleh setiap pasangan dari 5 diplomat untuk menentukan apakah mereka memerlukan penerjemah."
+    "pembahasan": "Menganalisis kecocokan bahasa yang dikuasai oleh setiap pasangan dari 5 diplomat untuk menentukan apakah mereka memerlukan penerjemah.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -27,7 +29,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Karakter huruf",
-    "pembahasan": "Menggunakan sifat aritmatika modular dan pola siklus panjang kata 'INFORMATIC' (10 huruf) untuk mencari indeks posisi karakter besar."
+    "pembahasan": "Menggunakan sifat aritmatika modular dan pola siklus panjang kata 'INFORMATIC' (10 huruf) untuk mencari indeks posisi karakter besar.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -37,7 +40,8 @@
     "gambar_url": null,
     "gambar_lokal": "soal_1.jpeg",
     "jawaban_benar": "Jumlah rute",
-    "pembahasan": "Penelusuran jalur pada graf berarah Directed Acyclic Graph (DAG) dari simpul A ke simpul H dengan batasan kunjungan unik."
+    "pembahasan": "Penelusuran jalur pada graf berarah Directed Acyclic Graph (DAG) dari simpul A ke simpul H dengan batasan kunjungan unik.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -47,7 +51,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Jumlah kemungkinan",
-    "pembahasan": "Menghitung permutasi bersyarat untuk penempatan 8 jenis latihan dengan aturan urutan ketergantungan dan jarak hari."
+    "pembahasan": "Menghitung permutasi bersyarat untuk penempatan 8 jenis latihan dengan aturan urutan ketergantungan dan jarak hari.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -57,7 +62,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Jumlah tiang maksimal",
-    "pembahasan": "Optimasi dimensi panjang dan lebar persegi panjang dengan keliling 100 untuk memaksimalkan jumlah titik koordinat tiang yang memenuhi jarak aman."
+    "pembahasan": "Optimasi dimensi panjang dan lebar persegi panjang dengan keliling 100 untuk memaksimalkan jumlah titik koordinat tiang yang memenuhi jarak aman.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -67,7 +73,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Jumlah cara",
-    "pembahasan": "Menggunakan prinsip komplemen: menghitung total cara memilih tim tanpa syarat dikurangi jumlah cara di mana kedua bebek teringan terpilih bersamaan."
+    "pembahasan": "Menggunakan prinsip komplemen: menghitung total cara memilih tim tanpa syarat dikurangi jumlah cara di mana kedua bebek teringan terpilih bersamaan.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -77,7 +84,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Harga tiket",
-    "pembahasan": "Pemodelan persamaan aljabar linear berdasarkan kapasitas kursi per baris dan selisih harga untuk mencari harga tiket baris tertentu."
+    "pembahasan": "Pemodelan persamaan aljabar linear berdasarkan kapasitas kursi per baris dan selisih harga untuk mencari harga tiket baris tertentu.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -87,7 +95,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Hari ke-",
-    "pembahasan": "Simulasi harian perubahan jumlah stok permen berdasarkan jadwal makan setiap 3 hari dan penambahan stok setiap 7 hari."
+    "pembahasan": "Simulasi harian perubahan jumlah stok permen berdasarkan jadwal makan setiap 3 hari dan penambahan stok setiap 7 hari.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -97,7 +106,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Nama kandang / tokoh",
-    "pembahasan": "Analisis posisi relatif spasial (arah mata angin) dari kandang kelima tokoh untuk menentukan posisi pusat."
+    "pembahasan": "Analisis posisi relatif spasial (arah mata angin) dari kandang kelima tokoh untuk menentukan posisi pusat.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "B1. Lampu Hias...",
@@ -107,7 +117,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "YA / TIDAK",
-    "pembahasan": "Mengecek apakah waktu 3000 habis dibagi oleh Kelipatan Persekutuan Terkecil (KPK) dari P, Q, dan R."
+    "pembahasan": "Mengecek apakah waktu 3000 habis dibagi oleh Kelipatan Persekutuan Terkecil (KPK) dari P, Q, dan R.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "B1. Lampu Hias...",
@@ -117,7 +128,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Waktu dalam detik",
-    "pembahasan": "Menghitung nilai KPK dari P = 1, Q = 2, dan R = 3 untuk menentukan waktu sinkronisasi berikutnya."
+    "pembahasan": "Menghitung nilai KPK dari P = 1, Q = 2, dan R = 3 untuk menentukan waktu sinkronisasi berikutnya.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "B1. Lampu Hias...",
@@ -127,7 +139,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Waktu dalam detik",
-    "pembahasan": "Mencari KPK(4, 6, 9) untuk mengetahui interval waktu ketika ketiga lampu menyala bersamaan."
+    "pembahasan": "Mencari KPK(4, 6, 9) untuk mengetahui interval waktu ketika ketiga lampu menyala bersamaan.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "B1. Lampu Hias...",
@@ -137,7 +150,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Program / Solusi Algoritma",
-    "pembahasan": "Implementasi pengecekan kelipatan KPK menggunakan operasi aritmatika modular untuk menjawab setiap query waktu T."
+    "pembahasan": "Implementasi pengecekan kelipatan KPK menggunakan operasi aritmatika modular untuk menjawab setiap query waktu T.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "B2. Mengangkut Bebek...",
@@ -147,7 +161,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Total biaya",
-    "pembahasan": "Menghitung total berat bebek dikalikan dengan biaya per kg kandang tersebut."
+    "pembahasan": "Menghitung total berat bebek dikalikan dengan biaya per kg kandang tersebut.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "B2. Mengangkut Bebek...",
@@ -157,7 +172,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Biaya terkecil",
-    "pembahasan": "Strategi greedy dengan mengalokasikan bebek ke kandang yang memiliki biaya angkut termurah terlebih dahulu."
+    "pembahasan": "Strategi greedy dengan mengalokasikan bebek ke kandang yang memiliki biaya angkut termurah terlebih dahulu.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "B2. Mengangkut Bebek...",
@@ -167,7 +183,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Biaya angkut terkecil",
-    "pembahasan": "Pengurutan bobot bebek dan kapasitas kandang berdasarkan tarif biaya angkut termurah untuk optimalisasi biaya."
+    "pembahasan": "Pengurutan bobot bebek dan kapasitas kandang berdasarkan tarif biaya angkut termurah untuk optimalisasi biaya.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "B2. Mengangkut Bebek...",
@@ -177,7 +194,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Program / Solusi Algoritma",
-    "pembahasan": "Implementasi algoritma greedy dengan pengurutan kandang berdasarkan biaya angkut C_i dan pengisian kapasitas P_i."
+    "pembahasan": "Implementasi algoritma greedy dengan pengurutan kandang berdasarkan biaya angkut C_i dan pengisian kapasitas P_i.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "B3. Dewan Perwakilan Bebek...",
@@ -187,7 +205,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Tingkat perpecahan",
-    "pembahasan": "Menghitung selisih nilai ego maksimum dan minimum di antara bebek nomor 2, 3, dan 4."
+    "pembahasan": "Menghitung selisih nilai ego maksimum dan minimum di antara bebek nomor 2, 3, dan 4.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "B3. Dewan Perwakilan Bebek...",
@@ -197,7 +216,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Perpecahan minimal",
-    "pembahasan": "Mencari rentang terkecil (minimum range) dari subhimpunan berukuran 3 setelah tingkat ego kandidat diurutkan."
+    "pembahasan": "Mencari rentang terkecil (minimum range) dari subhimpunan berukuran 3 setelah tingkat ego kandidat diurutkan.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "B3. Dewan Perwakilan Bebek...",
@@ -207,7 +227,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Jumlah anggota maksimal",
-    "pembahasan": "Pencarian jendela geser (sliding window) terpanjang pada array ego yang terurut di mana selisih elemen ujung tidak melebihi P."
+    "pembahasan": "Pencarian jendela geser (sliding window) terpanjang pada array ego yang terurut di mana selisih elemen ujung tidak melebihi P.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "B3. Dewan Perwakilan Bebek...",
@@ -217,7 +238,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Program / Solusi Algoritma",
-    "pembahasan": "Implementasi two pointers / binary search pada array terurut untuk menjawab setiap query ego bebek X secara efisien."
+    "pembahasan": "Implementasi two pointers / binary search pada array terurut untuk menjawab setiap query ego bebek X secara efisien.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "B4. Memasang Karpet...",
@@ -227,7 +249,8 @@
     "gambar_url": null,
     "gambar_lokal": "soal_2.png",
     "jawaban_benar": "Jumlah cara",
-    "pembahasan": "Penyelesaian masalah penjubahan grid (domino tiling) menggunakan relasi rekurensi atau barisan Fibonacci."
+    "pembahasan": "Penyelesaian masalah penjubahan grid (domino tiling) menggunakan relasi rekurensi atau barisan Fibonacci.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "B4. Memasang Karpet...",
@@ -237,7 +260,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Jumlah cara",
-    "pembahasan": "Perhitungan kombinasi penutupan grid 1 dimensi dengan variasi bentuk karpet yang tersedia."
+    "pembahasan": "Perhitungan kombinasi penutupan grid 1 dimensi dengan variasi bentuk karpet yang tersedia.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "B4. Memasang Karpet...",
@@ -247,7 +271,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Jumlah cara",
-    "pembahasan": "Menghitung kombinasi pemasangan dua jenis karpet pada grid berukuran 2 x 3."
+    "pembahasan": "Menghitung kombinasi pemasangan dua jenis karpet pada grid berukuran 2 x 3.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "B4. Memasang Karpet...",
@@ -257,7 +282,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Program / Solusi Algoritma",
-    "pembahasan": "Implementasi pemrograman dinamis dengan profile DP / bitmask DP untuk menghitung cara penutupan grid modulo 10^9 + 7."
+    "pembahasan": "Implementasi pemrograman dinamis dengan profile DP / bitmask DP untuk menghitung cara penutupan grid modulo 10^9 + 7.",
+    "tingkat_kesulitan": "sulit"
   },
   {
     "deskripsi_soal": "B5. Melompati Lapangan...",
@@ -267,7 +293,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Ya / Tidak",
-    "pembahasan": "Pemeriksaan aturan lompatan (hanya boleh bergerak maju/kanan sesuai nilai A[i][j])."
+    "pembahasan": "Pemeriksaan aturan lompatan (hanya boleh bergerak maju/kanan sesuai nilai A[i][j]).",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "B5. Melompati Lapangan...",
@@ -277,7 +304,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Ya / Tidak",
-    "pembahasan": "Validasi jarak lompatan dari petak (1, 2) terhadap nilai petak tersebut."
+    "pembahasan": "Validasi jarak lompatan dari petak (1, 2) terhadap nilai petak tersebut.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "B5. Melompati Lapangan...",
@@ -287,7 +315,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Jumlah cara",
-    "pembahasan": "Menghitung total jalur valid menggunakan pemrograman dinamis pada matriks lapangan."
+    "pembahasan": "Menghitung total jalur valid menggunakan pemrograman dinamis pada matriks lapangan.",
+    "tingkat_kesulitan": "sulit"
   },
   {
     "deskripsi_soal": "B5. Melompati Lapangan...",
@@ -297,6 +326,7 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Program / Solusi Algoritma",
-    "pembahasan": "Implementasi pemrograman dinamis 2D dengan akumulasi cara perpindahan dari petak-petak sebelumnya yang menjangkau petak saat ini."
+    "pembahasan": "Implementasi pemrograman dinamis 2D dengan akumulasi cara perpindahan dari petak-petak sebelumnya yang menjangkau petak saat ini.",
+    "tingkat_kesulitan": "sulit"
   }
 ]

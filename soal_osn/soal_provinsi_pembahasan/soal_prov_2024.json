@@ -7,7 +7,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "B",
-    "pembahasan": "Mengecek apakah setiap 3 huruf berurutan terdiri dari tepat satu 'O', satu 'S', dan satu 'N'."
+    "pembahasan": "Mengecek apakah setiap 3 huruf berurutan terdiri dari tepat satu 'O', satu 'S', dan satu 'N'.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "A. String Cantik OSN...",
@@ -17,7 +18,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Jumlah string",
-    "pembahasan": "Analisis kombinasi karakter string cantik OSN sepanjang 100 huruf."
+    "pembahasan": "Analisis kombinasi karakter string cantik OSN sepanjang 100 huruf.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "A. String Cantik OSN...",
@@ -27,7 +29,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Benar / Salah",
-    "pembahasan": "Pengecekan keberadaan urutan huruf O-S-N secara parsial dari string awal."
+    "pembahasan": "Pengecekan keberadaan urutan huruf O-S-N secara parsial dari string awal.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "A. String Cantik OSN...",
@@ -37,7 +40,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Program / Solusi Algoritma",
-    "pembahasan": "Implementasi pemrograman dinamis atau pencocokan pola karakter O, S, dan N."
+    "pembahasan": "Implementasi pemrograman dinamis atau pencocokan pola karakter O, S, dan N.",
+    "tingkat_kesulitan": "sulit"
   },
   {
     "deskripsi_soal": "B. Berbagi Banyak Candil...",
@@ -47,7 +51,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Pilihan skenario",
-    "pembahasan": "Pemeriksaan sisa pembagian (modulo) jumlah candil terhadap jumlah bebek."
+    "pembahasan": "Pemeriksaan sisa pembagian (modulo) jumlah candil terhadap jumlah bebek.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "B. Berbagi Banyak Candil...",
@@ -57,7 +62,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Jumlah kemungkinan",
-    "pembahasan": "Mencari faktor dari selisih total candil dan sisa candil yang dimakan."
+    "pembahasan": "Mencari faktor dari selisih total candil dan sisa candil yang dimakan.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "B. Berbagi Banyak Candil...",
@@ -67,7 +73,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Benar / Salah",
-    "pembahasan": "Evaluasi batas matematis jumlah faktor pembagi."
+    "pembahasan": "Evaluasi batas matematis jumlah faktor pembagi.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "B. Berbagi Banyak Candil...",
@@ -77,7 +84,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Program / Solusi Algoritma",
-    "pembahasan": "Implementasi pencarian faktor dan rentang batasan jumlah bebek B."
+    "pembahasan": "Implementasi pencarian faktor dan rentang batasan jumlah bebek B.",
+    "tingkat_kesulitan": "sulit"
   },
   {
     "deskripsi_soal": "C. Tebas Tebang Pohon...",
@@ -87,7 +95,8 @@
     "gambar_url": null,
     "gambar_lokal": "soal_1.png",
     "jawaban_benar": "Jumlah panjang potongan",
-    "pembahasan": "Penjumlahan selisih ketinggian pohon yang melebihi batas 7."
+    "pembahasan": "Penjumlahan selisih ketinggian pohon yang melebihi batas 7.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "C. Tebas Tebang Pohon...",
@@ -97,7 +106,8 @@
     "gambar_url": null,
     "gambar_lokal": "soal_1.png",
     "jawaban_benar": "Benar / Salah",
-    "pembahasan": "Analisis monotonisitas jumlah kayu hasil penebangan terhadap penurunan batas ketinggian."
+    "pembahasan": "Analisis monotonisitas jumlah kayu hasil penebangan terhadap penurunan batas ketinggian.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "C. Tebas Tebang Pohon...",
@@ -107,7 +117,8 @@
     "gambar_url": null,
     "gambar_lokal": "soal_1.png",
     "jawaban_benar": "Batas ketinggian",
-    "pembahasan": "Pencarian nilai X optimal menggunakan pencarian biner (*binary search*)."
+    "pembahasan": "Pencarian nilai X optimal menggunakan pencarian biner (*binary search*).",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "C. Tebas Tebang Pohon...",
@@ -117,7 +128,8 @@
     "gambar_url": null,
     "gambar_lokal": "soal_1.png",
     "jawaban_benar": "Program / Solusi Algoritma",
-    "pembahasan": "Implementasi *binary search on answer* untuk mencari batas ketinggian maksimum."
+    "pembahasan": "Implementasi *binary search on answer* untuk mencari batas ketinggian maksimum.",
+    "tingkat_kesulitan": "sulit"
   },
   {
     "deskripsi_soal": "D. Kalkulator Pengubah Basis...",
@@ -127,7 +139,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "String basis",
-    "pembahasan": "Konversi bilangan basis 10 ke basis 13 dengan aturan penggantian digit di atas 9."
+    "pembahasan": "Konversi bilangan basis 10 ke basis 13 dengan aturan penggantian digit di atas 9.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "D. Kalkulator Pengubah Basis...",
@@ -137,7 +150,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Pilihan skenario",
-    "pembahasan": "Evaluasi nilai desimal yang menghasilkan string representasi pada kalkulator basis khusus."
+    "pembahasan": "Evaluasi nilai desimal yang menghasilkan string representasi pada kalkulator basis khusus.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "D. Kalkulator Pengubah Basis...",
@@ -147,7 +161,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Jumlah bilangan",
-    "pembahasan": "Analisis ambiguitas pemecahan string digit ganda pada kalkulator."
+    "pembahasan": "Analisis ambiguitas pemecahan string digit ganda pada kalkulator.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "D. Kalkulator Pengubah Basis...",
@@ -157,7 +172,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Program / Solusi Algoritma",
-    "pembahasan": "Implementasi pemrograman dinamis untuk menghitung cara valid pemecahan string digit modulo 1.000.000.007."
+    "pembahasan": "Implementasi pemrograman dinamis untuk menghitung cara valid pemecahan string digit modulo 1.000.000.007.",
+    "tingkat_kesulitan": "sulit"
   },
   {
     "deskripsi_soal": "E. Gosip Gulali...",
@@ -167,7 +183,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Total ketidakpuasan",
-    "pembahasan": "Pencarian nilai gulali terdekat untuk setiap bebek tanpa kendala gosip."
+    "pembahasan": "Pencarian nilai gulali terdekat untuk setiap bebek tanpa kendala gosip.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "E. Gosip Gulali...",
@@ -177,7 +194,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Total ketidakpuasan",
-    "pembahasan": "Pengelompokan bebek yang terhubung dalam komponen gosip untuk mendapatkan jenis gulali yang sama."
+    "pembahasan": "Pengelompokan bebek yang terhubung dalam komponen gosip untuk mendapatkan jenis gulali yang sama.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "E. Gosip Gulali...",
@@ -187,7 +205,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Benar / Salah",
-    "pembahasan": "Analisis properti matematika minimisasi selisih mutlak (*absolute deviation*)."
+    "pembahasan": "Analisis properti matematika minimisasi selisih mutlak (*absolute deviation*).",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "E. Gosip Gulali...",
@@ -197,7 +216,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Program / Solusi Algoritma",
-    "pembahasan": "Implementasi struktur data Union-Find dan pemrograman dinamis / optimasi konveks."
+    "pembahasan": "Implementasi struktur data Union-Find dan pemrograman dinamis / optimasi konveks.",
+    "tingkat_kesulitan": "sulit"
   },
   {
     "deskripsi_soal": "F. Maju Tak Papan...",
@@ -207,7 +227,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Jumlah angka",
-    "pembahasan": "Simulasi pergerakan robot bebek berdasarkan perbandingan nilai petak kanan dan bawah."
+    "pembahasan": "Simulasi pergerakan robot bebek berdasarkan perbandingan nilai petak kanan dan bawah.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "F. Maju Tak Papan...",
@@ -217,7 +238,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Jumlah terkecil",
-    "pembahasan": "Penyusunan pola matriks angka untuk meminimalkan jalur kunjungan robot pada grid 5x2."
+    "pembahasan": "Penyusunan pola matriks angka untuk meminimalkan jalur kunjungan robot pada grid 5x2.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "F. Maju Tak Papan...",
@@ -227,7 +249,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Jumlah terkecil",
-    "pembahasan": "Strategi pengisian grid 3x3 untuk membatasi jumlah akumulasi angka yang dikunjungi robot."
+    "pembahasan": "Strategi pengisian grid 3x3 untuk membatasi jumlah akumulasi angka yang dikunjungi robot.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "F. Maju Tak Papan...",
@@ -237,6 +260,7 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Program / Solusi Algoritma",
-    "pembahasan": "Analisis pola konstruktif pengisian matriks untuk meminimalkan jumlah nilai pada jalur robot bebek."
+    "pembahasan": "Analisis pola konstruktif pengisian matriks untuk meminimalkan jumlah nilai pada jalur robot bebek.",
+    "tingkat_kesulitan": "sulit"
   }
 ]

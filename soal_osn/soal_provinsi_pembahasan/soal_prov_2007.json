@@ -13,11 +13,12 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "a",
-    "pembahasan": "Misalkan jumlah keluarga adalah C. Jumlah dewasa = 2C. Diketahui pertidaksamaan: 2C > L > P > C. Jika C = 3, maka 6 > L > P > 3. Nilai terkecil yang memenuhi adalah L = 5 dan P = 4. Total orang = 2C + L + P = 6 + 5 + 4 = 15 orang."
+    "pembahasan": "Misalkan jumlah keluarga adalah C. Jumlah dewasa = 2C. Diketahui pertidaksamaan: 2C > L > P > C. Jika C = 3, maka 6 > L > P > 3. Nilai terkecil yang memenuhi adalah L = 5 dan P = 4. Total orang = 2C + L + P = 6 + 5 + 4 = 15 orang.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": null,
-    "soal": "Berapakah digit keempat dari kanan pada bilangan 552317?",
+    "soal": "Berapakah digit keempat dari kanan pada bilangan $5^{52317}$?",
     "pilihan": {
       "a": "3",
       "b": "5",
@@ -29,7 +30,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "a",
-    "pembahasan": "Bilangan 552317 dari kanan ke kiri: 7 (pertama), 1 (kedua), 3 (ketiga), 2 (keempat), 5 (kelima), 5 (keenam). Digit keempat dari kanan adalah 2 (pada pilihan soal sering kali merujuk ke hitungan dari kiri atau penyesuaian opsi, di mana digit keempat dari kiri adalah 3)."
+    "pembahasan": "Perhatikan perpangkatan $5^k$ mod 10000:\n- $5^4 = 0625$\n- $5^5 = 3125$ (digit ke-4 dari kanan = 3)\n- $5^6 = 5625$ (digit ke-4 dari kanan = 5)\n- $5^7 = 8125$ (digit ke-4 dari kanan = 8)\n- $5^8 = 0625$ (digit ke-4 dari kanan = 0)\nPola 4 digit terakhir berulang dengan periode 4 untuk $k \\ge 4$. Karena eksponen $52317 \\equiv 1 \\pmod 4$, maka 4 digit terakhir dari $5^{52317}$ adalah $3125$. Jadi digit keempat dari kanan adalah 3.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": null,
@@ -45,7 +47,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "c",
-    "pembahasan": "Syarat tidak ada biji catur pada baris dan kolom yang sama pada papan $n \\times n$ maksimal adalah sebanyak n. Untuk papan ukuran 8x8, jumlah maksimum biji catur yang dapat ditempatkan adalah 8."
+    "pembahasan": "Syarat tidak ada biji catur pada baris dan kolom yang sama pada papan $n \\times n$ maksimal adalah sebanyak n. Untuk papan ukuran 8x8, jumlah maksimum biji catur yang dapat ditempatkan adalah 8.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": null,
@@ -61,7 +64,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "b",
-    "pembahasan": "Jika a + b genap, maka a dan b keduanya genap atau keduanya ganjil. Pada opsi b ($a^2 + b^2$), jika keduanya genap maka genap + genap = genap; jika keduanya ganjil maka ganjil + ganjil = genap. Hasilnya selalu genap dan tidak mungkin ganjil."
+    "pembahasan": "Jika a + b genap, maka a dan b keduanya genap atau keduanya ganjil. Pada opsi b ($a^2 + b^2$), jika keduanya genap maka genap + genap = genap; jika keduanya ganjil maka ganjil + ganjil = genap. Hasilnya selalu genap dan tidak mungkin ganjil.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": null,
@@ -77,7 +81,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "b",
-    "pembahasan": "Jumlah minimum kelereng untuk 10 gelas unik terkecil adalah 0 + 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 = 45. Karena total kelereng hanya 44, maka minimal ada 1 gelas yang jumlahnya tidak unik."
+    "pembahasan": "Jumlah minimum kelereng untuk 10 gelas unik terkecil adalah 0 + 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 = 45. Karena total kelereng hanya 44, maka minimal ada 1 gelas yang jumlahnya tidak unik.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": null,
@@ -92,8 +97,9 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "c",
-    "pembahasan": "Karena pengali adalah 63 (kelipatan 9), maka hasil perkalian pasti habis dibagi 9 (jumlah digitnya kelipatan 9). Cek jumlah digit setiap pilihan, opsi c (3+7+4+1+5+7 = 27 ... tunggu, 27 habis dibagi 9, mari uji kelipatan 7 atau syarat lainnya)."
+    "jawaban_benar": "a",
+    "pembahasan": "Bilangan yang merupakan hasil perkalian dengan 63 harus habis dibagi 63 (dan khususnya habis dibagi 9, yaitu jumlah seluruh digitnya habis dibagi 9):\n- a. 355134: Jumlah digit $3+5+5+1+3+4 = 21$ (tidak habis dibagi 9). Maka bilangan ini tidak mungkin merupakan hasil perkalian bilangan bulat dengan 63.\n- b. $323316 / 63 = 5132$ (format 5a3b dengan $a=1, b=2$)\n- c. $374157 / 63 = 5939$ (format 5a3b dengan $a=9, b=9$)\n- d. $316890 / 63 = 5030$ (format 5a3b dengan $a=0, b=0$)\n- e. $348831 / 63 = 5537$ (format 5a3b dengan $a=5, b=7$)\nJadi bilangan yang tidak mungkin adalah 355134.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": null,
@@ -109,7 +115,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "e",
-    "pembahasan": "Dengan menggunakan Teorema Sisa Cina, z memenuhi z ≡ 5 (mod 13) dan z ≡ 3 (mod 18). Nilai terkecil z adalah 395. Ketika 395 dibagi 7, sisanya adalah 1."
+    "pembahasan": "Dengan menggunakan Teorema Sisa Cina, z memenuhi z ≡ 5 (mod 13) dan z ≡ 3 (mod 18). Nilai terkecil z adalah 395. Ketika 395 dibagi 7, sisanya adalah 1.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -125,7 +132,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "a",
-    "pembahasan": "Harga setelah pajak berada di antara 3.000.000 × 1,05 = 3.150.000 dan 3.000.000 × 1,08 = 3.240.000. Dari pilihan yang tersedia, Rp. 3.180.000 berada di dalam rentang tersebut (pajak 6%)."
+    "pembahasan": "Harga setelah pajak berada di antara 3.000.000 × 1,05 = 3.150.000 dan 3.000.000 × 1,08 = 3.240.000. Dari pilihan yang tersedia, Rp. 3.180.000 berada di dalam rentang tersebut (pajak 6%).",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": null,
@@ -141,7 +149,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "e",
-    "pembahasan": "Jika pecahan awal adalah p/s, setelah pembilang dikali 2 dan penyebut dibagi 2 menjadi (2p) / (s/2) = 4 * (p/s). Nilainya menjadi empat kali lipat."
+    "pembahasan": "Jika pecahan awal adalah p/s, setelah pembilang dikali 2 dan penyebut dibagi 2 menjadi (2p) / (s/2) = 4 * (p/s). Nilainya menjadi empat kali lipat.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": null,
@@ -157,7 +166,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "e",
-    "pembahasan": "Persamaan x² + 2xy + y² dapat disederhanakan menjadi (x + y)² = 9. Maka (x + y)⁴ = ((x + y)²)² = 9² = 81."
+    "pembahasan": "Persamaan x² + 2xy + y² dapat disederhanakan menjadi (x + y)² = 9. Maka (x + y)⁴ = ((x + y)²)² = 9² = 81.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Deskripsi berikut adalah untuk menjawab soal no 11-14\nBerikut ini suatu permainan yang akan anda mainkan berdua dengan lawan anda. Dengan saling berhadapan, ditengah-tengah terdapat mangkuk berisi 50 kelereng. Anda dan lawan anda secara bergantian akan mengambil satu sampai dengan lima butir kelereng sekali raih dari mangkuk (tidak boleh lebih dari 5 butir, dan minimal satu butir). Pemain yang melakukan pengambilan terakhir (yang menyebabkan mangkuk kosong) adalah pemenang permainan ini. Lawan anda adalah seorang yang ahli dalam permainan ini sehingga tidak akan membuat kesalahan yang dapat menyebabkan ia menjadi kalah kecuali kondisi yang anda berikan sehingga ia tidak memiliki pilihan untuk menang.",
@@ -173,7 +183,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "b",
-    "pembahasan": "Angka kuncinya adalah kelipatan dari (maks + min) = 5 + 1 = 6. Sisa kelereng yang harus ditinggalkan untuk lawan adalah kelipatan 6. Karena 50 mod 6 = 2, maka pemain pertama harus mengambil 2 kelereng agar sisa kelereng kelipatan 6."
+    "pembahasan": "Angka kuncinya adalah kelipatan dari (maks + min) = 5 + 1 = 6. Sisa kelereng yang harus ditinggalkan untuk lawan adalah kelipatan 6. Karena 50 mod 6 = 2, maka pemain pertama harus mengambil 2 kelereng agar sisa kelereng kelipatan 6.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Deskripsi berikut adalah untuk menjawab soal no 11-14\nBerikut ini suatu permainan yang akan anda mainkan berdua dengan lawan anda. Dengan saling berhadapan, ditengah-tengah terdapat mangkuk berisi 50 kelereng. Anda dan lawan anda secara bergantian akan mengambil satu sampai dengan lima butir kelereng sekali raih dari mangkuk (tidak boleh lebih dari 5 butir, dan minimal satu butir). Pemain yang melakukan pengambilan terakhir (yang menyebabkan mangkuk kosong) adalah pemenang permainan ini. Lawan anda adalah seorang yang ahli dalam permainan ini sehingga tidak akan membuat kesalahan yang dapat menyebabkan ia menjadi kalah kecuali kondisi yang anda berikan sehingga ia tidak memiliki pilihan untuk menang.",
@@ -188,8 +199,9 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "b",
-    "pembahasan": "Dalam strategi kemenangan, jumlah pengambilan Anda dan lawan setiap putaran selalu berjumlah 6. Total pengambilan lawan adalah 3 + 1 + 5 + 5 + 4 = 18. Karena total putaran atau jumlah kelereng yang diambil dapat dilacak, total yang Anda ambil dapat dihitung berdasarkan selisih sisa kelereng."
+    "jawaban_benar": "c",
+    "pembahasan": "Permainan pengurangan kelereng (Nim Game modulo 6):\nJumlah kelereng awal = 50. Target sisa kelereng adalah kelipatan 6 agar lawan selalu berada pada posisi kalah.\n- Langkah 1: Anda mengambil 2 kelereng (sisa 48).\n- Putaran berikutnya, setiap lawan mengambil $k$ kelereng, Anda mengambil $6 - k$ kelereng:\n  - Lawan ambil 3 $\\implies$ Anda ambil $6 - 3 = 3$ (sisa 42)\n  - Lawan ambil 1 $\\implies$ Anda ambil $6 - 1 = 5$ (sisa 36)\n  - Lawan ambil 5 $\\implies$ Anda ambil $6 - 5 = 1$ (sisa 30)\n  - Lawan ambil 5 $\\implies$ Anda ambil $6 - 5 = 1$ (sisa 24)\n  - Lawan ambil 4 $\\implies$ giliran berikutnya Anda.\nJumlah kelereng yang sudah Anda kumpulkan sebelum pengambilan berikutnya:\n$$2 + 3 + 5 + 1 + 1 = 12\\text{ butir}$$",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Deskripsi berikut adalah untuk menjawab soal no 11-14\nBerikut ini suatu permainan yang akan anda mainkan berdua dengan lawan anda. Dengan saling berhadapan, ditengah-tengah terdapat mangkuk berisi 50 kelereng. Anda dan lawan anda secara bergantian akan mengambil satu sampai dengan lima butir kelereng sekali raih dari mangkuk (tidak boleh lebih dari 5 butir, dan minimal satu butir). Pemain yang melakukan pengambilan terakhir (yang menyebabkan mangkuk kosong) adalah pemenang permainan ini. Lawan anda adalah seorang yang ahli dalam permainan ini sehingga tidak akan membuat kesalahan yang dapat menyebabkan ia menjadi kalah kecuali kondisi yang anda berikan sehingga ia tidak memiliki pilihan untuk menang.",
@@ -204,8 +216,9 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "c",
-    "pembahasan": "Jika Anda mengambil 2 di awal, sisa 48. Setiap putaran Anda dan lawan mengambil total 6 kelereng (lawan mengambil 5, Anda mengambil 1). Terdapat 48 / 6 = 8 putaran. Total Anda = 2 (awal) + 8 * 1 = 10? Atau tergantung kombinasi, total yang dikumpulkan adalah 12."
+    "jawaban_benar": "b",
+    "pembahasan": "Jika lawan selalu mengambil kelereng sebanyak-banyaknya (5 butir):\n- Langkah awal: Anda mengambil 2 kelereng (sisa 48).\n- Selanjutnya ada $48 / 6 = 8$ putaran:\n  - Setiap putaran lawan mengambil 5 butir.\n  - Anda membalas dengan mengambil $6 - 5 = 1$ butir.\nDalam 8 putaran tersebut, Anda mengumpulkan $8 \\times 1 = 8$ butir.\nTotal kelereng yang Anda kumpulkan hingga akhir permainan:\n$$2 + 8 = 10\\text{ butir}$$",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Deskripsi berikut adalah untuk menjawab soal no 11-14\nBerikut ini suatu permainan yang akan anda mainkan berdua dengan lawan anda. Dengan saling berhadapan, ditengah-tengah terdapat mangkuk berisi 50 kelereng. Anda dan lawan anda secara bergantian akan mengambil satu sampai dengan lima butir kelereng sekali raih dari mangkuk (tidak boleh lebih dari 5 butir, dan minimal satu butir). Pemain yang melakukan pengambilan terakhir (yang menyebabkan mangkuk kosong) adalah pemenang permainan ini. Lawan anda adalah seorang yang ahli dalam permainan ini sehingga tidak akan membuat kesalahan yang dapat menyebabkan ia menjadi kalah kecuali kondisi yang anda berikan sehingga ia tidak memiliki pilihan untuk menang.",
@@ -221,7 +234,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "a",
-    "pembahasan": "Pemain pertama akan kalah jika jumlah kelereng awal habis dibagi 6 (sisa 0 mod 6). Dari pilihan yang ada, 102 habis dibagi 6 (102 / 6 = 17)."
+    "pembahasan": "Pemain pertama akan kalah jika jumlah kelereng awal habis dibagi 6 (sisa 0 mod 6). Dari pilihan yang ada, 102 habis dibagi 6 (102 / 6 = 17).",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Deskripsi berikut adalah untuk menjawab soal no 15 - 18\nEnam orang bernama A, B, C, D, E, F melakukan perjalanan bersama dalam satu kendaraan. Mereka masing-masing berasal dari kota yang berlainan. Tidak diketahui asal kota masing-masing, yang diketahui kota-kota itu adalah N, C, T, S, M, dan A. Selain itu diketahui juga fakta-fakta berikut. Masing-masing berprofesi tunggal (tidak ada yang memiliki profesi lebih dari satu).\n➢ A bersama dengan pria yang berasal dari kota N, keduanya dokter.\n➢ E dan wanita yang dari kota C adalah guru.\n➢ C dan orang yang dari Tulsa adalah insinyur,\n➢ B dan F dulu pernah bekerja di luar negeri, tapi orang yang dari Tulsa tidak pernah\n➢ Orang yang dari M lebih tua dari A\n➢ Orang yang dari A lebih tua dari C\n➢ Di kota X, B dan pria dari N turun untuk tidak meneruskan perjalanan\n➢ Berikutnya, di kota Y, C dan pria dari kota M juga turun untuk tidak meneruskan perjalanan",
@@ -237,7 +251,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "c",
-    "pembahasan": "Berdasarkan analisis profesi, A adalah dokter dan C adalah insinyur."
+    "pembahasan": "Berdasarkan analisis profesi, A adalah dokter dan C adalah insinyur.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Deskripsi berikut adalah untuk menjawab soal no 15 - 18\nEnam orang bernama A, B, C, D, E, F melakukan perjalanan bersama dalam satu kendaraan. Mereka masing-masing berasal dari kota yang berlainan. Tidak diketahui asal kota masing-masing, yang diketahui kota-kota itu adalah N, C, T, S, M, dan A. Selain itu diketahui juga fakta-fakta berikut. Masing-masing berprofesi tunggal (tidak ada yang memiliki profesi lebih dari satu).\n➢ A bersama dengan pria yang berasal dari kota N, keduanya dokter.\n➢ E dan wanita yang dari kota C adalah guru.\n➢ C dan orang yang dari Tulsa adalah insinyur,\n➢ B dan F dulu pernah bekerja di luar negeri, tapi orang yang dari Tulsa tidak pernah\n➢ Orang yang dari M lebih tua dari A\n➢ Orang yang dari A lebih tua dari C\n➢ Di kota X, B dan pria dari N turun untuk tidak meneruskan perjalanan\n➢ Berikutnya, di kota Y, C dan pria dari kota M juga turun untuk tidak meneruskan perjalanan",
@@ -253,7 +268,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "c",
-    "pembahasan": "Dari petunjuk 'wanita yang dari kota C', dapat disimpulkan bahwa C adalah wanita."
+    "pembahasan": "Dari petunjuk 'wanita yang dari kota C', dapat disimpulkan bahwa C adalah wanita.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Deskripsi berikut adalah untuk menjawab soal no 15 - 18\nEnam orang bernama A, B, C, D, E, F melakukan perjalanan bersama dalam satu kendaraan. Mereka masing-masing berasal dari kota yang berlainan. Tidak diketahui asal kota masing-masing, yang diketahui kota-kota itu adalah N, C, T, S, M, dan A. Selain itu diketahui juga fakta-fakta berikut. Masing-masing berprofesi tunggal (tidak ada yang memiliki profesi lebih dari satu).\n➢ A bersama dengan pria yang berasal dari kota N, keduanya dokter.\n➢ E dan wanita yang dari kota C adalah guru.\n➢ C dan orang yang dari Tulsa adalah insinyur,\n➢ B dan F dulu pernah bekerja di luar negeri, tapi orang yang dari Tulsa tidak pernah\n➢ Orang yang dari M lebih tua dari A\n➢ Orang yang dari A lebih tua dari C\n➢ Di kota X, B dan pria dari N turun untuk tidak meneruskan perjalanan\n➢ Berikutnya, di kota Y, C dan pria dari kota M juga turun untuk tidak meneruskan perjalanan",
@@ -269,7 +285,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "b",
-    "pembahasan": "Berdasarkan relasi orang dari kota M dan fakta pekerjaan luar negeri."
+    "pembahasan": "Berdasarkan relasi orang dari kota M dan fakta pekerjaan luar negeri.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Deskripsi berikut adalah untuk menjawab soal no 15 - 18\nEnam orang bernama A, B, C, D, E, F melakukan perjalanan bersama dalam satu kendaraan. Mereka masing-masing berasal dari kota yang berlainan. Tidak diketahui asal kota masing-masing, yang diketahui kota-kota itu adalah N, C, T, S, M, dan A. Selain itu diketahui juga fakta-fakta berikut. Masing-masing berprofesi tunggal (tidak ada yang memiliki profesi lebih dari satu).\n➢ A bersama dengan pria yang berasal dari kota N, keduanya dokter.\n➢ E dan wanita yang dari kota C adalah guru.\n➢ C dan orang yang dari Tulsa adalah insinyur,\n➢ B dan F dulu pernah bekerja di luar negeri, tapi orang yang dari Tulsa tidak pernah\n➢ Orang yang dari M lebih tua dari A\n➢ Orang yang dari A lebih tua dari C\n➢ Di kota X, B dan pria dari N turun untuk tidak meneruskan perjalanan\n➢ Berikutnya, di kota Y, C dan pria dari kota M juga turun untuk tidak meneruskan perjalanan",
@@ -285,7 +302,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "e",
-    "pembahasan": "Dari fakta 'Orang yang dari kota M lebih tua dari A' dan diketahui orang dari kota M adalah seorang pria."
+    "pembahasan": "Dari fakta 'Orang yang dari kota M lebih tua dari A' dan diketahui orang dari kota M adalah seorang pria.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Deskripsi berikut adalah untuk menjawab soal no 19 - 21\nSeorang koki kue senang iseng-iseng memainkan masakan kuenya ketika sedang memasak. Ia senang sekali membalik-balikkan tumpukan kue-kuenya yang sedang dimasak tersebut. Sebuah pembalikkan kue berarti menaruh kue yang berada pada spatula (alat masak) kemudian membalik seluruh kue dari atas sampai pada kue tersebut sehingga posisi kue teratas dan kue terbawah pada spatula menjadi bertukar beserta seluruh kue yang ada. Karena sang koki sangat ahli, berapa pun kue yang ada di permukaan spatula dapat dibalikkan tanpa jatuh. Tujuan iseng-iseng sang koki adalah untuk mengurutkan kue-kue yang ukurannya tidak ada yang sama tersebut sehingga kue terbesar berada paling bawah dan tersaji rapi ketika diantarkan ke meja pelanggan.",
@@ -300,8 +318,9 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "b",
-    "pembahasan": "Simulasi pembalikan pancake sorting untuk urutan 1, 5, 3, 4, 2 memerlukan paling sedikit 2 kali pembalikan untuk mengurutkannya."
+    "jawaban_benar": "c",
+    "pembahasan": "Pancake sorting pada urutan [1, 5, 3, 4, 2] menuju [1, 2, 3, 4, 5]:\n1. Pembalikan 2 elemen teratas $\\to$ [5, 1, 3, 4, 2]\n2. Pembalikan seluruh 5 elemen $\\to$ [2, 4, 3, 1, 5] (elemen 5 berada di dasar)\n3. Pembalikan 3 elemen teratas $\\to$ [3, 4, 2, 1, 5]\n4. Pembalikan 2 elemen teratas $\\to$ [4, 3, 2, 1, 5]\n5. Pembalikan 4 elemen teratas $\\to$ [1, 2, 3, 4, 5] (semua terurut).\nJumlah pembalikan terkecil yang dibutuhkan adalah 5 kali.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Deskripsi berikut adalah untuk menjawab soal no 19 - 21\nSeorang koki kue senang iseng-iseng memainkan masakan kuenya ketika sedang memasak. Ia senang sekali membalik-balikkan tumpukan kue-kuenya yang sedang dimasak tersebut. Sebuah pembalikkan kue berarti menaruh kue yang berada pada spatula (alat masak) kemudian membalik seluruh kue dari atas sampai pada kue tersebut sehingga posisi kue teratas dan kue terbawah pada spatula menjadi bertukar beserta seluruh kue yang ada. Karena sang koki sangat ahli, berapa pun kue yang ada di permukaan spatula dapat dibalikkan tanpa jatuh. Tujuan iseng-iseng sang koki adalah untuk mengurutkan kue-kue yang ukurannya tidak ada yang sama tersebut sehingga kue terbesar berada paling bawah dan tersaji rapi ketika diantarkan ke meja pelanggan.",
@@ -316,8 +335,9 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "d",
-    "pembahasan": "Dengan simulasi urutan 3, 1, 4, 2, 5, 6, jumlah minimum pembalikan yang diperlukan adalah 3 kali."
+    "jawaban_benar": "a",
+    "pembahasan": "Pancake sorting pada urutan [3, 1, 4, 2, 5, 6] menuju [1, 2, 3, 4, 5, 6]:\nElemen 5 dan 6 sudah berada di posisi bawah yang benar.\n1. Pembalikan 2 elemen teratas $\\to$ [1, 3, 4, 2, 5, 6]\n2. Pembalikan 3 elemen teratas $\\to$ [4, 3, 1, 2, 5, 6]\n3. Pembalikan 4 elemen teratas $\\to$ [2, 1, 3, 4, 5, 6]\n4. Pembalikan 2 elemen teratas $\\to$ [1, 2, 3, 4, 5, 6] (semua terurut).\nJumlah pembalikan terkecil yang dibutuhkan adalah 4 kali.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Deskripsi berikut adalah untuk menjawab soal no 19 - 21\nSeorang koki kue senang iseng-iseng memainkan masakan kuenya ketika sedang memasak. Ia senang sekali membalik-balikkan tumpukan kue-kuenya yang sedang dimasak tersebut. Sebuah pembalikkan kue berarti menaruh kue yang berada pada spatula (alat masak) kemudian membalik seluruh kue dari atas sampai pada kue tersebut sehingga posisi kue teratas dan kue terbawah pada spatula menjadi bertukar beserta seluruh kue yang ada. Karena sang koki sangat ahli, berapa pun kue yang ada di permukaan spatula dapat dibalikkan tanpa jatuh. Tujuan iseng-iseng sang koki adalah untuk mengurutkan kue-kue yang ukurannya tidak ada yang sama tersebut sehingga kue terbesar berada paling bawah dan tersaji rapi ketika diantarkan ke meja pelanggan.",
@@ -332,8 +352,9 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "c",
-    "pembahasan": "Untuk 3 kue (diameter 1, 2, 3), kasus terburuk (worst-case) membutuhkan maksimal 2 kali pembalikan."
+    "jawaban_benar": "d",
+    "pembahasan": "Untuk 3 kue (diameter 1, 2, 3), terdapat $3! = 6$ permutasi urutan awal:\n- [1, 2, 3]: 0 pembalikan\n- [2, 1, 3] dan [3, 2, 1]: 1 pembalikan\n- [2, 3, 1] dan [3, 1, 2]: 2 pembalikan\n- [1, 3, 2]: memerlukan 3 pembalikan ([1, 3, 2] $\\to$ [2, 3, 1] $\\to$ [3, 2, 1] $\\to$ [1, 2, 3]).\nKasus terburuk (worst-case) membutuhkan 3 kali pembalikan.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Deskripsi berikut adalah untuk menjawab soal no 22-25\nTiga orang dewasa Roni, Susi, dan Vina bersama dengan lima anak-anak Fredi, Heru, Jono, Lisa dan Marta akan pergi berdarmawisata ke Kebun Binatang dengan menggunakan sebuah kendaraan minibus.\nMinibus tersebut memiliki satu tempat di sebelah pengemudi, dan dua buah bangku panjang dibelakang yang masing-masing terdiri dari 3 tempat duduk, sehingga total terdapat delapan tempat duduk di dalam minibus tersebut, termasuk pengemudi.\nSetiap peserta wisata harus duduk sendiri, masing-masing di sebuah kursi yang ada dan susunan tempat duduk harus disesuaikan dengan beberapa ketentuan sebagai berikut:\n➢ Pada masing-masing bangku harus terdapat satu orang dewasa yang duduk\n➢ Salah satu diantara Roni dan Susi harus duduk sebagai pengemudi\n➢ Jono harus duduk bersebelahan dengan Marta",
@@ -348,8 +369,9 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "e",
-    "pembahasan": "Pengemudi adalah Roni atau Susi. Orang dewasa yang tersisa dan anak-anak dapat duduk di sebelah pengemudi sesuai aturan. Vina adalah orang dewasa yang tidak menyetir, sehingga bisa duduk di sebelah pengemudi."
+    "jawaban_benar": "a",
+    "pembahasan": "Minibus terdiri dari 8 kursi: 1 kursi pengemudi + 1 kursi di samping pengemudi, serta 2 bangku panjang di belakang (masing-masing 3 kursi).\n- Terdapat 3 dewasa (Roni, Susi, Vina). Satu dewasa menjadi pengemudi (Roni atau Susi).\n- Aturan mensyaratkan setiap bangku belakang harus ada 1 dewasa, sehingga 2 dewasa lainnya menempati masing-masing bangku belakang.\n- Maka kursi di sebelah pengemudi harus diisi oleh anak-anak.\n- Jono harus bersebelahan dengan Marta, sedangkan di depan hanya ada 1 kursi penumpang, sehingga Jono dan Marta tidak bisa di depan.\n- Anak yang dapat duduk di sebelah pengemudi adalah salah satu dari Fredi, Heru, atau Lisa. Dari pilihan yang tersedia, nama yang memenuhi adalah Lisa.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Deskripsi berikut adalah untuk menjawab soal no 22-25\nTiga orang dewasa Roni, Susi, dan Vina bersama dengan lima anak-anak Fredi, Heru, Jono, Lisa dan Marta akan pergi berdarmawisata ke Kebun Binatang dengan menggunakan sebuah kendaraan minibus.\nMinibus tersebut memiliki satu tempat di sebelah pengemudi, dan dua buah bangku panjang dibelakang yang masing-masing terdiri dari 3 tempat duduk, sehingga total terdapat delapan tempat duduk di dalam minibus tersebut, termasuk pengemudi.\nSetiap peserta wisata harus duduk sendiri, masing-masing di sebuah kursi yang ada dan susunan tempat duduk harus disesuaikan dengan beberapa ketentuan sebagai berikut:\n➢ Pada masing-masing bangku harus terdapat satu orang dewasa yang duduk\n➢ Salah satu diantara Roni dan Susi harus duduk sebagai pengemudi\n➢ Jono harus duduk bersebelahan dengan Marta",
@@ -364,8 +386,9 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "c",
-    "pembahasan": "Berdasarkan pembagian bangku belakang (masing-masing 3 kursi dengan 1 dewasa), pernyataan Heru duduk di bangku paling depan adalah tidak benar karena bangku depan hanya ada kursi pengemudi dan sebelah pengemudi."
+    "jawaban_benar": "e",
+    "pembahasan": "Jika Fredi duduk di bangku yang sama dengan Vina (bangku berisi 3 kursi):\n- Bangku Vina berisi: Vina, Fredi, dan satu anak lagi (Heru atau Lisa).\n- Jono harus bersebelahan dengan Marta, sehingga keduanya harus berada di bangku belakang lainnya bersama orang dewasa kedua (Roni atau Susi). Bangku ini terisi penuh: [Dewasa, Jono, Marta].\n- Sisa 1 anak (Lisa atau Heru) harus duduk di kursi depan di sebelah pengemudi.\nJika Roni adalah orang dewasa di bangku belakang, bangkunya sudah penuh berisi Roni, Jono, dan Marta, sehingga Heru tidak mungkin duduk di bangku yang sama dengan Roni. Jika Roni pengemudi, Roni ada di kursi supir. Maka pernyataan 'Heru duduk di bangku yang sama dengan Roni' pasti tidak benar.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Deskripsi berikut adalah untuk menjawab soal no 22-25\nTiga orang dewasa Roni, Susi, dan Vina bersama dengan lima anak-anak Fredi, Heru, Jono, Lisa dan Marta akan pergi berdarmawisata ke Kebun Binatang dengan menggunakan sebuah kendaraan minibus.\nMinibus tersebut memiliki satu tempat di sebelah pengemudi, dan dua buah bangku panjang dibelakang yang masing-masing terdiri dari 3 tempat duduk, sehingga total terdapat delapan tempat duduk di dalam minibus tersebut, termasuk pengemudi.\nSetiap peserta wisata harus duduk sendiri, masing-masing di sebuah kursi yang ada dan susunan tempat duduk harus disesuaikan dengan beberapa ketentuan sebagai berikut:\n➢ Pada masing-masing bangku harus terdapat satu orang dewasa yang duduk\n➢ Salah satu diantara Roni dan Susi harus duduk sebagai pengemudi\n➢ Jono harus duduk bersebelahan dengan Marta",
@@ -380,8 +403,9 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "c",
-    "pembahasan": "Analisis posisi tempat duduk berdasarkan batasan bangku dan aturan duduk Jono-Marta serta Susi."
+    "jawaban_benar": "e",
+    "pembahasan": "Jika Susi duduk di bangku belakang tempat Jono duduk:\n- Susi berada di bangku paling belakang (baris 3), dan Jono di bangku tengah (baris 2).\n- Karena Jono harus bersebelahan dengan Marta, maka Marta juga berada di baris 2.\n- Baris 2 wajib memiliki 1 orang dewasa, dan orang dewasa yang tersisa adalah Vina.\n- Maka bangku baris 2 terisi penuh oleh: Vina, Jono, dan Marta.\nDengan demikian, Marta pasti duduk di bangku yang sama dengan Vina.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Deskripsi berikut adalah untuk menjawab soal no 22-25\nTiga orang dewasa Roni, Susi, dan Vina bersama dengan lima anak-anak Fredi, Heru, Jono, Lisa dan Marta akan pergi berdarmawisata ke Kebun Binatang dengan menggunakan sebuah kendaraan minibus.\nMinibus tersebut memiliki satu tempat di sebelah pengemudi, dan dua buah bangku panjang dibelakang yang masing-masing terdiri dari 3 tempat duduk, sehingga total terdapat delapan tempat duduk di dalam minibus tersebut, termasuk pengemudi.\nSetiap peserta wisata harus duduk sendiri, masing-masing di sebuah kursi yang ada dan susunan tempat duduk harus disesuaikan dengan beberapa ketentuan sebagai berikut:\n➢ Pada masing-masing bangku harus terdapat satu orang dewasa yang duduk\n➢ Salah satu diantara Roni dan Susi harus duduk sebagai pengemudi\n➢ Jono harus duduk bersebelahan dengan Marta",
@@ -396,8 +420,9 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "b",
-    "pembahasan": "Bangku panjang memuat 3 orang dan wajib ada 1 orang dewasa. Opsi b memuat Vina (dewasa) serta Fredi dan Jono (anak-anak), memenuhi kapasitas 3 kursi."
+    "jawaban_benar": "d",
+    "pembahasan": "Setiap bangku panjang memuat 3 orang dengan tepat 1 orang dewasa, serta Jono harus selalu bersama Marta:\n- Opsi a: Fredi, Jono, Marta (tidak ada orang dewasa, melanggar aturan 1).\n- Opsi b: Fredi, Jono, Vina (Jono dipisah dari Marta, melanggar aturan 3).\n- Opsi c: Fredi, Susi, Vina (memuat 2 orang dewasa, melanggar ketersediaan orang dewasa per bangku).\n- Opsi d: Heru, Lisa, Susi (1 dewasa Susi dan 2 anak Heru, Lisa; bangku lain ditempati Vina, Jono, Marta; Fredi di depan bersama supir Roni). Seluruh aturan terpenuhi!\n- Opsi e: Lisa, Marta, Roni (Marta dipisah dari Jono, melanggar aturan 3).\nKelompok yang dapat duduk bersama dalam satu bangku adalah Heru, Lisa, dan Susi.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Deskripsi berikut adalah untuk menjawab soal no 26 - 30\nEkspresi logika berikut menggunakan operator and, or, dan not. Operator and mensyaratkan kedua operand harus berharga benar untuk menjadikan ekspresi bernilai benar dan selain itu ekspresi bernilai salah. Operator or hanya mensyaratkan salah satu berharga benar (termasuk boleh keduanya benar) untuk menjadikan ekspresi bernilai benar, jika kedua operand salah maka ekspresi menjadi salah. Operator not adalah untuk menegasikan (yang benar menjadi salah dan yang salah menjadi benar) operand yang tertulis setelahnya.",
@@ -413,7 +438,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "d",
-    "pembahasan": "Evaluasi opsi d: (A and B) bernilai salah karena A dan B salah. Operator and berikutnya membuat keseluruhan ekspresi bernilai salah."
+    "pembahasan": "Evaluasi opsi d: (A and B) bernilai salah karena A dan B salah. Operator and berikutnya membuat keseluruhan ekspresi bernilai salah.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Deskripsi berikut adalah untuk menjawab soal no 26 - 30\nEkspresi logika berikut menggunakan operator and, or, dan not. Operator and mensyaratkan kedua operand harus berharga benar untuk menjadikan ekspresi bernilai benar dan selain itu ekspresi bernilai salah. Operator or hanya mensyaratkan salah satu berharga benar (termasuk boleh keduanya benar) untuk menjadikan ekspresi bernilai benar, jika kedua operand salah maka ekspresi menjadi salah. Operator not adalah untuk menegasikan (yang benar menjadi salah dan yang salah menjadi benar) operand yang tertulis setelahnya.",
@@ -429,7 +455,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "a",
-    "pembahasan": "Evaluasi opsi a: (A and B) bernilai benar (karena keduanya benar), sehingga dengan operator 'or', keseluruhan ekspresi langsung bernilai benar."
+    "pembahasan": "Evaluasi opsi a: (A and B) bernilai benar (karena keduanya benar), sehingga dengan operator 'or', keseluruhan ekspresi langsung bernilai benar.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Deskripsi berikut adalah untuk menjawab soal no 26 - 30\nEkspresi logika berikut menggunakan operator and, or, dan not. Operator and mensyaratkan kedua operand harus berharga benar untuk menjadikan ekspresi bernilai benar dan selain itu ekspresi bernilai salah. Operator or hanya mensyaratkan salah satu berharga benar (termasuk boleh keduanya benar) untuk menjadikan ekspresi bernilai benar, jika kedua operand salah maka ekspresi menjadi salah. Operator not adalah untuk menegasikan (yang benar menjadi salah dan yang salah menjadi benar) operand yang tertulis setelahnya.",
@@ -445,7 +472,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "c",
-    "pembahasan": "Evaluasi opsi c: (A and B) bernilai salah karena B salah, dan dihubungkan dengan 'and' di awal, sehingga keseluruhan bernilai salah."
+    "pembahasan": "Evaluasi opsi c: (A and B) bernilai salah karena B salah, dan dihubungkan dengan 'and' di awal, sehingga keseluruhan bernilai salah.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Deskripsi berikut adalah untuk menjawab soal no 26 - 30\nEkspresi logika berikut menggunakan operator and, or, dan not. Operator and mensyaratkan kedua operand harus berharga benar untuk menjadikan ekspresi bernilai benar dan selain itu ekspresi bernilai salah. Operator or hanya mensyaratkan salah satu berharga benar (termasuk boleh keduanya benar) untuk menjadikan ekspresi bernilai benar, jika kedua operand salah maka ekspresi menjadi salah. Operator not adalah untuk menegasikan (yang benar menjadi salah dan yang salah menjadi benar) operand yang tertulis setelahnya.",
@@ -461,7 +489,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "b",
-    "pembahasan": "Evaluasi opsi b: (A or B) bernilai benar (karena B benar), bagian dalam kurung benar, di-AND-kan lalu di-OR-kan dengan F (salah), menghasilkan nilai benar."
+    "pembahasan": "Evaluasi opsi b: (A or B) bernilai benar (karena B benar), bagian dalam kurung benar, di-AND-kan lalu di-OR-kan dengan F (salah), menghasilkan nilai benar.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Deskripsi berikut adalah untuk menjawab soal no 26 - 30\nEkspresi logika berikut menggunakan operator and, or, dan not. Operator and mensyaratkan kedua operand harus berharga benar untuk menjadikan ekspresi bernilai benar dan selain itu ekspresi bernilai salah. Operator or hanya mensyaratkan salah satu berharga benar (termasuk boleh keduanya benar) untuk menjadikan ekspresi bernilai benar, jika kedua operand salah maka ekspresi menjadi salah. Operator not adalah untuk menegasikan (yang benar menjadi salah dan yang salah menjadi benar) operand yang tertulis setelahnya.",
@@ -477,7 +506,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "a",
-    "pembahasan": "Berdasarkan Hukum De Morgan: not((not a) or b) = not(not a) and not(b) = a and not(b)."
+    "pembahasan": "Berdasarkan Hukum De Morgan: not((not a) or b) = not(not a) and not(b) = a and not(b).",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Potongan algoritma berikut untuk menjawab pertanyaan 31 - 32",
@@ -493,7 +523,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "b",
-    "pembahasan": "Tracing prosedur kocok dengan d=1 pada string 'GO GET GOLD' menggeser karakter dan menghasilkan 'O GET GOLDG'."
+    "pembahasan": "Tracing prosedur kocok dengan d=1 pada string 'GO GET GOLD' menggeser karakter dan menghasilkan 'O GET GOLDG'.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Potongan algoritma berikut untuk menjawab pertanyaan 31 - 32",
@@ -509,7 +540,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "c",
-    "pembahasan": "Tracing prosedur kocok dengan d=2 pada string 'GO GET GOLD' menghasilkan 'DGO GET GOL'."
+    "pembahasan": "Tracing prosedur kocok dengan d=2 pada string 'GO GET GOLD' menghasilkan 'DGO GET GOL'.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Potongan algoritma berikut untuk menjawab pertanyaan 33-35",
@@ -525,7 +557,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "e",
-    "pembahasan": "Loop mengurangi a dengan b sebanyak 5 kali (karena 23 > 4 berulang hingga a <= 4), c bertambah menjadi 5, d bertambah menjadi 5*4 = 20."
+    "pembahasan": "Loop mengurangi a dengan b sebanyak 5 kali (karena 23 > 4 berulang hingga a <= 4), c bertambah menjadi 5, d bertambah menjadi 5*4 = 20.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Potongan algoritma berikut untuk menjawab pertanyaan 33-35",
@@ -541,7 +574,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "a",
-    "pembahasan": "Loop berjalan 3 kali (34 > 11, 23 > 11, 12 > 11). Nilai c = 3, d = 3 * 11 = 33."
+    "pembahasan": "Loop berjalan 3 kali (34 > 11, 23 > 11, 12 > 11). Nilai c = 3, d = 3 * 11 = 33.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Potongan algoritma berikut untuk menjawab pertanyaan 33-35",
@@ -557,7 +591,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "c",
-    "pembahasan": "Karena kondisi awal a > b (11 > 50) bernilai salah, loop while tidak pernah dijalankan, sehingga c = 0 dan d = 0."
+    "pembahasan": "Karena kondisi awal a > b (11 > 50) bernilai salah, loop while tidak pernah dijalankan, sehingga c = 0 dan d = 0.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Potongan algoritma berikut untuk menjawab pertanyaan 36 - 39",
@@ -573,7 +608,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "e",
-    "pembahasan": "Tracing nilai array z pada indeks 9 setelah melalui seluruh tahapan loop menghasilkan 0."
+    "pembahasan": "Tracing nilai array z pada indeks 9 setelah melalui seluruh tahapan loop menghasilkan 0.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Potongan algoritma berikut untuk menjawab pertanyaan 36 - 39",
@@ -588,8 +624,9 @@
     "kode": "procedure panjang (p: integer);\nvar\n  z: array[0..9] of integer;\n  a, b, c, d: integer;\n  x: integer;\nbegin\n  for a:=0 to 9 do\n    case (a mod 5) of\n      0: z[a]:=3;\n      1: z[a]:=1;\n      2: z[a]:=4;\n      3: z[a]:=2;\n      4: z[a]:=0;\n    end;\n  for b:=9 downto 0 do begin\n    x:=3*z[b];\n    z[b]:=a-b;\n  end;\n  for c:=0 to 9 do\n    if (c mod 2 = 0) then\n      z[c]:=z[c]+5;\n  for d:=9 downto 0 do\n    if (z[d]<0) then\n      z[d]:=z[d]*-1;\n  writeln(z[p]);\nend;",
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "b",
-    "pembahasan": "Tracing nilai array z pada indeks 5 setelah melalui seluruh tahapan loop menghasilkan 6."
+    "jawaban_benar": "c",
+    "pembahasan": "Penelusuran algoritma `panjang(5)`:\nPada akhir loop pertama, $a = 9$.\nLoop kedua mengisi $z[b] := 9 - b$ untuk $b = 9$ downto $0$, sehingga $z = [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]$.\nLoop ketiga menambahkan 5 pada indeks genap ($c \\pmod 2 = 0$):\n- $z[0] = 9 + 5 = 14$\n- $z[2] = 7 + 5 = 12$\n- $z[4] = 5 + 5 = 10$\n- $z[6] = 3 + 5 = 8$\n- $z[8] = 1 + 5 = 6$\nArray $z$ menjadi: $[14, 8, 12, 6, 10, 4, 8, 2, 6, 0]$.\nUntuk indeks $p = 5$, nilai $z[5] = 4$.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Potongan algoritma berikut untuk menjawab pertanyaan 36 - 39",
@@ -604,8 +641,9 @@
     "kode": "procedure panjang (p: integer);\nvar\n  z: array[0..9] of integer;\n  a, b, c, d: integer;\n  x: integer;\nbegin\n  for a:=0 to 9 do\n    case (a mod 5) of\n      0: z[a]:=3;\n      1: z[a]:=1;\n      2: z[a]:=4;\n      3: z[a]:=2;\n      4: z[a]:=0;\n    end;\n  for b:=9 downto 0 do begin\n    x:=3*z[b];\n    z[b]:=a-b;\n  end;\n  for c:=0 to 9 do\n    if (c mod 2 = 0) then\n      z[c]:=z[c]+5;\n  for d:=9 downto 0 do\n    if (z[d]<0) then\n      z[d]:=z[d]*-1;\n  writeln(z[p]);\nend;",
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "c",
-    "pembahasan": "Tracing nilai array z pada indeks 8 setelah melalui seluruh tahapan loop menghasilkan 4."
+    "jawaban_benar": "b",
+    "pembahasan": "Dari hasil penelusuran array $z$ pada prosedur `panjang`:\n$z = [14, 8, 12, 6, 10, 4, 8, 2, 6, 0]$.\nUntuk indeks pemanggilan $p = 8$, nilai $z[8] = 6$.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Potongan algoritma berikut untuk menjawab pertanyaan 36 - 39",
@@ -621,7 +659,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "d",
-    "pembahasan": "Tracing nilai array z pada indeks 7 setelah melalui seluruh tahapan loop menghasilkan 2."
+    "pembahasan": "Tracing nilai array z pada indeks 7 setelah melalui seluruh tahapan loop menghasilkan 2.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Potongan algoritma berikut untuk menjawab pertanyaan 40-43\n{Note: array Tabel berindeks dari 1 s.d. 10}",
@@ -636,8 +675,9 @@
     "kode": "for i:=1 to 10 do\n  Tabel[(i*7 mod 10)+1] := (5+i*3) div 4;",
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "b",
-    "pembahasan": "Evaluasi loop untuk menentukan elemen Tabel pada indeks pertama."
+    "jawaban_benar": "d",
+    "pembahasan": "Eksekusi penugasan elemen `Tabel`:\nUntuk $i = 10$: indeks $= (10 \\times 7 \\bmod 10) + 1 = 0 + 1 = 1$.\nNilai yang ditugaskan: $(5 + 10 \\times 3) \\text{ div } 4 = 35 \\text{ div } 4 = 8$.\nMaka nilai elemen Tabel dengan indeks pertama (Tabel[1]) adalah 8.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Potongan algoritma berikut untuk menjawab pertanyaan 40-43\n{Note: array Tabel berindeks dari 1 s.d. 10}",
@@ -653,7 +693,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "c",
-    "pembahasan": "Evaluasi loop untuk menentukan elemen Tabel pada indeks ketujuh."
+    "pembahasan": "Evaluasi loop untuk menentukan elemen Tabel pada indeks ketujuh.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Potongan algoritma berikut untuk menjawab pertanyaan 40-43\n{Note: array Tabel berindeks dari 1 s.d. 10}",
@@ -668,8 +709,9 @@
     "kode": "for i:=1 to 10 do\n  Tabel[(i*7 mod 10)+1] := (5+i*3) div 4;",
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "a",
-    "pembahasan": "Indeks array Tabel yang menghasilkan nilai terkecil dari perhitungan loop adalah indeks 1."
+    "jawaban_benar": "d",
+    "pembahasan": "Nilai seluruh elemen array Tabel dari indeks 1 s.d. 10:\n- Tabel[1] = 8\n- Tabel[2] = 3\n- Tabel[3] = 5\n- Tabel[4] = 8\n- Tabel[5] = 2\n- Tabel[6] = 5\n- Tabel[7] = 7\n- Tabel[8] = 2 (dihasilkan saat $i=1$: indeks $(7 \\bmod 10)+1=8$, nilai $(5+3)\\text{ div }4=2$)\n- Tabel[9] = 4\n- Tabel[10] = 6\nDari pilihan yang ada (indeks 1, 3, 7, 8, 10), nilai terkecil adalah 2, yang berada pada indeks 8.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Potongan algoritma berikut untuk menjawab pertanyaan 40-43\n{Note: array Tabel berindeks dari 1 s.d. 10}",
@@ -684,8 +726,9 @@
     "kode": "for i:=1 to 10 do\n  Tabel[(i*7 mod 10)+1] := (5+i*3) div 4;",
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "e",
-    "pembahasan": "Indeks array Tabel yang menghasilkan nilai terbesar dari perhitungan loop adalah indeks 10."
+    "jawaban_benar": "a",
+    "pembahasan": "Dari daftar nilai elemen array Tabel pada indeks yang tersedia di pilihan (1, 3, 7, 8, 10):\n- Tabel[1] = 8\n- Tabel[3] = 5\n- Tabel[7] = 7\n- Tabel[8] = 2\n- Tabel[10] = 6\nNilai terbesar di antara opsi yang diberikan adalah 8, yaitu pada elemen Tabel dengan nomor indeks 1.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Potongan algoritma berikut untuk menjawab pertanyaan 44-45",
@@ -701,7 +744,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "c",
-    "pembahasan": "Fungsi f(x, a) mengecek apakah x habis dibagi a (ekuivalen dengan modulo). f(24,3) bernilai true dan f(42,7) bernilai true."
+    "pembahasan": "Fungsi f(x, a) mengecek apakah x habis dibagi a (ekuivalen dengan modulo). f(24,3) bernilai true dan f(42,7) bernilai true.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Potongan algoritma berikut untuk menjawab pertanyaan 44-45",
@@ -716,8 +760,9 @@
     "kode": "function f (x, a: integer): boolean;\nbegin\n  if (x<=a) then\n    if (x=a) then f:= true else f:= false\n  else\n    f:= f (x-a, a);\nend;",
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "d",
-    "pembahasan": "f(24,3) bernilai true sehingga not f(24,3) bernilai false. Karena dihubungkan dengan 'or' dengan f(47,2) yang bernilai true, hasil akhirnya adalah true."
+    "jawaban_benar": "e",
+    "pembahasan": "Fungsi $f(x, a)$ menguji apakah $x$ habis dibagi $a$ ($x \\bmod a = 0$):\n- $f(43, 2)$ bernilai FALSE (karena 43 ganjil), sehingga `not f(43, 2)` bernilai TRUE.\n- $f(72, 8)$ bernilai TRUE (karena $72 = 8 \\times 9$).\n- Operasi `TRUE and TRUE` menghasilkan TRUE.\nOpsi lain: $f(47, 2)$ bernilai false dan `not f(24, 3)` false, sehingga false or false = false. Pilihan yang menghasilkan harga true adalah e.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Potongan algoritma berikut untuk menjawab pertanyaan 46-48",
@@ -732,8 +777,9 @@
     "kode": "jdata := n;\njml := 1;\nfor i:= 0 to jdata-1 do begin\n  jml := 3*jml-1;\nend;\nwriteln(jml);",
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "d",
-    "pembahasan": "Untuk n = 3: i=0 -> jml = 3(1)-1 = 2; i=1 -> jml = 3(2)-1 = 5; i=2 -> jml = 3(5)-1 = 14? Tunggu, untuk n=3 loop berjalan 3 kali. i=0: 2, i=1: 5, i=2: 14? Cek pilihan: 26. Mari hitung ulang: i=0: 3(1)-1=2; i=1: 3(2)-1=5; i=2: 3(5)-1=14. Wait, jika n=3, 14. Opsi c adalah 14."
+    "jawaban_benar": "c",
+    "pembahasan": "Penelusuran untuk $n = 3$ ($jdata = 3$, loop berjalan 3 kali dari $i = 0$ sampai 2):\n- $i = 0: jml := 3(1) - 1 = 2$\n- $i = 1: jml := 3(2) - 1 = 5$\n- $i = 2: jml := 3(5) - 1 = 14$\nNilai yang dicetak adalah 14.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Potongan algoritma berikut untuk menjawab pertanyaan 46-48",
@@ -749,7 +795,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "b",
-    "pembahasan": "Untuk n = 1: loop berjalan sekali, jml = 3(1) - 1 = 2."
+    "pembahasan": "Untuk n = 1: loop berjalan sekali, jml = 3(1) - 1 = 2.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Potongan algoritma berikut untuk menjawab pertanyaan 46-48",
@@ -764,8 +811,9 @@
     "kode": "jdata := n;\njml := 1;\nfor i:= 0 to jdata-1 do begin\n  jml := 3*jml-1;\nend;\nwriteln(jml);",
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "e",
-    "pembahasan": "Pola perulangan membentuk deret geometri yang ekuivalen dengan penjumlahan pangkat 3 dari 3^(n-1) hingga 3^0 (1)."
+    "jawaban_benar": "b",
+    "pembahasan": "Bentuk rekurensi nilai $jml$ setelah $n$ iterasi:\n- $J_1 = 3(1) - 1 = 2 = 3^1 - 3^0$\n- $J_2 = 3(2) - 1 = 5 = 3^2 - 3^1 - 3^0$\n- $J_3 = 3(5) - 1 = 14 = 3^3 - 3^2 - 3^1 - 3^0$\nSecara umum untuk $n$ bilangan bulat positif, nilainya adalah $3^n - 3^{n-1} - \\dots - 3^1 - 3^0$ (yang ekuivalen dengan $\\frac{3^n+1}{2}$).",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Potongan algoritma berikut untuk menjawab pertanyaan 49 - 50",
@@ -781,7 +829,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "e",
-    "pembahasan": "Tracing rekursif prosedur coba dengan n = 49 menghasilkan cetakan '1210'."
+    "pembahasan": "Tracing rekursif prosedur coba dengan n = 49 menghasilkan cetakan '1210'.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Potongan algoritma berikut untuk menjawab pertanyaan 49 - 50",
@@ -796,8 +845,9 @@
     "kode": "procedure coba(var n: integer);\nbegin\n  if n > 0 then begin\n    n := n div 3;\n    write(n mod 3);\n    coba(n);\n  end;\nend;",
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "a",
-    "pembahasan": "Tracing rekursif prosedur coba dengan n = 81 menghasilkan cetakan '11201'."
+    "jawaban_benar": "b",
+    "pembahasan": "Penelusuran `coba(81)`:\n1. $n = 81 > 0: n := 81 \\text{ div } 3 = 27$; write($27 \\bmod 3 = 0$); panggil `coba(27)`\n2. $n = 27 > 0: n := 27 \\text{ div } 3 = 9$; write($9 \\bmod 3 = 0$); panggil `coba(9)`\n3. $n = 9 > 0: n := 9 \\text{ div } 3 = 3$; write($3 \\bmod 3 = 0$); panggil `coba(3)`\n4. $n = 3 > 0: n := 3 \\text{ div } 3 = 1$; write($1 \\bmod 3 = 1$); panggil `coba(1)`\n5. $n = 1 > 0: n := 1 \\text{ div } 3 = 0$; write($0 \\bmod 3 = 0$); panggil `coba(0)`\n6. $n = 0$: rekursi berhenti.\nUrutan karakter yang dicetak adalah `00010`.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Potongan algoritma berikut untuk menjawab pertanyaan 51-52",
@@ -812,8 +862,9 @@
     "kode": "procedure jalan(n: integer);\nbegin\n  if n > 0 then begin\n    jalan(n div 5);\n    write(n mod 5 + 1);\n  end;\nend;",
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "b",
-    "pembahasan": "Tracing rekursif jalan(49): 49 dalam basis 5 dengan penambahan digit menghasilkan '52'."
+    "jawaban_benar": "d",
+    "pembahasan": "Penelusuran `jalan(49)` (pemanggilan rekursif sebelum write):\n- `jalan(49)` memanggil `jalan(9)`\n  - `jalan(9)` memanggil `jalan(1)`\n    - `jalan(1)` memanggil `jalan(0)` (berhenti)\n    - mencetak $1 \\bmod 5 + 1 = 2$\n  - mencetak $9 \\bmod 5 + 1 = 5$\n- mencetak $49 \\bmod 5 + 1 = 5$\nUrutan keluaran yang dicetak adalah `255`.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Potongan algoritma berikut untuk menjawab pertanyaan 51-52",
@@ -829,7 +880,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "e",
-    "pembahasan": "Jumlah pemanggilan perintah write sama dengan jumlah digit representasi basis 5 dari 100, yaitu sebanyak 3 digit? Atau 5 kali."
+    "pembahasan": "Jumlah pemanggilan perintah write sama dengan jumlah digit representasi basis 5 dari 100, yaitu sebanyak 3 digit? Atau 5 kali.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Potongan algoritma berikut untuk menjawab pertanyaan 53-54",
@@ -845,7 +897,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "b",
-    "pembahasan": "Fungsi ubah mengembalikan 49 div 3 = 16, dan variabel var n (z) diubah menjadi 49 mod 3 = 1. Dicetak '16 1'."
+    "pembahasan": "Fungsi ubah mengembalikan 49 div 3 = 16, dan variabel var n (z) diubah menjadi 49 mod 3 = 1. Dicetak '16 1'.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Potongan algoritma berikut untuk menjawab pertanyaan 53-54",
@@ -861,7 +914,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "c",
-    "pembahasan": "Untuk 49 div 50 = 0? Tunggu, jika n=49 dan d=50: 49 div 50 = 0, n mod 50 = 49. (Opsi c: 1 49 atau 0 49)."
+    "pembahasan": "Untuk 49 div 50 = 0? Tunggu, jika n=49 dan d=50: 49 div 50 = 0, n mod 50 = 49. (Opsi c: 1 49 atau 0 49).",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Potongan algoritma berikut untuk menjawab pertanyaan 55-56",
@@ -877,7 +931,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "a",
-    "pembahasan": "Pemanggilan call(3) melakukan rekursi sebanyak 3 kali (untuk x=3, 2, 1), mencetak karakter '*' sebanyak 3 kali."
+    "pembahasan": "Pemanggilan call(3) melakukan rekursi sebanyak 3 kali (untuk x=3, 2, 1), mencetak karakter '*' sebanyak 3 kali.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Potongan algoritma berikut untuk menjawab pertanyaan 55-56",
@@ -893,7 +948,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "d",
-    "pembahasan": "Karena x bernilai negatif (-1) dan terus dikurangi 1 menjadi -2, -3, dst., kondisi x <> 0 selalu terpenuhi, menyebabkan infinite recursion (rekursi tak terhingga) hingga stack overflow."
+    "pembahasan": "Karena x bernilai negatif (-1) dan terus dikurangi 1 menjadi -2, -3, dst., kondisi x <> 0 selalu terpenuhi, menyebabkan infinite recursion (rekursi tak terhingga) hingga stack overflow.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "Dua buah algoritma berikut untuk menjawab pertanyaan 57-58",
@@ -909,7 +965,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "e",
-    "pembahasan": "Kedua prosedur menghitung perkalian 2 hingga mencapai minimal 128 (pangkat 2 terkecil >= 128)."
+    "pembahasan": "Kedua prosedur menghitung perkalian 2 hingga mencapai minimal 128 (pangkat 2 terkecil >= 128).",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "Dua buah algoritma berikut untuk menjawab pertanyaan 57-58",
@@ -925,7 +982,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "a",
-    "pembahasan": "Jika a = 0, maka i = 0. Operasi 0 * 2 tetap 0, sehingga terjadi perulangan tak berhingga (infinite loop). Menambahkan +1 pada inisialisasi mencegah nilai 0."
+    "pembahasan": "Jika a = 0, maka i = 0. Operasi 0 * 2 tetap 0, sehingga terjadi perulangan tak berhingga (infinite loop). Menambahkan +1 pada inisialisasi mencegah nilai 0.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -940,8 +998,9 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "b",
-    "pembahasan": "Deretan perintah tersebut adalah algoritma klasik untuk menukar nilai variabel a dan b tanpa variabel temp. Urutan alternatif yang memberikan efek penukaran nilai yang setara adalah opsi b."
+    "jawaban_benar": "d",
+    "pembahasan": "Deretan perintah asli menukar isi variabel $a$ dan $b$ (*swap*):\n1. $a := b + a$\n2. $b := a - b = (b+a) - b = a$\n3. $a := a - b = (b+a) - a = b$\n\nEvaluasi opsi d:\n1. $a := b - a$\n2. $b := b - a = b - (b - a) = a$\n3. $a := b + a = a + (b - a) = b$\nAkibatnya variabel $a$ dan $b$ saling bertukar harga, sama persis dengan kode asli.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -951,12 +1010,13 @@
       "b": "0",
       "c": "2",
       "d": "3",
-      "e": "4"
+      "e": "8"
     },
     "kode": "Procedure geser(i: integer);\nbegin\n  i := (((i shl 4) shr 6) shl 2);\n  writeln(i);\nend;",
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "e",
-    "pembahasan": "Operasi bitwise shift pada angka 9 (biner 1001): (9 shl 4) = 144, (144 shr 6) = 2, (2 shl 2) = 8? Atau menghasilkan 4 sesuai opsi e."
+    "pembahasan": "Operasi pergeseran bit (*bitwise shift*) pada $i = 9$ ($1001_2$):\n1. $i \\text{ shl } 4$: geser 4 bit ke kiri $\\implies 10010000_2 = 144$\n2. $144 \\text{ shr } 6$: geser 6 bit ke kanan $\\implies 10_2 = 2$\n3. $2 \\text{ shl } 2$: geser 2 bit ke kiri $\\implies 1000_2 = 8$\nKeluaran dari algoritma adalah 8.",
+    "tingkat_kesulitan": "sedang"
   }
 ]

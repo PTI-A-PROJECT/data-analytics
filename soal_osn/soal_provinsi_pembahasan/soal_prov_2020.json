@@ -6,8 +6,9 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "Nilai modulo",
-    "pembahasan": "Barisan tersebut setara dengan representasi bilangan dalam basis 2 jika dilihat dari perpangkatan 4, yang membentuk barisan bilangan bulat positif dalam representasi biner. Konversi angka ke-2020 ke bentuk biner lalu dihitung nilainya modulo 31."
+    "jawaban_benar": "17",
+    "pembahasan": "Barisan 1, 4, 5, 16, 17, 20, 21, ... dibentuk dari penjumlahan perpangkatan 4 yang bersesuaian dengan representasi biner indeks bilangan:\nRepresentasi biner dari $2020$ adalah:\n$2020 = 1024 + 512 + 256 + 128 + 64 + 32 + 4 = 11111100100_2$.\nSuku ke-2020 adalah:\n$S = 4^{10} + 4^9 + 4^8 + 4^7 + 4^6 + 4^5 + 4^2$.\nPerhatikan bahwa $4^5 = 1024 = 33 \\times 31 + 1 \\equiv 1 \\pmod{31}$. Maka periode pangkat 4 modulo 31 adalah 5:\n- $4^{10} \\equiv 4^0 = 1$\n- $4^9 \\equiv 4^4 = 256 \\equiv 8$\n- $4^8 \\equiv 4^3 = 64 \\equiv 2$\n- $4^7 \\equiv 4^2 = 16$\n- $4^6 \\equiv 4^1 = 4$\n- $4^5 \\equiv 4^0 = 1$\n- $4^2 = 16$.\nJumlah modulo 31:\n$S \\equiv 1 + 8 + 2 + 16 + 4 + 1 + 16 = 48 \\equiv 17 \\pmod{31}$.\nJadi bilangan ke-2020 dimodulo dengan 31 adalah 17.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -17,7 +18,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Jumlah siswa 1 klub",
-    "pembahasan": "Analisis diagram Venn menggunakan prinsip himpunan berdasarkan kondisi hubungan antar klub A, B, C, dan D serta total siswa 140 untuk mencari jumlah siswa yang hanya menjadi anggota di 1 klub saja."
+    "pembahasan": "Analisis diagram Venn menggunakan prinsip himpunan berdasarkan kondisi hubungan antar klub A, B, C, dan D serta total siswa 140 untuk mencari jumlah siswa yang hanya menjadi anggota di 1 klub saja.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -27,7 +29,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Nama orang",
-    "pembahasan": "Uji coba asumsi kebenaran (*truth value*) masing-masing orang secara bergantian untuk menemukan satu-satunya konfigurasi di mana tepat ada 1 pernyataan yang bernilai benar."
+    "pembahasan": "Uji coba asumsi kebenaran (*truth value*) masing-masing orang secara bergantian untuk menemukan satu-satunya konfigurasi di mana tepat ada 1 pernyataan yang bernilai benar.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -37,7 +40,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Jumlah kemungkinan",
-    "pembahasan": "Evaluasi seluruh kombinasi keikutsertaan 4 orang (16 kemungkinan) terhadap 4 aturan implikasi logika yang diberikan untuk menghitung jumlah konfigurasi yang valid."
+    "pembahasan": "Evaluasi seluruh kombinasi keikutsertaan 4 orang (16 kemungkinan) terhadap 4 aturan implikasi logika yang diberikan untuk menghitung jumlah konfigurasi yang valid.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": null,
@@ -47,7 +51,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "True/False",
-    "pembahasan": "Substitusi nilai boolean A, B, C, D, dan E ke dalam ekspresi P dan Q, lalu evaluasi menggunakan operator logika and, or, not untuk mendapatkan nilai akhir P, Q, dan R."
+    "pembahasan": "Substitusi nilai boolean A, B, C, D, dan E ke dalam ekspresi P dan Q, lalu evaluasi menggunakan operator logika and, or, not untuk mendapatkan nilai akhir P, Q, dan R.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": null,
@@ -57,7 +62,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Keliling poligon",
-    "pembahasan": "Menerapkan algoritma pembungkus cembung (*Convex Hull*) untuk menemukan titik-titik terluar yang membentuk poligon minimum yang melingkupi kedelapan titik, kemudian menghitung total kelilingnya."
+    "pembahasan": "Menerapkan algoritma pembungkus cembung (*Convex Hull*) untuk menemukan titik-titik terluar yang membentuk poligon minimum yang melingkupi kedelapan titik, kemudian menghitung total kelilingnya.",
+    "tingkat_kesulitan": "sulit"
   },
   {
     "deskripsi_soal": null,
@@ -67,7 +73,8 @@
     "gambar_url": null,
     "gambar_lokal": "soal_3.jpeg",
     "jawaban_benar": "Biaya minimum",
-    "pembahasan": "Penyelesaian masalah minimum cut / maximum flow pada graf berbobot untuk memutus jalur antara node 1 dan node 9 dengan biaya minimum."
+    "pembahasan": "Penyelesaian masalah minimum cut / maximum flow pada graf berbobot untuk memutus jalur antara node 1 dan node 9 dengan biaya minimum.",
+    "tingkat_kesulitan": "sulit"
   },
   {
     "deskripsi_soal": null,
@@ -77,7 +84,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Jumlah posisi",
-    "pembahasan": "Karena bebek dengan warna yang sama tidak boleh dipisahkan oleh warna lain, blok warna merah, biru, dan hijau dapat dianggap sebagai 3 obyek utama yang disusun secara permutasi ($3!$), dikalikan dengan posisi internal masing-masing warna."
+    "pembahasan": "Karena bebek dengan warna yang sama tidak boleh dipisahkan oleh warna lain, blok warna merah, biru, dan hijau dapat dianggap sebagai 3 obyek utama yang disusun secara permutasi ($3!$), dikalikan dengan posisi internal masing-masing warna.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -87,7 +95,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Nilai fungsi",
-    "pembahasan": "Menjabarkan pola rekurensi fungsi $f(n)$ untuk nilai $1048576$ ($2^{20}$), yang menunjukkan hubungan iteratif penambahan nilai berdasarkan operasi pembagian 2."
+    "pembahasan": "Menjabarkan pola rekurensi fungsi $f(n)$ untuk nilai $1048576$ ($2^{20}$), yang menunjukkan hubungan iteratif penambahan nilai berdasarkan operasi pembagian 2.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": null,
@@ -97,7 +106,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Panjang LIS",
-    "pembahasan": "Mencari panjang Longest Increasing Subsequence (LIS) pada sekuens S yang diberikan menggunakan algoritma pemrograman dinamis."
+    "pembahasan": "Mencari panjang Longest Increasing Subsequence (LIS) pada sekuens S yang diberikan menggunakan algoritma pemrograman dinamis.",
+    "tingkat_kesulitan": "sulit"
   },
   {
     "deskripsi_soal": "B1. Lari Jauh...",
@@ -107,7 +117,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Jumlah bebek",
-    "pembahasan": "Menghitung jarak kumulatif setiap patok ($A_i$) hingga patok hijau, lalu membandingkannya dengan kemampuan lari masing-masing bebek ($B_i$)."
+    "pembahasan": "Menghitung jarak kumulatif setiap patok ($A_i$) hingga patok hijau, lalu membandingkannya dengan kemampuan lari masing-masing bebek ($B_i$).",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "B1. Lari Jauh...",
@@ -117,7 +128,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Jumlah bebek",
-    "pembahasan": "Menghitung total jarak kumulatif sampai patok hitam terakhir dan menyaring jumlah bebek yang memiliki kemampuan $B_i$ mencukupi."
+    "pembahasan": "Menghitung total jarak kumulatif sampai patok hitam terakhir dan menyaring jumlah bebek yang memiliki kemampuan $B_i$ mencukupi.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "B1. Lari Jauh...",
@@ -127,7 +139,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Jarak maksimal",
-    "pembahasan": "Optimasi jarak antar patok dengan memperhatikan batasan kemampuan lari maksimal dari himpunan bebek yang ingin diakomodasi."
+    "pembahasan": "Optimasi jarak antar patok dengan memperhatikan batasan kemampuan lari maksimal dari himpunan bebek yang ingin diakomodasi.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "B1. Lari Jauh...",
@@ -137,7 +150,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Program / Solusi Algoritma",
-    "pembahasan": "Implementasi pencarian batas jarak kumulatif patok menggunakan binary search atau prefix sum untuk mencetak patok terjauh setiap bebek."
+    "pembahasan": "Implementasi pencarian batas jarak kumulatif patok menggunakan binary search atau prefix sum untuk mencetak patok terjauh setiap bebek.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "B2. Lampu Hias Warna Warni...",
@@ -147,7 +161,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Jumlah maksimal",
-    "pembahasan": "Analisis aturan pembentukan barisan lampu dengan pola periodik modulo 3 untuk mencari panjang maksimum dari data yang tersedia."
+    "pembahasan": "Analisis aturan pembentukan barisan lampu dengan pola periodik modulo 3 untuk mencari panjang maksimum dari data yang tersedia.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "B2. Lampu Hias Warna Warni...",
@@ -157,7 +172,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Jumlah kombinasi",
-    "pembahasan": "Menghitung permutasi dan kombinasi pemilihan warna lampu yang memenuhi syarat tiga lampu awal berbeda dan pola perulangan berikutnya."
+    "pembahasan": "Menghitung permutasi dan kombinasi pemilihan warna lampu yang memenuhi syarat tiga lampu awal berbeda dan pola perulangan berikutnya.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "B2. Lampu Hias Warna Warni...",
@@ -167,7 +183,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Jumlah maksimal baru",
-    "pembahasan": "Menghitung ulang panjang barisan lampu maksimum setelah elemen dengan warna 'L' dieliminasi dari daftar."
+    "pembahasan": "Menghitung ulang panjang barisan lampu maksimum setelah elemen dengan warna 'L' dieliminasi dari daftar.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "B2. Lampu Hias Warna Warni...",
@@ -177,7 +194,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Program / Solusi Algoritma",
-    "pembahasan": "Implementasi pemrograman dinamis atau pencarian frekuensi warna untuk menemukan barisan lampu terpanjang sesuai aturan."
+    "pembahasan": "Implementasi pemrograman dinamis atau pencarian frekuensi warna untuk menemukan barisan lampu terpanjang sesuai aturan.",
+    "tingkat_kesulitan": "sulit"
   },
   {
     "deskripsi_soal": "B3. Kerja Freelance...",
@@ -187,7 +205,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Jumlah pekerjaan",
-    "pembahasan": "Penyelesaian masalah penjadwalan interval (*Interval Scheduling / Activity Selection Problem*) untuk memaksimalkan jumlah pekerjaan tanpa tumpang tindih."
+    "pembahasan": "Penyelesaian masalah penjadwalan interval (*Interval Scheduling / Activity Selection Problem*) untuk memaksimalkan jumlah pekerjaan tanpa tumpang tindih.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "B3. Kerja Freelance...",
@@ -197,7 +216,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Pendapatan maksimal",
-    "pembahasan": "Menghitung total durasi hari kerja dari pekerjaan terpilih dikalikan tarif honor harian."
+    "pembahasan": "Menghitung total durasi hari kerja dari pekerjaan terpilih dikalikan tarif honor harian.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "B3. Kerja Freelance...",
@@ -207,7 +227,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Pendapatan maksimal",
-    "pembahasan": "Penerapan Weighted Interval Scheduling menggunakan pemrograman dinamis dan pengurutan waktu selesai (*finish time*)."
+    "pembahasan": "Penerapan Weighted Interval Scheduling menggunakan pemrograman dinamis dan pengurutan waktu selesai (*finish time*).",
+    "tingkat_kesulitan": "sulit"
   },
   {
     "deskripsi_soal": "B3. Kerja Freelance...",
@@ -217,7 +238,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Program / Solusi Algoritma",
-    "pembahasan": "Implementasi algoritma Weighted Interval Scheduling dengan pengurutan berdasarkan waktu selesai dan binary search untuk mencari pekerjaan kompatibel sebelumnya."
+    "pembahasan": "Implementasi algoritma Weighted Interval Scheduling dengan pengurutan berdasarkan waktu selesai dan binary search untuk mencari pekerjaan kompatibel sebelumnya.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "B4. Katak Super...",
@@ -227,7 +249,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Energi minimum",
-    "pembahasan": "Pemrograman dinamis standar untuk mencari jalur loncatan biasa dari balok 1 ke balok N dengan akumulasi energi minimum $(y_2 - y_1)^2$."
+    "pembahasan": "Pemrograman dinamis standar untuk mencari jalur loncatan biasa dari balok 1 ke balok N dengan akumulasi energi minimum $(y_2 - y_1)^2$.",
+    "tingkat_kesulitan": "sulit"
   },
   {
     "deskripsi_soal": "B4. Katak Super...",
@@ -237,7 +260,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Energi minimum",
-    "pembahasan": "Perhitungan pemrograman dinamis dengan memperhitungkan opsi lompatan super ($3 \times (y_3 - y_1)^2$) mulai dari posisi balok ke-7 hingga akhir."
+    "pembahasan": "Perhitungan pemrograman dinamis dengan memperhitungkan opsi lompatan super ($3 \times (y_3 - y_1)^2$) mulai dari posisi balok ke-7 hingga akhir.",
+    "tingkat_kesulitan": "sulit"
   },
   {
     "deskripsi_soal": "B4. Katak Super...",
@@ -247,7 +271,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Jumlah balok dipijak",
-    "pembahasan": "Melakukan penelusuran kembali (*backtracking*) dari tabel DP minimum energi untuk menghitung jumlah simpul balok yang disinggahi."
+    "pembahasan": "Melakukan penelusuran kembali (*backtracking*) dari tabel DP minimum energi untuk menghitung jumlah simpul balok yang disinggahi.",
+    "tingkat_kesulitan": "sulit"
   },
   {
     "deskripsi_soal": "B4. Katak Super...",
@@ -257,7 +282,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Program / Solusi Algoritma",
-    "pembahasan": "Implementasi pemrograman dinamis 1D untuk transisi lompatan biasa dan lompatan super demi mencapai biaya energi minimum."
+    "pembahasan": "Implementasi pemrograman dinamis 1D untuk transisi lompatan biasa dan lompatan super demi mencapai biaya energi minimum.",
+    "tingkat_kesulitan": "sulit"
   },
   {
     "deskripsi_soal": "B5. Pencarian Strain-Virus Berbahaya Besar...",
@@ -267,7 +293,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Skor jalur",
-    "pembahasan": "Menjumlahkan lama rawat inap pasien 1, 3, 7, dan 13 sesuai data yang tertera pada deskripsi soal."
+    "pembahasan": "Menjumlahkan lama rawat inap pasien 1, 3, 7, dan 13 sesuai data yang tertera pada deskripsi soal.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "B5. Pencarian Strain-Virus Berbahaya Besar...",
@@ -277,7 +304,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Jumlah jalur",
-    "pembahasan": "Menelusuri pohon silsilah penularan virus jenis A dari pasien akar ($P_0$) hingga mencapai seluruh pasien daun ($P_n$)."
+    "pembahasan": "Menelusuri pohon silsilah penularan virus jenis A dari pasien akar ($P_0$) hingga mencapai seluruh pasien daun ($P_n$).",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "B5. Pencarian Strain-Virus Berbahaya Besar...",
@@ -287,7 +315,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Tingkat keganasan",
-    "pembahasan": "Mencari nilai maksimum dari total skor seluruh jalur penularan valid yang dimiliki oleh virus jenis A."
+    "pembahasan": "Mencari nilai maksimum dari total skor seluruh jalur penularan valid yang dimiliki oleh virus jenis A.",
+    "tingkat_kesulitan": "sulit"
   },
   {
     "deskripsi_soal": "B5. Pencarian Strain-Virus Berbahaya Besar...",
@@ -297,7 +326,8 @@
     "gambar_url": null,
     "gambar_lokal": "soal_4.png",
     "jawaban_benar": "Program / Solusi Algoritma",
-    "pembahasan": "Implementasi traversal graf berarah (DFS/BFS) untuk menghitung total bobot jalur penularan dari setiap akar pohon infeksi ke daun."
+    "pembahasan": "Implementasi traversal graf berarah (DFS/BFS) untuk menghitung total bobot jalur penularan dari setiap akar pohon infeksi ke daun.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "B6. Mewarnai Kanvas...",
@@ -307,7 +337,8 @@
     "gambar_url": null,
     "gambar_lokal": "soal_5.png",
     "jawaban_benar": "Jumlah kombinasi",
-    "pembahasan": "Kanvas ukuran 1x5 diisi dengan stiker 1x1 dari 3 pilihan warna. Setiap petak memiliki 3 pilihan independen, sehingga total kombinasi adalah $3^5 = 243$."
+    "pembahasan": "Kanvas ukuran 1x5 diisi dengan stiker 1x1 dari 3 pilihan warna. Setiap petak memiliki 3 pilihan independen, sehingga total kombinasi adalah $3^5 = 243$.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "B6. Mewarnai Kanvas...",
@@ -317,7 +348,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Jumlah kombinasi",
-    "pembahasan": "Analisis kombinatorika penempatan stiker panjang 1x3 dengan batasan maksimal petak sama yang bersebelahan."
+    "pembahasan": "Analisis kombinatorika penempatan stiker panjang 1x3 dengan batasan maksimal petak sama yang bersebelahan.",
+    "tingkat_kesulitan": "sedang"
   },
   {
     "deskripsi_soal": "B6. Mewarnai Kanvas...",
@@ -327,7 +359,8 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Jumlah kombinasi",
-    "pembahasan": "Evaluasi pola susunan stiker 1x3 pada kanvas 1x5 yang menghasilkan minimal 4 petak konsekutif berwarna sama."
+    "pembahasan": "Evaluasi pola susunan stiker 1x3 pada kanvas 1x5 yang menghasilkan minimal 4 petak konsekutif berwarna sama.",
+    "tingkat_kesulitan": "mudah"
   },
   {
     "deskripsi_soal": "B6. Mewarnai Kanvas...",
@@ -337,6 +370,7 @@
     "gambar_url": null,
     "gambar_lokal": null,
     "jawaban_benar": "Program / Solusi Algoritma",
-    "pembahasan": "Implementasi pemrograman dinamis untuk menghitung jumlah cara menutupi kanvas berukuran N dengan stiker panjang K dan M variasi warna."
+    "pembahasan": "Implementasi pemrograman dinamis untuk menghitung jumlah cara menutupi kanvas berukuran N dengan stiker panjang K dan M variasi warna.",
+    "tingkat_kesulitan": "sulit"
   }
 ]
