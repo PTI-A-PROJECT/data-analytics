@@ -69,6 +69,7 @@ class AksesTingkatItem(BaseModel):
     tingkat_seleksi_id: int
     nama: str
     status: str
+    simulasi_terbuka: bool = False
     dibuka_karena: str | None
     catatan: str | None
 
@@ -208,3 +209,36 @@ class HalamanMateriEventResponse(BaseModel):
     halaman_tertinggi_dicapai: int
     total_halaman: int
     persentase_selesai: float
+
+
+# --- Aturan Kelulusan & Akses Pre-Test Berjenjang (tiket 15) -----------------
+
+
+class AturanPreTestItem(BaseModel):
+    id: int
+    tingkat_seleksi_id: int
+    skor_min: float
+    aktif: bool
+
+
+class UpdateAturanPreTestRequest(BaseModel):
+    skor_min: float | None = Field(default=None, ge=0, le=100)
+    aktif: bool | None = None
+
+
+class EvaluasiPreTestRequest(BaseModel):
+    siswa_id: str
+    hasil_tes_id: int
+    tingkat_seleksi_id: int
+    skor: float = Field(ge=0, le=100)
+
+
+class EvaluasiPreTestResponse(BaseModel):
+    evaluasi_dilakukan: bool
+    hasil_evaluasi: str | None = None  # "lulus" | "tidak_lulus"
+    lulus: bool | None = None
+    skor_aktual: float | None = None
+    passing_grade: float | None = None
+    simulasi_terbuka: bool | None = None
+    tingkat_berikutnya_terbuka: bool | None = None
+

@@ -19,15 +19,18 @@ from data_analytics.models import (
     AturanKenaikanTingkat,
     AturanPemetaan,
     AturanPredikat,
+    AturanPreTest,
     HasilTes,
     HasilTesSubkompetensi,
     JawabanSiswa,
     JenisTes,
     ProgressMateri,
     RiwayatEvaluasiKenaikan,
+    RiwayatEvaluasiPreTest,
     TingkatSeleksi,
 )
 from data_analytics.pemetaan import tentukan_butuh_optimasi, tentukan_status_pemetaan
+from data_analytics.pre_test import evaluasi_kelulusan_pre_test
 from data_analytics.progress import persentase_selesai, validasi_halaman
 from data_analytics.scoring import hitung_skor, tentukan_predikat
 
@@ -512,6 +515,7 @@ def inisialisasi_akses_siswa(session: Session, siswa_id: str) -> list[AksesTingk
                 siswa_id=siswa_id,
                 tingkat_seleksi_id=tingkat.id,
                 status="terbuka" if is_pertama else "terkunci",
+                simulasi_terbuka=False,
                 dibuka_karena="default_awal" if is_pertama else None,
                 dibuka_pada=datetime.now(timezone.utc) if is_pertama else None,
             )
@@ -536,6 +540,7 @@ def override_akses_admin(
     siswa_id: str,
     tingkat_seleksi_id: int,
     status: str,
+    simulasi_terbuka: bool | None = None,
     catatan: str | None = None,
 ) -> AksesTingkatSiswa:
     """Override manual akses tingkat siswa oleh Super Admin (FR-17/tiket 03)."""
@@ -552,6 +557,8 @@ def override_akses_admin(
 
     akses.status = status
     akses.catatan = catatan
+    if simulasi_terbuka is not None:
+        akses.simulasi_terbuka = simulasi_terbuka
     if status == "terbuka":
         akses.dibuka_karena = "manual_admin"
         akses.dibuka_pada = datetime.now(timezone.utc)
@@ -664,3 +671,168 @@ def update_aturan_kenaikan(
         aturan.aktif = aktif
     session.flush()
     return aturan
+
+
+# --- Aturan Kelulusan & Akses Pre-Test Berjenjang (tiket 15) -----------------
+
+DEFAULT_ATURAN_PRE_TEST: Final[tuple[tuple[int, float], ...]] = (
+    (1, 70.0),  # Tingkat Kabupaten: passing grade 70
+    (2, 75.0),  # Tingkat Provinsi: passing grade 75
+    (3, 80.0),  # Tingkat Nasional: passing grade 80
+)
+
+
+def get_or_create_aturan_pre_test(session: Session) -> list[AturanPreTest]:
+    """Ambil semua konfigurasi aturan passing grade Pre-Test. Jika belum ada,
+    seed default per TingkatSeleksi.
+    """
+    existing = session.scalars(
+        select(AturanPreTest).order_by(AturanPreTest.tingkat_seleksi_id)
+    ).all()
+    if existing:
+        return list(existing)
+
+    tingkat_map = {
+        t.urutan: t.id
+        for t in session.scalars(select(TingkatSeleksi)).all()
+    }
+
+    seeded: list[AturanPreTest] = []
+    for urutan, skor_min in DEFAULT_ATURAN_PRE_TEST:
+        t_id = tingkat_map.get(urutan, urutan)
+        seeded.append(
+            AturanPreTest(
+                tingkat_seleksi_id=t_id,
+                skor_min=skor_min,
+                aktif=True,
+            )
+        )
+
+    session.add_all(seeded)
+    session.flush()
+    return seeded
+
+
+def get_semua_aturan_pre_test(session: Session) -> list[AturanPreTest]:
+    return get_or_create_aturan_pre_test(session)
+
+
+def update_aturan_pre_test(
+    session: Session,
+    *,
+    aturan_id: int,
+    skor_min: float | None = None,
+    aktif: bool | None = None,
+) -> AturanPreTest | None:
+    aturan = session.get(AturanPreTest, aturan_id)
+    if aturan is None:
+        return None
+    if skor_min is not None:
+        if not (0 <= skor_min <= 100):
+            raise ValueError("skor_min harus di antara 0 dan 100")
+        aturan.skor_min = skor_min
+    if aktif is not None:
+        aturan.aktif = aktif
+    session.flush()
+    return aturan
+
+
+def evaluasi_dan_catat_pre_test(
+    session: Session,
+    *,
+    siswa_id: str,
+    hasil_tes_id: int,
+    tingkat_seleksi_id: int,
+    skor: float,
+) -> tuple[RiwayatEvaluasiPreTest | None, bool, bool]:
+    """Evaluasi kelayakan kelulusan Pre-Test berjenjang (resolusi tiket 15).
+
+    Returns:
+        (riwayat, simulasi_terbuka, tingkat_berikutnya_terbuka)
+    """
+    aturan = session.scalars(
+        select(AturanPreTest).where(
+            AturanPreTest.tingkat_seleksi_id == tingkat_seleksi_id,
+            AturanPreTest.aktif.is_(True),
+        )
+    ).one_or_none()
+
+    if aturan is None:
+        # Jika belum ada aturan di DB, inisialisasi default aturan terlebih dahulu
+        get_or_create_aturan_pre_test(session)
+        aturan = session.scalars(
+            select(AturanPreTest).where(
+                AturanPreTest.tingkat_seleksi_id == tingkat_seleksi_id,
+                AturanPreTest.aktif.is_(True),
+            )
+        ).one_or_none()
+        if aturan is None:
+            return None, False, False
+
+    hasil = evaluasi_kelulusan_pre_test(skor=skor, passing_grade=aturan.skor_min)
+
+    now = datetime.now(timezone.utc)
+    riwayat = RiwayatEvaluasiPreTest(
+        siswa_id=siswa_id,
+        hasil_tes_id=hasil_tes_id,
+        tingkat_seleksi_id=tingkat_seleksi_id,
+        skor_aktual=hasil.skor_aktual,
+        passing_grade=hasil.passing_grade,
+        lulus=hasil.lulus,
+        dievaluasi_pada=now,
+    )
+    session.add(riwayat)
+
+    # Inisialisasi status akses siswa jika belum ada
+    inisialisasi_akses_siswa(session, siswa_id)
+
+    akses_saat_ini = session.scalars(
+        select(AksesTingkatSiswa).where(
+            AksesTingkatSiswa.siswa_id == siswa_id,
+            AksesTingkatSiswa.tingkat_seleksi_id == tingkat_seleksi_id,
+        )
+    ).one()
+
+    tingkat_ini = session.get(TingkatSeleksi, tingkat_seleksi_id)
+    tingkat_berikutnya = None
+    if tingkat_ini:
+        tingkat_berikutnya = session.scalars(
+            select(TingkatSeleksi).where(TingkatSeleksi.urutan == tingkat_ini.urutan + 1)
+        ).one_or_none()
+
+    tingkat_berikutnya_terbuka = False
+
+    if hasil.lulus:
+        # 1. Buka simulasi pada tingkat ini (bersifat permanen)
+        akses_saat_ini.simulasi_terbuka = True
+
+        # 2. Buka jenjang tingkat berikutnya jika ada
+        if tingkat_berikutnya:
+            akses_lanjutan = session.scalars(
+                select(AksesTingkatSiswa).where(
+                    AksesTingkatSiswa.siswa_id == siswa_id,
+                    AksesTingkatSiswa.tingkat_seleksi_id == tingkat_berikutnya.id,
+                )
+            ).one_or_none()
+            if akses_lanjutan:
+                if akses_lanjutan.status != "terbuka":
+                    akses_lanjutan.status = "terbuka"
+                    akses_lanjutan.dibuka_karena = "lulus_pre_test"
+                    akses_lanjutan.dibuka_pada = now
+                    akses_lanjutan.hasil_tes_id = hasil_tes_id
+                tingkat_berikutnya_terbuka = True
+    else:
+        # Jika tidak lulus, status simulasi tetap mengikuti status sebelumnya (unidirectional)
+        if tingkat_berikutnya:
+            akses_lanjutan = session.scalars(
+                select(AksesTingkatSiswa).where(
+                    AksesTingkatSiswa.siswa_id == siswa_id,
+                    AksesTingkatSiswa.tingkat_seleksi_id == tingkat_berikutnya.id,
+                )
+            ).one_or_none()
+            if akses_lanjutan and akses_lanjutan.status == "terbuka":
+                tingkat_berikutnya_terbuka = True
+
+    session.flush()
+    return riwayat, akses_saat_ini.simulasi_terbuka, tingkat_berikutnya_terbuka
+

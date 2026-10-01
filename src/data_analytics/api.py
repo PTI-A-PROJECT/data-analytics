@@ -25,10 +25,14 @@ from data_analytics.repository import (
     catat_progress_halaman,
     catat_submission_tes,
     evaluasi_dan_catat_kenaikan,
+    evaluasi_dan_catat_pre_test,
     get_akses_siswa,
+    get_or_create_aturan_pre_test,
     get_semua_aturan_kenaikan,
+    get_semua_aturan_pre_test,
     override_akses_admin,
     update_aturan_kenaikan,
+    update_aturan_pre_test,
 )
 from data_analytics.schemas import (
     JENIS_TES_DARI_WIRE,
@@ -36,9 +40,12 @@ from data_analytics.schemas import (
     AksesTingkatItem,
     AksesTingkatSiswaResponse,
     AturanKenaikanItem,
+    AturanPreTestItem,
     DashboardResponse,
     EvaluasiKenaikanRequest,
     EvaluasiKenaikanResponse,
+    EvaluasiPreTestRequest,
+    EvaluasiPreTestResponse,
     HalamanMateriEventRequest,
     HalamanMateriEventResponse,
     OverrideAksesRequest,
@@ -47,6 +54,7 @@ from data_analytics.schemas import (
     SubmitAssessmentRequest,
     SubmitAssessmentResponse,
     UpdateAturanKenaikanRequest,
+    UpdateAturanPreTestRequest,
 )
 
 app = FastAPI(title="Data & Analytics — OSN Informatika")
@@ -167,6 +175,7 @@ def get_akses_tingkat(
                 tingkat_seleksi_id=a.tingkat_seleksi_id,
                 nama=a.tingkat_seleksi.nama if a.tingkat_seleksi else "",
                 status=a.status,
+                simulasi_terbuka=a.simulasi_terbuka,
                 dibuka_karena=a.dibuka_karena,
                 catatan=a.catatan,
             )
@@ -196,6 +205,7 @@ def override_akses_tingkat(
         tingkat_seleksi_id=akses.tingkat_seleksi_id,
         nama=akses.tingkat_seleksi.nama if akses.tingkat_seleksi else "",
         status=akses.status,
+        simulasi_terbuka=akses.simulasi_terbuka,
         dibuka_karena=akses.dibuka_karena,
         catatan=akses.catatan,
     )
@@ -291,6 +301,94 @@ def evaluasi_kenaikan(
         syarat_skor_lulus=riwayat.syarat_skor_lulus,
         syarat_kompetensi_lulus=riwayat.syarat_kompetensi_lulus,
         persentase_cukup_aktual=riwayat.persentase_cukup_aktual,
+    )
+
+
+# --- Aturan Kelulusan & Akses Pre-Test Berjenjang (tiket 15) -----------------
+
+
+@app.get(
+    "/api/v1/analytics/pre-test/aturan",
+    dependencies=[Depends(verify_internal_token)],
+    response_model=list[AturanPreTestItem],
+)
+def get_aturan_pre_test_endpoint(
+    db: Annotated[Session, Depends(get_db)],
+) -> list[AturanPreTestItem]:
+    """Daftar aturan kelulusan minimal (passing grade) Pre-Test per tingkat seleksi."""
+    aturan_list = get_semua_aturan_pre_test(db)
+    return [
+        AturanPreTestItem(
+            id=a.id,
+            tingkat_seleksi_id=a.tingkat_seleksi_id,
+            skor_min=a.skor_min,
+            aktif=a.aktif,
+        )
+        for a in aturan_list
+    ]
+
+
+@app.put(
+    "/api/v1/analytics/pre-test/aturan/{aturan_id}",
+    dependencies=[Depends(verify_internal_token)],
+    response_model=AturanPreTestItem,
+)
+def put_aturan_pre_test_endpoint(
+    aturan_id: int,
+    payload: UpdateAturanPreTestRequest,
+    db: Annotated[Session, Depends(get_db)],
+) -> AturanPreTestItem:
+    """Update konfigurasi passing grade aturan Pre-Test oleh Super Admin."""
+    aturan = update_aturan_pre_test(
+        db,
+        aturan_id=aturan_id,
+        skor_min=payload.skor_min,
+        aktif=payload.aktif,
+    )
+    if aturan is None:
+        raise HTTPException(
+            status_code=404, detail=f"Aturan Pre-Test ID {aturan_id} tidak ditemukan"
+        )
+    db.commit()
+    return AturanPreTestItem(
+        id=aturan.id,
+        tingkat_seleksi_id=aturan.tingkat_seleksi_id,
+        skor_min=aturan.skor_min,
+        aktif=aturan.aktif,
+    )
+
+
+@app.post(
+    "/api/v1/analytics/pre-test/evaluasi",
+    dependencies=[Depends(verify_internal_token)],
+    response_model=EvaluasiPreTestResponse,
+)
+def evaluasi_pre_test_endpoint(
+    payload: EvaluasiPreTestRequest, db: Annotated[Session, Depends(get_db)]
+) -> EvaluasiPreTestResponse:
+    """Evaluasi skor Pre-Test terhadap passing grade jenjang terkait.
+    Jika lolos: buka akses simulasi jenjang ini & buka akses jenjang berikutnya.
+    Jika gagal: simulasi jenjang ini & jenjang berikutnya tetap terkunci.
+    """
+    riwayat, simulasi_terbuka, tingkat_berikutnya_terbuka = evaluasi_dan_catat_pre_test(
+        db,
+        siswa_id=payload.siswa_id,
+        hasil_tes_id=payload.hasil_tes_id,
+        tingkat_seleksi_id=payload.tingkat_seleksi_id,
+        skor=payload.skor,
+    )
+    if riwayat is None:
+        return EvaluasiPreTestResponse(evaluasi_dilakukan=False)
+
+    db.commit()
+    return EvaluasiPreTestResponse(
+        evaluasi_dilakukan=True,
+        hasil_evaluasi="lulus" if riwayat.lulus else "tidak_lulus",
+        lulus=riwayat.lulus,
+        skor_aktual=riwayat.skor_aktual,
+        passing_grade=riwayat.passing_grade,
+        simulasi_terbuka=simulasi_terbuka,
+        tingkat_berikutnya_terbuka=tingkat_berikutnya_terbuka,
     )
 
 

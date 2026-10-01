@@ -401,6 +401,7 @@ class AksesTingkatSiswa(Base):
         ForeignKey("tingkat_seleksi.id", ondelete="CASCADE")
     )
     status: Mapped[str]
+    simulasi_terbuka: Mapped[bool] = mapped_column(default=False, server_default=false())
     dibuka_karena: Mapped[str | None]
     hasil_tes_id: Mapped[int | None] = mapped_column(
         ForeignKey("hasil_tes.id", ondelete="SET NULL")
@@ -420,6 +421,7 @@ class AksesTingkatSiswa(Base):
 class RiwayatEvaluasiKenaikan(Base):
     """Log audit satu evaluasi kenaikan tingkat (dipicu tiap submission Simulasi
     — resolusi tiket 03). Baris ini tidak pernah diubah setelah dibuat.
+    resolusi tiket 03). Baris ini tidak pernah diubah setelah dibuat.
     """
 
     __tablename__ = "riwayat_evaluasi_kenaikan"
@@ -442,3 +444,66 @@ class RiwayatEvaluasiKenaikan(Base):
     dievaluasi_pada: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), server_default=func.now()
     )
+
+
+# --- Aturan Kelulusan & Akses Pre-Test Berjenjang (tiket 15) -----------------
+
+
+class AturanPreTest(Base):
+    """Config Super Admin: batas nilai minimal (passing grade) kelulusan Pre-Test
+    per Tingkat Seleksi (resolusi tiket 15).
+    """
+
+    __tablename__ = "aturan_pre_test"
+    __table_args__ = (
+        UniqueConstraint("tingkat_seleksi_id"),
+        CheckConstraint(
+            "skor_min >= 0 AND skor_min <= 100",
+            name="ck_aturan_pre_test_skor_rentang",
+        ),
+    )
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    tingkat_seleksi_id: Mapped[int] = mapped_column(
+        ForeignKey("tingkat_seleksi.id", ondelete="CASCADE")
+    )
+    skor_min: Mapped[float] = mapped_column(
+        Numeric(5, 2, asdecimal=False), default=70.0
+    )
+    aktif: Mapped[bool] = mapped_column(default=True, server_default=true())
+    dibuat_pada: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), server_default=func.now()
+    )
+    diperbarui_pada: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), server_default=func.now(), onupdate=func.now()
+    )
+
+    tingkat_seleksi: Mapped[TingkatSeleksi] = relationship()
+
+
+class RiwayatEvaluasiPreTest(Base):
+    """Log audit evaluasi kelulusan Pre-Test (tiket 15).
+    Mencatat apakah submission Pre-Test memenuhi passing grade untuk membuka
+    simulasi dan jenjang tingkat berikutnya.
+    """
+
+    __tablename__ = "riwayat_evaluasi_pre_test"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    siswa_id: Mapped[str]
+    hasil_tes_id: Mapped[int] = mapped_column(
+        ForeignKey("hasil_tes.id", ondelete="CASCADE")
+    )
+    tingkat_seleksi_id: Mapped[int] = mapped_column(
+        ForeignKey("tingkat_seleksi.id", ondelete="CASCADE")
+    )
+    skor_aktual: Mapped[float] = mapped_column(Numeric(5, 2, asdecimal=False))
+    passing_grade: Mapped[float] = mapped_column(Numeric(5, 2, asdecimal=False))
+    lulus: Mapped[bool]
+    dievaluasi_pada: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), server_default=func.now()
+    )
+
+    hasil_tes: Mapped[HasilTes] = relationship()
+    tingkat_seleksi: Mapped[TingkatSeleksi] = relationship()
+
