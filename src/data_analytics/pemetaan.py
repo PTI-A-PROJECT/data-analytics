@@ -1,59 +1,63 @@
-"""Algoritma Pemetaan Kompetensi (FR-07) & flag butuh_optimasi (tiket 05) —
-lihat CONTEXT.md "Status Pemetaan"/"Aturan Pemetaan" dan resolusi tiket 11.
-Fungsi murni, terpisah dari database — pola yang sama dengan scoring.py.
+"""Algoritma Pemetaan Kompetensi fase 2 (per Materi) — lihat CONTEXT.md
+"Status Pemetaan (fase 2)". Fungsi murni, terpisah dari database — pola yang
+sama dengan scoring.py. Pemetaan fase 1 per Subkompetensi (Aturan Pemetaan,
+ambang representasi, butuh_optimasi) dipensiunkan di fase 2 issue 03.
 """
 
-from typing import Final
+from collections.abc import Mapping, Sequence
+from dataclasses import dataclass
 
 from data_analytics.models import StatusPemetaan
 
-# >50% (ketat) jawaban benar yang juga lambat -> butuh_optimasi (resolusi tiket 05).
-AMBANG_BUTUH_OPTIMASI_PERSEN: Final = 50
+
+@dataclass(frozen=True, slots=True)
+class PetaMateri:
+    """Status Pemetaan satu Materi dalam satu attempt (fase 2)."""
+
+    materi_id: str
+    jumlah_soal: int
+    jumlah_benar: int
+    # Persen benar, None kalau Materi tidak muncul di attempt ini.
+    akurasi: float | None
+    status: StatusPemetaan
 
 
-def tentukan_status_pemetaan(
+def petakan_per_materi(
+    hitungan: Mapping[str, tuple[int, int]],
     *,
-    jumlah_soal_subkompetensi: int,
-    jumlah_benar: int,
-    total_soal_tes: int,
-    ambang_cukup_persen: float,
-    ambang_representasi_persen: float,
-) -> StatusPemetaan:
-    """Belum Teruji kalau representasi soal subkompetensi ini (terhadap total
-    soal tes) di bawah ambang representasi — representasinya dianggap terlalu
-    kecil untuk klasifikasi valid. Selain itu, Cukup kalau % jawaban benar >=
-    ambang cukup, else Belum Cukup. Kedua ambang inklusif.
+    ambang_lemah: float,
+    ambang_kuat: float = 80.0,
+) -> list[PetaMateri]:
+    """Peta Kompetensi fase 2.
+
+    3 status (sesuai aturan final v1):
+    - BELUM_TERUJI: materi tidak muncul di attempt ini
+    - BELUM_CUKUP:  akurasi < ambang_lemah (default 60%)
+    - CUKUP:        ambang_lemah <= akurasi < ambang_kuat
+    - KUAT:         akurasi >= ambang_kuat (default 80%)
     """
-    if total_soal_tes <= 0:
-        raise ValueError("total_soal_tes harus lebih dari 0")
-    if jumlah_soal_subkompetensi <= 0:
-        raise ValueError("jumlah_soal_subkompetensi harus lebih dari 0")
-    if jumlah_benar < 0 or jumlah_benar > jumlah_soal_subkompetensi:
-        raise ValueError(
-            "jumlah_benar harus di antara 0 dan jumlah_soal_subkompetensi"
-        )
+    peta = []
+    for materi_id in sorted(hitungan):
+        jumlah_soal, jumlah_benar = hitungan[materi_id]
+        if jumlah_benar < 0 or jumlah_benar > jumlah_soal:
+            raise ValueError(f"jumlah_benar Materi {materi_id} di luar 0..jumlah_soal")
 
-    representasi_persen = (jumlah_soal_subkompetensi / total_soal_tes) * 100
-    if representasi_persen < ambang_representasi_persen:
-        return StatusPemetaan.BELUM_TERUJI
+        if jumlah_soal == 0:
+            akurasi = None
+            status = StatusPemetaan.BELUM_TERUJI
+        else:
+            akurasi = round(jumlah_benar / jumlah_soal * 100, 2)
+            if akurasi < ambang_lemah:
+                status = StatusPemetaan.BELUM_CUKUP
+            elif akurasi < ambang_kuat:
+                status = StatusPemetaan.CUKUP
+            else:
+                status = StatusPemetaan.KUAT
 
-    correctness_persen = (jumlah_benar / jumlah_soal_subkompetensi) * 100
-    if correctness_persen >= ambang_cukup_persen:
-        return StatusPemetaan.CUKUP
-    return StatusPemetaan.BELUM_CUKUP
+        peta.append(PetaMateri(materi_id, jumlah_soal, jumlah_benar, akurasi, status))
+    return peta
 
-
-def tentukan_butuh_optimasi(
-    *, status: StatusPemetaan, jumlah_benar: int, jumlah_benar_lambat: int
-) -> bool:
-    """True hanya kalau status Cukup DAN >50% jawaban benar di subkompetensi
-    ini juga lambat. "Butuh optimasi kecepatan" tidak relevan kalau
-    pemahamannya sendiri belum cukup (Belum Cukup/Belum Teruji selalu False).
-    """
-    if jumlah_benar_lambat < 0 or jumlah_benar_lambat > jumlah_benar:
-        raise ValueError(
-            "jumlah_benar_lambat harus di antara 0 dan jumlah_benar"
-        )
-    if status is not StatusPemetaan.CUKUP or jumlah_benar == 0:
-        return False
-    return (jumlah_benar_lambat / jumlah_benar) * 100 > AMBANG_BUTUH_OPTIMASI_PERSEN
+def materi_lemah(peta: Sequence[PetaMateri]) -> list[str]:
+    """Materi berstatus Belum Cukup, dari akurasi terendah (seri: materi_id)."""
+    lemah = [p for p in peta if p.status is StatusPemetaan.BELUM_CUKUP]
+    return [p.materi_id for p in sorted(lemah, key=lambda p: (p.akurasi, p.materi_id))]
