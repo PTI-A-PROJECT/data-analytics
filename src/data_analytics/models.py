@@ -7,19 +7,23 @@ from __future__ import annotations
 import enum
 from datetime import datetime
 
+from pgvector.sqlalchemy import Vector
 from sqlalchemy import (
-    JSON,
+    BigInteger,
     CheckConstraint,
     DateTime,
     ForeignKey,
+    Index,
     MetaData,
     Numeric,
     UniqueConstraint,
     false,
     func,
+    text,
     true,
 )
 from sqlalchemy import Enum as SqlEnum
+from sqlalchemy.dialects.postgresql import JSONB
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship
 
 # Constraint tanpa name= eksplisit (mis. ForeignKeyConstraint) dapat berbeda
@@ -49,7 +53,7 @@ class StatusPemetaan(enum.StrEnum):
     """Klasifikasi Subkompetensi dari algoritma Pemetaan Kompetensi (FR-07) —
     lihat CONTEXT.md "Status Pemetaan" dan resolusi tiket 11.
     """
-
+    KUAT = "kuat"              # ← TAMBAH
     CUKUP = "cukup"
     BELUM_CUKUP = "belum_cukup"
     BELUM_TERUJI = "belum_teruji"
@@ -113,6 +117,12 @@ class HasilTes(Base):
     siswa_id: Mapped[str | None]
     # Nullable: siswa tanpa afiliasi sekolah formal. Lihat resolusi tiket 08.
     sekolah_id: Mapped[str | None]
+    # Snapshot nama untuk Leaderboard, dikirim fullstack saat submit (opsional).
+    nama_siswa: Mapped[str | None]
+    nama_sekolah: Mapped[str | None]
+    # Detik dari soal pertama dibuka sampai soal terakhir dijawab
+    # (leaderboard.durasi_pengerjaan); None kalau timestamp tidak dikirim.
+    durasi_detik: Mapped[float | None] = mapped_column(Numeric(10, 2, asdecimal=False))
     tingkat_seleksi_id: Mapped[str]
     jenis_tes: Mapped[JenisTes] = mapped_column(
         SqlEnum(
@@ -135,9 +145,17 @@ class HasilTes(Base):
     # skor/predikat_label/breakdown_subkompetensi/sekolah_id tetap utuh untuk
     # agregasi Dashboard Admin — hanya identitas siswa yang dihapus.
     is_anonymized: Mapped[bool] = mapped_column(default=False, server_default=false())
+    # Diisi untuk attempt fase 2 (lewat Paket Tes); None untuk attempt fase 1
+    # lewat /assessment/submit.
+    paket_tes_id: Mapped[int | None] = mapped_column(
+        ForeignKey("paket_tes.id", ondelete="SET NULL"), unique=True
+    )
 
     breakdown_subkompetensi: Mapped[list[HasilTesSubkompetensi]] = relationship(
         back_populates="hasil_tes", cascade="all, delete-orphan"
+    )
+    breakdown_materi: Mapped[list[HasilTesMateri]] = relationship(
+        order_by="HasilTesMateri.materi_id", cascade="all, delete-orphan"
     )
 
 
@@ -174,62 +192,23 @@ class HasilTesSubkompetensi(Base):
     hasil_tes: Mapped[HasilTes] = relationship(back_populates="breakdown_subkompetensi")
 
 
-class ProgressMateri(Base):
-    """Satu baris per siswa per Materi — snapshot kumulatif akses (high-water mark
-    halaman). Metadata Materi (subkompetensi_id, tingkat_seleksi_id, total_halaman)
-    didenormalisasi dari payload event terakhir, bukan di-join dari katalog Materi
-    milik tim fullstack — lihat ADR 0002. persentase_selesai dihitung saat baca
-    (progress.persentase_selesai), bukan disimpan sebagai kolom.
-    """
-
-    __tablename__ = "progress_materi"
-    __table_args__ = (
-        UniqueConstraint("siswa_id", "materi_id"),
-        CheckConstraint("total_halaman > 0", name="ck_progress_materi_total_halaman_positif"),
-        CheckConstraint(
-            "halaman_tertinggi_dicapai >= 1 AND halaman_tertinggi_dicapai <= total_halaman",
-            name="ck_progress_materi_halaman_dalam_rentang",
-        ),
-    )
-
-    id: Mapped[int] = mapped_column(primary_key=True)
-    siswa_id: Mapped[int]
-    materi_id: Mapped[int]
-    subkompetensi_id: Mapped[int]
-    tingkat_seleksi_id: Mapped[int]
-    total_halaman: Mapped[int]
-    halaman_tertinggi_dicapai: Mapped[int]
-    pertama_dibuka_pada: Mapped[datetime] = mapped_column(
-        DateTime(timezone=True), server_default=func.now()
-    )
-    diperbarui_pada: Mapped[datetime] = mapped_column(
-        DateTime(timezone=True), server_default=func.now(), onupdate=func.now()
-    )
-
-
-# --- Katalog lokal (tiket 09) ------------------------------------------------
+# --- Katalog lokal & bank konten (tiket 09, fase 2 issue 01) -----------------
 #
-# TingkatSeleksi, Kompetensi, Subkompetensi, dan Soal di bawah ini ADALAH tabel
-# yang dimiliki & dimigrasikan layanan ini — beda dari siswa_id/sekolah_id/
-# simulasi_id/materi_id di atas, yang sengaja disimpan sebagai str (UUID)
-# mentah tanpa FK karena entitasnya dikelola tim fullstack (ADR 0002). Keempat
-# tabel ini eksis sebagai data uji/seed lokal supaya Peta Kompetensi &
-# Rekomendasi Materi bisa dikembangkan sebelum data pilot nyata tersedia —
-# bukan pengelolaan konten soal/materi produksi (itu tetap milik tim lain,
-# lihat map.md "Out of scope"). Lihat docs/adr/0003.
+# TingkatSeleksi, Materi, HalamanMateri, dan Soal di bawah ini ADALAH tabel yang
+# dimiliki & dimigrasikan layanan ini. Sejak fase 2 (docs/adr/0004) layanan ini
+# memiliki bank konten produksi — diisi lewat ingest offline
+# (data_analytics.ingest), bukan seed data uji — dan antar-tabel konten memakai
+# FK sungguhan.
 #
-# Tabel HasilTes/HasilTesSubkompetensi/AturanPredikat/AturanPemetaan/
-# ProgressMateri di atas TIDAK diberi FK ke tabel-tabel ini — pencatatan hasil
-# tes tetap mempercayai id yang dikirim pemanggil apa adanya, konsisten dengan
-# resolusi tiket 01/08. AturanPemetaan awalnya (tiket 09) di-FK ke
-# TingkatSeleksi lokal; sejak tiket 05/11 menetapkan tingkat_seleksi_id yang
-# dikirim Fullstack saat submit berformat UUID (bukan PK integer katalog lokal
-# ini), FK itu dilepas — AturanPemetaan sekarang dicari lewat id caller-supplied
-# yang sama seperti AturanPredikat, bukan lewat baris TingkatSeleksi lokal.
+# Tabel HasilTes/HasilTesSubkompetensi/AturanPredikat/
+# JawabanSiswa di atas/bawah BELUM diberi FK ke tabel-tabel ini:
+# penyesuaiannya dikerjakan bersama penulisan ulang endpoint yang memakainya
+# (fase 2 issue 02–04). Sampai saat itu, id di tabel-tabel tersebut tetap
+# caller-supplied apa adanya, konsisten dengan resolusi tiket 01/08.
 
 
 class TingkatSeleksi(Base):
-    """Kabupaten/Provinsi/Nasional. urutan menentukan jenjang (1 = pertama)."""
+    """Kabupaten/Provinsi. urutan menentukan jenjang (1 = pertama)."""
 
     __tablename__ = "tingkat_seleksi"
     __table_args__ = (UniqueConstraint("urutan"),)
@@ -239,80 +218,138 @@ class TingkatSeleksi(Base):
     urutan: Mapped[int]
 
 
-class AturanPemetaan(Base):
-    """Satu baris per Tingkat Seleksi (id caller-supplied, bukan FK — lihat
-    catatan di atas) — ambang correctness & representasi yang dipakai algoritma
-    Pemetaan Kompetensi (FR-07). Lihat CONTEXT.md "Aturan Pemetaan".
+class LevelSoal(enum.StrEnum):
+    """Tingkat kesulitan satu Soal — berasal dari data sumber (soal sudah
+    dilabeli per Materi & tingkat kesulitan), tidak dikalibrasi ulang dari data
+    jawaban (fase 2 issue 01). Materi tidak
+    punya level; hanya Soal.
     """
 
-    __tablename__ = "aturan_pemetaan"
+    MUDAH = "mudah"
+    MENENGAH = "menengah"
+    SULIT = "sulit"
+
+
+class TipeSoal(enum.StrEnum):
+    PILIHAN_GANDA = "pilihan_ganda"
+    # Jawaban berupa teks/angka pendek; dinilai dengan pencocokan yang
+    # dinormalisasi (scoring.cocokkan_jawaban). pilihan_jawaban kosong.
+    ISIAN_SINGKAT = "isian_singkat"
+
+
+# Dimensi embedding paraphrase-multilingual-MiniLM-L12-v2 — lihat data_analytics.embedding.
+DIMENSI_EMBEDDING = 384
+
+
+class Materi(Base):
+    """Materi belajar satu Tingkat Seleksi — unit evaluasi fase 2 (menggantikan
+    Subkompetensi). id berasal dari data sumber, stabil antar-ingest.
+    embedding satu ruang vektor dengan Soal.embedding (model yang sama), dipakai
+    mencocokkan Soal ke Materi terdekat.
+    """
+
+    __tablename__ = "materi"
+
+    id: Mapped[str] = mapped_column(primary_key=True)
+    tingkat_seleksi_id: Mapped[int] = mapped_column(
+        ForeignKey("tingkat_seleksi.id", ondelete="CASCADE"), index=True
+    )
+    judul: Mapped[str]
+    # Nomor topik dokumen sumber (Materi/<Tingkat>/Topik N_*.docx) — juga
+    # urutan tampil Materi dalam satu tingkat. None kalau belum ada dokumennya.
+    topik: Mapped[int | None]
+    embedding: Mapped[list[float]] = mapped_column(Vector(DIMENSI_EMBEDDING))
+    # sha256 atas teks yang di-embed — ingest menghitung ulang embedding hanya
+    # kalau hash ini berubah (atau --recompute).
+    hash_konten: Mapped[str]
+
+    tingkat_seleksi: Mapped[TingkatSeleksi] = relationship()
+    halaman: Mapped[list[HalamanMateri]] = relationship(
+        order_by="HalamanMateri.nomor", cascade="all, delete-orphan"
+    )
+
+    @property
+    def total_halaman(self) -> int:
+        return len(self.halaman)
+
+
+class HalamanMateri(Base):
+    """Satu halaman konten Materi. nomor dimulai dari 1. konten berupa
+    Markdown dengan rumus LaTeX ($...$ / $$...$$)."""
+
+    __tablename__ = "halaman_materi"
     __table_args__ = (
-        UniqueConstraint("tingkat_seleksi_id"),
-        CheckConstraint(
-            "ambang_cukup_persen >= 0 AND ambang_cukup_persen <= 100",
-            name="ck_aturan_pemetaan_ambang_cukup_rentang",
-        ),
-        CheckConstraint(
-            "ambang_representasi_persen >= 0 AND ambang_representasi_persen <= 100",
-            name="ck_aturan_pemetaan_ambang_representasi_rentang",
-        ),
+        UniqueConstraint("materi_id", "nomor"),
+        CheckConstraint("nomor >= 1", name="ck_halaman_materi_nomor_positif"),
     )
 
     id: Mapped[int] = mapped_column(primary_key=True)
-    tingkat_seleksi_id: Mapped[str]
-    ambang_cukup_persen: Mapped[float] = mapped_column(Numeric(5, 2, asdecimal=False))
-    ambang_representasi_persen: Mapped[float] = mapped_column(
-        Numeric(5, 2, asdecimal=False)
-    )
-
-
-class Kompetensi(Base):
-    """Area kompetensi tingkat atas (mis. "Struktur Data")."""
-
-    __tablename__ = "kompetensi"
-
-    id: Mapped[int] = mapped_column(primary_key=True)
-    nama: Mapped[str]
-    deskripsi: Mapped[str | None]
-
-
-class Subkompetensi(Base):
-    """Unit kompetensi paling rinci (mis. "Graph"), milik satu Kompetensi."""
-
-    __tablename__ = "subkompetensi"
-
-    id: Mapped[int] = mapped_column(primary_key=True)
-    kompetensi_id: Mapped[int] = mapped_column(
-        ForeignKey("kompetensi.id", ondelete="CASCADE")
-    )
-    nama: Mapped[str]
-    deskripsi: Mapped[str | None]
+    materi_id: Mapped[str] = mapped_column(ForeignKey("materi.id", ondelete="CASCADE"))
+    nomor: Mapped[int]
+    judul: Mapped[str | None]
+    konten: Mapped[str]
 
 
 class Soal(Base):
-    """Soal pilihan ganda data uji, ditandai Subkompetensi & Tingkat Seleksi.
+    """Soal pilihan ganda bank konten fase 2, ditandai tepat satu Materi.
     pilihan_jawaban adalah map label -> teks (mis. {"A": "...", "B": "..."}).
+    tingkat_seleksi_id didenormalisasi dari Materi supaya filter
+    (tingkat, materi, level) cukup satu index.
     """
 
     __tablename__ = "soal"
-    __table_args__ = (UniqueConstraint("tingkat_seleksi_id", "nomor"),)
-
-    id: Mapped[int] = mapped_column(primary_key=True)
-    subkompetensi_id: Mapped[int] = mapped_column(
-        ForeignKey("subkompetensi.id", ondelete="CASCADE")
+    __table_args__ = (
+        # Pencarian "soal mirip" selalu difilter (tingkat, materi, level) dulu
+        # lewat index ini, lalu jarak cosine dihitung EKSAK ke kandidat yang
+        # tersisa (puluhan soal, ~2 ms untuk 1.800 soal). Sengaja tanpa index
+        # HNSW: kalau planner memilihnya, HNSW approximate dan menyaring SETELAH
+        # mengambil kandidat global, sehingga soal paling mirip bisa terlewat.
+        # Pada 1.800 soal planner memang sudah memilih B-tree; menghapus HNSW
+        # menjamin itu tetap begitu (fase 2 issue 01).
+        Index("ix_soal_tingkat_materi_level", "tingkat_seleksi_id", "materi_id", "level"),
     )
+
+    id: Mapped[str] = mapped_column(primary_key=True)
+    materi_id: Mapped[str] = mapped_column(ForeignKey("materi.id", ondelete="CASCADE"))
     tingkat_seleksi_id: Mapped[int] = mapped_column(
         ForeignKey("tingkat_seleksi.id", ondelete="CASCADE")
     )
-    nomor: Mapped[int]
+    tipe: Mapped[TipeSoal] = mapped_column(
+        SqlEnum(
+            TipeSoal,
+            values_callable=lambda cls: [item.value for item in cls],
+            native_enum=False,
+        ),
+        default=TipeSoal.PILIHAN_GANDA,
+        server_default=TipeSoal.PILIHAN_GANDA.value,
+    )
+    # Teks konteks bersama (mis. cerita untuk beberapa soal berurutan).
+    deskripsi: Mapped[str | None]
     pertanyaan: Mapped[str]
-    pilihan_jawaban: Mapped[dict[str, str]] = mapped_column(JSON)
+    # Potongan kode program yang menyertai soal, ditampilkan sebagai blok kode.
+    kode: Mapped[str | None]
+    # Path relatif di soal_osn/gambar_<tingkat>/ (disajikan GET
+    # /api/v1/konten/gambar/{path}) atau URL absolut sumber.
+    gambar: Mapped[str | None]
+    # Tahun soal sumber (OSN tahun berapa).
+    tahun: Mapped[int | None]
+    pilihan_jawaban: Mapped[dict[str, str]] = mapped_column(JSONB)
     kunci_jawaban: Mapped[str]
-    # Ambang waktu ideal pengerjaan (resolusi tiket 05). Tidak dibaca langsung
-    # oleh endpoint submit (tiket 11) — Fullstack mengirim batas_waktu_detik per
-    # jawaban di request-nya sendiri (ADR 0002: stateless, caller-supplied),
-    # kolom ini hanya untuk konsistensi data uji/seed lokal.
-    batas_waktu_detik: Mapped[int] = mapped_column(default=60, server_default="60")
+    pembahasan: Mapped[str | None]
+    level: Mapped[LevelSoal] = mapped_column(
+        SqlEnum(
+            LevelSoal,
+            values_callable=lambda cls: [item.value for item in cls],
+            native_enum=False,
+        )
+    )
+    embedding: Mapped[list[float]] = mapped_column(Vector(DIMENSI_EMBEDDING))
+    # sha256 atas teks yang di-embed & dilabeli — lihat Materi.hash_konten.
+    hash_konten: Mapped[str]
+    # False = tidak lagi ada di bank sumber (atau ditahan karena datanya rusak).
+    # Tidak dihapus supaya riwayat Paket Tes yang merujuknya tetap utuh; soal
+    # nonaktif tidak pernah dipilih untuk paket baru.
+    aktif: Mapped[bool] = mapped_column(default=True, server_default=true())
 
 
 class JawabanSiswa(Base):
@@ -341,21 +378,38 @@ class JawabanSiswa(Base):
     )
 
 
-# --- Kenaikan Tingkat (tiket 03) ---------------------------------------------
+# --- Akses tingkat & Gerbang Pre-Test (tiket 03, fase 2 issue 02) -----------
 #
-# tingkat_asal_id/tingkat_tujuan_id di bawah adalah FK sungguhan ke TingkatSeleksi
-# lokal (bukan tingkat_seleksi_id caller-supplied UUID yang dipakai HasilTes dkk.)
-# — Aturan Kenaikan Tingkat adalah config Super Admin terhadap jenjang lokal
-# (urutan Kabupaten/Provinsi/Nasional), konsep yang hanya eksis di katalog lokal
-# ini (lihat catatan "Katalog lokal" di atas). Ini berarti ada gap yang sama
-# seperti yang sudah dicatat tiket 11 ("dependensi turunan terbuka"): pemanggil
-# endpoint evaluasi kenaikan (tingkat/evaluasi) harus mengirim tingkat_asal_id
-# sebagai id katalog lokal, bukan UUID yang sama dengan HasilTes.tingkat_seleksi_id
-# — rekonsiliasi dua skema id ini belum diselesaikan, konsisten dengan gap
-# progress_materi/katalog lokal yang juga masih terbuka.
+# Tingkat Seleksi fase 2 hanya Kabupaten (urutan 1) & Provinsi (urutan 2).
+# Pre-test Provinsi terbuka lewat jalur cepat (skor pre-test Kabupaten) atau
+# jalur simulasi (skor satu attempt simulasi Kabupaten + rata-rata Level Soal
+# Siswa) — lihat kenaikan.py.
+
+
+class StatusAkses(enum.StrEnum):
+    TERKUNCI = "terkunci"
+    # Boleh mengerjakan pre-test tingkat ini; materi & simulasi belum.
+    PRETEST_TERBUKA = "pretest_terbuka"
+    # Pre-test sudah dikerjakan (berapa pun skornya) → materi & simulasi terbuka.
+    TERBUKA = "terbuka"
+
+
+class JalurAkses(enum.StrEnum):
+    """Alasan satu status akses dibuka (AksesTingkatSiswa.dibuka_karena) dan
+    jalur yang dievaluasi (RiwayatEvaluasiKenaikan.jalur)."""
+
+    DEFAULT_AWAL = "default_awal"
+    PRETEST_SELESAI = "pretest_selesai"
+    JALUR_CEPAT_PRETEST = "jalur_cepat_pretest"
+    JALUR_SIMULASI = "jalur_simulasi"
+    OVERRIDE_ADMIN = "override_admin"
+
+
 class AturanKenaikanTingkat(Base):
-    """Config Super Admin: syarat kelayakan pindah dari satu Tingkat Seleksi
-    lokal ke tingkat berikutnya (resolusi tiket 03/FR-17).
+    """Config Super Admin: syarat membuka pre-test tingkat tujuan dari tingkat
+    asal (fase 2 issue 02). Cukup salah satu jalur: skor pre-test asal >=
+    skor_pretest_jalur_cepat, ATAU satu attempt simulasi asal dengan skor >=
+    skor_simulasi_min dan rata-rata Level Soal Siswa >= rata_level_min.
     """
 
     __tablename__ = "aturan_kenaikan_tingkat"
@@ -366,8 +420,12 @@ class AturanKenaikanTingkat(Base):
             name="ck_aturan_kenaikan_skor_rentang",
         ),
         CheckConstraint(
-            "persentase_kompetensi_cukup_min >= 0 AND persentase_kompetensi_cukup_min <= 100",
-            name="ck_aturan_kenaikan_persentase_rentang",
+            "skor_pretest_jalur_cepat >= 0 AND skor_pretest_jalur_cepat <= 100",
+            name="ck_aturan_kenaikan_skor_pretest_rentang",
+        ),
+        CheckConstraint(
+            "rata_level_min >= 1 AND rata_level_min <= 3",
+            name="ck_aturan_kenaikan_rata_level_rentang",
         ),
     )
 
@@ -379,17 +437,21 @@ class AturanKenaikanTingkat(Base):
         ForeignKey("tingkat_seleksi.id", ondelete="CASCADE")
     )
     skor_simulasi_min: Mapped[float] = mapped_column(Numeric(5, 2, asdecimal=False))
-    persentase_kompetensi_cukup_min: Mapped[float] = mapped_column(
-        Numeric(5, 2, asdecimal=False)
+    skor_pretest_jalur_cepat: Mapped[float] = mapped_column(
+        Numeric(5, 2, asdecimal=False), default=90, server_default="90"
+    )
+    rata_level_min: Mapped[float] = mapped_column(
+        Numeric(3, 2, asdecimal=False), default=2.0, server_default="2.0"
     )
     aktif: Mapped[bool] = mapped_column(default=True, server_default=true())
 
 
 class AksesTingkatSiswa(Base):
-    """Status akses satu siswa ke satu Tingkat Seleksi lokal — 'terbuka' bersifat
-    permanen begitu tercapai (resolusi tiket 03: tidak pernah terkunci kembali).
-    Tingkat urutan=1 default 'terbuka' (dibuka_karena='default_awal') saat siswa
-    pertama kali dikenal sistem — lihat repository.inisialisasi_akses_siswa.
+    """Status akses satu siswa ke satu Tingkat Seleksi — lihat StatusAkses.
+    Akses TIDAK dijamin permanen: override admin (dan migrasi data) boleh
+    menurunkannya. Alur otomatis (submit pre-test/simulasi) hanya membuka.
+    Tingkat urutan=1 default 'pretest_terbuka' saat siswa pertama kali dikenal
+    sistem — lihat repository.inisialisasi_akses_siswa.
     """
 
     __tablename__ = "akses_tingkat_siswa"
@@ -400,8 +462,9 @@ class AksesTingkatSiswa(Base):
     tingkat_seleksi_id: Mapped[int] = mapped_column(
         ForeignKey("tingkat_seleksi.id", ondelete="CASCADE")
     )
+    # Nilai StatusAkses.
     status: Mapped[str]
-    simulasi_terbuka: Mapped[bool] = mapped_column(default=False, server_default=false())
+    # Nilai JalurAkses.
     dibuka_karena: Mapped[str | None]
     hasil_tes_id: Mapped[int | None] = mapped_column(
         ForeignKey("hasil_tes.id", ondelete="SET NULL")
@@ -419,9 +482,9 @@ class AksesTingkatSiswa(Base):
 
 
 class RiwayatEvaluasiKenaikan(Base):
-    """Log audit satu evaluasi kenaikan tingkat (dipicu tiap submission Simulasi
-    — resolusi tiket 03). Baris ini tidak pernah diubah setelah dibuat.
-    resolusi tiket 03). Baris ini tidak pernah diubah setelah dibuat.
+    """Log audit satu evaluasi syarat pre-test tingkat tujuan — satu baris per
+    submit pre-test (jalur cepat) atau simulasi (jalur simulasi) tingkat asal.
+    Baris ini tidak pernah diubah setelah dibuat.
     """
 
     __tablename__ = "riwayat_evaluasi_kenaikan"
@@ -434,32 +497,46 @@ class RiwayatEvaluasiKenaikan(Base):
     aturan_kenaikan_id: Mapped[int] = mapped_column(
         ForeignKey("aturan_kenaikan_tingkat.id", ondelete="CASCADE")
     )
+    # Nilai JalurAkses: jalur_cepat_pretest atau jalur_simulasi.
+    jalur: Mapped[str]
     skor_aktual: Mapped[float] = mapped_column(Numeric(5, 2, asdecimal=False))
     skor_target: Mapped[float] = mapped_column(Numeric(5, 2, asdecimal=False))
     syarat_skor_lulus: Mapped[bool]
-    persentase_cukup_aktual: Mapped[float] = mapped_column(Numeric(5, 2, asdecimal=False))
-    persentase_cukup_target: Mapped[float] = mapped_column(Numeric(5, 2, asdecimal=False))
-    syarat_kompetensi_lulus: Mapped[bool]
-    hasil_evaluasi: Mapped[str]
+    # Hanya jalur simulasi; None untuk jalur cepat.
+    rata_level_aktual: Mapped[float | None] = mapped_column(Numeric(3, 2, asdecimal=False))
+    rata_level_target: Mapped[float | None] = mapped_column(Numeric(3, 2, asdecimal=False))
+    syarat_level_lulus: Mapped[bool | None]
+    hasil_evaluasi: Mapped[str]  # "lulus" | "tidak_lulus"
     dievaluasi_pada: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), server_default=func.now()
     )
 
 
-# --- Aturan Kelulusan & Akses Pre-Test Berjenjang (tiket 15) -----------------
+# --- Paket Tes & Level Soal Siswa (fase 2 issue 02/03) ------------------------
 
 
-class AturanPreTest(Base):
-    """Config Super Admin: batas nilai minimal (passing grade) kelulusan Pre-Test
-    per Tingkat Seleksi (resolusi tiket 15).
-    """
+class AturanAdaptif(Base):
+    """Parameter penyusunan Paket Tes per Tingkat Seleksi (fase 2 issue 02/03).
+    Default dibuat otomatis kalau belum ada baris. Syarat lintas tabel
+    kuota_min x jumlah Materi <= jumlah_soal_simulasi dicek saat paket disusun
+    (adaptif.alokasi_kuota)."""
 
-    __tablename__ = "aturan_pre_test"
+    __tablename__ = "aturan_adaptif"
     __table_args__ = (
         UniqueConstraint("tingkat_seleksi_id"),
+        CheckConstraint("jumlah_soal_pretest > 0", name="ck_aturan_adaptif_jumlah_pretest_positif"),
         CheckConstraint(
-            "skor_min >= 0 AND skor_min <= 100",
-            name="ck_aturan_pre_test_skor_rentang",
+            "ambang_lemah >= 0 AND ambang_lemah <= 100",
+            name="ck_aturan_adaptif_ambang_lemah_rentang",
+        ),
+        CheckConstraint(
+            "jumlah_soal_simulasi > 0", name="ck_aturan_adaptif_jumlah_simulasi_positif"
+        ),
+        CheckConstraint("kuota_min >= 1", name="ck_aturan_adaptif_kuota_min_positif"),
+        CheckConstraint("bobot_lemah >= 1", name="ck_aturan_adaptif_bobot_lemah_min"),
+        CheckConstraint(
+            "ambang_lemah < ambang_naik AND ambang_naik <= 100",
+            name="ck_aturan_adaptif_ambang_naik_rentang",
         ),
     )
 
@@ -467,43 +544,310 @@ class AturanPreTest(Base):
     tingkat_seleksi_id: Mapped[int] = mapped_column(
         ForeignKey("tingkat_seleksi.id", ondelete="CASCADE")
     )
-    skor_min: Mapped[float] = mapped_column(
-        Numeric(5, 2, asdecimal=False), default=70.0
+    jumlah_soal_pretest: Mapped[int]
+    # Materi dengan akurasi < ambang_lemah (persen) berstatus lemah/Belum Cukup.
+    ambang_lemah: Mapped[float] = mapped_column(Numeric(5, 2, asdecimal=False))
+    jumlah_soal_simulasi: Mapped[int] = mapped_column(default=30, server_default="30")
+    # Soal minimal per Materi di setiap simulasi; Materi yang tampil kurang dari
+    # ini di satu attempt tidak diubah Level Soal Siswa-nya.
+    kuota_min: Mapped[int] = mapped_column(default=2, server_default="2")
+    # Bobot Materi lemah saat membagi sisa kuota (Materi lain berbobot 1).
+    bobot_lemah: Mapped[int] = mapped_column(default=3, server_default="3")
+    # Akurasi (persen) >= ambang_naik menaikkan Level Soal Siswa satu tingkat.
+    ambang_naik: Mapped[float] = mapped_column(
+        Numeric(5, 2, asdecimal=False), default=80, server_default="80"
     )
-    aktif: Mapped[bool] = mapped_column(default=True, server_default=true())
-    dibuat_pada: Mapped[datetime] = mapped_column(
-        DateTime(timezone=True), server_default=func.now()
+
+
+class LevelSoalSiswa(Base):
+    """Level Soal yang disajikan kepada satu siswa untuk satu Materi pada
+    simulasi berikutnya (lihat CONTEXT.md). Diinisialisasi Mudah untuk semua
+    Materi tingkat itu saat pre-test disubmit; dinaikkan mesin adaptif (issue 03).
+    """
+
+    __tablename__ = "level_soal_siswa"
+    __table_args__ = (UniqueConstraint("siswa_id", "materi_id"),)
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    siswa_id: Mapped[str]
+    materi_id: Mapped[str] = mapped_column(ForeignKey("materi.id", ondelete="CASCADE"))
+    level: Mapped[LevelSoal] = mapped_column(
+        SqlEnum(
+            LevelSoal,
+            values_callable=lambda cls: [item.value for item in cls],
+            native_enum=False,
+        )
     )
+    # Akurasi (persen) Materi ini di attempt terakhir; None kalau Belum Teruji.
+    akurasi_terakhir: Mapped[float | None] = mapped_column(Numeric(5, 2, asdecimal=False))
+    lemah: Mapped[bool] = mapped_column(default=False, server_default=false())
     diperbarui_pada: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), server_default=func.now(), onupdate=func.now()
     )
 
-    tingkat_seleksi: Mapped[TingkatSeleksi] = relationship()
 
-
-class RiwayatEvaluasiPreTest(Base):
-    """Log audit evaluasi kelulusan Pre-Test (tiket 15).
-    Mencatat apakah submission Pre-Test memenuhi passing grade untuk membuka
-    simulasi dan jenjang tingkat berikutnya.
+class PaketTes(Base):
+    """Susunan Soal untuk satu attempt Pre-Test/Simulasi satu siswa, disusun
+    layanan ini (fase 2). Pre-test maksimal satu per siswa per tingkat;
+    simulasi yang belum disubmit juga maksimal satu per siswa per tingkat.
     """
 
-    __tablename__ = "riwayat_evaluasi_pre_test"
+    __tablename__ = "paket_tes"
+    __table_args__ = (
+        Index(
+            "uq_paket_tes_pretest_per_siswa_tingkat",
+            "siswa_id",
+            "tingkat_seleksi_id",
+            unique=True,
+            postgresql_where=text("jenis_tes = 'pre_test'"),
+        ),
+        Index(
+            "uq_paket_tes_simulasi_aktif_per_siswa_tingkat",
+            "siswa_id",
+            "tingkat_seleksi_id",
+            unique=True,
+            postgresql_where=text("jenis_tes = 'simulasi' AND disubmit_pada IS NULL"),
+        ),
+    )
 
     id: Mapped[int] = mapped_column(primary_key=True)
     siswa_id: Mapped[str]
-    hasil_tes_id: Mapped[int] = mapped_column(
-        ForeignKey("hasil_tes.id", ondelete="CASCADE")
-    )
     tingkat_seleksi_id: Mapped[int] = mapped_column(
         ForeignKey("tingkat_seleksi.id", ondelete="CASCADE")
     )
-    skor_aktual: Mapped[float] = mapped_column(Numeric(5, 2, asdecimal=False))
-    passing_grade: Mapped[float] = mapped_column(Numeric(5, 2, asdecimal=False))
-    lulus: Mapped[bool]
-    dievaluasi_pada: Mapped[datetime] = mapped_column(
+    jenis_tes: Mapped[JenisTes] = mapped_column(
+        SqlEnum(
+            JenisTes,
+            values_callable=lambda cls: [item.value for item in cls],
+            native_enum=False,
+        )
+    )
+    # Kuota dari aturan; bisa lebih besar dari jumlah soal aktual kalau stok kurang.
+    jumlah_soal_diminta: Mapped[int]
+    dibuat_pada: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), server_default=func.now()
     )
+    disubmit_pada: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+    # Seed pengacakan simulasi (pemilihan acak & urutan soal) — reproducible
+    # untuk test/debug. None untuk pre-test.
+    seed: Mapped[int | None] = mapped_column(BigInteger)
 
-    hasil_tes: Mapped[HasilTes] = relationship()
-    tingkat_seleksi: Mapped[TingkatSeleksi] = relationship()
+    soal: Mapped[list[PaketTesSoal]] = relationship(
+        order_by="PaketTesSoal.urutan", cascade="all, delete-orphan"
+    )
 
+
+class AlasanPilihSoal(enum.StrEnum):
+    """Kenapa satu Soal masuk Paket Tes (fase 2 issue 03) — auditable."""
+
+    # Tetangga terdekat (embedding) dari soal yang dijawab salah, Materi lemah.
+    VEKTOR_MIRIP = "vektor_mirip"
+    ACAK = "acak"
+    # Stok level target habis; diambil dari level terdekat.
+    FALLBACK_LEVEL = "fallback_level"
+    # Semua soal belum-pernah-muncul habis; soal lama diulang.
+    FALLBACK_ULANG = "fallback_ulang"
+
+
+class PaketTesSoal(Base):
+    """Satu Soal di Paket Tes, beserta jawaban siswa setelah disubmit. materi_id,
+    level_target (Level Soal Siswa saat disusun) & level_aktual (level soal
+    yang terpilih) adalah snapshot saat paket disusun."""
+
+    __tablename__ = "paket_tes_soal"
+    __table_args__ = (
+        # Nama eksplisit: konvensi uq_ hanya memakai kolom pertama, sehingga
+        # dua constraint berawalan paket_tes_id akan bernama sama.
+        UniqueConstraint("paket_tes_id", "soal_id", name="uq_paket_tes_soal_paket_soal"),
+        UniqueConstraint("paket_tes_id", "urutan", name="uq_paket_tes_soal_paket_urutan"),
+    )
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    paket_tes_id: Mapped[int] = mapped_column(ForeignKey("paket_tes.id", ondelete="CASCADE"))
+    soal_id: Mapped[str] = mapped_column(ForeignKey("soal.id"))
+    urutan: Mapped[int]
+    materi_id: Mapped[str] = mapped_column(ForeignKey("materi.id"))
+    level_target: Mapped[LevelSoal] = mapped_column(
+        SqlEnum(
+            LevelSoal,
+            values_callable=lambda cls: [item.value for item in cls],
+            native_enum=False,
+        )
+    )
+    level_aktual: Mapped[LevelSoal] = mapped_column(
+        SqlEnum(
+            LevelSoal,
+            values_callable=lambda cls: [item.value for item in cls],
+            native_enum=False,
+        )
+    )
+    alasan: Mapped[AlasanPilihSoal] = mapped_column(
+        SqlEnum(
+            AlasanPilihSoal,
+            values_callable=lambda cls: [item.value for item in cls],
+            native_enum=False,
+        )
+    )
+    # Terisi saat submit; soal yang tidak dijawab: jawaban_dipilih None, is_benar False.
+    jawaban_dipilih: Mapped[str | None]
+    is_benar: Mapped[bool | None]
+    dibuka_pada: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+    dijawab_pada: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+
+    soal_ref: Mapped[Soal] = relationship()
+
+
+class HasilTesMateri(Base):
+    """Breakdown per Materi satu attempt fase 2 — Peta Kompetensi per Materi
+    (menggantikan HasilTesSubkompetensi untuk attempt lewat Paket Tes).
+    status_pemetaan dibekukan saat attempt dihitung."""
+
+    __tablename__ = "hasil_tes_materi"
+    __table_args__ = (UniqueConstraint("hasil_tes_id", "materi_id"),)
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    hasil_tes_id: Mapped[int] = mapped_column(ForeignKey("hasil_tes.id", ondelete="CASCADE"))
+    materi_id: Mapped[str] = mapped_column(ForeignKey("materi.id", ondelete="CASCADE"))
+    jumlah_soal: Mapped[int]
+    jumlah_benar: Mapped[int]
+    akurasi: Mapped[float | None] = mapped_column(Numeric(5, 2, asdecimal=False))
+    status_pemetaan: Mapped[StatusPemetaan] = mapped_column(
+        SqlEnum(
+            StatusPemetaan,
+            values_callable=lambda cls: [item.value for item in cls],
+            native_enum=False,
+        )
+    )
+
+
+# --- Materi Wajib & riwayat baca Materi (fase 2 issue 04) -------------------------
+
+
+class RiwayatBacaHalaman(Base):
+    """Riwayat baca permanen: satu baris per halaman Materi yang pernah dibuka
+    siswa (navigasi bebas — menggantikan high-water mark progress_materi fase
+    1, yang diarsipkan sebagai progress_materi_fase1). Terpisah dari
+    MateriWajibHalaman, yang hanya menghitung halaman sejak Materi diwajibkan.
+    """
+
+    __tablename__ = "riwayat_baca_halaman"
+    __table_args__ = (
+        UniqueConstraint(
+            "siswa_id", "materi_id", "nomor_halaman", name="uq_riwayat_baca_halaman_siswa_materi"
+        ),
+    )
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    siswa_id: Mapped[str]
+    materi_id: Mapped[str] = mapped_column(ForeignKey("materi.id", ondelete="CASCADE"))
+    nomor_halaman: Mapped[int]
+    pertama_dibuka_pada: Mapped[datetime] = mapped_column(DateTime(timezone=True))
+    terakhir_dibuka_pada: Mapped[datetime] = mapped_column(DateTime(timezone=True))
+
+
+class MateriWajib(Base):
+    """Snapshot Materi Wajib satu attempt: Materi berstatus lemah (Belum Cukup)
+    pada Paket Tes itu, urutan 1 = akurasi terendah. selesai_pada terisi saat
+    semua halamannya sudah dibuka sejak diwajibkan (materi_wajib.selesai_dipelajari).
+    Gerbang Simulasi hanya melihat Materi Wajib dari attempt terakhir.
+    """
+
+    __tablename__ = "materi_wajib"
+    __table_args__ = (
+        UniqueConstraint("paket_tes_id", "materi_id", name="uq_materi_wajib_paket_materi"),
+        Index("ix_materi_wajib_siswa_materi", "siswa_id", "materi_id"),
+    )
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    paket_tes_id: Mapped[int] = mapped_column(ForeignKey("paket_tes.id", ondelete="CASCADE"))
+    siswa_id: Mapped[str]
+    tingkat_seleksi_id: Mapped[int] = mapped_column(
+        ForeignKey("tingkat_seleksi.id", ondelete="CASCADE")
+    )
+    materi_id: Mapped[str] = mapped_column(ForeignKey("materi.id", ondelete="CASCADE"))
+    urutan: Mapped[int]
+    akurasi: Mapped[float] = mapped_column(Numeric(5, 2, asdecimal=False))
+    dibuat_pada: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), server_default=func.now()
+    )
+    selesai_pada: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+
+    materi: Mapped[Materi] = relationship()
+
+
+class MateriWajibHalaman(Base):
+    """Halaman Materi Wajib yang sudah dibuka sejak Materi itu diwajibkan."""
+
+    __tablename__ = "materi_wajib_halaman"
+    __table_args__ = (
+        UniqueConstraint(
+            "materi_wajib_id", "nomor_halaman", name="uq_materi_wajib_halaman_wajib_nomor"
+        ),
+    )
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    materi_wajib_id: Mapped[int] = mapped_column(
+        ForeignKey("materi_wajib.id", ondelete="CASCADE")
+    )
+    nomor_halaman: Mapped[int]
+    dibuka_pada: Mapped[datetime] = mapped_column(DateTime(timezone=True))
+
+
+
+# --- Latihan (formatif wajib, gate simulasi ≥ 50%) ----------------------------
+
+
+class Latihan(Base):
+    """Rekap hasil satu sesi Latihan siswa pada satu Materi.
+
+    Latihan bersifat formatif (bukan penentu kelulusan), tapi WAJIB
+    diselesaikan dengan nilai >= 50% sebelum simulasi tingkat itu terbuka.
+    Pengulangan unlimited. Pembahasan langsung per soal.
+    """
+
+    __tablename__ = "latihan"
+    __table_args__ = (
+        Index("ix_latihan_siswa_tingkat_materi", "siswa_id", "tingkat_seleksi_id", "materi_id"),
+        CheckConstraint("nilai >= 0 AND nilai <= 100", name="ck_latihan_nilai_rentang"),
+        CheckConstraint("jumlah_benar >= 0", name="ck_latihan_jumlah_benar_nonneg"),
+        CheckConstraint("jumlah_salah >= 0", name="ck_latihan_jumlah_salah_nonneg"),
+        CheckConstraint("total_soal > 0", name="ck_latihan_total_soal_positif"),
+    )
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    siswa_id: Mapped[str]
+    materi_id: Mapped[str] = mapped_column(ForeignKey("materi.id", ondelete="CASCADE"))
+    tingkat_seleksi_id: Mapped[int] = mapped_column(
+        ForeignKey("tingkat_seleksi.id", ondelete="CASCADE")
+    )
+    # Nilai berbobot: (Σ bobot×benar / Σ bobot) × 100
+    nilai: Mapped[float] = mapped_column(Numeric(5, 2, asdecimal=False))
+    jumlah_benar: Mapped[int]
+    jumlah_salah: Mapped[int]
+    total_soal: Mapped[int]
+    dibuat_pada: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), server_default=func.now()
+    )
+    diselesaikan_pada: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+
+    jawaban: Mapped[list[LatihanJawaban]] = relationship(
+        cascade="all, delete-orphan"
+    )
+
+
+class LatihanJawaban(Base):
+    """Jawaban per soal dalam satu sesi Latihan."""
+
+    __tablename__ = "latihan_jawaban"
+    __table_args__ = (UniqueConstraint("latihan_id", "soal_id"),)
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    latihan_id: Mapped[int] = mapped_column(
+        ForeignKey("latihan.id", ondelete="CASCADE")
+    )
+    soal_id: Mapped[str] = mapped_column(ForeignKey("soal.id"))
+    jawaban: Mapped[str | None]
+    is_benar: Mapped[bool]
+    dibuat_pada: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), server_default=func.now()
+    )
