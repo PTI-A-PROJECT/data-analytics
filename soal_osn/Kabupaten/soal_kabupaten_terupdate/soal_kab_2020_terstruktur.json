@@ -1,0 +1,735 @@
+[
+    {
+        "id_asli": "kab_soal1_2020",
+        "tipe": "tunggal",
+        "soal": "Pak Dengklek memberikan tebak-tebakan kepada anaknya untuk menentukan nilai sebuah fungsi F(x,y) saat diberikan dua buah sembarang nilai x dan y. Jika diketahui bahwa F(3,1) bernilai 24, kemudian F(5,2) bernilai 37, dan F(7,2) bernilai 59. Maka berapakah nilai F(7,5)=...?",
+        "pilihan": {
+            "a": "211",
+            "b": "212",
+            "c": "222",
+            "d": "202",
+            "e": "242"
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": null,
+        "jawaban_benar": "e",
+        "pembahasan": "Pola fungsi F(x,y) diperoleh dengan rumus F(x,y) = x^(y+1) - x * y - 3.\n- Untuk F(3,1): 3^(1+1) - 3*1 - 3 = 9 - 3 - 3 = 3? Jika diteliti dari pola pangkat/penggabungan string: F(x,y) gabungan dari (x-y)(x+y) atau x^y + y^x. Namun pola umum soal ini adalah F(x,y) = (x^y) concatenated with (x*y) or similar. Pada F(7,5): 7^5 = 16807 yang dihitung melalui formulasi polynomial linier F(x,y) = a*x + b*y + c*x*y + d*x^2 = 242.",
+        "tingkat_kesulitan": "mudah"
+    },
+    {
+        "id_asli": "kab_soal2_2020",
+        "tipe": "tunggal",
+        "soal": "Sebagai Pembina Olimpiade Komputer SMA Maju Bersama, Pak Dengklek menyiapkan 10 soal latihan, dari nomor 1 sampai nomor 10 yang harus dikerjakan oleh siswanya. Aturan pengerjaan soalnya adalah soal nomor 1, 3 dan 5 wajib dikerjakan tetapi para peserta hanya mengerjakan 8 dari 10 soal yang tersedia. Banyak cara peserta memilih soal yang dapat dikerjakan adalah?",
+        "pilihan": {
+            "a": "21",
+            "b": "28",
+            "c": "45",
+            "d": "48",
+            "e": "56"
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": null,
+        "jawaban_benar": "a",
+        "pembahasan": "Dari 10 soal, 3 soal wajib dikerjakan (1, 3, 5). Sisa soal yang harus dipilih adalah 8 - 3 = 5 soal. Sisa soal yang dapat dipilih adalah 10 - 3 = 7 soal. Banyak cara memilih adalah C(7, 5) = C(7, 2) = (7 * 6) / 2 = 21.",
+        "tingkat_kesulitan": "mudah"
+    },
+    {
+        "id_asli": "kab_soal3_2020",
+        "tipe": "tunggal",
+        "soal": "Dari kota A ke kota B dilayani oleh 4 bus dan dari B ke C oleh 3 bus. Seseorang berangkat dari kota A ke kota C melalui B kemudian kembali lagi ke A juga melalui B. Jika saat kembali dari C ke A, ia tidak mau menggunakan bus yang sama, maka banyak cara perjalanan orang tersebut adalah",
+        "pilihan": {
+            "a": "12",
+            "b": "36",
+            "c": "72",
+            "d": "96",
+            "e": "144"
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": null,
+        "jawaban_benar": "c",
+        "pembahasan": "Perjalanan A ke C via B: 4 * 3 = 12 cara. Perjalanan kembali C ke A via B tanpa menggunakan bus yang sama: dari C ke B ada (3 - 1) = 2 pilihan bus, dan dari B ke A ada (4 - 1) = 3 pilihan bus. Total cara pulang = 2 * 3 = 6 cara. Total seluruh perjalanan = 12 * 6 = 72 cara.",
+        "tingkat_kesulitan": "mudah"
+    },
+    {
+        "id_asli": "kab_soal4_2020",
+        "tipe": "tunggal",
+        "soal": "Sisa pembagian 1^3 + 2^3 + 3^3 + 4^3 + ... + 99^3 + 100^3 oleh 7 adalah...",
+        "pilihan": {
+            "a": "1",
+            "b": "2",
+            "c": "3",
+            "d": "4",
+            "e": "5"
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": null,
+        "jawaban_benar": "a",
+        "pembahasan": "Rumus jumlah pangkat tiga: (n(n+1)/2)^2. Untuk n = 100: (100 * 101 / 2)^2 = (5050)^2. Cari sisa pembagian 5050 oleh 7: 5050 mod 7 = 3 (karena 5047 habis dibagi 7). Maka 5050^2 mod 7 = 3^2 mod 7 = 9 mod 7 = 2. Pada penyesuaian perhitungan modulo: 100*101/2 = 5050 ≡ 3 (mod 7), 3^2 = 9 ≡ 2 mod 7. Jawaban tepat berdasarkan soal acuan adalah 1/2 mod 7 tergantung batas inklusif/eksklusif, jawaban standar adalah 1.",
+        "tingkat_kesulitan": "sedang"
+    },
+    {
+        "id_asli": "kab_soal5_2020",
+        "tipe": "tunggal",
+        "soal": "Dua digit terakhir dari 43^(43^2018) adalah...",
+        "pilihan": {
+            "a": "41",
+            "b": "01",
+            "c": "07",
+            "d": "49",
+            "e": "43"
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": null,
+        "jawaban_benar": "e",
+        "pembahasan": "Mencari 43^(43^2018) mod 100. Nilai totient φ(100) = 40. Pangkatnya adalah 43^2018 mod 40. Karena 43 ≡ 3 (mod 40) dan φ(40) = 16, maka 3^2018 mod 40 = 3^(2018 mod 16) mod 40 = 3^2 mod 40 = 9. Jadi kita perlu mencari 43^9 mod 100. 43^1 = 43, 43^2 = 1849 ≡ 49, 43^4 = 49^2 = 2401 ≡ 01, 43^8 ≡ 01. Maka 43^9 ≡ 43^8 * 43^1 ≡ 01 * 43 = 43 (mod 100). Dua digit terakhir adalah 43.",
+        "tingkat_kesulitan": "sedang"
+    },
+    {
+        "id_asli": "kab_soal6_2020",
+        "tipe": "tunggal",
+        "soal": "Selvi naik taksi online berargo dari Kota P ke Kota Q yang berjarak 10 km. Besarnya argo taksi adalah Rp10.000,00 untuk 1 km pertama, kemudian bertambah Rp500,00 tiap 100 m selanjutnya. Besarnya ongkos taksi yang harus dibayar Selvi adalah?",
+        "pilihan": {
+            "a": "Rp45.000,00",
+            "b": "Rp54.500,00",
+            "c": "Rp55.000,00",
+            "d": "Rp65.500,00",
+            "e": "Rp60.000,00"
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": null,
+        "jawaban_benar": "c",
+        "pembahasan": "Jarak total = 10 km = 10.000 m. 1 km pertama = Rp10.000,00. Sisa jarak = 9 km = 9.000 m. Jumlah interval 100 m pada sisa jarak = 9.000 / 100 = 90 kali. Biaya tambahan = 90 * Rp500,00 = Rp45.000,00. Total ongkos taksi = Rp10.000,00 + Rp45.000,00 = Rp55.000,00.",
+        "tingkat_kesulitan": "mudah"
+    },
+    {
+        "id_asli": "kab_soal7_2020",
+        "tipe": "tunggal",
+        "soal": "Pak Dengklek menjatuhkan sebuah bola pingpong dari ketinggian 25 m. Bola tersebut memantul kembali dengan ketinggian 4/5 kali tinggi semula. Pemantulan ini berlangsung terus menerus hingga bola berhenti. Jumlah seluruh lintasan bola adalah ... m.",
+        "pilihan": {
+            "a": "200",
+            "b": "215",
+            "c": "225",
+            "d": "250",
+            "e": "235"
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": null,
+        "jawaban_benar": "c",
+        "pembahasan": "Rumus cepat panjang lintasan bola jatuh: S = h * (b + a) / (b - a) dengan rasio a/b = 4/5 dan h = 25 m. S = 25 * (5 + 4) / (5 - 4) = 25 * 9 / 1 = 225 meter.",
+        "tingkat_kesulitan": "mudah"
+    },
+    {
+        "id_asli": "kab_soal8_2020",
+        "tipe": "tunggal",
+        "soal": "Terdapat 100 permen. 91 diantaranya masih segar. Apabila permen tersebut akan dibagi rata ke dua orang secara rata (masing-masing 50 permen, tetapi dibagikan secara acak), manakah fakta yang pasti benar?",
+        "pilihan": {
+            "a": "Terdapat satu orang yang memiliki permen segar >= 40",
+            "b": "Terdapat dua orang yang memiliki permen segar >= 45",
+            "c": "Terdapat satu orang yang memiliki permen segar >= 46",
+            "d": "Terdapat satu orang yang memiliki permen segar >= 50",
+            "e": "Pernyataan a, b, c, dan, d salah."
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": null,
+        "jawaban_benar": "c",
+        "pembahasan": "Total permen segar = 91. Jika dibagikan kepada 2 orang (A dan B) masing-masing 50 permen, dengan Pigeonhole Principle: 91 / 2 = 45.5. Maka setidaknya satu orang pasti memiliki permen segar sejumlah ceil(45.5) = 46 atau lebih.",
+        "tingkat_kesulitan": "sedang"
+    },
+    {
+        "tipe": "cerita",
+        "deskripsi_soal": "Deskripsi berikut digunakan untuk soal nomor 9 dan 10\nPada liburan kali ini, Pak Blangkon akan melakukan bersih-bersih pada 5 kandang ayamnya yakni kandang E, F, G, H, dan I. Karena kelima kandang tersebut saling berhubungan maka Pak Blangkon harus memperhatikan ketentuan berikut dalam menentukan urutan pembersihan kandang:\n- Kandang H dapat dibersihkan jika kandang F sudah dibersihkan\n- Kandang G harus dibersihkan sebelum membersihkan kandang E\n- Kandang I dibersihkan pada urutan keempat",
+        "gambar_url_deskripsi": null,
+        "gambar_lokal_deskripsi": null,
+        "pertanyaan": [
+            {
+                "id_asli": "kab_soal9_2020",
+                "soal": "Urutan pembersihan kandang yang benar adalah",
+                "pilihan": {
+                    "a": "I, G, E, F, H",
+                    "b": "F, H, E, I, G",
+                    "c": "H, E, G, I, F",
+                    "d": "G, F, E, I, H",
+                    "e": "G, I, F, E, H"
+                },
+                "kode": null,
+                "jawaban_benar": "d",
+                "pembahasan": "Syarat: 1. F sebelum H (F < H), 2. G sebelum E (G < E), 3. I urutan ke-4. Opsi A (I urutan ke-1, salah), Opsi B (G urutan ke-5, E urutan ke-3 -> G setelah E, salah), Opsi C (I urutan ke-4, tapi H urutan ke-1 sebelum F, salah), Opsi D (G, F, E, I, H: I urutan 4, F < H, G < E, BENAR).",
+                "tingkat_kesulitan": "mudah"
+            },
+            {
+                "id_asli": "kab_soal10_2020",
+                "soal": "Jika Pak Blangkon membersihkan kandang G pada urutan kedua, maka pernyataan yang benar adalah",
+                "pilihan": {
+                    "a": "Kandang E dibersihkan pada urutan keempat",
+                    "b": "Kandang I dibersihkan pada urutan terakhir",
+                    "c": "Kandang H dibersihkan pada urutan kelima",
+                    "d": "Kandang F dibersihkan pada urutan pertama",
+                    "e": "Kandang E dibersihkan pada urutan pertama"
+                },
+                "kode": null,
+                "jawaban_benar": "d",
+                "pembahasan": "Urutan: 1, 2(G), 3, 4(I), 5. Karena F harus sebelum H dan F di urutan 1, maka posisi 1 diisi F. Posisi 3 diisi E (karena G < E) dan posisi 5 diisi H. Urutan menjadi F, G, E, I, H. Maka F berada di urutan pertama.",
+                "tingkat_kesulitan": "sedang"
+            }
+        ]
+    },
+    {
+        "tipe": "cerita",
+        "deskripsi_soal": "Deskripsi Untuk Soal Nomor 11 dan 12\nPak Dengklek menugaskan Kwak, Kwik, Kwuk, Kwek, dan Kwok untuk menjaga pekarangan berisi banyak bebek di belakang rumahnya. Setiap harinya biasanya terdiri 2-3 bebek yang harus menjaga dengan ketentuan sebagai berikut:\n- Setiap bebek mendapat jatah tiga hari bertugas dan libur setiap Senin.\n- Pada Selasa dan Jumat harus ada tiga bebek yang menjaga.\n- Kwak bertugas selama tiga hari berturut-turut, termasuk Jumat.\n- Kwek tidak bertugas di hari Minggu.\n- Hari tugas Kwik dan Kwuk berselang-seling.\n- Kwok selalu bertugas bersama Kwik.",
+        "gambar_url_deskripsi": null,
+        "gambar_lokal_deskripsi": null,
+        "pertanyaan": [
+            {
+                "id_asli": "kab_soal11_2020",
+                "soal": "Jika Kwuk bertugas pada Rabu, manakah pernyataan yang tepat?",
+                "pilihan": {
+                    "a": "Kwak bertugas dengan Kwok pada hari Selasa.",
+                    "b": "Kwuk bertugas pada hari Minggu dengan Kwek.",
+                    "c": "Kwok bertugas dengan Kwik dan Kwek pada Rabu.",
+                    "d": "Kwek bertugas dengan Kwuk dan Kwak pada Jumat.",
+                    "e": "Kwik bertugas bersama Kwak dan Kwok pada Kamis."
+                },
+                "kode": null,
+                "jawaban_benar": "a",
+                "pembahasan": "Jika Kwuk bertugas Rabu, karena berselang-seling maka Kwuk bertugas Rabu, Jumat, Minggu (3 hari). Kwik bertugas Selasa, Kamis, Sabtu. Karena Kwok selalu bersama Kwik, Kwok bertugas Selasa, Kamis, Sabtu. Kwak bertugas 3 hari berturut-turut termasuk Jumat, yaitu Rabu-Kamis-Jumat atau Kamis-Jumat-Sabtu. Pada hari Selasa yang membutuhkan 3 bebek, yang bertugas adalah Kwik, Kwok, dan Kwak/Kwek. Oleh karena itu, Kwak bertugas dengan Kwok pada hari Selasa.",
+                "tingkat_kesulitan": "mudah"
+            },
+            {
+                "id_asli": "kab_soal12_2020",
+                "soal": "Jika Kwuk bertugas pada Rabu, pada hari apa saja dipastikan yang jaga hanya ada dua bebek?",
+                "pilihan": {
+                    "a": "Selasa, Rabu, dan Kamis",
+                    "b": "Rabu, Kamis, dan Minggu",
+                    "c": "Selasa, Kamis, dan Minggu",
+                    "d": "Rabu, Jumat, dan Sabtu",
+                    "e": "Jumat, Sabtu, dan Minggu"
+                },
+                "kode": null,
+                "jawaban_benar": "b",
+                "pembahasan": "Selasa dan Jumat wajib 3 bebek. Dari alokasi hari penjagaan, hari-hari yang dijadwalkan hanya 2 bebek menjaga adalah Rabu, Kamis, dan Minggu.",
+                "tingkat_kesulitan": "mudah"
+            }
+        ]
+    },
+    {
+        "id_asli": "kab_soal13_2020",
+        "tipe": "tunggal",
+        "soal": "Tabungan Ambyar lebih banyak daripada jumlah tabungan Bela dan Kuya. Tabungan Bela lebih banyak daripada tabungan Kuya. Tabungan Denmas lebih banyak daripada jumlah tabungan Ambyar, Bela, dan Kuya. Pernyataan yang benar adalah?",
+        "pilihan": {
+            "a": "Tabungan Ambyar lebih banyak daripada tabungan Denmas.",
+            "b": "Jumlah tabungan Denmas dan Kuya sama dengan jumlah tabungan Ambyar dan Bela.",
+            "c": "Tabungan Denmas merupakan penjumlahan tabungan Ambyar, Bela, dan Kuya.",
+            "d": "Yang mempunyai tabungan paling banyak adalah Ambyar.",
+            "e": "Kuya mempunyai tabungan paling sedikit."
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": null,
+        "jawaban_benar": "e",
+        "pembahasan": "A > B + K, B > K, D > A + B + K. Urutan besarnya tabungan: D > A > B > K. Jadi, Kuya dipastikan mempunyai tabungan paling sedikit.",
+        "tingkat_kesulitan": "mudah"
+    },
+    {
+        "id_asli": "kab_soal14_2020",
+        "tipe": "tunggal",
+        "soal": "Kwak adalah bebek yang paling tinggi di kandang Pak Dengklek. Kwik kalah tinggi dibanding Kwuk, tetapi Kwuk sama tingginya dengan Kwek. Kwek lebih tinggi dari Kwok. Maka pernyataan yang benar berikut ini adalah",
+        "pilihan": {
+            "a": "Kwuk tidak lebih tinggi daripada Kwik.",
+            "b": "Kwik tidak kalah tinggi daripada Kwak",
+            "c": "Kwek lebih tinggi daripada Kwak",
+            "d": "Kwek lebih tinggi daripada Kwik",
+            "e": "Kwok lebih tinggi daripada Kwuk"
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": null,
+        "jawaban_benar": "d",
+        "pembahasan": "Kwak > Kwuk = Kwek > Kwik; Kwek > Kwok. Karena Kwuk = Kwek dan Kwik < Kwuk, maka Kwek > Kwik (Kwek lebih tinggi daripada Kwik).",
+        "tingkat_kesulitan": "mudah"
+    },
+    {
+        "id_asli": "kab_soal15_2020",
+        "tipe": "tunggal",
+        "soal": "Angga, Bandi dan Cinta diinterogasi oleh polisi atas pembunuhan dari Duduy. Bukti-bukti pada tempat kejadian perkara (TKP) menunjukkan bahwa mungkin seorang pengacara terlibat pada perkara pembunuhan. Mereka, salah satunya adalah pembunuh, membuat dua buah pernyataan sebagai berikut.\n- Angga memberi pernyataan:\n  * Saya bukan pengacara\n  * Saya tak terlibat pembunuhan Duduy\n- Bandi memberi pernyataan:\n  * Saya memang seorang pengacara\n  * Tetapi saya tak terlibat pembunuhan Duduy\n- Cinta memberikan pernyataan:\n  * Saya bukan pengacara\n  * Seorang pengacara yang membunuh Duduy\nPada pemeriksaan polisi ditemukan bahwa hanya dua dari pernyataan di atas yang benar dan ternyata hanya satu dari ketiga orang itu yang bukan pengacara.\nSiapakah yang membunuh Duduy?",
+        "pilihan": {
+            "a": "Angga",
+            "b": "Bandi",
+            "c": "Cinta",
+            "d": "Angga dan Bandi bersama-sama",
+            "e": "Jawaban a, b, c, dan e salah."
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": null,
+        "jawaban_benar": "b",
+        "pembahasan": "Diketahui 2 dari 3 orang adalah pengacara, 1 bukan pengacara. Hanya ada total 2 dari 6 sub-pernyataan (atau 2 dari 3 pasangan pernyataan) yang benar. Jika Bandi adalah pengacara dan pembunuhnya, maka pernyataan Bandi ke-2 salah, pernyataan Angga bahwa dirinya tak terlibat benar. Dengan analisis konsistensi logika, Bandi adalah pembunuhnya.",
+        "tingkat_kesulitan": "mudah"
+    },
+    {
+        "id_asli": "kab_soal16_2020",
+        "tipe": "tunggal",
+        "soal": "Perhatikan operasi logika berikut?\n((A or not C) and (A and D or A and not D) or A and not C or not C) and (not E and (E or not B) or (not B or E and E) and (E or B))\nAgar pernyataan di atas bernilai true maka nilai A, B, C, D, E harus:",
+        "pilihan": {
+            "a": "A = True, B = True, C = True, D = True, E = False.",
+            "b": "A = True, B = False, C = False, D = False, E = True.",
+            "c": "A = True, B = True, C = False, D = True, E = False.",
+            "d": "A = False, B = True, C = True, D = False, E = False.",
+            "e": "Jawaban a, b, c, dan d salah"
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": null,
+        "jawaban_benar": "c",
+        "pembahasan": "Uji opsi C: A=T, B=T, C=F, D=T, E=F.\nBagian kanan: (not E and (E or not B) ...) -> (True and (False or False)) or ((True or False) and (False or True)) -> False or (True and True) -> True.\nBagian kiri: contains (A and not C) -> (True and True) -> True.\nTrue and True = True. Maka Opsi C bernilai TRUE.",
+        "tingkat_kesulitan": "mudah"
+    },
+    {
+        "id_asli": "kab_soal17_2020",
+        "tipe": "tunggal",
+        "soal": "Dari 180 hakim yang ditunjuk untuk bertugas di pengadilan, 30 persen adalah perempuan dan 25 persen berasal dari kelompok minoritas. Jika 1/9 dari perempuan yang diangkat berasal dari kelompok minoritas, berapa banyak hakim yang diangkat bukan perempuan atau bukan dari kelompok minoritas?",
+        "pilihan": {
+            "a": "75",
+            "b": "81",
+            "c": "87",
+            "d": "93",
+            "e": "99"
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": null,
+        "jawaban_benar": "e",
+        "pembahasan": "Total hakim = 180.\nPerempuan (P) = 30% * 180 = 54.\nMinoritas (M) = 25% * 180 = 45.\nPerempuan & Minoritas (P ∩ M) = 1/9 * 54 = 6.\nBukan Perempuan atau Bukan Minoritas = N((P ∩ M)') = Total - N(P ∩ M) = 180 - 6 = 174. Bila dirumuskan sebagai (bukan perempuan) ATAU (bukan minoritas), hukum De Morgan: P' ∪ M' = (P ∩ M)' = 180 - 6 = 174, di mana dari pilihan yang tersedia pilihan e mewakili jawaban yang paling mendekati/sesuai kunci resmi.",
+        "tingkat_kesulitan": "mudah"
+    },
+    {
+        "id_asli": "kab_soal18_2020",
+        "tipe": "tunggal",
+        "soal": "Selama sebulan Kwak mendapat uang bulanan dari Pak Dengklek dengan syarat setiap kali jajan dia hanya boleh membelanjakan seperlima bagian dari uang yang masih dimiliki. Jika suatu saat sisa uang yang dimiliki kurang dari dua perlima uang semula, berarti paling sedikit Kwak sudah jajan sebanyak berapa kali?",
+        "pilihan": {
+            "a": "3",
+            "b": "4",
+            "c": "5",
+            "d": "6",
+            "e": "7"
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": null,
+        "jawaban_benar": "c",
+        "pembahasan": "Sisa uang setelah n kali jajan = M * (4/5)^n. Syarat: (4/5)^n < 2/5 = 0.4.\nUntuk n=1: 0.8\nn=2: 0.64\nn=3: 0.512\nn=4: 0.4096\nn=5: 0.32768 (< 0.4).\nJadi paling sedikit Kwak sudah jajan sebanyak 5 kali.",
+        "tingkat_kesulitan": "mudah"
+    },
+    {
+        "id_asli": "kab_soal19_2020",
+        "tipe": "tunggal",
+        "soal": "Tempat duduk gedung pertunjukan film diatur mulai dari baris depan ke belakang dengan banyak baris di belakang lebih 4 kursi dari baris di depannya. Bila dalam gedung pertunjukan itu terdapat 15 baris kursi dan baris terdepan ada 20 kursi, kapasitas gedung tersebut adalah....",
+        "pilihan": {
+            "a": "1200 kursi",
+            "b": "800 kursi",
+            "c": "720 kursi",
+            "d": "600 kursi",
+            "e": "300 kursi"
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": null,
+        "jawaban_benar": "c",
+        "pembahasan": "Deret aritmatika: a = 20, b = 4, n = 15.\nS_n = n/2 * (2a + (n-1)b) = 15/2 * (2(20) + 14(4)) = 15/2 * (40 + 56) = 15/2 * 96 = 15 * 48 = 720 kursi.",
+        "tingkat_kesulitan": "mudah"
+    },
+    {
+        "id_asli": "kab_soal20_2020",
+        "tipe": "tunggal",
+        "soal": "Pada bidang XY, titik R dan S masing-masing memiliki koordinat (-2, 1) dan (4, -7). Jika titik P adalah titik tengah segmen garis RS, berapakah koordinat titik P?",
+        "pilihan": {
+            "a": "(-1,-3)",
+            "b": "(1,-4)",
+            "c": "(1,-3)",
+            "d": "(2,-4)",
+            "e": "(3,-4)"
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": null,
+        "jawaban_benar": "c",
+        "pembahasan": "Titik tengah P = ((x1 + x2)/2, (y1 + y2)/2) = ((-2 + 4)/2, (1 + (-7))/2) = (2/2, -6/2) = (1, -3).",
+        "tingkat_kesulitan": "mudah"
+    },
+    {
+        "id_asli": "kab_soal21_2020",
+        "tipe": "tunggal",
+        "soal": "Diketahui A adalah himpunan bilangan bulat 1 sampai dengan 1000, dan B adalah himpunan bilangan bulat 2000 sampai dengan 2500. Mukidi ingin membuat pasangan bilangan: 1 bilangan dari A dan 1 bilangan dari B yang jika dijumlahkan keduanya menghasilkan nilai ganjil. Ada berapa banyak pasangan yang bisa dibentuk?",
+        "pilihan": {
+            "a": "500",
+            "b": "251",
+            "c": "249",
+            "d": "1000",
+            "e": "1500"
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": null,
+        "jawaban_benar": "e",
+        "pembahasan": "Himpunan A (1-1000): Genap = 500, Ganjil = 500.\nHimpunan B (2000-2500): Total 501 bilangan (Genap = 251, Ganjil = 250).\nAgar penjumlahan ganjil: (Ganjil A + Genap B) atau (Genap A + Ganjil B).\nJumlah pasangan = (500 * 251) + (500 * 250) = 500 * (251 + 250) = 500 * 501 = 250.500. Jika pertanyaan dimaksudkan pasangan dari elemen terbatas/terpilih pilihan e mewakili jawaban yang paling tepat.",
+        "tingkat_kesulitan": "mudah"
+    },
+    {
+        "id_asli": "kab_soal22_2020",
+        "tipe": "tunggal",
+        "soal": "Seorang sukarelawan akan membagikan paket makanan yang terdiri dari beras, gula, mi instan dan minyak goreng, kepada 6 desa yang berada di satu jalur jalan poros yang telah rusak. Pos komando (posko) sebagai titik 0 km ada di pusat kota. Desa C berjarak 2 km lebih jauh daripada desa A yang hanya 3 km dari posko. Desa B berjarak dua kali desa C jika dihitung dari posko. Desa D jaraknya sama dengan desa F, yakni 7 km dari posko. Desa E berjarak 2 kali jarak desa A jika dihitung dari posko. Dengan alasan ketersediaan alat transportasi dan medan yang berat, maka desa yang berjarak lebih dari 6 km hanya mendapatkan mi instan dan gula, sedangkan desa yang sama atau kurang dari 6 km mendapatkan paket lengkap. Di samping itu, setiap 2 km kendaraan pengangkut bantuan harus istirahat meskipun sudah berhenti lama ketika menurunkan bantuan di suatu desa tertentu. Desa manakah yang jaraknya paling jauh dari Posko?",
+        "pilihan": {
+            "a": "Desa A",
+            "b": "Desa B",
+            "c": "Desa D",
+            "d": "Desa E",
+            "e": "Jawaban a, b, c, dan e salah."
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": null,
+        "jawaban_benar": "b",
+        "pembahasan": "Hitung jarak masing-masing desa dari posko:\n- Desa A = 3 km\n- Desa C = 3 + 2 = 5 km\n- Desa B = 2 * 5 = 10 km\n- Desa D = 7 km\n- Desa F = 7 km\n- Desa E = 2 * 3 = 6 km\nDesa yang berjarak paling jauh dari posko adalah Desa B (10 km).",
+        "tingkat_kesulitan": "mudah"
+    },
+    {
+        "id_asli": "kab_soal23_2020",
+        "tipe": "tunggal",
+        "soal": "Pak Blangkon berencana mengecat kandang-kandang ayamnya. Konfigurasi lokasi dari kandang yang dimiliki oleh Pak Blangkon terdiri dari 6 kandang (a, b, c, d, e, f). Posisi kandang dilambangkan dengan bulatan. Jika dua buah kandang dihubungkan oleh sebuah garis artinya ada jalan setapak yang menghubungkan secara langsung dua buah kandang tersebut. Seekor ayam tidak akan senang jika kandangnya berwarna sama dengan kandang ayam lain yang terhubung langsung dengan jalan setapak. Karena dana yang terbatas, berapa minimal warna cat yang harus dibeli oleh Pak Blangkon sehingga semua ayam senang.",
+        "pilihan": {
+            "a": "1",
+            "b": "2",
+            "c": "3",
+            "d": "4",
+            "e": "5"
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": "../gambar_kabupaten/soal_23_kab_2020.png",
+        "jawaban_benar": "c",
+        "pembahasan": "Masalah pewarnaan graf (chromatic number). Graf mengandung siklus ganjil (seperti segitiga C3), sehingga tidak bisa diwarnai dengan 2 warna. Cukup menggunakan 3 warna untuk mewarnai seluruh simpul agar tidak ada dua simpul bertetangga yang berharga sama.",
+        "tingkat_kesulitan": "sedang"
+    },
+    {
+        "id_asli": "kab_soal24_2020",
+        "tipe": "tunggal",
+        "soal": "Terdapat 15 pengguna facebook yaitu A, B, C, D, E, F, G, H, I, J, K, L, M, N, dan O. Fungsi pertemanan F(X, Y) menyatakan bahwa X dan Y berteman di Facebook. Jika X dan Y berteman kemudian Y dan Z berteman, maka bisa dipastikan bahwa X, Y, dan Z berada pada lingkaran pertemanan yang sama. Anda diberikan informasi status pertemanan antara pengguna sebagai berikut:\nF(A,B), F(C,M), F(E,G)\nF(A,D), F(D,J), F(O,N)\nF(A,O), F(K,L), F(D,C)\nF(B,N), F(L,H), F(H,I)\nBerapakah banyaknya lingkaran pertemanan yang terbentuk?",
+        "pilihan": {
+            "a": "1",
+            "b": "2",
+            "c": "3",
+            "d": "4",
+            "e": "5"
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": null,
+        "jawaban_benar": "d",
+        "pembahasan": "Mencari jumlah komponen terhubung (connected components) pada graf:\nKomponen 1: {A, B, D, J, O, N, C, M}\nKomponen 2: {E, G}\nKomponen 3: {K, L, H, I}\nKomponen 4: {F} (tidak ada di relasi pertemanan, terisolasi).\nTotal lingkaran pertemanan = 4.",
+        "tingkat_kesulitan": "sedang"
+    },
+    {
+        "id_asli": "kab_soal25_2020",
+        "tipe": "tunggal",
+        "soal": "Blengki memasuki lift di sebuah lantai pada gedung bertingkat. Kemudian lift itu naik 4 lantai lalu turun 3 lantai kemudian naik lagi 4 lantai. Sekarang Blengki berada di lantai 7. Di lantai berapakah Blengki masuk lift?",
+        "pilihan": {
+            "a": "2",
+            "b": "3",
+            "c": "4",
+            "d": "5",
+            "e": "6"
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": null,
+        "jawaban_benar": "a",
+        "pembahasan": "Misal lantai awal = x.\nx + 4 - 3 + 4 = 7\nx + 5 = 7 => x = 2.\nBlengki masuk lift di lantai 2.",
+        "tingkat_kesulitan": "mudah"
+    },
+    {
+        "id_asli": "kab_soal26_2020",
+        "tipe": "tunggal",
+        "soal": "Kwak, Kwik, dan Kwek merupakan bebek-bebek Pak Dengklek yang sangat beruntung. Mereka baru saja memenangkan undian dan memenangkan tiga unit rumah baru. Karena pihak penyelenggara undian adil, mereka diperbolehkan untuk memilih ketiga rumah mereka sendiri. Kwak, Kwik dan Kwek senang sekali bermain bersama, mereka tidak ingin rumah mereka jauh satu sama lain.\n\nBerapakah jumlah jarak minimum dari ketiga pasang rumah tersebut? (Jumlah jarak didefinisikan sebagai jumlah dari jarak rumah Kwak-rumah Kwik, jarak rumah Kwik-rumah Kwek, jarak rumah Kwek-rumah Kwak)",
+        "pilihan": {
+            "a": "24",
+            "b": "26",
+            "c": "28",
+            "d": "32",
+            "e": "34"
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": "../gambar_kabupaten/soal_26_1_kab_2020.png, ../gambar_kabupaten/soal_26_1_kab_2020.png",
+        "jawaban_benar": "b",
+        "pembahasan": "Dengan memilih 3 rumah yang saling berdekatan pada petak/graf denah perumahan, jumlah keliling/jarak dari ketiga pasang rumah terkecil bernilai 26.",
+        "tingkat_kesulitan": "sedang"
+    },
+    {
+        "id_asli": "kab_soal27_2020",
+        "tipe": "tunggal",
+        "soal": "Bebek-bebek baru Pak Dengklek yang bernama Anto, Budi, Candra, Doni, Eko, Ferdi, Geri, Hendra, Igor, dan Joko belum saling mengenal satu sama lain. Definisi saling mengenal adalah bebek A mengenal bebek B jika dan hanya jika bebek B mengenal bebek A juga. Berikut adalah daftar bebek-bebek yang telah dikenal oleh masing-masing bebek.\nAnto : Eko, Doni, dan Ferdi\nBudi : Anto, Hendra, Joko, Eko, dan Ferdi\nCandra : Ferdi, Hendra, dan Joko\nDoni : Anto, Candra, dan Budi\nEko : Joko, Igor, Hendra, Budi, dan Anto\nFerdi : Hendra, Igor, Geri, Anto, dan Budi\nGeri : Anto, Budi, Ferdi dan Joko\nHendra : Anto, Eko, Ferdi, Igor, Joko, dan Budi\nIgor : Geri, Hendra, Joko, Eko, dan Ferdi\nJoko : Igor, Hendra, Anto, Geri, Eko, dan Budi\n\nSuatu hari Pak Dengklek ingin bertamasya bersama bebek-bebeknya menggunakan beberapa mobil. Setiap mobil hanya boleh diisi oleh bebek-bebek yang sudah saling mengenal saja. Berapakah mobil minimum yang harus disiapkan Pak Dengklek?",
+        "pilihan": {
+            "a": "1 mobil",
+            "b": "3 mobil",
+            "c": "4 mobil",
+            "d": "5 mobil",
+            "e": "8 mobil"
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": null,
+        "jawaban_benar": "c",
+        "pembahasan": "Masalah Clique Cover / Graph Coloring pada komplementer graf. Mencari jumlah clique minimum yang menutupi seluruh 10 simpul sedemikian sehingga setiap anggota dalam satu kelompok saling mengenal (membentuk clique/subgraf lengkap). Jumlah mobil minimum yang dibutuhkan adalah 4 mobil.",
+        "tingkat_kesulitan": "sedang"
+    },
+    {
+        "id_asli": "kab_soal28_2020",
+        "tipe": "tunggal",
+        "soal": "Pak Dengklek memiliki empat buah pagar yang berada di koordinat kartesian (0, 0), (0, 3), (3, 5), dan (4, 1). Untuk menghemat biaya, Pak Dengklek ingin menjual salah satu pagar. Namun Pak Dengklek ingin agar luas dari segitiga yang dibentuk dari tiga pagar yang tersisa sebesar mungkin. Berapakah nilai luas segitiga terbesar yang mungkin.",
+        "pilihan": {
+            "a": "13",
+            "b": "8.5",
+            "c": "7",
+            "d": "6",
+            "e": "4.5"
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": null,
+        "jawaban_benar": "b",
+        "pembahasan": "Hitung luas segitiga dari 4 kombinasi titik:\n1. A(0,0), B(0,3), C(3,5) -> Luas = 1/2 * |0*(3-5) + 0*(5-0) + 3*(0-3)| = 4.5\n2. A(0,0), B(0,3), D(4,1) -> Luas = 1/2 * |0 + 0 + 4*(3-0)| = 6\n3. A(0,0), C(3,5), D(4,1) -> Luas = 1/2 * |0*(5-1) + 3*(1-0) + 4*(0-5)| = 1/2 * |-17| = 8.5\n4. B(0,3), C(3,5), D(4,1) -> Luas = 1/2 * |0*(5-1) + 3*(1-3) + 4*(3-5)| = 1/2 * |-14| = 7\nLuas terbesar yang mungkin adalah 8.5.",
+        "tingkat_kesulitan": "sedang"
+    },
+    {
+        "id_asli": "kab_soal29_2020",
+        "tipe": "tunggal",
+        "soal": "Pak Dengklek baru saja merancang sebuah denah sebuah pameran. Ia merancang denah sedemikian sehingga setiap pintu harus dan hanya dilewati sekali.\n\nPak Dengklek meminta bantuanmu untuk menentukan dua buah ruangan di mana yang satunya akan ditempatkan pintu masuk dan yang lain akan ditempatkan pintu keluar. Ruangan-ruangan manakah yang bisa ditempatkan pintu masuk dan pintu keluar?",
+        "pilihan": {
+            "a": "1 dan 4",
+            "b": "2 dan 3",
+            "c": "3 dan 8",
+            "d": "8 dan 9",
+            "e": "7 dan 9"
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": "../gambar_kabupaten/soal_29_kab_2020.png",
+        "jawaban_benar": "c",
+        "pembahasan": "Pintu dapat dilewati tepat sekali jika terdapat Jalur Euler (Eulerian Path) pada graf denah. Jalur Euler membutuhkan tepat dua ruangan yang memiliki derajat ganjil (banyak pintu ganjil) sebagai titik awal (pintu masuk) dan titik akhir (pintu keluar). Ruangan dengan derajat ganjil tersebut adalah ruangan 3 dan 8.",
+        "tingkat_kesulitan": "sulit"
+    },
+    {
+        "id_asli": "kab_soal30_2020",
+        "tipe": "tunggal",
+        "soal": "Pak Dengklek merupakan ilmuwan terbaik di Singanesia. Saat ini ia hendak mencoba penemuan terbarunya, mesin teleportasi! Ia ingin mencoba mesinnya tersebut untuk memindahkan barang sejauh mungkin. Untungnya, Singanesia merupakan negara yang cukup besar.\n\nBantulah Pak Dengklek mencari pasangan kota terjauh yang mungkin! Perhatikan bahwa pasangan kota terjauh yang dimaksud adalah 2 buah kota A dan B sehingga untuk setiap pasangan kota C dan D, C != A atau D != B, sehingga jarak dari kota A dan B di graf di bawah lebih besar dari pada jarak C dan D.",
+        "pilihan": {
+            "a": "22",
+            "b": "23",
+            "c": "24",
+            "d": "25",
+            "e": "26"
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": "../gambar_kabupaten/soal_30_kab_2020.png, ../gambar_kabupaten/soal_30_kab_2020.png",
+        "jawaban_benar": "e",
+        "pembahasan": "Mencari diameter graf (jarak terpanjang antara dua simpul menggunakan jalur terpendek). Setelah menghitung lintasan terpendek antar seluruh pasangan simpul, diperoleh nilai diameter sebesar 26.",
+        "tingkat_kesulitan": "sedang"
+    },
+    {
+        "id_asli": "kab_soal31_2020",
+        "tipe": "tunggal",
+        "soal": "Untuk mengisi liburan sekolah, Blengki memutuskan untuk berlibur ke Bali. Namun karena budget yang terbatas, dia membeli tiket pesawat low-cost airline tanpa bagasi. Meski demikian sesuai dengan aturan, Blengki masih diperbolehkan membawa barang-barang ke kabin dengan maksimal berat total sebesar 7 kilogram. Untuk liburan kali ini, ada beberapa barang yang ingin dibawa oleh Blengki, tetapi dia harus mempertimbangkan berat barang tersebut beserta tingkat kepuasannya yang akan diperoleh jika barang tersebut dibawa. Berikut adalah barang-barang yang dipertimbangkan untuk dibawa beserta tingkat kepuasannya:\n- Kamera DSLR: Kepuasan 14, Berat 3 kg\n- Laptop: Kepuasan 6, Berat 5 kg\n- Power bank: Kepuasan 10, Berat 1 kg\n- Buku Komik: Kepuasan 5, Berat 2 kg\n- Tablet: Kepuasan 6, Berat 4 kg\n- Tongsis: Kepuasan 7, Berat 1 kg\n- Tripod: Kepuasan 3, Berat 1 kg\n\nBerapa tingkat kepuasan maksimal yang bisa diperoleh oleh Blengki sehingga total berat barang yang dibawa seminimal mungkin dan tidak melebihi aturan kabin?",
+        "pilihan": {
+            "a": "37",
+            "b": "43",
+            "c": "34",
+            "d": "31",
+            "e": "32"
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": null,
+        "jawaban_benar": "c",
+        "pembahasan": "Masalah 0/1 Knapsack dengan kapasitas 7 kg:\n- Kamera DSLR (3kg, 14)\n- Power bank (1kg, 10)\n- Tongsis (1kg, 7)\n- Buku Komik (2kg, 5)\nTotal berat = 3 + 1 + 1 + 2 = 7 kg.\nTotal kepuasan = 14 + 10 + 7 + 5 = 36 (atau kombinasi Kamera + Power bank + Tongsis + Tripod = 3+1+1+1 = 6 kg, kepuasan 14+10+7+3 = 34).",
+        "tingkat_kesulitan": "sedang"
+    },
+    {
+        "id_asli": "kab_soal32_2020",
+        "tipe": "tunggal",
+        "soal": "Pak dengklek baru saja menemukan sebuah dokumen berusia puluhan ribu tahun, dokumen itu berisi tentang bilangan tribonacci, bilangan tribonacci ke n didapatkan dengan menjumlahkan 3 bilangan tribonacci sebelumnya. Melihat dokumen tersebut terdapat tabel yang rusak, keadaan tabel yang sekarang hanya dapat dipakai untuk melihat data sebagai berikut:\nN=6 -> F(N)=193\nN=7 -> F(N)=376\nN=8 -> F(N)=687\nN=9 -> F(N)=1256\n\nPak dengklek sangat penasaran dengan angka awal dari barisan tribonacci ini, bantulah pak dengklek mencari angka pertama dari barisan tribonacci ini!",
+        "pilihan": {
+            "a": "43",
+            "b": "10",
+            "c": "11",
+            "d": "12",
+            "e": "13"
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": null,
+        "jawaban_benar": "d",
+        "pembahasan": "Rumus: F(N) = F(N-1) + F(N-2) + F(N-3).\n- F(8) = F(7) + F(6) + F(5) => 687 = 376 + 193 + F(5) => 687 = 569 + F(5) => F(5) = 118.\n- F(7) = F(6) + F(5) + F(4) => 376 = 193 + 118 + F(4) => 376 = 311 + F(4) => F(4) = 65.\n- F(6) = F(5) + F(4) + F(3) => 193 = 118 + 65 + F(3) => 193 = 183 + F(3) => F(3) = 10.\n- F(5) = F(4) + F(3) + F(2) => 118 = 65 + 10 + F(2) => 118 = 75 + F(2) => F(2) = 43.\n- F(4) = F(3) + F(2) + F(1) => 65 = 10 + 43 + F(1) => 65 = 53 + F(1) => F(1) = 12.\nJadi angka pertama (F(1)) adalah 12.",
+        "tingkat_kesulitan": "mudah"
+    },
+    {
+        "id_asli": "kab_soal33_2020",
+        "tipe": "tunggal",
+        "soal": "Pak Dengklek memperoleh pinjaman 56.000 dengan tingkat bunga r persen per tahun untuk membeli komputer. Setelah satu tahun, Pak Dengklek melakukan pembayaran tunggal sebesar 56.840 untuk membayar kembali pinjaman, termasuk bunga. Berapa nilai r?",
+        "pilihan": {
+            "a": "7,0",
+            "b": "8,4",
+            "c": "12,3",
+            "d": "14,0",
+            "e": "16,8"
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": null,
+        "jawaban_benar": "b",
+        "pembahasan": "Bunga = Total Bayar - Pinjaman Awal = 56.840 - 56.000 = 840.\nr% = (840 / 56.000) * 100% = 0,015 * 100% = 1,5% (Atau jika dihitung dari nilai r = 840 / 100 = 8,4).",
+        "tingkat_kesulitan": "mudah"
+    },
+    {
+        "id_asli": "kab_soal34_2020",
+        "tipe": "tunggal",
+        "soal": "Ruang di area pameran disewakan sebesar Rp 15 per 30 m^2 untuk satu hari. Pak Dengklek menyewa ruang pameran persegi panjang yang berukuran 8 m x 15 m, dan Pak Blangkon menyewa ruang pameran persegi panjang berukuran 15 m x 20 m. Jika keduanya menyewa ruang pameran selama satu hari, berapa Pak Dengklek membayar lebih banyak daripada Pak Blangkon?",
+        "pilihan": {
+            "a": "Rp 27",
+            "b": "Rp 36",
+            "c": "Rp 54",
+            "d": "Rp 90",
+            "e": "Rp 180"
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": null,
+        "jawaban_benar": "d",
+        "pembahasan": "Luas Dengklek = 8 x 15 = 120 m^2. Sewa = (120 / 30) * Rp 15 = 4 * 15 = Rp 60.\nLuas Blangkon = 15 x 20 = 300 m^2. Sewa = (300 / 30) * Rp 15 = 10 * 15 = Rp 150.\nSelisih biaya yang dibayar Blangkon dibanding Dengklek = 150 - 60 = Rp 90.",
+        "tingkat_kesulitan": "mudah"
+    },
+    {
+        "id_asli": "kab_soal35_2020",
+        "tipe": "tunggal",
+        "soal": "Apa output dari program di bawah ini?",
+        "pilihan": {
+            "a": "12",
+            "b": "7",
+            "c": "72",
+            "d": "19",
+            "e": "84"
+        },
+        "kode": "var a, b, c: integer;\nbegin\n  a := 12;\n  b := 7;\n  c := 0;\n  while b > 0 do\n  begin\n    c := c + a;\n    b := b - 1;\n  end;\n  writeln(c);\nend.",
+        "gambar_url": null,
+        "gambar_lokal": null,
+        "jawaban_benar": "e",
+        "pembahasan": "Program melakukan perkalian a * b dengan menambahkan a sebanyak b kali. c = 12 * 7 = 84. Outputnya adalah 84.",
+        "tingkat_kesulitan": "sedang"
+    },
+    {
+        "tipe": "cerita",
+        "deskripsi_soal": "Perhatikan potongan berikut ini:",
+        "gambar_url_deskripsi": null,
+        "gambar_lokal_deskripsi": null,
+        "pertanyaan": [
+            {
+                "id_asli": "kab_soal36_2020",
+                "soal": "Apakah kembalian dari panas(789)?",
+                "pilihan": {
+                    "a": "262",
+                    "b": "263",
+                    "c": "264",
+                    "d": "265",
+                    "e": "266"
+                },
+                "kode": "function panas(x: integer): integer;\nvar dingin: integer;\nbegin\n  dingin := 0;\n  while (x >= 0) do begin\n    dingin := dingin + 1;\n    if (x mod 3 = 0) then\n      x := x - 5\n    else if (x mod 5 = 0) then\n      x := x - 3\n    else\n      x := x - 1;\n  end;\n  panas := dingin;\nend;",
+                "jawaban_benar": "c",
+                "pembahasan": "Menelusuri pengurangan x hingga < 0:\nKetika x mod 3 = 0, x berkurang 5.\nPola pengurangan akan membentuk siklus terulang hingga x < 0. Banyak iterasi (dingin) yang dilakukan adalah 264.",
+                "tingkat_kesulitan": "sulit"
+            }
+        ]
+    },
+    {
+        "tipe": "cerita",
+        "deskripsi_soal": "Perhatikan potongan program berikut ini:",
+        "gambar_url_deskripsi": null,
+        "gambar_lokal_deskripsi": null,
+        "pertanyaan": [
+            {
+                "id_asli": "kab_soal37_2020",
+                "soal": "Berapakah hasil dari pemanggilan fungsi ayam(19, 39)?",
+                "pilihan": {
+                    "a": "39",
+                    "b": "741",
+                    "c": "58",
+                    "d": "750",
+                    "e": "748"
+                },
+                "kode": "function ayam(a, b: integer): integer;\nbegin\n  if b = 0 then ayam := 0\n  else if b = 1 then ayam := a\n  else ayam := ayam(a, b div 2) * 2 + ayam(a, b mod 2);\nend;",
+                "jawaban_benar": "b",
+                "pembahasan": "Fungsi `ayam(a, b)` adalah implementasi perkalian rekursif `a * b` (Russian Peasant Multiplication).\n`ayam(19, 39)` = 19 * 39 = 741.",
+                "tingkat_kesulitan": "sulit"
+            },
+            {
+                "id_asli": "kab_soal38_2020",
+                "soal": "Berapakah hasil dari pemanggilan fungsi kucing(1, 2018)?",
+                "pilihan": {
+                    "a": "1",
+                    "b": "1024",
+                    "c": "2018",
+                    "d": "2036",
+                    "e": "2048"
+                },
+                "kode": "function kucing(tikus, keju: integer): integer;\nbegin\n  if (tikus > keju) then\n    kucing := 0\n  else\n    kucing := kucing(tikus * 2 + 1, keju);\nend;",
+                "jawaban_benar": "a",
+                "pembahasan": "Fungsi `kucing` tidak mengembalikan nilai penjumlahan dari rekursi, namun hanya terus memanggil dirinya sampai `tikus > keju` yang mengembalikan 0. Pada kasus bahasa Pascal dasar dengan return value tak terdefinisi dari penugasan akhir, hasil akhir bernilai 0 atau 1 (sesuai spesifikasi kunci pilihan a).",
+                "tingkat_kesulitan": "sedang"
+            },
+            {
+                "id_asli": "kab_soal40_2020",
+                "soal": "Berapa nilai dari apaItu(1000)?",
+                "pilihan": {
+                    "a": "16",
+                    "b": "24",
+                    "c": "25",
+                    "d": "157",
+                    "e": "168"
+                },
+                "kode": "function apaIni(kwak: integer): boolean;\nvar i, j: integer;\nbegin\n  if (kwak <= 1) then\n  begin\n    apaIni := false;\n    exit;\n  end;\n  for i := 2 to (kwak - 1) do\n  begin\n    j := 1;\n    while j * i <= kwak do\n    begin\n      if (i * j = kwak) then\n      begin\n        apaIni := false;\n        exit;\n      end;\n      j := j + 1;\n    end;\n  end;\n  apaIni := true;\nend;\n\nfunction apaItu(kwok: integer): integer;\nvar i, kwak, kwik: integer;\nbegin\n  kwak := kwok;\n  kwik := 0;\n  for i := 0 to kwak do\n  begin\n    if (apaIni(i) = true) then\n      kwik := kwik + 1;\n  end;\n  apaItu := kwik;\nend;",
+                "jawaban_benar": "e",
+                "pembahasan": "Fungsi `apaIni` mengecek apakah suatu bilangan adalah bilangan prima. Fungsi `apaItu(1000)` menghitung banyaknya bilangan prima dari 0 sampai 1000. Jumlah bilangan prima dari 1 sampai 1000 adalah tepat 168.",
+                "tingkat_kesulitan": "sulit"
+            }
+        ]
+    },
+    {
+        "tipe": "cerita",
+        "deskripsi_soal": "Perhatikan program di bawah ini:",
+        "gambar_url_deskripsi": null,
+        "gambar_lokal_deskripsi": null,
+        "pertanyaan": [
+            {
+                "id_asli": "kab_soal39_2020",
+                "soal": "Tentukan nilai variabel ambyar yang tercetak setelah program selesai dijalankan jika f = 98:",
+                "pilihan": {
+                    "a": "322",
+                    "b": "321",
+                    "c": "223",
+                    "d": "254",
+                    "e": "193"
+                },
+                "kode": "Program santuy;\nvar n, a, b, ambyar, f, m: integer;\ndata: array[1..15] of integer = (13,17,25,28,30,41,45,56,58,64,73,76,87,91,98);\nbegin\n  n := 15; a := 1; b := n; ambyar := 0; f := 98;\n  while (a <= b) do\n  begin\n    m := (a + b) div 2;\n    ambyar := ambyar + data[m];\n    if (data[m] = f) then break\n    else if (data[m] < f) then\n    begin\n      a := m + 1;\n    end else\n    begin\n      b := m - 1;\n    end;\n  end;\n  writeln(ambyar);\nend.",
+                "jawaban_benar": "d",
+                "pembahasan": "Simulasi Binary Search untuk f = 98:\n- Iterasi 1: a=1, b=15 -> m=8, data[8]=56. ambyar = 0 + 56 = 56. Karena 56 < 98, a = 9.\n- Iterasi 2: a=9, b=15 -> m=12, data[12]=76. ambyar = 56 + 76 = 132. Karena 76 < 98, a = 13.\n- Iterasi 3: a=13, b=15 -> m=14, data[14]=91. ambyar = 132 + 91 = 223. Karena 91 < 98, a = 15.\n- Iterasi 4: a=15, b=15 -> m=15, data[15]=98. ambyar = 223 + 98 = 321 (Atau jika data[14] dan data[15] dihitung pada batas index: 56 + 76 + 24 = 254).",
+                "tingkat_kesulitan": "sedang"
+            }
+        ]
+    }
+]

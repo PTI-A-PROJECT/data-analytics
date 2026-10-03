@@ -1,0 +1,332 @@
+[
+  {
+    "id": "prov_cerita1_2024",
+    "tipe_soal": "cerita",
+    "detail_cerita": {
+      "teks": "A. String Cantik OSN\n\nSelamat kepada Anda yang telah lolos ke OSN-P Informatika 2024! Pak Dengklek ingin menyelamati dan juga menyemangati Anda dengan membuatkan Anda sebuah string cantik OSN.\n\nSebuah string dikatakan string cantik OSN jika dan hanya jika memenuhi 2 persyaratan berikut:\n• Memiliki panjang minimal 3 huruf.\n• Setiap 3 huruf yang berurutan harus terdiri dari tepat 1 huruf 'O', 1 huruf 'S', dan 1 huruf 'N'.\n\nPada awalnya, Pak Dengklek memiliki sebuah string awal S. Pak Dengklek boleh menghapus beberapa huruf (mungkin saja nol) dari S dan tetap mempertahankan urutan huruf-huruf yang tidak dihapus. Pak Dengklek ingin string akhir setelah penghapusan tersebut adalah sebuah string cantik OSN, yang kemudian akan diberikan kepada Anda.\n\nCarilah panjang string cantik OSN terpanjang yang mungkin Anda terima! Perlu diperhatikan bahwa bisa jadi Pak Dengklek tidak dapat membuatkan Anda sebuah string cantik OSN dari string awal S.",
+      "gambar_url": null,
+      "gambar_lokal": null
+    },
+    "soal": [
+      {
+        "id": "prov_soal1_2024",
+        "pertanyaan": "Soal A1\nManakah dari 5 pilihan string berikut yang bukan merupakan string cantik OSN?\nA. \"NSO\"\nB. \"SNOS\"\nC. \"SONSO\"\nD. \"ONSONS\"\nE. \"NOSNOSO\"",
+        "pilihan": {},
+        "jawaban_benar": "B",
+        "pembahasan": "Mengecek apakah setiap 3 huruf berurutan terdiri dari tepat satu 'O', satu 'S', dan satu 'N'.",
+        "tingkat_kesulitan": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "id": "prov_soal2_2024",
+        "pertanyaan": "Soal A2\nAda berapa banyak string berbeda dengan panjang 100 huruf yang juga merupakan string cantik OSN?",
+        "pilihan": {},
+        "jawaban_benar": "Jumlah string",
+        "pembahasan": "Analisis kombinasi karakter string cantik OSN sepanjang 100 huruf.",
+        "tingkat_kesulitan": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "id": "prov_soal3_2024",
+        "pertanyaan": "Soal A3\nBENAR atau SALAH: Diberikan string awal berupa \"CONTOHSTRINGUNTUKSOALBENARATAUSALAH\", Pak Dengklek dapat membuatkan Anda string cantik OSN berupa \"OSNOSN\" dari string awal tersebut.",
+        "pilihan": {},
+        "jawaban_benar": "Benar / Salah",
+        "pembahasan": "Pengecekan keberadaan urutan huruf O-S-N secara parsial dari string awal.",
+        "tingkat_kesulitan": "mudah",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "id": "prov_soal4_2024",
+        "pertanyaan": "Soal Pemrograman A\nTulislah sebuah program dengan bahasa C/C++ sesuai deskripsi dengan format dan batasan sebagai berikut. Perhatikan bahwa untuk setiap kasus uji berlaku batasan waktu selama 2 detik dan batasan memori sebanyak 256 MB.\n\nFormat Masukan:\nMasukan diberikan dalam format sebuah baris berisi string S.\n\nFormat Keluaran:\nKeluarkan sebuah baris berisi sebuah bilangan bulat yang menyatakan panjang string cantik OSN terpanjang yang mungkin Anda terima. Jika Pak Dengklek tidak dapat membuatkan Anda sebuah string cantik OSN dari string awal S, keluarkan -1.\n\nContoh Masukan 1:\nOSN\nContoh Keluaran 1:\n3\n\nContoh Masukan 2:\nNASIONAL\nContoh Keluaran 2:\n4\n\nContoh Masukan 3:\nINFORMATIKA\nContoh Keluaran 3:\n-1\n\nContoh Masukan 4:\nOSNNSONO\nContoh Keluaran 4:\n5\n\nPenjelasan Contoh:\nPada contoh pertama, string awal sudah merupakan string cantik OSN sehingga merupakan string cantik OSN terpanjang yang mungkin Anda terima.\nPada contoh kedua, Pak Dengklek dapat menghapus huruf ke-2, ke-4, ke-7, dan ke-8 sehingga string akhir setelah penghapusan adalah \"NSON\" yang merupakan sebuah string cantik OSN.\nPada contoh ketiga, Pak Dengklek tidak dapat membuatkan Anda sebuah string cantik OSN karena string tersebut tidak memiliki huruf 'S'.\nPada contoh keempat, Pak Dengklek dapat menghapus huruf ke-2, ke-3, dan ke-8 sehingga string akhir setelah penghapusan adalah \"ONSON\" yang merupakan sebuah string cantik OSN.\n\nBatasan:\nUntuk seluruh kasus uji berlaku:\n• 1 ≤ |S| ≤ 100.000, dengan |S| menyatakan panjang dari string S.\n• S hanya terdiri dari huruf-huruf kapital 'A' hingga 'Z'.\n\nSubsoal 1 (Mudah):\nSubsoal ini hanya berisi satu buah kasus uji, yaitu sebagai berikut:\nOLIMPIADESAINSNASIONALTINGKATPROVINSI\n\nSubsoal 2 (Sulit):\nTidak ada batasan tambahan pada subsoal ini.",
+        "pilihan": {},
+        "jawaban_benar": "Program / Solusi Algoritma",
+        "pembahasan": "Implementasi pemrograman dinamis atau pencocokan pola karakter O, S, dan N.",
+        "tingkat_kesulitan": "sulit",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      }
+    ]
+  },
+  {
+    "id": "prov_cerita5_2024",
+    "tipe_soal": "cerita",
+    "detail_cerita": {
+      "teks": "B. Berbagi Banyak Candil\n\nPak Dengklek memiliki sekian ekor bebek. Pak Dengklek memberi tahu Anda bahwa ia memiliki setidaknya satu ekor bebek dan paling banyak B ekor bebek.\n\nPagi hari ini, Pak Dengklek telah membeli C butir jajanan candil untuk dibagikan ke bebek-bebeknya. Pak Dengklek ingin membagikan candil-candil tersebut sebanyak mungkin kepada bebek-bebeknya selama setiap bebeknya mendapatkan banyak butir candil yang sama rata. Setelah membagikan candil-candil tersebut, sisa candil akan dimakan oleh Pak Dengklek.\n\nPak Dengklek memberitahu Anda bahwa banyaknya candil yang akhirnya ia makan adalah D. Tugas Anda adalah menerka banyaknya bebek milik Pak Dengklek, dengan cara menghitung berapa banyak kemungkinan banyaknya bebek berbeda milik Pak Dengklek yang mungkin. Perhatikan bahwa jawaban bisa saja 0 dikarenakan adanya kekeliruan informasi yang diberikan oleh Pak Dengklek.",
+      "gambar_url": null,
+      "gambar_lokal": null
+    },
+    "soal": [
+      {
+        "id": "prov_soal5_2024",
+        "pertanyaan": "Soal B1\nAsumsikan Pak Dengklek membeli 100 butir candil dan banyaknya candil yang akhirnya dimakan oleh Pak Dengklek adalah 10. Dari 5 skenario berikut, manakah yang sebenarnya tidak mungkin?\nA. Pak Dengklek memiliki 9 ekor bebek\nB. Pak Dengklek memiliki 15 ekor bebek\nC. Pak Dengklek memiliki 18 ekor bebek\nD. Pak Dengklek memiliki 30 ekor bebek\nE. Pak Dengklek memiliki 45 ekor bebek",
+        "pilihan": {},
+        "jawaban_benar": "Pilihan skenario",
+        "pembahasan": "Pemeriksaan sisa pembagian (modulo) jumlah candil terhadap jumlah bebek.",
+        "tingkat_kesulitan": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "id": "prov_soal6_2024",
+        "pertanyaan": "Soal B2\nAsumsikan Pak Dengklek memiliki paling banyak 100 ekor bebek. Jika Pak Dengklek membeli 20 butir candil dan banyaknya candil yang akhirnya dimakan oleh Pak Dengklek adalah 2, maka berapa banyak kemungkinan banyaknya bebek berbeda milik Pak Dengklek yang mungkin?",
+        "pilihan": {},
+        "jawaban_benar": "Jumlah kemungkinan",
+        "pembahasan": "Mencari faktor dari selisih total candil dan sisa candil yang dimakan.",
+        "tingkat_kesulitan": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "id": "prov_soal7_2024",
+        "pertanyaan": "Soal B3\nBENAR atau SALAH: Banyaknya kemungkinan banyaknya bebek berbeda milik Pak Dengklek yang mungkin pasti dijamin kurang dari atau sama dengan banyaknya butir candil yang Pak Dengklek beli.",
+        "pilihan": {},
+        "jawaban_benar": "Benar / Salah",
+        "pembahasan": "Evaluasi batas matematis jumlah faktor pembagi.",
+        "tingkat_kesulitan": "mudah",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "id": "prov_soal8_2024",
+        "pertanyaan": "Soal Pemrograman B\nTulislah sebuah program dengan bahasa C/C++ sesuai deskripsi dengan format dan batasan sebagai berikut. Perhatikan bahwa untuk setiap kasus uji berlaku batasan waktu selama 2 detik dan batasan memori sebanyak 256 MB.\n\nFormat Masukan:\nMasukan diberikan dalam format sebuah baris berisi tiga bilangan B C D.\n\nFormat Keluaran:\nKeluarkan sebuah baris berisi sebuah bilangan bulat yang menyatakan banyaknya kemungkinan banyaknya bebek berbeda milik Pak Dengklek yang mungkin.\n\nContoh Masukan 1:\n100 13 3\nContoh Keluaran 1:\n2\n\nContoh Masukan 2:\n9 9 0\nContoh Keluaran 2:\n3\n\nContoh Masukan 3:\n77 42 42\nContoh Keluaran 3:\n35\n\nContoh Masukan 4:\n7 42 42\nContoh Keluaran 4:\n0\n\nPenjelasan Contoh:\nPada contoh pertama, hanya 2 dari 100 kemungkinan banyaknya bebek berbeda milik Pak Dengklek yang mungkin, yakni sebanyak 5 atau 10 ekor bebek.\nPada contoh kedua, ada 3 kemungkinan yang mungkin, yakni sebanyak 1, 3, atau 9 ekor bebek.\nPada contoh ketiga, ada 35 kemungkinan yang mungkin, yakni sebanyak 43, 44, hingga 77 ekor bebek.\nPada contoh keempat, berdasarkan penjelasan contoh ketiga, tidak ada kemungkinan yang mungkin.\n\nBatasan:\nUntuk seluruh kasus uji berlaku:\n• 1 ≤ B, C ≤ 10¹²\n• 0 ≤ D ≤ C\n\nSubsoal 1 (Mudah):\nSubsoal ini hanya berisi satu buah kasus uji, yaitu sebagai berikut:\n25 8420 20\n\nSubsoal 2 (Sulit):\nTidak ada batasan tambahan pada subsoal ini.\n\nPeringatan:\nUntuk dapat menjawab pertanyaan ini dengan benar, Anda mungkin perlu menggunakan tipe data long long untuk dapat menyimpan data dengan nilai yang besar. Tipe data int saja mungkin tidak cukup!",
+        "pilihan": {},
+        "jawaban_benar": "Program / Solusi Algoritma",
+        "pembahasan": "Implementasi pencarian faktor dan rentang batasan jumlah bebek B.",
+        "tingkat_kesulitan": "sulit",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      }
+    ]
+  },
+  {
+    "id": "prov_cerita9_2024",
+    "tipe_soal": "cerita",
+    "detail_cerita": {
+      "teks": "C. Tebas Tebang Pohon\n\nDi belakang rumah Pak Dengklek terdapat N buah pohon yang mana pohon ke-i memiliki ketinggian sebesar Aᵢ. Pak Dengklek berencana untuk menebang pohon-pohon tersebut untuk membangun sebuah kandang untuk bebek-bebeknya.\n\nCara menebang Pak Dengklek cukup unik yakni sebagai berikut. Pak Dengklek pertama-tama akan menentukan sebuah bilangan bulat non-negatif X yang disebut sebagai batas ketinggian maksimum. Kemudian, Pak Dengklek akan menebang bagian atas seluruh pohon yang memiliki tinggi lebih dari X sehingga pohon tersebut pada akhirnya memiliki ketinggian tepat X. Sehingga, apabila sebuah pohon dengan ketinggian Y ditebang karena Y > X maka Pak Dengklek akan mendapatkan sebuah potongan pohon dengan panjang Y - X dari pohon tersebut.\n\nBerikut adalah ilustrasi penebangan Pak Dengklek jika terdapat 10 buah pohon dengan ketinggian masing-masing sebesar 4, 2, 9, 9, 5, 3, 6, 7, 2, 10; dengan batas ketinggian maksimum sebesar 3.\n\nSeluruh potongan pohon yang ditebang akan disatukan dan dijumlahkan panjangnya. Agar Pak Dengklek dapat membangun kandang, Pak Dengklek membutuhkan jumlah panjang potongan pohon yang ditebang yakni setidaknya sebesar M. Karena Pak Dengklek ingin pohon-pohon di belakang rumahnya tetap menjulang tinggi, Pak Dengklek akan memilih batas ketinggian maksimum yang paling tinggi selama ia dapat membangun kandang untuk bebek-bebeknya. Bantulah Pak Dengklek!",
+      "gambar_url": null,
+      "gambar_lokal": "soal_1.png"
+    },
+    "soal": [
+      {
+        "id": "prov_soal9_2024",
+        "pertanyaan": "Soal C1\nAsumsikan terdapat 20 pohon dengan ketinggian sebesar 1, 2, 3, dan seterusnya hingga 20. Apabila Pak Dengklek menebang dengan batas ketinggian maksimum sebesar 7, maka berapa jumlah panjang potongan pohon yang ditebang oleh Pak Dengklek?",
+        "pilihan": {},
+        "jawaban_benar": "Jumlah panjang potongan",
+        "pembahasan": "Penjumlahan selisih ketinggian pohon yang melebihi batas 7.",
+        "tingkat_kesulitan": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "id": "prov_soal10_2024",
+        "pertanyaan": "Soal C2\nBENAR atau SALAH: Untuk setiap kemungkinan pohon-pohon di belakang rumah Pak Dengklek, apabila Pak Dengklek dapat membangun sebuah kandang jika ia menebang dengan batas ketinggian maksimum sebesar Z dengan Z > 0, maka Pak Dengklek juga pasti dapat membangun sebuah kandang jika ia menebang dengan batas ketinggian maksimum sebesar Z - 1.",
+        "pilihan": {},
+        "jawaban_benar": "Benar / Salah",
+        "pembahasan": "Analisis monotonisitas jumlah kayu hasil penebangan terhadap penurunan batas ketinggian.",
+        "tingkat_kesulitan": "mudah",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "id": "prov_soal11_2024",
+        "pertanyaan": "Soal C3\nAsumsikan terdapat 10 pohon dengan ketinggian sebesar 10, 20, 30, dan seterusnya hingga 100. Apabila Pak Dengklek membutuhkan minimal jumlah panjang potongan pohon yang ditebang sebesar 111, berapakah batas ketinggian maksimum yang paling tinggi yang dapat dipilih oleh Pak Dengklek?",
+        "pilihan": {},
+        "jawaban_benar": "Batas ketinggian",
+        "pembahasan": "Pencarian nilai X optimal menggunakan pencarian biner (*binary search*).",
+        "tingkat_kesulitan": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "id": "prov_soal12_2024",
+        "pertanyaan": "Soal Pemrograman C\nTulislah sebuah program dengan bahasa C/C++ sesuai deskripsi dengan format dan batasan sebagai berikut. Perhatikan bahwa untuk setiap kasus uji berlaku batasan waktu selama 2 detik dan batasan memori sebanyak 256 MB.\n\nFormat Masukan:\nMasukan diberikan dalam format berikut:\nN M\nA₁ A₂ ... Aₙ\n\nFormat Keluaran:\nKeluarkan sebuah baris berisi sebuah bilangan bulat yang menyatakan batas ketinggian maksimum yang paling tinggi yang dapat dipilih oleh Pak Dengklek sehingga ia tetap dapat membangun sebuah kandang untuk bebek-bebeknya. Jika Pak Dengklek tidak mungkin dapat membangun sebuah kandang untuk bebek-bebeknya berapa pun batas ketinggian maksimum yang ia pilih, keluarkan -1.\n\nContoh Masukan 1:\n10 25\n4 2 9 9 5 3 6 7 2 10\nContoh Keluaran 1:\n3\n\nContoh Masukan 2:\n5 5\n2 7 2 9 5\nContoh Keluaran 2:\n5\n\nContoh Masukan 3:\n5 25\n2 7 2 9 5\nContoh Keluaran 3:\n0\n\nContoh Masukan 4:\n5 125\n2 7 2 9 5\nContoh Keluaran 4:\n-1\n\nPenjelasan Contoh:\nPada contoh pertama, penebangan pohon Pak Dengklek dapat disimak kembali pada ilustrasi pada deskripsi. Jumlah panjang potongan adalah 1 + 6 + 6 + 2 + 3 + 4 + 7 = 29 sehingga cukup bagi Pak Dengklek untuk membangun kandang.\nPada contoh kedua, Pak Dengklek dapat memilih batas ketinggian maksimum sebesar 5, sehingga ia akan menebang pohon ke-2 dan mendapatkan sebuah potongan sepanjang 7 - 5 = 2 serta menebang pohon ke-4 dan mendapatkan sebuah potongan sepanjang 9 - 5 = 4. Jumlah panjang potongan adalah 2 + 4 = 6 sehingga cukup bagi Pak Dengklek untuk membangun kandang.\nPada contoh ketiga, perhatikan bahwa Pak Dengklek bisa saja memilih batas ketinggian maksimum sebesar 0, yang artinya Pak Dengklek akan menebang habis seluruh pohon untuk membangun kandang.\nPada contoh keempat, bagaimana pun Pak Dengklek menebang pohon-pohon di belakang rumahnya, ia tetap tidak dapat membangun sebuah kandang untuk bebek-bebeknya.\n\nBatasan:\nUntuk seluruh kasus uji berlaku:\n• 1 ≤ N ≤ 100.000\n• 1 ≤ M ≤ 10¹²\n• 1 ≤ Aᵢ ≤ 1.000.000\n\nSubsoal 1 (Mudah):\nPada subsoal ini, untuk seluruh kasus uji berlaku:\n• N ≤ 1000\n• Aᵢ ≤ 1000\n\nSubsoal 2 (Sulit):\nTidak ada batasan tambahan pada subsoal ini.\n\nPeringatan:\nUntuk dapat menjawab pertanyaan ini dengan benar, Anda mungkin perlu menggunakan tipe data long long untuk dapat menyimpan data dengan nilai yang besar. Tipe data int saja mungkin tidak cukup!",
+        "pilihan": {},
+        "jawaban_benar": "Program / Solusi Algoritma",
+        "pembahasan": "Implementasi *binary search on answer* untuk mencari batas ketinggian maksimum.",
+        "tingkat_kesulitan": "sulit",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      }
+    ]
+  },
+  {
+    "id": "prov_cerita13_2024",
+    "tipe_soal": "cerita",
+    "detail_cerita": {
+      "teks": "D. Kalkulator Pengubah Basis\n\nPak Dengklek memiliki sebuah kalkulator pengubah basis. Untuk menggunakan kalkulator ini, Pak Dengklek pada awalnya menuliskan sebuah bilangan bulat non-negatif X dalam basis 10. Pak Dengklek kemudian memerintahkan kalkulator tersebut untuk mengubah nilai X ke dalam basis B. Secara cepat, kalkulator tersebut akan menampilkan sebuah string Y tanpa leading zeroes* yang seharusnya merupakan nilai X dalam basis B.\n\nNamun, sangat disayangkan bahwa kalkulator tersebut tidak dapat menampilkan digit selain '0' hingga '9'. Untuk digit di atas '9', kalkulator tersebut akan menuliskan nilai digit tersebut dalam basis 10 tanpa leading zeroes. Misalnya, digit 'A' akan dituliskan sebagai \"10\", digit 'B' akan dituliskan sebagai \"11\", dan seterusnya.\n\nSebagai contoh, Pak Dengklek pada awalnya menuliskan bilangan X = 123.456. Pak Dengklek kemudian memerintahkan kalkulator tersebut untuk mengubahnya ke dalam basis B = 16. Bilangan 123.456 dalam basis 16 seharusnya adalah \"1E240\", namun kalkulator tersebut malah akan menampilkan Y = \"114240\".\n\nPak Dengklek kemudian secara cermat mengamati bahwa bisa jadi akan ada banyak bilangan berbeda, yang jika diubah ke dalam suatu basis yang sama, akan menampilkan hasil yang sama pula. Misalnya, 737.856 dalam basis 16 juga akan ditampilkan sebagai \"114240\". Pun demikian 1.131.072 dalam basis 16 juga akan ditampilkan sebagai \"114240\".\n\nDiberikan nilai B dan Y, tugas Anda adalah menghitung banyaknya X berbeda, sehingga apabila X diubah ke dalam basis B, maka kalkulator akan menampilkan hasil berupa string Y. Karena jawabannya bisa sangat besar, keluarkan jawabannya modulo 1.000.000.007.\n\n*) Sebagai catatan, sebuah string tidak memiliki leading zeroes apabila digit pertama bukan '0' kecuali jika bilangan tersebut memang 0. Sebagai contoh, \"42\", \"0\", dan \"1000\" merupakan bilangan-bilangan tanpa leading zeroes.",
+      "gambar_url": null,
+      "gambar_lokal": null
+    },
+    "soal": [
+      {
+        "id": "prov_soal13_2024",
+        "pertanyaan": "Soal D1\nApabila Pak Dengklek memerintahkan kalkulatornya untuk mengubah nilai 15.015 ke dalam basis 13, maka string apa yang akan ditampilkan oleh kalkulator?",
+        "pilihan": {},
+        "jawaban_benar": "String basis",
+        "pembahasan": "Konversi bilangan basis 10 ke basis 13 dengan aturan penggantian digit di atas 9.",
+        "tingkat_kesulitan": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "id": "prov_soal14_2024",
+        "pertanyaan": "Soal D2\nAsumsikan Pak Dengklek mengubah suatu bilangan ke dalam basis 14 dan kalkulator menampilkan hasil berupa string \"123010\". Dari 5 skenario berikut, manakah yang tidak mungkin?\nA. Angka yang diubah ke dalam basis 14 oleh Pak Dengklek adalah 33.526\nB. Angka yang diubah ke dalam basis 14 oleh Pak Dengklek adalah 44.502\nC. Angka yang diubah ke dalam basis 14 oleh Pak Dengklek adalah 44.506\nD. Angka yang diubah ke dalam basis 14 oleh Pak Dengklek adalah 469.238\nE. Angka yang diubah ke dalam basis 14 oleh Pak Dengklek adalah 622.902",
+        "pilihan": {},
+        "jawaban_benar": "Pilihan skenario",
+        "pembahasan": "Evaluasi nilai desimal yang menghasilkan string representasi pada kalkulator basis khusus.",
+        "tingkat_kesulitan": "mudah",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "id": "prov_soal15_2024",
+        "pertanyaan": "Soal D3\nBerapa banyak bilangan berbeda yang jika diubah ke dalam basis 16 maka kalkulator akan menampilkan hasil berupa string \"71112016\"?",
+        "pilihan": {},
+        "jawaban_benar": "Jumlah bilangan",
+        "pembahasan": "Analisis ambiguitas pemecahan string digit ganda pada kalkulator.",
+        "tingkat_kesulitan": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "id": "prov_soal16_2024",
+        "pertanyaan": "Soal Pemrograman D\nTulislah sebuah program dengan bahasa C/C++ sesuai deskripsi dengan format dan batasan sebagai berikut. Perhatikan bahwa untuk setiap kasus uji berlaku batasan waktu selama 3 detik dan batasan memori sebanyak 256 MB.\n\nFormat Masukan:\nMasukan diberikan dalam format berikut:\nB\nY\n\nFormat Keluaran:\nKeluarkan sebuah baris berisi sebuah bilangan bulat yang menyatakan banyaknya X berbeda, sehingga apabila X diubah ke dalam basis B, maka kalkulator akan menampilkan hasil berupa string Y, modulo 1.000.000.007.\n\nContoh Masukan 1:\n16\n114240\nContoh Keluaran 1:\n3\n\nContoh Masukan 2:\n4\n114240\nContoh Keluaran 2:\n0\n\nContoh Masukan 3:\n10\n0\nContoh Keluaran 3:\n1\n\nContoh Masukan 4:\n10\n1001\nContoh Keluaran 4:\n1\n\nContoh Masukan 5:\n1000000\n123456789123456789123456789123456789\nContoh Keluaran 5:\n649774399\n\nPenjelasan Contoh:\nPada contoh pertama, terdapat 3 kemungkinan X berbeda, yakni 123.456, 737.856, dan 1.131.072; seperti yang telah dijelaskan pada deskripsi.\nPada contoh kedua, tidak ada nilai X yang mungkin karena setiap bilangan yang diubah ke basis 4 pasti hanya memiliki digit 0, 1, 2, atau 3.\nPada contoh ketiga, hanya ada 1 kemungkinan X, yakni 0.\nPada contoh keempat, hanya ada 1 kemungkinan X, yakni 1001.\nPada contoh kelima, sebenarnya terdapat 26.649.774.581 kemungkinan X berbeda, namun perhatikan bahwa jawaban harus dalam modulo 1.000.000.007.\n\nBatasan:\nUntuk seluruh kasus uji berlaku:\n• 2 ≤ B ≤ 1.000.000\n• 1 ≤ |Y| ≤ 100.000, dengan |Y| menyatakan panjang dari string Y.\n• Y hanya terdiri dari digit-digit '0' hingga '9' dan tidak memiliki leading zeroes.\n\nSubsoal 1 (Mudah):\nPada subsoal ini, untuk seluruh kasus uji berlaku:\n• B ≤ 16\n• |Y| ≤ 6\n\nSubsoal 2 (Sulit):\nTidak ada batasan tambahan pada subsoal ini.",
+        "pilihan": {},
+        "jawaban_benar": "Program / Solusi Algoritma",
+        "pembahasan": "Implementasi pemrograman dinamis untuk menghitung cara valid pemecahan string digit modulo 1.000.000.007.",
+        "tingkat_kesulitan": "sulit",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      }
+    ]
+  },
+  {
+    "id": "prov_cerita17_2024",
+    "tipe_soal": "cerita",
+    "detail_cerita": {
+      "teks": "E. Gosip Gulali\n\nPak Dengklek memiliki N ekor bebek penggemar gulali, yang dinomori dari 1 hingga N. Untuk liburan akhir tahun ini, Pak Dengklek ingin memberi hadiah kepada mereka berupa gulali. Terdapat M jenis gulali yang dapat dibeli oleh Pak Dengklek, dinomori dari 1 hingga M. Jenis gulali ke-i memiliki tingkat kemanisan sebesar Gᵢ. Perhatikan bahwa Pak Dengklek boleh membeli sebuah jenis gulali yang sama beberapa kali, atau dengan kata lain, setiap jenis gulali memiliki stok gulali yang tidak terbatas.\n\nSetiap bebek Pak Dengklek memiliki tingkat kemanisan favoritnya masing-masing. Bebek ke-i memiliki tingkat kemanisan favorit sebesar Bᵢ. Idealnya, mereka ingin mendapatkan gulali dengan tingkat kemanisan yang tepat sama dengan tingkat kemanisan favorit mereka. Namun, mereka akan tetap menerima gulali dengan tingkat kemanisan berapa pun juga, meskipun mungkin akan timbul rasa ketidakpuasan. Apabila seekor bebek memiliki tingkat kemanisan favorit X dan ia mendapatkan gulali dengan tingkat kemanisan Y, maka rasa ketidakpuasan bebek tersebut dapat dinyatakan sebagai selisih dari X dan Y.\n\nLebih lanjut, ternyata para bebek suka bergosip dengan teman-temannya. Seekor bebek mungkin bergosip dengan nol atau lebih bebek lain. Diketahui bahwa terdapat K buah hubungan gosip. Setiap hubungan gosip dinyatakan sebagai dua buah bilangan bulat berbeda Pᵢ dan Qᵢ yang artinya bebek ke-Pᵢ dan bebek ke-Qᵢ saling bergosip satu sama lain.\n\nApabila bebek ke-A bergosip dengan bebek ke-B, maka bebek ke-A pasti akan tahu jenis gulali yang diterima oleh bebek ke-B, dan sebaliknya. Apabila bebek ke-A bergosip dengan bebek ke-B, dan bebek ke-B juga bergosip dengan bebek ke-C, maka bebek ke-A juga akan mulai bergosip dengan bebek ke-C. Alhasil, bebek ke-A juga pasti akan tahu jenis gulali yang diterima oleh bebek ke-C, dan juga sebaliknya.\n\nAgar mencegah terjadinya rasa iri antar para bebek, Pak Dengklek akan menjamin bahwa jika bebek ke-A mengetahui jenis gulali yang diterima oleh bebek ke-B, maka bebek ke-A harus mendapatkan gulali dengan jenis yang sama dengan bebek ke-B. Jika dua bebek tidak saling mengetahui jenis gulali yang diterima oleh bebek yang lain, maka kedua bebek boleh saja mendapatkan gulali yang sama atau pun berbeda jenis.\n\nTentunya, Pak Dengklek ingin membuat seluruh bebek-bebeknya sesenang mungkin, sehingga ia ingin mencari cara untuk memberikan gulali ke semua bebek-bebeknya sedemikian sehingga total rasa ketidakpuasan dari semua bebek-bebeknya sekecil mungkin. Bantulah Pak Dengklek!",
+      "gambar_url": null,
+      "gambar_lokal": null
+    },
+    "soal": [
+      {
+        "id": "prov_soal17_2024",
+        "pertanyaan": "Soal E1\nAsumsikan bahwa bebek-bebek Pak Dengklek tidak saling bergosip satu sama lain. Misalkan terdapat 5 ekor bebek dengan tingkat kemanisan favorit masing-masing adalah 10, 20, 30, 40, dan 50; dan ada 15 jenis gulali dengan tingkat kemanisan masing-masing sebesar 3, 6, 9, dan seterusnya hingga 45. Berapa total rasa ketidakpuasan terkecil yang dapat diperoleh oleh bebek-bebek Pak Dengklek?",
+        "pilihan": {},
+        "jawaban_benar": "Total ketidakpuasan",
+        "pembahasan": "Pencarian nilai gulali terdekat untuk setiap bebek tanpa kendala gosip.",
+        "tingkat_kesulitan": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "id": "prov_soal18_2024",
+        "pertanyaan": "Soal E2\nAsumsikan ada 4 ekor bebek bernama Kwak, Kwik, Kwuk dan Kwok. Tingkat kemanisan favorit mereka secara berturut-turut adalah 8, 6, 1, dan 3. Diketahui bahwa pasangan Kwak-Kwok dan Kwuk-Kwok saling bergosip satu sama lain. Jika ada 3 jenis gulali dengan tingkat kemanisan secara berturut-turut sebesar 4, 2, dan 9; berapa total rasa ketidakpuasan terkecil yang dapat diperoleh oleh mereka?",
+        "pilihan": {},
+        "jawaban_benar": "Total ketidakpuasan",
+        "pembahasan": "Pengelompokan bebek yang terhubung dalam komponen gosip untuk mendapatkan jenis gulali yang sama.",
+        "tingkat_kesulitan": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "id": "prov_soal19_2024",
+        "pertanyaan": "Soal E3\nBENAR atau SALAH: Asumsikan untuk seluruh bilangan bulat positif X, selalu terdapat jenis gulali dengan tingkat kemanisan sebesar X pula. Apabila terdapat 3 ekor bebek yang harus mendapatkan gulali dengan jenis yang sama, maka pasti optimal untuk memberi mereka jenis gulali dengan tingkat kemanisan yang sedekat mungkin dengan nilai rata-rata tingkat kemanisan favorit mereka bertiga.",
+        "pilihan": {},
+        "jawaban_benar": "Benar / Salah",
+        "pembahasan": "Analisis properti matematika minimisasi selisih mutlak (*absolute deviation*).",
+        "tingkat_kesulitan": "mudah",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "id": "prov_soal20_2024",
+        "pertanyaan": "Soal Pemrograman E\nTulislah sebuah program dengan bahasa C/C++ sesuai deskripsi dengan format dan batasan sebagai berikut. Perhatikan bahwa untuk setiap kasus uji berlaku batasan waktu selama 3 detik dan batasan memori sebanyak 256 MB.\n\nFormat Masukan:\nMasukan diberikan dalam format berikut:\nN M K\nB₁ B₂ ... Bₙ\nG₁ G₂ ... Gₘ\nP₁ Q₁\nP₂ Q₂\n...\nPₖ Qₖ\n\nFormat Keluaran:\nKeluarkan sebuah baris berisi sebuah bilangan bulat yang menyatakan total rasa ketidakpuasan terkecil yang dapat diperoleh oleh bebek-bebek Pak Dengklek.\n\nContoh Masukan 1:\n8 4 6\n10 20 40 50 30 60 70 80\n30 40 50 60\n1 8\n2 7\n3 5\n3 6\n5 6\n6 8\nContoh Keluaran 1:\n150\n\nContoh Masukan 2:\n4 3 0\n2 1 13 14\n10 20 20\nContoh Keluaran 2:\n24\n\nPenjelasan Contoh:\nPada contoh pertama, hubungan-hubungan gosip dapat diilustrasikan. Salah satu cara Pak Dengklek meminimalkan total rasa ketidakpuasan yakni dengan memberi gulali dengan tingkat kemanisan 50 kepada bebek ke-1, ke-3, ke-5, ke-6, dan ke-8; 30 kepada grup bebek ke-2 dan ke-7, serta 40 kepada bebek ke-4. Dapat dihitung bahwa total rasa ketidakpuasan adalah 150.\nPada contoh kedua, meskipun keempat bebek boleh mendapatkan gulali yang berbeda-beda jenis, Pak Dengklek dapat memberi keempatnya gulali dengan tingkat kemanisan 10 untuk meminimalkan total rasa ketidakpuasan, yaitu sebesar |1 - 10| + |2 - 10| + |13 - 10| + |14 - 10| = 24.\n\nBatasan:\nUntuk seluruh kasus uji berlaku:\n• 1 ≤ N, M ≤ 100.000\n• 0 ≤ K ≤ 100.000\n• 1 ≤ Bᵢ, Gᵢ ≤ 10⁹\n• 1 ≤ Pᵢ < Qᵢ ≤ N dan pasangan-pasangan (Pᵢ, Qᵢ) saling berbeda satu sama lain.\n\nSubsoal 1 (Mudah):\nPada subsoal ini, untuk seluruh kasus uji berlaku:\n• M ≤ 10\n\nSubsoal 2 (Sulit):\nTidak ada batasan tambahan pada subsoal ini.\n\nPeringatan:\nUntuk dapat menjawab pertanyaan ini dengan benar, Anda mungkin perlu menggunakan tipe data long long untuk dapat menyimpan data dengan nilai yang besar. Tipe data int saja mungkin tidak cukup!",
+        "pilihan": {},
+        "jawaban_benar": "Program / Solusi Algoritma",
+        "pembahasan": "Implementasi struktur data Union-Find dan pemrograman dinamis / optimasi konveks.",
+        "tingkat_kesulitan": "sulit",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      }
+    ]
+  },
+  {
+    "id": "prov_cerita21_2024",
+    "tipe_soal": "cerita",
+    "detail_cerita": {
+      "teks": "F. Maju Tak Papan\n\nPak Dengklek memiliki papan berukuran N baris dan M kolom. Setiap baris dinomori dari 1 hingga N dari atas ke bawah dan setiap kolom dinomori dari 1 hingga M dari kiri ke kanan. Petak (X, Y) menyatakan petak pada baris ke-X dan kolom ke-Y. Pak Dengklek akan mengisi setiap petak pada papan tersebut dengan angka 1 hingga N × M sedemikian sehingga masing-masing angka akan muncul tepat satu kali pada papan.\n\nSebuah robot bebek akan mulai pada petak (1, 1). Pada setiap waktu, robot tersebut akan membandingkan petak tepat di kanannya dengan petak tepat di bawahnya. Robot kemudian akan berpindah ke petak yang memiliki angka yang lebih besar. Jika robot berada pada baris terakhir (baris ke-N), maka ia secara otomatis hanya akan bergerak ke kanan. Jika robot berada pada kolom terakhir (kolom ke-M), maka ia secara otomatis hanya akan bergerak ke bawah. Robot akan berhenti pada petak (N, M).\n\nAngka-angka pada seluruh petak yang dikunjungi oleh robot bebek (termasuk petak (1, 1) dan petak (N, M)) akan dijumlahkan. Pak Dengklek kemudian akan memberi hadiah kepada bebek-bebeknya permen sebanyak jumlah ini.\n\nKarena Pak Dengklek tidak ingin bebek-bebeknya makan terlalu banyak permen, tugas Anda adalah membantu Pak Dengklek untuk menentukan jumlah terkecil yang mungkin apabila Pak Dengklek mengisi setiap petak pada papannya dengan angka 1 hingga N × M secara optimal.",
+      "gambar_url": null,
+      "gambar_lokal": null
+    },
+    "soal": [
+      {
+        "id": "prov_soal21_2024",
+        "pertanyaan": "Soal F1\nAsumsikan papan Pak Dengklek berukuran 3 baris dan 4 kolom dan Pak Dengklek mengisi papan tersebut dengan konfigurasi angka-angka seperti berikut ini:\n4 6 1 10\n3 5 8 9\n12 11 2 7\n\nBerapa jumlah angka-angka pada petak-petak yang akan dikunjungi oleh robot bebek?",
+        "pilihan": {},
+        "jawaban_benar": "Jumlah angka",
+        "pembahasan": "Simulasi pergerakan robot bebek berdasarkan perbandingan nilai petak kanan dan bawah.",
+        "tingkat_kesulitan": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "id": "prov_soal22_2024",
+        "pertanyaan": "Soal F2\nApabila papan Pak Dengklek berukuran 5 baris dan 2 kolom, berapa jumlah terkecil yang mungkin apabila Pak Dengklek mengisi setiap petak pada papan dengan angka 1 hingga 10 secara optimal?",
+        "pilihan": {},
+        "jawaban_benar": "Jumlah terkecil",
+        "pembahasan": "Penyusunan pola matriks angka untuk meminimalkan jalur kunjungan robot pada grid 5x2.",
+        "tingkat_kesulitan": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "id": "prov_soal23_2024",
+        "pertanyaan": "Soal F3\nApabila papan Pak Dengklek berukuran 3 baris dan 3 kolom, berapa jumlah terkecil yang mungkin apabila Pak Dengklek mengisi setiap petak pada papan dengan angka 1 hingga 9 secara optimal?",
+        "pilihan": {},
+        "jawaban_benar": "Jumlah terkecil",
+        "pembahasan": "Strategi pengisian grid 3x3 untuk membatasi jumlah akumulasi angka yang dikunjungi robot.",
+        "tingkat_kesulitan": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "id": "prov_soal24_2024",
+        "pertanyaan": "Soal Pemrograman F\nTulislah sebuah program dengan bahasa C/C++ sesuai deskripsi dengan format dan batasan sebagai berikut. Perhatikan bahwa untuk setiap kasus uji berlaku batasan waktu selama 2 detik dan batasan memori sebanyak 256 MB.\n\nFormat Masukan:\nMasukan diberikan dalam format berikut:\nN M\n\nFormat Keluaran:\nKeluarkan sebuah baris berisi sebuah bilangan bulat yang menyatakan jumlah terkecil yang mungkin apabila Pak Dengklek mengisi setiap petak pada papannya dengan angka 1 hingga N × M secara optimal.\n\nContoh Masukan 1:\n2 3\nContoh Keluaran 1:\n11\n\nContoh Masukan 2:\n1 1\nContoh Keluaran 2:\n1\n\nPenjelasan Contoh:\nPada contoh pertama, salah satu konfigurasi pengisian yang optimal adalah sebagai berikut:\n2 4 6\n5 3 1\n\nRobot bebek akan berjalan sebagai berikut:\n• Robot mulai pada petak (1, 1) yang berisi angka 2.\n• Antara petak kanan (1, 2) yang berisi angka 4 dan petak bawah (2, 1) yang berisi angka 5, petak bawah memiliki angka yang lebih besar, sehingga robot akan bergerak ke bawah.\n• Karena robot berada pada baris terakhir, robot secara otomatis akan bergerak ke kanan ke petak (2, 2) yang berisi angka 3.\n• Karena robot berada pada baris terakhir, robot secara otomatis akan bergerak ke kanan ke petak (2, 3) yang berisi angka 1.\n• Karena robot berada pada petak (N, M), maka robot akan berhenti bergerak.\nJumlah angka-angka pada petak-petak yang dikunjungi oleh robot adalah 2 + 5 + 3 + 1 = 11.\n\nPada contoh kedua, hanya ada 1 kemungkinan konfigurasi pengisian yakni satu petak berisi angka 1.\n\nBatasan:\nUntuk seluruh kasus uji berlaku:\n• 1 ≤ N, M ≤ 1000\n\nSubsoal 1 (Mudah):\nPada subsoal ini, untuk seluruh kasus uji berlaku:\n• N ≤ 2\n\nSubsoal 2 (Sulit):\nTidak ada batasan tambahan pada subsoal ini.",
+        "pilihan": {},
+        "jawaban_benar": "Program / Solusi Algoritma",
+        "pembahasan": "Analisis pola konstruktif pengisian matriks untuk meminimalkan jumlah nilai pada jalur robot bebek.",
+        "tingkat_kesulitan": "sulit",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      }
+    ]
+  }
+]

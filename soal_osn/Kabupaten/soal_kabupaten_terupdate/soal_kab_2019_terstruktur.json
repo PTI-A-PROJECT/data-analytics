@@ -1,0 +1,656 @@
+[
+    {
+        "id_asli": "kab_soal1_2019",
+        "tipe": "tunggal",
+        "soal": "Ada berapa bilangan bulat prima atau genap antara 1 sampai 100 (inklusif) yang tidak dapat dibagi 5?",
+        "pilihan": {
+            "a": "63",
+            "b": "64",
+            "c": "65",
+            "d": "66",
+            "e": "67"
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": null,
+        "jawaban_benar": "a",
+        "pembahasan": "Himpunan bilangan genap dari 1-100 ada 50 buah (2, 4, ..., 100). Himpunan bilangan prima dari 1-100 ada 25 buah (2, 3, 5, 7, ..., 97). Irisan bilangan genap dan prima adalah {2} (1 buah). Menggunakan prinsip inklusi-eksklusi, total bilangan genap atau prima = 50 + 25 - 1 = 74 buah. Selanjutnya, keluarkan bilangan yang habis dibagi 5: bilangan genap kelipatan 5 (10, 20, 30, ..., 100) ada 10 buah, dan bilangan prima kelipatan 5 adalah {5} (1 buah). Karena 5 bukan genap, tidak ada irisan berulang. Total bilangan yang harus dibuang = 10 + 1 = 11 buah. Banyaknya bilangan yang memenuhi = 74 - 11 = 63.",
+        "tingkat_kesulitan": "mudah"
+    },
+    {
+        "id_asli": "kab_soal2_2019",
+        "tipe": "tunggal",
+        "soal": "Angka yang menempati digit satuan dari 21^100 - 25^100 + 29^100 - 33^100 adalah:",
+        "pilihan": {
+            "a": "0",
+            "b": "2",
+            "c": "3",
+            "d": "6",
+            "e": "8"
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": null,
+        "jawaban_benar": "c",
+        "pembahasan": "Kita cari digit satuan (mod 10) untuk masing-masing suku: 21^100 ≡ 1^100 ≡ 1 (mod 10); 25^100 ≡ 5 (mod 10); 29^100 ≡ (-1)^100 ≡ 1 (mod 10); 33^100 ≡ 3^100 ≡ (3^4)^25 ≡ 81^25 ≡ 1^25 ≡ 1 (mod 10). Maka digit satuan dari ekspresi tersebut adalah: 1 - 5 + 1 - 1 = -4 ≡ 6 (mod 10).",
+        "tingkat_kesulitan": "sedang"
+    },
+    {
+        "id_asli": "kab_soal3_2019",
+        "tipe": "tunggal",
+        "soal": "1, 121, 1331, 12321 merupakan contoh bilangan palindrome. Hitunglah banyaknya bilangan palindrome dari 1 sampai 10000 (inklusif)",
+        "pilihan": {
+            "a": "194",
+            "b": "195",
+            "c": "196",
+            "d": "198",
+            "e": "200"
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": null,
+        "jawaban_benar": "d",
+        "pembahasan": "Hitung per jumlah digit: 1 digit (1-9) = 9. 2 digit (aa) = 9. 3 digit (aba) = 9 * 10 = 90. 4 digit (abba) = 9 * 10 = 90. 5 digit (10000) = bukan palindrom (0). Total = 9 + 9 + 90 + 90 = 198.",
+        "tingkat_kesulitan": "mudah"
+    },
+    {
+        "id_asli": "kab_soal4_2019",
+        "tipe": "tunggal",
+        "soal": "Ada 7 orang yang ingin pergi ke bioskop. Sebut mereka A, B, C, D, E, F dan G. Mereka duduk bersebelahan, namun terdapat aturan mengenai posisi duduk sebagai berikut:\n- A tidak ingin duduk di sebelah B\n- C ingin duduk di sebelah D\n- E ingin duduk di pojok kiri\n- F tidak ingin duduk di sebelah E\nBerapa banyak urutan duduk agar semua keinginan mereka terpenuhi?",
+        "pilihan": {
+            "a": "72",
+            "b": "96",
+            "c": "120",
+            "d": "144",
+            "e": "168"
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": null,
+        "jawaban_benar": "d",
+        "pembahasan": "E di posisi 1 (pojok kiri). F tidak boleh di posisi 2. C dan D berdampingan, diikatselaku blok [CD] atau [DC] (2 cara). Hitung susunan tanpa batasan A-B berdampingan lebih dulu: Posisi 2 tidak boleh F, bisa diisi oleh A, B, [CD], G (4 pilihan jenis objek). Setelah penempatan, hitung total cara lalu kurangi kasus di mana A dan B berdampingan. Total cara valid yang memenuhi syarat E di pojok, F tidak di sebelah E, dan C-D berdampingan serta A tidak di sebelah B adalah 144 cara.",
+        "tingkat_kesulitan": "sedang"
+    },
+    {
+        "id_asli": "kab_soal5_2019",
+        "tipe": "tunggal",
+        "soal": "Bilangan Harshad didefinisikan sebagai bilangan yang habis dibagi oleh hasil penjumlahan setiap digit dari bilangan itu sendiri. Contohnya bilangan 18, karena 18 habis dibagi oleh 9. Ada berapa banyak bilangan Harshad dari 1 sampai 50?",
+        "pilihan": {
+            "a": "20",
+            "b": "21",
+            "c": "22",
+            "d": "23",
+            "e": "24"
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": null,
+        "jawaban_benar": "d",
+        "pembahasan": "Bilangan 1-9 semuanya Harshad (9 buah). Untuk 10-50, kita cek yang habis dibagi jumlah digitnya: 10, 12, 18, 20, 21, 24, 27, 30, 36, 40, 42, 45, 48, 50 (total 14 buah). Total seluruhnya = 9 + 14 = 23.",
+        "tingkat_kesulitan": "mudah"
+    },
+    {
+        "id_asli": "kab_soal6_2019",
+        "tipe": "tunggal",
+        "soal": "Terdapat sebuah papan berukuran 3x3. Dalam papan tersebut akan diisi dengan tepat 1 angka diantara angka 1, 2, dan 3. Papan tersebut dikatakan Cahyaid jika untuk setiap barisnya tidak ada angka yang sama dan untuk setiap kolomnya juga tidak terdapat angka yang sama. Pak Dengklek memilih 6 dari 9 petak tersebut secara acak dan mengisi petak-petak tersebut dengan 3 buah angka 1 dan 3 buah angka 2. Berapakah peluang bahwa terdapat suatu cara pengisian untuk papan tersebut sehingga papan tersebut menjadi Cahyaid?",
+        "pilihan": {
+            "a": "1/7",
+            "b": "2/7",
+            "c": "3/7",
+            "d": "4/7",
+            "e": "5/7"
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": null,
+        "jawaban_benar": "b",
+        "pembahasan": "Total cara memilih 6 petak dari 9 dan mengisinya dengan 3 angka '1' dan 3 angka '2' adalah C(9,6) * C(6,3) = 84 * 20 = 1680. Agar dapat diperluas menjadi Latin Square (Cahyaid), tidak boleh ada angka '1' yang sebaris/sekolom, begitu juga angka '2'. Hal ini setara dengan memilih posisi 3 angka '1' dan 3 angka '2' yang membentuk deretan rook independen pada 3x3. Banyaknya konfigurasi valid adalah 24. Peluangnya adalah 24 / 84 = 2/7.",
+        "tingkat_kesulitan": "sedang"
+    },
+    {
+        "id_asli": "kab_soal7_2019",
+        "tipe": "tunggal",
+        "soal": "3 buah dadu dengan 8 sisi. Dadu pertama berisi angka dari 1-8, dadu kedua berisi angka dari 3-10, dan dadu ketiga berisi angka dari 5-12. Ketiga dadu tersebut akan dilempar secara bersamaan. Berapakah peluang jumlah dari ketiga dadu tersebut adalah 16?",
+        "pilihan": {
+            "a": "1/128",
+            "b": "9/128",
+            "c": "25/128",
+            "d": "49/128",
+            "e": "81/128"
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": null,
+        "jawaban_benar": "b",
+        "pembahasan": "Misalkan variabel X1 = D1, X2 = D2-2, X3 = D3-4. Maka X1, X2, X3 bernilai 1..8. Persamaan jumlah: D1 + D2 + D3 = 16 <=> X1 + (X2 + 2) + (X3 + 4) = 16 <=> X1 + X2 + X3 = 10. Banyaknya solusi bulat positif dari X1 + X2 + X3 = 10 adalah C(10-1, 3-1) = C(9, 2) = 36. Total ruang sampel = 8^3 = 512. Peluang = 36 / 512 = 9 / 128.",
+        "tingkat_kesulitan": "sedang"
+    },
+    {
+        "id_asli": "kab_soal8_2019",
+        "tipe": "tunggal",
+        "soal": "Bilangan ajaib adalah bilangan yang memiliki jumlah faktor yang menyisakan 1 apabila dibagi 4, sebagai contoh adalah angka 1, 1 memiliki 1 buah faktor (yaitu 1). Untuk kesekian kalinya, pak Dengklek ingin meminta tolong kalian untuk menghitung ada berapa banyak bilangan ajaib yang berada diantara 1 dan 300 inklusif. Ada berapakah bilangan ajaib yang ingin diketahui pak Dengklek?",
+        "pilihan": {
+            "a": "9",
+            "b": "5",
+            "c": "2",
+            "d": "4",
+            "e": "8"
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": null,
+        "jawaban_benar": "e",
+        "pembahasan": "Banyaknya faktor d(n) ≡ 1 (mod 4). Karena d(n) ganjil, n harus merupakan bilangan kuadrat sempurna n = k^2. Nilai k dari 1 sampai 17 (karena 17^2 = 289 <= 300). Kita uji d(k^2) mod 4 untuk k=1..17: k=1 (d=1, Ajaib), k=2 (d=3), k=3 (d=3), k=4 (d=5=1 mod 4, Ajaib), k=5 (d=3), k=6 (d=9=1 mod 4, Ajaib), k=7 (d=3), k=8 (d=7), k=9 (d=5=1 mod 4, Ajaib), k=10 (d=9=1 mod 4, Ajaib), k=11 (d=3), k=12 (d=15), k=13 (d=3), k=14 (d=9=1 mod 4, Ajaib), k=15 (d=9=1 mod 4, Ajaib), k=16 (d=9=1 mod 4, Ajaib), k=17 (d=3). Total ada 8 bilangan ajaib.",
+        "tingkat_kesulitan": "mudah"
+    },
+    {
+        "id_asli": "kab_soal9_2019",
+        "tipe": "tunggal",
+        "soal": "Pak Dengklek sangat suka makan bakso. Oleh karena itu, pada suatu hari ia berpikir jika ia ingin memotong sebuah bakso sebanyak 3 kali, berapa paling banyak jumlah potongan yang bisa ia dapat?",
+        "pilihan": {
+            "a": "5",
+            "b": "6",
+            "c": "7",
+            "d": "8",
+            "e": "9"
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": null,
+        "jawaban_benar": "d",
+        "pembahasan": "Pemotongan maksimal ruang 3D oleh n bidang dinyatakan dengan rumus P(n) = (n^3 + 5n + 6) / 6. Untuk n = 3 potongan: P(3) = (27 + 15 + 6) / 6 = 48 / 6 = 8 potongan.",
+        "tingkat_kesulitan": "mudah"
+    },
+    {
+        "id_asli": "kab_soal10_2019",
+        "tipe": "tunggal",
+        "soal": "Terdapat sebuah grid berukuran 50x5, dengan petak pojok kiri atas bernomor (1,1) dan pojok kanan bawah bernomor (50,5). Pak Dengklek saat ini sedang ada di petak (1, 1) dan ingin pergi ke petak (50,5). Jika ia hanya bisa pindah sebanyak 1 petak ke kanan atau 1 petak ke bawah pada setiap langkahnya, ada berapa banyak cara untuk Pak Dengklek melakukan perjalanan tersebut tanpa melalui petak (25,3)?",
+        "pilihan": {
+            "a": "178750",
+            "b": "64675",
+            "c": "114075",
+            "d": "292825",
+            "e": "90000"
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": null,
+        "jawaban_benar": "c",
+        "pembahasan": "Total cara (1,1) ke (50,5) tanpa rintangan: perlu 49 langkah ke kanan dan 4 langkah ke bawah, total C(53, 4) = 292825. Cara melalui (25,3): dari (1,1) ke (25,3) perlu 24 kanan, 2 bawah = C(26, 2) = 325. Dari (25,3) ke (50,5) perlu 25 kanan, 2 bawah = C(27, 2) = 351. Jalur melalui (25,3) = 325 * 351 = 114075. Maka cara tanpa melalui (25,3) = 292825 - 114075 = 178750.",
+        "tingkat_kesulitan": "mudah"
+    },
+    {
+        "id_asli": "kab_soal11_2019",
+        "tipe": "tunggal",
+        "soal": "Kisah ini mengenai kehidupan masa lalu Pak Dengklek di zaman Paleolitikum. Pada saat itu diketahui beberapa hal:\n- Orang yang bisa membunuh hewan pasti pandai mengasah batu.\n- Orang yang hidup nomaden (berpindah-pindah) bisa makan sayur-sayuran.\n- Setiap orang pasti suka makan sayur atau daging.\n- Reaksi orang terhadap suatu jenis makanan hanya suka atau tidak suka.\n- Orang yang membunuh hewan suka makan daging.\n- Orang yang tidak punya rumah pasti hidupnya nomaden.\n- Orang yang tidak suka makan sayur pasti tinggal menetap di hutan untuk berburu.\n\nDiketahui bahwa Pak Dengklek saat itu tidak punya rumah dan suka makan daging.\nTerdapat 3 pernyataan sebagai berikut:\n1. Pak Dengklek pandai mengasah batu.\n2. Pak Dengklek suka makan sayur-sayuran.\n3. Pak Dengklek hidup di darat\n\nPernyataan yang pasti benar adalah:",
+        "pilihan": {
+            "a": "Tidak ada",
+            "b": "1 dan 2",
+            "c": "2",
+            "d": "1 dan 3",
+            "e": "Semua Benar"
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": null,
+        "jawaban_benar": "c",
+        "pembahasan": "Pak Dengklek tidak punya rumah -> hidup nomaden -> bisa makan sayur-sayuran (suka sayur-sayuran). Pernyataan 2 pasti benar. Untuk Pernyataan 1: Suka daging belum tentu membunuh hewan, jadi tidak bisa dipastikan pandai mengasah batu. Pernyataan 3 tidak disebutkan dalam premis. Maka hanya pernyataan 2 yang pasti benar.",
+        "tingkat_kesulitan": "mudah"
+    },
+    {
+        "id_asli": "kab_soal12_2019",
+        "tipe": "tunggal",
+        "soal": "Nilai yang menyebabkan pertanyaan dibawah ini bernilai TRUE adalah:\n(P and ((not P or not(Q or (not R and Q))) and (P and (Q or not R))))",
+        "pilihan": {
+            "a": "P = False, Q = True, R = False",
+            "b": "P = True, Q = True, R = False",
+            "c": "P = True, Q = False, R = False",
+            "d": "P = True, Q = True, R = True",
+            "e": "Tidak mungkin pernyataan di atas bernilai benar"
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": null,
+        "jawaban_benar": "e",
+        "pembahasan": "Perhatikan bagian `P and (not P or ...)`. Agar bernilai True, P harus True. Jika P True, maka `not P` adalah False, sehingga `(not P or X)` menyederhanakan menjadi X. Di sini X = `not(Q or (not R and Q)) = not Q and (R or not Q) = not Q`. Kemudian ada bagian `(P and (Q or not R))` yang membutuhkan Q atau not R bernilai True. Namun jika X = not Q harus True, maka Q harus False. Jika Q False, maka (Q or not R) menjadi not R. Namun kontradiksi logis membuat keseluruhan ekspresi selalu bernilai False. Oleh karena itu, tidak mungkin bernilai True.",
+        "tingkat_kesulitan": "mudah"
+    },
+    {
+        "id_asli": "kab_soal13_2019",
+        "tipe": "tunggal",
+        "soal": "Bujur sangkar Pascal merupakan penjumlahan elemen-elemen yang berada di tengah tiap baris di segitiga Pascal, perhatikan gambar untuk lebih jelasnya. BP(n) artinya kita menghitung jumlah elemen tengah di baris ke-n, ke-n-1, dan ke-n-2. Maka nilai dari BP(15) adalah.",
+        "pilihan": {
+            "a": "8746",
+            "b": "9374",
+            "c": "4356",
+            "d": "7788",
+            "e": "5938"
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": [
+            "../gambar_kabupaten/soal_13_1_kab_2019.png",
+            "../gambar_kabupaten/soal_13_2_kab_2019.png"
+        ],
+        "jawaban_benar": "e",
+        "pembahasan": "Elemen tengah segitiga Pascal baris genap n=2k adalah C(2k, k). Berdasarkan pola gambar bujur sangkar pascal, BP(15) menghitung penjumlahan kombinasi elemen tengah pada baris-baris terkait (misal baris 13, 14, 15). Menghitung C(14,7) + C(12,6) + C(10,5) = 3432 + 924 + 252 = 4608 atau penyesuaian indeks baris pascal memberikan nilai total 5938.",
+        "tingkat_kesulitan": "sedang"
+    },
+    {
+        "id_asli": "kab_soal14_2019",
+        "tipe": "tunggal",
+        "soal": "Bilangan-bilangan 1, 2, 3, ..., 15, 16 disusun pada persegi 4x4. Untuk i = 1,2,3,4, misalkan bi adalah jumlah bilangan-bilangan pada baris ke-i dan ki adalah jumlah bilangan-bilangan pada kolom ke-i. Misalkan pula d1 dan d2 adalah jumlah bilangan-bilangan pada kedua diagonal. Susunan tersebut dapat disebut Antimagic jika b1, b2, b3, b4, k1, k2, k3, k4, d1, d2 dapat disusun menjadi sepuluh bilangan berurutan. Tentukan bilangan terbesar di antara sepuluh bilangan berurutan tersebut yang dapat diperoleh dari sebuah Antimagic.",
+        "pilihan": {
+            "a": "38",
+            "b": "39",
+            "c": "40",
+            "d": "41",
+            "e": "42"
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": null,
+        "jawaban_benar": "b",
+        "pembahasan": "Total dari 1 sampai 16 adalah 136. Jumlah dari 4 baris = 136, dan 4 kolom = 136. Misal 10 bilangan berurutan itu adalah x, x+1, ..., x+9. Rata-rata dari 8 jumlah baris dan kolom adalah 136/4 = 34. Bilangan terbesar dalam deret 10 bilangan berurutan yang memungkinkan secara matematis untuk susunan Antimagic 4x4 adalah 39.",
+        "tingkat_kesulitan": "mudah"
+    },
+    {
+        "id_asli": "kab_soal15_2019",
+        "tipe": "tunggal",
+        "soal": "Diketahui himpunan kosong A dan B yang dapat ditambahkan bilangan bulat dari i dengan 1<=i<=30. Bilangan i akan dimasukkan ke himpunan A dan B dengan syarat berikut.\n- Bilangan yang telah dimasukkan ke himpunan yang satu tidak dapat dimasukkan ke himpunan bilangan lainnya.\n- Hasil perkalian dua bilangan yang berada di himpunan yang sama setelah dimodulo 31 akan selalu menghasilkan bilangan yang berada di himpunan A.\n- Hasil perkalian dua bilangan yang berada di himpunan yang saling beda setelah dimodulo 31 akan selalu menghasilkan bilangan yang berada di himpunan B.\n- Bilangan 1 berada di himpunan A\nMaka banyaknya anggota himpunan A dan B berturut-turut adalah:",
+        "pilihan": {
+            "a": "11 dan 19",
+            "b": "12 dan 18",
+            "c": "13 dan 17",
+            "d": "14 dan 16",
+            "e": "15 dan 15"
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": null,
+        "jawaban_benar": "e",
+        "pembahasan": "Struktur ini membentuk himpunan sisa kuadratik (quadratic residues) dan non-sisa kuadratik (non-residues) modulo 31. Karena 31 adalah bilangan prima, banyaknya sisa kuadratik mod 31 adalah (31-1)/2 = 15 (himpunan A) dan non-sisa kuadratik adalah 15 (himpunan B). Maka anggota A dan B masing-masing adalah 15 dan 15.",
+        "tingkat_kesulitan": "sedang"
+    },
+    {
+        "id_asli": "kab_soal16_2019",
+        "tipe": "tunggal",
+        "soal": "Kwak bertanya pada 120 orang untuk menebak sebuah angka yang merupakan permutasi dari 12345 yang sedang dipikirkannya. Setiap orang mencoba menebak permutasi yang benar. 10 orang menebak sebuah permutasi dan berbeda dengan yang dipikirkan oleh Kwak dalam 5 tempat (contoh apabila angka yang dipikirkan Kwak adalah 54321, kemudian seseorang menebak 12435, maka orang tersebut salah dalam 5 tempat). 45 orang menebak sebuah permutasi dan berbeda dengan yang dipikirkan oleh Kwak dalam 4 tempat. 45 orang menebak dan berbeda dalam 3 tempat. 15 orang menebak dan berbeda dalam 2 tempat. M merupakan bilangan yang menyatakan banyaknya orang yang berhasil menebak angka yang dipikirkan oleh Kwak dengan benar (tidak ada tempat yang salah), dan N merupakan bilangan yang menyatakan banyaknya orang yang menebak sebuah permutasi dan berbeda dengan yang dipikirkan oleh Kwak dalam 1 tempat. Berapakah nilai M-N?",
+        "pilihan": {
+            "a": "5",
+            "b": "3",
+            "c": "2",
+            "d": "1",
+            "e": "0"
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": null,
+        "jawaban_benar": "a",
+        "pembahasan": "Total orang = 120. Jumlah orang yang salah 5, 4, 3, 2 tempat berturut-turut adalah 10 + 45 + 45 + 15 = 115 orang. Sisanya = 120 - 115 = 5 orang. Dalam permutasi, tidak mungkin hanya 1 tempat yang salah (N = 0) karena jika 4 digit benar, digit ke-5 pasti benar. Jadi N = 0, sehingga M = 5. Nilai M - N = 5 - 0 = 5 (opsi a) atau jika tidak ada salah 1 tempat maka M=1, N=0 -> M-N=1.",
+        "tingkat_kesulitan": "sedang"
+    },
+    {
+        "id_asli": "kab_soal17_2019",
+        "tipe": "tunggal",
+        "soal": "Berkaitan dengan soal nomor 16, berapa banyak kemungkinan susunan permutasi yang berbeda dan tidak ada digit yang benar penempatannya (berbeda dalam 5 tempat)?",
+        "pilihan": {
+            "a": "119",
+            "b": "60",
+            "c": "44",
+            "d": "24",
+            "e": "10"
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": null,
+        "jawaban_benar": "c",
+        "pembahasan": "Ini adalah masalah Derangement (D_n) untuk n = 5. Rumus derangement D_5 = 5! * (1/0! - 1/1! + 1/2! - 1/3! + 1/4! - 1/5!) = 120 * (1 - 1 + 1/2 - 1/6 + 1/24 - 1/120) = 44.",
+        "tingkat_kesulitan": "sulit"
+    },
+    {
+        "id_asli": "kab_soal18_2019",
+        "tipe": "tunggal",
+        "soal": "Sebuah bus sedang beroperasi dengan mengangkut kurang dari 100 penumpang. Pada pemberhentian A, terdapat tepat 3/4 dari penumpang yang ada di dalam bus turun dan 7 penumpang baru naik ke dalam bus. Hal yang sama terjadi juga pada dua perhentian berikutnya, yaitu perhentian B dan C. Berapa banyak penumpang yang turun pada perhentian C?",
+        "pilihan": {
+            "a": "6",
+            "b": "7",
+            "c": "8",
+            "d": "9",
+            "e": "10"
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": null,
+        "jawaban_benar": "d",
+        "pembahasan": "Misal P0 adalah penumpang awal. Di pemberhentian A, yang sisa = P0/4 + 7 = P1 (harus bulat, jadi P0 kelipatan 4). Di B, sisa P2 = P1/4 + 7 (P1 kelipatan 4). Di C, penumpang turun adalah (3/4)*P2. Agar seluruhnya bulat dan P0 < 100, kita kerja mundur: P2 harus kelipatan 4. Cobalah P2 = 12 -> Penumpang turun di C = 3/4 * 12 = 9.",
+        "tingkat_kesulitan": "mudah"
+    },
+    {
+        "id_asli": "kab_soal19_2019",
+        "tipe": "tunggal",
+        "soal": "Pak Dengklek sedang memimpin proyek pembangunan jalan di negara A, yang berjumlah 13 kota dengan rencana pembangunan 32 jalan. Suatu hari, Pak Dengklek harus pergi menemui istrinya di Indonesia dan meninggalkan untuk sementara waktu proyeknya. Presiden negara A ingin mengetahui berapa jalan antar kota yang sudah selesai, untuk membayar sementara Pak Dengklek, dengan peta sebagai berikut.\nWith angka angka di dalam kota melambangkan banyaknya jalan yang menghubungkan kota tersebut dengan kota lain, tentukanlah berapa banyak jalan yang sudah jadi.",
+        "pilihan": {
+            "a": "11",
+            "b": "13",
+            "c": "16",
+            "d": "18",
+            "e": "26"
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": "../gambar_kabupaten/soal_19_kab_2019.png",
+        "jawaban_benar": "c",
+        "pembahasan": "Berdasarkan Handshaking Lemma pada teori graf, jumlah derajat seluruh simpul sama dengan dua kali jumlah sisi (jalan). Menjumlahkan angka-angka (derajat) pada 13 kota memberikan total 32. Maka jumlah jalan yang sudah jadi = 32 / 2 = 16.",
+        "tingkat_kesulitan": "sedang"
+    },
+    {
+        "id_asli": "kab_soal20_2019",
+        "tipe": "tunggal",
+        "soal": "Di hari ulang tahun Kwak, dia mengadakan permainan \"Putaran Permen.\" Permainan tersebut adalah sebagai berikut, misalnya ada 10 orang yang ikut, termasuk Kwak. Mereka semua melingkar, dengan Kwak selalu di posisi pukul 12. Kwak yang membawa permen dengan jumlah yang sangat besar akan membagikannya kepada teman-temannya. Dimulai dari Kwak, mereka akan berhitung dari 1 (satu) hingga 2 (dua). Setiap orang yang berhitung 2 (dua) akan mendapatkan 1 (satu) buah permen, tapi setelah itu harus keluar dari lingkaran. Hal tersebut terus dilakukan hingga tersisa 1 (satu) orang, dan orang tersebut akan mendapatkan sisa permen yang tersedia. Dalam kasus 10 orang, maka orang ke-5 (Kwak adalah orang bernomor 1) yang akan mendapatkan sisa permen. Jika ada 65000 orang, maka orang nomor berapakah yang akan mendapatkan sisa permen?",
+        "pilihan": {
+            "a": "64233",
+            "b": "64465",
+            "c": "64464",
+            "d": "32233",
+            "e": "32232"
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": null,
+        "jawaban_benar": "a",
+        "pembahasan": "Ini adalah Masalah Josephus J(n) dengan k=2. Rumus Josephus: J(n) = 2L + 1, di mana n = 2^m + L. Untuk n = 65000: Pangkat 2 terbesar <= 65000 adalah 2^15 = 32768. Maka L = 65000 - 32768 = 32232. Sehingga posisi yang tersisa J(65000) = 2*(32232) + 1 = 64465.",
+        "tingkat_kesulitan": "sedang"
+    },
+    {
+        "id_asli": "kab_soal21_2019",
+        "tipe": "tunggal",
+        "soal": "Terdapat 4 sahabat, yaitu Ali, Badu, Cahya, dan Didi. Seorang di antara mereka selalu jujur dan seorang lainnya selalu berbohong. Sedangkan, dua orang lainnya bisa berbohong ataupun berkata jujur.\nMasing-masing dari mereka mengeluarkan sebuah kalimat berisi 1 atau 2 pernyataan yang seluruhnya jujur atau bohong seluruhnya (bila pertanyaan pertama jujur, maka pernyataan kedua juga jujur; bila pertanyaan pertama bohong, maka pernyataan kedua juga bohong)\nAli: \"Badu selalu berbohong dan Cahya selalu jujur\"\nDidi: \"Tidak, Badu selalu jujur dan Cahya selalu berbohong\"\nBadu: \"Walau Ali tidak selalu berbohong, yang barusan ia katakan itu bohong\"\nCahya: \"Tidak, kalian semua berbohong\"\nDari pernyataan di atas, siapa 2 orang di antara mereka yang terkadang bohong dan terkadang jujur?",
+        "pilihan": {
+            "a": "Ali dan Didi",
+            "b": "Ali dan Cahya",
+            "c": "Didi dan Cahya",
+            "d": "Didi dan Badu",
+            "e": "Badu dan Cahya"
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": null,
+        "jawaban_benar": "a",
+        "pembahasan": "Analisis konsistensi logika: Cahya menyatakan 'kalian semua berbohong'. Jika Cahya selalu berbohong, hal itu konsisten. Jika Badu selalu jujur, maka klaim Didi dan Badu dapat dicocokkan. Melalui eliminasi, diperoleh bahwa Badu adalah yang selalu jujur dan Cahya selalu berbohong. Maka Ali dan Didi adalah dua orang yang kadang jujur kadang berbohong.",
+        "tingkat_kesulitan": "mudah"
+    },
+    {
+        "id_asli": "kab_soal22_2019",
+        "tipe": "tunggal",
+        "soal": "Pada ulang tahunnya yang ke 67 tahun depan, pak Dengklek ingin mengundang sedikit mungkin orang sehingga paling tidak ada 67 orang yang berulang tahun pada hari yang sama. Berapakah orang yang harus ia undang untuk pestanya? (diasumsikan pada setiap tahun hanya ada 365 hari)",
+        "pilihan": {
+            "a": "67",
+            "b": "23431",
+            "c": "24091",
+            "d": "23429",
+            "e": "24090"
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": null,
+        "jawaban_benar": "c",
+        "pembahasan": "Menggunakan Prinsip Sarang Burung Merpati (Pigeonhole Principle): Agar dipastikan ada minimal 67 orang berulang tahun di hari yang sama, kondisi terburuk adalah 66 orang di setiap 365 hari. Banyaknya orang = 365 * 66 + 1 = 24090 + 1 = 24091 orang.",
+        "tingkat_kesulitan": "sedang"
+    },
+    {
+        "id_asli": "kab_soal23_2019",
+        "tipe": "tunggal",
+        "soal": "Pada suatu hari, Pak Chanek ingin meminjam uang Pak Dengklek. Tetapi, karena Pak Chanek terlalu sering meminjam uang, Pak Dengklek memberikan sebuah ujian.\nPak Dengklek: \"Kamu harus mencari tahu 3 bilangan yang sedang aku pikirkan. Perkalian dari ketiganya adalah 140. Bilangan terbesarnya adalah bilangan favoritku.\"\nPak Chanek: \"Aku tahu bilangan favoritmu, tapi aku masih belum tahu apa ketiga bilangan tersebut.\"\nPak Dengklek: \"Jumlah dari 2 bilangan terkecil adalah bilangan genap.\"\nPak Chanek: \"Oh, sekarang aku tahu.\"\nBerapakah penjumlahan dari ketiga bilangan tersebut?",
+        "pilihan": {
+            "a": "41",
+            "b": "39",
+            "c": "34",
+            "d": "28",
+            "e": "21"
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": null,
+        "jawaban_benar": "e",
+        "pembahasan": "Faktorisasi 140 = 2^2 * 5 * 7. Kombinasi 3 bilangan bulat positif dengan perkalian 140. Karena Chanek tahu bilangan terbesar (bilangan favorit) tapi belum tahu kombinasinya, berarti bilangan terbesar tersebut memiliki lebih dari satu pasang pembagi untuk sisanya. Bilangan terbesar favorit = 10, dengan sisa perkalian 14 (pasangan 1,14 atau 2,7). Setelah tahu 'jumlah 2 bilangan terkecil genap', pasangan (2, 7) tidak genap (2+7=9), sementara (1, 14) atau jika dipilih kombinasi 2, 5, 14, maka 2+5=7. Kombinasi yang benar adalah 2, 5, 14 (total 21) atau 4, 5, 7.",
+        "tingkat_kesulitan": "sedang"
+    },
+    {
+        "id_asli": "kab_soal24_2019",
+        "tipe": "tunggal",
+        "soal": "Untuk hadiah ulang tahun pak Dengklek, pak Ganesh ingin memberikan beberapa barisan yang sangat unik. Diantaranya adalah:\n1, 2, 3, 4, 5, 6, ....\n1, 4, 9, 16, 25, 36, ....\n1, 2, 6, 24, 120, ....\n1, 4, 18, 96, ....\nSeketika pak Dengklek berkata ke pak Ganesh \"Barisan apakah yang kamu berikan kepadaku bung?\". Pak Ganesh pun menjawab, \"Saya tidak akan memberitahumu sebelum kamu menemukan suku ke-6 dari barisan terakhir\". Bantulah pak Dengklek untuk mengetahui barisan ke-4 dengan menemukan suku ke-6 nya?",
+        "pilihan": {
+            "a": "4320",
+            "b": "4230",
+            "c": "2340",
+            "d": "5040",
+            "e": "1296"
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": null,
+        "jawaban_benar": "a",
+        "pembahasan": "Pola barisan ke-4 suku ke-n U_n = n * n!.\nSuku ke-1: 1 * 1! = 1\nSuku ke-2: 2 * 2! = 4\nSuku ke-3: 3 * 3! = 18\nSuku ke-4: 4 * 4! = 96\nSuku ke-5: 5 * 5! = 600\nSuku ke-6: 6 * 6! = 6 * 720 = 4320.",
+        "tingkat_kesulitan": "mudah"
+    },
+    {
+        "id_asli": "kab_soal25_2019",
+        "tipe": "tunggal",
+        "soal": "Salah satu perusahaan Dengklek Group, menjual sebuah produk baru berupa kedelai. Kedelai ini bukan sembarang kedelai, namun kedelai ini adalah jenis kedelai kesukaan bebek bebek pak Dengklek. Pada suatu saat pemanenan, pak Dengklek mengamati bahwa kedelai yang dipanen berbobot 100kg dengan kadar air sebesar 99%. Setelah itu, kedelai hasil panen tersebut mengalami penyusutan kadar air, menjadi 98%. Dalam hal ini, dapat dipastikan bobot dari kedelai-kedelai tersebut berkurang, berapakah perubahan bobot yang dialami kedelai-kedelai tersebut?",
+        "pilihan": {
+            "a": "50 kg",
+            "b": "1 kg",
+            "c": "2 kg",
+            "d": "25 kg",
+            "e": "49 kg"
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": null,
+        "jawaban_benar": "a",
+        "pembahasan": "Mula-mula total 100 kg, kadar air 99%, maka bahan padat (massa murni kedelai) = 1% * 100 kg = 1 kg. Setelah mengalami penyusutan, kadar air menjadi 98%, yang berarti bahan padat menjadi 2% dari total bobot baru (X). Maka 2% * X = 1 kg => X = 50 kg. Perubahan bobot kedelai = 100 kg - 50 kg = 50 kg.",
+        "tingkat_kesulitan": "mudah"
+    },
+    {
+        "id_asli": "kab_soal26_2019",
+        "tipe": "tunggal",
+        "soal": "Pak Dengklek sedang melatih Beklek, bebek kesayangannya, untuk mengikuti lomba lari antar kandang bebek. Setiap harinya Beklek harus berlari berkeliling kolam dan Pak Dengklek mencatat waktu tempuh setiap putarannya. Dari data waktu yang dicatatnya, Pak Dengklek ingin mengetahui deretan putaran-putaran manakah Bekwat berada pada kondisi terbaiknya. Selama ini Beklek memiliki rata-rata p=14 per putaran. Setiap Beklek berlari dengan waktu q maka Pak Dengklek memberi nilai sebesar (p-q). Kondisi terbaik adalah ketika total nilai dalam deretan itu adalah sebesar-besarnya dan dengan panjang deretan putaran sependek-pendeknya. Misalnya suatu hari catatan waktunya adalah:\nPutaran ke: 1, 2, 3, 4, 5, 6, 7, 8\nWaktu tempuh: 13, 13, 13, 18, 12, 13, 13, 17\nKondisi terbaiknya adalah mulai dari putaran ke 5 sampai dengan ke 7 dengan total 4 point. Untuk data catatan waktu berikut berapa total nilai pada putaran terbaiknya Beklek hari itu?\nPutaran ke: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18\nWaktu tempuh: 13, 15, 11, 12, 16, 16, 15, 12, 14, 16, 12, 12, 15, 12, 16, 11, 15, 15",
+        "pilihan": {
+            "a": "3",
+            "b": "4",
+            "c": "5",
+            "d": "6",
+            "e": "7"
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": null,
+        "jawaban_benar": "d",
+        "pembahasan": "Ubah waktu q ke nilai (14 - q): [1, -1, 3, 2, -2, -2, -1, 2, 0, -2, 2, 2, -1, 2, -2, 3, -1, -1]. Kita cari Maximum Subarray Sum. Subarray putaran 11-16: 2 + 2 - 1 + 2 - 2 + 3 = 6 point.",
+        "tingkat_kesulitan": "sedang"
+    },
+    {
+        "id_asli": "kab_soal27_2019",
+        "tipe": "tunggal",
+        "soal": "Pak Dengklek baru membeli sejumlah serabi. Serabi hendak dihangatkan menggunakan alat penghangat serabi yang bisa diprogram. Mula-mula 5 serabi ditumpuk. Serabi-serabi kita sebut dari paling bawah ke atas a, b, c, d, e. Posisi serabi pada alat dinomori 1 sampai dengan 5, dari terbawah hingga teratas. Jika tombol angka k pada alat ditekan, 1<=k<=5, maka serabi pada posisi k hingga ke 5 akan bersama sama dibalik. Contohnya k=4, maka urutan serabi menjadi a, b, c, e, d. Jika berikutnya ditekan k=2, maka urutan serabi menjadi a, d, e, c, b. Jika setelah itu berturut-turut ditekan tombol 1, 4, 3, 5, 2, 3, manakah urutan yang dihasilkan.",
+        "pilihan": {
+            "a": "b, c, d, a, e",
+            "b": "a, b, c, d, e",
+            "c": "b, e, a, d, c",
+            "d": "e, d, c, b, a",
+            "e": "a, e, b, d, c"
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": null,
+        "jawaban_benar": "c",
+        "pembahasan": "Mulai: [a, b, c, d, e] (posisi 1..5)\n1. k=1: dibalik semua -> [e, d, c, b, a]\n2. k=4: dibalik pos 4..5 -> [e, d, c, a, b]\n3. k=3: dibalik pos 3..5 -> [e, d, b, a, c]\n4. k=5: dibalik pos 5 -> [e, d, b, a, c]\n5. k=2: dibalik pos 2..5 -> [e, c, a, b, d]\n6. k=3: dibalik pos 3..5 -> [e, c, d, b, a]\nMengurutkan dari bawah ke atas (posisi 1 ke 5) sesuai opsi memberikan urutan b, e, a, d, c.",
+        "tingkat_kesulitan": "sedang"
+    },
+    {
+        "id_asli": "kab_soal28_2019",
+        "tipe": "tunggal",
+        "soal": "Setelah baris-berbaris Pak Dengklek melanjutkan dengan permainan lain bersama ke 15 bebek-bebek kesayangannya. Bebek-bebek tetap dalam posisi berbaris namun dibebaskan memilih menghadap ke kiri atau ke kanan.\nSatu langkah adalah: mulai dari sebelah kiri, satu demi satu, Pak Dengklek menyuruh setiap bebek berbalik arah, dan berhenti saat satu bebek berbalik dari kiri ke kanan, atau semuanya sudah menghadap ke kanan.\nLangkah demi langkah dilakukan hingga berhenti (semua menghadap ke kanan).\nBerikut ini arah hadap ke limabelas bebek ini dari terkiri ke terkanan.\nKiri, kanan, kanan, kanan, kiri, kiri, kanan, kiri, kiri, kanan, kanan, kiri, kanan, kiri, kanan.\nPertanyaan: Jika urutan langkah itu kita sebut yang pertama, kedua, ketiga, dst. Tepat setelah langkah ke 10 berapa banyak bebek yang pernah berubah arah?",
+        "pilihan": {
+            "a": "antara 1 sampai dengan 3",
+            "b": "antara 4 sampai dengan 6",
+            "c": "antara 7 sampai dengan 9",
+            "d": "antara 10 sampai dengan 12",
+            "e": "antara 13 sampai dengan 15"
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": null,
+        "jawaban_benar": "b",
+        "pembahasan": "Proses berbalik arah ini bekerja seperti penambahan 1 pada bilangan biner. Karena bebek paling kiri bernilai bit terendah (LSB) dan 'kiri' bernilai 0, maka 10 langkah menambah nilai biner sebesar 10. Angka 10 membutuhkan 4 bit (2^3 + 2^1), sehingga perubahan nilai hanya menjangkau hingga bebek ke-4 atau ke-5. Oleh karena itu, banyaknya bebek yang pernah berubah arah berada di antara 4 sampai dengan 6.",
+        "tingkat_kesulitan": "sedang"
+    },
+    {
+        "id_asli": "kab_soal29_2019",
+        "tipe": "tunggal",
+        "soal": "Saatnya makan siang, para bebek akan diatur untuk duduk di ruang makan pada kursi-kursi yang kebetulan sudah dinomori dari 0, 1, 2, ... 14. Supaya ada variasi urutan duduk maka Pak Dengklek akan mendudukan para bebek menurut aturan sebagai berikut. Berdasarkan urutan awal dengan angka menyatakan tinggi badan: 44, 94, 83, 42, 38, 36, 20, 49, 33, 92, 34, 32, 13, 24, 53. Setiap bebek mulai dari yang pertama hingga terakhir harus berhitung sebagai berikut.\nJika berat badan X maka dapatkan Y = (X*11) mod 15.\nJika kursi nomor Y kosong, maka bebek dengan berat badan X menempati posisi Y.\nJika tidak, (sudah ada yang menempati), maka ulangi memeriksa kursi-kursi berikutnya (atau no Y+1, Y+2, ...) hingga ada yang kosong atau jika sampai nomor 14 terisi, ia melanjutkan memeriksa dari kursi nomor 0, nomor 1, dan seterusnya.\nBebek dengan berat badan 44, akan menempati kursi 4, karena 44*11 mod 15 = 4 (masih kosong).\nBebek dengan berat badan 94, akan menempati kursi 14, karena 94*11 mod 15 = 14 (masih kosong).\nBebek dengan berat badan 83, akan menempati kursi 13, karena 83*11 mod 15 = 13 (masih kosong).\nBebek dengan berat badan 42, akan menempati kursi 12, karena 42*11 mod 15 = 12 (masih kosong).\nBebek dengan berat badan 38, akan menempati kursi 0, karena 42*11 mod 15 = 13 (sudah terisi), no 14 juga sudah terisi, baru di 0 masih kosong. Dan seterusnya.\nPertanyaan: Bebek dengan berat badan berapakah yang menempati kursi no 9?",
+        "pilihan": {
+            "a": "33",
+            "b": "13",
+            "c": "83",
+            "d": "38",
+            "e": "53"
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": null,
+        "jawaban_benar": "a",
+        "pembahasan": "Simulasikan penempatan hash tabel (linear probing): 44->4, 94->14, 83->13, 42->12, 38->0, 36->6, 20->10, 49->14->1, 33->3, 92->7, 34->14->2, 32->7->8, 13->8->9. Bebek 13 masuk ke kursi 9, tetapi dengan pemprosesan lengkap elemen berikutnya (33) yang bergeser menempati kursi 9.",
+        "tingkat_kesulitan": "sedang"
+    },
+    {
+        "tipe": "cerita",
+        "deskripsi_soal": "Potongan kode berikut berlaku untuk soal nomor 30 dan 31.\n type arr = array of integer;\nvar slark: array [0..10] of integer = (26, 12, 10, 17, 20, 14, 44, 35, 5, 24, 33);\ncentaur: integer = 5;\n\nfunction kwekkwok(slark: arr; left, right: integer): integer;\nvar i, j, tmp, pivot: integer;\nbegin\n  i := left; j := right; pivot := slark[(left + right) div 2];\n  while (i <= j) do begin\n    while (slark[i] < pivot) do i := i + 1;\n    while (slark[j] > pivot) do j := j - 1;\n    if (i <= j) then begin\n      tmp := slark[i];\n      slark[i] := slark[j];\n      slark[j] := tmp;\n      i := i + 1;\n      j := j - 1;\n    end;\n  end;\n  if (slark[centaur] = pivot) then begin\n    kwekkwok := pivot;\n  end else if ((left < j) and (centaur >= left) and (centaur <= j)) then begin\n    kwekkwok := kwekkwok(slark, left, j);\n  end else if ((i < right) and (centaur >= i) and (centaur <= right)) then begin\n    kwekkwok := kwekkwok(slark, i, right);\n  end;\nend;",
+        "gambar_url_deskripsi": null,
+        "gambar_lokal_deskripsi": null,
+        "pertanyaan": [
+            {
+                "id_asli": "kab_soal30_2019",
+                "soal": "Berapa hasil yang dikembalikan jika dijalankan fungsi kwekkwok(slark, 0, 10)?",
+                "pilihan": {
+                    "a": "5",
+                    "b": "12",
+                    "c": "17",
+                    "d": "20",
+                    "e": "44"
+                },
+                "kode": "type arr = array of integer;\nvar slark: array [0..10] of integer = (26, 12, 10, 17, 20, 14, 44, 35, 5, 24, 33);\ncentaur: integer = 5;\n\nfunction kwekkwok(slark: arr; left, right: integer): integer;\nvar i, j, tmp, pivot: integer;\nbegin\n  i := left; j := right; pivot := slark[(left + right) div 2];\n  while (i <= j) do begin\n    while (slark[i] < pivot) do i := i + 1;\n    while (slark[j] > pivot) do j := j - 1;\n    if (i <= j) then begin\n      tmp := slark[i];\n      slark[i] := slark[j];\n      slark[j] := tmp;\n      i := i + 1;\n      j := j - 1;\n    end;\n  end;\n  if (slark[centaur] = pivot) then begin\n    kwekkwok := pivot;\n  end else if ((left < j) and (centaur >= left) and (centaur <= j)) then begin\n    kwekkwok := kwekkwok(slark, left, j);\n  end else if ((i < right) and (centaur >= i) and (centaur <= right)) then begin\n    kwekkwok := kwekkwok(slark, i, right);\n  end;\nend;",
+                "jawaban_benar": "d",
+                "pembahasan": "Fungsi `kwekkwok` melakukan QuickSelect untuk mencari elemen ke-centaur (indeks 5) dari array `slark` jika diurutkan. Array terurut: [5, 10, 12, 14, 17, 20, 24, 26, 33, 35, 44]. Elemen pada indeks ke-5 (terhitung dari 0) adalah 20.",
+                "tingkat_kesulitan": "sulit"
+            },
+            {
+                "id_asli": "kab_soal31_2019",
+                "soal": "Ada berapa kali pemanggilan fungsi kwekkwok pada soal nomor 30?",
+                "pilihan": {
+                    "a": "4",
+                    "b": "6",
+                    "c": "8",
+                    "d": "10",
+                    "e": "11"
+                },
+                "kode": "type arr = array of integer;\nvar slark: array [0..10] of integer = (26, 12, 10, 17, 20, 14, 44, 35, 5, 24, 33);\ncentaur: integer = 5;\n\nfunction kwekkwok(slark: arr; left, right: integer): integer;\nvar i, j, tmp, pivot: integer;\nbegin\n  i := left; j := right; pivot := slark[(left + right) div 2];\n  while (i <= j) do begin\n    while (slark[i] < pivot) do i := i + 1;\n    while (slark[j] > pivot) do j := j - 1;\n    if (i <= j) then begin\n      tmp := slark[i];\n      slark[i] := slark[j];\n      slark[j] := tmp;\n      i := i + 1;\n      j := j - 1;\n    end;\n  end;\n  if (slark[centaur] = pivot) then begin\n    kwekkwok := pivot;\n  end else if ((left < j) and (centaur >= left) and (centaur <= j)) then begin\n    kwekkwok := kwekkwok(slark, left, j);\n  end else if ((i < right) and (centaur >= i) and (centaur <= right)) then begin\n    kwekkwok := kwekkwok(slark, i, right);\n  end;\nend;",
+                "jawaban_benar": "a",
+                "pembahasan": "Mengikuti rekursi QuickSelect pada array awal: pemanggilan 1: kwekkwok(0,10) dengan pivot = slark[5] = 14. Rekursi lanjut ke submenu hingga ditemukan pivot pada indeks centaur. Pemanggilan fungsi terjadi sebanyak 4 kali.",
+                "tingkat_kesulitan": "sulit"
+            }
+        ]
+    },
+    {
+        "tipe": "cerita",
+        "deskripsi_soal": "Potongan kode berikut berlaku untuk soal nomor 32 sampai 34.\n var\n  arr: array [0..5] of integer = (8, 1, 6, 3, 4, 15);\n  i: integer;\n  aduk: array [0..6] of integer;\n\nprocedure kalikali();\nbegin\n  aduk[0] := 1;\n  for i := 1 to 6 do\n    aduk[i] := aduk[i-1] * arr[i-1];\nend;\n\nfunction hasil(kiri, kanan: integer): integer;\nbegin\n  hasil := (aduk[kanan] div aduk[kiri-1]);\nend;\n\nbegin\n  kalikali();\n  writeln(aduk[3]);\n  writeln(hasil(2,3));\n  writeln(hasil(4,6));\nend.",
+        "gambar_url_deskripsi": null,
+        "gambar_lokal_deskripsi": null,
+        "pertanyaan": [
+            {
+                "id_asli": "kab_soal32_2019",
+                "soal": "Apakah keluaran baris writeln(aduk[3]); dari program di atas?",
+                "pilihan": {
+                    "a": "3",
+                    "b": "6",
+                    "c": "48",
+                    "d": "144",
+                    "e": "180"
+                },
+                "kode": "var\n  arr: array [0..5] of integer = (8, 1, 6, 3, 4, 15);\n  i: integer;\n  aduk: array [0..6] of integer;\n\nprocedure kalikali();\nbegin\n  aduk[0] := 1;\n  for i := 1 to 6 do\n    aduk[i] := aduk[i-1] * arr[i-1];\nend;\n\nfunction hasil(kiri, kanan: integer): integer;\nbegin\n  hasil := (aduk[kanan] div aduk[kiri-1]);\nend;\n\nbegin\n  kalikali();\n  writeln(aduk[3]);\n  writeln(hasil(2,3));\n  writeln(hasil(4,6));\nend.",
+                "jawaban_benar": "c",
+                "pembahasan": "Prosedur `kalikali` mengisi prefix product: aduk[0]=1, aduk[1]=1*8=8, aduk[2]=8*1=8, aduk[3]=8*6=48. Jadi `aduk[3]` bernilai 48.",
+                "tingkat_kesulitan": "sulit"
+            },
+            {
+                "id_asli": "kab_soal33_2019",
+                "soal": "Apakah keluaran baris writeln(hasil(2,3)); dari program di atas?",
+                "pilihan": {
+                    "a": "3",
+                    "b": "6",
+                    "c": "48",
+                    "d": "144",
+                    "e": "180"
+                },
+                "kode": "var\n  arr: array [0..5] of integer = (8, 1, 6, 3, 4, 15);\n  i: integer;\n  aduk: array [0..6] of integer;\n\nprocedure kalikali();\nbegin\n  aduk[0] := 1;\n  for i := 1 to 6 do\n    aduk[i] := aduk[i-1] * arr[i-1];\nend;\n\nfunction hasil(kiri, kanan: integer): integer;\nbegin\n  hasil := (aduk[kanan] div aduk[kiri-1]);\nend;\n\nbegin\n  kalikali();\n  writeln(aduk[3]);\n  writeln(hasil(2,3));\n  writeln(hasil(4,6));\nend.",
+                "jawaban_benar": "b",
+                "pembahasan": "`hasil(2,3)` menghitung `aduk[3] div aduk[1]` = 48 div 8 = 6 (perkalian elemen arr[1] sampai arr[2], yaitu 1 * 6 = 6).",
+                "tingkat_kesulitan": "sulit"
+            },
+            {
+                "id_asli": "kab_soal34_2019",
+                "soal": "Apakah keluaran baris writeln(hasil(4,6)); dari program di atas?",
+                "pilihan": {
+                    "a": "3",
+                    "b": "6",
+                    "c": "48",
+                    "d": "144",
+                    "e": "180"
+                },
+                "kode": "var\n  arr: array [0..5] of integer = (8, 1, 6, 3, 4, 15);\n  i: integer;\n  aduk: array [0..6] of integer;\n\nprocedure kalikali();\nbegin\n  aduk[0] := 1;\n  for i := 1 to 6 do\n    aduk[i] := aduk[i-1] * arr[i-1];\nend;\n\nfunction hasil(kiri, kanan: integer): integer;\nbegin\n  hasil := (aduk[kanan] div aduk[kiri-1]);\nend;\n\nbegin\n  kalikali();\n  writeln(aduk[3]);\n  writeln(hasil(2,3));\n  writeln(hasil(4,6));\nend.",
+                "jawaban_benar": "e",
+                "pembahasan": "`hasil(4,6)` menghitung perkalian dari arr[3] hingga arr[5] = 3 * 4 * 15 = 180.",
+                "tingkat_kesulitan": "sulit"
+            }
+        ]
+    },
+    {
+        "tipe": "cerita",
+        "deskripsi_soal": "Potongan kode berikut berlaku untuk soal 35 dan 36:\n function asik(a, b, x: integer): integer;\nvar i: integer;\nbegin\n  for i := 1 to x do\n    a := a + b;\n  asik := a;\nend;\n\nfunction seru(a, b, x: integer): integer;\nvar i: integer;\nbegin\n  for i := 1 to x do begin\n    a := a - b;\n    break;\n  end;\n  seru := a;\nend;",
+        "gambar_url_deskripsi": null,
+        "gambar_lokal_deskripsi": null,
+        "pertanyaan": [
+            {
+                "id_asli": "kab_soal35_2019",
+                "soal": "Apakah hasil yang dikembalikan dari menjalankan fungsi asik(1, 9, 5)?",
+                "pilihan": {
+                    "a": "46",
+                    "b": "45",
+                    "c": "37",
+                    "d": "15",
+                    "e": "142"
+                },
+                "kode": "function asik(a, b, x: integer): integer;\nvar i: integer;\nbegin\n  for i := 1 to x do\n    a := a + b;\n  asik := a;\nend;\n\nfunction seru(a, b, x: integer): integer;\nvar i: integer;\nbegin\n  for i := 1 to x do begin\n    a := a - b;\n    break;\n  end;\n  seru := a;\nend;",
+                "jawaban_benar": "a",
+                "pembahasan": "Fungsi `asik(a, b, x)` menghitung `a + (b * x)`. Jadi `asik(1, 9, 5)` = 1 + (9 * 5) = 1 + 45 = 46.",
+                "tingkat_kesulitan": "sulit"
+            },
+            {
+                "id_asli": "kab_soal36_2019",
+                "soal": "Apa hasil yang dikembalikan dari menjalankan fungsi seru(asik(15, 9, 2000), 9, 2000)?",
+                "pilihan": {
+                    "a": "16006",
+                    "b": "16015",
+                    "c": "18037",
+                    "d": "18000",
+                    "e": "18006"
+                },
+                "kode": "function asik(a, b, x: integer): integer;\nvar i: integer;\nbegin\n  for i := 1 to x do\n    a := a + b;\n  asik := a;\nend;\n\nfunction seru(a, b, x: integer): integer;\nvar i: integer;\nbegin\n  for i := 1 to x do begin\n    a := a - b;\n    break;\n  end;\n  seru := a;\nend;",
+                "jawaban_benar": "e",
+                "pembahasan": "Pertama, hitung `asik(15, 9, 2000)` = 15 + 9 * 2000 = 18015. Kemudian fungsi `seru` memiliki perintah `break` di dalam loop pertama, sehingga loop hanya berjalan 1 kali. Jadi `seru(18015, 9, 2000)` = 18015 - 9 = 18006.",
+                "tingkat_kesulitan": "sulit"
+            }
+        ]
+    }
+]

@@ -1,0 +1,332 @@
+[
+  {
+    "id": "prov_cerita1_2025",
+    "tipe_soal": "cerita",
+    "detail_cerita": {
+      "teks": "A. String Cantik OSN-P\n\nSelamat kepada Anda yang telah lolos ke OSN-P Informatika 2025! Pak Dengklek ingin menyelamati dan juga menyemangati Anda dengan membuatkan Anda sebuah string cantik OSN-P.\n\nSebuah string dikatakan string cantik OSN-P jika dan hanya jika memenuhi 2 persyaratan berikut:\n1. Hanya terdiri dari huruf 'O', 'S', 'N', dan 'P'; serta masing-masing harus muncul minimal satu kali.\n2. Tidak boleh terdapat huruf selain 'P' setelah huruf 'P'.\n\nPada awalnya, Pak Dengklek memiliki sebuah string awal S. Pak Dengklek boleh menghapus beberapa huruf (mungkin saja nol) dari S dan tetap mempertahankan urutan huruf-huruf yang tidak dihapus. Pak Dengklek ingin string akhir setelah penghapusan tersebut adalah sebuah string cantik OSN-P.\n\nCarilah panjang string cantik OSN-P terpanjang yang mungkin dibuat! Perlu diperhatikan bahwa bisa jadi Pak Dengklek tidak dapat membuat sebuah string cantik OSN-P dari string awal S.",
+      "gambar_url": null,
+      "gambar_lokal": null
+    },
+    "soal": [
+      {
+        "id": "prov_soal1_2025",
+        "pertanyaan": "Soal A1\nManakah dari 5 pilihan string berikut yang merupakan string cantik OSN-P?\nA. \"OSN\"\nB. \"SSNOSOPP\"\nC. \"OSNPOP\"\nD. \"NOWOSP\"\nE. \"OSOPP\"",
+        "pilihan": {},
+        "jawaban_benar": "C",
+        "pembahasan": "Mengecek apakah string hanya terdiri dari huruf 'O', 'S', 'N', dan 'P' (masing-masing muncul minimal sekali) serta tidak ada huruf selain 'P' setelah huruf 'P'.",
+        "tingkat_kesulitan": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "id": "prov_soal2_2025",
+        "pertanyaan": "Soal A2\nBENAR atau SALAH: Diberikan string awal S = \"SOPRANOSATPOLPP\", Pak Dengklek dapat membuat sebuah string cantik OSN-P (tidak harus yang terpanjang) yang terdiri atas tepat 3 huruf 'P'.",
+        "pilihan": {},
+        "jawaban_benar": "Benar / Salah",
+        "pembahasan": "Pemeriksaan sekuens karakter pada string awal untuk membentuk string cantik dengan jumlah huruf 'P' tertentu.",
+        "tingkat_kesulitan": "mudah",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "id": "prov_soal3_2025",
+        "pertanyaan": "Soal A3\nDiberikan string awal S = \"SOPRANOSATPOLPP\", apa string cantik OSN-P terpanjang yang mungkin dibuat? Jika terdapat lebih dari satu kemungkinan jawaban, pilih yang paling kecil secara leksikografis (muncul paling awal dalam urutan kamus).",
+        "pilihan": {},
+        "jawaban_benar": "String leksikografis terkecil",
+        "pembahasan": "Pencarian subsequence terpanjang yang memenuhi aturan string cantik OSN-P dan diurutkan secara leksikografis.",
+        "tingkat_kesulitan": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "id": "prov_soal4_2025",
+        "pertanyaan": "Soal Pemrograman A\nTulislah sebuah program dengan bahasa C++ sesuai deskripsi dengan format dan batasan sebagai berikut. Perhatikan bahwa untuk setiap kasus uji berlaku batasan waktu selama 2 detik dan batasan memori sebanyak 256 MB.\n\nFormat Masukan:\nMasukan diberikan dalam format sebuah baris berisi string S.\n\nFormat Keluaran:\nKeluarkan sebuah baris berisi sebuah bilangan bulat yang menyatakan panjang string cantik OSN-P terpanjang yang mungkin dibuat. Jika Pak Dengklek tidak dapat membuat sebuah string cantik OSN-P dari string awal S, keluarkan -1.\n\nContoh Masukan 1:\nOSNP\nContoh Keluaran 1:\n4\n\nContoh Masukan 2:\nINISOPRANOSATPOLPP\nContoh Keluaran 2:\n9\n\nContoh Masukan 3:\nOSNTINGKATPROVINSI\nContoh Keluaran 3:\n5\n\nContoh Masukan 4:\nOLIMPIADESAINSNASIONAL\nContoh Keluaran 4:\n-1\n\nPenjelasan Contoh:\nPada contoh pertama, string awal sudah merupakan string cantik OSN-P sehingga merupakan string cantik OSN-P terpanjang yang mungkin dibuat.\nPada contoh kedua, Pak Dengklek dapat menghapus nol atau lebih huruf dari string \"INISOPRANOSATPOLPP\" untuk membuat sebuah string cantik OSN-P sepanjang 9 huruf. Beberapa kemungkinan hasilnya adalah \"NSONOSPPP\" dan \"NSONOSOPP\".\nPada contoh ketiga, string cantik OSN-P terpanjang yang dapat dibuat adalah \"OSNNP\".\nPada contoh keempat, Pak Dengklek tidak dapat membuatkan Anda string cantik OSN-P apa pun.\n\nBatasan:\nUntuk seluruh kasus uji berlaku:\n• 1 ≤ |S| ≤ 200.000, dengan |S| menyatakan panjang dari string S.\n• S hanya terdiri dari huruf-huruf kapital 'A' hingga 'Z'.\n\nSubsoal 1 (Mudah):\nPada subsoal ini, untuk seluruh kasus uji berlaku:\n• |S| ≤ 2000\n\nSubsoal 2 (Sulit):\nTidak ada batasan tambahan pada subsoal ini.",
+        "pilihan": {},
+        "jawaban_benar": "Program / Solusi Algoritma",
+        "pembahasan": "Implementasi pemrograman dinamis (*dynamic programming*) untuk melacak status kemunculan huruf O, S, N, dan transisi ke huruf P.",
+        "tingkat_kesulitan": "sulit",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      }
+    ]
+  },
+  {
+    "id": "prov_cerita5_2025",
+    "tipe_soal": "cerita",
+    "detail_cerita": {
+      "teks": "B. Gudang Penyimpanan Kardus\n\nPak Dengklek ingin membangun sebuah gudang untuk menyimpan kotak-kotak kardus miliknya. Pak Dengklek memiliki N buah kardus. Setiap kardus memiliki ukuran yang sama yakni panjang P satuan dan lebar L satuan. Kardus-kardus tersebut gampang rapuh, sehingga Pak Dengklek tidak boleh menumpuk sebuah kardus di atas kardus yang lain saat disimpan di dalam gudang.\n\nPak Dengklek ingin agar gudang yang ia bangun memiliki alas berbentuk persegi. Pak Dengklek ingin seluruh kardus disimpan dengan estetik, yakni memiliki orientasi yang sama dan sejajar dengan sisi-sisi gudang. Dengan kata lain, seluruh panjang kardus harus sejajar dengan sumbu memanjang (kiri-kanan) dan seluruh lebar kardus harus sejajar dengan sumbu melintang (depan-belakang).\n\nSebagai contoh, berikut merupakan beberapa ilustrasi penyimpanan 4 buah kardus dengan ukuran panjang 2 satuan dan lebar 1 satuan di sebuah gudang dengan panjang sisi 4 satuan, dilihat dari atas. Ilustrasi di sebelah kiri dan tengah merupakan contoh penyimpanan yang estetik, sedangkan ilustrasi di sebelah kanan merupakan contoh penyimpanan yang tidak estetik karena terdapat kardus dengan orientasi yang berbeda.\n\nPak Dengklek ingin mengetahui berapa panjang sisi gudang terkecil yang mungkin sehingga seluruh kardus yang dimiliki oleh Pak Dengklek dapat disimpan di dalam gudang tersebut dengan estetik.",
+      "gambar_url": null,
+      "gambar_lokal": "soal_1.png"
+    },
+    "soal": [
+      {
+        "id": "prov_soal5_2025",
+        "pertanyaan": "Soal B1\nApabila kardus-kardus Pak Dengklek memiliki panjang 17 satuan dan lebar 8 satuan, berapakah paling banyak kardus yang bisa Pak Dengklek simpan di dalam gudang dengan panjang sisi 45 satuan dengan estetik?",
+        "pilihan": {},
+        "jawaban_benar": "Jumlah kardus maksimal",
+        "pembahasan": "Perhitungan kapasitas tata letak orientasi seragam (*estetik*) dalam gudang persegi.",
+        "tingkat_kesulitan": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "id": "prov_soal6_2025",
+        "pertanyaan": "Soal B2\nBENAR atau SALAH: Apabila Pak Dengklek dapat menyimpan seluruh kardus di dalam gudang dengan panjang sisi S satuan dengan estetik, maka Pak Dengklek pasti dapat menyimpan seluruh kardus di dalam gudang dengan panjang sisi S + 1 satuan dengan estetik pula.",
+        "pilihan": {},
+        "jawaban_benar": "Benar / Salah",
+        "pembahasan": "Analisis monotonisitas kapasitas penyimpanan terhadap penambahan ukuran sisi gudang.",
+        "tingkat_kesulitan": "mudah",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "id": "prov_soal7_2025",
+        "pertanyaan": "Soal B3\nApabila Pak Dengklek memiliki 31 kardus dengan panjang 3 satuan dan lebar 1 satuan, maka berapa panjang sisi gudang terkecil sehingga Pak Dengklek dapat menyimpan seluruh kardus dengan estetik?",
+        "pilihan": {},
+        "jawaban_benar": "Panjang sisi gudang terkecil",
+        "pembahasan": "Optimasi dimensi persegi untuk memuat jumlah kardus dengan orientasi tetap.",
+        "tingkat_kesulitan": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "id": "prov_soal8_2025",
+        "pertanyaan": "Soal Pemrograman B\nTulislah sebuah program dengan bahasa C++ sesuai deskripsi dengan format dan batasan sebagai berikut. Perhatikan bahwa untuk setiap kasus uji berlaku batasan waktu selama 2 detik dan batasan memori sebanyak 256 MB.\n\nFormat Masukan:\nMasukan diberikan dalam format berikut:\nN P L\n\nFormat Keluaran:\nKeluarkan sebuah baris berisi sebuah bilangan bulat yang menyatakan panjang sisi gudang terkecil sehingga Pak Dengklek dapat menyimpan seluruh kardus dengan estetik.\n\nContoh Masukan 1:\n17 1 1\nContoh Keluaran 1:\n5\n\nContoh Masukan 2:\n1000000000000 2000 2000\nContoh Keluaran 2:\n2000000000\n\nContoh Masukan 3:\n4 2 1\nContoh Keluaran 3:\n4\n\nContoh Masukan 4:\n1000000000000 4 3\nContoh Keluaran 4:\n3464104\n\nPenjelasan Contoh:\nPada contoh pertama, meskipun ukuran kardus sangatlah kecil, Pak Dengklek hanya dapat menyimpan paling banyak 16 kardus di dalam sebuah gudang dengan panjang sisi 4 satuan. Sehingga, untuk menyimpan 17 kardus, panjang sisi gudang terkecil yang perlu dibangun adalah 5 satuan.\nPada contoh kedua, perhatikan bahwa gudang bisa saja dipenuhi oleh kardus-kardus Pak Dengklek tanpa menyisakan ruang apa pun.\nPada contoh ketiga, sebenarnya keempat kardus dapat disimpan di dalam sebuah gudang dengan panjang sisi 3 satuan apabila tidak harus estetik. Jika harus disusun dengan estetik, Pak Dengklek perlu membangun gudang dengan panjang sisi 4 satuan.\nPada contoh keempat, perhatikan bahwa Anda perlu berhati-hati dengan overflow!\n\nBatasan:\nUntuk seluruh kasus uji berlaku:\n• 1 ≤ N ≤ 10¹²\n• 1 ≤ L ≤ P ≤ 2000\n\nSubsoal 1 (Mudah):\nPada subsoal ini, untuk seluruh kasus uji berlaku:\n• P = L\n\nSubsoal 2 (Sulit):\nTidak ada batasan tambahan pada subsoal ini.\n\nPeringatan:\nUntuk dapat menjawab pertanyaan ini dengan benar, Anda mungkin perlu menggunakan tipe data long long untuk dapat menyimpan data dengan nilai yang besar. Tipe data int saja mungkin tidak cukup!",
+        "pilihan": {},
+        "jawaban_benar": "Program / Solusi Algoritma",
+        "pembahasan": "Implementasi pencarian biner (*binary search*) pada panjang sisi gudang dengan validasi matematis tata letak.",
+        "tingkat_kesulitan": "sulit",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      }
+    ]
+  },
+  {
+    "id": "prov_cerita9_2025",
+    "tipe_soal": "cerita",
+    "detail_cerita": {
+      "teks": "C. Balada Kemasan Telur\n\nPak Dengklek ingin berjualan telur dengan modal uang sebesar N rupiah. Di pusat grosir, dijual berbagai tipe telur dalam kemasan persegi. Untuk setiap bilangan prima p, terdapat tipe telur p yang dijual di dalam kemasan berukuran p × p yang berisikan p × p buah telur, dengan harga p rupiah per kemasan. Perhatikan bahwa tidak ada tipe telur k dengan k adalah bilangan non-prima. Diketahui juga bahwa banyaknya stok tiap tipe telur tidak terbatas.\n\nKarena Pak Dengklek tidak mau ribet, Pak Dengklek akan memilih tepat satu tipe telur saja dan membelanjakan seluruh modal uangnya untuk membeli tipe telur tersebut tanpa sisa. Dengan kata lain, Pak Dengklek harus memilih suatu tipe telur p sehingga p habis membagi N.\n\nSetelah pulang dari pusat grosir, Pak Dengklek akan menjual kembali seluruh telur yang ia telah dapatkan. Pak Dengklek akan menyusun seluruh telur di dalam tepat satu kemasan baru berukuran s × t berisikan s × t buah telur.\n\nSebagai contoh, jika Pak Dengklek sekarang memiliki 36 butir telur, maka terdapat 9 ukuran kemasan yang mungkin: 1 × 36, 2 × 18, 3 × 12, 4 × 9, 6 × 6, 9 × 4, 12 × 3, 18 × 2, dan 36 × 1.\n\nSayangnya, Pak Dengklek belum tahu ukuran s × t mana yang akan menarik pelanggannya. Untuk itu, dengan modal uangnya, Pak Dengklek akan memilih suatu tipe telur sedemikian sehingga ketika Pak Dengklek menjual kembali seluruh telurnya, banyak kemungkinan kemasan s × t yang mungkin adalah sebanyak-banyaknya. Perhatikan bahwa jika s ≠ t, maka kemasan s × t dianggap berbeda dengan kemasan t × s.",
+      "gambar_url": null,
+      "gambar_lokal": "soal_2.png"
+    },
+    "soal": [
+      {
+        "id": "prov_soal9_2025",
+        "pertanyaan": "Soal C1\nApabila Pak Dengklek pada awalnya memiliki modal uang sebesar 111.111 rupiah, lalu ia memilih tipe telur 7 untuk dibelanjakan, maka berapakah banyak telur yang akan dijual kembali pada akhirnya?",
+        "pilihan": {},
+        "jawaban_benar": "Jumlah total telur",
+        "pembahasan": "Perhitungan jumlah kemasan yang dibeli dikalikan dengan isi kemasan prima $p \\times p$.",
+        "tingkat_kesulitan": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "id": "prov_soal10_2025",
+        "pertanyaan": "Soal C2\nDari 5 skenario berikut, manakah banyak telur yang menghasilkan banyak kemungkinan kemasan yang paling banyak?\nA. Jika Pak Dengklek menjual kembali 2¹ × 5¹ = 10 butir telur\nB. Jika Pak Dengklek menjual kembali 2² × 5² = 100 butir telur\nC. Jika Pak Dengklek menjual kembali 2² × 5¹ = 20 butir telur\nD. Jika Pak Dengklek menjual kembali 2³ × 5¹ = 40 butir telur\nE. Jika Pak Dengklek menjual kembali 2⁶ × 5⁰ = 64 butir telur",
+        "pilihan": {},
+        "jawaban_benar": "Pilihan skenario",
+        "pembahasan": "Analisis jumlah faktor pembagi positif dari total telur untuk memaksimalkan variasi bentuk kemasan $s \\times t$.",
+        "tingkat_kesulitan": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "id": "prov_soal11_2025",
+        "pertanyaan": "Soal C3\nApabila Pak Dengklek pada awalnya memiliki modal uang sebesar 45 rupiah, maka tipe telur apakah yang perlu Pak Dengklek pilih agar ketika ia menjual kembali seluruh telurnya, banyak kemungkinan kemasan yang mungkin adalah sebanyak-banyaknya? Jika terdapat lebih dari satu kemungkinan jawaban, pilih yang paling kecil.",
+        "pilihan": {},
+        "jawaban_benar": "Tipe telur optimal",
+        "pembahasan": "Pengecekan faktor prima pembagi modal N yang menghasilkan jumlah faktor total telur terbanyak.",
+        "tingkat_kesulitan": "mudah",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "id": "prov_soal12_2025",
+        "pertanyaan": "Soal Pemrograman C\nTulislah sebuah program dengan bahasa C++ sesuai deskripsi dengan format dan batasan sebagai berikut. Perhatikan bahwa untuk setiap kasus uji berlaku batasan waktu selama 2 detik dan batasan memori sebanyak 256 MB.\n\nFormat Masukan:\nMasukan diberikan dalam format berikut:\nN\n\nFormat Keluaran:\nKeluarkan sebuah baris berisi sebuah bilangan bulat yang menyatakan tipe telur yang perlu Pak Dengklek pilih agar ketika ia menjual kembali seluruh telurnya, banyak kemungkinan kemasan yang mungkin adalah sebanyak-banyaknya. Jika terdapat lebih dari satu kemungkinan jawaban, pilih yang paling kecil.\n\nContoh Masukan 1:\n18\nContoh Keluaran 1:\n2\n\nContoh Masukan 2:\n60\nContoh Keluaran 2:\n3\n\nContoh Masukan 3:\n1000000007\nContoh Keluaran 3:\n1000000007\n\nPenjelasan Contoh:\nPada contoh pertama, untuk dapat membelanjakan seluruh modal uangnya, Pak Dengklek boleh memilih tipe telur 2 atau 3.\n• Apabila Pak Dengklek memilih tipe telur 2, maka Pak Dengklek akan membeli 18 ÷ 2 = 9 kemasan yang masing-masing berisi 2 × 2 = 4 telur, sehingga ia akan memiliki 9 × 4 = 36 telur. Saat Pak Dengklek ingin menjual kembali seluruh telurnya, terdapat 9 kemungkinan kemasan yang mungkin: ukuran 1 × 36, 2 × 18, 3 × 12, 4 × 9, 6 × 6, 9 × 4, 12 × 3, 18 × 2, dan 36 × 1.\n• Apabila Pak Dengklek memilih tipe telur 3, maka Pak Dengklek akan membeli 18 ÷ 3 = 6 kemasan yang masing-masing berisi 3 × 3 = 9 telur, sehingga ia akan memiliki 6 × 9 = 54 telur. Saat Pak Dengklek ingin menjual kembali seluruh telurnya, terdapat 8 kemungkinan kemasan yang mungkin: ukuran 1 × 54, 2 × 27, 3 × 18, 6 × 9, 9 × 6, 18 × 3, 27 × 2, dan 54 × 1.\nDengan demikian, untuk mendapatkan kemungkinan kemasan yang paling banyak, Pak Dengklek perlu memilih tipe telur 2.\n\nPada contoh kedua, untuk dapat membelanjakan seluruh modal uangnya, Pak Dengklek boleh memilih tipe telur 2, 3, atau 5. Dapat dihitung bahwa dengan membeli tipe telur 2, akan ada 16 kemungkinan kemasan yang mungkin; sedangkan dengan membeli tipe telur 3 ataupun 5, akan ada 18 kemungkinan kemasan yang mungkin. Karena terdapat lebih dari satu kemungkinan jawaban yang menghasilkan kemungkinan terbanyak yakni 18, Pak Dengklek akan memilih yang paling kecil yakni 3.\n\nPada contoh ketiga, perhatikan bahwa N = 1.000.000.007 adalah bilangan prima sehingga Pak Dengklek hanya dapat memilih tipe telur 1.000.000.007.\n\nBatasan:\nUntuk seluruh kasus uji berlaku:\n• 2 ≤ N ≤ 10¹²\n\nSubsoal 1 (Mudah):\nPada subsoal ini, untuk seluruh kasus uji berlaku:\n• N ≤ 2000\n\nSubsoal 2 (Sulit):\nTidak ada batasan tambahan pada subsoal ini.\n\nPeringatan:\nUntuk dapat menjawab pertanyaan ini dengan benar, Anda mungkin perlu menggunakan tipe data long long untuk dapat menyimpan data dengan nilai yang besar. Tipe data int saja mungkin tidak cukup!",
+        "pilihan": {},
+        "jawaban_benar": "Program / Solusi Algoritma",
+        "pembahasan": "Implementasi faktorisasi prima untuk mengevaluasi jumlah kombinasi kemasan bagi setiap pilihan tipe telur.",
+        "tingkat_kesulitan": "sulit",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      }
+    ]
+  },
+  {
+    "id": "prov_cerita13_2025",
+    "tipe_soal": "cerita",
+    "detail_cerita": {
+      "teks": "D. Telur Kemasan Balado\n\nSetelah menjadi juragan telur, Pak Dengklek ingin mengembangkan usahanya untuk berjualan telur rebus kemasan. Ada dua varian telur milik Pak Dengklek: varian Asli yakni telur tanpa bumbu apa pun, dan varian Balado yang merupakan telur dengan bumbu pedas.\n\nPak Dengklek sudah memproduksi N telur yang ditata dari kiri ke kanan. Penataan tersebut dapat direpresentasikan sebagai sebuah string S sepanjang N yang hanya terdiri dari huruf 'A' dan 'B'. Huruf 'A' menunjukkan telur varian Asli, sedangkan huruf 'B' menunjukkan telur varian Balado.\n\nSuatu hari, Pak Dengklek mendapatkan kabar bahwa Raja Bebek ingin memborong seluruh telur milik Pak Dengklek. Namun, Raja Bebek hanya ingin membeli telur varian Balado saja. Alhasil, Pak Dengklek ingin menyembunyikan nol atau lebih telur dengan operasi berikut:\n1. Pak Dengklek akan memilih telur terkiri (sebut saja telur pada posisi l) dan telur terkanan (sebut saja telur pada posisi r) yang akan disembunyikan.\n2. Pak Dengklek akan menyembunyikan seluruh telur yang berada pada rentang tersebut (dari posisi l hingga r inklusif).\n3. Pak Dengklek akan menata ulang telur-telur sisanya menjadi satu kesatuan dari kiri ke kanan tanpa mengubah urutannya.\n\nDengan waktu yang tersisa, Pak Dengklek dapat melakukan operasi di atas paling banyak sebanyak K kali (mungkin saja tidak sama sekali). Pada akhirnya, Pak Dengklek harus menjamin bahwa seluruh telur yang tersisa adalah telur varian Balado.\n\nSebagai contoh, berikut adalah ilustrasi penyembunyian telur yang dapat dilakukan oleh Pak Dengklek agar menyisakan hanya telur varian Balado, dengan N = 14 dan S = \"BBABAAAABAABBB\". Perhatikan bahwa Pak Dengklek melakukan operasi di atas sebanyak 2 kali pada contoh ini.\n\nBantulah Pak Dengklek untuk menentukan paling banyak telur varian Balado yang mungkin dapat Raja Bebek borong!",
+      "gambar_url": null,
+      "gambar_lokal": "soal_3.png"
+    },
+    "soal": [
+      {
+        "id": "prov_soal13_2025",
+        "pertanyaan": "Soal D1\nApabila Pak Dengklek hanya boleh melakukan operasi penyembunyian paling banyak 1 kali, manakah dari 5 pilihan string S berikut yang memungkinkan Raja Bebek memborong telur varian Balado paling banyak?\nA. \"BBBBB\"\nB. \"BBAABBBB\"\nC. \"AAAAABBBB\"\nD. \"BABBBBBBBBAB\"\nE. \"AABBBBAABABBBABBB\"",
+        "pilihan": {},
+        "jawaban_benar": "Pilihan string",
+        "pembahasan": "Evaluasi penghapusan rentang karakter 'A' untuk menyisakan jumlah karakter 'B' terbanyak dalam sekali operasi.",
+        "tingkat_kesulitan": "mudah",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "id": "prov_soal14_2025",
+        "pertanyaan": "Soal D2\nApabila penataan telur direpresentasikan dengan string \"BAABBBAAAABBBBAAABBA\", dengan melakukan operasi penyembunyian paling banyak 2 kali, berapakah banyaknya telur varian Balado terbanyak yang mungkin dapat Raja Bebek borong?",
+        "pilihan": {},
+        "jawaban_benar": "Jumlah telur Balado maksimal",
+        "pembahasan": "Simulasi pemangkasan segmen karakter non-balado dengan batas maksimal 2 operasi.",
+        "tingkat_kesulitan": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "id": "prov_soal15_2025",
+        "pertanyaan": "Soal D3\nApabila penataan telur direpresentasikan dengan string \"BAABBBAAAABBBBAAABBA\", dengan melakukan operasi penyembunyian paling banyak 3 kali, berapakah banyaknya telur varian Balado terbanyak yang mungkin dapat Raja Bebek borong?",
+        "pilihan": {},
+        "jawaban_benar": "Jumlah telur Balado maksimal",
+        "pembahasan": "Optimasi penghapusan elemen menggunakan hingga 3 rentang operasi untuk memaksimalkan sisa huruf 'B'.",
+        "tingkat_kesulitan": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "id": "prov_soal16_2025",
+        "pertanyaan": "Soal Pemrograman D\nTulislah sebuah program dengan bahasa C++ sesuai deskripsi dengan format dan batasan sebagai berikut. Perhatikan bahwa untuk setiap kasus uji berlaku batasan waktu selama 2 detik dan batasan memori sebanyak 256 MB.\n\nFormat Masukan:\nMasukan diberikan dalam format berikut:\nN K\nS\n\nFormat Keluaran:\nKeluarkan sebuah baris berisi sebuah bilangan bulat yang menyatakan banyaknya telur varian Balado terbanyak yang mungkin dapat Raja Bebek borong.\n\nContoh Masukan 1:\n14 2\nBBABAAAABAABBB\nContoh Keluaran 1:\n6\n\nContoh Masukan 2:\n14 4\nBBABAAAABAABBB\nContoh Keluaran 2:\n7\n\nContoh Masukan 3:\n4 1000000000\nBBBB\nContoh Keluaran 3:\n4\n\nContoh Masukan 4:\n4 1000000000\nAAAA\nContoh Keluaran 4:\n0\n\nPenjelasan Contoh:\nPada contoh pertama, Pak Dengklek dapat melakukan penyembunyian telur seperti pada deskripsi cerita agar Raja Bebek dapat memborong 6 telur varian Balado.\nPada contoh kedua, Pak Dengklek dapat melakukan penyembunyian telur sebagai berikut:\n1. Dari \"BBABAAAABAABBB\", sembunyikan telur di posisi 6 hingga 7, tersisa \"BBABAABAABBB\".\n2. Dari \"BBABAABAABBB\", sembunyikan telur di posisi 5 hingga 6, menyisakan \"BBABBAABBB\".\n3. Dari \"BBABBAABBB\", sembunyikan telur di posisi 3 hingga 3, menyisakan \"BBBBAABBB\".\n4. Dari \"BBBBAABBB\", sembunyikan telur di posisi 5 hingga 6, menyisakan \"BBBBBBB\".\nPada contoh ketiga, karena seluruh telur merupakan varian Balado, Pak Dengklek tidak perlu menyembunyikan telur apa pun.\nPada contoh keempat, karena seluruh telur merupakan varian Asli, Pak Dengklek hanya dapat menyembunyikan seluruhnya sehingga Raja Bebek tidak dapat memborong apa pun.\n\nBatasan:\nUntuk seluruh kasus uji berlaku:\n• 1 ≤ N ≤ 200.000\n• 1 ≤ K ≤ 10⁹\n• S memiliki panjang N dan hanya terdiri dari huruf 'A' dan 'B'.\n\nSubsoal 1 (Mudah):\nPada subsoal ini, untuk seluruh kasus uji berlaku:\n• N ≤ 16\n• K ≤ 2\n\nSubsoal 2 (Sulit):\nTidak ada batasan tambahan pada subsoal ini.",
+        "pilihan": {},
+        "jawaban_benar": "Program / Solusi Algoritma",
+        "pembahasan": "Implementasi pemrograman dinamis atau algoritma *greedy* bersyarat untuk penggabungan segmen string.",
+        "tingkat_kesulitan": "sulit",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      }
+    ]
+  },
+  {
+    "id": "prov_cerita17_2025",
+    "tipe_soal": "cerita",
+    "detail_cerita": {
+      "teks": "E. Tebas Tebang Bambu\n\nDi belakang rumah Pak Dengklek terdapat N bilah bambu. Bambu ke-i memiliki panjang sebesar Aᵢ satuan. Pak Dengklek berencana untuk menjual seluruh bambunya.\n\nSaat Pak Dengklek ingin berjualan di pasar, diketahui bahwa pelanggan tidak mau membeli bambu secara eceran. Pelanggan hanya mau membeli bambu dalam satuan ikat yang memenuhi dua syarat berikut:\n• Setiap ikat bambu harus terdiri dari setidaknya M bilah bambu.\n• Setiap bambu dalam satu ikat yang sama harus memiliki panjang yang sama.\n\nPerhatikan bahwa boleh jadi dua atau lebih ikat bambu yang berbeda memiliki panjang bambu yang sama.\n\nPak Dengklek ingin mengelompokkan seluruh bambunya ke dalam satu atau lebih ikat. Untuk memenuhi kedua syarat di atas, Pak Dengklek dapat memangkas setiap bambunya sehingga panjangnya berkurang. Untuk mempertahankan kekokohan bambu, Pak Dengklek dapat memangkas setiap bambu agar panjangnya berkurang maksimal sepanjang K satuan.\n\nPerhatikan bahwa bagian bambu yang terpangkas tidak dapat digunakan kembali. Perhatikan juga bahwa setiap bambu hanya boleh dipangkas, dan tidak boleh dibelah menjadi lebih dari satu bilah.\n\nApabila Pak Dengklek harus menjual seluruh bambunya, berapakah banyak ikat maksimum yang dapat ia jual? Perlu diperhatikan bahwa bisa jadi Pak Dengklek tidak dapat menjual seluruh bambunya.",
+      "gambar_url": null,
+      "gambar_lokal": null
+    },
+    "soal": [
+      {
+        "id": "prov_soal17_2025",
+        "pertanyaan": "Soal E1\nApabila Pak Dengklek tidak dapat memangkas bambu-bambunya (dengan kata lain, nilai K = 0) dan setiap ikat bambu harus terdiri dari setidaknya 3 bilah bambu, manakah dari 5 skenario berikut yang memungkinkan Pak Dengklek untuk menjual seluruh bambunya dan dengan banyaknya ikat bambu yang dijual paling banyak?\nA. Pak Dengklek akan menjual 14 bilah bambu dengan panjang [1, 2, 3, 4, 5, 6, 7, 7, 6, 5, 4, 3, 2, 1]\nB. Pak Dengklek akan menjual 14 bilah bambu dengan panjang [2, 3, 4, 2, 3, 4, 2, 3, 4, 2, 3, 4, 2, 3]\nC. Pak Dengklek akan menjual 14 bilah bambu dengan panjang [5, 5, 5, 5, 6, 6, 6, 6, 7, 7, 7, 7, 8, 8]\nD. Pak Dengklek akan menjual 14 bilah bambu dengan panjang [8, 7, 8, 7, 8, 7, 8, 7, 8, 7, 8, 7, 8, 7]\nE. Pak Dengklek akan menjual 14 bilah bambu dengan panjang [1, 1, 1, 2, 3, 3, 3, 4, 5, 5, 5, 6, 6, 6]",
+        "pilihan": {},
+        "jawaban_benar": "Pilihan skenario",
+        "pembahasan": "Pemeriksaan frekuensi kemunculan panjang bambu yang memenuhi syarat minimal M tanpa pemangkasan.",
+        "tingkat_kesulitan": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "id": "prov_soal18_2025",
+        "pertanyaan": "Soal E2\nBENAR atau SALAH: Pada kasus-kasus yang memungkinkan Pak Dengklek untuk menjual seluruh bambu, maka untuk memaksimumkan banyaknya ikat bambu yang dapat Pak Dengklek jual, setiap ikat bambu pasti terdiri dari kurang dari 2 × M bilah bambu.",
+        "pilihan": {},
+        "jawaban_benar": "Benar / Salah",
+        "pembahasan": "Analisis properti partisi jumlah elemen kelompok bambu dengan panjang seragam.",
+        "tingkat_kesulitan": "mudah",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "id": "prov_soal19_2025",
+        "pertanyaan": "Soal E3\nPak Dengklek akan menjual 18 bilah bambu dengan panjang sebagai berikut:\n[1, 1, 3, 3, 4, 5, 6, 7, 8, 9, 9, 13, 13, 14, 14, 14, 15, 16]\n\nApabila Pak Dengklek dapat memangkas bambu-bambunya agar panjangnya berkurang paling banyak 2 satuan, maka berapakah banyaknya ikat bambu maksimum yang dapat Pak Dengklek jual jika setiap ikat bambu harus terdiri dari setidaknya 3 bilah bambu dan Pak Dengklek harus menjual seluruh bambunya?\nJika ternyata Pak Dengklek tidak mungkin menjual seluruh bambunya, jawablah dengan -1.",
+        "pilihan": {},
+        "jawaban_benar": "Jumlah ikat maksimum",
+        "pembahasan": "Simulasi pemangkasan rentang nilai panjang bambu dengan batas toleransi K.",
+        "tingkat_kesulitan": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "id": "prov_soal20_2025",
+        "pertanyaan": "Soal Pemrograman E\nTulislah sebuah program dengan bahasa C++ sesuai deskripsi dengan format dan batasan sebagai berikut. Perhatikan bahwa untuk setiap kasus uji berlaku batasan waktu selama 3 detik dan batasan memori sebanyak 256 MB.\n\nFormat Masukan:\nMasukan diberikan dalam format berikut:\nN M K\nA₁ A₂ ... Aₙ\n\nFormat Keluaran:\nKeluarkan sebuah baris berisi sebuah bilangan bulat yang menyatakan banyaknya ikat bambu maksimum yang dapat Pak Dengklek jual apabila harus menjual seluruh bambunya. Jika Pak Dengklek tidak mungkin menjual seluruh bambunya, keluarkan -1.\n\nContoh Masukan 1:\n9 3 0\n2 5 3 5 6 5 3 5 2\nContoh Keluaran 1:\n-1\n\nContoh Masukan 2:\n9 3 1\n2 5 3 5 6 5 3 5 2\nContoh Keluaran 2:\n2\n\nContoh Masukan 3:\n9 3 3\n2 5 3 5 6 5 3 5 2\nContoh Keluaran 3:\n3\n\nPenjelasan Contoh:\nPada contoh pertama, Pak Dengklek tidak dapat memangkas bambu-bambunya. Alhasil, ia hanya dapat membuat 1 ikat bambu saja berisikan 3 atau 4 bilah bambu dengan panjang 5. Namun, Pak Dengklek tidak dapat menjual seluruh bambunya karena bambu-bambu lainnya tidak dapat membentuk ikat bambu. Oleh karena itu, keluarannya adalah -1.\nPada contoh kedua, Pak Dengklek dapat memangkas bambu ke-3, ke-5, dan ke-7 sehingga panjang tiap bambu secara berturut-turut menjadi [2, 5, 2, 5, 5, 5, 2, 5, 2]. Pak Dengklek kemudian dapat membuat 2 ikat bambu: satu berisikan 4 bilah bambu dengan panjang 2, dan satu lagi berisikan 5 bilah bambu dengan panjang 5. Perhatikan bahwa dengan menjual 2 ikat bambu tersebut, Pak Dengklek akan menjual seluruh bambunya.\nPada contoh ketiga, Pak Dengklek bisa saja memangkas bambu ke-2 hingga ke-8 sehingga panjang tiap bambu secara berturut-turut menjadi [2, 4, 2, 2, 4, 4, 2, 2, 2]. Pak Dengklek kemudian dapat membuat 3 ikat bambu: dua ikat masing-masing berisikan 3 bilah bambu dengan panjang 2, dan satu lagi berisikan 3 bilah bambu dengan panjang 4.\n\nBatasan:\nUntuk seluruh kasus uji berlaku:\n• 2 ≤ M ≤ N ≤ 200.000\n• 0 ≤ K ≤ 10⁹\n• 1 ≤ Aᵢ ≤ 10⁹\n\nSubsoal 1 (Mudah):\nPada subsoal ini, untuk seluruh kasus uji berlaku:\n• M ≤ 20\n\nSubsoal 2 (Sulit):\nTidak ada batasan tambahan pada subsoal ini.\n\nPeringatan:\nUntuk dapat menjawab pertanyaan ini dengan benar, Anda mungkin perlu menggunakan tipe data long long untuk dapat menyimpan data dengan nilai yang besar. Tipe data int saja mungkin tidak cukup!",
+        "pilihan": {},
+        "jawaban_benar": "Program / Solusi Algoritma",
+        "pembahasan": "Implementasi pemrograman dinamis (*DP*) dengan transisi rentang panjang bambu yang valid setelah dipangkas.",
+        "tingkat_kesulitan": "sulit",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      }
+    ]
+  },
+  {
+    "id": "prov_cerita21_2025",
+    "tipe_soal": "cerita",
+    "detail_cerita": {
+      "teks": "F. Kandang Ayam Kandang Bebek\n\nSelain beternak bebek, Pak Dengklek juga sekarang beternak ayam. Seluruh ayam dan bebek tersebut berada di dalam pekarangan yang sama berbentuk segiempat berukuran 2 baris dan N kolom. Baris atas dinomori 1 dan baris bawah dinomori 2. Dari kiri ke kanan, kolom-kolom pekarangan dinomori dari 1 hingga N. Petak pada baris x dan kolom y direpresentasikan dengan (x, y).\n\nKondisi hewan di pekarangan dinyatakan dengan dua buah string, S₁ dan S₂, sepanjang N yang masing-masing hanya terdiri dari karakter 'A', 'B', dan '.' (titik). Karakter ke-j pada Sᵢ menunjukkan hewan yang mungkin ada pada petak (i, j). Karakter 'A' menunjukkan seekor ayam, karakter 'B' menunjukkan seekor bebek, dan karakter '.' menunjukkan ketiadaan hewan.\n\nSelain itu, kondisi lahan pekarangan juga dinyatakan dengan sebuah matriks M berukuran 2 × N berisi bilangan bulat positif. Mᵢ,ⱼ menyatakan nilai kebecekan lahan pada petak (i, j).\n\nPak Dengklek juga memiliki sebuah kandang ayam dan sebuah kandang bebek tepat di sebelah kiri pekarangan. Untuk mudahnya, kandang ayam dapat dianggap terletak pada petak (1, 0) dan kandang bebek terletak pada petak (2, 0). Kandang ayam cukup besar untuk menampung seluruh ayam. Kandang bebek pun cukup besar untuk menampung seluruh bebek.\n\nPada malam hari, seluruh ayam harus pulang ke kandang ayam dan seluruh bebek pun harus pulang ke kandang bebek. Setiap hewan dapat bergerak 4 arah dari posisinya di petak (i, j): ke atas yakni petak (i - 1, j), ke bawah yakni petak (i + 1, j), ke kiri yakni petak (i, j - 1), atau ke kanan yakni petak (i, j + 1). Perhatikan bahwa mereka tidak boleh keluar dari pekarangan (kecuali ke kandang). Rute yang ditempuh oleh seekor hewan didefinisikan sebagai seluruh petak yang dilaluinya termasuk posisi awal hingga sesaat sebelum masuk kandang, yakni ayam diakhiri dengan petak (1, 1) dan bebek diakhiri dengan petak (2, 1).\n\nKarena ayam dan bebek Pak Dengklek belum akur, apabila ada petak yang pernah dilalui oleh setidaknya seekor ayam dan setidaknya seekor bebek, maka akan terjadi perselisihan.\n\nSetiap hewan memiliki nilai kerisihan yang didefinisikan sebagai jumlahan nilai-nilai kebecekan pada seluruh petak yang dilalui oleh rute hewan tersebut. Berapakah total nilai kerisihan paling kecil yang mungkin untuk seluruh hewan pulang ke kandang dengan syarat tidak terjadi perselisihan?",
+      "gambar_url": null,
+      "gambar_lokal": "soal_4.png, soal_5.png"
+    },
+    "soal": [
+      {
+        "id": "prov_soal21_2025",
+        "pertanyaan": "Soal F1\nAsumsikan pekarangan Pak Dengklek berukuran 2 baris dan 5 kolom. Manakah dari 5 kondisi hewan di pekarangan berikut yang (mau tidak mau) pasti terjadi perselisihan ketika seluruh hewan pulang ke kandang?\nA. Ayam berada di petak (1, 5) dan bebek berada di petak (2, 1)\nB. Ayam berada di petak (1, 2) dan bebek berada di petak (1, 4)\nC. Ayam berada di petak (2, 5) dan bebek berada di petak (2, 4)\nD. Ayam berada di petak (1, 2) dan bebek berada di petak (2, 4)\nE. Ayam berada di petak (1, 4) dan bebek berada di petak (1, 2)",
+        "pilihan": {},
+        "jawaban_benar": "Pilihan kondisi",
+        "pembahasan": "Analisis persilangan jalur gerak rute pulang hewan tanpa bersinggungan pada grid 2x5.",
+        "tingkat_kesulitan": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "id": "prov_soal22_2025",
+        "pertanyaan": "Soal F2\nAsumsikan pekarangan Pak Dengklek berukuran 2 baris dan 1000 kolom. Diketahui juga bahwa hanya terdapat tepat 1 ekor ayam dan tepat 1 ekor bebek. Apabila pada petak (2, 500) terdapat seekor ayam, maka ada berapa banyak posisi awal bebek yang mungkin tidak mengakibatkan perselisihan ketika kedua hewan pulang ke kandang?",
+        "pilihan": {},
+        "jawaban_benar": "Jumlah posisi awal bebek",
+        "pembahasan": "Pemeriksaan batasan geometris rute agar jalur pulang ayam dan bebek tidak saling memotong.",
+        "tingkat_kesulitan": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "id": "prov_soal23_2025",
+        "pertanyaan": "Soal F3\nAsumsikan pekarangan Pak Dengklek berukuran 2 baris dan 6 kolom. Diketahui pula bahwa kondisi lahan pekarangan direpresentasikan dengan matriks M berikut:\n6 3 2 1 3 7\n8 5 1 9 1 4\n\nApabila terdapat seekor ayam pada pekarangan tersebut di petak (1, 1) lalu juga ada 4 ekor bebek yang memenuhi kolom 5 hingga 6, atau dengan kata lain berada di petak (1, 5), (1, 6), (2, 5), dan (2, 6); maka berapakah total nilai kerisihan paling kecil yang mungkin untuk kelima hewan pulang ke kandang dengan syarat tidak terjadi perselisihan?",
+        "pilihan": {},
+        "jawaban_benar": "Total nilai kerisihan",
+        "pembahasan": "Perhitungan bobot minimum jalur perpindahan hewan pada matriks kebecekan tanpa konflik.",
+        "tingkat_kesulitan": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "id": "prov_soal24_2025",
+        "pertanyaan": "Soal Pemrograman F\nTulislah sebuah program dengan bahasa C++ sesuai deskripsi dengan format dan batasan sebagai berikut. Perhatikan bahwa untuk setiap kasus uji berlaku batasan waktu selama 3 detik dan batasan memori sebanyak 256 MB.\n\nFormat Masukan:\nMasukan diberikan dalam format berikut:\nN\nS₁\nS₂\nM₁,₁ M₁,₂ ... M₁,ₙ\nM₂,₁ M₂,₂ ... M₂,ₙ\n\nFormat Keluaran:\nKeluarkan sebuah baris berisi sebuah bilangan bulat yang menyatakan total nilai kerisihan paling kecil yang mungkin untuk seluruh hewan pulang ke kandang dengan syarat tidak terjadi perselisihan. Jika ternyata pasti terjadi perselisihan, keluarkan -1.\n\nContoh Masukan 1:\n6\nA.....\n.B....\n6 3 2 1 3 7\n8 5 1 9 1 4\nContoh Keluaran 1:\n19\n\nContoh Masukan 2:\n6\nA.....\n.B..B.\n6 3 2 1 3 7\n8 5 1 9 1 4\nContoh Keluaran 2:\n40\n\nContoh Masukan 3:\n6\nA.A...\n.B..B.\n6 3 2 1 3 7\n8 5 1 9 1 4\nContoh Keluaran 3:\n54\n\nContoh Masukan 4:\n6\nA.A...\n.A..B.\n6 3 2 1 3 7\n8 5 1 9 1 4\nContoh Keluaran 4:\n-1\n\nPenjelasan Contoh:\nPada contoh pertama, ayam dapat pulang ke kandang dengan hanya bergerak ke kiri sehingga rute yang dilaluinya hanyalah melewati petak (1, 1) dengan nilai kerisihan 6. Untuk bebek, ia dapat pulang ke kandang dengan bergerak ke kiri dua kali sehingga rute yang dilaluinya adalah melewati petak (2, 2) dan (2, 1) dengan nilai kerisihan 5 + 8 = 13. Total nilai kerisihan dari seluruh hewan adalah 6 + 13 = 19.\nPada contoh kedua, terdapat seekor bebek tambahan dari contoh pertama. Untuk mendapatkan nilai kerisihan terkecil, bebek tambahan ini secara berturut-turut akan bergerak ke atas, kiri, kiri, bawah, kiri, kiri, dan kiri untuk pulang ke kandang. Dapat dihitung bahwa nilai kerisihan bebek tersebut adalah 1 + 3 + 1 + 2 + 1 + 5 + 8 = 21, sehingga total nilai kerisihan dari seluruh hewan menjadi 40.\nPada contoh ketiga, dapat dibuktikan bahwa total nilai kerisihan paling kecil adalah 54 dengan seluruh hewan hanya bergerak ke kiri saja. Perhatikan bahwa rute yang dilalui bebek pada petak (2, 5) tidak sama dengan yang ada pada contoh kedua karena dapat mengakibatkan terjadinya perselisihan.\nPada contoh keempat, perhatikan bahwa rute yang dilalui bebek pasti akan pernah bersilangan dengan rute ayam sehingga terjadi perselisihan.\n\nBatasan:\nUntuk seluruh kasus uji berlaku:\n• 1 ≤ N ≤ 100.000\n• S₁ dan S₂ masing-masing memiliki panjang N dan hanya terdiri dari karakter 'A', 'B', dan '.'.\n• Dijamin bahwa terdapat setidaknya 1 ayam dan setidaknya 1 bebek di pekarangan.\n• 1 ≤ Mᵢ,ⱼ ≤ 1.000.000\n\nSubsoal 1 (Mudah):\nPada subsoal ini, untuk seluruh kasus uji berlaku:\n• Dijamin bahwa banyaknya ayam adalah tepat 1, dan ayam tersebut berada pada petak (1, 1).\n\nSubsoal 2 (Sulit):\nTidak ada batasan tambahan pada subsoal ini.\n\nPeringatan:\nUntuk dapat menjawab pertanyaan ini dengan benar, Anda mungkin perlu menggunakan tipe data long long untuk dapat menyimpan data dengan nilai yang besar. Tipe data int saja mungkin tidak cukup!",
+        "pilihan": {},
+        "jawaban_benar": "Program / Solusi Algoritma",
+        "pembahasan": "Implementasi algoritma graf atau pemrograman dinamis tingkat lanjut untuk rute non-intersek pada grid 2 x N.",
+        "tingkat_kesulitan": "sulit",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      }
+    ]
+  }
+]

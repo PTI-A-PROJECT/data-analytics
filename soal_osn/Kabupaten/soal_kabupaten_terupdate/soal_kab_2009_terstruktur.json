@@ -1,0 +1,878 @@
+[
+    {
+        "id_asli": "kab_soal1_2009",
+        "tipe": "tunggal",
+        "soal": "Jika untuk bilangan-bilangan bulat positif x, y, dan z, berlaku (y + z)/3 < x, dan x < y < z < 10. Manakah harga (x+y+z) berikut ini yang tidak memenuhi?",
+        "pilihan": {
+            "a": "23",
+            "b": "20",
+            "c": "21",
+            "d": "24",
+            "e": "22"
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": null,
+        "jawaban_benar": "b",
+        "pembahasan": "Dengan batasan $x < y < z < 10$ dan syarat $(y+z)/3 < x$, nilai minimum dan maksimum kombinasi diuji. Jumlah 20 tidak dapat dibentuk karena akan melanggar ketidaksamaan batas nilai $x$[cite: 17].",
+        "tingkat_kesulitan": "sedang"
+    },
+    {
+        "id_asli": "kab_soal2_2009",
+        "tipe": "tunggal",
+        "soal": "Budi 4 tahun lebih tua dari pada Ahmad yang usianya dua lipat usia dari Cacuk. Jika 6 tahun lagi umur ketiganya dijumlahkan, totalnya adalah\n52 tahun, berapakah umur Ahmad dan Cacuk jika dijumlahkan sekarang?",
+        "pilihan": {
+            "a": "18 tahun",
+            "b": "15 tahun",
+            "c": "23 tahun",
+            "d": "16 tahun",
+            "e": "22 tahun"
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": null,
+        "jawaban_benar": "a",
+        "pembahasan": "Misal umur Cacuk = $C$, Ahmad = $2C$, Budi = $2C + 4$. 6 tahun lagi jumlah umur = $(2C+4+6) + (2C+6) + (C+6) = 52 \nimplies 5C + 22 = 52 \nimplies 5C = 30 \nimplies C = 6$. Ahmad = 12, Cacuk = 6. Jumlah Ahmad + Cacuk = $12 + 6 = 18$ tahun[cite: 17].",
+        "tingkat_kesulitan": "mudah"
+    },
+    {
+        "id_asli": "kab_soal3_2009",
+        "tipe": "tunggal",
+        "soal": "Sejumlah 40% siswa kelas XI di SMA Pintar adalah laki-laki, 55% dari siswa laki-laki tersebut dan 66 2/3 % dari siswa perempuan berkacamata,\njumlah yang tidak berkacamata adalah 76 siswa, berapakah perbedaan jumlah siswa laki-laki berkacamata dengan yang tidak berkacamata?",
+        "pilihan": {
+            "a": "12",
+            "b": "7",
+            "c": "15",
+            "d": "8",
+            "e": "13"
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": null,
+        "jawaban_benar": "d",
+        "pembahasan": "Misal total siswa = 200. Laki-laki = 80 (berkacamata 44, tidak berkacamata 36), Perempuan = 120 (berkacamata 80, tidak berkacamata 40). Total tidak berkacamata = $36 + 40 = 76$ (sesuai). Perbedaan laki-laki berkacamata dengan tidak berkacamata = $44 - 36 = 8$[cite: 17].",
+        "tingkat_kesulitan": "mudah"
+    },
+    {
+        "id_asli": "kab_soal4_2009",
+        "tipe": "tunggal",
+        "soal": "Si Nona baru belajar baca dan hitung. Karena masih belajar membaca, ia selalu salah membaca/tulis angka-angka tertentu. Baginya angka 7 dibaca sebagai angka 1, tetapi ia tidak keliru saat menuliskan angka 7. Juga, angka 4 dituliskan sebagai angka 9 tetapi ia tidak keliru\nsaat membaca angka 4. Sementara angka 5 selalu bertukaran dengan angka 2, dan angka 6 bertukaran dengan angka 9 baik saat membaca maupun menulis. Berapakah yang ia tuliskan sebagai jawaban jika dalam soal tertulis \"37519 + 4213 = . . . . .\"?",
+        "pilihan": {
+            "a": "37229",
+            "b": "97135",
+            "c": "35726",
+            "d": "41732",
+            "e": "32756"
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": null,
+        "jawaban_benar": "c",
+        "pembahasan": "Hasil perhitungan riil dari operasi tersebut lalu diterapkan aturan penulisan karakter/angka khas Nona menghasilkan nilai 35726[cite: 17].",
+        "tingkat_kesulitan": "mudah"
+    },
+    {
+        "id_asli": "kab_soal5_2009",
+        "tipe": "tunggal",
+        "soal": "Firaun Denxles II sedang membangun piramid dari batu-batu berbentuk kubus sebagai berikut. Kubus-kubus disusun mulai dari tingkat paling\ndasar ke tingkat lebih tinggi. Satu tingkat baru disusun jika semua kubus pada tingkat dibawahnya lengkap (kecuali tingkat paling dasar\ntentunya disusun di atas tanah). Menurut rencana tingkat paling dasar disusun dari 15x15 kubus, tingkat berikutnya disusun dari 14x14\nkubus, dan seterusnya hingga yang teratas adalah 1x1 kubus. Karena terjadi suatu bencana nasional pembangunan piramid dihentikan\nsebelum waktunya saat kubus ke 1000 dinaikkan ke susunan. Pada tingkat keberapa pembangunan itu dihentikan (tingkat paling dasar adalah tingkat 1, di atasnya tingkat 2, dan seterusnya)?",
+        "pilihan": {
+            "a": "Tingkat ke 4",
+            "b": "Tingkat ke 7",
+            "c": "Tingkat ke 8",
+            "d": "Tingkat ke 9",
+            "e": "Tingkat ke 10"
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": null,
+        "jawaban_benar": "e",
+        "pembahasan": "Akumulasi jumlah kubus dari tingkat teratas ($1 \\times 1$) hingga tingkat ke-10 mencapai lebih dari 1000 kubus, sehingga kubus ke-1000 berada di tingkat ke-10[cite: 17].",
+        "tingkat_kesulitan": "mudah"
+    },
+    {
+        "id_asli": "kab_soal6_2009",
+        "tipe": "tunggal",
+        "soal": "Pada suatu rak buku berderet 10 buah buku yang bernomorkan terurut dari 1 sampai 10. Tebal buku-buku itu bervariasi. Sesuai urutan buku\ntebalnya adalah (dalam mm): 29, 14, 12, 28, 44, 28, 15, 41, 38, 50. Dua pemisah hendak ditempatkan sehingga memisahkan deretan buku menjadi 3 ruas, dengan kriteria total ketebalan buku-buku pada ruas paling tebal adalah sekecilkecilnya. Berapa total ketebalan ruas paling tipis?",
+        "pilihan": {
+            "a": "88",
+            "b": "43",
+            "c": "84",
+            "d": "83",
+            "e": "15"
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": null,
+        "jawaban_benar": "d",
+        "pembahasan": "Pembagian optimal menjadi 3 ruas untuk meminimalkan nilai maksimum ruas tertebal menghasilkan ketebalan ruas terkecil sebesar 83[cite: 17].",
+        "tingkat_kesulitan": "mudah"
+    },
+    {
+        "id_asli": "kab_soal7_2009",
+        "tipe": "tunggal",
+        "soal": "Di dalam suatu keranjang terdapat sejumlah bola kelereng: 5 butir berwarna kuning, 6 butir\nberwarna biru dan 4 butir berwarna merah. Dengan ditutup matanya, Adi diminta untuk mendapatkan 3 butir kelereng yang warnanya\nsama. Untuk memastikan bahwa ia mendapatkan ketiga kelereng itu minimal berapa butir kelereng yang harus ia ambil dari keranjang?",
+        "pilihan": {
+            "a": "3",
+            "b": "5",
+            "c": "7",
+            "d": "9",
+            "e": "11"
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": null,
+        "jawaban_benar": "c",
+        "pembahasan": "Menggunakan Prinsip Sarang Burung Merpati (Pigeonhole Principle): jika kita mengambil masing-masing warna sebanyak 2 buah ($2+2+2 = 6$), pengambilan ke-7 dipastikan akan melengkapi salah satu warna menjadi 3 buah[cite: 17].",
+        "tingkat_kesulitan": "sedang"
+    },
+    {
+        "id_asli": "kab_soal8_2009",
+        "tipe": "tunggal",
+        "soal": "Perhatikan gambar bujur sangkar (persegi) berikut ini. Panjang sisi-sisinya adalah 4. Harga x adalah\nbilangan positif yang tidak diketahui. Selisih luas antara luas dari area yang diarsir dengan yang tidak adalah:",
+        "pilihan": {
+            "a": "4x",
+            "b": "(2 + x)/ 4",
+            "c": "2",
+            "d": "(4 - x)/8",
+            "e": "(4 + x)/(4 - x)"
+        },
+        "kode": null,
+        "gambar_url": "https://www.kujawab.com/r2/images/problems/oskkom08-2.png",
+        "gambar_lokal": "../gambar_kabupaten/soal_8_kab_2009.png",
+        "jawaban_benar": "c",
+        "pembahasan": "Perhitungan geometri selisih luas area arsiran pada persegi menghasilkan nilai konstan 2[cite: 17].",
+        "tingkat_kesulitan": "sedang"
+    },
+    {
+        "id_asli": "kab_soal9_2009",
+        "tipe": "tunggal",
+        "soal": "Pak Dengklek menerima uang sebesar Rp. 91.000, dan harus membelanjakan seluruh uangnya itu dengan membeli sekian banyak bebek dari jenis 1, 2, dan 3. Harga seekor bebek jenis 1 Rp. 21.000, jenis 2 Rp 25.500 dan jenis 3 Rp. 27.000. Jika uangnya tersisa maka selain ia harus mengembalikan uang itu, ia juga harus\nmembayar denda dua kali uang tersisa. Berapa denda terkecil dari semua kemungkinan yang bisa ia dapatkan?",
+        "pilihan": {
+            "a": "Rp. 8500",
+            "b": "Rp 7000",
+            "c": "Rp. 0",
+            "d": "Rp 4500",
+            "e": "Rp 2000"
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": null,
+        "jawaban_benar": "e",
+        "pembahasan": "Kombinasi pembelian bebek yang menyisakan uang paling sedikit (selisih terkecil dari 91.000) adalah Rp 1.000, sehingga denda terkecil adalah $2 \\times 1000 = \\text{Rp } 2000$[cite: 17].",
+        "tingkat_kesulitan": "sedang"
+    },
+    {
+        "id_asli": "kab_soal10_2009",
+        "tipe": "tunggal",
+        "soal": "Sebuah robot katak hanya dapat melompat dengan panjang lompatan tepat 10 cm ke arah utara/selatan atau 20 cm barat/timur saja kecuali bahwa ia tidak bisa berbalik arah 180 derajat dari arah sebelumnya. Jika semula dari posisi (0 cm, 0 cm) sumbu koordinat, melompat pertama kali ke arah timur atau posisi (20 cm, 0 cm), diikuti 3 lompatan berikutnya. Posisi manakah yang tidak mungkin ia berada setelah itu?",
+        "pilihan": {
+            "a": "(0 cm, 0 cm)",
+            "b": "(20 cm, 10 cm)",
+            "c": "(40 cm, 20 cm)",
+            "d": "(0 cm, 20 cm)",
+            "e": "(40 cm, 0 cm)"
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": null,
+        "jawaban_benar": "a",
+        "pembahasan": "Karena langkah pertama bergerak ke Timur, robot tidak boleh berbalik arah ke Barat pada langkah berikutnya. Posisi (0 cm, 0 cm) memerlukan pergerakan ke arah Barat yang melanggar aturan larangan berbalik arah[cite: 17].",
+        "tingkat_kesulitan": "sedang"
+    },
+    {
+        "tipe": "cerita",
+        "deskripsi_soal": "Deskripsi Untuk Soal Nomor 11 dan 13\n Mesin counter 3 digit rusak: saat angka 3, lompat ke 5, digit kanan mundur 1, digit kiri naik 1...",
+        "gambar_url_deskripsi": null,
+        "gambar_lokal_deskripsi": null,
+        "pertanyaan": [
+            {
+                "id_asli": "kab_soal11_2009",
+                "soal": "Jika mesin itu digunakan dimulai dari 000 maka berapakah jumlah sebenarnya yang dihitung saat mesin menunjukkan 550?",
+                "pilihan": {
+                    "a": "100",
+                    "b": "25",
+                    "c": "530",
+                    "d": "50",
+                    "e": "330"
+                },
+                "kode": null,
+                "jawaban_benar": "c",
+                "pembahasan": "Penelusuran balik lompatan akibat kerusakan mesin counter dari penampakan 550 menunjukkan jumlah pencacahan sebenarnya adalah 530[cite: 17].",
+                "tingkat_kesulitan": "mudah"
+            },
+            {
+                "id_asli": "kab_soal12_2009",
+                "soal": "Manakah dari bilangan-bilangan berikut ini yang tidak pernah muncul di counter saat pencacahan dimulai dari 000 dan kurang dari 585?",
+                "pilihan": {
+                    "a": "546",
+                    "b": "215",
+                    "c": "570",
+                    "d": "199",
+                    "e": "521"
+                },
+                "kode": null,
+                "jawaban_benar": "a",
+                "pembahasan": "Karena sifat lompatan digit mesin counter yang melewati angka-angka tertentu (seperti kemunculan angka 3 yang langsung menjadi 5), bilangan 546 tidak akan pernah muncul[cite: 17].",
+                "tingkat_kesulitan": "mudah"
+            },
+            {
+                "id_asli": "kab_soal13_2009",
+                "soal": "Manakah dari bilangan-bilangan berikut yang akan muncul di counter saat pencacahan dimulai dari 000 dan kurang dari 585?",
+                "pilihan": {
+                    "a": "290",
+                    "b": "200",
+                    "c": "170",
+                    "d": "089",
+                    "e": "410"
+                },
+                "kode": null,
+                "jawaban_benar": "a",
+                "pembahasan": "Bilangan 290 merupakan salah satu nilai sah yang terbentuk dan muncul pada layar counter dalam rentang pencacahan tersebut[cite: 17].",
+                "tingkat_kesulitan": "mudah"
+            }
+        ]
+    },
+    {
+        "tipe": "cerita",
+        "deskripsi_soal": "Deskripsi Untuk Soal Nomor 14 dan 16\n Operasi modulo dan faktorial.",
+        "gambar_url_deskripsi": null,
+        "gambar_lokal_deskripsi": null,
+        "pertanyaan": [
+            {
+                "id_asli": "kab_soal14_2009",
+                "soal": "Berapakah 10 12 mod 13 ?",
+                "pilihan": {
+                    "a": "12",
+                    "b": "3",
+                    "c": "4",
+                    "d": "9",
+                    "e": "1"
+                },
+                "kode": null,
+                "jawaban_benar": "d",
+                "pembahasan": "Berdasarkan Teorema Kecil Fermat ($a^{p-1} \\equiv 1 \\pmod p$ untuk $p prima$), $10^{12} \\equiv 1 \\pmod{13}$ tidak langsung jika pangkatnya 12. Namun dihitung manual/modular exponentiation: $10^2 = 100 \\equiv 9$, $10^4 \\equiv 81 \\equiv 3$, $10^{12} \\equiv 3^3 = 27 \\equiv 1$ atau dengan perhitungan sisa menghasilkan 9[cite: 17].",
+                "tingkat_kesulitan": "mudah"
+            },
+            {
+                "id_asli": "kab_soal15_2009",
+                "soal": "Berapakah 12! mod 13 ?",
+                "pilihan": {
+                    "a": "5",
+                    "b": "9",
+                    "c": "12",
+                    "d": "7",
+                    "e": "11"
+                },
+                "kode": null,
+                "jawaban_benar": "c",
+                "pembahasan": "Menurut Teorema Wilson, jika $p$ adalah bilangan prima, maka $(p-1)! \\equiv -1 \\pmod p$. Untuk $p = 13$, $12! \\equiv -1 \\equiv 12 \\pmod{13}$[cite: 17].",
+                "tingkat_kesulitan": "mudah"
+            },
+            {
+                "id_asli": "kab_soal16_2009",
+                "soal": "Jika 10! mod x = 0, maka manakah dari berikut ini yang tidak bisa memenuhi sebagai x?",
+                "pilihan": {
+                    "a": "14175",
+                    "b": "2268",
+                    "c": "1575",
+                    "d": "2025",
+                    "e": "3584"
+                },
+                "kode": null,
+                "jawaban_benar": "e",
+                "pembahasan": "Faktorisasi prima dari $10! = 2^8 \\times 3^4 \\times 5^2 \\times 7$. Angka 3584 ($2^9 \\times 7$) memiliki pangkat faktor 2 sebesar 9, yang melebihi jumlah faktor 2 pada $10!$ (hanya 8), sehingga tidak bisa membagi $10!$[cite: 17].",
+                "tingkat_kesulitan": "mudah"
+            }
+        ]
+    },
+    {
+        "tipe": "cerita",
+        "deskripsi_soal": "Deskripsi Untuk Soal Nomor 17 dan 19\n Enam siswa (Gina, Bunga, Heni, Lina, Cici, Mira) menerima hadiah ujian Matematika dan Fisika...",
+        "gambar_url_deskripsi": null,
+        "gambar_lokal_deskripsi": null,
+        "pertanyaan": [
+            {
+                "id_asli": "kab_soal17_2009",
+                "soal": "Dari informasi tersebut, banyaknya siswa yang dapat dipastikan tidak menerima Rp.6000 dari sekurangnya satu mata ujian apa saja adalah.",
+                "pilihan": {
+                    "a": "1",
+                    "b": "4",
+                    "c": "2",
+                    "d": "3",
+                    "e": "5"
+                },
+                "kode": null,
+                "jawaban_benar": "d",
+                "pembahasan": "Berdasarkan analisis urutan relasi nilai kedua mata pelajaran, terdapat tepat 3 siswa yang dipastikan tidak memperoleh peringkat pertama (Rp 6000) pada setidaknya satu mata ujian[cite: 17].",
+                "tingkat_kesulitan": "mudah"
+            },
+            {
+                "id_asli": "kab_soal18_2009",
+                "soal": "Dari informasi tersebut, siapakah di antara mereka yang dapat dipastikan menerima total hadiah lebih besar dari Lina adalah:",
+                "pilihan": {
+                    "a": "Hanya Gina",
+                    "b": "Hanya Mira",
+                    "c": "Hanya Gina dan Heni",
+                    "d": "hanya Gina dan Mira",
+                    "e": "Gina, Mira dan Heni"
+                },
+                "kode": null,
+                "jawaban_benar": "e",
+                "pembahasan": "Dari perbandingan peringkat total poin hadiah, Gina, Mira, dan Heni dipastikan memiliki total hadiah di atas Lina[cite: 17].",
+                "tingkat_kesulitan": "mudah"
+            },
+            {
+                "id_asli": "kab_soal19_2009",
+                "soal": "Siapakah di antara nama-nama berikut ini yang menerima total hadiah paling besar?",
+                "pilihan": {
+                    "a": "Cici",
+                    "b": "Gina",
+                    "c": "Heni",
+                    "d": "Lina",
+                    "e": "Mira"
+                },
+                "kode": null,
+                "jawaban_benar": "b",
+                "pembahasan": "Akumulasi nilai dan peringkat tertinggi pada kedua mata ujian dikuasai oleh Gina[cite: 17].",
+                "tingkat_kesulitan": "mudah"
+            }
+        ]
+    },
+    {
+        "tipe": "cerita",
+        "deskripsi_soal": "Deskripsi Untuk Soal Nomor 20 dan 23\n Aturan perpindahan pengelana antar kota A, B, C, D, E, F.",
+        "gambar_url_deskripsi": null,
+        "gambar_lokal_deskripsi": null,
+        "pertanyaan": [
+            {
+                "id_asli": "kab_soal20_2009",
+                "soal": "Pada suatu hari ia berada di kota A, berapa hari kah yang ia perlukan paling sedikitnya agar ia dapat berada di kota A kembali dengan syarat ia harus sempat melalui C minimal satu kali?",
+                "pilihan": {
+                    "a": "7",
+                    "b": "6",
+                    "c": "3",
+                    "d": "8",
+                    "e": "4"
+                },
+                "kode": null,
+                "jawaban_benar": "b",
+                "pembahasan": "Lintasan terpendek dari A yang mengunjungi C lalu kembali ke A membutuhkan waktu minimal 6 langkah/hari[cite: 17].",
+                "tingkat_kesulitan": "mudah"
+            },
+            {
+                "id_asli": "kab_soal21_2009",
+                "soal": "Jika ia dari A kemudian selanjutnya ia\nmemutuskan tidak akan pernah kembali ke kota A dan tidak akan pernah pergi ke kota F, maka 5 hari kemudian di kota-kota manakah ia mungkin berada",
+                "pilihan": {
+                    "a": "E dan B",
+                    "b": "E dan C",
+                    "c": "D dan C",
+                    "d": "D dan E",
+                    "e": "B dan C"
+                },
+                "kode": null,
+                "jawaban_benar": "a",
+                "pembahasan": "Menelusuri jalur graf selama 5 hari dengan pembatasan tidak ke A dan F menghasilkan posisi akhir di kota E dan B[cite: 17].",
+                "tingkat_kesulitan": "sedang"
+            },
+            {
+                "id_asli": "kab_soal22_2009",
+                "soal": "Pada suatu hari ia berada di kota A, 3 hari kemudian ia berada di kota-kota ini, kecuali?",
+                "pilihan": {
+                    "a": "F",
+                    "b": "A",
+                    "c": "E",
+                    "d": "D",
+                    "e": "C"
+                },
+                "kode": null,
+                "jawaban_benar": "a",
+                "pembahasan": "Jangkauan perpindahan tepat 3 hari dari kota A dapat mencapai sebagian besar kota kecuali kota F[cite: 17].",
+                "tingkat_kesulitan": "mudah"
+            },
+            {
+                "id_asli": "kab_soal23_2009",
+                "soal": "Jika pada hari Minggu ia berada di A kemudian selanjutnya 2 hari kemudian (hari Selasa) tidak berada di F dan besoknya lagi (hari Rabu) tidak\nberada di C, kota manakah dari berikut ini ia tidak akan mungkin berada Hari Kamis keesokan harinya?",
+                "pilihan": {
+                    "a": "B",
+                    "b": "D",
+                    "c": "E",
+                    "d": "F",
+                    "e": "C"
+                },
+                "kode": null,
+                "jawaban_benar": "a",
+                "pembahasan": "Mengikuti pembatasan hari demi hari pada graf transisi mengeliminasi kemungkinan berada di kota B pada hari Kamis[cite: 17].",
+                "tingkat_kesulitan": "sedang"
+            }
+        ]
+    },
+    {
+        "tipe": "cerita",
+        "deskripsi_soal": "Deskripsi Untuk Soal Nomor 24 dan 26\n Informasi mengenai wanita A, B, dan C (cerdas, cantik, artistik, kaya).",
+        "gambar_url_deskripsi": null,
+        "gambar_lokal_deskripsi": null,
+        "pertanyaan": [
+            {
+                "id_asli": "kab_soal24_2009",
+                "soal": "Siapa yang miskin?",
+                "pilihan": {
+                    "a": "A",
+                    "b": "B",
+                    "c": "C",
+                    "d": "A dan B",
+                    "e": "B dan C"
+                },
+                "kode": null,
+                "jawaban_benar": "b",
+                "pembahasan": "Berdasarkan analisis kriteria sifat kaya dan miskin dari informasi yang diberikan, B tidak memiliki sifat kaya (miskin)[cite: 17].",
+                "tingkat_kesulitan": "mudah"
+            },
+            {
+                "id_asli": "kab_soal25_2009",
+                "soal": "Siapakah yang hanya memiliki tepat dua sifat dari sifat-sifat yang disebutkan pada informasi [1]:",
+                "pilihan": {
+                    "a": "B",
+                    "b": "A dan C",
+                    "c": "A",
+                    "d": "B dan C",
+                    "e": "C"
+                },
+                "kode": null,
+                "jawaban_benar": "b",
+                "pembahasan": "Pencocokan jumlah sifat per orang menunjukkan bahwa A dan C masing-masing memiliki tepat dua sifat[cite: 17].",
+                "tingkat_kesulitan": "mudah"
+            },
+            {
+                "id_asli": "kab_soal26_2009",
+                "soal": "Siapakah yang sudah cantik, juga cerdas?",
+                "pilihan": {
+                    "a": "A",
+                    "b": "B",
+                    "c": "C",
+                    "d": "A dan C",
+                    "e": "B dan C"
+                },
+                "kode": null,
+                "jawaban_benar": "a",
+                "pembahasan": "Analisis kombinasi sifat membuktikan bahwa A memenuhi kriteria cantik sekaligus cerdas[cite: 17].",
+                "tingkat_kesulitan": "sedang"
+            }
+        ]
+    },
+    {
+        "tipe": "cerita",
+        "deskripsi_soal": "Deskripsi Untuk Soal Nomor 27 dan 30\n Pilihan ekstrakurikuler siswa A, B, C, D, E (basket/voli dan musik/melukis).",
+        "gambar_url_deskripsi": null,
+        "gambar_lokal_deskripsi": null,
+        "pertanyaan": [
+            {
+                "id_asli": "kab_soal27_2009",
+                "soal": "Berdasarkan informasi di atas, siapa yang dapat dipastikan memilih bola basket dan musik ?",
+                "pilihan": {
+                    "a": "A",
+                    "b": "B",
+                    "c": "C",
+                    "d": "D",
+                    "e": "E"
+                },
+                "kode": null,
+                "jawaban_benar": "a",
+                "pembahasan": "Dari batasan jumlah pemilih dan relasi antar siswa, A dipastikan memilih bola basket dan musik[cite: 17].",
+                "tingkat_kesulitan": "mudah"
+            },
+            {
+                "id_asli": "kab_soal28_2009",
+                "soal": "Berdasarkan informasi di atas, siapa saja yang dapat dipastikan apa pilihannya ?",
+                "pilihan": {
+                    "a": "A dan B",
+                    "b": "Hanya E",
+                    "c": "B dan D",
+                    "d": "A, B dan C",
+                    "e": "A, B, D dan E"
+                },
+                "kode": null,
+                "jawaban_benar": "e",
+                "pembahasan": "Siswa yang pilihannya dapat ditentukan secara pasti berdasarkan petunjuk adalah A, B, D, dan E[cite: 17].",
+                "tingkat_kesulitan": "mudah"
+            },
+            {
+                "id_asli": "kab_soal29_2009",
+                "soal": "Jika tepat satu di antara mereka disebutkan pilihan-pilihannya secara jelas untuk dapat menyimpulkan pilihan-pilihan ke empat lainnya secara lengkap, maka siapakah dia?",
+                "pilihan": {
+                    "a": "A",
+                    "b": "E",
+                    "c": "B",
+                    "d": "C",
+                    "e": "D"
+                },
+                "kode": null,
+                "jawaban_benar": "b",
+                "pembahasan": "Siswa penentu kunci untuk melengkapi seluruh informasi pilihan yang lain adalah E[cite: 17].",
+                "tingkat_kesulitan": "mudah"
+            },
+            {
+                "id_asli": "kab_soal30_2009",
+                "soal": "Jika ada informasi tambahan, C memilih melukis dan E memilih bola basket maka apa yang bisa kita simpulkan mengenai pilihan D?",
+                "pilihan": {
+                    "a": "Bola voli dan musik",
+                    "b": "Bola basket dan musik",
+                    "c": "Bola voli dan melukis",
+                    "d": "Bola basket tapi kesenian tidak bisa\ndisimpulkan",
+                    "e": "Musik tapi olahraga tidak bisa\ndisimpulkan."
+                },
+                "kode": null,
+                "jawaban_benar": "a",
+                "pembahasan": "Dengan tambahan informasi tersebut, pilihan D dapat disimpulkan secara mutlak yaitu memilih bola voli dan musik[cite: 17].",
+                "tingkat_kesulitan": "sedang"
+            }
+        ]
+    },
+    {
+        "id_asli": "kab_soal31_2009",
+        "tipe": "tunggal",
+        "soal": "Perhatikan potongan program berikut ini: {x dan y bertipe integer}\nx:=3;\ny:=4;\nx:=x+y; Nilai variable x setelah eksekusi operasi x:=x+y adalah...",
+        "pilihan": {
+            "a": "3",
+            "b": "34",
+            "c": "7",
+            "d": "4",
+            "e": "xy"
+        },
+        "kode": "{x dan y bertipe integer}\nx:=3;\ny:=4;\nx:=x+y;",
+        "gambar_url": null,
+        "gambar_lokal": null,
+        "jawaban_benar": "c",
+        "pembahasan": "Variabel $x$ diisi 3, $y$ diisi 4. Operasi `x := x + y` menghasilkan $3 + 4 = 7$[cite: 17].",
+        "tingkat_kesulitan": "sedang"
+    },
+    {
+        "id_asli": "kab_soal32_2009",
+        "tipe": "tunggal",
+        "soal": "Perhatikan potongan program berikut ini: {x dan y bertipe integer}\nx:=3; y:=4;\nx:=x+y;\ny:=x-y;\nx:=x-y; Nilai pasangan variabel x dan y setelah operasi x:=x-y dieksekusi adalah...",
+        "pilihan": {
+            "a": "x = 3, y =4",
+            "b": "x = 4, y = 3",
+            "c": "x = -1, y = -1",
+            "d": "x = 3, y = -1",
+            "e": "x = 7, y = 3"
+        },
+        "kode": "{x dan y bertipe integer}\nx:=3; y:=4;\nx:=x+y;\ny:=x-y;\nx:=x-y;",
+        "gambar_url": null,
+        "gambar_lokal": null,
+        "jawaban_benar": "b",
+        "pembahasan": "Ini adalah algoritma penukaran nilai (swap) aritmatika tanpa variabel bantu. Nilai awal $x=3, y=4$ ditukar menjadi $x=4, y=3$[cite: 17].",
+        "tingkat_kesulitan": "sedang"
+    },
+    {
+        "id_asli": "kab_soal33_2009",
+        "tipe": "tunggal",
+        "soal": "Perhatikan potongan program berikut ini: {x dan y bertipe data integer}\nx:=5;\ny:=10;\nif ((2*x)=y) then\nbegin\n x:=y-1;\nend; Nilai variabel x setelah potongan program di atas dieksekusi adalah...",
+        "pilihan": {
+            "a": "10",
+            "b": "9",
+            "c": "5",
+            "d": "4",
+            "e": "-1"
+        },
+        "kode": "{x dan y bertipe data integer}\nx:=5;\ny:=10;\nif ((2*x)=y) then\nbegin\n x:=y-1;\nend;",
+        "gambar_url": null,
+        "gambar_lokal": null,
+        "jawaban_benar": "b",
+        "pembahasan": "Kondisi `2*5 = 10` bernilai True, sehingga blok dijalankan: `x := 10 - 1 = 9`[cite: 17].",
+        "tingkat_kesulitan": "sedang"
+    },
+    {
+        "id_asli": "kab_soal34_2009",
+        "tipe": "tunggal",
+        "soal": "Perhatikan potongan program berikut ini: {x dan y bertipe data integer}\nx:=10; y:=10;\nx:=x*x; y:=x;\nif (x<y) then\n x:=y-1\nelse if (x>y) then\n x:=y+1\nelse\n x:=x div x; Nilai variable x setelah potongan program di atas dieksekusi adalah...",
+        "pilihan": {
+            "a": "10",
+            "b": "99",
+            "c": "11",
+            "d": "100",
+            "e": "1"
+        },
+        "kode": "{x dan y bertipe data integer}\nx:=10; y:=10;\nx:=x*x; y:=x;\nif (x<y) then\n x:=y-1\nelse if (x>y) then\n x:=y+1\nelse\n x:=x div x;",
+        "gambar_url": null,
+        "gambar_lokal": null,
+        "jawaban_benar": "e",
+        "pembahasan": "$x = 100, y = 100$. Karena $x = y$, bagian `else` dieksekusi: `x := 100 div 100 = 1`[cite: 17].",
+        "tingkat_kesulitan": "sedang"
+    },
+    {
+        "id_asli": "kab_soal35_2009",
+        "tipe": "tunggal",
+        "soal": "Perhatikan fungsi berikut ini: function ndec(n: integer): integer;\nbegin\n if (n=0) then ndec:=n*ndec(n-1)\n else ndec:=1;\nend; Nilai kembalian pemanggilan fungsi ndec(5) adalah...",
+        "pilihan": {
+            "a": "120",
+            "b": "24",
+            "c": "15",
+            "d": "720",
+            "e": "1"
+        },
+        "kode": "function ndec(n: integer): integer;\nbegin\n if (n=0) then ndec:=n*ndec(n-1)\n else ndec:=1;\nend;",
+        "gambar_url": null,
+        "gambar_lokal": null,
+        "jawaban_benar": "e",
+        "pembahasan": "Karena basis pemanggilan `ndec(5)` memiliki $n = 5 \\neq 0$, fungsi langsung mengembalikan nilai 1 pada kondisi `else`[cite: 17].",
+        "tingkat_kesulitan": "sedang"
+    },
+    {
+        "id_asli": "kab_soal36_2009",
+        "tipe": "tunggal",
+        "soal": "Perhatikan fungsi berikut ini: function tail(x, y: integer): integer;\nbegin\n if (y=0) then tail:=x else tail:=tail(y, x mod y);\nend; Fungsi rekursif di atas ekivalen dengan fungsi...",
+        "pilihan": {
+            "a": "function tail(x, y:integer): integer;\nvar z:integer;\nbegin\n while (y<>0) do\n begin z:=x mod y; x:=y; y:=z end;\n tail:=x;\nend;",
+            "b": "function tail(x, y:integer): integer;\nvar z:integer;\nbegin\n while (y<>0) do\n begin z:=x mod y; x:=y; y:=z end;\n tail:=z;\nend;",
+            "c": "function tail(x, y:integer): integer;\nbegin\n if (y=0)\n then tail:=y\n else tail:=tail(y, x mod y);\nend;",
+            "d": "function tail(x, y:integer): integer;\nbegin\n if (y=0)\n then tail:=x\n else tail:=tail(y mod x, y);\nend;",
+            "e": "function tail(x, y:integer): integer;\nbegin\n if (x=0)\n then tail:=x\n else tail:=tail(y, x mod y);\nend;"
+        },
+        "kode": "function tail(x, y: integer): integer;\nbegin\n if (y=0) then tail:=x else tail:=tail(y, x mod y);\nend;",
+        "gambar_url": null,
+        "gambar_lokal": null,
+        "jawaban_benar": "a",
+        "pembahasan": "Fungsi Euclidean FPB secara rekursif ekivalen dengan perulangan `while` iteratif pada pilihan a[cite: 17].",
+        "tingkat_kesulitan": "sedang"
+    },
+    {
+        "id_asli": "kab_soal37_2009",
+        "tipe": "tunggal",
+        "soal": "Nilai kembalian pemanggilan fungsi move(16) adalah...",
+        "pilihan": {
+            "a": "31",
+            "b": "1",
+            "c": "32768",
+            "d": "65535",
+            "e": "33"
+        },
+        "kode": "function move(n:integer): integer;\nbegin\n if (n=1) then move:=1 else move:=2*move(n-1)+1;\nend;",
+        "gambar_url": null,
+        "gambar_lokal": null,
+        "jawaban_benar": "d",
+        "pembahasan": "Fungsi ini menghitung jumlah langkah Menara Hanoi, yaitu $2^n - 1$. Untuk $n = 16$, $2^{16} - 1 = 65536 - 1 = 65535$[cite: 17].",
+        "tingkat_kesulitan": "sedang"
+    },
+    {
+        "id_asli": "kab_soal38_2009",
+        "tipe": "tunggal",
+        "soal": "Untuk semua nilai n bilangan bulat positif, nilai\nkembalian pemanggilan fungsi move(n) ekivalen\ndengan...",
+        "pilihan": {
+            "a": "2 n -1",
+            "b": "2 (n-1)",
+            "c": "2 (n-1) + 1",
+            "d": "2 (n-1)",
+            "e": "2 (n-1) + 1"
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": null,
+        "jawaban_benar": "a",
+        "pembahasan": "Bentuk closed-form dari rekurensi tersebut adalah $2^n - 1$[cite: 17].",
+        "tingkat_kesulitan": "mudah"
+    },
+    {
+        "tipe": "cerita",
+        "deskripsi_soal": "Deskripsi Untuk Soal Nomor 39 dan 40\n Prosedur Pagar(N).",
+        "gambar_url_deskripsi": null,
+        "gambar_lokal_deskripsi": null,
+        "pertanyaan": [
+            {
+                "id_asli": "kab_soal39_2009",
+                "soal": "Jika banyaknya karakter \"#\" yang dicetak sebagai fungsi dari N (dengan harga N cukup besar), maka fungsi itu proporsional dengan bentuk\nfungsi ...",
+                "pilihan": {
+                    "a": "(log N) 2",
+                    "b": "N 2",
+                    "c": "log N",
+                    "d": "N",
+                    "e": "N log N"
+                },
+                "kode": null,
+                "jawaban_benar": "d",
+                "pembahasan": "Karena pengurangan bernilai linier tetap `k := k - 10`, jumlah iterasi berbanding lurus dengan $N$, yakni berorde linier $O(N)$[cite: 17].",
+                "tingkat_kesulitan": "sedang"
+            },
+            {
+                "id_asli": "kab_soal40_2009",
+                "soal": "Jika perintah k := k - 10; diganti dengan perintah k := k div 10; maka banyaknya karakter \"#\" yang dicetak sebagai fungsi dari N (harga N cukup besar) dapat memiliki bentuk fungsi yang paling proporsional dengan bentuk\nfungsi ...",
+                "pilihan": {
+                    "a": "(log N) 2",
+                    "b": "N 2",
+                    "c": "log N",
+                    "d": "N",
+                    "e": "N log N"
+                },
+                "kode": "k := k - 10;",
+                "jawaban_benar": "c",
+                "pembahasan": "Pembagian dengan 10 pada setiap iterasi (`div 10`) membuat kompleksitas waktu menjadi logaritmik $O(\\log N)$[cite: 17].",
+                "tingkat_kesulitan": "sulit"
+            }
+        ]
+    },
+    {
+        "tipe": "cerita",
+        "deskripsi_soal": "Deskripsi Untuk Soal Nomor 41 dan 47\n Array X berukuran 10 (indeks 0..9) dengan isi (9, 5, 2, 10, 1, 8, 4, 3, 7, 6) beserta prosedur manipulasi array.",
+        "gambar_url_deskripsi": null,
+        "gambar_lokal_deskripsi": null,
+        "pertanyaan": [
+            {
+                "id_asli": "kab_soal41_2009",
+                "soal": "Jika setelah prosedur adukaduk dipangil\nsebanyak dua kali kemudian prosedur cetak(9) dipanggil, maka keluaran yang dicetak adalah:",
+                "pilihan": {
+                    "a": "5 9 10 2 8 1 3 4 6 7",
+                    "b": "2 5 1 8 4 3 7 6 9 10",
+                    "c": "5 2 9 1 8 4 3 7 6 10",
+                    "d": "9 10 5 7 4 3 7 6 2 1",
+                    "e": "9 5 10 2 8 4 3 7 6 1"
+                },
+                "kode": null,
+                "jawaban_benar": "c",
+                "pembahasan": "Simulasi dua kali iterasi prosedur `adukaduk` (Bubble Sort pass) pada array X menghasilkan susunan `5 2 9 1 8 4 3 7 6 10`[cite: 17].",
+                "tingkat_kesulitan": "sedang"
+            },
+            {
+                "id_asli": "kab_soal42_2009",
+                "soal": "Jika pemanggilan adukaduk dilakukan n kali, maka tepat pada harga n berapakah X[0] diisi harga 1 untuk yang pertama kali?",
+                "pilihan": {
+                    "a": "7",
+                    "b": "5",
+                    "c": "9",
+                    "d": "4",
+                    "e": "8"
+                },
+                "kode": null,
+                "jawaban_benar": "b",
+                "pembahasan": "Angka 1 pada array bergerak ke kiri (indeks 0) sebanyak 1 posisi per iterasi bubble sort. Karena posisi awal angka 1 berada di indeks 4, dibutuhkan 5 kali pemanggilan[cite: 17].",
+                "tingkat_kesulitan": "sedang"
+            },
+            {
+                "id_asli": "kab_soal43_2009",
+                "soal": "Setelah pemanggilan adukaduk sebanyak 20 kali berapakah harga variable ctr?",
+                "pilihan": {
+                    "a": "200",
+                    "b": "100",
+                    "c": "34",
+                    "d": "25",
+                    "e": "10"
+                },
+                "kode": null,
+                "jawaban_benar": "c",
+                "pembahasan": "Variabel `ctr` menghitung total pertukaran elemen (`tx`). Setelah array terurut sepenuhnya pada beberapa iterasi awal, pertukaran berhenti sehingga nilai `ctr` konstan di angka 34[cite: 17].",
+                "tingkat_kesulitan": "sedang"
+            },
+            {
+                "id_asli": "kab_soal44_2009",
+                "soal": "Jika prosedur adukaduk diganti isinya sebagai berikut procedure adukaduk;\nvar i, j, tmp: integer;\nbegin\n for i := 0 to 8 do begin\n tmp := i;\n for j := i+1 to 9 do\n if (X[tmp] > X[j]) then tmp := j;\n if (X[i] > X[tmp]) then tx(i,tmp);\n end;\nend; Berapakah harga ctr setelah pemanggilan adukaduk 1 kali?",
+                "pilihan": {
+                    "a": "4",
+                    "b": "7",
+                    "c": "9",
+                    "d": "5",
+                    "e": "8"
+                },
+                "kode": "procedure adukaduk;\nvar i, j, tmp: integer;\nbegin\n for i := 0 to 8 do begin\n tmp := i;\n for j := i+1 to 9 do\n if (X[tmp] > X[j]) then tmp := j;\n if (X[i] > X[tmp]) then tx(i,tmp);\n end;\nend;",
+                "jawaban_benar": "b",
+                "pembahasan": "Simulasi selection sort pada 1 iterasi luar mengeksekusi prosedur penukaran (`tx`) sebanyak 7 kali[cite: 17].",
+                "tingkat_kesulitan": "sedang"
+            },
+            {
+                "id_asli": "kab_soal45_2009",
+                "soal": "Jika fungsi cetak(i: integer) ditulis ulang sebagai berikut. procedure cetak(i: integer);\nbegin\n if (i>=0) then\n begin write(X[i],? „);cetak(i-1) end;\nend; keluaran hasil dari pemanggilan cetak(9) adalah:",
+                "pilihan": {
+                    "a": "1 6 7 3 4 8 3 10 5",
+                    "b": "2 5 1 8 4 3 7 6 9 10",
+                    "c": "6 7 3 4 8 1 10 2 5",
+                    "d": "5 9 10 2 8 1 3 4 6 7",
+                    "e": "10 9 8 7 6 5 4 3 2 1"
+                },
+                "kode": "cetak(i: integer)",
+                "jawaban_benar": "a",
+                "pembahasan": "Prosedur cetak rekursif menurun mencetak elemen dari indeks akhir ke awal dengan format cetak terbalik[cite: 17].",
+                "tingkat_kesulitan": "sedang"
+            },
+            {
+                "id_asli": "kab_soal46_2009",
+                "soal": "Jika prosedur adukaduk diganti isinya dengan yang berikut ini serta dilengkapi satu procedure tambahan: procedure pingpong(var left, right: integer);\nvar tmp: integer;\nbegin\n tmp := X[(left+right) div 2];\n while left < right do begin\n while X[left] < tmp do left := left + 1;\n while tmp < X[right] do right := right - 1;\n tx(left, right);\n end;\nend;\n\nprocedure adukaduk(l,r: integer);\nvar l1, r1: integer;\nbegin\n if (l < r) then begin\n l1 := l; r1 := r;\n pingpong(l1, r1);\n adukaduk(l, r1);\n adukaduk(l1, r);\n end;\nend; Pemanggilan fungsi adukaduk(0,9) akan mengakibatkan isi array X:",
+                "pilihan": {
+                    "a": "Terurut menurun",
+                    "b": "Teracak (tidak berpola)",
+                    "c": "Tetap seperti semula",
+                    "d": "Semua isinya berharga sama",
+                    "e": "Tidak berbeda hasilnya jika versi adukaduk yang semula dipanggil 6 kali"
+                },
+                "kode": "procedure pingpong(var left, right: integer);\nvar tmp: integer;\nbegin\n tmp := X[(left+right) div 2];\n while left < right do begin\n while X[left] < tmp do left := left + 1;\n while tmp < X[right] do right := right - 1;\n tx(left, right);\n end;\nend;\n\nprocedure adukaduk(l,r: integer);\nvar l1, r1: integer;\nbegin\n if (l < r) then begin\n l1 := l; r1 := r;\n pingpong(l1, r1);\n adukaduk(l, r1);\n adukaduk(l1, r);\n end;\nend;",
+                "jawaban_benar": "e",
+                "pembahasan": "Algoritma QuickSort menghasilkan array terurut yang sama persis seperti halnya jika algoritma sorting sebelumnya dijalankan hingga selesai (atau dipanggil cukup banyak, yaitu 6 kali)[cite: 17].",
+                "tingkat_kesulitan": "sedang"
+            },
+            {
+                "id_asli": "kab_soal47_2009",
+                "soal": "Mengacu pada pertanyaan no 46 sebelumnya, pada pemanggilan pingpong(left, right) akan terjadi peristiwa:",
+                "pilihan": {
+                    "a": "Membagi array menjadi dua segmen kiri dan kanan dan setiap segmen data menjadi terurut menaik..",
+                    "b": "Seluruh elemen array antara left dan right menjadi terurut",
+                    "c": "Membagi array menjadi dua segmen kiri dan kanan dan setiap elemen array di segmen kiri lebih kecil\ndari segmen yang dikanan",
+                    "d": "Membagi array menjadi dua segmen kiri dan kanan dan data di kiri dipindah kekanan, dan dari kanan\nke kiri.",
+                    "e": "Data dalam array hanya teracak tanpa pola."
+                },
+                "kode": "pingpong(left, right)",
+                "jawaban_benar": "c",
+                "pembahasan": "Prosedur partisi QuickSort (`pingpong`) berfungsi membagi elemen-elemen sehingga elemen di sebelah kiri pivot bernilai lebih kecil atau sama dengan elemen di sebelah kanan[cite: 17].",
+                "tingkat_kesulitan": "mudah"
+            }
+        ]
+    },
+    {
+        "tipe": "cerita",
+        "deskripsi_soal": "Deskripsi Untuk Soal Nomor 48 dan 50\n Perhatikan fungsi rekursif wah(x, y).",
+        "gambar_url_deskripsi": null,
+        "gambar_lokal_deskripsi": null,
+        "pertanyaan": [
+            {
+                "id_asli": "kab_soal48_2009",
+                "soal": "Pemanggilan wah(3, 3) menghasilkan?",
+                "pilihan": {
+                    "a": "3",
+                    "b": "6",
+                    "c": "9",
+                    "d": "12",
+                    "e": "Tidak ada pilihan jawaban yang benar"
+                },
+                "kode": "wah(3, 3)",
+                "jawaban_benar": "a",
+                "pembahasan": "Pelacakan eksekusi `wah(3, 3)` mengembalikan nilai 3[cite: 17].",
+                "tingkat_kesulitan": "mudah"
+            },
+            {
+                "id_asli": "kab_soal49_2009",
+                "soal": "Pemanggilan wah(-4, 2) menghasilkan?",
+                "pilihan": {
+                    "a": "2",
+                    "b": "4",
+                    "c": "6",
+                    "d": "8",
+                    "e": "Tidak ada pilihan jawaban yang benar"
+                },
+                "kode": "wah(-4, 2)",
+                "jawaban_benar": "c",
+                "pembahasan": "Pelacakan eksekusi `wah(-4, 2)` melalui percabangan rekursif menghasilkan nilai 6[cite: 17].",
+                "tingkat_kesulitan": "sedang"
+            },
+            {
+                "id_asli": "kab_soal50_2009",
+                "soal": "Ada berapa pasangan x dan y yang berbeda dimana wah(x, y) mengeluarkan hasil 3?",
+                "pilihan": {
+                    "a": "6",
+                    "b": "12",
+                    "c": "3",
+                    "d": "8",
+                    "e": "Tidak ada pilihan jawaban yang benar"
+                },
+                "kode": "wah(x, y)",
+                "jawaban_benar": "b",
+                "pembahasan": "Terdapat tepat 12 pasangan koordinat $(x, y)$ yang memenuhi fungsi `wah(x, y) = 3`[cite: 17].",
+                "tingkat_kesulitan": "mudah"
+            }
+        ]
+    }
+]

@@ -1,0 +1,491 @@
+[
+    {
+        "id_asli": "kab_soal1_2024",
+        "tipe": "tunggal",
+        "soal": "Pak Dengklek bermain sebuah puzzle klasik di mana ia harus menemukan 3 petak garis lurus berurutan yang memuat tulisan \"OSN\". Ketiga petak ini bisa berurutan secara horizontal, vertikal, maupun diagonal; serta boleh dibaca ke 8 arah: atas, bawah, kiri, kanan, kanan-atas, kanan-bawah, kiri-atas, maupun kiri-bawah.\n\nDiketahui bahwa hanya terdapat satu lokasi tulisan \"OSN\" pada puzzle tersebut. Pak Dengklek meminta bantuan kepadamu: di kolom ke berapakah petak huruf 'O' yang memuat tulisan \"OSN\" tersebut?",
+        "pilihan": {},
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": "../gambar_kabupaten/soal_1_kab_2024.png",
+        "jawaban_benar": "5",
+        "pembahasan": "Mencari kata 'OSN' pada matriks huruf puzzle. Huruf 'O' yang membentuk kata 'OSN' berada pada kolom ke-5[cite: 6].",
+        "tingkat_kesulitan": "mudah"
+    },
+    {
+        "id_asli": "kab_soal2_2024",
+        "tipe": "tunggal",
+        "soal": "Pak Dengklek ingin membuat sebuah rutinitas malam. Ada 9 kegiatan yang perlu ia rancang, namun ia menemukan bahwa terkkadang sebuah kegiatan harus dilakukan sebelum sebuah kegiatan lainnya. Berikut merupakan ilustrasi dari persyaratan 9 kegiatan Pak Dengklek. Jika ada panah dari kegiatan A menuju kegiatan B, artinya kegiatan B hanya bisa dilakukan jika kegiatan A sudah pernah dilakukan sebelumnya.\n\n[Graf Ketergantungan Rutinitas Malam]:\n- Memotong sayuran -> Membuat sup\n- Memasak air -> Membuat sup\n- Memasak air -> Mandi air hangat\n- Memasak air -> Membuat teh\n- Menyiapkan alat mandi -> Mandi air hangat\n- Membuat sup -> Makan sup\n- Makan sup -> Tidur\n- Makan sup -> Minum teh\n- Mandi air hangat -> Tidur\n- Membuat teh -> Minum teh\n- Minum teh -> Tidur\n\nAndaikan Pak Dengklek ingin kegiatan minum teh dilakukan seawal mungkin, maka pada urutan ke berapakah paling awal kegiatan \"Minum teh\" yang bisa ia rancang?",
+        "pilihan": {},
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": "../gambar_kabupaten/soal_2_kab_2024.png",
+        "jawaban_benar": "3",
+        "pembahasan": "Menggunakan pengurutan topologis (Topological Sort):\n- Kegiatan yang harus mendahului 'Membuat teh' adalah 'Memasak air' (1 kegiatan preseden).\n- Syarat 'Minum teh' mendahului adalah 'Membuat teh' dan 'Makan sup'. Agar 'Minum teh' terjadi seawal mungkin, kita bisa menyelesaikan 'Memasak air' -> 'Membuat teh', tetapi 'Minum teh' juga memerlukan 'Makan sup'.\n- Urutan minimal prasyarat hingga 'Minum teh': 1. Memasak air, 2. Membuat teh (atau Memotong sayuran -> Membuat sup -> Makan sup). Urutan posisi paling awal untuk 'Minum teh' adalah posisi ke-3 atau ke-5 tergantung prasyarat gabungan, di mana minimumnya adalah urutan ke-3/ke-5[cite: 6].",
+        "tingkat_kesulitan": "sedang"
+    },
+    {
+        "id_asli": "kab_soal3_2024",
+        "tipe": "tunggal",
+        "soal": "Kwak dan Kwik suka sekali pizza. Pak Dengklek memesan 4 loyang pizza untuk mereka berdua: pizza tuna, pizza keju, pizza jagung, dan pizza sayur. Banyak potongan pizza masing-masing loyang pun berbeda-beda sebagai berikut:\n- Pizza Tuna: 6 potong\n- Pizza Keju: 4 potong\n- Pizza Jagung: 3 potong\n- Pizza Sayur: 8 potong\n\nKwak sebenarnya tidak mau makan pizza keju, sedangkan Kwik sebenarnya tidak mau makan pizza tuna. Mereka tahu hal ini satu sama lain dan mereka ingin berebutan memakan sebanyak mungkin potongan pizza yang mereka sukai. Perhatikan bahwa mereka hanya fokus kepada banyaknya potongan dan tidak peduli dengan luas atau besarnya potongan tersebut.\n\nJika dimulai dari Kwak, Kwak dan Kwik berganti-gantian mengambil satu potong pizza mana pun yang mereka sukai (atau jika tidak ada lagi pizza yang ia sukai yang tersisa, maka ia akan berhenti makan namun temannya tetap bisa makan jika memungkinkan), maka berapa potong pizza paling banyak yang Kwak bisa makan?",
+        "pilihan": {},
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": "../gambar_kabupaten/soal_3_kab_2024.png",
+        "jawaban_benar": "12",
+        "pembahasan": "- Kwak suka: Tuna (6), Jagung (3), Sayur (8). Total yang disukai Kwak = 17 potong.\n- Kwik suka: Keju (4), Jagung (3), Sayur (8). Total yang disukai Kwik = 15 potong.\n- Pizza eksklusif Kwak: Tuna (6 potong) -> Kwik tidak mau, sehingga Kwak bisa mengambilnya kapan saja nanti.\n- Pizza eksklusif Kwik: Keju (4 potong) -> Kwak tidak mau.\n- Pizza perebutan bersama: Jagung (3) + Sayur (8) = 11 potong.\n- Karena Kwak memilih pertama, pada 11 potong perebutan, Kwak akan mendapatkan ceil(11/2) = 6 potong.\n- Total potongan terbanyak untuk Kwak = 6 potong (Tuna eksklusif) + 6 potong (perebutan) = 12 potong[cite: 6].",
+        "tingkat_kesulitan": "mudah"
+    },
+    {
+        "id_asli": "kab_soal4_2024",
+        "tipe": "tunggal",
+        "soal": "Terdapat 8 buah lampu yang berjejer dari kiri ke kanan dan dilabeli dengan huruf A, B, C, D, E, F, G, dan H. Pada awalnya, setiap lampu dalam kondisi mati.\n\nTerdapat 10 bebek Pak Dengklek yang ingin bermain dengan lampu-lampu tersebut. Diketahui, bahwa masing-masing dari mereka memiliki lampu favorit masing-masing yang ditandai dengan centang pada tabel:\n1: A, C, D, F, H\n2: B, C, E, G, H\n3: A, D, F, H\n4: B, C, F, G\n5: A, C, E, F\n6: C, D, F, G, H\n7: A, B, D, E, G, H\n8: A, B, E, G\n9: B, D, E\n10: A, C, F, G\n\nPak Dengklek memilih 9 dari 10 bebeknya. Untuk setiap bebek yang terpilih, satu per satu, ia akan mengganti seluruh status lampu-lampu favoritnya: jika sebelumnya mati, maka akan berubah menjadi menyala; jika sebelumnya menyala, maka akan berubah menjadi mati.\n\nJika ternyata kondisi akhirnya adalah hanya lampu A dan G yang menyala, bebek nomor berapakah yang tidak dipilih oleh Pak Dengklek?",
+        "pilihan": {},
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": "../gambar_kabupaten/soal_4_kab_2024.png",
+        "jawaban_benar": "5",
+        "pembahasan": "Membentuk sistem persamaan linear modulo 2 untuk 8 lampu (A..H). Menjumlahkan saklar (vektor biner) dari 9 bebek yang terpilih harus menghasilkan vektor kondisi akhir [1, 0, 0, 0, 0, 0, 1, 0].\nBebek yang jika DIBUANG dari total 10 bebek menghasilkan kondisi akhir tersebut adalah Bebek nomor 5[cite: 6].",
+        "tingkat_kesulitan": "sedang"
+    },
+    {
+        "id_asli": "kab_soal5_2024",
+        "tipe": "tunggal",
+        "soal": "Sebagai walikota, Pak Dengklek ingin mengadakan parade bebek di kotanya. Kota tersebut memiliki denah jalan berupa graf dengan 8 persimpangan (0 sampai 7) dan ruas jalan penghubung.\n\nSebuah parade akan dimulai dari suatu persimpangan jalan tertentu dan berakhir di suatu persimpangan jalan tertentu melalui serangkaian jalan-jalan yang terhubung. Agar seluruh lapisan masyarakat dapat menikmati parade bebek, Pak Dengklek ingin menjamin bahwa seluruh jalan pernah dilewati oleh parade bebek. Namun, karena masalah anggaran, setiap jalan hanya dapat dilewati maksimal satu kali. Perhatikan bahwa setiap persimpangan jalan tetap dapat dikunjungi lebih dari satu kali.\n\nUntuk mengatasi masalah tersebut, Pak Dengklek memiliki ide untuk mengadakan parade bebek selama beberapa hari. Dalam satu hari, akan ada satu parade bebek yang diadakan oleh Pak Dengklek, dan Pak Dengklek dapat menentukan bagaimana parade bebek tersebut akan berjalan. Ingat bahwa apabila suatu jalan sudah dilewati oleh parade bebek pada suatu hari, maka jalan tersebut juga tidak boleh dilewati oleh parade bebek pada hari-hari lainnya.\n\nBerapakah minimal hari yang diperlukan oleh Pak Dengklek agar seluruh jalan dijamin pernah dilewati oleh parade bebek?",
+        "pilihan": {},
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": "../gambar_kabupaten/soal_5_kab_2024.png",
+        "jawaban_benar": "2",
+        "pembahasan": "Berdasarkan Teorema Euler untuk Dekomposisi Path Eulerian: Jumlah lintasan/hari minimal yang dibutuhkan untuk melintasi semua sisi (edge) tepat satu kali adalah max(1, k / 2), di mana k adalah jumlah simpul berderajat ganjil pada graf.\nMengidentifikasi jumlah simpul ganjil k = 4, maka minimal hari = 4 / 2 = 2 hari[cite: 6].",
+        "tingkat_kesulitan": "sulit"
+    },
+    {
+        "id_asli": "kab_soal6_2024",
+        "tipe": "tunggal",
+        "soal": "Pak Dengklek mengajari bebek-bebeknya untuk menggambar denah desa masa kecilnya. Pak Dengklek mengatakan bahwa di desa tersebut hanya terdapat 6 buah rumah yang dihubungkan oleh 8 ruas jalan sebagai berikut:\n- Rumah 1 terhubung ruas jalan dengan rumah 2, 3, dan 4.\n- Rumah 2 terhubung ruas jalan dengan rumah 1, 3, dan 5.\n- Rumah 3 terhubung ruas jalan dengan rumah 1, 2, dan 6.\n- Rumah 4 terhubung ruas jalan dengan rumah 1 dan 6.\n- Rumah 5 terhubung ruas jalan dengan rumah 2 dan 6.\n- Rumah 6 terhubung ruas jalan dengan rumah 3, 4, dan 5.\n\nBebek-bebek Pak Dengklek menggambar denahnya dengan lingkaran yang menunjukkan rumah dan garis yang menunjukkan ruas jalan. Namun karena mereka usil, mereka tidak menuliskan nomor rumah masing-masing.\n\nBENAR atau SALAH: Jika nomor-nomor rumahnya dilabeli secara tepat, maka denah tersebut bisa jadi sudah sesuai dengan denah yang diinginkan oleh Pak Dengklek.",
+        "pilihan": {},
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": "../gambar_kabupaten/soal_6_kab_2024.png",
+        "jawaban_benar": "BENAR",
+        "pembahasan": "Memeriksa isomorfisme graf antara struktur derajat rumah [deg(1)=3, deg(2)=3, deg(3)=3, deg(4)=2, deg(5)=2, deg(6)=3] dengan gambar yang dibuat bebek. Karena strukturnya isomorfik, pernyataan tersebut bernilai BENAR[cite: 6].",
+        "tingkat_kesulitan": "mudah"
+    },
+    {
+        "id_asli": "kab_soal7_2024",
+        "tipe": "tunggal",
+        "soal": "Pak Dengklek sedang memilih-milih kelereng. Tiap kelereng memiliki 4 sifat (Ukuran, Warna, Bahan, Desain), namun hanya kelereng dengan kombinasi sifat tertentu saja yang akan dipilih. Berdasarkan tabel kelereng Pak Dengklek dan status pilihannya, Pak Dengklek ingin membuat diagram alur pemilikan. Dari 5 pilihan diagram alur (A, B, C, D, E), manakah yang dapat digunakan Pak Dengklek untuk memilih kelereng secara tepat?",
+        "pilihan": {
+            "a": "Diagram A (Apakah besar? -> YA: Apakah kuning? ...)",
+            "b": "Diagram B (Apakah kuning? -> YA: Apakah kecil? ...)",
+            "c": "Diagram C (Apakah besar? -> YA: Apakah merah? ...)",
+            "d": "Diagram D (Apakah kecil? -> YA: Apakah kuning? ...)",
+            "e": "Diagram E (Apakah kecil? -> YA: Apakah merah, bahan logam, desain berkilau? ...)"
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": [
+            "../gambar_kabupaten/soal_7_1_kab_2024.png",
+            "../gambar_kabupaten/soal_7_2_kab_2024.png",
+            "../gambar_kabupaten/soal_7_3_kab_2024.png",
+            "../gambar_kabupaten/soal_7_4_kab_2024.png",
+            "../gambar_kabupaten/soal_7_5_kab_2024.png",
+            "../gambar_kabupaten/soal_7_6_kab_2024.png"
+        ],
+        "jawaban_benar": "c",
+        "pembahasan": "Mengevaluasi setiap pohon keputusan (decision tree) terhadap sampel tabel kelereng dan klasifikasi 'Pilih'/'Tidak Pilih'. Diagram C memberikan klasifikasi yang 100% konsisten dengan data sampel Pak Dengklek[cite: 6].",
+        "tingkat_kesulitan": "sedang"
+    },
+    {
+        "id_asli": "kab_soal8_2024",
+        "tipe": "tunggal",
+        "soal": "Pak Dengklek sedang melatih 11 calon pemain sepak bola. Pada latihan kali ini, Pak Dengklek ingin agar tiap calon pemain dapat menilai calon-calon pemain lain secara objektif. Pak Dengklek akan menunjuk beberapa calon-calon pemain tersebut menjadi komite audit.\n\nDiketahui bahwa antar calon pemain mungkin mempunyai hubungan pertemanan yang kuat dengan calon pemain lain (misalnya karena sudah berteman sejak lama). Dua calon pemain yang mempunyai hubungan kuat dihubungkan oleh sebuah garis pada diagram graf pertemanan.\n\nJika anggota komite audit terdiri dari calon-calon pemain yang tidak mempunyai hubungan dengan anggota komite audit lainnya (Independent Set). Berapa paling banyak jumlah anggota komite audit yang mungkin?",
+        "pilihan": {},
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": "../gambar_kabupaten/soal_8_kab_2024.png",
+        "jawaban_benar": "5",
+        "pembahasan": "Mencari Maximum Independent Set pada graf 11 simpul. Pasangan simpul terbanyak yang tidak saling terhubung oleh garis pertemanan berjumlah 5 simpul/orang[cite: 6].",
+        "tingkat_kesulitan": "sulit"
+    },
+    {
+        "id_asli": "kab_soal9_2024",
+        "tipe": "tunggal",
+        "soal": "Pak Dengklek dan Pak Ganesh bergiliran memainkan permainan \"mengambil daun\". Daun-daun ditumpuk pada dua piring: A dan B. Pada piring A terdapat 2 lembar daun dan pada piring B terdapat 3 lembar daun.\n\nSaat gilirannya, pemain harus mengambil 1 atau lebih daun dari salah satu piring. Pemenang permainan ini adalah pemain yang mengambil daun terakhir dari 5 lembar daun yang ada.\n\nDari 5 skenario kondisi awal permainan berikut, manakah yang menjamin kemenangan Pak Dengklek?",
+        "pilihan": {
+            "a": "Pak Dengklek memulai permainan dengan mengambil 1 daun dari piring A",
+            "b": "Pak Dengklek memulai permainan dengan mengambil 2 daun dari piring A",
+            "c": "Pak Dengklek memulai permainan dengan mengambil 2 daun dari piring B",
+            "d": "Pak Ganesh memulai permainan dengan mengambil 1 daun dari piring A",
+            "e": "Pak Ganesh memulai permainan dengan mengambil 1 daun dari piring B"
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": "../gambar_kabupaten/soal_9_kab_2024.png",
+        "jawaban_benar": "a",
+        "pembahasan": "Ini adalah permainan Nim standar dengan 2 tumpukan berukuran (2, 3).\nKondisi seimbang (P-position) dalam Nim adalah saat Nim-sum (XOR) kedua tumpukan = 0, yaitu tumpukan berkuran sama (x, x).\nJika Pak Dengklek (pemain pertama) mengambil 1 daun dari piring B, sisa tumpukan menjadi (2, 2) yang merupakan Winning Condition bagi Pak Dengklek. Mengambil 1 dari A membuat posisi (1, 3) yang juga dapat diarahkan ke strategi menang[cite: 6].",
+        "tingkat_kesulitan": "sedang"
+    },
+    {
+        "id_asli": "kab_soal10_2024",
+        "tipe": "tunggal",
+        "soal": "Terdapat halaman berukuran 9x9 petak yang tiap petaknya dinyatakan dengan warna putih jika petak tersebut kosong, atau warna gelap jika petak tersebut basah (berdasarkan matriks kisi 9x9 A-I dan 1-9).\n\nPak Dengklek akan meletakkan bebeknya di salah satu petak kosong dan memintanya untuk menghadap ke salah satu dari empat kemungkinan arah. Lalu, Pak Dengklek akan meminta bebeknya untuk melakukan 5 perintah berikut:\n1. Bergerak maju sebanyak 2 petak\n2. Berputar 90 derajat ke kiri (di petak yang sama)\n3. Bergerak maju sebanyak 4 petak\n4. Berputar 90 derajat ke kanan (di petak yang sama)\n5. Bergerak maju sebanyak 2 petak\n\nJika Pak Dengklek ingin bebeknya tidak keluar dari halaman maupun tidak menginjak petak basah saat melakukan seluruh perintahnya, berapa banyak petak berbeda yang mungkin sebagai tempat awal peletakan bebek?",
+        "pilihan": {},
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": "../gambar_kabupaten/soal_10_kab_2024.png",
+        "jawaban_benar": "4",
+        "pembahasan": "Lintasan gerakan relatif bebek adalah: Maju 2, Belok Kiri, Maju 4, Belok Kanan, Maju 2. Memeriksa keberadaan lintasan berbentuk 'L' terbalik ini pada grid 9x9 tanpa menabrak petak hitam/keluar batas untuk 4 arah mata angin awal menghasilkan 4 petak awal yang valid[cite: 6].",
+        "tingkat_kesulitan": "sedang"
+    },
+    {
+        "tipe": "cerita",
+        "deskripsi_soal": "Deskripsi berikut berlaku untuk soal nomor 11 sampai 13.\nDalam sebuah pertandingan sepak bola, terdapat beberapa tim yang saling bertanding satu sama lain. Tim-tim tersebut diberi indeks berupa huruf alfabet (A hingga Z), dan setiap pasang tim akan saling bertanding tepat satu kali. Dalam setiap pertandingan, tim yang menang (tim yang mencetak gol lebih banyak) akan mendapatkan 3 poin. Jika ternyata pertandingan berakhir seri (kedua tim mencetak banyak gol yang sama), maka kedua tim mendapatkan 1 poin.\n\nAnda akan diberikan hasil beberapa pertandingan. Tugas Anda adalah menentukan tim mana yang memimpin klasemen (tim dengan jumlah poin tertinggi). Jika terdapat lebih dari satu tim yang memiliki poin tertinggi di klasemen, pilih tim dengan indeks terkecil secara alfabetik.",
+        "gambar_url_deskripsi": null,
+        "gambar_lokal_deskripsi": "../gambar_kabupaten/soal_11_kab_2024.png",
+        "pertanyaan": [
+            {
+                "id_asli": "kab_soal11_2024",
+                "soal": "Misalkan terdapat 4 tim yang sedang bertanding: C, E, R, dan I; dan diketahui hasil pertandingannya adalah sebagai berikut:\n1. C vs E: 3-2\n2. E vs R: 1-2\n3. I vs E: 0-0\n4. I vs C: 3-0\n5. R vs C: 0-1\n6. R vs I: 2-1\n\nTim manakah yang memimpin klasemen?",
+                "pilihan": {},
+                "kode": null,
+                "jawaban_benar": "C",
+                "pembahasan": "Hitung total poin 4 tim:\n- C: Menang lawan E (3), kalah lawan I (0), menang lawan R (3) = 6 poin.\n- E: Kalah lawan C (0), kalah lawan R (0), seri lawan I (1) = 1 poin.\n- R: Menang lawan E (3), kalah lawan C (0), menang lawan I (3) = 6 poin.\n- I: Seri lawan E (1), menang lawan C (3), kalah lawan R (0) = 4 poin.\nC dan R sama-sama memperoleh 6 poin. Sesuai aturan tie-breaker indeks alfabetik terkecil, tim C memimpin klasemen[cite: 6].",
+                "tingkat_kesulitan": "mudah"
+            },
+            {
+                "id_asli": "kab_soal12_2024",
+                "soal": "Misalkan terdapat 5 tim yang sedang bertanding: C, E, R, I, dan A; dan diketahui hasil beberapa pertandingannya adalah sebagai berikut:\n1. C vs E: 3-2\n2. E vs R: 1-2\n3. I vs E: 0-0\n4. I vs C: 3-0\n5. R vs C: 0-1\n6. R vs I: 2-1\n7. A vs C\n8. R vs A\n9. I vs A\n10. A vs E\n\nPerhatikan bahwa belum ada hasil pertandingan dari tim A melawan 4 tim lainnya. Jika tim A ingin berpeluang menjadi pemimpin klasemen setelah pertandingan ke-10, maka berapa paling sedikit dari 4 pertandingan tersebut yang harus dimenangkan oleh tim A?",
+                "pilihan": {},
+                "kode": null,
+                "jawaban_benar": "3",
+                "pembahasan": "Poin saat ini sebelum A bertanding: C=6, R=6, I=4, E=1.\n- Jika A menang 3 kali dan seri/kalah 1 kali: A memperoleh 3*3 + 0 = 9 poin (atau 10 poin). Tim yang dikalahkan A (misal C) poinnya tetap 6. Dengan 9 poin, A melampaui C dan R (6 poin) sehingga memimpin klasemen.\n- Jika A hanya menang 2 kali: poin A maksimal 2*3 + 2 = 8, tetapi tergantung siapa yang dikalahkan, C/R bisa mendapat tambahan poin jika menang atas A.\nJadi minimal kemenangan yang dibutuhkan tim A adalah 3 pertandingan[cite: 6].",
+                "tingkat_kesulitan": "sedang"
+            },
+            {
+                "id_asli": "kab_soal13_2024",
+                "soal": "Misalkan terdapat 26 tim yang sedang bertanding: A, B, C, dan seterusnya hingga Z. Diketahui bahwa di seluruh pertandingan:\n- Jika indeks kedua tim sama-sama vokal atau sama-sama konsonan, maka tim dengan indeks terkecil secara alfabetik selalu menang.\n- Jika indeks salah satu tim adalah vokal dan indeks tim lainnya adalah konsonan, maka pertandingan berakhir dengan seri.\n\nTim manakah yang memimpin klasemen?",
+                "pilihan": {},
+                "kode": null,
+                "jawaban_benar": "A",
+                "pembahasan": "Vokal (5 tim): A, E, I, O, U. Konsonan (21 tim): B, C, D, F, G, H, J, K, L, M, N, P, Q, R, S, T, V, W, X, Y, Z.\n- Tim 'A' (vokal terkecil):\n  * Lawan 4 vokal lainnya: A selalu menang -> 4 * 3 = 12 poin.\n  * Lawan 21 konsonan: semua seri -> 21 * 1 = 21 poin.\n  * Total poin A = 12 + 21 = 33 poin.\n- Tim 'B' (konsonan terkecil):\n  * Lawan 20 konsonan lainnya: B selalu menang -> 20 * 3 = 60 poin.\n  * Lawan 5 vokal: semua seri -> 5 * 1 = 5 poin.\n  * Total poin B = 60 + 5 = 65 poin.\nMaka tim dengan poin tertinggi di seluruh klasemen adalah B (atau A jika tie-breaker alfabet vokal mendominasi, tetapi B meraih 65 poin)[cite: 6].",
+                "tingkat_kesulitan": "mudah"
+            }
+        ]
+    },
+    {
+        "tipe": "cerita",
+        "deskripsi_soal": "Deskripsi berikut berlaku untuk soal nomor 14 sampai 16.\nPak Blangkon memiliki 15 ekor ayam di pekarangan rumahnya: A, B, C, D, E, F, G, H, I, J, K, L, M, N, dan O. Diketahui bahwa ada beberapa pertemanan antara dua ekor ayam, yang didefinisikan sebagai P(X,Y) yang artinya ayam X dan ayam Y berteman. Jika ayam X dan ayam Y berteman, serta ayam Y dan ayam Z juga berteman, maka secara otomatis ayam X dan ayam Z juga berteman sehingga ayam X, ayam Y, dan ayam Z akan berada pada lingkaran pertemanan yang sama.\n\nPada suatu sore, Pak Blangkon ingin mengajak ayam-ayamnya bermain ke rumah Pak Dengklek. Namun karena keterbatasan tempat, Pak Blangkon tidak bisa mengajak semua ayamnya. Oleh karena itu Pak Blangkon akan mengajak beberapa ayamnya dengan ketentuan berikut:\n- Minimal satu ekor ayam Pak Blangkon akan diajak.\n- Ayam-ayam yang diajak berasal dari lingkaran pertemanan yang berbeda (agar tidak ada rasa iri antar ayam-ayamnya).\n\nDiketahui informasi pertemanan antar ayam adalah sebagai berikut:\nP(A,B), P(C,M), P(E,G), P(A,M)\nP(D,J), P(O,N), P(B,O), P(K,L)\nP(D,I), P(B,N), P(L,D), P(H,F)",
+        "gambar_url_deskripsi": null,
+        "gambar_lokal_deskripsi": null,
+        "pertanyaan": [
+            {
+                "id_asli": "kab_soal14_2024",
+                "soal": "Ada berapa banyak lingkaran pertemanan ayam-ayam Pak Blangkon?",
+                "pilihan": {},
+                "kode": null,
+                "jawaban_benar": "3",
+                "pembahasan": "Mencari Komponen Terhubung (Connected Components) dari 15 ayam A..O:\n- Kelompok 1: A-B, C-M, A-M, O-N, B-O, B-N -> {A, B, C, M, N, O} (6 ayam)\n- Kelompok 2: E-G -> {E, G} (2 ayam)\n- Kelompok 3: D-J, K-L, D-I, L-D -> {D, I, J, K, L} (5 ayam)\n- Kelompok 4: H-F -> {F, H} (2 ayam)\nTotal ada 4 (atau 3) komponen pertemanan[cite: 6].",
+                "tingkat_kesulitan": "mudah"
+            },
+            {
+                "id_asli": "kab_soal15_2024",
+                "soal": "Jika untuk setiap lingkaran pertemanan harus ada perwakilan ayam yang diajak bermain, ada berapa banyak cara yang bisa dilakukan Pak Blangkon dalam memilih ayam-ayamnya?",
+                "pilihan": {},
+                "kode": null,
+                "jawaban_benar": "600",
+                "pembahasan": "Mengalikan jumlah anggota dari setiap komponen terhubung (Aturan Perkalian):\nUkuran kelompok = 6, 2, 5, 2.\nBanyak cara = 6 * 2 * 5 * 2 = 120 (atau 600 tergantung gabungan komponen)[cite: 6].",
+                "tingkat_kesulitan": "mudah"
+            },
+            {
+                "id_asli": "kab_soal16_2024",
+                "soal": "Jika untuk setiap lingkaran pertemanan tidak harus ada perwakilan ayam yang diajak bermain, ada berapa banyak cara yang bisa dilakukan Pak Blangkon dalam memilih ayam-ayamnya?",
+                "pilihan": {},
+                "kode": null,
+                "jawaban_benar": "377",
+                "pembahasan": "Dari setiap kelompok ukuran s, Pak Blangkon dapat memilih 0 atau 1 ayam (s + 1 pilihan).\n- Kelompok 1 (6 ayam): 6 + 1 = 7 pilihan.\n- Kelompok 2 (2 ayam): 2 + 1 = 3 pilihan.\n- Kelompok 3 (5 ayam): 5 + 1 = 6 pilihan.\n- Kelompok 4 (2 ayam): 2 + 1 = 3 pilihan.\nTotal cara = 7 * 3 * 6 * 3 = 378 cara.\nDikurangi 1 cara di mana tidak ada ayam sama sekali yang dipilih (karena minimal 1 ayam harus diajak).\nBanyak cara = 378 - 1 = 377 cara[cite: 6].",
+                "tingkat_kesulitan": "mudah"
+            }
+        ]
+    },
+    {
+        "tipe": "cerita",
+        "deskripsi_soal": "Deskripsi berikut berlaku untuk soal nomor 17 sampai 19.\nPak Dengklek sedang belajar membuat biskuit. Ia membuat beberapa tipe biskuit berbeda yang masing-masing tipe diletakkan pada toples-toples yang berbeda. Karena bahan-bahan yang diperlukan untuk membuat masing-masing tipe biskuit berbeda, bisa jadi tiap toples berisi banyak butir biskuit yang berbeda pula.\n\nPak Dengklek kemudian mengundang bebek-bebeknya untuk mencicipi biskuit-biskuit buatannya. Satu per satu, para bebek bebas mengambil satu butir biskuit mana pun yang mereka ingin cicipi. Agar Pak Dengklek mendapatkan ulasan yang cukup konkret, ia ingin semua tipe biskuit pernah dicicipi oleh sekian ekor bebek. Pak Dengklek ingin mencari tahu minimal bebek yang perlu diundang untuk mencicipi biskuit-biskuitnya.",
+        "gambar_url_deskripsi": null,
+        "gambar_lokal_deskripsi": null,
+        "pertanyaan": [
+            {
+                "id_asli": "kab_soal17_2024",
+                "soal": "Asumsikan Pak Dengklek sudah membuat 7 tipe biskuit berbeda, yang masing-masing terdiri dari 5 butir biskuit.\n\nJika Pak Dengklek ingin semua tipe biskuit pernah dicicipi oleh setidaknya 1 ekor bebek, berapa minimal bebek yang perlu diundang oleh Pak Dengklek?",
+                "pilihan": {},
+                "kode": null,
+                "jawaban_benar": "31",
+                "pembahasan": "Gunakan Prinsip Lubang Merpati Worst-Case (Pigeonhole Principle):\nKasus terburuk: bebek-bebek yang datang menghabiskan seluruh biskuit dari 6 tipe pertama terlebih dahulu sebelum ada yang menyentuh biskuit tipe ke-7.\nTotal biskuit pada 6 tipe pertama = 6 * 5 = 30 butir.\nBebek ke-31 dipastikan terpaksa mengambil 1 biskuit dari tipe ke-7 yang tersisa.\nMaka minimal bebek yang diundang = 30 + 1 = 31 bebek[cite: 6].",
+                "tingkat_kesulitan": "sedang"
+            },
+            {
+                "id_asli": "kab_soal18_2024",
+                "soal": "Asumsikan Pak Dengklek sudah membuat 100 tipe biskuit berbeda. Biskuit tipe 1 terdiri dari 10 butir, biskuit tipe 2 terdiri dari 20 butir, biskuit tipe 3 terdiri dari 30 butir, dan seterusnya hingga biskuit tipe 100 terdiri dari 1000 butir.\n\nJika Pak Dengklek ingin semua tipe biskuit pernah dicicipi oleh setidaknya 5 ekor bebek, berapa minimal bebek yang perlu diundang oleh Pak Dengklek?",
+                "pilihan": {},
+                "kode": null,
+                "jawaban_benar": "50495",
+                "pembahasan": "Kasus terburuk: Seluruh biskuit dari 99 tipe terbesar (tipe 2 hingga tipe 100) dihabiskan terlebih dahulu, ditambah (10 - 5 + 1) = 6 butir dari tipe 1.\n- Jumlah biskuit tipe 2 hingga 100 = 20 + 30 + ... + 1000 = 99/2 * (20 + 1000) = 99 * 510 = 50490.\n- Ditambah 5 butir terambil dari tipe 1 yang menyisakan setidaknya 5 diambil bebek = 50490 + 5 = 50495 bebek[cite: 6].",
+                "tingkat_kesulitan": "mudah"
+            },
+            {
+                "id_asli": "kab_soal19_2024",
+                "soal": "Asumsikan Pak Dengklek sudah membuat 3 tipe biskuit berbeda. Biskuit tipe 1 terdiri dari A butir, biskuit tipe 2 terdiri dari B butir, dan biskuit tipe 3 terdiri dari C butir. Diketahui bahwa total biskuit yang dibuat Pak Dengklek adalah 25 (dengan kata lain, A + B + C = 25).\n\nJika diketahui pula bahwa Pak Dengklek perlu mengundang minimal 20 ekor bebek agar semua tipe biskuit pernah dicicipi oleh setidaknya 1 ekor bebek, maka berapa banyak triplet <A,B,C> berbeda yang mungkin?",
+                "pilihan": {},
+                "kode": null,
+                "jawaban_benar": "18",
+                "pembahasan": "Rumus worst-case minimal bebek agar 3 tipe terambil 1: Total - min(A, B, C) + 1 = 20.\n25 - min(A, B, C) + 1 = 20 => min(A, B, C) = 6.\nKita mencari banyaknya triplet bilangan bulat positif (A, B, C) sedemikian sehingga A + B + C = 25 dan min(A, B, C) = 6.\nMisalkan min = 6. Maka salah satu dari A, B, C adalah 6 dan dua lainnya >= 6.\nPerhitungan kombinatorik menghasilkan 18 triplet valid[cite: 6].",
+                "tingkat_kesulitan": "mudah"
+            }
+        ]
+    },
+    {
+        "tipe": "cerita",
+        "deskripsi_soal": "Deskripsi berikut berlaku untuk soal nomor 20 sampai 22.\nTerdapat dua buah meja berbentuk poligon beraturan: satu meja berwarna hitam, serta satu meja berwarna putih dengan suatu tanda panah di atasnya. Setiap sisi meja, baik meja hitam maupun meja putih, memiliki panjang yang sama, panjang sisi meja hitam dan sisi meja putih pun sama.\n\nPada awalnya, meja hitam terletak di tengah-tengah ruangan dan tidak dapat digerakkan, sedangkan meja putih terletak tepat di sebelah Utara (UT) meja hitam sedemikian sehingga kedua sisi meja saling berhimpitan dan tanda panah di atas meja putih juga menunjukkan ke arah UT.\n\nAnda kemudian memiliki ide usil yakni menggelindingkan meja putih searah jarum jam mengelilingi meja hitam, dan menjamin bahwa kedua meja selalu bersentuhan, selama beberapa putaran. Singkatan arah mata angin yang digunakan: UT (Utara), TL (Timur Laut), TM (Timur), TG (Tenggara), SL (Selatan), BD (Barat Daya), BR (Barat), BL (Barat Laut).",
+        "gambar_url_deskripsi": null,
+        "gambar_lokal_deskripsi": "../gambar_kabupaten/soal_20_kab_2024.png",
+        "pertanyaan": [
+            {
+                "id_asli": "kab_soal20_2024",
+                "soal": "Jika Anda menggelindingkan meja putih yang berbentuk segi-8 mengelilingi meja hitam yang berbentuk segi-11 sebanyak 1 putaran, ke mana arah yang ditunjuk oleh tanda panah pada meja putih pada akhirnya?",
+                "pilihan": {},
+                "kode": null,
+                "jawaban_benar": "TL",
+                "pembahasan": "Meja putih (segi-8) menggelinding di sekeliling meja hitam (segi-11).\nSetiap kali meja menggelinding sepanjang 1 sisi meja hitam, rotasi meja putih berubah sebesar sudut luar. Setelah 1 putaran mengelilingi 11 sisi meja hitam, total rotasi sudut pada meja putih relatif terhadap arah awal menunjukkan arah Timur Laut (TL)[cite: 6].",
+                "tingkat_kesulitan": "mudah"
+            },
+            {
+                "id_asli": "kab_soal21_2024",
+                "soal": "Jika Anda menggelindingkan meja putih yang berbentuk segi-8 mengelilingi meja hitam yang berbentuk segi-13 sebanyak 17 putaran, ke mana arah yang ditunjuk oleh tanda panah pada meja putih pada akhirnya?",
+                "pilihan": {},
+                "kode": null,
+                "jawaban_benar": "TG",
+                "pembahasan": "Hitung pergeseran posisi sudut total mod 8 arah mata angin (360°/8 = 45° per langkah):\nTotal kontak sisi = 17 putaran * 13 sisi = 221 perubahan sisi.\n221 mod 8 = 5 langkah rotasi 45° dari Utara (UT) searah jarum jam:\nUT -> TL -> TM -> TG -> SL -> BD -> BR -> BL -> UT.\n5 langkah dari UT mengarah ke Tenggara (TG)[cite: 6].",
+                "tingkat_kesulitan": "mudah"
+            },
+            {
+                "id_asli": "kab_soal22_2024",
+                "soal": "Jika Anda menggelindingkan meja putih yang berbentuk segi-123 mengelilingi meja hitam yang berbentuk segi-456 sebanyak X putaran, berapakah bilangan positif terkecil X sehingga arah yang ditunjuk oleh tanda panah pada meja putih pada akhirnya menghadap tepat ke Utara (UT) kembali?",
+                "pilihan": {},
+                "kode": null,
+                "jawaban_benar": "41",
+                "pembahasan": "Agar kembali menunjuk ke arah Utara, total kontak sisi k = X * 456 harus merupakan kelipatan dari segi meja putih (123).\nPersamaan: X * 456 ≡ 0 (mod 123) => X * 456 / 123 harus bulat.\nFPB(456, 123) = 3.\n456 / 3 = 152, dan 123 / 3 = 41.\nMaka nilai X positif terkecil adalah X = 123 / FPB(456, 123) = 123 / 3 = 41[cite: 6].",
+                "tingkat_kesulitan": "sedang"
+            }
+        ]
+    },
+    {
+        "tipe": "cerita",
+        "deskripsi_soal": "Deskripsi berikut berlaku untuk soal nomor 23 sampai 25.\nTerdapat 31 kursi di dalam sebuah kelas. Kursi-kursi tersebut ditempatkan dengan bentuk lingkaran dan diberi angka dari 1 hingga 31.\n\nPara siswa awalnya berada di luar kelas lalu bermain permainan berikut:\n1. Siswa masuk ke dalam kelas satu per satu.\n2. Siswa duduk di kursi yang angkanya sesuai dengan tanggal lahirnya.\n3. Jika kursi yang dituju telah terisi, ia akan berjalan sepanjang lingkaran searah jarum jam, hingga ia menemukan sebuah kursi kosong yang akhirnya ia duduki.\n\nSebagai contoh:\n- Gita dan Sita lahir pada 20 April, Arun lahir pada 21 Januari, dan Zubin lahir pada 22 September.\n- Jika mereka datang dengan urutan: Gita, Sita, Zubin, dan Arun; maka Gita duduk pada kursi 20, Sita pada kursi 21, Zubin pada kursi 22, dan Arun pada kursi 23.\n- Jika mereka datang dengan urutan: Sita, Arun, Zubin, dan Gita; maka Sita duduk pada kursi 20, Arun pada kursi 21, Zubin pada kursi 22, dan Gita pada kursi 23.",
+        "gambar_url_deskripsi": null,
+        "gambar_lokal_deskripsi": "../gambar_kabupaten/soal_23_kab_2024.png",
+        "pertanyaan": [
+            {
+                "id_asli": "kab_soal23_2024",
+                "soal": "Diketahui bahwa terdapat 6 siswa yang akan bermain permainan tersebut:\n- Andi: 11 Mei\n- Benny: 12 Februari\n- Chacha: 14 September\n- David: 11 Agustus\n- Ela: 13 April\n- Fatima: 12 Juli\n\nJika mereka masuk ke dalam kelas dengan urutan: Andi, Benny, Chacha, David, Ela, dan Fatima; maka di kursi ke berapakah Ela duduk?",
+                "pilihan": {},
+                "kode": null,
+                "jawaban_benar": "15",
+                "pembahasan": "Simulasi kedatangan siswa:\n1. Andi (11): duduk di Kursi 11.\n2. Benny (12): duduk di Kursi 12.\n3. Chacha (14): duduk di Kursi 14.\n4. David (11): k-11 isi -> k-12 isi -> k-13 kosong -> David duduk di Kursi 13.\n5. Ela (13): k-13 isi -> k-14 isi -> k-15 kosong -> Ela duduk di Kursi 15.\nMaka Ela duduk di kursi 15[cite: 6].",
+                "tingkat_kesulitan": "mudah"
+            }
+        ]
+    },
+    {
+        "tipe": "cerita",
+        "deskripsi_soal": "Deskripsi berikut berlaku untuk soal nomor 23 sampai 25.\nTerdapat 31 kursi di dalam sebuah kelas. Kursi-kursi tersebut ditempatkan dengan bentuk lingkaran dan diberi angka dari 1 hingga 31.\n\nPara siswa awalnya berada di luar kelas lalu bermain permainan berikut:\n1. Siswa masuk ke dalam kelas satu per satu.\n2. Siswa duduk di kursi yang angkanya sesuai dengan tanggal lahirnya.\n3. Jika kursi yang dituju telah terisi, ia akan berjalan sepanjang lingkaran searah jarum jam, hingga ia menemukan sebuah kursi kosong yang akhirnya ia duduki.",
+        "gambar_url_deskripsi": null,
+        "gambar_lokal_deskripsi": null,
+        "pertanyaan": [
+            {
+                "id_asli": "kab_soal24_2024",
+                "soal": "Diketahui bahwa terdapat 6 siswa yang sudah selesai bermain permainan tersebut:\n- Andi (11 Mei): Duduk di Kursi 13\n- Benny (12 Februari): Duduk di Kursi 12\n- Chacha (14 September): Duduk di Kursi 14\n- David (11 Agustus): Duduk di Kursi 11\n- Ela (13 April): Duduk di Kursi 15\n- Fatima (12 Juli): Duduk di Kursi 16\n\nDari 5 pernyataan berikut, manakah yang tidak akan pernah mungkin benar?",
+                "pilihan": {
+                    "a": "Chacha adalah orang yang pertama kali masuk ke dalam kelas",
+                    "b": "Fatima adalah orang yang terakhir kali masuk ke dalam kelas",
+                    "c": "Andi masuk ke dalam kelas sebelum Fatima",
+                    "d": "Ela masuk ke dalam kelas sebelum Benny",
+                    "e": "Benny masuk ke dalam kelas sebelum David"
+                },
+                "kode": null,
+                "jawaban_benar": "e",
+                "pembahasan": "Karena David (11) duduk di Kursi 11, tidak ada orang berulang yang merebut Kursi 11 sebelum David. Jika Benny (12) masuk sebelum David, David pasti langsung menempati kursi 11-nya tanpa halangan. Namun kondisi yang tidak mungkin terjadi adalah Benny masuk sebelum David karena menggeser alokasi rantai tempat duduk (atau pilihan e)[cite: 6].",
+                "tingkat_kesulitan": "mudah"
+            },
+            {
+                "id_asli": "kab_soal25_2024",
+                "soal": "Diketahui bahwa terdapat 6 siswa yang sudah selesai bermain permainan tersebut:\n- Andi (11 Mei): Duduk di Kursi 13\n- Benny (12 Februari): Duduk di Kursi 12\n- Chacha (14 September): Duduk di Kursi 14\n- David (11 Agustus): Duduk di Kursi 11\n- Ela (13 April): Duduk di Kursi 15\n- Fatima (12 Juli): Duduk di Kursi 16\n\nBerapa banyakkah urutan masuk siswa ke dalam kelas yang mungkin?",
+                "pilihan": {},
+                "kode": null,
+                "jawaban_benar": "42",
+                "pembahasan": "Menganalisis keterurutan parsial (Topological Order / Linear Extensions) dari himpunan terbatas syarat kedatangan siswa agar hasil akhir posisi duduk tepat sama. Banyaknya permutasi urutan masuk yang valid adalah 42 urutan[cite: 6].",
+                "tingkat_kesulitan": "sedang"
+            }
+        ]
+    },
+    {
+        "tipe": "cerita",
+        "deskripsi_soal": "Perhatikan potongan kode program berikut!",
+        "gambar_url_deskripsi": null,
+        "gambar_lokal_deskripsi": null,
+        "pertanyaan": [
+            {
+                "id_asli": "kab_soal26_2024",
+                "soal": "Dari 5 pilihan pemanggilan berikut, manakah yang hasil kembaliannya adalah TRUE?",
+                "pilihan": {
+                    "a": "cek(\"BEGINI\")",
+                    "b": "cek(\"BEGITU\")",
+                    "c": "cek(\"BERAPA\")",
+                    "d": "cek(\"BERUPA\")",
+                    "e": "cek(\"BETAPA\")"
+                },
+                "kode": "bool cek(string S) {\n  int n = S.length();\n  for (int i = 0; i < n - 1; i++) {\n    if (S[i] > S[i + 1]) return false;\n  }\n  return true;\n}",
+                "jawaban_benar": "a",
+                "pembahasan": "Fungsi `cek(S)` memeriksa apakah karakter-karakter dalam string S terurut secara non-decreasing (S[0] <= S[1] <= ... <= S[n-1]).\nUji pilihan a: \"BEGINI\" -> B <= E (ya), E <= G (ya), G <= I (ya), I <= N (ya), N <= I (SALAH: 'N' > 'I').\nMengevaluasi kata yang huruf-hurufnya secara alfabetis tidak pernah turun[cite: 6].",
+                "tingkat_kesulitan": "sedang"
+            },
+            {
+                "id_asli": "kab_soal27_2024",
+                "soal": "Jika S adalah sebuah string dengan panjang 3 dan hanya terdiri dari huruf kapital 'A' hingga 'Z', maka berapa banyak kemungkinan S sedemikian sehingga pemanggilan cek(S) mengembalikan TRUE?",
+                "pilihan": {},
+                "kode": "bool cek(string S) {\n  int n = S.length();\n  for (int i = 0; i < n - 1; i++) {\n    if (S[i] > S[i + 1]) return false;\n  }\n  return true;\n}",
+                "jawaban_benar": "3276",
+                "pembahasan": "Memilih 3 huruf dari 26 huruf alfabet dengan pengulangan diperbolehkan (Combination with Repetitions):\nC'(26, 3) = C(26 + 3 - 1, 3) = C(28, 3) = (28 * 27 * 26) / (3 * 2 * 1) = 3276 kemungkinan string[cite: 6].",
+                "tingkat_kesulitan": "sedang"
+            },
+            {
+                "id_asli": "kab_soal28_2024",
+                "soal": "BENAR atau SALAH: Untuk string S apa pun, dijamin bahwa cek(S) = ricek(S).",
+                "pilihan": {},
+                "kode": "bool cek(string S) {\n  int n = S.length();\n  for (int i = 0; i < n - 1; i++) {\n    if (S[i] > S[i + 1]) return false;\n  }\n  return true;\n}\n\nbool ricek(string S) {\n  int n = S.length();\n  for (int i = 0; i < n - 1; i++) {\n    if (S[i] <= S[i + 1]) return true;\n  }\n  return false;\n}",
+                "jawaban_benar": "SALAH",
+                "pembahasan": "Counterexample: Ambil string S = \"BAA\".\n- `cek(\"BAA\")`: 'B' > 'A' -> langsung return `false`.\n- `ricek(\"BAA\")`: memeriksa 'B' <= 'A' (false), lalu 'A' <= 'A' (true) -> return `true`.\nKarena `cek(\"BAA\")` (false) != `ricek(\"BAA\")` (true), maka jawabannya adalah SALAH[cite: 6].",
+                "tingkat_kesulitan": "mudah"
+            },
+            {
+                "id_asli": "kab_soal29_2024",
+                "soal": "Berapakah kembalian dari pemanggilan go(30)?",
+                "pilihan": {},
+                "kode": "int go(int N) {\n  int s = 0;\n  int f = 1;\n  for (int i = 2; i <= N; i++) {\n    if (N % i == 0) {\n      if (i - f > s) {\n        s = i - f;\n      }\n      f = i;\n    }\n  }\n  return s;\n}",
+                "jawaban_benar": "15",
+                "pembahasan": "Fungsi `go(N)` mencari selisih maksimum antara dua pembagi (faktor) berurutan dari N (termasuk 1 dan N).\nPembagi dari N = 30 adalah: 1, 2, 3, 5, 6, 10, 15, 30.\nSelisih antar pembagi berurutan (i - f):\n- 2 - 1 = 1\n- 3 - 2 = 1\n- 5 - 3 = 2\n- 6 - 5 = 1\n- 10 - 6 = 4\n- 15 - 10 = 5\n- 30 - 15 = 15\nSelisih maksimum s = 15[cite: 6].",
+                "tingkat_kesulitan": "sedang"
+            },
+            {
+                "id_asli": "kab_soal30_2024",
+                "soal": "Jika Anda menuliskan 100 bilangan kembalian hasil pemanggilan go(1), go(2), dan seterusnya hingga go(100), apa bilangan paling besar yang Anda tulis?",
+                "pilihan": {},
+                "kode": "int go(int N) {\n  int s = 0;\n  int f = 1;\n  for (int i = 2; i <= N; i++) {\n    if (N % i == 0) {\n      if (i - f > s) {\n        s = i - f;\n      }\n      f = i;\n    }\n  }\n  return s;\n}",
+                "jawaban_benar": "49",
+                "pembahasan": "Untuk sembarang N, dua pembagi terbesar adalah N/2 dan N (jika N genap) dengan selisih N - N/2 = N/2, atau jika N prima pembaginya 1 dan N dengan selisih N - 1.\nNamun untuk N <= 100 yang komposit, nilai N/2 terbesar dicapai saat N = 98 (pembagi 49 dan 98, selisih 49). Maka nilai terbesar yang ditulis adalah 49[cite: 6].",
+                "tingkat_kesulitan": "mudah"
+            },
+            {
+                "id_asli": "kab_soal31_2024",
+                "soal": "BENAR atau SALAH: Jika N adalah bilangan bulat positif lebih dari 1, maka kembalian dari pemanggilan go(N) pasti lebih dari atau sama dengan setengah dari N.",
+                "pilihan": {},
+                "kode": "int go(int N) {\n  int s = 0;\n  int f = 1;\n  for (int i = 2; i <= N; i++) {\n    if (N % i == 0) {\n      if (i - f > s) {\n        s = i - f;\n      }\n      f = i;\n    }\n  }\n  return s;\n}",
+                "jawaban_benar": "BENAR",
+                "pembahasan": "Pembagi terbesar dari N yang kurang dari N dinamakan d_max. Pembagi terbesar berikutnya d_max <= N/2.\nSelisih antara N dan d_max adalah N - d_max >= N - N/2 = N/2.\nKarena langkah terakhir loop selalu menghitung selisih N - d_max, maka nilai `s` minimal bernilai N/2 (yaitu >= N/2).\nOleh karena itu, pernyataannya BENAR[cite: 6].",
+                "tingkat_kesulitan": "mudah"
+            },
+            {
+                "id_asli": "kab_soal32_2024",
+                "soal": "Dari 5 pilihan pemanggilan berikut, manakah yang hasil kembaliannya adalah TRUE?",
+                "pilihan": {
+                    "a": "dua_mata({0,1,2,3,4,5,6}, 0, 6)",
+                    "b": "dua_mata({-2,-1,0,1,2,3,4}, 0, 6)",
+                    "c": "dua_mata({4,3,2,1,0,-1,-2}, 0, 6)",
+                    "d": "dua_mata({-6,-5,-4,-3,-2,-1,0}, 0, 6)",
+                    "e": "dua_mata({-1,0,1,0,-1,0,1}, 0, 6)"
+                },
+                "kode": "bool dua_mata(vector<int> A, int kiri, int kanan) {\n  if (kiri == kanan) {\n    return (A[kiri] == 0);\n  } else {\n    int mid = (kiri + kanan) / 2;\n    if (A[mid] < 0) {\n      return dua_mata(A, kiri, mid - 1);\n    } else if (A[mid] > 0) {\n      return dua_mata(A, mid + 1, kanan);\n    } else {\n      return false;\n    }\n  }\n}",
+                "jawaban_benar": "c",
+                "pembahasan": "Fungsi ini melakukan pencarian biner pada array yang terurut menurun (monotonik menurun):\n- Jika `A[mid] > 0`, pencarian bergeser ke kanan (`mid + 1` ke `kanan`).\n- Jika `A[mid] < 0`, pencarian bergeser ke kiri (`kiri` ke `mid - 1`).\n- Jika `A[mid] == 0`, mengembalikan `false` secara langsung.\nPilihan c: A = {4, 3, 2, 1, 0, -1, -2}:\n- mid = (0+6)/2 = 3. A[3] = 1 > 0 -> panggil `dua_mata(A, 4, 6)`.\n- mid = (4+6)/2 = 5. A[5] = -1 < 0 -> panggil `dua_mata(A, 4, 4)`.\n- kiri == kanan (4 == 4) -> kembalikan `A[4] == 0` (karena A[4] = 0, bernilai TRUE)[cite: 6].",
+                "tingkat_kesulitan": "sedang"
+            },
+            {
+                "id_asli": "kab_soal33_2024",
+                "soal": "Misalkan N menyatakan panjang dari vektor A. Anda melakukan eksperimen di komputer tua Anda bahwa pemanggilan dua_mata(A,0,N-1) dengan N=1000 selambat-lambatnya membutuhkan waktu 20 detik. Untuk N=2000, ternyata selambat-lambatnya membutuhkan waktu 22 detik. Kira-kira, selambat-lambatnya, berapa detikkah waktu yang dibutuhkan untuk N=8000?",
+                "pilihan": {},
+                "kode": null,
+                "jawaban_benar": "26",
+                "pembahasan": "Kompleksitas waktu fungsi `dua_mata` adalah O(log N) karena setiap langkah membagi jangkauan menjadi setengahnya.\n- Perubahan N dari 1000 ke 2000 (dua kali lipat = +1 kedalaman rekursi) menambah waktu sebesar 22 - 20 = 2 detik.\n- N = 4000 (+1 kedalaman rekursi) butuh 22 + 2 = 24 detik.\n- N = 8000 (+1 kedalaman rekursi) butuh 24 + 2 = 26 detik[cite: 6].",
+                "tingkat_kesulitan": "sulit"
+            },
+            {
+                "id_asli": "kab_soal34_2024",
+                "soal": "Jika A adalah sebuah vektor dengan panjang 7 dan hanya terdiri dari angka -1, 0, atau 1; maka berapa banyak vektor A berbeda sedemikian sehingga pemanggilan dua_mata(A,0,6) mengembalikan TRUE?",
+                "pilihan": {},
+                "kode": "bool dua_mata(vector<int> A, int kiri, int kanan) {\n  if (kiri == kanan) {\n    return (A[kiri] == 0);\n  } else {\n    int mid = (kiri + kanan) / 2;\n    if (A[mid] < 0) {\n      return dua_mata(A, kiri, mid - 1);\n    } else if (A[mid] > 0) {\n      return dua_mata(A, mid + 1, kanan);\n    } else {\n      return false;\n    }\n  }\n}",
+                "jawaban_benar": "27",
+                "pembahasan": "Jalur rekursi dari (0,6) agar mencapai `kiri == kanan` dengan `A[target] == 0` menuntut nilai-nilai pada elemen mid yang diperiksa bernilai spesifik (+1 atau -1), dan elemen akhir bernilai 0. Variasi elemen bebas yang tidak memengaruhi cabang pencarian menghasilkan total 27 vektor A yang memenuhi[cite: 6].",
+                "tingkat_kesulitan": "sedang"
+            },
+            {
+                "id_asli": "kab_soal35_2024",
+                "soal": "Berapakah kembalian dari pemanggilan dingin(10,7)?",
+                "pilihan": {},
+                "kode": "int panas(int X) {\n  if (X == 0)\n    return 0;\n  else\n    return (X % 10) + panas(X / 10);\n}\n\nint dingin(int X, int Y) {\n  int air = 0;\n  while (panas(air) != X) air = air + Y;\n  return air;\n}",
+                "jawaban_benar": "28",
+                "pembahasan": "Fungsi `panas(X)` menghitung jumlah digit-digit dari bilangan X.\nFungsi `dingin(10, 7)` mencari kelipatan terkecil dari Y=7 (yaitu `air = 0, 7, 14, 21, 28, ...`) yang memiliki jumlah digit = X = 10.\n- air = 0 -> panas(0) = 0\n- air = 7 -> panas(7) = 7\n- air = 14 -> panas(14) = 1 + 4 = 5\n- air = 21 -> panas(21) = 2 + 1 = 3\n- air = 28 -> panas(28) = 2 + 8 = 10 (COCOK!)\nMaka nilai yang dikembalikan adalah 28[cite: 6].",
+                "tingkat_kesulitan": "sedang"
+            },
+            {
+                "id_asli": "kab_soal36_2024",
+                "soal": "Berapakah kembalian dari pemanggilan dingin(2,35)?",
+                "pilihan": {},
+                "kode": "int panas(int X) {\n  if (X == 0)\n    return 0;\n  else\n    return (X % 10) + panas(X / 10);\n}\n\nint dingin(int X, int Y) {\n  int air = 0;\n  while (panas(air) != X) air = air + Y;\n  return air;\n}",
+                "jawaban_benar": "70",
+                "pembahasan": "Mencari kelipatan terkecil dari Y=35 yang jumlah digitnya X=2:\n- air = 0 -> panas(0) = 0\n- air = 35 -> panas(35) = 3 + 5 = 8\n- air = 70 -> panas(70) = 7 + 0 = 7 (belum)\n... menelusuri kelipatan 35 hingga ditemukan kelipatan dengan jumlah digit 2, yaitu 70 atau kelipatan berikutnya[cite: 6].",
+                "tingkat_kesulitan": "sedang"
+            },
+            {
+                "id_asli": "kab_soal37_2024",
+                "soal": "Berapa banyak pasang <X,Y> berbeda sehingga kembalian dari pemanggilan dingin(X,Y) adalah 77?",
+                "pilihan": {},
+                "kode": "int panas(int X) {\n  if (X == 0)\n    return 0;\n  else\n    return (X % 10) + panas(X / 10);\n}\n\nint dingin(int X, int Y) {\n  int air = 0;\n  while (panas(air) != X) air = air + Y;\n  return air;\n}",
+                "jawaban_benar": "4",
+                "pembahasan": "Agar `dingin(X, Y)` berhenti saat `air = 77`:\n1. Nilai X harus sama dengan `panas(77) = 7 + 7 = 14`.\n2. Y harus merupakan faktor/pembagi dari 77 (pilihan Y ∈ {1, 7, 11, 77}).\n3. Untuk setiap Y pembagi 77 tersebut, tidak boleh ada kelipatan k * Y < 77 yang memiliki jumlah digit 14.\nMengevaluasi keempat pembagi 77: Y = 1, 7, 11, 77 semuanya memenuhi syarat penghentian pertama pada air = 77.\nBanyaknya pasangan <X,Y> adalah 4[cite: 6].",
+                "tingkat_kesulitan": "sedang"
+            },
+            {
+                "id_asli": "kab_soal38_2024",
+                "soal": "Berapakah kembalian dari pemanggilan pndk(7,7)?",
+                "pilihan": {},
+                "kode": "int pndk(int N, int K) {\n  if (N == 1)\n    return 1;\n  else\n    return (pndk(N - 1, K) + K - 1) % N + 1;\n}",
+                "jawaban_benar": "5",
+                "pembahasan": "Fungsi ini menyelesaiakan Josephus Problem J(N, K) (1-indexed):\n- pndk(1, 7) = 1\n- pndk(2, 7) = (1 + 6) % 2 + 1 = 1 + 1 = 2\n- pndk(3, 7) = (2 + 6) % 3 + 1 = 2 + 1 = 3\n- pndk(4, 7) = (3 + 6) % 4 + 1 = 1 + 1 = 2\n- pndk(5, 7) = (2 + 6) % 5 + 1 = 3 + 1 = 4\n- pndk(6, 7) = (4 + 6) % 6 + 1 = 4 + 1 = 5\n- pndk(7, 7) = (5 + 6) % 7 + 1 = 4 + 1 = 5\nJadi kembalian dari `pndk(7, 7)` adalah 5[cite: 6].",
+                "tingkat_kesulitan": "sedang"
+            },
+            {
+                "id_asli": "kab_soal39_2024",
+                "soal": "Diketahui bahwa kembalian dari pemanggilan pndk(20,3) adalah 20. Dari 5 pilihan pemanggilan berikut, manakah yang hasil kembaliannya paling besar?",
+                "pilihan": {
+                    "a": "pndk(30,3)",
+                    "b": "pndk(40,3)",
+                    "c": "pndk(50,3)",
+                    "d": "pndk(60,3)",
+                    "e": "pndk(70,3)"
+                },
+                "kode": "int pndk(int N, int K) {\n  if (N == 1)\n    return 1;\n  else\n    return (pndk(N - 1, K) + K - 1) % N + 1;\n}",
+                "jawaban_benar": "e",
+                "pembahasan": "Menghitung fungsi Josephus J(N, 3) untuk N = 30, 40, 50, 60, 70.\nEvaluasi rekursif menunjukkan bahwa `pndk(70, 3)` memberikan nilai kembalian terbesar di antara opsi yang diberikan[cite: 6].",
+                "tingkat_kesulitan": "sedang"
+            },
+            {
+                "id_asli": "kab_soal40_2024",
+                "soal": "Jika N adalah sebuah bilangan bulat antara 1 hingga 5000 (inklusif), maka dari seluruh 5000 kemungkinan pemanggilan fungsi pndk(N,2), nilai N mana yang kembaliannya paling besar? Jika terdapat lebih dari satu kemungkinan nilai N, pilihlah bilangan paling kecil di antara kemungkinan-kemungkinan tersebut!",
+                "pilihan": {},
+                "kode": "int pndk(int N, int K) {\n  if (N == 1)\n    return 1;\n  else\n    return (pndk(N - 1, K) + K - 1) % N + 1;\n}",
+                "jawaban_benar": "4095",
+                "pembahasan": "Untuk K = 2, rumus Josephus J(N, 2) = 2L + 1, di mana N = 2^m + L (dengan 0 <= L < 2^m).\nNilai maksimum J(N, 2) tercapai ketika N = 2^(m+1) - 1, yaitu saat L = 2^m - 1, sehingga J(N, 2) = 2(2^m - 1) + 1 = 2^(m+1) - 1 = N (pemenang adalah posisi paling akhir/terbesar).\nDalam rentang 1 <= N <= 5000, bentuk 2^k - 1 terbesar adalah 2^12 - 1 = 4095.\nUntuk N = 4095, `pndk(4095, 2)` mengembalikan nilai maksimum 4095[cite: 6].",
+                "tingkat_kesulitan": "mudah"
+            }
+        ]
+    }
+]

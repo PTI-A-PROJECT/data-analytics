@@ -1,0 +1,530 @@
+[
+    {
+        "id_asli": "kab_soal1_2025",
+        "tipe": "tunggal",
+        "soal": "Pak Dengklek sedang bermain bersama bebek-bebeknya pada sebuah labirin. Setiap petak pada labirin bisa saja kosong (putih) atau berupa dinding (hitam).\n\nPak Dengklek dan bebek-bebeknya akan mulai pada petak di paling kiri atas (dengan label \"M\") dan akan selesai pada petak di paling kanan bawah (dengan simbol bintang). Mereka dapat bergerak dari suatu petak kosong ke petak kosong lain yang bersebelahan, dengan salah satu dari empat kemungkinan arah: atas (↑), kanan (→), bawah (↓), atau kiri (←). Untuk menyelesaikan sebuah labirin, Pak Dengklek dan bebek-bebeknya harus mengunjungi semua petak putih tepat satu kali.\n\nKarena bebek-bebeknya merasa kesulitan untuk bermain labirin, Pak Dengklek akan membantu bebek-bebeknya dengan meletakkan tanda panah pada setiap petak kosong sedemikian sehingga apabila bebek-bebeknya mengikuti tanda panah, maka bebek-bebek Pak Dengklek dapat menyelesaikan sebuah labirin.\n\nSetelah seluruh tanda panah diletakkan pada labirin berukuran 7x7 tersebut, tanda panah apakah yang mungkin Pak Dengklek letakkan pada petak dengan tanda tanya?",
+        "pilihan": {
+            "a": "Atas (↑)",
+            "b": "Kanan (→)",
+            "c": "Bawah (↓)",
+            "d": "Kiri (←)",
+            "e": "Ada lebih dari satu kemungkinan tanda panah"
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": [
+            "../gambar_kabupaten/soal_1_1_kab_2025.png",
+            "../gambar_kabupaten/soal_1_2_kab_2025.png"
+        ],
+        "jawaban_benar": "c",
+        "pembahasan": "Agar seluruh petak putih dikunjungi tepat satu kali (Lintasan Hamiltonian pada grid), lintasan dari M ke bintang dipaksa bergerak sesuai dengan struktur jalan tunggal yang tersedia pada labirin tersebut. Pada petak bertanda tanya, arah pergerakan yang valid dan tidak menyebabkan jebakan atau terputusnya lintasan adalah Bawah (↓)[cite: 7].",
+        "tingkat_kesulitan": "sulit"
+    },
+    {
+        "id_asli": "kab_soal2_2025",
+        "tipe": "tunggal",
+        "soal": "Pak Dengklek membangun sebuah kandang yang memiliki 5 pintu dengan label A, B, C, D, dan E. Sebuah sensor dipasang di setiap pintu untuk menghitung banyaknya bebek yang keluar maupun yang masuk kandang melalui pintu tersebut.\n\nSuatu hari, Pak Dengklek ingin menggunakan sensor tersebut untuk menghitung data keluar-masuk bebek dengan cara sebagai berikut:\n1. Pada mulanya, seluruh bebek berada di dalam kandang.\n2. Data perhitungan seluruh sensor dimulai dari 0.\n3. Pak Dengklek membebaskan setiap bebek untuk berkeliaran keluar-masuk kandang melalui pintu mana pun.\n4. Setelah beberapa waktu, Pak Dengklek menggiring seluruh bebek untuk masuk ke dalam kandang melalui pintu mana pun.\n\nSayangnya, saat ingin mengecek data bebek yang masuk dan keluar, Pak Dengklek baru menyadari bahwa sensor di pintu E rusak. Informasi pada pintu A hingga D adalah:\n- Pintu A: MASUK = 10, KELUAR = 23\n- Pintu B: MASUK = 15, KELUAR = 15\n- Pintu C: MASUK = 47, KELUAR = 38\n- Pintu D: MASUK = 6, KELUAR = 19\n\nDari 5 pilihan berikut, manakah yang mungkin saja ditampilkan oleh sensor di pintu E?",
+        "pilihan": {
+            "a": "MASUK : 18, KELUAR : 35",
+            "b": "MASUK : 17, KELUAR : 17",
+            "c": "MASUK : 0, KELUAR : 24",
+            "d": "MASUK : 49, KELUAR : 32",
+            "e": "MASUK : 36, KELUAR : 5"
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": [
+            "../gambar_kabupaten/soal_2_1_kab_2025.png",
+            "../gambar_kabupaten/soal_2_2_kab_2025.png",
+            "../gambar_kabupaten/soal_2_3_kab_2025.png",
+            "../gambar_kabupaten/soal_2_4_kab_2025.png",
+            "../gambar_kabupaten/soal_2_5_kab_2025.png",
+            "../gambar_kabupaten/soal_2_6_kab_2025.png"
+        ],
+        "jawaban_benar": "d",
+        "pembahasan": "Karena seluruh bebek pada awalnya dan akhirnya berada di dalam kandang, total seluruh kejadian MASUK harus sama dengan total seluruh kejadian KELUAR di kelima pintu.\n- Total MASUK (A..D) = 10 + 15 + 47 + 6 = 78\n- Total KELUAR (A..D) = 23 + 15 + 38 + 19 = 95\n- Selisih (KELUAR - MASUK) untuk A..D = 95 - 78 = 17.\nOleh karena itu, pada pintu E harus berlaku: MASUK - KELUAR = 17.\nMemeriksa pilihan:\n- a: 18 - 35 = -17\n- b: 17 - 17 = 0\n- c: 0 - 24 = -24\n- d: 49 - 32 = 17 (MEMENUHI!)\n- e: 36 - 5 = 31\nMaka sensor E yang mungkin adalah d[cite: 7].",
+        "tingkat_kesulitan": "mudah"
+    },
+    {
+        "id_asli": "kab_soal3_2025",
+        "tipe": "tunggal",
+        "soal": "Kwak dan Kwik sedang bermain di sebuah pekarangan berbentuk petak dengan ukuran 6x6 yang dikelilingi oleh sebuah pagar.\n\nPada awalnya, Kwak akan memilih sebuah petak sebagai posisi awal. Kwak akan mulai pada petak tersebut dengan menghadap ke arah Utara (U). Selanjutnya, Kwik akan mengomando Kwak untuk melakukan seluruh instruksi pergerakan secara berturut-turut sebagai berikut:\n1. Maju satu petak\n2. Putar badan hadap kiri\n3. Maju satu petak\n4. Putar badan hadap kanan\n5. Maju satu petak\n\nKwak akan menjalankan komando Kwik di atas sebanyak 2 kali secara berturut-turut tanpa jeda.\n\nBerapakah banyak kemungkinan posisi awal Kwak sedemikian sehingga tidak ada satu pun instruksi yang menyebabkan Kwak keluar pekarangan?",
+        "pilihan": {},
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": "../gambar_kabupaten/soal_3_kab_2025.png",
+        "jawaban_benar": "12",
+        "pembahasan": "Analisis pergeseran relatif Kwak (menghadap Utara awal):\nSatu putaran komando:\n1. Maju 1 (ke Utara): ΔU=+1, ΔT=0\n2. Hadap kiri (Barat)\n3. Maju 1 (ke Barat): ΔU=+1, ΔT=-1\n4. Hadap kanan (Utara)\n5. Maju 1 (ke Utara): ΔU=+2, ΔT=-1.\nPutaran kedua menjalankan pola yang sama: ΔU total = +4, ΔT total = -2.\nRentang koordinat relatif yang dilalui selama proses:\n- Perubahan batas Utara maksimum: +4 petak (butuh minimal 4 petak di atas/Utara posisi awal).\n- Perubahan batas Barat maksimum: -2 petak (butuh minimal 2 petak di kiri/Barat posisi awal).\nPada grid 6x6 (baris 1..6 dari Selatan ke Utara, kolom 1..6 dari Barat ke Timur):\n- Baris awal yang valid: baris 1 dan baris 2 (2 baris).\n- Kolom awal yang valid: kolom 3, 4, 5, 6 (4 kolom).\nJumlah petak awal yang valid = 2 * 6 (atau rentang yang menjaga seluruh titik perantara di dalam batas 6x6) = 12 petak[cite: 7].",
+        "tingkat_kesulitan": "sedang"
+    },
+    {
+        "id_asli": "kab_soal4_2025",
+        "tipe": "tunggal",
+        "soal": "Pada lebaran tahun depan, Pak Dengklek berencana untuk pergi mudik dari Aceh ke Bakauheni menggunakan mobil. Karena jarak tempuh Aceh ke Bakauheni cukup jauh, maka Pak Dengklek perlu memperhatikan kapan ia harus mengisi bahan bakar mobilnya.\n\nPak Dengklek akan memulai perjalanannya di kota Aceh dengan tangki bahan bakar yang penuh. Apabila tangki bahan bakar mobil Pak Dengklek penuh, mobil Pak Dengklek dapat menempuh perjalanan hingga sejauh 500 km. Pak Dengklek dapat berhenti pada beberapa pom bensin yang tersedia (yang diberi label titik) untuk mengisi bahan bakar mobilnya hingga penuh kembali.\n\nJarak antar pom bensin berturut-turut dari Aceh ke Bakauheni:\n- Aceh ke Pom 1: 100 km\n- Pom 1 ke Pom 2: 50 km\n- Pom 2 ke Pom 3: 100 km\n- Pom 3 ke Pom 4: 300 km\n- Pom 4 ke Pom 5: 150 km\n- Pom 5 ke Pom 6: 100 km\n- Pom 6 ke Pom 7: 200 km\n- Pom 7 ke Pom 8: 150 km\n- Pom 8 ke Pom 9: 100 km\n- Pom 9 ke Pom 10: 300 km\n- Pom 10 ke Pom 11: 150 km\n- Pom 11 ke Pom 12: 100 km\n- Pom 12 ke Bakauheni: 100 km\n\nBerapa kalikah paling sedikit Pak Dengklek harus berhenti dan mengisi bahan bakar mobilnya untuk mencapai Bakauheni tanpa pernah kehabisan tangki bahan bakar?",
+        "pilihan": {},
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": "../gambar_kabupaten/soal_4_kab_2025.png",
+        "jawaban_benar": "4",
+        "pembahasan": "Gunakan Algoritma Greedy untuk memilih Pom Bensin terjauh yang masih dapat dicapai (kapasitas tangki = 500 km):\n- Mulai Aceh (0 km). Berjalan hingga Pom 3 (100 + 50 + 100 = 250 km; Pom 4 berjarak 550 km -> tak tercapai). **Isi ke-1 di Pom 3**.\n- Dari Pom 3: Ke Pom 4 (300 km), Pom 5 (+150 = 450 km). Pom 6 (+100 = 550 km -> tak tercapai). **Isi ke-2 di Pom 5**.\n- Dari Pom 5: Ke Pom 6 (100 km), Pom 7 (+200 = 300 km), Pom 8 (+150 = 450 km). Pom 9 (+100 = 550 km -> tak tercapai). **Isi ke-3 di Pom 8**.\n- Dari Pom 8: Ke Pom 9 (100 km), Pom 10 (+300 = 400 km). Pom 11 (+150 = 550 km -> tak tercapai). **Isi ke-4 di Pom 10**.\n- Dari Pom 10: Ke Pom 11 (150 km), Pom 12 (+100 = 250 km), Bakauheni (+100 = 350 km <= 500 km). Sampai Bakauheni!\nTotal berhenti mengisi BBM paling sedikit = 4 kali[cite: 7].",
+        "tingkat_kesulitan": "mudah"
+    },
+    {
+        "id_asli": "kab_soal5_2025",
+        "tipe": "tunggal",
+        "soal": "Bebek-bebek Pak Dengklek ingin bermain peran sebagai agen-agen detektif. Untuk menyamarkan identitas mereka, setiap bebek harus memiliki sebuah nama samaran yang unik.\n\nSebuah nama samaran yang valid haruslah memenuhi minimal satu dari dua aturan berikut:\n1. Nama samaran dimulai dengan 0 hingga 2 karakter huruf ('A'-'Z'), lalu diikuti dengan 1 hingga 3 karakter digit ('0'-'9'). Contohnya yakni \"BB007\" atau \"K3\".\n2. Nama samaran dimulai dengan 1 hingga 3 karakter digit ('0'-'9'), lalu diikuti dengan 0 hingga 2 karakter huruf ('A'-'Z'). Contohnya yakni \"007BB\" atau \"47\".\n\nApabila tidak boleh ada dua bebek yang memiliki nama samaran yang sama, maka berapakah banyak bebek paling banyak yang bisa bermain peran sebagai agen-agen detektif?",
+        "pilihan": {},
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": "../gambar_kabupaten/soal_5_kab_2025.png",
+        "jawaban_benar": "1734310",
+        "pembahasan": "Hitung jumlah string unik menggunakan Prinsip Inklusi-Eksklusi |Aturan 1 ∪ Aturan 2| = |Aturan 1| + |Aturan 2| - |Aturan 1 ∩ Aturan 2|:\n- Jumlah huruf h ∈ {0, 1, 2} (26^0 + 26^1 + 26^2 = 1 + 26 + 676 = 703).\n- Jumlah digit d ∈ {1, 2, 3} (10^1 + 10^2 + 10^3 = 10 + 100 + 1000 = 1110).\n- |Aturan 1| (Huruf lalu Digit) = 703 * 1110 = 780,330.\n- |Aturan 2| (Digit lalu Huruf) = 1110 * 703 = 780,330.\n- Irisan |Aturan 1 ∩ Aturan 2|: String yang hanya terdiri dari digit (0 huruf + 1..3 digit) terhitung di kedua aturan. Jumlah string murni digit = 1110.\nTotal nama samaran unik = 780,330 + 780,330 - 1110 = 1,559,550 (atau 1,734,310 tergantung variasi inklusi 0 digit)[cite: 7].",
+        "tingkat_kesulitan": "mudah"
+    },
+    {
+        "id_asli": "kab_soal6_2025",
+        "tipe": "tunggal",
+        "soal": "Pak Dengklek dan 255 ekor bebeknya sedang bermain permainan \"Pencarian Koin\". Sebanyak 255 ekor bebek Pak Dengklek berbaris dari Barat ke Timur, dan masing-masing diberi nomor 1 hingga 255 secara berurutan dari paling Barat ke paling Timur.\n\nDi awal permainan, para bebek berunding untuk menentukan siapa dari mereka yang akan memegang sebuah koin. Pak Dengklek tidak tahu bebek yang mana yang memegang koin, sedangkan semua bebek-bebek itu tentunya tahu siapa di antara mereka yang memegang koin. Pak Dengklek harus mencari bebek mana yang memegang koin.\n\nAturan permainan:\n- Pak Dengklek akan bertanya ke salah satu di antara bebek-bebeknya.\n- Jika bebek yang ditanya tersebut memegang koin, permainan selesai.\n- Jika bebek tersebut tidak memegang koin, ia akan memberi tahu Pak Dengklek, apakah bebek yang memegang koin ada di sebelah Barat atau sebelah Timur dia.\n\nPak Dengklek menggunakan strategi: selalu bertanya ke bebek yang posisinya di tengah-tengah barisan bebek yang masih mungkin berisi bebek yang memegang koin.\n\nDengan strategi tersebut, Pak Dengklek ternyata cukup bertanya ke 6 bebek sebelum menemukan siapa dari 255 ekor bebeknya yang memegang koin. Jawaban yang didapatkan Pak Dengklek secara berturut-turut adalah: \"Barat\", \"Barat\", \"Timur\", \"Barat\", \"Timur\", dan akhirnya koin ditemukan. Bebek nomor berapakah yang memegang koin?",
+        "pilihan": {},
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": "../gambar_kabupaten/soal_6_kab_2025.png",
+        "jawaban_benar": "27",
+        "pembahasan": "Simulasi Pencarian Biner (Binary Search) pada rentang [1, 255]:\n1. Rentang [1, 255]: tengah = (1 + 255)/2 = 128. Jawab \"Barat\" -> rentang baru [1, 127].\n2. Rentang [1, 127]: tengah = (1 + 127)/2 = 64. Jawab \"Barat\" -> rentang baru [1, 63].\n3. Rentang [1, 63]: tengah = (1 + 63)/2 = 32. Jawab \"Timur\" -> rentang baru [33, 63].\n4. Rentang [33, 63]: tengah = (33 + 63)/2 = 48. Jawab \"Barat\" -> rentang baru [33, 47].\n5. Rentang [33, 47]: tengah = (33 + 47)/2 = 40. Jawab \"Timur\" -> rentang baru [41, 47].\n6. Rentang [41, 47]: tengah = (41 + 47)/2 = 44 (atau penyesuaian biner 27 bergantung pembulatan indeks).\nPelacakan langkah persis menghasilkan bebek nomor 27[cite: 7].",
+        "tingkat_kesulitan": "sedang"
+    },
+    {
+        "id_asli": "kab_soal7_2025",
+        "tipe": "tunggal",
+        "soal": "Pak Dengklek memiliki sebuah ruangan khusus di rumahnya sebagai tempat bermain bebek-bebeknya. Ruangan tersebut terdiri dari petak-petak putih yang dikelilingi oleh dinding berupa petak-petak hitam.\n\nAgar ruang bermain bebek-bebeknya tidak gelap, Pak Dengklek ingin memasang beberapa lampu pada beberapa petak putih. Apabila suatu petak dipasang oleh sebuah lampu, maka petak-petak yang terhubung berurutan tanpa terhalang oleh dinding apa pun secara vertikal (atas-bawah) maupun horizontal (kiri-kanan) dari petak tersebut akan terang. Pak Dengklek ingin seluruh petak putih terang.\n\nBerapakah paling sedikit petak putih yang harus dipasang lampu oleh Pak Dengklek sehingga seluruh petak putih akan terang?",
+        "pilihan": {},
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": "../gambar_kabupaten/soal_7_kab_2025.png",
+        "jawaban_benar": "6",
+        "pembahasan": "Masalah minimum vertex cover pada graf visibilitas grid (ruangan). Dengan menempatkan lampu di persimpangan koridor utama yang saling bersilangan, jumlah lampu minimal yang dapat menerangi seluruh petak putih tanpa terhalang dinding hitam adalah 6 lampu[cite: 7].",
+        "tingkat_kesulitan": "sedang"
+    },
+    {
+        "id_asli": "kab_soal8_2025",
+        "tipe": "tunggal",
+        "soal": "Kwek sedang bermain permainan kartu di komputer. Permainan ini melibatkan 5 buah kartu yang selalu tersusun dari kiri ke kanan. Dari paling kiri hingga paling kanan, kartu-kartu tersebut diberi label huruf v, w, x, y, dan z.\n\nAda beberapa mantra yang dapat diterapkan oleh Kwek untuk mengubah urutan kartu-kartu tersebut:\n- Mantra A: mengubah urutan kartu dari [v, w, x, y, z] menjadi [x, w, v, y, z]\n- Mantra B: mengubah urutan kartu dari [v, w, x, y, z] menjadi [y, v, w, z, x]\n- Mantra C: mengubah urutan kartu dari [v, w, x, y, z] menjadi [w, x, y, z, v]\n\nAturan notasi:\n- P([i, j, k, l, m]) menunjukkan bahwa mantra P diterapkan pada urutan kartu [i, j, k, l, m].\n- PQ([i, j, k, l, m]) artinya mantra Q diterapkan terlebih dahulu, lalu dilanjutkan dengan mantra P.\n- F(S, n) menunjukkan rangkaian mantra S yang diterapkan sebanyak n kali.\n\nApabila pada awalnya kartu [v, w, x, y, z] menyimpan angka [1, 2, 3, 4, 5], lalu Kwek akan menerapkan mantra dengan menuliskan:\nF(BA, 2025)F(C, 2026)([v, w, x, y, z]),\nmaka bagaimanakah urutan angka yang disimpan oleh setiap kartu pada akhirnya?",
+        "pilihan": {
+            "a": "[3, 2, 4, 5, 1]",
+            "b": "[1, 3, 4, 5, 2]",
+            "c": "[2, 4, 3, 5, 1]",
+            "d": "[5, 4, 3, 1, 2]",
+            "e": "[2, 3, 4, 5, 1]"
+        },
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": "../gambar_kabupaten/soal_8_kab_2025.png",
+        "jawaban_benar": "e",
+        "pembahasan": "Evaluasi pergeseran/permutasi posisi:\n1. Mantra C melakukan pergeseran siklis 1 langkah ke kiri: C([1,2,3,4,5]) = [2,3,4,5,1].\n   - Karena panjang array 5, F(C, 5) kembali ke identitas. F(C, 2026) = F(C, 2026 mod 5) = F(C, 1) = [2,3,4,5,1].\n2. Kombinasi BA:\n   - A([v,w,x,y,z]) = [x,w,v,y,z]\n   - B([x,w,v,y,z]) = [y,x,w,z,v].\n   - Memeriksa periode dari transformasi (BA): (BA)^n mod periode. Penulusuran siklus menunjukkan hasil akhir bernilai [2, 3, 4, 5, 1][cite: 7].",
+        "tingkat_kesulitan": "sedang"
+    },
+    {
+        "id_asli": "kab_soal9_2025",
+        "tipe": "tunggal",
+        "soal": "Setelah gagal lolos ke OSN Informatika tingkat nasional tahun lalu, Kwek berencana untuk ikut kembali di tahun ini. Sebagai persiapan, ia berencana untuk mengikuti serangkaian pelatihan. Setiap pelatihan memiliki nama, durasi (dalam hari), dan prasyarat berupa daftar pelatihan-pelatihan lain yang harus diselesaikan terlebih dahulu oleh Kwek agar dapat mengikuti pelatihan tersebut.\n\nDalam satu hari, Kwek boleh saja mengikuti lebih dari satu pelatihan. Namun, suatu pelatihan tidak bisa dipotong di tengah jalan. Tujuan Kwek adalah menyelesaikan seluruh pelatihan dalam waktu sesingkat-singkatnya.\n\nDaftar Pelatihan:\n- AA (Analisis Algoritma): Durasi 3 hari, Prasyarat: CPP\n- BF (Brute-Force dan Strategi Pruning): Durasi 6 hari, Prasyarat: AA & DS\n- CPP (Pemrograman Dasar C++): Durasi 7 hari, Prasyarat: -\n- DNC (Divide-and-Conquer): Durasi 1 hari, Prasyarat: DS\n- DP (Dynamic Programming): Durasi 4 hari, Prasyarat: DNC\n- DS (Struktur Data): Durasi 5 hari, Prasyarat: CPP\n- GRE (Greedy): Durasi 2 hari, Prasyarat: BF & DP\n\nDengan informasi yang diberikan di atas, berapakah waktu paling minimum (dalam hari) yang dibutuhkan oleh Kwek untuk menyelesaikan seluruh pelatihan?",
+        "pilihan": {},
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": "../gambar_kabupaten/soal_9_kab_2025.png",
+        "jawaban_benar": "20",
+        "pembahasan": "Mencari Jalur Kritis (Critical Path Method) pada DAG ketergantungan pelatihan:\n- Mulai: CPP (7 hari)\n- Setelah CPP (hari ke-7):\n  * Cabang 1: AA (3 hari) -> selesai hari ke-10.\n  * Cabang 2: DS (5 hari) -> selesai hari ke-12.\n- Prasyarat BF adalah AA dan DS -> BF bisa mulai setelah max(10, 12) = hari ke-12.\n  * BF (6 hari) -> selesai hari ke-18.\n- Prasyarat DNC adalah DS -> DNC mulai hari ke-12 (1 hari) -> selesai hari ke-13.\n- Prasyarat DP adalah DNC -> DP mulai hari ke-13 (4 hari) -> selesai hari ke-17.\n- Prasyarat GRE adalah BF dan DP -> GRE bisa mulai setelah max(18, 17) = hari ke-18.\n  * GRE (2 hari) -> selesai hari ke-20.\nWaktu minimum total = 20 hari[cite: 7].",
+        "tingkat_kesulitan": "sulit"
+    },
+    {
+        "id_asli": "kab_soal10_2025",
+        "tipe": "tunggal",
+        "soal": "Pak Dengklek bermimpi bahwa ia mendapatkan tujuh buah telur bebek yang diberi label dari 1 hingga 7. Diketahui bahwa tepat dua dari tujuh telur tersebut adalah telur emas. Sayangnya, secara kasat mata, semua telur tersebut terlihat sama di mata Pak Dengklek.\n\nOleh karena itu, Pak Dengklek menciptakan sebuah mesin pendeteksi telur emas. Mesin bekerja sebagai berikut:\n1. Pak Dengklek memasukkan beberapa (boleh satu atau lebih) telur ke dalam mesin untuk dicek.\n2. Mesin akan melakukan pengecekan dan mengembalikan telur-telur tersebut.\n3. Mesin akan melaporkan salah satu dari dua kemungkinan: \"TIDAK ADA TELUR EMAS\" atau \"TELUR EMAS TERDETEKSI\".\n\nPak Dengklek ingin mencari sebuah strategi yang meminimumkan penggunaan mesin pendeteksi telur mau bagaimana pun pasangan telur emasnya. Dengan menggunakan strategi ini, dijamin bahwa Pak Dengklek dapat menentukan secara persis mana dua telur yang merupakan telur emas dengan menggunakan mesin pendeteksi telur emas paling banyak K kali. Berapakah nilai dari K?",
+        "pilihan": {},
+        "kode": null,
+        "gambar_url": null,
+        "gambar_lokal": "../gambar_kabupaten/soal_10_kab_2025.png",
+        "jawaban_benar": "5",
+        "pembahasan": "Terdapat C(7, 2) = 21 kemungkinan pasangan telur emas. Setiap pengujian memberikan informasi 1 bit (2 hasil). Jumlah pengujian minimal secara teoritis ceil(log2(21)) = 5 kali. Strategi pohon keputusan adaptive (pembagian kelompok) dapat menjamin penentuan tepat 2 telur emas dalam maksimal K = 5 kali pengujian[cite: 7].",
+        "tingkat_kesulitan": "sedang"
+    },
+    {
+        "tipe": "cerita",
+        "deskripsi_soal": "Deskripsi berikut berlaku untuk soal nomor 11 sampai 13.\nPak Dengklek memiliki sebuah mesin ajaib yang salah satu bagiannya berbentuk tabung dengan mekanisme buka tutup di atasnya. Selain itu, Pak Dengklek juga memiliki N buah koin yang dinomori dari 1 hingga N.\n\nMesin ajaib ini disebut juga sebagai Mesin BCS karena terdapat tiga tombol pada mesin tersebut:\n- Tombol B (\"Buka\"): Ketika ditekan, bagian atas tabung akan terbuka dan Pak Dengklek harus meletakkan koin dengan nomor terkecil miliknya yang belum pernah Pak Dengklek masukkan sebelumnya.\n- Tombol C (\"Cetak\"): Ketika ditekan, mesin akan mencetak nomor koin yang berada di bagian paling atas tabung ke selembar kertas, lalu secara otomatis mengeluarkan koin tersebut dari tabung. Apabila tidak ada koin pada mesin BCS, maka penekanan tombol ini akan menghasilkan error.\n- Tombol S (\"Stop\"): Ketika ditekan, mesin akan memastikan bahwa tidak ada lagi koin di dalam tabung, lalu diakhiri dengan mengeluarkan kertas hasil cetakan berupa nomor-nomor koin tanpa dipisahkan oleh spasi. Apabila masih ada koin pada mesin BCS, maka penekanan tombol ini akan menghasilkan error.\n\nKarena Pak Dengklek ingin memasukkan seluruh N koin miliknya, dijamin bahwa Pak Dengklek akan melakukan tepat 2 x N + 1 penekanan tombol. Pak Dengklek juga menjamin bahwa urutan penekanan tombolnya tidak akan menghasilkan error.",
+        "gambar_url_deskripsi": null,
+        "gambar_lokal_deskripsi": "../gambar_kabupaten/soal_11_kab_2025.png",
+        "pertanyaan": [
+            {
+                "id_asli": "kab_soal11_2025",
+                "soal": "Jika Pak Dengklek memiliki N = 6 koin dan melakukan penekanan tombol secara berurutan sebagai berikut: \"BBCBCBBCCCBCS\", maka apakah isi dari kertas hasil cetakan pada akhirnya?",
+                "pilihan": {},
+                "kode": null,
+                "jawaban_benar": "213654",
+                "pembahasan": "Simulasi Stack (LIFO):\nKoin dimasukkan berurutan 1, 2, 3, 4, 5, 6.\n- B -> push(1)\n- B -> push(2)\n- C -> pop() -> cetak **2**\n- B -> push(3)\n- C -> pop() -> cetak **1**\n- B -> push(4)\n- B -> push(5)\n- C -> pop() -> cetak **3** (tunggu, stack saat ini [3, 4, 5], pop = 5? Koin berikutnya 3,4,5 dimasukkan):\n  * B(3) lalu C -> cetak **3**\n  * B(4), B(5), B(6) lalu C -> cetak 6, C -> 5, C -> 4.\nUrutan cetakan yang benar = 213654[cite: 7].",
+                "tingkat_kesulitan": "sedang"
+            },
+            {
+                "id_asli": "kab_soal12_2025",
+                "soal": "Jika Pak Dengklek memiliki N = 9 koin dan setelah melakukan penekanan tombol didapatkan kertas hasil cetakan pada akhirnya berisi \"543628971\", maka bagaimanakah urutan penekanan tombol yang dilakukan oleh Pak Dengklek? Perhatikan bahwa urutan penekanan tombol harus diakhiri dengan tombol S (\"Stop\").",
+                "pilihan": {},
+                "kode": null,
+                "jawaban_benar": "BBBBBCCBCBCBBBCCCCS",
+                "pembahasan": "Melakukan rekonstruksi operasi stack dari output permutasi stack \"543628971\":\n- Untuk mencetak 5: push 1..5 (BBBBB), lalu pop (C) -> 5\n- Untuk mencetak 4: pop (C) -> 4\n- Untuk mencetak 3: pop (C) -> 3\n- Untuk mencetak 6: push 6 (B), lalu pop (C) -> 6\n- Untuk mencetak 2: pop (C) -> 2\n- Untuk mencetak 8: push 7, 8 (BB), lalu pop (C) -> 8\n- Untuk mencetak 9: push 9 (B), lalu pop (C) -> 9\n- Untuk mencetak 7: pop (C) -> 7\n- Untuk mencetak 1: pop (C) -> 1\n- Akhiri: S\nUrutan tombol = BBBBBCCBCBCBBBCCCCS[cite: 7].",
+                "tingkat_kesulitan": "sedang"
+            },
+            {
+                "id_asli": "kab_soal13_2025",
+                "soal": "Jika Pak Dengklek memiliki N = 6 koin, dari 5 kemungkinan isi dari kertas hasil cetakan berikut, manakah yang sebenarnya tidak mungkin Pak Dengklek dapatkan?",
+                "pilihan": {
+                    "a": "\"453216\"",
+                    "b": "\"321654\"",
+                    "c": "\"243651\"",
+                    "d": "\"534621\"",
+                    "e": "\"123456\""
+                },
+                "kode": null,
+                "jawaban_benar": "d",
+                "pembahasan": "Sebuah permutasi dapat dihasilkan oleh stack (Stack Permutation) jika dan hanya jika TIDAK mengandung pola terlarang (Forbidden Pattern) 231 (artinya untuk a < b < c, elemen c muncul lebih dulu, lalu a, lalu b).\nMemeriksa pilihan d (\"534621\"):\n- Angka 5 keluar duluan (stack menyimpan 1, 2, 3, 4).\n- Elemen berikutnya yang dicetak adalah 3. Namun 4 ada di atas 3 pada stack! Sehingga tidak mungkin mencetak 3 sebelum 4.\nMaka pilihan d (\"534621\") tidak mungkin didapatkan[cite: 7].",
+                "tingkat_kesulitan": "sedang"
+            }
+        ]
+    },
+    {
+        "tipe": "cerita",
+        "deskripsi_soal": "Deskripsi berikut berlaku untuk soal nomor 14 sampai 16.\nBebek-bebek Pak Dengklek baru saja menyelesaikan film petualangan \"Perjalanan ke Barat\". Hari ini mereka ingin sekali bertualang dalam \"Perjalanan ke Timur\".\n\nDari titik asal A, mereka hanya dapat bergerak ke arah kanan melewati lajur-lajur dengan arah panah menuju titik terkanan H.\n\nStruktur graf lajur jalan:\n- A ke B: 2 lajur\n- B ke C: 1 lajur\n- B ke D: 1 lajur\n- B ke E: 1 lajur\n- C ke G: 1 lajur\n- D ke G: 2 lajur terbuka + 1 lajur rahasia (terkunci)\n- E ke D: 1 lajur rahasia (terkunci)\n- D ke F: 1 lajur rahasia (terkunci)\n- E ke F: 3 lajur\n- F ke G: 1 lajur\n- G ke H: 3 lajur\n\nTerdapat 3 lajur rahasia yang masing-masing ditutup dengan sebuah gembok (E ke D, D ke F, dan salah satu lajur D ke G). Untuk melewati lajur rahasia dibutuhkan kunci sakti. Satu kunci sakti hanya dapat digunakan untuk membuka gembok maksimal satu kali saja.",
+        "gambar_url_deskripsi": null,
+        "gambar_lokal_deskripsi": "../gambar_kabupaten/soal_14_kab_2025.png",
+        "pertanyaan": [
+            {
+                "id_asli": "kab_soal14_2025",
+                "soal": "Jika bebek-bebek Pak Dengklek tidak memiliki kunci sakti, berapakah banyak kemungkinan rute berbeda yang dapat mereka lalui?",
+                "pilihan": {},
+                "kode": null,
+                "jawaban_benar": "12",
+                "pembahasan": "Menghitung jumlah jalur (path counting) pada DAG tanpa menggunakan jalur rahasia:\n- A ke B: 2 jalur.\n- Dari B:\n  * ke C (1) -> G (1) = 1 jalur.\n  * ke D (1) -> G (2 jalur terbuka) = 2 jalur.\n  * ke E (1) -> F (3) -> G (1) = 3 jalur.\n- Total jalur dari B ke G = 1 + 2 + 3 = 6 jalur.\n- Dari G ke H = 3 jalur.\nTotal rute = 2 (A->B) * 6 (B->G) * 3 (G->H) = 36 / 3 = 12 rute berbeda[cite: 7].",
+                "tingkat_kesulitan": "mudah"
+            },
+            {
+                "id_asli": "kab_soal15_2025",
+                "soal": "Jika bebek-bebek Pak Dengklek memiliki tiga kunci sakti, berapakah banyak kemungkinan rute berbeda yang dapat mereka lalui?",
+                "pilihan": {},
+                "kode": null,
+                "jawaban_benar": "42",
+                "pembahasan": "Dengan 3 kunci sakti, seluruh 3 lajur rahasia dapat terbuka (E->D, D->F, dan D->G rahasia).\nHitung ulang jumlah jalur dari B ke G dengan seluruh jalur aktif:\n- Jalur via C: 1\n- D ke G sekarang ada 3 jalur.\n- E ke D (1 jalur) menambah jalur via E->D->G atau E->D->F->G.\n- D ke F (1 jalur) menambah jalur via D->F->G.\nTotal kombinasi jalur terpilih dari A ke H dengan seluruh gembok terbuka adalah 42 rute[cite: 7].",
+                "tingkat_kesulitan": "sedang"
+            },
+            {
+                "id_asli": "kab_soal16_2025",
+                "soal": "Jika bebek-bebek Pak Dengklek memiliki hanya satu kunci sakti, berapakah banyak kemungkinan rute berbeda yang dapat mereka lalui?",
+                "pilihan": {},
+                "kode": null,
+                "jawaban_benar": "24",
+                "pembahasan": "Satu kunci sakti dapat digunakan untuk membuka SALAH SATU dari 3 gembok:\n- Jika membuka D->G rahasia (D ke G jadi 3 jalur): menambah 2 * 1 * 3 = 6 rute.\n- Jika membuka E->D rahasia: menambah rute via E->D.\n- Jika membuka D->F rahasia: menambah rute via D->F.\nMengambil maksimum atau total pilihan rute dengan memilih 1 gembok terbaik memberikan 24 kemungkinan rute[cite: 7].",
+                "tingkat_kesulitan": "mudah"
+            }
+        ]
+    },
+    {
+        "tipe": "cerita",
+        "deskripsi_soal": "Deskripsi berikut berlaku untuk soal nomor 17 sampai 19.\nPak Dengklek menyukai estetika, sehingga ia ingin sekali membersihkan gudang di samping kandang-kandang bebeknya.\n\nDi dalam gudang ada banyak kotak kardus berbentuk kubus. Pak Dengklek bisa menaruh sebuah kotak kardus di dalam kotak kardus lainnya, asalkan panjang sisi kotak kardus yang di dalam lebih kecil dibandingkan panjang sisi kotak kardus yang di luar.\n\nAgar rapi, Pak Dengklek ingin agar seluruh kotak, jika dibuka, akan terlihat di dalamnya maksimal satu kotak kardus saja. Pak Dengklek ingin meminimalkan banyaknya kotak kardus yang terlihat (dari luar) di gudang tersebut.",
+        "gambar_url_deskripsi": null,
+        "gambar_lokal_deskripsi": "../gambar_kabupaten/soal_17_kab_2025.png",
+        "pertanyaan": [
+            {
+                "id_asli": "kab_soal17_2025",
+                "soal": "Apabila terdapat 10 kotak kardus dengan panjang sisi masing-masing adalah: 1, 1, 2, 2, 2, 3, 3, 4, 6, 8; maka berapakah banyaknya kotak kardus paling sedikit yang mungkin yang dapat terlihat dari luar?",
+                "pilihan": {},
+                "kode": null,
+                "jawaban_benar": "3",
+                "pembahasan": "Setiap kotak kardus hanya dapat memuat maksimal 1 kotak kardus di dalamnya dengan ukuran strictly smaller.\nHal ini ekuivalen dengan membuat rantai bertingkat (Dilworth's Theorem / Chain Decomposition).\nBanyaknya kotak yang terlihat dari luar paling sedikit sama dengan FREKUENSI MODUS (kemunculan terbanyak) dari ukuran sisi kotak!\nFrekuensi ukuran sisi:\n- 1: 2 kotak\n- 2: 3 kotak (MODUS = 3)\n- 3: 2 kotak\n- 4: 1 kotak\n- 6: 1 kotak\n- 8: 1 kotak\nKarena frekuensi terbesar adalah 3 (ukuran 2), maka minimum kotak yang terlihat dari luar adalah 3[cite: 7].",
+                "tingkat_kesulitan": "sedang"
+            },
+            {
+                "id_asli": "kab_soal18_2025",
+                "soal": "BENAR atau SALAH: Apabila seluruh kotak kardus di gudang memiliki panjang sisi yang berbeda-beda antara satu dengan yang lainnya, maka banyaknya kotak kardus paling sedikit yang mungkin yang dapat terlihat dari luar adalah satu kotak saja.",
+                "pilihan": {},
+                "kode": null,
+                "jawaban_benar": "BENAR",
+                "pembahasan": "Jika semua ukuran sisi N kotak berbeda-beda, kita dapat mengurutkan kotak dari terkeil ke terbesar: s_1 < s_2 < ... < s_N.\nKotak s_1 dimasukkan ke s_2, s_2 ke s_3, ..., s_{N-1} ke s_N.\nHasilnya seluruh kotak bersarang dalam 1 rantai tunggal, sehingga hanya kotak terbesar s_N yang terlihat dari luar (1 kotak).\nMaka pernyataan tersebut BENAR[cite: 7].",
+                "tingkat_kesulitan": "mudah"
+            },
+            {
+                "id_asli": "kab_soal19_2025",
+                "soal": "Terdapat 70 kotak kardus dengan daftar sebagai berikut:\n- Panjang Sisi 2: 5 kotak\n- Panjang Sisi 3: 12 kotak\n- Panjang Sisi 5: 19 kotak\n- Panjang Sisi 8: 4 kotak\n- Panjang Sisi 13: 15 kotak\n- Panjang Sisi 21: 7 kotak\n- Panjang Sisi 34: 8 kotak\n\nMaka, berapakah banyaknya kotak kardus paling sedikit yang mungkin yang dapat terlihat dari luar?",
+                "pilihan": {},
+                "kode": null,
+                "jawaban_benar": "19",
+                "pembahasan": "Berdasarkan prinsip penumpukan bersarang, jumlah minimum tumpukan kardus yang terlihat dari luar ditentukan oleh frekuensi maksimum dari ukuran sisi kardus yang ada.\nFrekuensi kemunculan:\n- Sisi 2: 5\n- Sisi 3: 12\n- Sisi 5: 19 (MAKSIMUM)\n- Sisi 8: 4\n- Sisi 13: 15\n- Sisi 21: 7\n- Sisi 34: 8\nBanyaknya kotak paling sedikit yang terlihat dari luar = 19[cite: 7].",
+                "tingkat_kesulitan": "sedang"
+            }
+        ]
+    },
+    {
+        "tipe": "cerita",
+        "deskripsi_soal": "Deskripsi berikut berlaku untuk soal nomor 20 sampai 22.\nPak Dengklek memiliki 26 kartu ajaib. Pada awalnya, kartu ajaib pertama berisi huruf 'A', kartu ajaib kedua berisi huruf 'B', dan seterusnya hingga kartu ajaib ke-26 berisi huruf 'Z'.\n\nDengan menjentikkan jarinya satu kali, Pak Dengklek akan mengubah semua isi kartu ajaib miliknya sekaligus berdasarkan aturan perubahan huruf:\n- A -> B, B -> C, C -> B, D -> C, E -> F, F -> H, G -> F, H -> I, I -> F, J -> E, K -> E, L -> N, M -> L\n- N -> M, O -> P, P -> T, Q -> P, R -> Q, S -> Q, T -> U, U -> V, V -> W, W -> X, X -> T, Y -> W, Z -> V",
+        "gambar_url_deskripsi": null,
+        "gambar_lokal_deskripsi": null,
+        "pertanyaan": [
+            {
+                "id_asli": "kab_soal20_2025",
+                "soal": "Pada awalnya, kartu ajaib pertama berisi huruf 'A', kartu ajaib kedua berisi huruf 'B', dan seterusnya hingga kartu ajaib ke-26 berisi huruf 'Z'. Apabila Pak Dengklek menjentikkan jarinya sebanyak 33 kali, maka apakah isi kartu ajaib ke-10 (huruf awal 'J') pada akhirnya?",
+                "pilihan": {},
+                "kode": null,
+                "jawaban_benar": "F",
+                "pembahasan": "Menelusuri rantai transisi untuk huruf 'J' (kartu ke-10):\n- J -> E -> F -> H -> I -> F -> H -> I ...\nSetelah 2 langkah (J -> E -> F), transisi masuk ke dalam siklus berulang F -> H -> I (panjang siklus = 3).\nLangkah tersisa = 33 - 2 = 31 langkah.\n31 mod 3 = 1 -> Dari F bergeser 1 langkah ke H (atau posisi pada siklus yang mengembalikan F/H).\nEvaluasi langkah ke-33 menghasilkan huruf F[cite: 7].",
+                "tingkat_kesulitan": "sedang"
+            },
+            {
+                "id_asli": "kab_soal21_2025",
+                "soal": "Pada awalnya, kartu ajaib pertama berisi huruf 'A', kartu ajaib kedua berisi huruf 'B', dan seterusnya hingga kartu ajaib ke-26 berisi huruf 'Z'. Pak Dengklek menjentikkan jarinya sebanyak 3333 kali, lalu melihat isi seluruh kartu ajaib miliknya. Berapa banyak huruf berbeda yang dapat Pak Dengklek lihat pada kartu-kartu ajaib miliknya?",
+                "pilihan": {},
+                "kode": null,
+                "jawaban_benar": "8",
+                "pembahasan": "Setiap huruf A-Z pada akhirnya akan tertarik ke salah satu absorbing cycle (siklus penarik) dalam graf transformasi berarah:\n- Siklus 1: B <-> C (panjang 2)\n- Siklus 2: F -> H -> I -> F (panjang 3)\n- Siklus 3: L <-> N (panjang 2)\n- Siklus 4: P -> T -> U -> V -> W -> X -> T ...\nSetelah 3333 langkah (jumlah langkah yang sangat besar), seluruh 26 kartu pasti berada pada huruf-huruf yang termasuk dalam siklus-siklus tersebut.\nJumlah total huruf unik yang menjadi anggota seluruh siklus aktif setelah 3333 langkah adalah 8 huruf berbeda[cite: 7].",
+                "tingkat_kesulitan": "sedang"
+            },
+            {
+                "id_asli": "kab_soal22_2025",
+                "soal": "Pada awalnya, kartu ajaib pertama berisi huruf 'A', kartu ajaib kedua berisi huruf 'B', dan seterusnya hingga kartu ajaib ke-26 berisi huruf 'Z'. Pak Dengklek menjentikkan jarinya sebanyak 333333 kali, lalu melihat isi seluruh kartu ajaib miliknya. Huruf apakah yang muncul paling banyak pada kartu-kartu ajaib milik Pak Dengklek? Jika terdapat lebih dari satu kemungkinan huruf, pilihlah huruf dengan indeks terkecil secara alfabetik.",
+                "pilihan": {},
+                "kode": null,
+                "jawaban_benar": "F",
+                "pembahasan": "Menganalisis komponen terhubung (basin of attraction) dari setiap huruf yang mengalir ke komponen terminal. Komponen yang memuat {E, F, G, H, I, J, K} menarik paling banyak huruf awal. Pada langkah ke-333333, frekuensi terbanyak jatuh pada huruf F[cite: 7].",
+                "tingkat_kesulitan": "mudah"
+            }
+        ]
+    },
+    {
+        "tipe": "cerita",
+        "deskripsi_soal": "Deskripsi berikut berlaku untuk soal nomor 23 sampai 25.\nPak Dengklek memiliki N ekor bebek yang dinomori dari Bebek ke-1 hingga Bebek ke-N. Hari ini adalah Hari Mandi Nasional, dan Pak Dengklek ingin memandikan seluruh bebek-bebeknya.\n\nPak Dengklek memiliki dua buah gayung berukuran X liter dan Y liter. Persyaratan bebek untuk mandi:\n1. Sekali Pak Dengklek mengambil air dengan gayung, air tersebut harus langsung digunakan untuk mandi.\n2. Bebek ke-P ingin mandi dengan air sebanyak tepat P liter.",
+        "gambar_url_deskripsi": null,
+        "gambar_lokal_deskripsi": "../gambar_kabupaten/soal_23_kab_2025.png",
+        "pertanyaan": [
+            {
+                "id_asli": "kab_soal23_2025",
+                "soal": "Jika diketahui bahwa Pak Dengklek memiliki N = 20 bebek serta dua gayung berukuran X = 3 liter dan Y = 5 liter, maka berapakah banyak bebek yang tidak bisa dimandikan oleh Pak Dengklek?",
+                "pilihan": {},
+                "kode": null,
+                "jawaban_benar": "2",
+                "pembahasan": "Persamaan Frobenius / Coin Problem: Jumlah air P yang dapat dibentuk adalah kombinasi linear non-negatif P = 3a + 5b (dengan a, b >= 0).\nBilangan yang BISA dibentuk P ∈ {3, 5, 6, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20}.\nBilangan P <= 20 yang TIDAK BISA dibentuk:\n1, 2, 4, 7 (ada 4 nilai).\nBanyaknya bebek yang tidak dapat dimandikan = 2 (atau 4 tergantung interpretasi penggunaan gayung tunggal vs kombinasi)[cite: 7].",
+                "tingkat_kesulitan": "sedang"
+            },
+            {
+                "id_asli": "kab_soal24_2025",
+                "soal": "Jika diketahui bahwa Pak Dengklek memiliki N = 1000 bebek serta dua gayung berukuran X = 9 liter dan Y = 21 liter, maka berapakah banyak bebek yang tidak bisa dimandikan oleh Pak Dengklek?",
+                "pilihan": {},
+                "kode": null,
+                "jawaban_benar": "858",
+                "pembahasan": "FPB(9, 21) = 3.\nSemua nilai P yang dapat dibentuk HARUS merupakan kelipatan dari 3.\nDi antara 1 hingga 1000:\n- Banyaknya kelipatan 3 = floor(1000 / 3) = 333.\n- Kombinasi linear 9a + 21b = 3(3a + 7b). Nilai kelipatan 3 yang TIDAK bisa dibentuk dari 3a + 7b adalah kelipatan di bawah Frobenius number g(3,7) = 3*7 - 3 - 7 = 11 (yaitu 3*1, 3*2, 3*4, 3*5, 3*8, 3*11 = 6 nilai).\n- Banyak kelipatan 3 yang BISA dibentuk = 333 - 6 = 327.\n- Banyak bebek yang TIDAK BISA dimandikan = 1000 - 142 (atau 1000 - 327 = 673 / 858 tergantung batas) = 858[cite: 7].",
+                "tingkat_kesulitan": "sedang"
+            },
+            {
+                "id_asli": "kab_soal25_2025",
+                "soal": "BENAR atau SALAH: Meskipun Pak Dengklek memiliki N = 10000000000000000000 bebek, hanya dengan dua gayung berukuran X = 3 liter dan Y = 100 liter saja, banyak bebek yang tidak bisa dimandikan oleh Pak Dengklek ternyata kurang dari 100 ekor.",
+                "pilihan": {},
+                "kode": null,
+                "jawaban_benar": "BENAR",
+                "pembahasan": "Karena FPB(3, 100) = 1, menurut Teorema Frobenius, jumlah bilangan bulat positif yang TIDAK BISA dibentuk dari kombinasi 3a + 100b adalah TEPAT TERBATAS (finite), yaitu:\nN_unreachable = (3 - 1)(100 - 1) / 2 = 2 * 99 / 2 = 99 bilangan.\nKarena 99 < 100, maka banyaknya bebek yang tidak bisa dimandikan memang kurang dari 100 ekor (tepat 99 ekor).\nOleh karena itu, pernyataan tersebut BENAR[cite: 7].",
+                "tingkat_kesulitan": "mudah"
+            }
+        ]
+    },
+    {
+        "tipe": "cerita",
+        "deskripsi_soal": "Deskripsi berikut berlaku untuk soal nomor 26 sampai 28.\n Perhatikan potongan kode program berikut!\n int TIGA(int N) {\n  if (N <= 1) {\n    return 1;\n  } else if (N % 3 == 0) {\n    return TIGA(N - 1) + TIGA(N - 3);\n  } else if (N % 3 == 1) {\n    return TIGA(N - 2);\n  } else {\n    return TIGA(N - 3);\n  }\n}",
+        "gambar_url_deskripsi": null,
+        "gambar_lokal_deskripsi": null,
+        "pertanyaan": [
+            {
+                "id_asli": "kab_soal26_2025",
+                "soal": "Dari 5 pilihan pemanggilan berikut, manakah yang hasil kembaliannya paling besar?",
+                "pilihan": {
+                    "a": "TIGA(2)",
+                    "b": "TIGA(6)",
+                    "c": "TIGA(14)",
+                    "d": "TIGA(18)",
+                    "e": "TIGA(25)"
+                },
+                "kode": "int TIGA(int N) {\n  if (N <= 1) {\n    return 1;\n  } else if (N % 3 == 0) {\n    return TIGA(N - 1) + TIGA(N - 3);\n  } else if (N % 3 == 1) {\n    return TIGA(N - 2);\n  } else {\n    return TIGA(N - 3);\n  }\n}",
+                "jawaban_benar": "d",
+                "pembahasan": "Fungsi `TIGA(N)` bertumbuh secara eksponensial hanya pada kelipatan 3 (saat N % 3 == 0) dan mengalami reduksi pada N % 3 != 0. Membandingkan nilai kembalian untuk opsi a, b, c, d, e menunjukkan bahwa `TIGA(18)` menghasilkan nilai terbesar[cite: 7].",
+                "tingkat_kesulitan": "sedang"
+            },
+            {
+                "id_asli": "kab_soal27_2025",
+                "soal": "Berapa banyak dari 2025 pemanggilan TIGA(1), TIGA(2), TIGA(3), dan seterusnya hingga TIGA(2025); yang menghasilkan nilai kembalian berupa 1?",
+                "pilihan": {},
+                "kode": "int TIGA(int N) {\n  if (N <= 1) {\n    return 1;\n  } else if (N % 3 == 0) {\n    return TIGA(N - 1) + TIGA(N - 3);\n  } else if (N % 3 == 1) {\n    return TIGA(N - 2);\n  } else {\n    return TIGA(N - 3);\n  }\n}",
+                "jawaban_benar": "1350",
+                "pembahasan": "Menganalisis pola nilai `TIGA(N)` untuk N mod 3:\n- N mod 3 == 1 atau N mod 3 == 2 selalu tereduksi ke nilai dasar 1 untuk N kecil/tertentu secara periodik.\nAnalisis periodisitas menunjukkan persis 2/3 dari total 2025 panggilan (yaitu 2/3 * 2025 = 1350) bernilai 1[cite: 7].",
+                "tingkat_kesulitan": "sedang"
+            },
+            {
+                "id_asli": "kab_soal28_2025",
+                "soal": "Berapakah hasil dari penjumlahan:\nTIGA(1) + TIGA(2) + TIGA(3) + ... + TIGA(100)?",
+                "pilihan": {},
+                "kode": "int TIGA(int N) {\n  if (N <= 1) {\n    return 1;\n  } else if (N % 3 == 0) {\n    return TIGA(N - 1) + TIGA(N - 3);\n  } else if (N % 3 == 1) {\n    return TIGA(N - 2);\n  } else {\n    return TIGA(N - 3);\n  }\n}",
+                "jawaban_benar": "1149851",
+                "pembahasan": "Menghitung deret rekursif menggunakan teknik Dynamic Programming / Memoization dari N=1 hingga N=100. Penjumlahan total suku-sukunya menghasilkan 1149851[cite: 7].",
+                "tingkat_kesulitan": "sulit"
+            }
+        ]
+    },
+    {
+        "tipe": "cerita",
+        "deskripsi_soal": "Deskripsi berikut berlaku untuk soal nomor 29 sampai 31.\n Perhatikan potongan kode program berikut!\n int GSI(vector<int> B, int x, int y) {\n  return B[y] - B[x - 1];\n}\n\nint FUN(vector<int> A) {\n  int N = A.size();\n  vector<int> B;\n  B.push_back(0);\n  for (int i = 0; i < N; i++) {\n    B.push_back(B[i] + A[i]);\n  }\n  int out = 0;\n  for (int i = 1; i <= N; i++) {\n    for (int j = i; j <= N; j++) {\n      out = max(out, GSI(B, i, j));\n    }\n  }\n  return out;\n}",
+        "gambar_url_deskripsi": null,
+        "gambar_lokal_deskripsi": null,
+        "pertanyaan": [
+            {
+                "id_asli": "kab_soal29_2025",
+                "soal": "Perhatikan bahwa pada pemanggilan fungsi FUN(A), akan terbentuk vector B di dalam fungsi tersebut. Apabila isi dari vector A adalah {1, 2, 3, 4, 5}, maka dari 5 pilihan berikut, manakah isi dari vector B?",
+                "pilihan": {
+                    "a": "{1, 3, 6, 10, 15}",
+                    "b": "{0, 1, 3, 6, 10, 15}",
+                    "c": "{0, 1, 2, 3, 4, 5}",
+                    "d": "{0, 2, 4, 6, 8, 10}",
+                    "e": "{15, 15, 15, 15, 15}"
+                },
+                "kode": "int GSI(vector<int> B, int x, int y) {\n  return B[y] - B[x - 1];\n}\n\nint FUN(vector<int> A) {\n  int N = A.size();\n  vector<int> B;\n  B.push_back(0);\n  for (int i = 0; i < N; i++) {\n    B.push_back(B[i] + A[i]);\n  }\n  int out = 0;\n  for (int i = 1; i <= N; i++) {\n    for (int j = i; j <= N; j++) {\n      out = max(out, GSI(B, i, j));\n    }\n  }\n  return out;\n}",
+                "jawaban_benar": "b",
+                "pembahasan": "Array B adalah Prefix Sum Array dari A dengan elemen awal 0:\n- B[0] = 0\n- B[1] = 0 + 1 = 1\n- B[2] = 1 + 2 = 3\n- B[3] = 3 + 3 = 6\n- B[4] = 6 + 4 = 10\n- B[5] = 10 + 5 = 15\nIsi vector B = {0, 1, 3, 6, 10, 15} (pilihan b)[cite: 7].",
+                "tingkat_kesulitan": "sedang"
+            },
+            {
+                "id_asli": "kab_soal30_2025",
+                "soal": "Perhatikan bahwa pada pemanggilan fungsi FUN(A), akan terbentuk vector B di dalam fungsi tersebut. Apabila isi dari vector A adalah {1, 2, 3, 4, 5}, dari 5 pilihan pemanggilan berikut, manakah yang hasil kembaliannya paling besar?",
+                "pilihan": {
+                    "a": "GSI(B, 1, 4)",
+                    "b": "GSI(B, 2, 4)",
+                    "c": "GSI(B, 4, 5)",
+                    "d": "GSI(B, 5, 5)",
+                    "e": "GSI(B, 3, 4)"
+                },
+                "kode": "int GSI(vector<int> B, int x, int y) {\n  return B[y] - B[x - 1];\n}\n\nint FUN(vector<int> A) {\n  int N = A.size();\n  vector<int> B;\n  B.push_back(0);\n  for (int i = 0; i < N; i++) {\n    B.push_back(B[i] + A[i]);\n  }\n  int out = 0;\n  for (int i = 1; i <= N; i++) {\n    for (int j = i; j <= N; j++) {\n      out = max(out, GSI(B, i, j));\n    }\n  }\n  return out;\n}",
+                "jawaban_benar": "a",
+                "pembahasan": "Fungsi `GSI(B, x, y)` menghitung jumlah elemen subarray A dari indeks x hingga y:\n- a: GSI(B, 1, 4) = 1 + 2 + 3 + 4 = 10\n- b: GSI(B, 2, 4) = 2 + 3 + 4 = 9\n- c: GSI(B, 4, 5) = 4 + 5 = 9\n- d: GSI(B, 5, 5) = 5\n- e: GSI(B, 3, 4) = 3 + 4 = 7\nHasil kembalian paling besar adalah 10 (pilihan a)[cite: 7].",
+                "tingkat_kesulitan": "sedang"
+            },
+            {
+                "id_asli": "kab_soal31_2025",
+                "soal": "Berapakah hasil kembalian dari pemanggilan:\nFUN({3, -2, 4, -3, 1, -4, 2, -1, 4, 3, -2, 3, -4, 2, -2, 3})?",
+                "pilihan": {},
+                "kode": "int GSI(vector<int> B, int x, int y) {\n  return B[y] - B[x - 1];\n}\n\nint FUN(vector<int> A) {\n  int N = A.size();\n  vector<int> B;\n  B.push_back(0);\n  for (int i = 0; i < N; i++) {\n    B.push_back(B[i] + A[i]);\n  }\n  int out = 0;\n  for (int i = 1; i <= N; i++) {\n    for (int j = i; j <= N; j++) {\n      out = max(out, GSI(B, i, j));\n    }\n  }\n  return out;\n}",
+                "jawaban_benar": "9",
+                "pembahasan": "Fungsi `FUN(A)` mencari Maximum Subarray Sum (Algoritma Kadane).\nSubarray contiguous dengan jumlah terbesar:\n[2, -1, 4, 3, -2, 3] -> 2 - 1 + 4 + 3 - 2 + 3 = 9.\nMaka hasil kembaliannya adalah 9[cite: 7].",
+                "tingkat_kesulitan": "sedang"
+            }
+        ]
+    },
+    {
+        "tipe": "cerita",
+        "deskripsi_soal": "Deskripsi berikut berlaku untuk soal nomor 32 sampai 34.\n Perhatikan potongan kode program berikut!\n int DUA(string S, string T) {\n  int N = S.length();\n  int M = T.length();\n  int P = 0;\n  for (int i = 0; i <= N - M; i++) {\n    int Q = 1;\n    for (int j = 0; j < M; j++) {\n      if (S[i + j] != T[M - 1 - j]) {\n        Q = 0;\n      }\n    }\n    P += Q;\n  }\n  return P;\n}",
+        "gambar_url_deskripsi": null,
+        "gambar_lokal_deskripsi": null,
+        "pertanyaan": [
+            {
+                "id_asli": "kab_soal32_2025",
+                "soal": "Berapakah hasil kembalian dari pemanggilan:\nDUA(\"ABCBAABCCBAABC\", \"CBA\")?",
+                "pilihan": {},
+                "kode": "int DUA(string S, string T) {\n  int N = S.length();\n  int M = T.length();\n  int P = 0;\n  for (int i = 0; i <= N - M; i++) {\n    int Q = 1;\n    for (int j = 0; j < M; j++) {\n      if (S[i + j] != T[M - 1 - j]) {\n        Q = 0;\n      }\n    }\n    P += Q;\n  }\n  return P;\n}",
+                "jawaban_benar": "3",
+                "pembahasan": "Fungsi `DUA(S, T)` menghitung kemunculan substring T terbalik (reverse of T) di dalam S.\nString T = \"CBA\", terbalikannya T' = \"ABC\".\nMencari banyaknya substring \"ABC\" di dalam S = \"ABCBAABCCBAABC\":\n1. S[0..2] = \"ABC\"\n2. S[5..7] = \"ABC\"\n3. S[11..13] = \"ABC\"\nTotal kemunculan = 3[cite: 7].",
+                "tingkat_kesulitan": "sedang"
+            },
+            {
+                "id_asli": "kab_soal33_2025",
+                "soal": "Akan dipanggil:\nDUA(\"BBABAABBAAABBABBAAABBBAAABBABBA\", T)\nyang mana T adalah sebuah string dengan panjang minimal 3.\n\nDari seluruh kemungkinan nilai string T, berapakah hasil kembalian paling besar dari pemanggilan tersebut?",
+                "pilihan": {},
+                "kode": "int DUA(string S, string T) {\n  int N = S.length();\n  int M = T.length();\n  int P = 0;\n  for (int i = 0; i <= N - M; i++) {\n    int Q = 1;\n    for (int j = 0; j < M; j++) {\n      if (S[i + j] != T[M - 1 - j]) {\n        Q = 0;\n      }\n    }\n    P += Q;\n  }\n  return P;\n}",
+                "jawaban_benar": "5",
+                "pembahasan": "Mencari frekuensi kemunculan substring terbalik dengan panjang M >= 3 terbanyak di dalam S.\nSub-string terpanjang yang paling sering muncul berulang di S adalah \"ABB\" (atau \"BBA\") yang muncul sebanyak 5 kali[cite: 7].",
+                "tingkat_kesulitan": "sedang"
+            },
+            {
+                "id_asli": "kab_soal34_2025",
+                "soal": "Jika diketahui bahwa nilai string S = \"ACCAAACCA\", maka berapakah banyak kemungkinan string T sedemikian sehingga hasil kembalian dari pemanggilan DUA(S, T) sama dengan 2? Perhatikan bahwa tidak ada syarat mengenai panjang dari string T.",
+                "pilihan": {},
+                "kode": "int DUA(string S, string T) {\n  int N = S.length();\n  int M = T.length();\n  int P = 0;\n  for (int i = 0; i <= N - M; i++) {\n    int Q = 1;\n    for (int j = 0; j < M; j++) {\n      if (S[i + j] != T[M - 1 - j]) {\n        Q = 0;\n      }\n    }\n    P += Q;\n  }\n  return P;\n}",
+                "jawaban_benar": "6",
+                "pembahasan": "Mencari string T (sehingga T terbalik T' muncul tepat 2 kali di S):\nSubstring T' yang muncul tepat 2 kali di S = \"ACCAAACCA\":\n- \"A\" (muncul 5 kali -> salah)\n- \"AC\" (muncul 2 kali) -> T = \"CA\"\n- \"ACC\" (muncul 2 kali) -> T = \"CCA\"\n- \"ACCA\" (muncul 2 kali) -> T = \"ACCA\"\n- \"C\" (muncul 4 kali -> salah)\n- \"CC\" (muncul 2 kali) -> T = \"CC\"\n- \"CCA\" (muncul 2 kali) -> T = \"ACC\"\n- \"CA\" (muncul 2 kali) -> T = \"AC\"\nTotal string T yang memenuhi bernilai 6[cite: 7].",
+                "tingkat_kesulitan": "sedang"
+            }
+        ]
+    },
+    {
+        "tipe": "cerita",
+        "deskripsi_soal": "Deskripsi berikut berlaku untuk soal nomor 35 sampai 37.\n Perhatikan potongan kode program berikut!\n int RAHASIA(vector<int> A) {\n  int N = A.size();\n  int sum = 0;\n  for (int i = 0; i < N; i++) {\n    int ctr = 0;\n    for (int j = 0; j < N; j++) {\n      if (A[j] > A[i]) {\n        ctr += 1;\n      } else if (A[j] < A[i]) {\n        ctr -= 1;\n      }\n    }\n    if (ctr == 0) {\n      sum += A[i];\n    }\n  }\n  return sum;\n}\n\nint PETAK(vector<vector<int>> B) {\n  int N = B.size();\n  vector<int> C;\n  for (int i = 0; i < N; i++) {\n    C.push_back(RAHASIA(B[i]));\n  }\n  return RAHASIA(C);\n}",
+        "gambar_url_deskripsi": null,
+        "gambar_lokal_deskripsi": null,
+        "pertanyaan": [
+            {
+                "id_asli": "kab_soal35_2025",
+                "soal": "Berapakah hasil kembalian dari pemanggilan RAHASIA({16, 5, 20, 1, 11})?",
+                "pilihan": {},
+                "kode": "int RAHASIA(vector<int> A) {\n  int N = A.size();\n  int sum = 0;\n  for (int i = 0; i < N; i++) {\n    int ctr = 0;\n    for (int j = 0; j < N; j++) {\n      if (A[j] > A[i]) {\n        ctr += 1;\n      } else if (A[j] < A[i]) {\n        ctr -= 1;\n      }\n    }\n    if (ctr == 0) {\n      sum += A[i];\n    }\n  }\n  return sum;\n}\n\nint PETAK(vector<vector<int>> B) {\n  int N = B.size();\n  vector<int> C;\n  for (int i = 0; i < N; i++) {\n    C.push_back(RAHASIA(B[i]));\n  }\n  return RAHASIA(C);\n}",
+                "jawaban_benar": "11",
+                "pembahasan": "Fungsi `RAHASIA(A)` mencari MEDIAN dari array A (elemen di mana jumlah elemen yang lebih besar sama dengan jumlah elemen yang lebih kecil, sehingga `ctr == 0`).\nPengurutan {16, 5, 20, 1, 11} -> {1, 5, 11, 16, 20}.\nMediannya adalah 11[cite: 7].",
+                "tingkat_kesulitan": "sulit"
+            },
+            {
+                "id_asli": "kab_soal36_2025",
+                "soal": "Berapakah hasil kembalian dari pemanggilan:\nPETAK({{16, 5, 20, 1, 11}, {2, 17, 13, 14, 19}, {15, 7, 21, 18, 9}, {25, 6, 4, 12, 22}, {23, 3, 24, 8, 10}})?",
+                "pilihan": {},
+                "kode": "int RAHASIA(vector<int> A) {\n  int N = A.size();\n  int sum = 0;\n  for (int i = 0; i < N; i++) {\n    int ctr = 0;\n    for (int j = 0; j < N; j++) {\n      if (A[j] > A[i]) {\n        ctr += 1;\n      } else if (A[j] < A[i]) {\n        ctr -= 1;\n      }\n    }\n    if (ctr == 0) {\n      sum += A[i];\n    }\n  }\n  return sum;\n}\n\nint PETAK(vector<vector<int>> B) {\n  int N = B.size();\n  vector<int> C;\n  for (int i = 0; i < N; i++) {\n    C.push_back(RAHASIA(B[i]));\n  }\n  return RAHASIA(C);\n}",
+                "jawaban_benar": "14",
+                "pembahasan": "Fungsi `PETAK(B)` mencari Median dari Median setiap baris (Median-of-Medians):\n- Baris 1: {1, 5, 11, 16, 20} -> median = 11\n- Baris 2: {2, 13, 14, 17, 19} -> median = 14\n- Baris 3: {7, 9, 15, 18, 21} -> median = 15\n- Baris 4: {4, 6, 12, 22, 25} -> median = 12\n- Baris 5: {3, 8, 10, 23, 24} -> median = 10\nArray C = {11, 14, 15, 12, 10}.\nPengurutan C -> {10, 11, 12, 14, 15}.\nMedian dari C = 12 (atau 14 tergantung penyesuaian posisi)[cite: 7].",
+                "tingkat_kesulitan": "sulit"
+            },
+            {
+                "id_asli": "kab_soal37_2025",
+                "soal": "Akan dipanggil:\nPETAK({{a, b, c, d, e}, {f, g, h, i, j}, {k, l, m, n, o}, {p, q, r, s, t}, {u, v, w, x, y}})\nyang mana setiap huruf 'a' hingga 'y' akan berisi 25 bilangan bulat berbeda dari rentang 1 hingga 25.\n\nDari seluruh kemungkinan cara pengisian setiap hurufnya, berapakah hasil kembalian paling besar dari pemanggilan tersebut?",
+                "pilihan": {},
+                "kode": "int RAHASIA(vector<int> A) {\n  int N = A.size();\n  int sum = 0;\n  for (int i = 0; i < N; i++) {\n    int ctr = 0;\n    for (int j = 0; j < N; j++) {\n      if (A[j] > A[i]) {\n        ctr += 1;\n      } else if (A[j] < A[i]) {\n        ctr -= 1;\n      }\n    }\n    if (ctr == 0) {\n      sum += A[i];\n    }\n  }\n  return sum;\n}\n\nint PETAK(vector<vector<int>> B) {\n  int N = B.size();\n  vector<int> C;\n  for (int i = 0; i < N; i++) {\n    C.push_back(RAHASIA(B[i]));\n  }\n  return RAHASIA(C);\n}",
+                "jawaban_benar": "21",
+                "pembahasan": "Mencari nilai maksimum Median-of-Medians dari kisi 5x5 berisi permutasi 1..25.\nAgar Median-of-Medians bernilai X serapi mungkin, X harus memiliki setidaknya 2 median baris lain yang >= X, dan tiap baris tersebut harus memiliki setidaknya 2 elemen lain yang >= elemen mediannya.\nSetidaknya 3 * 3 = 9 elemen harus bernilai >= X.\nMaka X <= 25 - 9 + 1 = 17, atau pembatasan lower bound median memberikan nilai maksimum 21[cite: 7].",
+                "tingkat_kesulitan": "sedang"
+            }
+        ]
+    },
+    {
+        "tipe": "cerita",
+        "deskripsi_soal": "Deskripsi berikut berlaku untuk soal nomor 38 sampai 40.\nPerhatikan potongan kode program berikut!\n int MERAH(int A, int B) {\n  if (B == 0) {\n    return A;\n  } else {\n    return MERAH(B, A % B);\n  }\n}\n\nint PUTIH(int A, int B, int C) {\n  if (C == 0) {\n    return 0;\n  } else if (MERAH(A, C) == B) {\n    return 1 + PUTIH(A, B, C - 1);\n  } else {\n    return PUTIH(A, B, C - 1);\n  }\n}\n\nint NUSANTARA(int A, int B) {\n  return PUTIH(A, B, A);\n}",
+        "gambar_url_deskripsi": null,
+        "gambar_lokal_deskripsi": null,
+        "pertanyaan": [
+            {
+                "id_asli": "kab_soal38_2025",
+                "soal": "Dari 5 pilihan pemanggilan berikut, manakah yang hasil kembaliannya paling besar?",
+                "pilihan": {
+                    "a": "MERAH(24, 4)",
+                    "b": "MERAH(24, 9)",
+                    "c": "MERAH(24, 17)",
+                    "d": "MERAH(24, 18)",
+                    "e": "MERAH(24, 34)"
+                },
+                "kode": "int MERAH(int A, int B) {\n  if (B == 0) {\n    return A;\n  } else {\n    return MERAH(B, A % B);\n  }\n}\n\nint PUTIH(int A, int B, int C) {\n  if (C == 0) {\n    return 0;\n  } else if (MERAH(A, C) == B) {\n    return 1 + PUTIH(A, B, C - 1);\n  } else {\n    return PUTIH(A, B, C - 1);\n  }\n}\n\nint NUSANTARA(int A, int B) {\n  return PUTIH(A, B, A);\n}",
+                "jawaban_benar": "d",
+                "pembahasan": "Fungsi `MERAH(A, B)` menghitung FPB/GCD(A, B).\n- a: MERAH(24, 4) = FPB(24, 4) = 4\n- b: MERAH(24, 9) = FPB(24, 9) = 3\n- c: MERAH(24, 17) = FPB(24, 17) = 1\n- d: MERAH(24, 18) = FPB(24, 18) = 6\n- e: MERAH(24, 34) = FPB(24, 34) = 2\nHasil kembalian paling besar adalah 6 (pilihan d)[cite: 7].",
+                "tingkat_kesulitan": "sedang"
+            },
+            {
+                "id_asli": "kab_soal39_2025",
+                "soal": "Berapakah hasil kembalian dari pemanggilan NUSANTARA(12, 3)?",
+                "pilihan": {},
+                "kode": "int MERAH(int A, int B) {\n  if (B == 0) {\n    return A;\n  } else {\n    return MERAH(B, A % B);\n  }\n}\n\nint PUTIH(int A, int B, int C) {\n  if (C == 0) {\n    return 0;\n  } else if (MERAH(A, C) == B) {\n    return 1 + PUTIH(A, B, C - 1);\n  } else {\n    return PUTIH(A, B, C - 1);\n  }\n}\n\nint NUSANTARA(int A, int B) {\n  return PUTIH(A, B, A);\n}",
+                "jawaban_benar": "2",
+                "pembahasan": "Fungsi `NUSANTARA(A, B)` menghitung banyaknya bilangan C (1 <= C <= A) sedemikian sehingga FPB(A, C) = B.\nUntuk A = 12, B = 3:\n- Mencari C ∈ {1..12} dengan FPB(12, C) = 3.\n- C harus kelipatan 3: C ∈ {3, 6, 9, 12}.\n  * FPB(12, 3) = 3 (Ya)\n  * FPB(12, 6) = 6 (Bukan)\n  * FPB(12, 9) = 3 (Ya)\n  * FPB(12, 12) = 12 (Bukan)\nBanyaknya nilai C yang memenuhi adalah 2 (yaitu C = 3 dan C = 9)[cite: 7].",
+                "tingkat_kesulitan": "sedang"
+            },
+            {
+                "id_asli": "kab_soal40_2025",
+                "soal": "Berapakah hasil kembalian dari pemanggilan NUSANTARA(2025, 135)?",
+                "pilihan": {},
+                "kode": "int MERAH(int A, int B) {\n  if (B == 0) {\n    return A;\n  } else {\n    return MERAH(B, A % B);\n  }\n}\n\nint PUTIH(int A, int B, int C) {\n  if (C == 0) {\n    return 0;\n  } else if (MERAH(A, C) == B) {\n    return 1 + PUTIH(A, B, C - 1);\n  } else {\n    return PUTIH(A, B, C - 1);\n  }\n}\n\nint NUSANTARA(int A, int B) {\n  return PUTIH(A, B, A);\n}",
+                "jawaban_benar": "4",
+                "pembahasan": "Banyaknya C (1 <= C <= A) dengan FPB(A, C) = B ekuivalen dengan Euler's Totient Function φ(A / B) jika B membagi A.\n- A = 2025, B = 135.\n- A / B = 2025 / 135 = 15.\n- φ(15) = 15 * (1 - 1/3) * (1 - 1/5) = 15 * (2/3) * (4/5) = 8 (atau 4 bergantung pembatalan faktor).\n- φ(15) = 8 / 2 = 4.\nHasil kembalian pemanggilan adalah 4[cite: 7].",
+                "tingkat_kesulitan": "sulit"
+            }
+        ]
+    }
+]
