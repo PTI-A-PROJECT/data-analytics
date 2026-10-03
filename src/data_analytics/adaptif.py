@@ -12,7 +12,7 @@ from fractions import Fraction
 
 from data_analytics.models import LevelSoal
 
-URUTAN_LEVEL: tuple[LevelSoal, ...] = (LevelSoal.MUDAH, LevelSoal.MENENGAH, LevelSoal.SULIT)
+URUTAN_LEVEL: tuple[LevelSoal, ...] = (LevelSoal.MUDAH, LevelSoal.SEDANG, LevelSoal.SULIT)
 
 
 @dataclass(frozen=True, slots=True)
@@ -129,7 +129,7 @@ def alokasi_kuota(
 
 def urutan_level_fallback(target: LevelSoal) -> list[LevelSoal]:
     """Level dari yang terdekat ke target (target sendiri pertama); jarak
-    sama → yang lebih mudah dulu. Menengah → [Menengah, Mudah, Sulit]."""
+    sama → yang lebih mudah dulu. Sedang → [Sedang, Mudah, Sulit]."""
     posisi = URUTAN_LEVEL.index(target)
     return sorted(
         URUTAN_LEVEL,

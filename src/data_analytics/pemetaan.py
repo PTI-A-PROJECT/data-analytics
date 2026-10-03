@@ -23,29 +23,39 @@ class PetaMateri:
 
 
 def petakan_per_materi(
-    hitungan: Mapping[str, tuple[int, int]], *, ambang_lemah: float
+    hitungan: Mapping[str, tuple[int, int]],
+    *,
+    ambang_lemah: float,
+    ambang_kuat: float = 80.0,
 ) -> list[PetaMateri]:
-    """Peta Kompetensi fase 2 dari (jumlah_soal, jumlah_benar) per Materi.
-    Satu definisi lemah (issue fase 2 #03): Belum Cukup ≡ akurasi <
-    ambang_lemah; Cukup kalau >= (inklusif); Belum Teruji kalau Materi tidak
-    punya soal di attempt ini. Terurut menurut materi_id.
+    """Peta Kompetensi fase 2.
+
+    3 status (sesuai aturan final v1):
+    - BELUM_TERUJI: materi tidak muncul di attempt ini
+    - BELUM_CUKUP:  akurasi < ambang_lemah (default 60%)
+    - CUKUP:        ambang_lemah <= akurasi < ambang_kuat
+    - KUAT:         akurasi >= ambang_kuat (default 80%)
     """
     peta = []
     for materi_id in sorted(hitungan):
         jumlah_soal, jumlah_benar = hitungan[materi_id]
         if jumlah_benar < 0 or jumlah_benar > jumlah_soal:
             raise ValueError(f"jumlah_benar Materi {materi_id} di luar 0..jumlah_soal")
+
         if jumlah_soal == 0:
             akurasi = None
             status = StatusPemetaan.BELUM_TERUJI
         else:
             akurasi = round(jumlah_benar / jumlah_soal * 100, 2)
-            status = (
-                StatusPemetaan.BELUM_CUKUP if akurasi < ambang_lemah else StatusPemetaan.CUKUP
-            )
+            if akurasi < ambang_lemah:
+                status = StatusPemetaan.BELUM_CUKUP
+            elif akurasi < ambang_kuat:
+                status = StatusPemetaan.CUKUP
+            else:
+                status = StatusPemetaan.KUAT
+
         peta.append(PetaMateri(materi_id, jumlah_soal, jumlah_benar, akurasi, status))
     return peta
-
 
 def materi_lemah(peta: Sequence[PetaMateri]) -> list[str]:
     """Materi berstatus Belum Cukup, dari akurasi terendah (seri: materi_id)."""

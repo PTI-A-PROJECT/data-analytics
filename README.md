@@ -11,15 +11,11 @@ uv sync
 cp .env.example .env   # DATABASE_URL harus PostgreSQL + pgvector (SQLite tidak didukung)
 ```
 
-## Menjalankan migrasi
+## Migrasi database
 
-```bash
-uv run alembic upgrade head
-```
-
-Migrasi `0005` memasang extension `vector` dan mengisi tingkat seleksi
-Kabupaten & Provinsi. Tidak ada lagi seed data uji: bank soal & materi diisi
-lewat ingest offline (lihat di bawah).
+Alembic dan `seed_dev.py` sudah dihapus: skema database dikelola Laravel.
+Layanan ini hanya menyediakan endpoint stateless `/hitung/penilaian` dan
+`/hitung/pretest` (lihat `src/data_analytics/api.py`).
 
 ## Bank konten (fase 2)
 

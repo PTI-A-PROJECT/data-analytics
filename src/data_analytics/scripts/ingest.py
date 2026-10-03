@@ -15,14 +15,17 @@ import argparse
 from collections import Counter
 from pathlib import Path
 
-from sqlalchemy import select
-from sqlalchemy.orm import Session
+from sqlalchemy import create_engine, select
+from sqlalchemy.orm import Session, sessionmaker
 
 from data_analytics.config import get_settings
-from data_analytics.db import SessionLocal
 from data_analytics.ingest import Embedder, ingest_bank_konten
 from data_analytics.models import TingkatSeleksi
 from data_analytics.sumber_osn import BankSumber, baca_bank_soal
+
+SessionLocal = sessionmaker(
+    bind=create_engine(get_settings().database_url), autoflush=False, autocommit=False
+)
 
 URUTAN_TINGKAT = {"kabupaten": 1, "provinsi": 2}
 

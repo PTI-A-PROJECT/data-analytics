@@ -33,7 +33,7 @@ from data_analytics.repository import (
     susun_paket_simulasi,
 )
 
-MUDAH, MENENGAH, SULIT = LevelSoal.MUDAH, LevelSoal.MENENGAH, LevelSoal.SULIT
+MUDAH, SEDANG, SULIT = LevelSoal.MUDAH, LevelSoal.SEDANG, LevelSoal.SULIT
 SISWA = "siswa-1"
 
 
@@ -215,7 +215,7 @@ class TestSoalTidakTerulang:
 
 def _isi_semua_level(bank: Bank, jumlah: int = 8) -> None:
     for materi_id in ("ma", "mb"):
-        for level in (MUDAH, MENENGAH, SULIT):
+        for level in (MUDAH, SEDANG, SULIT):
             for nomor in range(jumlah):
                 bank.soal(f"{materi_id}-{level}-{nomor}", materi_id, level, nomor * 10)
 
@@ -238,7 +238,7 @@ class TestPerbaruiLevelSaatSubmit:
             assert {b.level_aktual for b in paket.soal} == {level_per_simulasi[-1]}
             _kerjakan(bank.session, paket)
 
-        assert level_per_simulasi == [MUDAH, MENENGAH, SULIT, SULIT]
+        assert level_per_simulasi == [MUDAH, SEDANG, SULIT, SULIT]
 
     def test_materi_lemah_level_tidak_turun_dan_hasil_submit_mencatat_perubahan(
         self, bank: Bank
@@ -246,7 +246,7 @@ class TestPerbaruiLevelSaatSubmit:
         _isi_pretest(bank)
         _pretest(bank)
         _isi_semua_level(bank)
-        _kerjakan(bank.session, _simulasi(bank))  # semua benar → Menengah
+        _kerjakan(bank.session, _simulasi(bank))  # semua benar → Sedang
         paket = _simulasi(bank)
 
         hasil = submit_paket(
@@ -262,10 +262,10 @@ class TestPerbaruiLevelSaatSubmit:
             (p.materi_id, p.level_sebelum, p.level_sesudah, p.lemah, p.akurasi)
             for p in hasil.perubahan_level
         ] == [
-            ("ma", MENENGAH, MENENGAH, True, 0.0),
-            ("mb", MENENGAH, SULIT, False, 100.0),
+            ("ma", SEDANG, SEDANG, True, 0.0),
+            ("mb", SEDANG, SULIT, False, 100.0),
         ]
-        assert _level_target(_simulasi(bank), "ma") == MENENGAH
+        assert _level_target(_simulasi(bank), "ma") == SEDANG
 
 
 class TestFallbackStokHabis:
@@ -279,16 +279,16 @@ class TestFallbackStokHabis:
     def test_level_terdekat_dipakai_saat_level_target_habis(self, bank: Bank) -> None:
         self._siap_simulasi(bank)
         bank.soal("ma-sulit", "ma", SULIT)
-        bank.soal("ma-menengah-1", "ma", MENENGAH)
-        bank.soal("ma-menengah-2", "ma", MENENGAH)
+        bank.soal("ma-sedang-1", "ma", SEDANG)
+        bank.soal("ma-sedang-2", "ma", SEDANG)
 
         paket = _simulasi(bank)
 
         assert {
             (b.soal_id, b.level_target, b.level_aktual, b.alasan) for b in _soal_materi(paket, "ma")
         } == {
-            ("ma-menengah-1", MUDAH, MENENGAH, AlasanPilihSoal.FALLBACK_LEVEL),
-            ("ma-menengah-2", MUDAH, MENENGAH, AlasanPilihSoal.FALLBACK_LEVEL),
+            ("ma-sedang-1", MUDAH, SEDANG, AlasanPilihSoal.FALLBACK_LEVEL),
+            ("ma-sedang-2", MUDAH, SEDANG, AlasanPilihSoal.FALLBACK_LEVEL),
         }
 
     def test_jarak_level_sama_yang_lebih_mudah_dulu(self, bank: Bank) -> None:
@@ -297,29 +297,29 @@ class TestFallbackStokHabis:
         for materi_id in ("ma", "mb"):
             for nomor in range(2):
                 bank.soal(f"{materi_id}-mudah-{nomor}", materi_id, MUDAH)
-        _kerjakan(bank.session, _simulasi(bank))  # semua benar → Menengah
+        _kerjakan(bank.session, _simulasi(bank))  # semua benar → Sedang
         for nomor in range(2):
             bank.soal(f"ma-mudah-baru-{nomor}", "ma", MUDAH)
             bank.soal(f"ma-sulit-{nomor}", "ma", SULIT)
-            bank.soal(f"mb-menengah-{nomor}", "mb", MENENGAH)
+            bank.soal(f"mb-sedang-{nomor}", "mb", SEDANG)
 
         paket = _simulasi(bank)
 
         assert {(b.level_target, b.level_aktual) for b in _soal_materi(paket, "ma")} == {
-            (MENENGAH, MUDAH)
+            (SEDANG, MUDAH)
         }
 
     def test_materi_lemah_level_terdekat_tetap_lewat_vector_search(self, bank: Bank) -> None:
         self._siap_simulasi(bank, salah={"ma"})  # acuan ma: 0° & 90°
-        bank.soal("ma-menengah-5", "ma", MENENGAH, 5)
-        bank.soal("ma-menengah-85", "ma", MENENGAH, 85)
-        bank.soal("ma-menengah-200", "ma", MENENGAH, 200)
+        bank.soal("ma-sedang-5", "ma", SEDANG, 5)
+        bank.soal("ma-sedang-85", "ma", SEDANG, 85)
+        bank.soal("ma-sedang-200", "ma", SEDANG, 200)
 
         paket = _simulasi(bank)
 
         assert {(b.soal_id, b.alasan) for b in _soal_materi(paket, "ma")} == {
-            ("ma-menengah-5", AlasanPilihSoal.FALLBACK_LEVEL),
-            ("ma-menengah-85", AlasanPilihSoal.FALLBACK_LEVEL),
+            ("ma-sedang-5", AlasanPilihSoal.FALLBACK_LEVEL),
+            ("ma-sedang-85", AlasanPilihSoal.FALLBACK_LEVEL),
         }
 
     def test_soal_lama_diulang_yang_paling_lama_tidak_muncul_dulu(self, bank: Bank) -> None:
@@ -407,7 +407,7 @@ class TestSoalNonaktif:
         for nomor in range(3):
             bank.soal(f"ma-mati-{nomor}", "ma", MUDAH)
             bank.soal(f"mb-{nomor}", "mb", MUDAH)
-        bank.soal("ma-hidup", "ma", MENENGAH)
+        bank.soal("ma-hidup", "ma", SEDANG)
         for soal in bank.session.scalars(select(Soal).where(Soal.id.like("ma-mati-%"))):
             soal.aktif = False
         bank.session.flush()

@@ -5,7 +5,7 @@ import pytest
 from data_analytics.kenaikan import evaluasi_jalur_cepat, evaluasi_jalur_simulasi
 from data_analytics.models import LevelSoal
 
-M, N, S = LevelSoal.MUDAH, LevelSoal.MENENGAH, LevelSoal.SULIT
+M, N, S = LevelSoal.MUDAH, LevelSoal.SEDANG, LevelSoal.SULIT
 
 
 class TestEvaluasiJalurCepat:

@@ -96,9 +96,9 @@ class TestSubmitSimulasi:
             (p["materi_id"], p["level_sebelum"], p["level_sesudah"], p["lemah"])
             for p in body["perubahan_level"]
         ] == [
-            ("m-a-1", "mudah", "menengah", False),
-            ("m-b-1", "mudah", "menengah", False),
-            ("m-c-1", "mudah", "menengah", False),
+            ("m-a-1", "mudah", "sedang", False),
+            ("m-b-1", "mudah", "sedang", False),
+            ("m-c-1", "mudah", "sedang", False),
         ]
         assert body["evaluasi_jalur_simulasi"] == {
             "lulus": True,

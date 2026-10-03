@@ -153,7 +153,7 @@ class TestIngestBankKonten:
         ingest(session, kabupaten, embedder, [MATERI_GRAPH], [soal_masukan("s-1", "m-graph")])
         embedder_kedua = EmbedderPalsu({"graph": 0})
         direvisi = replace(
-            soal_masukan("s-1", "m-graph", level=LevelSoal.MENENGAH),
+            soal_masukan("s-1", "m-graph", level=LevelSoal.SEDANG),
             pilihan_jawaban={"A": "10", "B": "20"},
         )
 
@@ -163,7 +163,7 @@ class TestIngestBankKonten:
         assert embedder_kedua.teks_di_embed == []
         soal = session.get(Soal, "s-1")
         assert soal is not None
-        assert soal.level is LevelSoal.MENENGAH
+        assert soal.level is LevelSoal.SEDANG
         assert soal.pilihan_jawaban == {"A": "10", "B": "20"}
 
     def test_teks_berubah_dihitung_ulang_hanya_untuk_yang_berubah(
@@ -279,17 +279,17 @@ class TestIngestBankKonten:
 
         assert laporan.stok == {
             ("m-graph", LevelSoal.MUDAH): 2,
-            ("m-graph", LevelSoal.MENENGAH): 0,
+            ("m-graph", LevelSoal.SEDANG): 0,
             ("m-graph", LevelSoal.SULIT): 1,
             ("m-sorting", LevelSoal.MUDAH): 0,
-            ("m-sorting", LevelSoal.MENENGAH): 0,
+            ("m-sorting", LevelSoal.SEDANG): 0,
             ("m-sorting", LevelSoal.SULIT): 0,
         }
         assert laporan.stok_tipis == [
-            ("m-graph", LevelSoal.MENENGAH),
+            ("m-graph", LevelSoal.SEDANG),
             ("m-graph", LevelSoal.SULIT),
             ("m-sorting", LevelSoal.MUDAH),
-            ("m-sorting", LevelSoal.MENENGAH),
+            ("m-sorting", LevelSoal.SEDANG),
             ("m-sorting", LevelSoal.SULIT),
         ]
 

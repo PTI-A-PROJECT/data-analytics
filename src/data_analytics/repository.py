@@ -531,15 +531,15 @@ def susun_paket_pretest(session: Session, *, siswa_id: str, tingkat_seleksi_id: 
     aturan = get_or_create_aturan_adaptif(session, tingkat_seleksi_id)
     total = aturan.jumlah_soal_pretest
 
-    # Distribusi 50% Mudah, 30% Menengah, 20% Sulit
+    # Distribusi 50% Mudah, 30% Sedang, 20% Sulit
     n_mudah = round(total * DISTRIBUSI_PRETEST["mudah"])
-    n_menengah = round(total * DISTRIBUSI_PRETEST["menengah"])
-    n_sulit = total - n_mudah - n_menengah
+    n_sedang = round(total * DISTRIBUSI_PRETEST["sedang"])
+    n_sulit = total - n_mudah - n_sedang
 
     terpilih: list[Soal] = []
     for level, jumlah in [
         (LevelSoal.MUDAH, n_mudah),
-        (LevelSoal.MENENGAH, n_menengah),
+        (LevelSoal.SEDANG, n_sedang),
         (LevelSoal.SULIT, n_sulit),
     ]:
         if jumlah == 0:
@@ -641,7 +641,7 @@ def susun_paket_latihan(
 def susun_paket_simulasi(
     session: Session, *, siswa_id: str, tingkat_seleksi_id: int, seed: int | None = None
 ) -> PaketTes:
-    """Paket simulasi STATIS v1: 30% Mudah, 40% Menengah, 30% Sulit.
+    """Paket simulasi STATIS v1: 30% Mudah, 40% Sedang, 30% Sulit.
     Distribusi dibagi rata per Materi. Adaptive di-hold untuk fase 2.
     """
     if session.get(TingkatSeleksi, tingkat_seleksi_id) is None:
@@ -680,15 +680,15 @@ def susun_paket_simulasi(
     aturan = get_or_create_aturan_adaptif(session, tingkat_seleksi_id)
     total = aturan.jumlah_soal_simulasi
 
-    # Distribusi 30% Mudah, 40% Menengah, 30% Sulit
+    # Distribusi 30% Mudah, 40% Sedang, 30% Sulit
     n_mudah = round(total * DISTRIBUSI_SIMULASI["mudah"])
-    n_menengah = round(total * DISTRIBUSI_SIMULASI["menengah"])
-    n_sulit = total - n_mudah - n_menengah
+    n_sedang = round(total * DISTRIBUSI_SIMULASI["sedang"])
+    n_sulit = total - n_mudah - n_sedang
 
     terpilih: list[Soal] = []
     for level, jumlah in [
         (LevelSoal.MUDAH, n_mudah),
-        (LevelSoal.MENENGAH, n_menengah),
+        (LevelSoal.SEDANG, n_sedang),
         (LevelSoal.SULIT, n_sulit),
     ]:
         if jumlah == 0:

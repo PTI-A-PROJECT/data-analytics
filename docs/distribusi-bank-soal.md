@@ -10,11 +10,11 @@ Kondisi per 30 September 2026: soal aktif di vector database (pgvector) hasil in
 | Provinsi | 790 | 254 (32,2%) | 536 (67,8%) | 2006–2026 |
 | **Total** | **1.719** | **1.018** | **701** | |
 
-Materi mengikuti kelompok materi osn.toki.id per jenjang. Level Soal: mudah, menengah, sulit.
+Materi mengikuti kelompok materi osn.toki.id per jenjang. Level Soal: mudah, sedang, sulit.
 
 ## Kabupaten (929 soal)
 
-| Materi | Mudah | Menengah | Sulit | Total | Porsi |
+| Materi | Mudah | Sedang | Sulit | Total | Porsi |
 |---|--:|--:|--:|--:|--:|
 | Aljabar Boolean & Teori Himpunan | 33 | 31 | 9 | **73** | 7,9% |
 | Graf & Geometri | 23 | 56 | 12 | **91** | 9,8% |
@@ -26,7 +26,7 @@ Materi mengikuti kelompok materi osn.toki.id per jenjang. Level Soal: mudah, men
 
 ## Provinsi (790 soal)
 
-| Materi | Mudah | Menengah | Sulit | Total | Porsi |
+| Materi | Mudah | Sedang | Sulit | Total | Porsi |
 |---|--:|--:|--:|--:|--:|
 | Dasar-dasar Pemrograman | 78 | 24 | 14 | **116** | 14,7% |
 | Operasi Logika dan Bitwise | 57 | 28 | 12 | **97** | 12,3% |
@@ -74,8 +74,8 @@ Materi mengikuti kelompok materi osn.toki.id per jenjang. Level Soal: mudah, men
 
 - **Stok paling tipis:** Geometri Dasar sulit di Provinsi, 2 soal, tepat di batas stok minimum (2). Berikutnya Struktur Data sulit (5) dan Pencarian dan Pengurutan sulit (6). Untuk kombinasi ini mesin adaptif lebih cepat mengulang soal atau jatuh ke fallback level terdekat.
 - **Komposisi berbeda antarjenjang:**
-  - Kabupaten didominasi pilihan ganda (82,2%) dan level menengah (43,5%).
-  - Provinsi didominasi isian singkat (67,8%), dengan porsi mudah dan menengah hampir seimbang.
+  - Kabupaten didominasi pilihan ganda (82,2%) dan level sedang (43,5%).
+  - Provinsi didominasi isian singkat (67,8%), dengan porsi mudah dan sedang hampir seimbang.
 - **Soal dengan gambar atau potongan kode** perlu dirender oleh frontend:
   - Kabupaten: 106 soal bergambar, 180 berkode.
   - Provinsi: 27 soal bergambar, 158 berkode.

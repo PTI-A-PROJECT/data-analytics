@@ -108,14 +108,14 @@ class TestMateri:
 class TestSoal:
     def test_simpan_dan_baca(self, session: Session) -> None:
         materi = _materi(session, _tingkat_seleksi(session))
-        session.add(_soal(materi, id="s-1", level=LevelSoal.MENENGAH))
+        session.add(_soal(materi, id="s-1", level=LevelSoal.SEDANG))
         session.flush()
         session.expire_all()
 
         soal = session.get(Soal, "s-1")
 
         assert soal is not None
-        assert soal.level is LevelSoal.MENENGAH
+        assert soal.level is LevelSoal.SEDANG
         assert soal.pilihan_jawaban["B"] == "2"
         assert len(soal.embedding) == DIMENSI_EMBEDDING
 

@@ -71,7 +71,7 @@ def folder(tmp_path: Path) -> Path:
         {
             "label": {
                 "kab-2020-001": ["kab-a", "mudah"],
-                "kab-2020-003": ["kab-a", "menengah"],
+                "kab-2020-003": ["kab-a", "sedang"],
                 "kab-2020-004": ["kab-a", "sulit"],
                 "kab-2020-005": ["kab-a", "mudah"],
                 "kab-2020-006": ["kab-a", "mudah"],
