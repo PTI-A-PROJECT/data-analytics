@@ -6,26 +6,26 @@ from data_analytics.scoring import cocokkan_jawaban, hitung_skor, tentukan_predi
 
 class TestHitungSkor:
     def test_semua_benar(self) -> None:
-        assert hitung_skor(jumlah_benar=10, total_soal=10) == 100.0
+        assert hitung_skor(bobot_benar=10, bobot_total=10) == 100.0
 
     def test_semua_salah(self) -> None:
-        assert hitung_skor(jumlah_benar=0, total_soal=10) == 0.0
+        assert hitung_skor(bobot_benar=0, bobot_total=10) == 0.0
 
     def test_persentase_dibulatkan_dua_desimal(self) -> None:
         # 7/9 = 77.777...
-        assert hitung_skor(jumlah_benar=7, total_soal=9) == 77.78
+        assert hitung_skor(bobot_benar=7, bobot_total=9) == 77.78
 
     def test_total_soal_nol_menaikkan_error(self) -> None:
-        with pytest.raises(ValueError, match="total_soal"):
-            hitung_skor(jumlah_benar=0, total_soal=0)
+        with pytest.raises(ValueError, match="bobot_total"):
+            hitung_skor(bobot_benar=0, bobot_total=0)
 
     def test_jumlah_benar_melebihi_total_soal_menaikkan_error(self) -> None:
-        with pytest.raises(ValueError, match="jumlah_benar"):
-            hitung_skor(jumlah_benar=11, total_soal=10)
+        with pytest.raises(ValueError, match="bobot_benar"):
+            hitung_skor(bobot_benar=11, bobot_total=10)
 
     def test_jumlah_benar_negatif_menaikkan_error(self) -> None:
-        with pytest.raises(ValueError, match="jumlah_benar"):
-            hitung_skor(jumlah_benar=-1, total_soal=10)
+        with pytest.raises(ValueError, match="bobot_benar"):
+            hitung_skor(bobot_benar=-1, bobot_total=10)
 
 
 class TestTentukanPredikat:
@@ -66,8 +66,6 @@ class TestTentukanPredikat:
             tentukan_predikat(50.0, [])
 
     def test_tidak_ada_predikat_batas_bawah_nol_menaikkan_error(self) -> None:
-        # aturan tanpa predikat "dasar" (batas_bawah=0) berarti ada skor yang tidak
-        # tertampung oleh predikat manapun - ini config yang tidak valid.
         tanpa_dasar = [("Sangat Baik", 90), ("Baik", 80)]
         with pytest.raises(ValueError, match="batas_bawah=0"):
             tentukan_predikat(50.0, tanpa_dasar)
