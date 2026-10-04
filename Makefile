@@ -1,4 +1,4 @@
-.PHONY: up dev-up down migrate test test-db-up test-db-down anonymize anonymize-dry-run backup-db
+.PHONY: up dev-up down test test-db-up test-db-down backup-db
 
 # Deployment pilot (co-located, port tidak diekspos ke host) — butuh
 # `docker network create app-network` sekali saja, dibuat oleh stack aplikasi
@@ -13,9 +13,6 @@ dev-up:
 down:
 	docker compose down
 
-migrate:
-	docker compose exec analytics-api uv run --no-sync alembic upgrade head
-
 test:
 	uv run pytest
 
@@ -27,18 +24,6 @@ test-db-up:
 
 test-db-down:
 	docker rm -f analytics-test-db
-
-# Cron bulanan UU PDP (lihat .scratch/osn-data-analytics/issues/12-...) —
-# contoh crontab ada di bawah.
-anonymize:
-	docker compose exec analytics-api curl -s -X POST \
-		-H "X-Internal-Token: $${INTERNAL_API_TOKEN}" \
-		http://localhost:8000/api/v1/admin/anonymize-expired
-
-anonymize-dry-run:
-	docker compose exec analytics-api curl -s -X POST \
-		-H "X-Internal-Token: $${INTERNAL_API_TOKEN}" \
-		"http://localhost:8000/api/v1/admin/anonymize-expired?dry_run=true"
 
 # Dump manual analytics-db ke ./backups/ (buat direktori itu dulu kalau belum
 # ada). Jadwalkan lewat cron VPS untuk backup berkala — lihat README bagian

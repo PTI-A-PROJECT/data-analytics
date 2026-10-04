@@ -7,7 +7,7 @@ import pytest
 from data_analytics.adaptif import LevelSoalSiswaMateri, alokasi_kuota, perbarui_level
 from data_analytics.models import LevelSoal
 
-MUDAH, MENENGAH, SULIT = LevelSoal.MUDAH, LevelSoal.MENENGAH, LevelSoal.SULIT
+MUDAH, SEDANG, SULIT = LevelSoal.MUDAH, LevelSoal.SEDANG, LevelSoal.SULIT
 
 
 def _perbarui(level: LevelSoal, jumlah_soal: int, jumlah_benar: int) -> LevelSoalSiswaMateri:
@@ -23,11 +23,11 @@ def _perbarui(level: LevelSoal, jumlah_soal: int, jumlah_benar: int) -> LevelSoa
 
 class TestPerbaruiLevel:
     def test_akurasi_tepat_ambang_naik_menaikkan_satu_level(self) -> None:
-        assert _perbarui(MUDAH, 5, 4) == LevelSoalSiswaMateri(level=MENENGAH, lemah=False, akurasi=80.0)
+        assert _perbarui(MUDAH, 5, 4) == LevelSoalSiswaMateri(level=SEDANG, lemah=False, akurasi=80.0)
 
     def test_akurasi_di_bawah_ambang_naik_level_tetap(self) -> None:
-        assert _perbarui(MENENGAH, 10, 7) == LevelSoalSiswaMateri(
-            level=MENENGAH, lemah=False, akurasi=70.0
+        assert _perbarui(SEDANG, 10, 7) == LevelSoalSiswaMateri(
+            level=SEDANG, lemah=False, akurasi=70.0
         )
 
     def test_akurasi_tepat_ambang_lemah_tidak_lemah(self) -> None:
@@ -46,10 +46,10 @@ class TestPerbaruiLevel:
             lemah, jumlah_soal=2, jumlah_benar=2, kuota_min=2, ambang_naik=80, ambang_lemah=50
         )
 
-        assert hasil == LevelSoalSiswaMateri(level=MENENGAH, lemah=False, akurasi=100.0)
+        assert hasil == LevelSoalSiswaMateri(level=SEDANG, lemah=False, akurasi=100.0)
 
     def test_materi_di_bawah_kuota_min_tidak_berubah(self) -> None:
-        sekarang = LevelSoalSiswaMateri(level=MENENGAH, lemah=True, akurasi=20.0)
+        sekarang = LevelSoalSiswaMateri(level=SEDANG, lemah=True, akurasi=20.0)
 
         hasil = perbarui_level(
             sekarang, jumlah_soal=1, jumlah_benar=1, kuota_min=2, ambang_naik=80, ambang_lemah=50

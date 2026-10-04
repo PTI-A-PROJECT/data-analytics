@@ -79,17 +79,17 @@ MATERI_INTI: dict[str, list[str]] = {
 # Setelah gagal 3x → wajib pre-test ulang untuk reset kuota.
 MAX_PERCOBAAN_SIMULASI: int = 3
 
-# Distribusi level soal untuk pre-test (50% Mudah, 30% Menengah, 20% Sulit).
-# Catatan: enum di models.py bernama MENENGAH (bukan SEDANG).
+# Distribusi level soal untuk pre-test (50% Mudah, 30% Sedang, 20% Sulit).
+# Catatan: enum di models.py = SEDANG, konsisten dengan DB Laravel.
 DISTRIBUSI_PRETEST: dict[str, float] = {
     "mudah": 0.50,
-    "menengah": 0.30,
+    "sedang": 0.30,
     "sulit": 0.20,
 }
 
-# Distribusi level soal untuk simulasi (30% Mudah, 40% Menengah, 30% Sulit).
+# Distribusi level soal untuk simulasi (30% Mudah, 40% Sedang, 30% Sulit).
 DISTRIBUSI_SIMULASI: dict[str, float] = {
     "mudah": 0.30,
-    "menengah": 0.40,
+    "sedang": 0.40,
     "sulit": 0.30,
 }

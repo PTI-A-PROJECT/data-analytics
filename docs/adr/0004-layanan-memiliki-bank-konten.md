@@ -26,7 +26,7 @@ Decision:
   `soal` seed tables are removed (migration `0005`).
 - **Materi is the unit of evaluation**, replacing Subkompetensi. Each Soal is tagged
   to exactly one Materi. Materi has no difficulty; only Soal has a Level Soal
-  (mudah/menengah/sulit), taken from the source data (questions come already grouped
+  (mudah/sedang/sulit), taken from the source data (questions come already grouped
   per Materi and difficulty) and never recalibrated from answer data. (An earlier plan
   to label difficulty with a local LLM was dropped: the data already carries it, and
   VPS memory is 4-8 GB shared with other apps.)

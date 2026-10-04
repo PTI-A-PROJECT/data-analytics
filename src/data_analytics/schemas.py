@@ -14,12 +14,6 @@ from pydantic import BaseModel, Field
 
 from data_analytics.models import JenisTes, LevelSoal, StatusAkses, StatusPemetaan, TipeSoal
 
-STATUS_PEMETAAN_LABEL: dict[StatusPemetaan, str] = {
-    StatusPemetaan.CUKUP: "Cukup",
-    StatusPemetaan.BELUM_CUKUP: "Belum Cukup",
-    StatusPemetaan.BELUM_TERUJI: "Belum Teruji",
-}
-
 
 # --- Akses tingkat & aturan kenaikan (tiket 03, fase 2 issue 02) ------------
 
@@ -427,3 +421,87 @@ class ReviewSoalItem(BaseModel):
     kunci_jawaban: str
     is_benar: bool
     pembahasan: str | None
+
+# --- Endpoint stateless /hitung/* (dipanggil Laravel) -------------------------
+
+
+class HitungSoalItem(BaseModel):
+    soal_id: str
+    level: LevelSoal
+    tipe: TipeSoal = TipeSoal.PILIHAN_GANDA
+    kunci: str
+    jawaban: str | None = None
+    materi_id: str | None = None
+
+
+class HitungAturanPredikat(BaseModel):
+    label: str
+    batas_bawah: float = Field(ge=0, le=100)
+
+
+class HitungPenilaianRequest(BaseModel):
+    soal: list[HitungSoalItem] = Field(min_length=1)
+    aturan_predikat: list[HitungAturanPredikat] | None = None
+
+
+class HitungHasilSoalItem(BaseModel):
+    soal_id: str
+    benar: bool
+    bobot: int
+
+
+class HitungPenilaianResponse(BaseModel):
+    skor: float
+    bobot_benar: int
+    bobot_total: int
+    jumlah_soal: int
+    jumlah_benar: int
+    jumlah_salah: int
+    predikat: str | None
+    hasil_soal: list[HitungHasilSoalItem]
+
+
+class HitungPretestRequest(HitungPenilaianRequest):
+    ambang_lemah: float = Field(default=60.0, ge=0, le=100)
+    ambang_kuat: float = Field(default=80.0, ge=0, le=100)
+
+
+class HitungPetaMateriItem(BaseModel):
+    materi_id: str
+    jumlah_soal: int
+    jumlah_benar: int
+    bobot_total: int
+    bobot_benar: int
+    akurasi: float
+    status: StatusPemetaan
+
+
+class HitungPretestResponse(HitungPenilaianResponse):
+    pemetaan: list[HitungPetaMateriItem]
+    materi_lemah: list[str]
+
+
+class HitungSimulasiRequest(HitungPretestRequest):
+    tingkat: Literal["kabupaten", "provinsi"]
+
+
+class HitungSimulasiResponse(HitungPretestResponse):
+    passing_grade: float
+    lulus: bool
+
+
+class HitungLatihanRequest(BaseModel):
+    soal: list[HitungSoalItem] = Field(min_length=1)
+    threshold: float = Field(default=50.0, ge=0, le=100)
+
+
+class HitungAkurasiMateriItem(BaseModel):
+    materi_id: str
+    akurasi: float
+    lulus: bool
+
+
+class HitungLatihanResponse(BaseModel):
+    skor: float
+    lulus: bool
+    akurasi_per_materi: list[HitungAkurasiMateriItem]

@@ -90,7 +90,7 @@ kesulitan.
 _Avoid_: Topik, bab, level materi
 
 **Level Soal**:
-Tingkat kesulitan satu Soal: Mudah, Menengah, atau Sulit. Berasal dari data sumber
+Tingkat kesulitan satu Soal: Mudah, Sedang, atau Sulit. Berasal dari data sumber
 (soal sudah dikelompokkan per Materi dan per tingkat kesulitan), tidak dikalibrasi ulang
 dari data jawaban.
 _Avoid_: Level materi, bobot soal

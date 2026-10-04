@@ -11,7 +11,7 @@ from data_analytics.models import LevelSoal
 
 NILAI_LEVEL: dict[LevelSoal, int] = {
     LevelSoal.MUDAH: 1,
-    LevelSoal.MENENGAH: 2,
+    LevelSoal.SEDANG: 2,
     LevelSoal.SULIT: 3,
 }
 
@@ -38,7 +38,7 @@ def evaluasi_jalur_simulasi(
 ) -> HasilEvaluasiJalurSimulasi:
     """Lulus kalau DALAM SATU attempt simulasi: skor >= skor_simulasi_min DAN
     rata-rata Level Soal Siswa atas SEMUA Materi tingkat itu (Mudah=1,
-    Menengah=2, Sulit=3, level setelah diperbarui simulasi tsb.) >=
+    Sedang=2, Sulit=3, level setelah diperbarui simulasi tsb.) >=
     rata_level_min. Kedua ambang inklusif.
     """
     if not level_per_materi:

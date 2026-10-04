@@ -85,7 +85,7 @@ def main():
         print("Seed soal...")
         total_soal = 0
         for materi in materi_list:
-            for level in [LevelSoal.MUDAH, LevelSoal.MENENGAH, LevelSoal.SULIT]:
+            for level in [LevelSoal.MUDAH, LevelSoal.SEDANG, LevelSoal.SULIT]:
                 for n in range(5):
                     s = Soal(
                         id=f"{materi.id}-{level.value}-{n}",

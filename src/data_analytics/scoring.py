@@ -17,7 +17,7 @@ from data_analytics.models import LevelSoal, TipeSoal
 
 BOBOT_LEVEL: dict[LevelSoal, int] = {
     LevelSoal.MUDAH: 1,
-    LevelSoal.MENENGAH: 2,
+    LevelSoal.SEDANG: 2,
     LevelSoal.SULIT: 3,
 }
 

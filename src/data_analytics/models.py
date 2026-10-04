@@ -53,7 +53,7 @@ class StatusPemetaan(enum.StrEnum):
     """Klasifikasi Subkompetensi dari algoritma Pemetaan Kompetensi (FR-07) —
     lihat CONTEXT.md "Status Pemetaan" dan resolusi tiket 11.
     """
-
+    KUAT = "kuat"
     CUKUP = "cukup"
     BELUM_CUKUP = "belum_cukup"
     BELUM_TERUJI = "belum_teruji"
@@ -226,7 +226,7 @@ class LevelSoal(enum.StrEnum):
     """
 
     MUDAH = "mudah"
-    MENENGAH = "menengah"
+    SEDANG = "sedang"
     SULIT = "sulit"
 
 
