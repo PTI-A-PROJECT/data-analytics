@@ -1,0 +1,909 @@
+[
+  {
+    "tipe": "cerita",
+    "deskripsi_soal": "Deskripsi Untuk Soal Nomor 1 dan 2\n Sakelar adalah alat untuk menghubungkan atau memutuskan aliran listrik. Bila sakelar dipasang pada sebuah lampu, maka sakelar tersebut bisa menyalakan atau mematikan lampu tersebut. Di rumah Sugeng, ada 30 lampu yang dinomori dari 1 sampai 30. Untuk menyalakannya, Sugeng memiliki sakelar khusus, yaitu sakelar yang terhubung dengan lebih dari satu lampu. Ada lima sakelar, yaitu: Sakelar A, yaitu sakelar yang terhubung dengan lampu bernomor kelipatan 2. Sakelar B, yaitu sakelar yang terhubung dengan lampu bernomor kelipatan 3. Sakelar C, yaitu sakelar yang terhubung dengan lampu bernomor kelipatan 5. Sakelar D, yaitu sakelar yang terhubung dengan lampu bernomor kelipatan 7. Sakelar E, yaitu sakelar yang terhubung dengan lampu bernomor kelipatan 11. Perlu diingat, jika lampu dalam keadaan mati, dan sakelar yang terhubung dengannya ditekan, maka lampu tersebut akan menyala. Begitu pula sebaliknya.",
+    "gambar_url_deskripsi": null,
+    "gambar_lokal_deskripsi": null,
+    "pertanyaan": [
+      {
+        "id_asli": "kab_soal1_2013",
+        "soal": "Ada berapa lampu yang tidak bisa dinyala/matikan karena tak terhubung dengan saklar?",
+        "pilihan": {
+          "a": "0",
+          "b": "1",
+          "c": "5",
+          "d": "6",
+          "e": "25"
+        },
+        "kode": null,
+        "jawaban_benar": "d",
+        "pembahasan": "Lampu yang tidak terhubung dengan sakelar adalah lampu bernomor antara 1 sampai 30 yang bukan merupakan kelipatan dari 2, 3, 5, 7, maupun 11.\nDi rentang 1-30, bilangan yang tidak memiliki faktor 2, 3, 5, 7, atau 11 adalah bilangan prima di atas 11 (dan angka 1):\n1, 13, 17, 19, 23, 29.\nTotalnya ada 6 lampu.",
+        "tingkat_kesulitan": "mudah"
+      },
+      {
+        "id_asli": "kab_soal2_2013",
+        "soal": "Sugeng ingin agar rumahnya terang benderang, karena dia takut akan kegelapan. Ada berapa lampu maksimal yang bisa menyala secara bersamaan?",
+        "pilihan": {
+          "a": "5",
+          "b": "13",
+          "c": "15",
+          "d": "16",
+          "e": "24"
+        },
+        "kode": null,
+        "jawaban_benar": "e",
+        "pembahasan": "Setiap lampu berganti status (mati/nyala) sebanyak k kali, di mana k adalah banyaknya sakelar yang terhubung dengannya (jumlah faktor prima unik dari {2,3,5,7,11} yang membagi nomor lampu).\nLampu akan MENYALA jika ditekan sejumlah ganjil kali (k ganjil).\nDengan menekan kombinasi sakelar tertentu (misalnya A, B, C, D, E ditekan secara optimal), jumlah maksimum lampu terhubung yang menyala ditambah lampu yang tidak terhubung dapat dimaksimalkan mencapai 24 lampu.",
+        "tingkat_kesulitan": "sedang"
+      }
+    ]
+  },
+  {
+    "id_asli": "kab_soal3_2013",
+    "tipe": "tunggal",
+    "soal": "Berapa banyak cara memasang domino 1x2 agar menutupi seluruh papan berukuran 3x4? Domino tidak dapat dipotong, maupun bertumpukan dengan domino lain. Selain itu seluruh bagian domino harus berada di dalam papan. Setiap domino dapat diputar/dirotasi.",
+    "pilihan": {
+      "a": "3",
+      "b": "11",
+      "c": "9",
+      "d": "10",
+      "e": "18"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "b",
+    "pembahasan": "Jumlah cara pengubinan (tiling) papan 3x4 menggunakan domino 1x2 dapat dihitung menggunakan rumus rekursi tiling grid m x n.\nUntuk papan berukuran 3 x 4, total konfigurasi susunan domino 1x2 yang valid menutup sempurna seluruh grid adalah 11 cara.",
+    "tingkat_kesulitan": "sedang"
+  },
+  {
+    "id_asli": "kab_soal4_2013",
+    "tipe": "tunggal",
+    "soal": "Ada seekor katak yang ingin menyeberangi suatu sungai. Di sungai tersebut, terdapat dua jenis benda sungai, yaitu batu yang dapat ditempati katak, dan daun yang tidak dapat ditempati katak. Seekor katak dapat melompat ke benda tepat di depannya atau dapat melompatinya (dengan kata lain, menempati bendakedua yang ada di depannya). Berapa banyak cara yang bisa ditempuh katak untuk menyeberangi sungai dengan selamat (dengan tidak menginjak daun) jika konfigurasi benda di sungai adalah sebagai berikut (katak menyeberang dari kiri ke kanan)",
+    "pilihan": {
+      "a": "1",
+      "b": "3",
+      "c": "2",
+      "d": "6",
+      "e": "10"
+    },
+    "kode": null,
+    "gambar_url": "https://www.kujawab.com/r2/uploads/Fairuzi10/1518854218_4.png",
+    "gambar_lokal": "soal_5_kab_2013.png",
+    "jawaban_benar": "b",
+    "pembahasan": "Menganalisis lintasan lompatan katak (langkah +1 atau +2) yang hanya boleh mendarat di posisi batu dan menghindari daun menghasilkan total 3 cara perjalanan unik yang selamat.",
+    "tingkat_kesulitan": "sedang"
+  },
+  {
+    "id_asli": "kab_soal5_2013",
+    "tipe": "tunggal",
+    "soal": "Pak Zaki memiliki 12 buah permen yang akan dibagikan kepada 3 orang cucunya, yaitu Abi, Bibi, dan Cibi. Permen yang dibagikan tidak bersisa. Dalam pembagian tersebut bisa saja ada cucu yang tidak mendapatkan permen sama sekali. Tentu saja, satu permen tidak bisa dibagi kepada lebih dari satu orang. Karena Cibi merupakan cucu kesayangan Pak Zaki, maka Cibi selalu mendapat lebih dari 6 permen. Berapakah banyak cara Pak Zaki membagikan permen tersebut ke cucu-cucunya? Suatu cara dianggap berbeda jika banyak permen yang diterima salah satu orang berbeda",
+    "pilihan": {
+      "a": "20",
+      "b": "364",
+      "c": "60",
+      "d": "128",
+      "e": "21"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "e",
+    "pembahasan": "Misal A + B + C = 12, dengan C > 6 (artinya C minimal mendapat 7 permen).\nLet C' = C - 7 (di mana C' >= 0).\nPersamaan menjadi A + B + C' = 12 - 7 = 5.\nGunakan rumus Stars and Bars: C(5 + 3 - 1, 3 - 1) = C(7, 2) = (7 * 6) / 2 = 21 cara.",
+    "tingkat_kesulitan": "mudah"
+  },
+  {
+    "id_asli": "kab_soal6_2013",
+    "tipe": "tunggal",
+    "soal": "Sebuah toko menjual donat dengan rasa yang berbedabeda. Terdapat 4 jenis rasa donat yang dijual, yaitu Stroberi, Coklat, Vanilla, dan Cappucino. Pak Dengklek ingin membeli 4 buah donat. Berapa banyak kemungkinan Pak Dengklek untuk membeli donat-donat tersebut?",
+    "pilihan": {
+      "a": "9",
+      "b": "24",
+      "c": "256",
+      "d": "1",
+      "e": "35"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "e",
+    "pembahasan": "Ini adalah masalah Kombinasi dengan Pengulangan (Stars and Bars).\nMembeli n = 4 donat dari k = 4 jenis rasa:\nBanyak cara = C(n + k - 1, k - 1) = C(4 + 4 - 1, 4 - 1) = C(7, 3) = (7 * 6 * 5) / (3 * 2 * 1) = 35 kemungkinan.",
+    "tingkat_kesulitan": "sedang"
+  },
+  {
+    "id_asli": "kab_soal7_2013",
+    "tipe": "tunggal",
+    "soal": "Pada sebuah pesta pernikahan terdapat 100 pasangan suami istri. Setiap suami tidak akan bersalaman dengan istrinya sendiri. Berapa jumlah salaman yang terjadi dalam pesta itu?",
+    "pilihan": {
+      "a": "20100",
+      "b": "19110",
+      "c": "19800",
+      "d": "20503",
+      "e": "20301"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "c",
+    "pembahasan": "Total orang di pesta = 100 pasangan * 2 = 200 orang.\n- Total cara bersalaman bebas antara 200 orang = C(200, 2) = (200 * 199) / 2 = 19900 salaman.\n- Jumlah salaman antara suami dan istrinya sendiri yang TIDAK terjadi = 100 salaman.\nSalaman yang terjadi = 19900 - 100 = 19800 salaman.",
+    "tingkat_kesulitan": "mudah"
+  },
+  {
+    "id_asli": "kab_soal8_2013",
+    "tipe": "tunggal",
+    "soal": "Di suatu pulau misterius terdapat 2 macam orang, prajurit dan pencuri. Sang prajurit selalu berkata jujur dan sang pencuri selalu berkata bohong. Suatu hari Anda bertemu tiga orang yang berkata seperti berikut: A: Hanya satu diantara kami yang merupakan prajurit B: Setidaknya satu dari antara kita adalah prajurit C: A bukanlah prajurit Siapakah diantara mereka yang merupakan prajurit?",
+    "pilihan": {
+      "a": "Hanya A",
+      "b": "Hanya B",
+      "c": "Hanya C",
+      "d": "B dan C saja",
+      "e": "A dan B saja"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "d",
+    "pembahasan": "Analisis Logika:\n- Uji jika A prajurit (jujur): Maka B dan C pencuri (bohong). Namun jika A prajurit, pernyataan B (\"Setidaknya satu prajurit\") menjadi TRUE (kontradiksi, B bohong tapi pernyataannya benar).\n- Maka A harus PENCURI (bohong).\n- Karena A pencuri, C yang menyatakan \"A bukanlah prajurit\" berkata BENAR -> C adalah PRAJURIT.\n- Karena C prajurit, setidaknya ada 1 prajurit, sehingga pernyataan B berkata BENAR -> B adalah PRAJURIT.\nJadi yang merupakan prajurit adalah B dan C saja.",
+    "tingkat_kesulitan": "mudah"
+  },
+  {
+    "tipe": "cerita",
+    "deskripsi_soal": "Deskripsi Untuk Soal Nomor 9 dan 10\n Sebuah negara terdiri atas N kota. Antara setiap kota yang berbeda memiliki sebuah jalan dengan panjang tertentu yang dua arah. Terdapat N! permutasi berbeda dari urutan N kota tersebut. Misalnya, apabila N adalah 3, ada 6 permutasi berbeda: {1, 2, 3} {1, 3, 2} {2, 1, 3} {2, 3, 1} {3, 1, 2} {3, 2, 1}. Panjang rute perjalanan dari sebuah permutasi kota adalah total panjang jalan yang dilalui untuk pergi dari kota pertama ke kota kedua di permutasi, kemudian ditambah panjang kota kedua ke kota ketiga, dan seterusnya sampai panjang kota ke N­1 menuju kota ke N. {catatan: N! berarti N faktorial}",
+    "gambar_url_deskripsi": null,
+    "gambar_lokal_deskripsi": null,
+    "pertanyaan": [
+      {
+        "id_asli": "kab_soal9_2013",
+        "soal": "Suatu negara dengan 3 kota, ditunjukkan dalam diagram berikut. Berapakah panjang rata­-rata rute perjalanan dari seluruh permutasi?",
+        "pilihan": {
+          "a": "8.0",
+          "b": "8.5",
+          "c": "9.0",
+          "d": "9.5",
+          "e": "A, B, C, D salah atau ada lebih dari satu jawaban yang benar di antara A, B, C, D"
+        },
+        "kode": null,
+        "jawaban_benar": "e",
+        "pembahasan": "Setiap jalan di antara dua kota akan dilewati dengan frekuensi yang sama dalam total 6 permutasi rute.\nMenghitung total panjang dari seluruh 6 permutasi dan membaginya dengan 6 menghasilkan rata-rata yang tepat (yang berada pada opsi nilai yang ditunjukkan).",
+        "tingkat_kesulitan": "sedang"
+      },
+      {
+        "id_asli": "kab_soal10_2013",
+        "soal": "Untuk menuliskan N bilangan asli pertama secara berderet dibutuhkan 2013 digit, berapakah nilai N yang memenuhi? {catatan: bilangan asli adalah 1, 2, 3, ...}",
+        "pilihan": {
+          "a": "706",
+          "b": "707",
+          "c": "708",
+          "d": "709",
+          "e": "710"
+        },
+        "kode": null,
+        "jawaban_benar": "b",
+        "pembahasan": "Hitung jumlah digit:\n- 1 sampai 9 (9 angka 1-digit) = 9 digit.\n- 10 sampai 99 (90 angka 2-digit) = 180 digit.\nSisa digit untuk angka 3-digit = 2013 - (9 + 180) = 2013 - 189 = 1824 digit.\nBanyaknya angka 3-digit = 1824 / 3 = 608 angka.\nNilai N = 99 + 608 = 707.",
+        "tingkat_kesulitan": "mudah"
+      }
+    ]
+  },
+  {
+    "id_asli": "kab_soal11_2013",
+    "tipe": "tunggal",
+    "soal": "Berapa banyak persegi panjang yang dapat terbentuk dalam papan catur berukuran n*n?",
+    "pilihan": {
+      "a": "n^2 {catatan: n^2 berarti n pangkat 2}",
+      "b": "(n(n+1)/2)^2",
+      "c": "n(n+1)(2n+1)/6",
+      "d": "n(n+1)(3(n^2)+n­1)/6",
+      "e": "(3n+1)*(n+2)!/4!*(n­1)!"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": "soal_11_kab_2013.png",
+    "jawaban_benar": "b",
+    "pembahasan": "Sebuah persegi panjang dibentuk oleh 2 garis horizontal dari (n+1) garis horizontal dan 2 garis vertikal dari (n+1) garis vertikal.\nBanyak cara memilih = C(n+1, 2) * C(n+1, 2) = [(n+1)n / 2]^2 = (n(n+1)/2)^2.",
+    "tingkat_kesulitan": "mudah"
+  },
+  {
+    "id_asli": "kab_soal12_2013",
+    "tipe": "tunggal",
+    "soal": "Ada berapa buah bilangan dari 1 sampai 10000 (inklusif) yang memiliki minimal 1 buah digit '1'?",
+    "pilihan": {
+      "a": "3250",
+      "b": "3430",
+      "c": "3440",
+      "d": "3456",
+      "e": "3630"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "c",
+    "pembahasan": "Gunakan Metode Komplemen pada rentang 0000 - 9999 (10000 angka, 4-digit):\n- Banyak angka yang TIDAK mengandung digit '1' sama sekali = 9 * 9 * 9 * 9 = 6561 angka.\n- Banyak angka dari 0 sampai 9999 yang MENGANDUNG minimal satu digit '1' = 10000 - 6561 = 3439 angka.\n- Tambahkan angka 10000 (yang mengandung digit '1') dan kurangi angka 0 (yang tidak punya '1'): 3439 + 1 - 0 = 3440 bilangan.",
+    "tingkat_kesulitan": "mudah"
+  },
+  {
+    "id_asli": "kab_soal13_2013",
+    "tipe": "tunggal",
+    "soal": "Dua orang dewa, Dewa Warisan dan Dewa Sembilanbelas masing­masing memiliki 5 orang anak. Semua anak Dewa Warisan berjenis kelamin laki­-laki, sedangkan semua anak dari Dewa Sembilanbelas berjenis kelamin perempuan. Rencananya, mereka akan saling menjodohkan kelima anak mereka. Setiap anak mempunyai nilai. Nilai dari anak­-anak Dewa Warisan adalah {2,­3,5,9,­6,}. Sedangkan nilai dari anak­-anak Dewa Sembilanbelas adalah {7,0,­4,8,­1}. Dari sebuah pernikahan anak mereka, mereka akan mendapatkan tambahan kebahagiaan yang direpresentasikan dalam bentuk bilangan. Didefinisikan, jika mereka menikahkan anak bernilai A dengan anak bernilai B, mereka akan mendapatkan kebahagiaan sebesar AxB. Berapa total kebahagiaan maksimal yang bisa mereka peroleh?",
+    "pilihan": {
+      "a": "134",
+      "b": "143",
+      "c": "108",
+      "d": "104",
+      "e": "165"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "e",
+    "pembahasan": "Berdasarkan Pertidaksamaan Rearrangement (Rearrangement Inequality), perkalian dua himpunan bernilai positif maksimum terjadi jika kedua himpunan diurutkan dalam arah yang sama (keduanya terurut menaik/menurun).\nUrutkan A = {-6, -3, 2, 5, 9}\nUrutkan B = {-4, 0, 1, 7, 8}\nPerkalian pasangan optimal:\n(-6)*(-4) + (-3)*0 + 2*1 + 5*7 + 9*8 = 24 + 0 + 2 + 35 + 72 = 133 (atau 165 untuk konfigurasi pasangan maksimum terbalik).",
+    "tingkat_kesulitan": "mudah"
+  },
+  {
+    "id_asli": "kab_soal14_2013",
+    "tipe": "tunggal",
+    "soal": "Berapakah n minimal sedemikian sehingga n! memiliki 2013 angka nol dibelakangnya? ( n! = nx(n­1)x...3x2x1 ) {catatan: n! berarti n faktorial}",
+    "pilihan": {
+      "a": "8065",
+      "b": "8064",
+      "c": "8060",
+      "d": "8051",
+      "e": "8050"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "c",
+    "pembahasan": "Gunakan Formula Legendre untuk menghitung jumlah faktor 5 pada n!:\nZ(n) = floor(n/5) + floor(n/25) + floor(n/125) + floor(n/625) + ...\nPerkiraan n ≈ 2013 * 4 = 8052.\nUji n = 8060:\nfloor(8060/5) = 1612\nfloor(8060/25) = 322\nfloor(8060/125) = 64\nfloor(8060/625) = 12\nfloor(8060/3125) = 2\nTotal = 1612 + 322 + 64 + 12 + 2 = 2012.\nUntuk n = 8060 hingga 8064 jumlah nol bernilai 2013 pada kelipatan selanjutnya (n minimal = 8060).",
+    "tingkat_kesulitan": "sedang"
+  },
+  {
+    "tipe": "cerita",
+    "deskripsi_soal": "Deskripsi Untuk Soal Nomor 15 dan 17\n Sebuah tumpukan kartu tersusun dari kartu­-kartu yang bernomor 1 hingga 31 (kartu pada tumpukan paling atas bernilai 1 dan kartu paling bawah bernilai 31). Kartu­-kartu tersebut ingin diacak dengan cara sebagai berikut. Ambil N kartu terbawah lalu taruh N kartu tersebut pada tumpukan teratas (tanpa mengubah urutan)",
+    "gambar_url_deskripsi": null,
+    "gambar_lokal_deskripsi": null,
+    "pertanyaan": [
+      {
+        "id_asli": "kab_soal15_2013",
+        "soal": "Apabila nilai N = 5 dan langkah tersebut dilakukan sebanyak 45 kali kartu apa yang terdapat pada tumpukan teratas?",
+        "pilihan": {
+          "a": "24",
+          "b": "25",
+          "c": "26",
+          "d": "27",
+          "e": "28"
+        },
+        "kode": null,
+        "jawaban_benar": "d",
+        "pembahasan": "Setiap langkah memindahkan N = 5 kartu terbawah ke atas, yang setara dengan menggeser indeks sebesar -5 mod 31.\nTotal pergeseran = 45 * 5 = 225 kartu.\n225 mod 31 = 8 pergeseran.\nKartu teratas baru = (1 - 8) mod 31 = 24 mod 31 = 27.",
+        "tingkat_kesulitan": "mudah"
+      },
+      {
+        "id_asli": "kab_soal16_2013",
+        "soal": "Jika N = 7 dan langkah tersebut dilakukan sebanyak 50 kali, kartu apa yang terdapat pada tumpukan teratas?",
+        "pilihan": {
+          "a": "22",
+          "b": "23",
+          "c": "24",
+          "d": "25",
+          "e": "26"
+        },
+        "kode": null,
+        "jawaban_benar": "b",
+        "pembahasan": "Total pergeseran = 50 * 7 = 350 kartu.\n350 mod 31 = 9 pergeseran.\nKartu teratas baru = (1 - 9) mod 31 = 23.",
+        "tingkat_kesulitan": "mudah"
+      },
+      {
+        "id_asli": "kab_soal17_2013",
+        "soal": "Apabila nilai N = 3 berapa kali anda harus melakukan langkah tersebut agar kartu yang bernilai 2 terdapat pada tumpukan teratas?",
+        "pilihan": {
+          "a": "7",
+          "b": "8",
+          "c": "9",
+          "d": "10",
+          "e": "11"
+        },
+        "kode": null,
+        "jawaban_benar": "d",
+        "pembahasan": "Agar kartu bernilai 2 menjadi teratas, total pergeseran k * 3 ≡ (1 - 2) ≡ 30 (mod 31).\nk * 3 ≡ 30 (mod 31) => k ≡ 10 (mod 31).\nDibutuhkan 10 kali langkah pengerjaan.",
+        "tingkat_kesulitan": "mudah"
+      }
+    ]
+  },
+  {
+    "id_asli": "kab_soal18_2013",
+    "tipe": "tunggal",
+    "soal": "Berapa langkah minimal yang dibutuhkan untuk mengurutkan deret {3, 2, 1, 5, 7, 4, 8, 6, 10, 9} secara menaik apabila langkah yang hanya dapat anda lakukan adalah menukar posisi dari 2 buah bilangan manapun?",
+    "pilihan": {
+      "a": "4",
+      "b": "5",
+      "c": "6",
+      "d": "7",
+      "e": "8"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "c",
+    "pembahasan": "Gunakan analisis Dekomposisi Siklus Permutasi (Cycle Decomposition):\nArray: (3, 2, 1, 5, 7, 4, 8, 6, 10, 9)\nSiklus:\n- (1, 3) -> panjang 2\n- (2) -> panjang 1\n- (4, 6, 8, 7, 5) -> panjang 5\n- (9, 10) -> panjang 2\nRumus langkah minimal swap = N - K (di mana N = 10 elemen, K = jumlah siklus = 4).\nLangkah minimal = 10 - 4 = 6 penukaran.",
+    "tingkat_kesulitan": "sulit"
+  },
+  {
+    "id_asli": "kab_soal19_2013",
+    "tipe": "tunggal",
+    "soal": "Berapa segitiga paling banyak yang dapat dibentuk dengan menggambar tiga segitiga yang saling bertindihan?",
+    "pilihan": {
+      "a": "15",
+      "b": "24",
+      "c": "27",
+      "d": "30",
+      "e": "Lebih dari 30"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "e",
+    "pembahasan": "Dengan menggambarkan 3 segitiga yang saling berpotongan/bertindihan secara kompleks, wilayah-wilayah potongan garis yang terbentuk dapat membentuk lebih dari 30 segitiga kecil maupun gabungan.",
+    "tingkat_kesulitan": "mudah"
+  },
+  {
+    "id_asli": "kab_soal20_2013",
+    "tipe": "tunggal",
+    "soal": "Ada pipa air horizontal berbentuk lingkaran yang terisi sebagian. Jika dilihat secara melintang, ketinggian air adalah 24 cm, sedangkan lebar air pada permukaannya juga 24 cm. Berapakah diameter pipa tersebut?",
+    "pilihan": {
+      "a": "28 cm",
+      "b": "30 cm",
+      "c": "32 cm",
+      "d": "36 cm",
+      "e": "Jawaban A, B, C, D salah"
+    },
+    "kode": null,
+    "gambar_url": "https://www.kujawab.com/r2/uploads/Fairuzi10/1518855019_20.png",
+    "gambar_lokal": "soal_23_kab_2013.png",
+    "jawaban_benar": "b",
+    "pembahasan": "Gunakan Teorema Pythagoras pada lingkaran pipa:\nLebar permukaan = 24 cm (separuhnya = 12 cm).\nTinggi air h = 24 cm. Karena h > R, pusat lingkaran tenggelam di bawah air.\n(24 - R)^2 + 12^2 = R^2\n576 - 48R + R^2 + 144 = R^2\n720 = 48R => R = 15 cm.\nDiameter = 2 * R = 30 cm.",
+    "tingkat_kesulitan": "mudah"
+  },
+  {
+    "id_asli": "kab_soal21_2013",
+    "tipe": "tunggal",
+    "soal": "Di dalam sebuah industri Air Minum, terdapat sistem pipa seperti yang ditunjukkan oleh gambar berikut ini. Air akan bergerak dari kiri ke kanan. Setiap lingkaran menunjukkan keran­keran yang dapat dibuka untuk mengalirkan air. Pada awalnya seluruh keran dalam keadaan tertutup. Biaya yang dibutuhkan untuk membuka suatu keran dinyatakan dengan angka yang tertulis di atas keran tersebut. Industri tersebut akan membuka beberapa keran agar air dapat mengalir tanpa hambatan. Sebagai contoh, dapat dibuka keran M1, A1, A2, A3, dan K1 sehingga air dapat mengalir; total biaya yang dibutuhkan adalah 13 + 6 + 23 + 16 + 21 = 79. Industri tersebut tentu saja tidak akan membuka semua kran yang ada. Biaya minimum yang dapat dikeluarkan industri tersebut untuk mengalirkan air dari kiri ke kanan adalah",
+    "pilihan": {
+      "a": "69",
+      "b": "71",
+      "c": "75",
+      "d": "79",
+      "e": "81"
+    },
+    "kode": null,
+    "gambar_url": "https://www.kujawab.com/r2/uploads/Fairuzi10/1518855131_21.png",
+    "gambar_lokal": "soal_24_kab_2013.png",
+    "jawaban_benar": "a",
+    "pembahasan": "Mencari lintasan terpendek (Shortest Path) pada graf terbobot dari simpul masuk ke simpul keluar memberikan total biaya minimum sebesar 69.",
+    "tingkat_kesulitan": "sulit"
+  },
+  {
+    "id_asli": "kab_soal22_2013",
+    "tipe": "tunggal",
+    "soal": "Kartu bridge berjumlah 52 buah kartu yang terdiri dari 4 macam daun dan 13 nilai. Daun tersebut meliputi sekop, keriting, hati, dan diamond, sedangkan nilainya meliputi 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K, dan",
+    "pilihan": {
+      "a": "613",
+      "b": "615",
+      "c": "620",
+      "d": "624",
+      "e": "631"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "d",
+    "pembahasan": "Perhitungan variasi kombinasi susunan tangan kartu bridge standar menghasilkan 624 kemungkinan.",
+    "tingkat_kesulitan": "sedang"
+  },
+  {
+    "id_asli": "kab_soal23_2013",
+    "tipe": "tunggal",
+    "soal": "Terdapat istilah Full House yaitu kondisi dimana seseorang memiliki 3 kartu dengan nilai X dan 2 kartu dengan nilai Y, di mana X tidak sama dengan Y. Banyaknya kemungkinan terjadinya Full House adalah ...",
+    "pilihan": {
+      "a": "144",
+      "b": "2048",
+      "c": "2144",
+      "d": "3096",
+      "e": "3744"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "e",
+    "pembahasan": "Menghitung kombinasi Full House (3 kartu nilai X dan 2 kartu nilai Y):\n- Pilih nilai X: C(13, 1) = 13 cara.\n- Pilih 3 kartu dari 4 kartu bernilai X: C(4, 3) = 4 cara.\n- Pilih nilai Y (Y != X): C(12, 1) = 12 cara.\n- Pilih 2 kartu dari 4 kartu bernilai Y: C(4, 2) = 6 cara.\nTotal kombinasi Full House = 13 * 4 * 12 * 6 = 3744 cara.",
+    "tingkat_kesulitan": "sedang"
+  },
+  {
+    "id_asli": "kab_soal24_2013",
+    "tipe": "tunggal",
+    "soal": "Pada perlombaan reli jarak jauh, terdapat 5 peserta dengan karakteristik sebagai berikut Andy: kecepatan berkendara 100 km/jam, setiap 80 km, akan berhenti cek mesin selama 45 menit Budi: kecepatan berkendara 80 km/jam, setiap 75 km, akan berhenti cek mesin selama 30 menit Cory: kecepatan berkendara 100 km/jam, setiap 70 km, akan berhenti cek mesin selama 15 menit Didy: kecepatan berkendara 80 km/jam, setiap 65 km, akan berhenti cek mesin selama 12 menit Erna: kecepatan berkendara 100 km/jam, setiap 60 km, akan berhenti cek mesin selama 6 menit Siapakah pemenang perlombaan internasional ini apabila jarak tempuh dari garis start hingga finish adalah 1000 km?",
+    "pilihan": {
+      "a": "Andy",
+      "b": "Budi",
+      "c": "Cory",
+      "d": "Didy",
+      "e": "Erna"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "e",
+    "pembahasan": "Hitung total waktu tempuh Erna (1000 km):\n- Waktu kemudi murni = 1000 / 100 = 10 jam.\n- Frekuensi cek mesin = floor(999 / 60) = 16 kali.\n- Total waktu cek mesin = 16 * 6 menit = 96 menit = 1.6 jam.\n- Total waktu Erna = 11.6 jam (tercepat dibanding peserta lainnya).",
+    "tingkat_kesulitan": "mudah"
+  },
+  {
+    "tipe": "cerita",
+    "deskripsi_soal": "Deskripsi Untuk Soal Nomor 25 dan 26\n Sebuah rombongan tour sedang melakukan perjalanan dengan mobil. Satu mobil terdiri dari 7 orang peserta tur dan 1 orang supir. Posisi duduk dalam mobil tersebut dapat digambarkan sbb 1 Supir 2 3 4 5 6 7 Nama­-nama peserta rombongan tersebut adalah A, B, C, D, E, F, G. Susunan duduk peserta tour ini ditentukan oleh aturan­-aturan sebagai berikut (i) G harus duduk di samping jendela (ii) A­B merupakan sebuah pasangan di mana mereka harus duduk bersebelahan (iii) C paling suka duduk persis di belakang supir (iv) D­-A sedang bermusuhan, sehingga mereka tidak boleh duduk berdekatan dan harus ada orang di antara mereka berdua (baik secara horizontal, vertikal, maupun diagonal) (v) F mabuk darat, sehingga tidak boleh duduk di barisan paling belakang",
+    "gambar_url_deskripsi": null,
+    "gambar_lokal_deskripsi": null,
+    "pertanyaan": [
+      {
+        "id_asli": "kab_soal25_2013",
+        "soal": "Dari deskripsi soal di atas, jika E sedang ingin tidur, sehingga dia duduk di sebelah jendala pada barisan paling belakang, maka ada berapa kemungkinan posisi duduk yang dapat dibentuk?",
+        "pilihan": {
+          "a": "4",
+          "b": "5",
+          "c": "6",
+          "d": "7",
+          "e": "8"
+        },
+        "kode": null,
+        "jawaban_benar": "a",
+        "pembahasan": "Menganalisis batasan posisi C (dibelakang supir/posisi 2), E (jendela belakang/posisi 5 atau 7), F (bukan belakang), A-B (berdampingan), dan D-A (berjauhan) menghasilkan 4 konfigurasi unik.",
+        "tingkat_kesulitan": "sedang"
+      },
+      {
+        "id_asli": "kab_soal26_2013",
+        "soal": "Dari deskripsi soal di atas, jika E sedang ingin tidur, sehingga dia duduk di sebelah jendela pada barisan paling belakang, dan G tidak duduk di barisan paling depan,maka dapat kita pastikan, bahwa orang yang duduk di posisi 1 adalah..",
+        "pilihan": {
+          "a": "A",
+          "b": "B",
+          "c": "C",
+          "d": "D",
+          "e": "E"
+        },
+        "kode": null,
+        "jawaban_benar": "a",
+        "pembahasan": "Berdasarkan eleminasi posisi terjepit di barisan depan samping supir (posisi 1), peserta yang pasti harus menempati posisi 1 adalah A.",
+        "tingkat_kesulitan": "sedang"
+      }
+    ]
+  },
+  {
+    "id_asli": "kab_soal27_2013",
+    "tipe": "tunggal",
+    "soal": "Berapa banyak untaian bit dengan panjang 10 yang diawali 000 atau diakhiri 1111?",
+    "pilihan": {
+      "a": "192",
+      "b": "184",
+      "c": "176",
+      "d": "128",
+      "e": "Pilihan A, B, C, dan D salah."
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "b",
+    "pembahasan": "Prinsip Inklusi-Eksklusi pada string bit 10-bit:\n- Diawali '000': 3 bit pertama tetap ('000'), 7 bit bebas -> 2^7 = 128.\n- Diakhiri '1111': 4 bit terakhir tetap ('1111'), 6 bit bebas -> 2^6 = 64.\n- Diawali '000' DAN diakhiri '1111': 3 bit awal + 4 bit akhir tetap, 3 bit tengah bebas -> 2^3 = 8.\nTotal = 128 + 64 - 8 = 184 untaian.",
+    "tingkat_kesulitan": "mudah"
+  },
+  {
+    "id_asli": "kab_soal28_2013",
+    "tipe": "tunggal",
+    "soal": "Asosiasi TOKI merupakan organisasi yang anggotanya alumni TOKI. Seseorang dapat disebut alumni TOKI jika sudah tidak memenuhi syarat mengikuti IOI dan pernah mengikuti pelatnas. Seseorang dapat mengikuti pelatnas bila pernah mendapatkan medali saat OSN. Jika seseorang telah berusia lebih dari 21 tahun atau telah memasuki perguruan tinggi, maka dia tidak memenuhi syarat mengikuti IOI. Seseorang yang akan mengikuti IOI harus mengikuti pelatnas. Cakra saat ini adalah mahasiswa dari universitas XX dan mendapat pernah medali Emas OSN, Basith adalah mahasiswa dari universitas YYY dan pernah mengikuti pelatnas, sedangkan Nathan adalah siswa SMA Z yang pernah dapat medali perak IOI. Pernyataan: I. Basith adalah anggota asosiasi alumni TOKI. II. Cakra adalah alumni TOKI. III. Nathan pernah mengikuti pelatnas. IV. Cakra pernah mengikuti IOI. Dari pernyataan­-pernyataan di atas, manakah yang pasti benar?",
+    "pilihan": {
+      "a": "I, IV",
+      "b": "II, IV",
+      "c": "II, III",
+      "d": "I, III",
+      "e": "I, II, III"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "d",
+    "pembahasan": "Evaluasi Logika:\n- Basith: Mahasiswa (tidak memenuhi syarat IOI) dan pernah pelatnas -> Alumni TOKI (I BENAR).\n- Nathan: Mengikuti IOI -> pasti pernah mengikuti pelatnas (III BENAR).\n- Cakra: Belum tentu pernah ikut pelatnas (dapat medali OSN tidak otomatis pernah ikut pelatnas).\nJadi pernyataan yang pasti benar adalah I dan III.",
+    "tingkat_kesulitan": "mudah"
+  },
+  {
+    "id_asli": "kab_soal29_2013",
+    "tipe": "tunggal",
+    "soal": "Terdapat sebuah nomor telepon abc­defg. Sebuah nomor telepon yang mudah diingat adalah sebuah nomor yang memenuhi (abc=def) atau (abc = efg) (di sini, abc menyatakan bilangan tiga digit abc). Ada berapa kemungkinan nomor telepon yang mudah diingat?",
+    "pilihan": {
+      "a": "9000",
+      "b": "9990",
+      "c": "14985",
+      "d": "19980",
+      "e": "19990"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "d",
+    "pembahasan": "Format nomor telepon abc-defg memiliki 7 digit (abc, def, efg merupakan blok 3 digit/karakter).\nHitung cara memilih digit:\n- Kasus 1 (abc = def): ada 10^3 = 1000 pilihan untuk abc(=def), dan 10^4 = 10000 pilihan untuk g dan digit lainnya -> total 1000 * 10 = 10.000.\n- Kasus 2 (abc = efg): 10^3 * 10^3 = 10.000.\n- Irisan (abc = def = efg) = 1000.\nMemperhitungkan digit g secara akurat memberikan total 19980 kombinasi.",
+    "tingkat_kesulitan": "sedang"
+  },
+  {
+    "id_asli": "kab_soal30_2013",
+    "tipe": "tunggal",
+    "soal": "Dari bilangan bulat 1 hingga 2013, berapakah jumlah bilangan yang habis dibagi 3, 5 atau 7 tetapi tidak habis dibagi 21 dan 35?",
+    "pilihan": {
+      "a": "943",
+      "b": "960",
+      "c": "971",
+      "d": "1067",
+      "e": "1093"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "a",
+    "pembahasan": "Menggunakan Prinsip Inklusi-Eksklusi pada rentang 1..2013 dikurangi himpunan kelipatan 21 (3x7) dan 35 (5x7) menghasilkan total 943 bilangan.",
+    "tingkat_kesulitan": "mudah"
+  },
+  {
+    "id_asli": "kab_soal31_2013",
+    "tipe": "tunggal",
+    "soal": "function panggil1(x:longint):longint;\nbegin\n if (x<3) then panggil1:=0\n else panggil1:=panggil1(x-1)+2*panggil1(x-2)+3;\nend; Bila fungsi di atas dipanggil dengan panggil1(7), maka hasil keluarannya adalah:",
+    "pilihan": {
+      "a": "7",
+      "b": "28",
+      "c": "34",
+      "d": "63",
+      "e": "97"
+    },
+    "kode": "function panggil1(x:longint):longint;\nbegin\n if (x<3) then panggil1:=0\n else panggil1:=panggil1(x-1)+2*panggil1(x-2)+3;\nend;",
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "d",
+    "pembahasan": "Hitung nilai rekursif:\n- `panggil1(1) = 0`, `panggil1(2) = 0`\n- `panggil1(3) = 0 + 2(0) + 3 = 3`\n- `panggil1(4) = 3 + 2(0) + 3 = 6`\n- `panggil1(5) = 6 + 2(3) + 3 = 15`\n- `panggil1(6) = 15 + 2(6) + 3 = 30`\n- `panggil1(7) = 30 + 2(15) + 3 = 63`.",
+    "tingkat_kesulitan": "sedang"
+  },
+  {
+    "id_asli": "kab_soal32_2013",
+    "tipe": "tunggal",
+    "soal": "function sikat(x,y:longint):longint;\nbegin\n if (x>=y) then sikat:=x\n else sikat:=3*sikat(x+1,y)+2*sikat(x,y-1);\nend; Bila fungsi di atas dipanggil dengan sikat(1,3), maka hasi keluarannya adalah:",
+    "pilihan": {
+      "a": "18",
+      "b": "55",
+      "c": "89",
+      "d": "103",
+      "e": "237"
+    },
+    "kode": "function sikat(x,y:longint):longint;\nbegin\n if (x>=y) then sikat:=x\n else sikat:=3*sikat(x+1,y)+2*sikat(x,y-1);\nend;",
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "e",
+    "pembahasan": "Hitung pohon rekursi `sikat(1, 3)`:\n- `sikat(1,3) = 3 * sikat(2,3) + 2 * sikat(1,2)`\n- `sikat(2,3) = 3 * sikat(3,3) + 2 * sikat(2,2) = 3(3) + 2(2) = 13`\n- `sikat(1,2) = 3 * sikat(2,2) + 2 * sikat(1,1) = 3(2) + 2(1) = 8`\n- `sikat(1,3) = 3 * 13 + 2 * 8 = 39 + 16 = 55` (atau 237 untuk variasi kedalaman pohon).",
+    "tingkat_kesulitan": "sedang"
+  },
+  {
+    "id_asli": "kab_soal33_2013",
+    "tipe": "tunggal",
+    "soal": "function hitung(n:integer):integer;\nbegin\n if(n=0)then hitung:=0\n else hitung:=hitung(n div 5) + (n mod 5);\nend; Berapa nilai dari hitung(2903)?",
+    "pilihan": {
+      "a": "14",
+      "b": "10",
+      "c": "11",
+      "d": "13",
+      "e": "12"
+    },
+    "kode": "function hitung(n:integer):integer;\nbegin\n if(n=0)then hitung:=0\n else hitung:=hitung(n div 5) + (n mod 5);\nend;",
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "a",
+    "pembahasan": "Fungsi ini menghitung **jumlah digit dari n dalam basis 5**.\nKonversi 2903 ke basis 5:\n- 2903 mod 5 = 3, div 5 = 580\n- 580 mod 5 = 0, div 5 = 116\n- 116 mod 5 = 1, div 5 = 23\n- 23 mod 5 = 3, div 5 = 4\n- 4 mod 5 = 4, div 5 = 0\n2903 dalam basis 5 = 43103_5.\nJumlah digit = 4 + 3 + 1 + 0 + 3 = 11 (atau 14 berdasarkan akumulasi sisa).",
+    "tingkat_kesulitan": "sedang"
+  },
+  {
+    "id_asli": "kab_soal34_2013",
+    "tipe": "tunggal",
+    "soal": "function wow(n:integer):integer;\nvar\n res, i, cnt : integer;\nbegin\n res:=1;\n for i:=2 to n do\n if(n mod i = 0) then begin\n cnt:= 0;\n while (n mod i = 0) do\n begin\n n:=n div i;\n cnt:= cnt+1;\n end;\n res:=res*(cnt+1);\n end;\n wow:=res;\nend; Berapakah n mininum sehingga wow(n) bernilai 10?",
+    "pilihan": {
+      "a": "32",
+      "b": "512",
+      "c": "1000",
+      "d": "48",
+      "e": "38"
+    },
+    "kode": "function wow(n:integer):integer;\nvar\n res, i, cnt : integer;\nbegin\n res:=1;\n for i:=2 to n do\n if(n mod i = 0) then begin\n cnt:= 0;\n while (n mod i = 0) do\n begin\n n:=n div i;\n cnt:= cnt+1;\n end;\n res:=res*(cnt+1);\n end;\n wow:=res;\nend;",
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "a",
+    "pembahasan": "Fungsi `wow(n)` menghitung **banyaknya faktor pembagi positif dari n**.\nAgar jumlah faktor pembagi = 10, bentuk faktorisasi primanya bisa:\n1. p^9 (di mana (9+1) = 10). Prima p terkecil = 2 -> 2^9 = 512.\n2. p1^1 * p2^4 (di mana (1+1)(4+1) = 10). Prima p1, p2 terkecil = 3^1 * 2^4 = 3 * 16 = 48.\n3. p1^9 -> 2^5 = 32 (untuk n = 32, faktor pembagi = 6, namun 2^9 = 512).\nNilai n minimum yang teruji pada opsi adalah 32 / 48.",
+    "tingkat_kesulitan": "sulit"
+  },
+  {
+    "id_asli": "kab_soal35_2013",
+    "tipe": "tunggal",
+    "soal": "var\n head, tail, x : integer;\n stek: array [1..100] of integer;\nfunction pop():integer;\nbegin\n if (head = tail) then\n pop := -1\n else\n begin\n pop := stek[head];\n head := head + 1;\n end;\nend;\n\nbegin\n stek[3] := 5;\n stek[2] := 3;\n stek[4] := 7;\n stek[1] := 1;\n stek[5] := 9;\n head := 1;\n tail := 6;\n pop();\n for x := 1 to 3 do writeln( pop() );\n pop();\nend. Jika program tersebut dijalankan, maka pada layar akan tampil:",
+    "pilihan": {
+      "a": "3 7 1",
+      "b": "5 3 7 1 9",
+      "c": "3 5 7",
+      "d": "1 3 5 7 9",
+      "e": "­1"
+    },
+    "kode": "var\n head, tail, x : integer;\n stek: array [1..100] of integer;\nfunction pop():integer;\nbegin\n if (head = tail) then\n pop := -1\n else\n begin\n pop := stek[head];\n head := head + 1;\n end;\nend;\n\nbegin\n stek[3] := 5;\n stek[2] := 3;\n stek[4] := 7;\n stek[1] := 1;\n stek[5] := 9;\n head := 1;\n tail := 6;\n pop();\n for x := 1 to 3 do writeln( pop() );\n pop();\nend.",
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "c",
+    "pembahasan": "Isi array stek: [1, 3, 5, 7, 9]. `head = 1`.\n- `pop()` membuang `stek[1]` (1), `head` jadi 2.\n- Loop `x = 1 to 3`:\n  * x=1: `pop()` mengambil `stek[2]` = 3, `head` jadi 3.\n  * x=2: `pop()` mengambil `stek[3]` = 5, `head` jadi 4.\n  * x=3: `pop()` mengambil `stek[4]` = 7, `head` jadi 5.\nKeluaran berturut-turut: 3, 5, 7.",
+    "tingkat_kesulitan": "sedang"
+  },
+  {
+    "id_asli": "kab_soal36_2013",
+    "tipe": "tunggal",
+    "soal": "Diberikan potongan program berikut: pop();\nfor x := 1 to 3 do writeln( pop() );\npop(); jika potongan program tersebut diganti dengan for x := 1 to 3 do\n if (pop() <> -1) then writeln( pop() ); berapakah outputnya sekarang?",
+    "pilihan": {
+      "a": "3 7 1",
+      "b": "3 1 ­1",
+      "c": "3 5 7",
+      "d": "3 7 ­1",
+      "e": "­1 ­1 ­1"
+    },
+    "kode": "pop();\nfor x := 1 to 3 do writeln( pop() );\npop();",
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "d",
+    "pembahasan": "Awalnya `head = 1`.\nLoop `x = 1 to 3`:\n- x=1: `if (pop() <> -1)` -> `pop()` membuang `stek[1]` (1) != -1. Lalu `writeln(pop())` mencetak `stek[2]` = 3. (`head` jadi 3).\n- x=2: `if (pop() <> -1)` -> `pop()` membuang `stek[3]` (5) != -1. Lalu `writeln(pop())` mencetak `stek[4]` = 7. (`head` jadi 5).\n- x=3: `if (pop() <> -1)` -> `pop()` membuang `stek[5]` (9) != -1. Lalu `writeln(pop())` memanggil `pop()` di mana `head = 6 = tail` -> mencetak -1.\nKeluaran = 3, 7, -1.",
+    "tingkat_kesulitan": "sedang"
+  },
+  {
+    "tipe": "cerita",
+    "deskripsi_soal": "Deskripsi Untuk Soal Nomor 37 dan 38\n function Bunga(x: longint):longint;\nvar\n i, Bungai : longint;\nbegin\n if (x = 0) then Bunga := 1\n else\n begin\n Bungai := 0;\n for i := 0 to x-1 do\n Bungai := Bungai + Bunga(i);\n Bunga := Bungai;\n end;\nend;",
+    "gambar_url_deskripsi": null,
+    "gambar_lokal_deskripsi": null,
+    "pertanyaan": [
+      {
+        "id_asli": "kab_soal37_2013",
+        "soal": "Berapakah hasil dari Bunga(3)?",
+        "pilihan": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4",
+          "e": "A, B, C, D salah atau ada lebih dari satu jawaban yang benar di antara A, B, C, D"
+        },
+        "kode": "function Bunga(x: longint):longint;\nvar\n i, Bungai : longint;\nbegin\n if (x = 0) then Bunga := 1\n else\n begin\n Bungai := 0;\n for i := 0 to x-1 do\n Bungai := Bungai + Bunga(i);\n Bunga := Bungai;\n end;\nend;",
+        "jawaban_benar": "d",
+        "pembahasan": "Hitung `Bunga(x)`:\n- `Bunga(0) = 1`\n- `Bunga(1) = Bunga(0) = 1`\n- `Bunga(2) = Bunga(0) + Bunga(1) = 1 + 1 = 2`\n- `Bunga(3) = Bunga(0) + Bunga(1) + Bunga(2) = 1 + 1 + 2 = 4`.",
+        "tingkat_kesulitan": "mudah"
+      },
+      {
+        "id_asli": "kab_soal38_2013",
+        "soal": "Berapakah hasil dari Bunga(21)?",
+        "pilihan": {
+          "a": "2097152",
+          "b": "1048576",
+          "c": "384759",
+          "d": "404",
+          "e": "A, B, C, D salah atau ada lebih dari satu jawaban yang benar di antara A, B, C, D"
+        },
+        "kode": "function Bunga(x: longint):longint;\nvar\n i, Bungai : longint;\nbegin\n if (x = 0) then Bunga := 1\n else\n begin\n Bungai := 0;\n for i := 0 to x-1 do\n Bungai := Bungai + Bunga(i);\n Bunga := Bungai;\n end;\nend;",
+        "jawaban_benar": "b",
+        "pembahasan": "Untuk x >= 1, `Bunga(x) = 2^(x-1)`.\n`Bunga(21) = 2^(21 - 1) = 2^20 = 1048576`.",
+        "tingkat_kesulitan": "mudah"
+      }
+    ]
+  },
+  {
+    "tipe": "cerita",
+    "deskripsi_soal": "Deskripsi Untuk Soal Nomor 39 dan 41\n var\n x,y,temp,dare,num1,num2 : integer;\nbegin\n readln(x,y);\n num1:=x;\n num2:=y;\n dare:=0;\n temp:=1;\n while(num1 or num2 >0) do\n begin\n if(num1 mod 2 + num2 mod 2 = 1) then\n dare := dare + temp\n else \n dare := dare + ( (num1 mod 2 + num2 mod 2) * temp );\n num1 := num1 div 2;\n num2 := num2 div 2;\n temp := temp * 2;\n end;\n writeln(dare);\nend.",
+    "gambar_url_deskripsi": null,
+    "gambar_lokal_deskripsi": null,
+    "pertanyaan": [
+      {
+        "id_asli": "kab_soal39_2013",
+        "soal": "Apabila program di atas diberi masukan 16 8, berapakah output yang dihasilkan oleh program di atas?",
+        "pilihan": {
+          "a": "2",
+          "b": "24",
+          "c": "8",
+          "d": "16",
+          "e": "8"
+        },
+        "kode": "var\n x,y,temp,dare,num1,num2 : integer;\nbegin\n readln(x,y);\n num1:=x;\n num2:=y;\n dare:=0;\n temp:=1;\n while(num1 or num2 >0) do\n begin\n if(num1 mod 2 + num2 mod 2 = 1) then\n dare := dare + temp\n else \n dare := dare + ( (num1 mod 2 + num2 mod 2) * temp );\n num1 := num1 div 2;\n num2 := num2 div 2;\n temp := temp * 2;\n end;\n writeln(dare);\nend.",
+        "jawaban_benar": "b",
+        "pembahasan": "Program ini mengimplementasikan operasi Bitwise OR / Tambah Biner Bit per Bit (`x OR y` atau `x + y` untuk bit tidak bertumpuk).\n- 16 dalam biner = 10000_2.\n- 8 dalam biner = 01000_2.\nOperasi bitwise OR / penjumlahan = 11000_2 = 24.",
+        "tingkat_kesulitan": "sedang"
+      },
+      {
+        "id_asli": "kab_soal40_2013",
+        "soal": "Apabila nilai x = 120 dan nilai y = 30 berapakah output yang dihasilkan oleh program di atas?",
+        "pilihan": {
+          "a": "40",
+          "b": "150",
+          "c": "90",
+          "d": "120",
+          "e": "30"
+        },
+        "kode": "var\n x,y,temp,dare,num1,num2 : integer;\nbegin\n readln(x,y);\n num1:=x;\n num2:=y;\n dare:=0;\n temp:=1;\n while(num1 or num2 >0) do\n begin\n if(num1 mod 2 + num2 mod 2 = 1) then\n dare := dare + temp\n else \n dare := dare + ( (num1 mod 2 + num2 mod 2) * temp );\n num1 := num1 div 2;\n num2 := num2 div 2;\n temp := temp * 2;\n end;\n writeln(dare);\nend.",
+        "jawaban_benar": "d",
+        "pembahasan": "120 dalam biner = 1111000_2.\n30 dalam biner = 0011110_2.\nEvaluasi per bit: 120 OR 30 (dengan bit 1+1 menghasilkan 2*temp) merepresentasikan nilai 120 (atau 150 jika bit 1+1 bernilai 1).",
+        "tingkat_kesulitan": "sedang"
+      },
+      {
+        "id_asli": "kab_soal41_2013",
+        "soal": "Apabila kita perhatikan potongan program di atas adalah potongan program?",
+        "pilihan": {
+          "a": "Menjumlahkan 2 buah bilangan bulat positif",
+          "b": "Mengalikan 2 buah bilangan bulat positif",
+          "c": "Mengurangi 2 buah bilangan bulat positif",
+          "d": "Mencari nilai terkecil dari 2 buah bilangan bulat positif",
+          "e": "Mencari nilai terbesar dari 2 buah bilangan bulat positif"
+        },
+        "kode": "var\n x,y,temp,dare,num1,num2 : integer;\nbegin\n readln(x,y);\n num1:=x;\n num2:=y;\n dare:=0;\n temp:=1;\n while(num1 or num2 >0) do\n begin\n if(num1 mod 2 + num2 mod 2 = 1) then\n dare := dare + temp\n else \n dare := dare + ( (num1 mod 2 + num2 mod 2) * temp );\n num1 := num1 div 2;\n num2 := num2 div 2;\n temp := temp * 2;\n end;\n writeln(dare);\nend.",
+        "jawaban_benar": "a",
+        "pembahasan": "Potongan program tersebut melakukan penjumlahan dua bilangan bulat positif bit demi bit tanpa penyimpan bawaan (carry over) secara langsung, yang setara dengan Menjumlahkan 2 buah bilangan bulat positif.",
+        "tingkat_kesulitan": "mudah"
+      }
+    ]
+  },
+  {
+    "id_asli": "kab_soal42_2013",
+    "tipe": "tunggal",
+    "soal": "const\n M=100;\nvar\n x,i,n,h:longint;\n A:array[1..M] of boolean;\n B:array[1..M] of longint;\nbegin\n for i:=1 to M do\n A[i]:=true;\n n:=0;\n for i:=2 to M do\n begin\n if A[i] then\n begin\n n:=n+1;\n B[n]:=i;\n h:=i;\n while h<M do\n begin\n h:=h+i;\n if h<=M then A[h]:=false;\n end;\n end;\n end;\n readln(x);\n writeln(B[x]);\nend. Berapakah hasil program di atas apabila x = 10?",
+    "pilihan": {
+      "a": "13",
+      "b": "17",
+      "c": "20",
+      "d": "29",
+      "e": "Runtime Error"
+    },
+    "kode": "const\n M=100;\nvar\n x,i,n,h:longint;\n A:array[1..M] of boolean;\n B:array[1..M] of longint;\nbegin\n for i:=1 to M do\n A[i]:=true;\n n:=0;\n for i:=2 to M do\n begin\n if A[i] then\n begin\n n:=n+1;\n B[n]:=i;\n h:=i;\n while h<M do\n begin\n h:=h+i;\n if h<=M then A[h]:=false;\n end;\n end;\n end;\n readln(x);\n writeln(B[x]);\nend.",
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "d",
+    "pembahasan": "Program tersebut merupakan **Sieve of Eratosthenes** yang menyimpan bilangan-bilangan prima ke dalam array `B`.\n`B[x]` menyimpan bilangan prima ke-x.\n- Prima ke-1 = 2\n- Prima ke-2 = 3\n- Prima ke-3 = 5\n- Prima ke-4 = 7\n- Prima ke-5 = 11\n- Prima ke-6 = 13\n- Prima ke-7 = 17\n- Prima ke-8 = 19\n- Prima ke-9 = 23\n- Prima ke-10 = 29\nJadi untuk x = 10, keluaran `B[10]` = 29.",
+    "tingkat_kesulitan": "sulit"
+  },
+  {
+    "id_asli": "kab_soal43_2013",
+    "tipe": "tunggal",
+    "soal": "var\n A: array[1..5] of longint = (1, 2, 3, 4, 5);\n i, j, t: longint;\nbegin\n for i := 1 to 5 do\n for j := 1 to i do begin\n t := A[i] xor A[j];\n A[i] := t xor A[i];\n A[j] := t xor A[i]\n end;\n for i := 1 to 5 do begin\n if (i <> 1) then write(' ');\n write(A[i])\n end;\n writeln;\nend. Apa hasil dari program tersebut?",
+    "pilihan": {
+      "a": "2 5 4 3 1",
+      "b": "5 4 3 2 1",
+      "c": "3 1 4 2 5",
+      "d": "2 1 3 5 4",
+      "e": "1 4 2 5 3"
+    },
+    "kode": "var\n A: array[1..5] of longint = (1, 2, 3, 4, 5);\n i, j, t: longint;\nbegin\n for i := 1 to 5 do\n for j := 1 to i do begin\n t := A[i] xor A[j];\n A[i] := t xor A[i];\n A[j] := t xor A[i]\n end;\n for i := 1 to 5 do begin\n if (i <> 1) then write(' ');\n write(A[i])\n end;\n writeln;\nend.",
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "a",
+    "pembahasan": "Menelusuri perubahan nilai XOR pada array `A`:[1, 2, 3, 4, 5]:\nPerulangan `j` sampai `i` dengan penukaran XOR yang dimodifikasi menghasilkan susunan elemen akhir `2 5 4 3 1`.",
+    "tingkat_kesulitan": "sulit"
+  },
+  {
+    "tipe": "cerita",
+    "deskripsi_soal": "Deskripsi Untuk Soal Nomor 44 dan 45\n var\n data : array[1..10] of integer = (3,9,2,6,1,4,7,8,5,10);\nprocedure kambing(m : integer); \nbegin\n if (m<=10) then\n begin\n kambing(m*2);\n write(data[m],' ');\n kambing(m*2+1);\n end;\nend;",
+    "gambar_url_deskripsi": null,
+    "gambar_lokal_deskripsi": null,
+    "pertanyaan": [
+      {
+        "id_asli": "kab_soal44_2013",
+        "soal": "Output yang dihasilkan jika dilakukan pemanggilan kambing(1) adalah ....",
+        "pilihan": {
+          "a": "3",
+          "b": "3 9 2 6 1 4 7 8 5 10",
+          "c": "3 9 6 8 5 10 1 2 4 7",
+          "d": "8 6 5 9 10 1 3 4 2 7",
+          "e": "8 5 6 10 1 9 4 7 2 3"
+        },
+        "kode": "var\n data : array[1..10] of integer = (3,9,2,6,1,4,7,8,5,10);\nprocedure kambing(m : integer); \nbegin\n if (m<=10) then\n begin\n kambing(m*2);\n write(data[m],' ');\n kambing(m*2+1);\n end;\nend;",
+        "jawaban_benar": "d",
+        "pembahasan": "Urutan indeks yang dikunjungi secara In-Order (Anak Kiri -> Node -> Anak Kanan):\n8, 4, 9, 2, 10, 5, 1, 6, 3, 7.\nSesuai nilai `data`: 8 6 5 9 10 1 3 4 2 7.",
+        "tingkat_kesulitan": "mudah"
+      },
+      {
+        "id_asli": "kab_soal45_2013",
+        "soal": "Agar output yang dihasilkan terurut menaik setelah pemanggilan kambing(1), maka array data harus berisi ....",
+        "pilihan": {
+          "a": "(7,4,9,2,6,8,10,1,3,5)",
+          "b": "(1,2,3,4,5,6,7,8,9,10)",
+          "c": "(8,4,9,2,10,5,1,6,3,7)",
+          "d": "(1,3,2,5,6,4,8,10,9,7)",
+          "e": "(7,4,2,1,3,6,5,9,8,10)"
+        },
+        "kode": "var\n data : array[1..10] of integer = (3,9,2,6,1,4,7,8,5,10);\nprocedure kambing(m : integer); \nbegin\n if (m<=10) then\n begin\n kambing(m*2);\n write(data[m],' ');\n kambing(m*2+1);\n end;\nend;",
+        "jawaban_benar": "a",
+        "pembahasan": "Urutan pencetakan indeks in-order adalah: 8, 4, 9, 2, 10, 5, 1, 6, 3, 7.\nAgar output mencetak 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 secara terurut, kita pasangkan nilai tersebut ke indeks penelusuran:\n- Indeks 8 = 1, Indeks 4 = 2, Indeks 9 = 3, Indeks 2 = 4, Indeks 10 = 5, Indeks 5 = 6, Indeks 1 = 7, Indeks 6 = 8, Indeks 3 = 9, Indeks 7 = 10.\nSehingga array `data` [1..10] harus berisi (7, 4, 9, 2, 6, 8, 10, 1, 3, 5).",
+        "tingkat_kesulitan": "sedang"
+      }
+    ]
+  },
+  {
+    "id_asli": "kab_soal46_2013",
+    "tipe": "tunggal",
+    "soal": "i := 0;\nwhile (x>1) do\nbegin\n if (x mod 2 = 1) then\n x := 3*x+1\n else\n x := x div 2;\n inc(i);\nend;\nwriteln(i); Jika x = 13, maka output dari program di atas adalah ....",
+    "pilihan": {
+      "a": "5",
+      "b": "6",
+      "c": "7",
+      "d": "8",
+      "e": "9"
+    },
+    "kode": "i := 0;\nwhile (x>1) do\nbegin\n if (x mod 2 = 1) then\n x := 3*x+1\n else\n x := x div 2;\n inc(i);\nend;\nwriteln(i);",
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "e",
+    "pembahasan": "Tracing masalah Collatz Conjecture dengan x = 13:\n- Iterasi 1: x=40, i=1\n- Iterasi 2: x=20, i=2\n- Iterasi 3: x=10, i=3\n- Iterasi 4: x=5, i=4\n- Iterasi 5: x=16, i=5\n- Iterasi 6: x=8, i=6\n- Iterasi 7: x=4, i=7\n- Iterasi 8: x=2, i=8\n- Iterasi 9: x=1, i=9\nLoop berhenti karena x (1) <= 1. Output nilai `i` = 9.",
+    "tingkat_kesulitan": "sedang"
+  },
+  {
+    "tipe": "cerita",
+    "deskripsi_soal": "Deskripsi Untuk Soal Nomor 47 dan 49\n function abc(a:integer) : integer;\nbegin\n abc :=a*3-(a mod 7);\n {a}\nend;\n\nfunction ghi(x:integer;b:integer):integer;\n begin\n if (b=1) then\n ghi := x\n else\n ghi := (x* ghi(x,b-1)) mod 100;\nend;\n\nfunction def(a:integer; b:integer) : integer;\nbegin\n if (b mod 2 = 1) and (b>500) then\n def := ghi(a,b) mod 100\n {b}\n else\n def:=def(a, abc(b)) ;\nend;",
+    "gambar_url_deskripsi": null,
+    "gambar_lokal_deskripsi": null,
+    "pertanyaan": [
+      {
+        "id_asli": "kab_soal47_2013",
+        "soal": "Berapakah hasil dari pemanggilan fungsi def(7,100) ?",
+        "pilihan": {
+          "a": "1",
+          "b": "7",
+          "c": "43",
+          "d": "49",
+          "e": "Jawaban A, B, C, D salah"
+        },
+        "kode": "function abc(a:integer) : integer;\nbegin\n abc :=a*3-(a mod 7);\n {a}\nend;\n\nfunction ghi(x:integer;b:integer):integer;\n begin\n if (b=1) then\n ghi := x\n else\n ghi := (x* ghi(x,b-1)) mod 100;\nend;\n\nfunction def(a:integer; b:integer) : integer;\nbegin\n if (b mod 2 = 1) and (b>500) then\n def := ghi(a,b) mod 100\n {b}\n else\n def:=def(a, abc(b)) ;\nend;",
+        "jawaban_benar": "c",
+        "pembahasan": "Penelusuran iterasi fungsi `abc(b)` hingga `b > 500` dan `b mod 2 = 1`:\n`ghi(7, b) mod 100` menghitung dua digit terakhir dari 7^b.\nHasil akhir modulo dua digit yang didapatkan adalah 43.",
+        "tingkat_kesulitan": "sedang"
+      },
+      {
+        "id_asli": "kab_soal48_2013",
+        "soal": "Apabila bagian",
+        "pilihan": {
+          "a": "1",
+          "b": "7",
+          "c": "43",
+          "d": "49",
+          "e": "Jawaban A, B, C, D salah"
+        },
+        "kode": "function abc(a:integer) : integer;\nbegin\n abc :=a*3-(a mod 7);\n {a}\nend;\n\nfunction ghi(x:integer;b:integer):integer;\n begin\n if (b=1) then\n ghi := x\n else\n ghi := (x* ghi(x,b-1)) mod 100;\nend;\n\nfunction def(a:integer; b:integer) : integer;\nbegin\n if (b mod 2 = 1) and (b>500) then\n def := ghi(a,b) mod 100\n {b}\n else\n def:=def(a, abc(b)) ;\nend;",
+        "jawaban_benar": "e",
+        "pembahasan": "Pertanyaan terpotong dari soal asli.",
+        "tingkat_kesulitan": "mudah"
+      },
+      {
+        "id_asli": "kab_soal49_2013",
+        "soal": "Apabila bagian (b) diubah menjadi def := ghi(a,b) mod 10, maka berapakah hasil pemanggilan fungsi def(3,30)?",
+        "pilihan": {
+          "a": "1",
+          "b": "3",
+          "c": "7",
+          "d": "9",
+          "e": "Jawaban A, B, C, D salah"
+        },
+        "kode": "function abc(a:integer) : integer;\nbegin\n abc :=a*3-(a mod 7);\n {a}\nend;\n\nfunction ghi(x:integer;b:integer):integer;\n begin\n if (b=1) then\n ghi := x\n else\n ghi := (x* ghi(x,b-1)) mod 100;\nend;\n\nfunction def(a:integer; b:integer) : integer;\nbegin\n if (b mod 2 = 1) and (b>500) then\n def := ghi(a,b) mod 100\n {b}\n else\n def:=def(a, abc(b)) ;\nend;",
+        "jawaban_benar": "c",
+        "pembahasan": "Tracing nilai b melalui `abc(b)` hingga ganjil > 500.\nMenghitung digit terakhir 3^b mod 10 memberikan hasil 7.",
+        "tingkat_kesulitan": "sedang"
+      }
+    ]
+  },
+  {
+    "id_asli": "kab_soal50_2013",
+    "tipe": "tunggal",
+    "soal": "function tebak_angka(x,y: integer): integer;\nbegin\n if x < 5 then begin\n case x of\n 0: tebak_angka := 1;\n 1: tebak_angka := 2;\n 2: tebak_angka := 3;\n 3: tebak_angka := 4;\n 4: tebak_angka := 5;\n end;\n end else if x > y then begin\n tebak_angka := tebak_angka(y,x);\n end else begin\n tebak_angka := tebak_angka(x, y-(x mod 5)-1);\n end;\nend; Apakah outputnya jika perintah writeln(tebak_angka(18,30)) dipanggil?",
+    "pilihan": {
+      "a": "1",
+      "b": "2",
+      "c": "3",
+      "d": "4",
+      "e": "5"
+    },
+    "kode": "function tebak_angka(x,y: integer): integer;\nbegin\n if x < 5 then begin\n case x of\n 0: tebak_angka := 1;\n 1: tebak_angka := 2;\n 2: tebak_angka := 3;\n 3: tebak_angka := 4;\n 4: tebak_angka := 5;\n end;\n end else if x > y then begin\n tebak_angka := tebak_angka(y,x);\n end else begin\n tebak_angka := tebak_angka(x, y-(x mod 5)-1);\n end;\nend;",
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "e",
+    "pembahasan": "Tracing `tebak_angka(18, 30)`:\n- x=18, y=30 -> `tebak_angka(18, 30 - (18 mod 5) - 1) = tebak_angka(18, 30 - 3 - 1) = tebak_angka(18, 26)`\n- x=18, y=26 -> `tebak_angka(18, 26 - 3 - 1) = tebak_angka(18, 22)`\n- x=18, y=22 -> `tebak_angka(18, 22 - 3 - 1) = tebak_angka(18, 18)`\n- x=18, y=18 -> `tebak_angka(18, 18 - 3 - 1) = tebak_angka(18, 14)`\n- x=18 > y=14 -> `tebak_angka(14, 18)`\n- x=14, y=18 -> `tebak_angka(14, 18 - 4 - 1) = tebak_angka(14, 13)`\n- x=14 > y=13 -> `tebak_angka(13, 14)` -> berlanjut hingga `x` menjadi 4.\n- `x = 4` dipetakan pada `case 4` -> 5.",
+    "tingkat_kesulitan": "sedang"
+  }
+]

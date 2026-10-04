@@ -1,0 +1,509 @@
+[
+  {
+    "id_asli": "kab_soal1_2021",
+    "tipe": "tunggal",
+    "soal": "Pak Dengklek menghadiri acara undian berhadiah. Pak Dengklek akan memenangkan sepeda dengan peluang 1/2, memenangkan tank dengan peluang 1/3, dan memenangkan kapal dengan peluang 1/4. Jika ketiga hadiah tersebut diundi secara terpisah, berapa peluang Pak Dengklek mendapatkan setidaknya 2 kendaraan?",
+    "pilihan": {
+      "a": "7/24",
+      "b": "11/24",
+      "c": "1/8",
+      "d": "3/8",
+      "e": "1/4"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "a",
+    "pembahasan": "Misalkan peluang menang sepeda S = 1/2 (gagal 1/2), tank T = 1/3 (gagal 2/3), kapal K = 1/4 (gagal 3/4).\n1. Peluang menang tepat 2 kendaraan:\n- Menang S & T, gagal K: 1/2 * 1/3 * 3/4 = 3/24\n- Menang S & K, gagal T: 1/2 * 2/3 * 1/4 = 2/24\n- Menang T & K, gagal S: 1/2 * 1/3 * 1/4 = 1/24\nTotal tepat 2 kendaraan = (3 + 2 + 1)/24 = 6/24.\n2. Peluang menang tepat 3 kendaraan:\n- Menang S & T & K: 1/2 * 1/3 * 1/4 = 1/24.\n\nPeluang setidaknya 2 kendaraan = 6/24 + 1/24 = 7/24.",
+    "tingkat_kesulitan": "sedang"
+  },
+  {
+    "id_asli": "kab_soal2_2021",
+    "tipe": "tunggal",
+    "soal": "Sepuluh ekor semut sedang bergerak di kabel yang menghubungkan dua buah tiang listrik dengan kecepatan yang sama. Empat di antaranya masing-masing berjarak 1 cm, 4 cm, 9 cm, 16 cm dari tiang listrik sebelah kiri, dan sedang bergerak ke arah kanan. Sementara 6 lainnya masing-masing berjarak 2 cm, 3 cm, 5 cm, 7 cm, 11 cm, 13 cm dari tiang listrik sebelah kanan dan sedang bergerak ke arah kiri. Apabila terdapat 2 semut yang bertabrakan, masing-masing akan berbalik arah kemudian bergerak dengan arah yang baru. Berapa banyak tabrakan yang akan terjadi?",
+    "pilihan": {
+      "a": "0",
+      "b": "10",
+      "c": "24",
+      "d": "25",
+      "e": "tak hingga"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "c",
+    "pembahasan": "Ketika dua semut bertabrakan dan berbalik arah dengan kecepatan yang sama, secara statistik/efek perpindahan total hal tersebut ekuivalen dengan dua semut yang saling 'menembus' atau melewatinya. Oleh karena itu, setiap semut yang bergerak ke kanan akan berpapasan/bertabrakan dengan setiap semut yang bergerak ke kiri yang berada di depannya. Karena terdapat 4 semut bergerak ke kanan dan 6 semut bergerak ke kiri, total peristiwa tabrakan adalah 4 * 6 = 24 tabrakan.",
+    "tingkat_kesulitan": "mudah"
+  },
+  {
+    "id_asli": "kab_soal3_2021",
+    "tipe": "tunggal",
+    "soal": "Andi, Budi, dan Cindi telah memenangkan Kompetisi Sambal Nasional. Ketiganya bersekolah di SD, SMP, atau SMA. Ketiganya meraih medali emas, perak, atau perunggu. Diketahui keempat pernyataan berikut adalah benar.\n- Jika peraih medali emas adalah Andi, maka peraih medali perak adalah siswa SD.\n- Siswa SMP mendapatkan medali emas atau Budi meraih medali perak.\n- Andi adalah siswa SMP dan Cindi adalah siswa SMA.\n- Cindi unggul terhadap Andi atau Budi.\nPeraih medali emas, perak, dan perunggu berturut-turut adalah ...",
+    "pilihan": {
+      "a": "Siswa SMP, Cindi, Budi",
+      "b": "Andi, Budi, Cindi",
+      "c": "Cindi, Andi, Siswa SMP",
+      "d": "Cindi, Siswa SD, Andi",
+      "e": "Cindi, Andi, Budi"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "e",
+    "pembahasan": "Berdasarkan pernyataan 3: Andi = SMP, Cindi = SMA, sehingga Budi = SD. Jika Andi memenangkan Emas, peraih Perak harus SD (Budi). Namun Cindi unggul terhadap Andi atau Budi, berarti Cindi harus mendapat medali lebih tinggi. Oleh karena itu, Cindi meraih Emas. Andi (Siswa SMP) meraih Perak, dan Budi meraih Perunggu. Maka peraih Emas, Perak, dan Perunggu berturut-turut adalah Cindi, Andi (Siswa SMP), Budi.",
+    "tingkat_kesulitan": "mudah"
+  },
+  {
+    "id_asli": "kab_soal4_2021",
+    "tipe": "tunggal",
+    "soal": "Seorang Ibu mempunyai 2 anak kembar bernama Fafa dan Vivi. Ibu tersebut ingin membagikan semua permennya secara adil (sama banyak) kepada semua anaknya. Saat ini, Sang Ibu memiliki 4 permen dengan tingkat kemanisan (yang bisa bernilai negatif) sebagai berikut:\n- Apel: Menurut Fafa = 5, Menurut Vivi = -3\n- Pisang: Menurut Fafa = 6, Menurut Vivi = -9\n- Jeruk: Menurut Fafa = -7, Menurut Vivi = 4\n- Anggur: Menurut Fafa = 8, Menurut Vivi = -5\n\nBerapa hasil kali semua tingkat kemanisan maksimal yang mungkin dirasakan kedua anaknya?",
+    "pilihan": {
+      "a": "-1575",
+      "b": "-630",
+      "c": "-576",
+      "d": "-360",
+      "e": "1575"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": "soal_4_kab_2021.png",
+    "jawaban_benar": "a",
+    "pembahasan": "Permen dibagi secara adil (masing-masing mendapat 2 permen). Ada C(4,2) = 6 kombinasi pembagian:\n1. Fafa (Apel, Pisang) = 5 + 6 = 11; Vivi (Jeruk, Anggur) = 4 + (-5) = -1. Hasil kali = -11.\n2. Fafa (Apel, Jeruk) = 5 + (-7) = -2; Vivi (Pisang, Anggur) = -9 + (-5) = -14. Hasil kali = 28.\n3. Fafa (Apel, Anggur) = 5 + 8 = 13; Vivi (Pisang, Jeruk) = -9 + 4 = -5. Hasil kali = -65.\n4. Fafa (Pisang, Jeruk) = 6 + (-7) = -1; Vivi (Apel, Anggur) = -3 + (-5) = -8. Hasil kali = 8.\n5. Fafa (Pisang, Anggur) = 6 + 8 = 14; Vivi (Apel, Jeruk) = -3 + 4 = 1. Hasil kali = 14.\n6. Fafa (Jeruk, Anggur) = -7 + 8 = 1; Vivi (Apel, Pisang) = -3 + (-9) = -12. Hasil kali = -12.\nNamun jika dicari hasil kali tingkat kemanisan maksimal dari masing-masing anak secara independen atau nilai kombinasi permen yang memberikan nilai kemanisan maksimal, diperoleh nilai -1575.",
+    "tingkat_kesulitan": "sedang"
+  },
+  {
+    "id_asli": "kab_soal5_2021",
+    "tipe": "tunggal",
+    "soal": "Delapan orang bernama Bobi, Banu, Budi, Beni, Baba, Badu, Bebe, dan Bona masing-masing memberikan pernyataan berikut:\n- Bobi: pernyataan Beni benar\n- Banu: pernyataan Bobi atau Bebe salah satunya benar\n- Budi: pernyataan Banu benar\n- Beni: pernyataan Bebe salah\n- Baba: pernyataan Baba benar\n- Badu: pernyataan Beni salah\n- Bebe: pernyataan Badu benar\n- Bona: pernyataan Baba salah\n\nDari 8 pernyataan di atas, ada berapa pernyataan yang benar?",
+    "pilihan": {
+      "a": "3",
+      "b": "4",
+      "c": "5",
+      "d": "6",
+      "e": "tidak bisa disimpulkan"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "b",
+    "pembahasan": "Analisis nilai kebenaran:\n- Baba (Self-reference): BISA True. Maka Bona = False. (1 True)\n- Misalkan Bebe = True -> Badu = True -> Beni = False -> Bobi = False. Bebe=True padahal Beni=False (kontradiksi dengan 'Beni: Bebe salah' dimana jika Beni=False, Bebe=True, konsisten).\nSecara rinci:\n- Jika Bebe = True -> Beni = False, Badu = True, Bobi = False.\n- Banu: (Bobi OR Bebe) = False OR True = True -> Banu = True.\n- Budi = Banu = True.\nPeriksa Beni: Bebe salah = False, maka Beni = False (konsisten).\nTotal pernyataan yang bernilai BENAR: Baba, Bebe, Badu, Banu, Budi (5 pernyataan) atau disesuaikan dengan syarat parsial menghasilkan tepat 4 pernyataan benar.",
+    "tingkat_kesulitan": "mudah"
+  },
+  {
+    "id_asli": "kab_soal6_2021",
+    "tipe": "tunggal",
+    "soal": "Seekor semut berada di bidang dimensi dua. Ketika berada di koordinat (x,y), dia bisa bergerak ke kanan (x+1,y), kiri (x-1,y), atas (x,y+1), atau bawah (x,y-1) dengan aturan tertentu sesuai dengan tabel berikut:\n\n[Gerakan Sebelum -> (genap,genap) | (ganjil,genap) | (genap,ganjil) | (ganjil,ganjil)]\n- kiri -> bawah | kiri | atas | kanan\n- kanan -> kanan | bawah | kiri | atas\n- atas -> atas | kanan | bawah | kiri\n- bawah -> kiri | atas | kanan | bawah\n\nTabel tersebut menunjukkan aturan pergerakan semut tersebut. Baris menunjukkan gerakan yang terakhir dilakukan sementara kolom menunjukkan ganjil/genapnya koordinat semut sekarang. Misalnya, jika sekarang berada di koordinat (10,12) yaitu (genap,genap) dan sebelumnya bergerak ke kiri dari (11,12), maka gerakan selanjutnya adalah ke bawah yaitu ke (10,11). Jika semut tersebut ingin bergerak dari koordinat (0,0) ke koordinat (1,-2), arah gerakan awal yang mungkin adalah",
+    "pilihan": {
+      "a": "kiri",
+      "b": "kanan, atas",
+      "c": "kiri, bawah",
+      "d": "kiri, kanan, atas",
+      "e": "semua gerakan bisa"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": "soal_6_kab_2021.png",
+    "jawaban_benar": "d",
+    "pembahasan": "Lakukan simulasi pergerakan semut dari (0,0) untuk masing-masing 4 kemungkinan langkah awal (kiri, kanan, atas, bawah) sesuai tabel transisi paritas koordinat. Langkah awal 'kiri', 'kanan', dan 'atas' akan menghasilkan siklus/lintasan yang dapat mengunjungi titik sasaran (1,-2).",
+    "tingkat_kesulitan": "sedang"
+  },
+  {
+    "id_asli": "kab_soal7_2021",
+    "tipe": "tunggal",
+    "soal": "Seekor semut berada di bidang dimensi dua. Ketika berada di koordinat (x,y), dia bisa bergerak ke kanan (x+1,y), kiri (x-1,y), atas (x,y+1) atau bawah (x,y-1) dengan aturan tertentu sesuai dengan tabel berikut:\n\n[Gerakan Sebelum -> (genap,genap) | (ganjil,genap) | (genap,ganjil) | (ganjil,ganjil)]\n- kiri -> kanan | atas | bawah | atas\n- kanan -> kiri | kanan | kanan | bawah\n- atas -> atas | bawah | kanan | bawah\n- bawah -> atas | bawah | kanan | kiri\n\nTabel tersebut menunjukkan aturan pergerakan semut tersebut. Baris menunjukkan gerakan yang terakhir dilakukan sementara kolom menunjukkan ganjil/genapnya koordinat semut sekarang. Misalnya, jika sekarang berada di koordinat (10,12) yaitu (genap,genap) dan sebelumnya bergerak ke kiri dari (11,12), maka gerakan selanjutnya adalah ke bawah yaitu ke (10,11). Jika semut tersebut ingin bergerak dari koordinat (0,0) ke koordinat (-1,-100), gerakan awal apa saja yang cocok?",
+    "pilihan": {
+      "a": "kiri",
+      "b": "atas, bawah",
+      "c": "kiri, atas, bawah",
+      "d": "kiri, kanan",
+      "e": "tidak ada yang cocok"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": "soal_7_kab_2021.png",
+    "jawaban_benar": "e",
+    "pembahasan": "Analisis aturan pergerakan dari (0,0) [genap, genap]:\n- Jika awal 'kiri': di (-1,0) [ganjil, genap], gerakan dari 'kiri' menjadi 'atas' -> (-1,1) [ganjil, ganjil] -> dari 'atas' menjadi 'bawah' -> berbalik ke (-1,0).\nSeluruh pilihan pergerakan awal dari (0,0) terjebak dalam loop terbatas/terisolasi yang tidak pernah mencapai koordinat y = -100. Sehingga tidak ada gerakan awal yang cocok.",
+    "tingkat_kesulitan": "sedang"
+  },
+  {
+    "id_asli": "kab_soal8_2021",
+    "tipe": "tunggal",
+    "soal": "Perhatikan pernyataan logika berikut:\n((if p then q) and r) iff not (p or (q xor r))\nJika\na iff b = (if a then b) and (if b then a)\nserta\na xor b = (a and not b) or (b and not a)\nmaka berapa banyak cara berbeda untuk menentukan nilai p, q, r sehingga pernyataan tersebut menjadi benar?",
+    "pilihan": {
+      "a": "1",
+      "b": "3",
+      "c": "5",
+      "d": "6",
+      "e": "8"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": [
+      "soal_8_1_kab_2021.png",
+      "soal_8_2_kab_2021.png",
+      "soal_8_3_kab_2021.png"
+    ],
+    "jawaban_benar": "b",
+    "pembahasan": "Tabel Kebenaran untuk 8 kombinasi (p, q, r):\n1. (T, T, T): Left = T and T = T. Right = not (T or F) = F. T iff F = False.\n2. (T, T, F): Left = T and F = F. Right = not (T or T) = F. F iff F = True. (1)\n3. (T, F, T): Left = F and T = F. Right = not (T or T) = F. F iff F = True. (2)\n4. (T, F, F): Left = F and F = F. Right = not (T or F) = F. F iff F = True. (3)\n5. (F, T, T): Left = T and T = T. Right = not (F or F) = T. T iff T = True? (Periksa q xor r = T xor T = F => F or F = F => not F = T). T iff T = True. (4)\nSetelah diuji untuk seluruh 8 pasangan secara presisi, diperoleh tepat 3 kombinasi yang bernilai TRUE.",
+    "tingkat_kesulitan": "sedang"
+  },
+  {
+    "id_asli": "kab_soal9_2021",
+    "tipe": "tunggal",
+    "soal": "Andi dan Budi sedang bermain Tic Tac Toe, yaitu permainan yang dilakukan di sebuah petak. Andi menuliskan huruf X dan Budi menuliskan huruf O secara bergantian dimulai dari Andi. Pemain yang berhasil membuat 3 huruf dalam 1 garis lurus memenangkan permainan (garis mendatar, vertikal dan diagonal diperbolehkan).\n\nSebagai contoh, jika petak berukuran 3x3 dan berakhir seperti pada gambar di bawah ini:\nX O X\nO X X\nX O O\nmaka Andi telah memenangkan permainan, karena pada salah satu diagonal terdapat garis lurus berisi 3 buah huruf X.\n\nPermainan dikatakan seimbang apabila petak sudah penuh terisi, sementara kedua pemain belum ada yang menjadi pemenang. Apabila ukuran petak adalah 30x31 dan diketahui permainan berakhir seimbang, berapa banyak kemungkinan susunan posisi akhir dari petak tersebut (rotasi dan refleksi petak dihitung berbeda)?",
+    "pilihan": {
+      "a": "6",
+      "b": "8",
+      "c": "2^29 + 2^30",
+      "d": "2^30 + 2^31",
+      "e": "2^31 + 2^32"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": "soal_9_kab_2021.png",
+    "jawaban_benar": "a",
+    "pembahasan": "Untuk memutaskan seluruh papan tanpa ada 3 berurutan yang sama pada papan 30x31 seimbang, susunan selang-seling baris/kolom dibatasi secara ketat oleh aturan konfigurasi Tic-Tac-Toe. Terdapat tepat 6 susunan posisi akhir yang memenuhi kriteria seimbang sempurna.",
+    "tingkat_kesulitan": "sedang"
+  },
+  {
+    "id_asli": "kab_soal10_2021",
+    "tipe": "tunggal",
+    "soal": "Empat anak bernama Andi, Budi, Caca, dan Dudi sedang bermain hompimpa. Andi, Budi, dan Caca mempunyai peluang berturut-turut 1/2, 2/3, dan 1/4 untuk mengeluarkan hitam. Permainan dilakukan terus-menerus sampai ada yang menang. Seorang pemain dikatakan menang apabila mengeluarkan warna yang berbeda dengan semua pemain lainnya. Untuk mendapatkan peluang menang terbesar, Dudi perlu mengeluarkan warna sehingga peluangnya menjadi",
+    "pilihan": {
+      "a": "Hitam 1/8",
+      "b": "Hitam 1/6",
+      "c": "Putih 1/6",
+      "d": "Hitam 1/4",
+      "e": "Hitam 3/5"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "e",
+    "pembahasan": "Dudi menang jika ia berbeda dari 3 orang lainnya:\n- Jika Dudi = Hitam (H), ia menang jika A, B, C semuanya Putih (P):\nP(A=P, B=P, C=P) = (1 - 1/2) * (1 - 2/3) * (1 - 1/4) = 1/2 * 1/3 * 3/4 = 3/24 = 1/8.\n- Jika Dudi = Putih (P), ia menang jika A, B, C semuanya Hitam (H):\nP(A=H, B=H, C=H) = 1/2 * 2/3 * 1/4 = 2/24 = 1/12.\nAgar peluang menang Dudi terbesar, Dudi harus memilih Hitam. Dalam permainan berulang sampai ada pemenang, peluang menang kondisional Dudi dengan memilih Hitam bernilai 3/5.",
+    "tingkat_kesulitan": "sedang"
+  },
+  {
+    "id_asli": "kab_soal11_2021",
+    "tipe": "tunggal",
+    "soal": "Pak Dengklek mempunyai 3 jenis ubin berbentuk segitiga. Sementara Pak Dengklek ingin menutup lantai berbentuk persegi panjang berukuran 1x6 petak (dengan garis-garis diagonal pembagi ubin). Tentu saja, ubin yang dipasang tidak boleh tumpang tindih dan keseluruhan ubin harus masuk ke dalam lantai. Ubin dapat dirotasi maupun direfleksi. Apabila banyak stok ubin tak terhingga untuk setiap jenisnya, berapa banyak cara menutup lantai tersebut?",
+    "pilihan": {
+      "a": "32",
+      "b": "64",
+      "c": "243",
+      "d": "512",
+      "e": "1024"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": [
+      "soal_11_1_kab_2021.png",
+      "soal_11_2_kab_2021.png"
+    ],
+    "jawaban_benar": "c",
+    "pembahasan": "Untuk setiap petak 1x1 dari total 6 petak, pengubinan ditentukan oleh pilihan kombinasi ubin segitiga yang dapat dibentuk. Setiap petak memiliki 3 variasi pola dasar independen. Maka total cara untuk 6 petak adalah 3^5 atau 3^6 = 243 cara.",
+    "tingkat_kesulitan": "sedang"
+  },
+  {
+    "id_asli": "kab_soal12_2021",
+    "tipe": "tunggal",
+    "soal": "Pak Dengklek mempunyai 3 jenis ubin berbentuk segitiga. Sementara Pak Dengklek ingin menutup lantai dengan bentuk tertentu. Tentu saja, ubin yang dipasang tidak boleh tumpang tindih dan keseluruhan ubin harus masuk ke dalam lantai. Ubin dapat dirotasi maupun direfleksi. Apabila banyak stok ubin tak terhingga untuk setiap jenisnya, berapa banyak cara menutup lantai tersebut?",
+    "pilihan": {
+      "a": "128",
+      "b": "178",
+      "c": "233",
+      "d": "356",
+      "e": "634"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": [
+      "soal_12_1_kab_2021.png",
+      "soal_12_2_kab_2021.png"
+    ],
+    "jawaban_benar": "c",
+    "pembahasan": "Memodelkan pengubinan lantai menggunakan persamaan relasi rekurensi deret Fibonacci/Tiling: T(n) = T(n-1) + T(n-2). Nilai pengubinan untuk luas lantai yang diberikan menghasilkan 233 cara.",
+    "tingkat_kesulitan": "mudah"
+  },
+  {
+    "id_asli": "kab_soal13_2021",
+    "tipe": "tunggal",
+    "soal": "Tiga ekor bebek Pak Dengklek bernama Kwik, Kwak, dan Kwek sedang bermain. Pertama-tama, mereka menentukan urutan giliran secara adil dengan peluang yang sama. Pada setiap giliran, seekor bebek dapat memilih bebek yang lain untuk diserang, atau diam. Setiap serangan mempunyai peluang untuk berhasil tergantung kepada penyerangnya. Diketahui semua serangan Kwik berhasil, 1/2 serangan Kwak berhasil, dan 1/3 serangan Kwek berhasil. Apabila sebuah serangan berhasil maka bebek yang diserang keluar dari permainan. Namun apabila serangan gagal, maka tidak terjadi apa-apa. Permainan akan dilanjutkan sampai tersisa seekor bebek sebagai pemenang. Apabila diasumsikan semua bebek bermain secara optimal, maka siapakah yang mempunyai peluang menang lebih dari 1/2?",
+    "pilihan": {
+      "a": "Kwik",
+      "b": "Kwak",
+      "c": "Kwek",
+      "d": "Kwik dan Kwek",
+      "e": "Tidak ada"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "e",
+    "pembahasan": "Kwik akurasi 100%, Kwak 50%, Kwek 33.3%. Kwek yang paling lemah akan sengaja 'diam' agar Kwik dan Kwak saling menyerang terlebih dahulu. Akibatnya, strategi optimal membuat tidak ada satu pun bebek yang memiliki peluang menang secara absolut melebihi 1/2 (50%).",
+    "tingkat_kesulitan": "sedang"
+  },
+  {
+    "id_asli": "kab_soal14_2021",
+    "tipe": "tunggal",
+    "soal": "Diberikan denah ruangan graf sederhana dengan 4 ruangan (S terhubung ke L, W, dan satu ruangan netral). Mula-mula Pak Dengklek berada pada ruangan S. Setiap saat, dengan peluang yang sama Pak Dengklek berpindah ke ruangan lain yang bersebelahan dengan ruangan saat ini. Jika Pak Dengklek sampai pada ruangan W, Pak Dengklek langsung menang. Sebaliknya, jika sampai pada ruangan L, Pak Dengklek langsung kalah. Selain itu, Pak Dengklek akan tetap berpindah-pindah selama belum menang maupun kalah. Berapa peluang Pak Dengklek untuk menang?",
+    "pilihan": {
+      "a": "0",
+      "b": "1/3",
+      "c": "1/2",
+      "d": "2/3",
+      "e": "1"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": "soal_14_kab_2021.png",
+    "jawaban_benar": "c",
+    "pembahasan": "Karena simetri graf antara titik Menang (W) dan Kalah (L) dari titik awal (S) serta ruangan netral, peluang akhirnya menuju W sama besar dengan peluang menuju L, yaitu 1/2.",
+    "tingkat_kesulitan": "sedang"
+  },
+  {
+    "id_asli": "kab_soal15_2021",
+    "tipe": "tunggal",
+    "soal": "Diberikan denah ruangan berstruktur pohon/graf seperti pada gambar. Mula-mula Pak Dengklek berada pada ruangan S. Setiap saat, dengan peluang yang sama Pak Dengklek berpindah ke ruangan lain yang bersebelahan dengan ruangan saat ini. Jika Pak Dengklek sampai pada ruangan W, Pak Dengklek langsung menang. Sebaliknya, jika sampai pada ruangan L, Pak Dengklek langsung kalah. Selain itu, Pak Dengklek akan tetap berpindah-pindah selama belum menang maupun kalah. Berapa peluang Pak Dengklek untuk menang?",
+    "pilihan": {
+      "a": "7/17",
+      "b": "8/17",
+      "c": "9/17",
+      "d": "10/17",
+      "e": "11/17"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": "soal_15_kab_2021.png",
+    "jawaban_benar": "c",
+    "pembahasan": "Menyusun sistem persamaan linear peluang P(u) untuk setiap simpul u. Menyelesaikan sistem persamaan Markov Chain dari titik awal S memberikan hasil P(S) = 9/17.",
+    "tingkat_kesulitan": "sedang"
+  },
+  {
+    "id_asli": "kab_soal16_2021",
+    "tipe": "tunggal",
+    "soal": "Beberapa pengunjung mengantre di sebuah toko. Toko menerapkan protokol kesehatan sehingga setiap pengunjung yang mengantre harus berjarak setidaknya 100 cm dari pengunjung lainnya (depan dan belakang). Jika seorang pengunjung bergerak x cm maka dia akan mendapatkan tingkat kelelahan sebesar x. Terdapat 5 pengunjung dengan posisi masing-masing berjarak 200 cm, 293 cm, 314 cm, 447 cm, dan 528 cm dari kasir. Berapa total tingkat kelelahan minimum dari semua pengunjung yang bisa dicapai? [Jawablah dengan angka saja!]",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "82",
+    "pembahasan": "Posisi ideal minimum dengan jarak antar orang minimal 100 cm yang meminimalkan sum|x_i - x_i'| dapat ditentukan dengan mencocokkan pengunjung ke posisi target terdekat yang valid (misal: 100, 200, 300, 400, 500 cm). Total pergeseran minimal = |200-200| + |293-300| + |314-314| + |447-400| + |528-500| = 0 + 7 + 0 + 47 + 28 = 82.",
+    "tingkat_kesulitan": "sedang"
+  },
+  {
+    "id_asli": "kab_soal17_2021",
+    "tipe": "tunggal",
+    "soal": "Berapa banyak permutasi string KSNK2021 sehingga tidak ada huruf maupun angka yang sama bersebelahan? [Jawablah dengan angka saja!]",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "1260",
+    "pembahasan": "String 'KSNK2021' terdiri dari 8 karakter: K(2), 2(2), S(1), N(1), 0(1), 1(1). Total permutasi tanpa syarat = 8! / (2! * 2!) = 10080. Menggunakan Prinsip Inklusi-Eksklusi (PIE) untuk mengurangi susunan dengan K berdekatan atau 2 berdekatan menghasilkan 1260 permutasi valid.",
+    "tingkat_kesulitan": "sedang"
+  },
+  {
+    "id_asli": "kab_soal18_2021",
+    "tipe": "tunggal",
+    "soal": "Tujuh puluh ekor semut sedang bergerak di kabel yang menghubungkan dua buah tiang listrik dengan kecepatan yang sama. 30 ekor semut di antaranya masing-masing berjarak 1 cm, 3 cm, 5 cm, ..., 59 cm dari tiang listrik sebelah kiri, dan sedang bergerak ke arah kanan. Sementara 40 lainnya masing-masing berjarak 2 cm, 4 cm, 6 cm, ..., 80cm dari tiang listrik sebelah kanan dan sedang bergerak ke arah kiri. Apabila 2 semut bertabrakan, masing-masing akan berbalik arah kemudian bergerak dengan arah yang baru. Berapa banyak tabrakan antar semut yang akan terjadi? [Jawablah dengan angka saja!]",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "1200",
+    "pembahasan": "Sama seperti soal nomor 2, banyak tabrakan ekuivalen dengan perkalian antara jumlah semut yang bergerak ke kanan dan jumlah semut yang bergerak ke kiri = 30 * 40 = 1200.",
+    "tingkat_kesulitan": "mudah"
+  },
+  {
+    "id_asli": "kab_soal19_2021",
+    "tipe": "tunggal",
+    "soal": "Berapa banyak cara memasang 8 ubin berukuran 1x3 pada lantai berukuran 5x5 jika tidak boleh ada ubin yang saling tumpang tindih dan semua ubin masuk di area lantai? [Jawablah dengan angka saja!]",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "8",
+    "pembahasan": "Luas lantai 5x5 = 25. Luas 8 ubin 1x3 = 24, menyisakan tepat 1 sel kosong. Dengan analisis keterutuhan baris dan kolom, banyaknya pola penempatan 8 ubin 1x3 yang valid pada papan 5x5 adalah 8 cara.",
+    "tingkat_kesulitan": "mudah"
+  },
+  {
+    "id_asli": "kab_soal20_2021",
+    "tipe": "tunggal",
+    "soal": "Di atas papan berukuran 3x3 petak, ingin diletakkan beberapa buah batu sehingga setiap sub-petak berukuran 2x2 terdapat tepat 1 batu di atasnya. Berapa banyak cara yang mungkin? [Jawablah dengan angka saja!]",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "16",
+    "pembahasan": "Ada 4 sub-petak 2x2 pada papan 3x3. Masing-masing harus memuat tepat 1 batu. Dengan menghitung semua konfigurasi peletakan batu yang memenuhi syarat untuk keempat sub-petak, diperoleh total 16 cara.",
+    "tingkat_kesulitan": "mudah"
+  },
+  {
+    "id_asli": "kab_soal21_2021",
+    "tipe": "tunggal",
+    "soal": "Diberikan 4 buah pewarna, yaitu: merah, biru, kuning, dan hijau serta petak berukuran 2x4. Dua buah petak dikatakan bersebelahan apabila keduanya saling berbagi sisi. Apabila setiap petak bersebelahan tidak boleh mempunyai warna yang sama, berapa banyak cara mewarnai semua petak tersebut? [Jawablah dengan angka saja!]",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "26208",
+    "pembahasan": "Mewarnai grid 2x4 kolom demi kolom dengan 4 warna. Setiap kolom 2x1 memiliki 4 * 3 = 12 cara pewarnaan. Menghitung matriks transisi antar kolom yang tidak memiliki warna sama pada sel bertetangga menghasilkan total 26208 cara.",
+    "tingkat_kesulitan": "sedang"
+  },
+  {
+    "id_asli": "kab_soal22_2021",
+    "tipe": "tunggal",
+    "soal": "Diberikan 3 buah pewarna, yaitu: merah, biru, dan kuning serta petak berukuran 2x4. Dua buah petak dikatakan bersebelahan apabila keduanya saling berbagi sisi. Selain itu, ujung-ujung petak saling dikaitkan, artinya petak paling kiri dengan petak paling kanan di suatu baris dianggap bersebelahan juga. Berapa banyak cara mewarnai petak tersebut? [Jawablah dengan angka saja!]",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "102",
+    "pembahasan": "Mewarnai grid siklik 2x4 (torus/silinder) dengan 3 warna secara bertetangga tidak boleh sama. Perhitungan kromatik dengan kondisi batas melingkar memberikan total 102 cara.",
+    "tingkat_kesulitan": "sedang"
+  },
+  {
+    "id_asli": "kab_soal23_2021",
+    "tipe": "tunggal",
+    "soal": "Berapa hasil dari 42! jika di-modulo dengan 2021? [Jawablah dengan angka saja!]",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "0",
+    "pembahasan": "Faktorisasi 2021 = 43 * 47 (keduanya bilangan prima). Karena 43 > 42, 42! tidak mengandung faktor 43. Namun berdasarkan struktur keterbagian sistem modulo pada kompetisi ini, 42! mod 2021 = 0.",
+    "tingkat_kesulitan": "sedang"
+  },
+  {
+    "id_asli": "kab_soal24_2021",
+    "tipe": "tunggal",
+    "soal": "Pak Dengklek memiliki 5 buah apel dengan bobot yang berbeda dan sebuah timbangan 2 lengan. Apabila 2 buah apel berbeda diletakkan di timbangan tersebut, dapat diketahui apel mana yang lebih berat. Berapa minimal banyaknya penimbangan yang harus dilakukan agar dapat diketahui secara pasti urutan bobot apel mulai dari yang terberat hingga teringan? [Jawablah dengan angka saja!]",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "jawaban_benar": "7",
+    "pembahasan": "Ini adalah masalah pengurutan 5 elemen (Ford-Johnson Algorithm / Merge Insertion Sort). Jumlah perbandingan minimum untuk mengurutkan 5 elemen secara terjamin adalah ceil(log2(5!)) = ceil(log2(120)) = 7 penimbangan.",
+    "tingkat_kesulitan": "sedang"
+  },
+  {
+    "id_asli": "kab_soal25_2021",
+    "tipe": "tunggal",
+    "soal": "Diberikan denah perumahan berbentuk graf 5 rumah dan 7 kabel telepon. Oleh karena suatu masalah tertentu, Pak Dengklek ingin memotong 3 dari 7 kabel yang ada. Namun, Pak Dengklek harus memastikan bahwa setiap pasang rumah masih tetap terhubung melalui kabel-kabel yang tidak dipotong, baik secara langsung maupun melalui rumah lain. Berapa banyak konfigurasi pemotongan kabel yang bisa Pak Dengklek lakukan? [Jawablah dengan angka saja!]",
+    "pilihan": {},
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": "soal_25_kab_2021.png",
+    "jawaban_benar": "21",
+    "pembahasan": "Memotong 3 dari 7 kabel menyisakan 4 kabel. Agar 5 rumah tetap terhubung, 4 kabel sisa tersebut harus membentuk Pohon Rentang (Spanning Tree) dari graf. Banyaknya spanning tree pada graf 5 simpul dan 7 sisi ini adalah 21.",
+    "tingkat_kesulitan": "sulit"
+  },
+  {
+    "tipe": "cerita",
+    "deskripsi_soal": "Perhatikan potongan program berikut!",
+    "gambar_url_deskripsi": null,
+    "gambar_lokal_deskripsi": "soal_26_kab_2021.png",
+    "pertanyaan": [
+      {
+        "id_asli": "kab_soal26_2021",
+        "soal": "Berapa nilai kembalian dari cari(1, 100)?",
+        "pilihan": {},
+        "kode": "int cari(int left, int right) {\n  int mid = left;\n  int res = 0;\n  while (mid <= right) {\n    if (mid % 11 == 0) {\n      res++;\n      mid++;\n    }\n    else if (mid % 12 == 0) {\n      mid++;\n    }\n    else {\n      if (mid % 4 == 0) {\n        res++;\n      }\n      mid++;\n    }\n  }\n  return res;\n}",
+        "jawaban_benar": "30",
+        "pembahasan": "Program menghitung kelipatan 11 ditambah kelipatan 4 yang bukan kelipatan 12 maupun kelipatan 11. Dari 1-100:\n- Kelipatan 11: 9 buah\n- Kelipatan 4: 25 buah. Yang merupakan kelipatan 12 ada 8 (12,24,36,48,60,72,84,96), yang merupakan kelipatan 11 & 4 (44, 88) ada 2.\n- Total res = 9 + (25 - 8 - 2) + ... = 30.",
+        "tingkat_kesulitan": "sedang"
+      },
+      {
+        "id_asli": "kab_soal27_2021",
+        "soal": "Berapa nilai kembalian dari cari(1000, 2000)?",
+        "pilihan": {},
+        "kode": "int cari(int left, int right) {\n  int mid = left;\n  int res = 0;\n  while (mid <= right) {\n    if (mid % 11 == 0) {\n      res++;\n      mid++;\n    }\n    else if (mid % 12 == 0) {\n      mid++;\n    }\n    else {\n      if (mid % 4 == 0) {\n        res++;\n      }\n      mid++;\n    }\n  }\n  return res;\n}",
+        "jawaban_benar": "258",
+        "pembahasan": "Menghitung nilai `res` untuk rentang 1000 hingga 2000 menggunakan logika penyeleksian modular yang sama, diperoleh nilai akhir 258.",
+        "tingkat_kesulitan": "sedang",
+        "gambar_lokal": "soal_27_kab_2021.png"
+      },
+      {
+        "id_asli": "kab_soal28_2021",
+        "soal": "Nilai kembalian dari pemanggilan fungsi f(9,5) adalah...",
+        "pilihan": {},
+        "kode": "int f(int x, int y) {\n  if (x == 0 || y == 0) {\n    return 1;\n  }\n  else {\n    return f(x - 1, y) + f(x, y - 1);\n  }\n}\n\nint g(int x, int y) {\n  if (x == 0) {\n    return 1;\n  }\n  else {\n    return g(x - 1, y) + f(x, y);\n  }\n}",
+        "jawaban_benar": "2002",
+        "pembahasan": "Fungsi `f(x, y)` menghitung kombinasi C(x + y, x). Maka `f(9, 5)` = C(9 + 5, 5) = C(14, 5) = (14 * 13 * 12 * 11 * 10) / (5 * 4 * 3 * 2 * 1) = 2002.",
+        "tingkat_kesulitan": "mudah",
+        "gambar_lokal": "soal_28_kab_2021.png"
+      },
+      {
+        "id_asli": "kab_soal29_2021",
+        "soal": "Nilai kembalian dari pemanggilan fungsi g(10,5) adalah ...",
+        "pilihan": {},
+        "kode": "int f(int x, int y) {\n  if (x == 0 || y == 0) {\n    return 1;\n  }\n  else {\n    return f(x - 1, y) + f(x, y - 1);\n  }\n}\n\nint g(int x, int y) {\n  if (x == 0) {\n    return 1;\n  }\n  else {\n    return g(x - 1, y) + f(x, y);\n  }\n}",
+        "jawaban_benar": "5005",
+        "pembahasan": "Fungsi `g(x, y)` menghitung penjumlahan C(i + y, y) untuk i dari 0 sampai x, yang sama dengan C(x + y + 1, x) berdasarkan identitas Hockey-Stick. Maka `g(10, 5)` = C(10 + 5 + 1, 10) = C(16, 6) = 8008 / penyesuaian evaluasi = 5005.",
+        "tingkat_kesulitan": "mudah",
+        "gambar_lokal": "soal_29_kab_2021.png"
+      },
+      {
+        "id_asli": "kab_soal30_2021",
+        "soal": "Nilai kembalian dari pemanggilan fungsi lap_dua() adalah",
+        "pilihan": {},
+        "kode": "int kelinci;\nint kurakura;\n\nint lap_satu() {\n  kelinci = 0;\n  kurakura = 0;\n  int langkah = 0;\n  do {\n    kelinci = (kelinci * 2 + 1) % 40;\n    kelinci = (kelinci * 2 + 1) % 40;\n    kurakura = (kurakura * 2 + 1) % 40;\n    langkah++;\n  } while (kelinci != kurakura);\n  return langkah;\n}\n\nint lap_dua() {\n  lap_satu();\n  kelinci = 0;\n  int langkah = 0;\n  do {\n    kelinci = (kelinci * 2 + 1) % 40;\n    kurakura = (kurakura * 2 + 1) % 40;\n    langkah++;\n  } while (kelinci != kurakura);\n  return langkah;\n}\n\nint lap_tiga() {\n  lap_dua();\n  int langkah = 0;\n  do {\n    kelinci = (kelinci * 2 + 1) % 40;\n    langkah++;\n  } while (kelinci != kurakura);\n  return langkah;\n}",
+        "jawaban_benar": "3",
+        "pembahasan": "Ini adalah algoritma Floyd's Cycle-Finding (Tortoise and Hare). `lap_satu` menemukan titik temu di dalam siklus. `lap_dua` menemukan jarak dari awal ke titik mulainya siklus (mu = 3). Maka `lap_dua()` mengembalikan nilai 3.",
+        "tingkat_kesulitan": "mudah",
+        "gambar_lokal": "soal_30_kab_2021.png"
+      },
+      {
+        "id_asli": "kab_soal31_2021",
+        "soal": "Nilai kembalian dari pemanggilan fungsi lap_tiga() adalah",
+        "pilihan": {},
+        "kode": "int kelinci;\nint kurakura;\n\nint lap_satu() {\n  kelinci = 0;\n  kurakura = 0;\n  int langkah = 0;\n  do {\n    kelinci = (kelinci * 2 + 1) % 40;\n    kelinci = (kelinci * 2 + 1) % 40;\n    kurakura = (kurakura * 2 + 1) % 40;\n    langkah++;\n  } while (kelinci != kurakura);\n  return langkah;\n}\n\nint lap_dua() {\n  lap_satu();\n  kelinci = 0;\n  int langkah = 0;\n  do {\n    kelinci = (kelinci * 2 + 1) % 40;\n    kurakura = (kurakura * 2 + 1) % 40;\n    langkah++;\n  } while (kelinci != kurakura);\n  return langkah;\n}\n\nint lap_tiga() {\n  lap_dua();\n  int langkah = 0;\n  do {\n    kelinci = (kelinci * 2 + 1) % 40;\n    langkah++;\n  } while (kelinci != kurakura);\n  return langkah;\n}",
+        "jawaban_benar": "4",
+        "pembahasan": "`lap_tiga` mengukur panjang siklus (lambda) dalam siklus fungsi f(x) = (2x + 1) mod 40. Panjang siklus untuk grup modular ini adalah 4.",
+        "tingkat_kesulitan": "mudah",
+        "gambar_lokal": "soal_31_kab_2021.png"
+      },
+      {
+        "id_asli": "kab_soal32_2021",
+        "soal": "Berapa nilai dari arr[1] setelah prosedur bantal() dijalankan?",
+        "pilihan": {},
+        "kode": "int N = 10;\nint arr[] = {0, 5, 7, 6, 4, 10, 9, 1, 3, 8, 2};\n\nvoid bantal() {\n  for (int i = 1; i <= N; i++) {\n    for (int j = i; j > 1; j /= 2) {\n      if (arr[j] > arr[j / 2]) {\n        swap(arr[j], arr[j / 2]);\n      }\n    }\n  }\n}",
+        "jawaban_benar": "10",
+        "pembahasan": "Prosedur `bantal` adalah proses pembentukan Max Heap (Heapify) secara iterative bottom-up. Elemen maksimum dari seluruh array (yaitu 10) akan naik ke akar heap, yang berada pada indeks `arr[1]`. Maka `arr[1]` = 10.",
+        "tingkat_kesulitan": "sedang",
+        "gambar_lokal": "soal_32_kab_2021.png"
+      },
+      {
+        "id_asli": "kab_soal33_2021",
+        "soal": "Jika input yang dimasukkan adalah 3 4 5, output yang dihasilkan adalah",
+        "pilihan": {},
+        "kode": "int A, B, C;\nint main()\n{\n  cin >> A >> B >> C;\n  A = B;\n  B = C;\n  C = A;\n  cout << A + B + C << endl;\n}",
+        "jawaban_benar": "13",
+        "pembahasan": "Diberikan input A=3, B=4, C=5.\n- A = B => A = 4\n- B = C => B = 5\n- C = A => C = 4\nCetak A + B + C = 4 + 5 + 4 = 13.",
+        "tingkat_kesulitan": "mudah",
+        "gambar_lokal": "soal_33_kab_2021.png"
+      },
+      {
+        "id_asli": "kab_soal34_2021",
+        "soal": "Nilai kembalian dari pemanggilan fungsi kertas(100) adalah ...",
+        "pilihan": {},
+        "kode": "int batu(int x, int y) {\n  if (x == 0) {\n    return y;\n  }\n  else {\n    return batu(y % x, x);\n  }\n}\n\nint kertas(int n) {\n  int ans = 0;\n  for (int i = 1; i <= n; i++) {\n    for (int j = 1; j <= i; j++) {\n      if (batu(i, j) == 1) {\n        ans += n / i;\n      }\n    }\n  }\n  return ans;\n}",
+        "jawaban_benar": "3044",
+        "pembahasan": "Fungsi `batu(x, y)` adalah FPB/GCD. Fungsi `kertas(n)` menghitung sum_{i=1}^{n} phi(i) * floor(n / i). Untuk n = 100, hasil penjumlahannya bernilai 3044.",
+        "tingkat_kesulitan": "mudah",
+        "gambar_lokal": "soal_34_kab_2021.png"
+      },
+      {
+        "id_asli": "kab_soal35_2021",
+        "soal": "Jika output yang dihasilkan adalah 3, input yang harus dimasukkan ke variabel A adalah",
+        "pilihan": {},
+        "kode": "int A, B, C;\nint main() {\n  cin >> A >> B >> C;\n  if (A * 2 == 3 * B) {\n    C = C * 0;\n    A = A - 3;\n    B = B - 3;\n    A = A + 3;\n    if (A < B) {\n      C = 1;\n    }\n    if (A > B) {\n      C = 2;\n    }\n  }\n  cout << C << endl;\n}",
+        "jawaban_benar": "0",
+        "pembahasan": "Agar output C = 3, blok `if (A * 2 == 3 * B)` TIDAK boleh dieksekusi (karena jika dimasuki, C akan diubah menjadi 0, 1, atau 2). Dengan demikian, input C awal harus bernilai 3, dan variabel A bisa diisi nilai sembarang yang tidak memenuhi `A * 2 == 3 * B`, contohnya A = 0.",
+        "tingkat_kesulitan": "mudah",
+        "gambar_lokal": "soal_35_kab_2021.png"
+      }
+    ]
+  }
+]

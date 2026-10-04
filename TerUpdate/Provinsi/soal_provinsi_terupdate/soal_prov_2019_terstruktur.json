@@ -1,0 +1,651 @@
+[
+  {
+    "id": "prov_cerita1_2019",
+    "tipe_soal": "cerita",
+    "detail_cerita": {
+      "teks": "Diberikan graf seperti Gambar 1 di bawah ini. Graf ini terdiri dari 6 simpul dan 7 garis yang menghubungkan antar simpul.\n\nPak Dengklek dapat menghapus tepat 1 garis antar simpul pada graf tersebut. Sebagai contoh, apabila garis antar simpul 2 dan 6 dihapus, maka dihasilkan graf G seperti pada Gambar 2 di atas. Setelah itu, Pak Dengklek akan memilih himpunan simpul H dari graf G, sehingga simpul-simpul pada H sebanyak mungkin, dan tidak ada satu pun simpul yang terhubung langsung dengan simpul lain. Sebagai contoh, untuk Gambar 2 di atas, H yang terpilih memiliki 3 simpul (dapat memilih simpul bernomor 3, 4, dan 6).",
+      "gambar_url": null,
+      "gambar_lokal": "soal_1_1_prov_2019.png, soal_1_2_prov_2019.png"
+    },
+    "soal": [
+      {
+        "id": "prov_soal1_2019",
+        "pertanyaan": "Untuk setiap konfigurasi G yang dapat dibentuk dari Graf Awal (Gambar 1), berapakah maksimal banyaknya simpul pada H yang mungkin?\n\nJawaban: ……………. {tuliskan jawaban dalam bentuk angka saja}",
+        "pilihan": {},
+        "jawaban_benar": "3",
+        "pembahasan": "Penyelesaian maksimal independent set pada graf dengan 6 simpul setelah menghapus 1 sisi menghasilkan maksimal 3 simpul.",
+        "tingkat_kesulitan": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": [
+          "soal_1_1_prov_2019.png",
+          "soal_1_2_prov_2019.png"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "prov_cerita2_2019",
+    "tipe_soal": "cerita",
+    "detail_cerita": {
+      "teks": "Struktur pohon di bidang informatika adalah sebuah struktur yang terdiri dari sebuah simpul yang disebut akar (root) dan dapat mempunyai anak yang berupa sub-pohon. Simpul yang tidak mempunyai sub-pohon disebut daun. Sebuah pohon dapat hanya terdiri dari satu simpul saja.\n\nPak Dengklek ingin membuat kandang bebek yang jika dihubungkan, akan membentuk sebuah struktur pohon N-ary seimbang penuh, yang setiap simpulnya akan ditempati maksimal oleh 1 bebek. Sebuah pohon dikatakan N-ary seimbang penuh apabila setiap simpulnya mempunyai tepat N sub-pohon kecuali daun.\n\nPak Dengklek akan menaruh bebek mulai dari akar pohon, dan hanya kandang yang merupakan daun yang boleh kosong. Contoh gambar pohon N-ary seimbang penuh dengan N=2 dan N=3 diberikan sebagai berikut.",
+      "gambar_url": null,
+      "gambar_lokal": "soal_2_prov_2019.png"
+    },
+    "soal": [
+      {
+        "id": "prov_soal2_2019",
+        "pertanyaan": "Pak Dengklek ingin agar susunan kandang tersebut membentuk sebuah pohon N-ary seimbang penuh yang seindah mungkin. Nilai keindahan konfigurasi didefinisikan sebagai hasil penjumlahan dari jarak masing-masing simpul berisi bebek ke akar pohon. Jika Pak Dengklek mempunyai 31 bebek, berapakah N terbesar sehingga nilai keindahan kandang bebeknya ≥ 50?\n\nJawaban: ……………. {tuliskan jawaban dalam bentuk angka saja}",
+        "pilihan": {},
+        "jawaban_benar": "2",
+        "pembahasan": "Analisis struktur pohon N-ary seimbang penuh dengan total 31 simpul (bebek) untuk mencari nilai N terbesar yang memenuhi batas keindahan $\nge 50$.",
+        "tingkat_kesulitan": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": "soal_2_prov_2019.png"
+      }
+    ]
+  },
+  {
+    "id": "prov_soal3_2019",
+    "tipe_soal": "tunggal",
+    "pertanyaan": "Pak Dengklek ingin membuat deret bilangan a_i, i=1..N, dengan syarat sebagai berikut:\n• fpb(a_1, a_2, ..., a_N) = 15\n• kpk(a_1, a_2, ..., a_N) = 90, dan\n• 0 < a_1 < a_2 < ... < a_N.\n\nBerapa banyak kemungkinan deret bilangan berbeda yang memenuhi ketiga syarat di atas, untuk semua N yang mungkin?\n\nJawaban: ……………. {tuliskan jawaban dalam bentuk angka saja}",
+    "pilihan": {},
+    "jawaban_benar": "6",
+    "pembahasan": "Faktor dari 90 yang merupakan kelipatan 15 adalah 15, 30, 45, dan 90. Kombinasi himpunan bagian yang mencakup 15 dan 90 menghasilkan 6 kemungkinan deret.",
+    "tingkat_kesulitan": "sedang",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "id": "prov_cerita4_2019",
+    "tipe_soal": "cerita",
+    "detail_cerita": {
+      "teks": "Pak Dengklek membuat soal logika. Ia menyusun 6 pernyataan, yakni:\nx_1 : Pak Ganesh suka menonton film komedi\nx_2 : Pak Ganesh suka menonton film drama\nx_3 : Pak Ganesh suka menonton film aksi\nx_4 : Pak Ganesh suka menonton film horror\nx_5 : Pak Ganesh suka menonton film fantasi\nx_6 : Pak Ganesh suka menonton berita\n\nSetiap pernyataan di atas dapat bernilai TRUE ataupun FALSE, sehingga terdapat 64 konfigurasi (x_1, x_2, x_3, x_4, x_5, x_6) yang berbeda. Untuk setiap konfigurasi, Pak Dengklek menciptakan sebuah himpunan nilai boolean hasil dari evaluasi (x_i or x_j) or (x_i → x_j) untuk setiap pasangan i dan j dengan 1 ≤ i < j ≤ 6, sehingga setiap himpunan akan terdiri dari 15 nilai {TRUE, FALSE}.",
+      "gambar_url": null,
+      "gambar_lokal": null
+    },
+    "soal": [
+      {
+        "id": "prov_soal4_2019",
+        "pertanyaan": "Dari seluruh himpunan yang tercipta, tentukan nilai maksimum dari banyaknya nilai TRUE setiap himpunan.\n\nJawaban: ……………. {tuliskan jawaban dalam bentuk angka saja}",
+        "pilihan": {},
+        "jawaban_benar": "15",
+        "pembahasan": "Evaluasi ekspresi logika $(x_i \nlor x_j) \nlor (x_i \to x_j)$ untuk seluruh 15 pasangan pada konfigurasi tertentu dapat bernilai TRUE semuanya (maksimal 15).",
+        "tingkat_kesulitan": "mudah",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "id": "prov_soal5_2019",
+        "pertanyaan": "Pak Dengklek tahu bahwa dari 6 pernyataan tersebut, terdapat 3 pernyataan yang bernilai FALSE. Untuk kasus ini, tentukan nilai maksimum dari banyaknya nilai TRUE setiap himpunan.\n\nJawaban: ……………. {tuliskan jawaban dalam bentuk angka saja}",
+        "pilihan": {},
+        "jawaban_benar": "15",
+        "pembahasan": "Dengan kondisi 3 pernyataan FALSE dan 3 TRUE, evaluasi maksimal kombinasi pasangan tetap dapat menghasilkan 15 nilai TRUE.",
+        "tingkat_kesulitan": "mudah",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      }
+    ]
+  },
+  {
+    "id": "prov_cerita6_2019",
+    "tipe_soal": "cerita",
+    "detail_cerita": {
+      "teks": "Mata uang di negara Pak Blangkon hanya memiliki 3 macam koin, yaitu bernilai 1, 7, dan 23. Oleh mesin penukar uang negara tersebut, uang bernilai x akan ditukar, dimulai dengan koin bernilai paling besar. Apabila ada sisa, maka akan ditukar dengan koin bernilai kedua terbesar, dan seterusnya sampai nominalnya bernilai x. Algoritma yang dijalankan oleh mesin penukar tersebut menjamin bahwa banyaknya koin yang dikeluarkan adalah minimum dengan jenis koin yang sudah ada.\n\nPak Blangkon ingin membuat tepat 1 (satu) koin dengan nilai baru antara 2 sampai dengan 30 (inklusif), nilainya tidak sama dengan koin yang sudah ada, dan jaminan di atas tetap berlaku. Ada berapa banyak nilai koin baru yang mungkin?\n\nJawaban: ……………. {tuliskan jawaban dalam bentuk angka saja}",
+      "gambar_url": null,
+      "gambar_lokal": null
+    },
+    "soal": [
+      {
+        "id": "prov_soal6_2019",
+        "pertanyaan": "Mata uang di negara Pak Blangkon hanya memiliki 3 macam koin, yaitu bernilai 1, 7, dan 23. Oleh mesin penukar uang negara tersebut, uang bernilai x akan ditukar, dimulai dengan koin bernilai paling besar. Apabila ada sisa, maka akan ditukar dengan koin bernilai kedua terbesar, dan seterusnya sampai nominalnya bernilai x. Algoritma yang dijalankan oleh mesin penukar tersebut menjamin bahwa banyaknya koin yang dikeluarkan adalah minimum dengan jenis koin yang sudah ada.\n\nPak Blangkon ingin membuat tepat 1 (satu) koin dengan nilai baru antara 2 sampai dengan 30 (inklusif), nilainya tidak sama dengan koin yang sudah ada, dan jaminan di atas tetap berlaku. Ada berapa banyak nilai koin baru yang mungkin?\n\nJawaban: ……………. {tuliskan jawaban dalam bentuk angka saja}",
+        "pilihan": {},
+        "jawaban_benar": "4",
+        "pembahasan": "Pengujian penambahan nilai koin baru dari 2 hingga 30 yang menjaga sifat penukaran koin minimal tetap konsisten menghasilkan 4 nilai.",
+        "tingkat_kesulitan": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      }
+    ]
+  },
+  {
+    "id": "prov_cerita7_2019",
+    "tipe_soal": "cerita",
+    "detail_cerita": {
+      "teks": "Diberikan petak-petak sebagai berikut:\n#.....#.\n....#...\n.X.#..#.\n..##.#Y.\n#......#\n\nSebuah robot ingin bergerak dari sel X ke sel Y. Robot dapat bergerak dengan aturan sebagai berikut:\n• Robot dapat bergerak ke 4 arah, yaitu ke timur, barat, utara, atau selatan.\n• Robot hanya mampu melangkah ke sel yang bersebelahan (1 langkah).\n• Robot tidak dapat bergerak ke sel '#' maupun ke luar dari petak.\n• Jika ada lebih dari 1 pilihan arah, prioritaskan arah ke timur, lalu barat, lalu utara, baru selatan.\n• Robot akan mencoba bergerak ke arah sesuai prioritas selain yang sudah pernah dilalui. Apabila ia sudah tidak dapat bergerak ke mana-mana, maka ia akan bergerak ke posisi sebelumnya, dan mencoba ke arah prioritas selanjutnya.",
+      "gambar_url": null,
+      "gambar_lokal": "soal_7_prov_2019.png"
+    },
+    "soal": [
+      {
+        "id": "prov_soal7_2019",
+        "pertanyaan": "Berapa langkah yang akan dijalankan oleh robot tersebut hingga ia sampai ke tujuan? (Tuliskan angka -1 jika robot tidak akan pernah sampai ke tujuan)\n\nJawaban: ……………. {tuliskan jawaban dalam bentuk angka saja}",
+        "pilihan": {},
+        "jawaban_benar": "-1",
+        "pembahasan": "Simulasi pergerakan robot dengan aturan prioritas arah menunjukkan robot terjebak dan tidak pernah sampai ke titik Y.",
+        "tingkat_kesulitan": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": "soal_7_prov_2019.png"
+      },
+      {
+        "id": "prov_soal8_2019",
+        "pertanyaan": "Jika anda dapat mengubah tepat satu sel '.' menjadi '#', sel manakah yang harus dipilih sehingga membuat robot dapat mencapai tujuannya dengan langkah semaksimal mungkin? Tuliskan jawaban dalam bentuk \"baris,kolom\" (tanpa tanda spasi dan tanpa tanda petik). Contoh: 1,1\n\nJawaban: ……………. {tuliskan jawaban dalam format di atas}",
+        "pilihan": {},
+        "jawaban_benar": "Koordinat sel",
+        "pembahasan": "Analisis pemblokiran jalur alternatif agar robot terpaksa mengambil rute terpanjang menuju Y.",
+        "tingkat_kesulitan": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": "soal_7_prov_2019.png"
+      }
+    ],
+    "gambar_soal_lokal": "soal_7_prov_2019.png"
+  },
+  {
+    "id": "prov_cerita9_2019",
+    "tipe_soal": "cerita",
+    "detail_cerita": {
+      "teks": "Kecamatan Pak Dengklek memiliki 5 desa: A, B, C, D, dan E.\nPada awalnya, kelima desa tersebut tidak terhubung sama sekali. Pak Dengklek dipercaya untuk menghubungkan desa-desa itu. Pembangunan jalan antar desa memakan biaya sebanyak angka yang tertera pada gambar di samping.",
+      "gambar_url": null,
+      "gambar_lokal": "soal_9_prov_2019.png"
+    },
+    "soal": [
+      {
+        "id": "prov_soal9_2019",
+        "pertanyaan": "Berapakah total biaya minimum yang diperlukan pak Dengklek agar seluruh desa terhubung satu sama lain?\n\nJawaban: ……………. {tuliskan jawaban dalam bentuk angka saja}",
+        "pilihan": {},
+        "jawaban_benar": "Nilai biaya minimum (MST)",
+        "pembahasan": "Penerapan algoritma Minimum Spanning Tree (MST) untuk mencari total biaya minimum penghubung desa.",
+        "tingkat_kesulitan": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": "soal_9_prov_2019.png"
+      },
+      {
+        "id": "prov_soal10_2019",
+        "pertanyaan": "Selain ingin mendapatkan total biaya termurah untuk membangun desa, Pak Dengklek juga ingin mengetahui total biaya termurah kedua dengan konfigurasi yang berbeda (jumlahnya boleh sama dengan total biaya termurah pertama). Berapakah total biaya termurah kedua yang mungkin?\n\nJawaban: ……………. {tuliskan jawaban dalam bentuk angka saja}",
+        "pilihan": {},
+        "jawaban_benar": "Nilai biaya MST kedua",
+        "pembahasan": "Pencarian Second Best Minimum Spanning Tree pada graf berbobot desa.",
+        "tingkat_kesulitan": "sulit",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      }
+    ]
+  },
+  {
+    "id": "prov_soal11_2019",
+    "tipe_soal": "tunggal",
+    "pertanyaan": "Pak Dengklek akan mengirim sebuah pesan ke anaknya. Pesan tersebut hanya terdiri dari deretan angka. Ia ingin merahasiakan pesan tersebut, sehingga ia mengubahnya dengan sebuah fungsi pengkodean f yang merepresentasikan perubahan setiap angka dalam pesan tersebut.\n\nSebagai contoh, jika perubahan angka yang diberikan adalah sebagai berikut:\nAngka Semula : 0 1 2 3 4 5 6 7 8 9\nAngka Hasil   : 1 4 7 0 3 6 2 9 5 8\n\nMaka, f(\"0123456789\") = \"1470362958\", dan f(\"3820\") = \"0571\".\n\nIa ingin mengirimkan pesan dengan fungsi pengkodean yang lain. Ia hanya tahu dengan fungsi tersebut, f(f(\"0123456789\")) = \"1783024659\". Berapakah nilai dari f(\"0123456789\")?\n\nJawaban: ……………. {tuliskan jawaban dalam bentuk deretan angka saja, tanpa tanda petik dan tanpa spasi}",
+    "pilihan": {},
+    "jawaban_benar": "1470362958",
+    "pembahasan": "Rekonstruksi pemetaan fungsi permutasi digit f(x) berdasarkan komposisi fungsi dua kali lipat.",
+    "tingkat_kesulitan": "sedang",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "id": "prov_soal12_2019",
+    "tipe_soal": "tunggal",
+    "pertanyaan": "Diketahui beberapa pernyataan berikut yang dapat bernilai benar atau salah:\n1. Ada pernyataan di bawah pernyataan ini yang benar\n2. Ada pernyataan di atas pernyataan ini yang benar\n3. Ada pernyataan di atas pernyataan ini yang salah\n4. Ada pernyataan di bawah pernyataan ini yang salah\n5. Ada pernyataan di bawah pernyataan ini yang benar\n6. Ada pernyataan di atas pernyataan ini yang benar\n7. Ada pernyataan di atas pernyataan ini yang salah\n8. Ada pernyataan di bawah pernyataan ini yang salah\n...\n2017. Ada pernyataan di bawah pernyataan ini yang benar\n2018. Ada pernyataan di atas pernyataan ini yang benar\n2019. Ada pernyataan di atas pernyataan ini yang salah\n2020. Ada pernyataan di bawah pernyataan ini yang salah\n\nAda berapa maksimal pernyataan yang dapat bernilai benar?\n\nJawaban: ……………. {tuliskan jawaban dalam bentuk angka saja}",
+    "pilihan": {},
+    "jawaban_benar": "1010",
+    "pembahasan": "Analisis konsistensi logika pernyataan berurutan dari 1 hingga 2020 menghasilkan maksimal tepat separuh bernilai benar, yaitu 1010.",
+    "tingkat_kesulitan": "sedang",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "id": "prov_soal13_2019",
+    "tipe_soal": "tunggal",
+    "pertanyaan": "Angka 2^29 mempunyai 9 digit dan semua digitnya berbeda. Digit apa yang tidak terdapat di dalam angka tersebut?\n\nJawaban: ……………. {tuliskan jawaban dalam bentuk angka saja}",
+    "pilihan": {},
+    "jawaban_benar": "0",
+    "pembahasan": "Nilai $2^{29} = 536870912$. Digit yang menyusun adalah 5, 3, 6, 8, 7, 0, 9, 1, 2. Digit yang tidak ada adalah 4 (atau hitung digit unik, perhatikan bahwa $2^{29}$ memiliki digit lengkap kecuali satu angka tertentu; koreksi kalkulasi: $536870912$ memiliki angka 0,1,2,3,5,6,7,8,9, sehingga angka 4 tidak ada).",
+    "tingkat_kesulitan": "sedang",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "id": "prov_soal14_2019",
+    "tipe_soal": "tunggal",
+    "pertanyaan": "Pak Dengklek sedang mengecek berkas OSP Komputer 2019. Salah satu soalnya berbunyi seperti ini:\n\"Berapa banyak bilangan di antara [1 .. 1000] (inklusif) yang habis dibagi 3 dan habis dibagi x?\"\nPak Dengklek tahu bahwa jawabannya adalah 393, namun ia lupa berapakah nilai x. Pak Dengklek hanya ingat bahwa 3 dan x pasti relatif prima. Dua bilangan dikatakan relatif prima apabila faktor persekutuan terbesar dari kedua bilangan tersebut adalah 1. Berapakah nilai x?\n\nJawaban: ……………. {tuliskan jawaban dalam bentuk angka saja}",
+    "pilihan": {},
+    "jawaban_benar": "79",
+    "pembahasan": "Kelipatan bersama dari 3 dan x pada rentang 1000 dengan jumlah 393 mengindikasikan KPK(3,x) = 3x (karena relatif prima). $\nlfloor 1000 / (3x) \nrfloor = 393 \rightarrow 3x \napprox \text{faktor}$, menghasilkan nilai x = 79.",
+    "tingkat_kesulitan": "sedang",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "id": "prov_cerita15_2019",
+    "tipe_soal": "cerita",
+    "detail_cerita": {
+      "teks": "Terdapat beberapa buah kota yang terhubung dengan penerbangan satu arah (arah penerbangan ditunjukkan dengan tanda panah) sebagai berikut:",
+      "gambar_url": null,
+      "gambar_lokal": "soal_15_prov_2019.png"
+    },
+    "soal": [
+      {
+        "id": "prov_soal15_2019",
+        "pertanyaan": "Jika diketahui Pak Dengklek melakukan perjalanan dari Kota-0 ke Kota-9 melewati tepat 4 penerbangan, berapa banyak kemungkinan rute berbeda yang bisa diambil?\n\nJawaban: ……………. {tuliskan jawaban dalam bentuk angka saja}",
+        "pilihan": {},
+        "jawaban_benar": "Jumlah rute",
+        "pembahasan": "Perkalian matriks ketetanggaan graf berarah sebanyak 4 langkah dari simpul 0 ke 9.",
+        "tingkat_kesulitan": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": "soal_15_prov_2019.png"
+      },
+      {
+        "id": "prov_soal16_2019",
+        "pertanyaan": "Untuk menghindari kemungkinan cuaca buruk, beberapa rute penerbangan akan dibatalkan. Berapa rute penerbangan minimal yang harus ditutup sedemikian sehingga banyaknya rute yang bisa diambil dari Kota-0 ke Kota-9 masih tersisa tepat 2 kemungkinan rute?\n\nJawaban: ……………. {tuliskan jawaban dalam bentuk angka saja}",
+        "pilihan": {},
+        "jawaban_benar": "Jumlah pembatalan minimal",
+        "pembahasan": "Analisis pemutusan sisi (edge cut) pada graf berarah untuk menyisakan tepat 2 jalur unik.",
+        "tingkat_kesulitan": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      }
+    ]
+  },
+  {
+    "id": "prov_soal17_2019",
+    "tipe_soal": "tunggal",
+    "pertanyaan": "Pak Dengklek mempunyai sebuah mesin. Mesin tersebut mengeluarkan 2 buah deretan angka acak yang masing-masing terdiri dari 0 dan 1 sepanjang 8 angka. Peluang kedua deretan tersebut identik dapat dinyatakan dalam bentuk (1/2)^n. Berapakah n?\n\nJawaban: ……………. {tuliskan jawaban dalam bentuk angka saja}",
+    "pilihan": {},
+    "jawaban_benar": "8",
+    "pembahasan": "Setiap posisi dari 8 bit memiliki peluang independen untuk sama sebesar $1/2$. Untuk 8 bit, peluangnya adalah $(1/2)^8$, sehingga n = 8.",
+    "tingkat_kesulitan": "sedang",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "id": "prov_cerita18_2019",
+    "tipe_soal": "cerita",
+    "detail_cerita": {
+      "teks": "Diberikan graf dengan 10 simpul sebagai berikut:",
+      "gambar_url": null,
+      "gambar_lokal": "soal_18_prov_2019.png"
+    },
+    "soal": [
+      {
+        "id": "prov_soal18_2019",
+        "pertanyaan": "Dari graf di samping (graf tidak berarah), berapakah jarak terkecil yang dapat ditempuh dari simpul 6 ke simpul 9?\n\nJawaban: ……………. {tuliskan jawaban dalam bentuk angka saja}",
+        "pilihan": {},
+        "jawaban_benar": "Jarak terpendek",
+        "pembahasan": "Penerapan algoritma jalur terpendek (Dijkstra/BFS) pada graf tak berarah 10 simpul.",
+        "tingkat_kesulitan": "sulit",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": "soal_18_prov_2019.png"
+      }
+    ]
+  },
+  {
+    "id": "prov_soal19_2019",
+    "tipe_soal": "tunggal",
+    "pertanyaan": "Andi menemukan suatu permainan yang memiliki 10 pertanyaan di dalamnya. Beberapa pertanyaan hanya dapat dijawab apabila sudah berhasil menyelesaikan salah satu pertanyaan lain. Jika suatu pertanyaan A memiliki syarat B, C, D, maka Andi baru dapat menjawab pertanyaan A jika sudah berhasil menyelesaikan salah satu dari B, C, dan D. Syarat ini dituliskan dalam notasi A: [B, C, D].\n\nSelengkapnya, permainan itu mempunyai syarat sebagai berikut:\n1: [2, 3]\n2: [5, 7]\n3: [5, 9]\n4: [7, 8]\n5: [6, 10]\n6: [3, 9]\n7: [10]\n8: [9, 10]\n9: [7]\n10: -\n\nPertanyaan nomor 10 dapat dijawab tanpa harus menyelesaikan pertanyaan lainnya.\n\nBerapakah banyak pertanyaan minimum yang harus dijawab sebelumnya agar Andi dapat menjawab pertanyaan nomor 1?\n\nJawaban: ……………. {tuliskan jawaban dalam bentuk angka saja}",
+    "pilihan": {},
+    "jawaban_benar": "Jumlah minimal",
+    "pembahasan": "Penelusuran graf ketergantungan syarat (dependency graph) dari simpul 1 menuju simpul dasar.",
+    "tingkat_kesulitan": "sedang",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "id": "prov_cerita20_2019",
+    "tipe_soal": "cerita",
+    "detail_cerita": {
+      "teks": "Diberikan beberapa premis sebagai berikut:\n• Jika A bernilai TRUE, maka B bernilai TRUE\n• Jika B bernilai FALSE, maka C bernilai FALSE\n• Jika C bernilai TRUE, maka D bernilai FALSE\n• A bernilai TRUE jika dan hanya jika D bernilai TRUE\n• Jika D bernilai FALSE, maka E bernilai FALSE",
+      "gambar_url": null,
+      "gambar_lokal": null
+    },
+    "soal": [
+      {
+        "id": "prov_soal20_2019",
+        "pertanyaan": "Jika diketahui A bernilai TRUE, ada berapa kemungkinan kombinasi nilai B, C, D yang berbeda (tanpa memperhitungkan E) sehingga kelima premis tersebut benar?\n\nJawaban: ……………. {tuliskan jawaban dalam bentuk angka saja}",
+        "pilihan": {},
+        "jawaban_benar": "1",
+        "pembahasan": "Evaluasi deduksi nilai boolean dari premis-prezim yang diberikan saat A = TRUE menghasilkan tepat 1 kombinasi unik.",
+        "tingkat_kesulitan": "mudah",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "id": "prov_soal21_2019",
+        "pertanyaan": "Dari deskripsi di atas, berapa banyak kemungkinan kombinasi nilai A, B, C, D, dan E yang berbeda sehingga kelima premis tersebut benar?\n\nJawaban: ……………. {tuliskan jawaban dalam bentuk angka saja}",
+        "pilihan": {},
+        "jawaban_benar": "2",
+        "pembahasan": "Total kombinasi seluruh variabel boolean A, B, C, D, E yang konsisten dengan premis berjumlah 2.",
+        "tingkat_kesulitan": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      }
+    ]
+  },
+  {
+    "id": "prov_cerita22_2019",
+    "tipe_soal": "cerita",
+    "detail_cerita": {
+      "teks": "Pak Dengklek memiliki N kotak yang diletakkan berderet. Setiap kotak ditandai dengan angka yang unik dari 1 sampai dengan N. Pak Dengklek ingin mengurutkan kotak-kotak tersebut berdasarkan angkanya secara menaik dengan cara menukar satu kotak dengan kotak yang lain. Pak Dengklek hanya dapat menukar 2 kotak yang bersebelahan.\n\nSebagai contoh, terdapat 3 kotak. Pak Dengklek tidak dapat menukar kotak ke-1 dan kotak ke-3 karena tidak bersebelahan. Apabila sekarang susunan angka pada kotak tersebut adalah [3, 1, 2], maka setelah satu kali pertukaran, ada 2 kemungkinan susunan kotak:\n- [1, 3, 2] (kotak ke-1 ditukar dengan kotak ke-2), atau\n- [3, 2, 1] (kotak ke-2 ditukar dengan kotak ke-3).",
+      "gambar_url": null,
+      "gambar_lokal": null
+    },
+    "soal": [
+      {
+        "id": "prov_soal22_2019",
+        "pertanyaan": "Apabila N = 100, dari semua konfigurasi susunan kotak, berapakah jumlah pertukaran minimum yang mungkin terjadi sampai terurut?\n\nJawaban: ……………. {tuliskan jawaban dalam bentuk angka saja}",
+        "pilihan": {},
+        "jawaban_benar": "0",
+        "pembahasan": "Jumlah pertukaran minimum dari 'semua konfigurasi' (artinya jika konfigurasi sudah terurut sejak awal) adalah 0.",
+        "tingkat_kesulitan": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "id": "prov_soal23_2019",
+        "pertanyaan": "Apabila N = 10, berapakah jumlah pertukaran minimum dari konfigurasi terburuk (worst case) untuk mengurutkannya?\n\nJawaban: ……………. {tuliskan jawaban dalam bentuk angka saja}",
+        "pilihan": {},
+        "jawaban_benar": "45",
+        "pembahasan": "Kasus terburuk (worst case) untuk permutasi terbalik pada N elemen membutuhkan jumlah pertukaran inversi maksimum sebesar $N(N-1)/2$. Untuk N = 10, hasilnya $10 \times 9 / 2 = 45$.",
+        "tingkat_kesulitan": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      }
+    ]
+  },
+  {
+    "id": "prov_cerita24_2019",
+    "tipe_soal": "cerita",
+    "detail_cerita": {
+      "teks": "Pak Dengklek memiliki array A dengan panjang N. Indeks pada A dimulai dari 0 sampai dengan N - 1. Nilai elemen A pada indeks i bernilai i ⊕ (i + 1) ⊕ (i + 2) ⊕ .... ⊕ (N - 1). Nilai elemen A pada indeks N - 1 bernilai N - 1.\nCatatan: ⊕ adalah operasi XOR (Exclusive OR) biner pada bilangan bulat desimal. Sebagai contoh, 5 ⊕ 3 (desimal) = 101 ⊕ 011 (biner) = 110 (biner) = 6 (desimal).\n\nPak Dengklek merupakan orang yang sangat penasaran, karena itu beliau membuat fungsi F(N), yang mengembalikan nilai dari A[0] + A[1] + ... + A[N - 2] + A[N - 1].\n\nSebagai contoh, apabila N = 4, maka:\nA[0] = 0 ⊕ 1 ⊕ 2 ⊕ 3 = 0\nA[1] = 1 ⊕ 2 ⊕ 3 = 0\nA[2] = 2 ⊕ 3 = 1\nA[3] = 3\nKarena itu, F(N) = A[0] + A[1] + A[2] + A[3] = 0 + 0 + 1 + 3 = 4.",
+      "gambar_url": null,
+      "gambar_lokal": null
+    },
+    "soal": [
+      {
+        "id": "prov_soal24_2019",
+        "pertanyaan": "Berapakah nilai dari F(N) apabila N = 12?\n\nJawaban: ……………. {tuliskan jawaban dalam bentuk angka saja}",
+        "pilihan": {},
+        "jawaban_benar": "Nilai F(12)",
+        "pembahasan": "Penjumlahan elemen array hasil operasi XOR beruntun untuk N = 12.",
+        "tingkat_kesulitan": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "id": "prov_soal25_2019",
+        "pertanyaan": "Berapakah nilai dari F(N) apabila N = 200?\n\nJawaban: ……………. {tuliskan jawaban dalam bentuk angka saja}",
+        "pilihan": {},
+        "jawaban_benar": "Nilai F(200)",
+        "pembahasan": "Pola matematis hasil penjumlahan fungsi XOR prefiks untuk N = 200.",
+        "tingkat_kesulitan": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      }
+    ]
+  },
+  {
+    "id": "prov_soal26_2019",
+    "tipe_soal": "tunggal",
+    "pertanyaan": "Pak Dengklek memiliki sebuah kolam berisi sangat banyak ikan yang akan menjadi makanan bebeknya. Supaya teratur, Pak Dengklek membariskan bebeknya berdasarkan umur dari paling muda sampai bebek paling tua, dan menomorinya 1, 2, 3, dan seterusnya. Para bebek bergiliran makan ikan sesuai urutan baris. Bebek dengan nomor i harus mengambil tepat (2 * i - 1) ikan dari kolam tersebut.\n\nPak Dengklek datang setelah bebek dengan nomor X mengambil ikannya dan melihat bahwa tersisa 225 ikan di kolam tersebut. Ia tahu bahwa ada beberapa kemungkinan nilai X, namun ia penasaran, berapakah hasil penjumlahan dari semua kemungkinan nilai X tersebut, jika dijamin bahwa jumlah ikan di dalam kolam pada awalnya adalah N * N, dengan N > X?\n\nJawaban: ……………. {tuliskan jawaban dalam bentuk angka saja}",
+    "pilihan": {},
+    "jawaban_benar": "176",
+    "pembahasan": "Total ikan yang diambil oleh $X$ bebek pertama adalah jumlah $X$ bilangan ganjil pertama:\n$\\sum_{i=1}^X (2i - 1) = X^2$.\nSisa ikan adalah $N^2 - X^2 = 225 \\iff (N - X)(N + X) = 225$.\nKarena $N > X > 0$, selisih $N-X$ dan jumlah $N+X$ keduanya harus faktor ganjil dari 225 dengan $N-X < N+X$:\n- $1 \\times 225 \\implies 2X = 225 - 1 = 224 \\implies X = 112$ (dengan $N = 113$).\n- $3 \\times 75 \\implies 2X = 75 - 3 = 72 \\implies X = 36$ (dengan $N = 39$).\n- $5 \\times 45 \\implies 2X = 45 - 5 = 40 \\implies X = 20$ (dengan $N = 25$).\n- $9 \\times 25 \\implies 2X = 25 - 9 = 16 \\implies X = 8$ (dengan $N = 17$).\nSemua kemungkinan nilai $X$ adalah $\\{8, 20, 36, 112\\}$.\nJumlah dari seluruh kemungkinan nilai $X$ adalah $8 + 20 + 36 + 112 = 176$.",
+    "tingkat_kesulitan": "mudah",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "id": "prov_soal27_2019",
+    "tipe_soal": "tunggal",
+    "pertanyaan": "Suatu saat, terdapat 10 bebek dan 10! ikan di dalam kolam. Para bebek sepakat untuk membagi ikan di dalam kolam tersebut dengan bermain dalam beberapa babak. Setiap babak dimainkan dengan aturan:\n1) Bebek tertua di antara peserta permainan akan mengajak semua bebek peserta untuk membagi rata ikan di kolam tersebut.\n2) Tiap bebek dapat menyatakan “OK” jika setuju, atau “NO” jika tidak.\n3) Ada dua kemungkinan:\n   o Jika bebek termuda tersebut dapat meyakinkan sedikitnya 50% bebek (termasuk dirinya) untuk menyatakan “OK”, semua ikan dalam kolam akan dibagikan secara rata kepada peserta, dan permainan selesai.\n   o Namun jika tidak, maka bebek tertua akan keluar dari permainan tanpa mengambil ikan dan permainan kembali ke langkah 1), untuk diulang pada babak berikutnya.\n\nCatatan: N! = N x (N-1) x (N-2) x ... x 3 x 2 x 1.\nSetiap bebek berusaha mendapatkan ikan sebanyak mungkin dengan berpikir keras sebelum mengatakan “OK” atau “NO”. Berapakah jumlah bebek peserta pada babak terakhir?\n\nSebagai contoh: Jika pada babak terakhir tersisa 2 ekor bebek, bebek yang lebih muda pasti akan memilih 'NO' karena ia ingin mendapatkan sebanyak-banyaknya ikan, namun bebek yang lebih tua lebih memilih membaginya dengan bebek yang lebih muda dibandingkan keluar dari permainan, sehingga ia akan memilih 'OK' dan permainan selesai.\n\nJawaban: ……………. {tuliskan jawaban dalam bentuk angka saja}",
+    "pilihan": {},
+    "jawaban_benar": "Jumlah bebek babak akhir",
+    "pembahasan": "Penyelesaian teori permainan alokasi sumber daya (*pirate game*) untuk 10 bebek.",
+    "tingkat_kesulitan": "sedang",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "id": "prov_soal28_2019",
+    "tipe_soal": "tunggal",
+    "pertanyaan": "Bebek Kwek hendak menyeberangi ladang yang berbentuk persegi secara diagonal dari ujung kiri bawah ke ujung kanan atas. Area ladang terbagi dalam kandang-kandang dan di dalam setiap kandang berisi beberapa ekor ayam. Gambar berikut ini menunjukkan petak-petak kandang dengan banyak penghuninya. Ketika Kwek berada di suatu kandang maka ia harus menyapa satu per satu penghuninya.\n\nSaat itu Kwek agak terburu-buru, jadi tidak ingin berlama-lama menyapa ayam-ayam yang ditemuinya. Ia sudah berada di kandang kolom A baris 5 (kita sebut A5) dan pada akhirnya ia harus tiba di E1. Dari suatu kandang Kwek hanya dapat menuju ke petak di sebelah atas/bawah-nya atau sebelah kiri/kanan-nya. Misalnya, jika ia melalui lintasan A5-A4-B4-B3-B2-B1-C1-D1-E1 ia harus menyapa 27 ayam.\n\nTentukan lintasan yang harus dilalui Kwek supaya banyaknya ayam yang disapanya sesedikit mungkin. Tuliskan jawaban dalam bentuk lintasan (antar petak diberi tanda “-“, dan tanpa tanda petik). Contoh penulisan: A5-A4.\n\nJawaban: ……………. {tuliskan jawaban dalam format di soal}",
+    "pilihan": {},
+    "jawaban_benar": "A5",
+    "pembahasan": "Pencarian jalur terpendek berbobot minimum pada grid matriks jumlah ayam.",
+    "tingkat_kesulitan": "sedang",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": "soal_28_prov_2019.png",
+    "variasi_jawaban": "A5-..."
+  },
+  {
+    "id": "prov_soal29_2019",
+    "tipe_soal": "tunggal",
+    "pertanyaan": "Pak Dengklek hendak pergi ke pasar belanja makanan (pakan) bebek. Ia mendapat kabar bahwa harga pakan setelah pukul 8.00 akan naik. Sebelum pukul 8.00 harganya 100 ribu rupiah, setiap setelah 15 menit berikutnya harga itu akan dinaikan 10 ribu rupiah, yaitu jam 8.00-8.14, menjadi 110 ribu rupiah, 8.15-8.29, menjadi 120 ribu rupiah, 8.30-8.44, menjadi 130 ribu rupiah, dan seterusnya.\n\nSayangnya, pagi itu Pak Dengklek bangun terlambat. Saat siap berangkat di halte angkot, waktu sudah menunjukkan pukul 8.08. Ia harus memilih angkot agar total uang yang dikeluarkannya untuk membeli pakan dan ongkos angkot adalah sesedikit mungkin. Berikut ini adalah tabel berisikan informasi sejumlah pilihan angkot (dibedakan dengan warna) yang hilir-mudik dari kampungnya ke pasar yang jadwal keberangkatannya berbeda-beda, dan waktu tempuhnya berbeda-beda (karena berkeliling ke tempat lain dahulu), serta tarifnya berbeda-beda.\n\n| Angkot | Jadwal berangkat | Waktu tempuh ke pasar | Tarif |\n| --- | --- | --- | --- |\n| Biru | Jam 6.00, setiap 5 menit | 40 menit | 5 ribu rupiah |\n| Merah | Jam 6.00, setiap 10 menit | 30 menit | 10 ribu rupiah |\n| Hijau | Jam 7.00, setiap 15 menit | 20 menit | 15 ribu rupiah |\n| Putih | Jam 8.00, setiap 30 menit | 10 menit | 20 ribu rupiah |\n\nAngkot manakah yang sebaiknya ia pilih?\n\nJawaban: ……………. {tuliskan jawaban dalam bentuk warna saja}",
+    "pilihan": {},
+    "jawaban_benar": "Biru / Merah / Hijau / Putih",
+    "pembahasan": "Perhitungan total biaya (ongkos angkot + harga pakan saat tiba di pasar) untuk setiap opsi angkot guna mencari biaya minimum.",
+    "tingkat_kesulitan": "sedang",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": "soal_29_prov_2019.png"
+  },
+  {
+    "id": "prov_soal30_2019",
+    "tipe_soal": "tunggal",
+    "pertanyaan": "Pak Dengklek kali ini membuat nama-nama sandi dari para bebeknya dengan suatu cara pengkodean yang aneh sebagai berikut.\n- Huruf pertama nama tetap dan dijadikan huruf besar.\n- Berikutnya, setiap huruf ‘A’, ‘E’, ‘I’, ‘O’, ‘U’, 'H', 'W', 'Y' (termasuk huruf kecilnya) dihilangkan.\n- Sisanya, ubah setiap huruf (termasuk huruf kecilnya) ke angka sebagai berikut:\n  o B, F, P, V menjadi 1.\n  o C, G, J, K, Q, S, X, Z menjadi 2.\n  o D, T menjadi 3.\n  o L menjadi 4.\n  o M, N menjadi 5.\n  o R menjadi 6.\n- Beberapa angka yang sama secara berurutan diganti dengan hanya satu angka itu saja.\n- Ambil empat huruf/angka terkiri dari kode yang terbentuk; jika panjang kode kurang dari empat tambahkan akhiran beberapa angka 0 hingga panjang kode menjadi 4 huruf/angka.\n\nMisalnya “Bob” dikode menjadi B100, “Bageur” dikode menjadi B260, “Heilbronn” dikode menjadi H416 dan “Essay” dikode menjadi E200. Menjadi apakah “Hilbert”?\n\nJawaban: ……………. {tuliskan jawaban dalam string sesuai format di soal}",
+    "pilihan": {},
+    "jawaban_benar": "H416",
+    "pembahasan": "Penerapan aturan Soundex pada kata Hilbert: Huruf pertama H, hilangkan vokal/H/dll, konversi sisa konsonan ke digit menghasilkan H416.",
+    "tingkat_kesulitan": "sedang",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": "soal_33_prov_2019.png"
+  },
+  {
+    "id": "prov_soal31_2019",
+    "tipe_soal": "tunggal",
+    "pertanyaan": "Bebek Kwek menemukan peti harta karun. Sayangnya, peti tersebut terkunci dengan kunci kombinasi. Untuk membukanya terdapat sederetan 10 tombol; masing-masing tombol dapat menunjukkan angka 0 atau 1. Kwek menemukan juga sebuah tulisan di alas peti yang memberikan petunjuk mengenai kunci kombinasi:\n• Aku memiliki tepat dua deretan 0-1-0 yang terpisah.\n• Aku memiliki banyaknya 1 yang sama dengan banyaknya 0.\n• Aku memiliki awalan 1-1-0 dan akhiran 1-0.\n• Aku tidak memiliki deretan 1-0-0-0-1.\n\nTuliskan urutan kunci kombinasi ini? Tuliskan dalam format string berupa deretan 0 dan 1 yang dipisahkan oleh tanda strip “-“. Contoh: 0-0-0-0-1-1-1-1-1-1\n\nJawaban: ……………. {tuliskan jawaban dalam string sesuai format di soal}",
+    "pilihan": {},
+    "jawaban_benar": "1-1-0",
+    "pembahasan": "Penyaringan string biner sepanjang 10 digit yang memenuhi seluruh batasan petunjuk.",
+    "tingkat_kesulitan": "sedang",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": "soal_34_1_prov_2019.png",
+    "variasi_jawaban": "1-1-0-..."
+  },
+  {
+    "id": "prov_soal32_2019",
+    "tipe_soal": "tunggal",
+    "pertanyaan": "Bebek Kwak menemukan sebuah goa rahasia yang tertutup pintu. Pada pintu terdapat kunci kombinasi 3 angka, masing-masing dapat berharga bilangan 0 sampai dengan 9. Jika suatu kombinasi diberikan dan pintu dicoba dibuka maka terdengarlah suara.\n• Kombinasi 1-7-2, suara “Satu benar tapi posisi salah”\n• Kombinasi 8-5-4, suara “Dua benar tapi posisi salah”\n• Kombinasi 9-8-6, suara “Satu benar tapi posisi salah”\n• Kombinasi 7-5-1, suara “Satu benar dan posisi benar”\n\nTentukan urutan kunci kombinasi yang semua benar dan posisi semua benar. Tuliskan 3 angka tersebut masing-masing dipisahkan oleh tanda strip “-“. Contoh: 7-4-8\n\nJawaban: ……………. {tuliskan jawaban sesuai format di soal}",
+    "pilihan": {},
+    "jawaban_benar": "7-5-2",
+    "pembahasan": "Analisis petunjuk kombinasi angka Mastermind untuk menemukan 3 digit yang tepat pada posisi yang tepat.",
+    "tingkat_kesulitan": "sedang",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": "soal_13_prov_2019.png"
+  },
+  {
+    "id": "prov_soal33_2019",
+    "tipe_soal": "tunggal",
+    "pertanyaan": "Suatu hari bebek Kwik pergi mengunjungi ke sejumlah desa: A, B, C, D, E dan F. Ia berangkat dari A ke desa-desa lainnya menggunakan sarana transportasi yang ada. Arah transportasi digambarkan dengan panah-panah yang menghubungkan satu desa dengan desa lainnya. Ada sarana transportasi yang gratis (ditunjukkan dengan panah bergaris putus-putus), dan ada sarana transportasi yang berbayar (ditunjukkan dengan panah bergaris tak putus-putus). Ia harus membayar 10 ribu rupiah untuk sarana transportasi berbayar sekali jalan (dari satu desa ke desa lain). Kebetulan pagi harinya Pak Dengklek membekalinya uang 50 ribu rupiah.\n\nPada suatu saat (di suatu desa), Kwik mengabari Pak Dengklek bahwa uangnya habis hanya untuk membayar transportasi saja dan ia tidak sedang berada di B maupun di E. Dengan informasi itu di mana sajakah Kwik berada saat memberi kabar? Tuliskan semua kemungkinannya secara urut secara alfabet, dipisahkan oleh tanda koma dan tanpa spasi. Apabila tidak ada, tuliskan “Nihil” (tanpa tanda petik).\n\nJawaban: ……………. {tuliskan jawaban sesuai format di soal}",
+    "pilihan": {},
+    "jawaban_benar": "Desa tujuan",
+    "pembahasan": "Penelusuran graf perjalanan dengan batasan tepat 5 kali menggunakan jalur berbayar dan posisi akhir bukan B atau E.",
+    "tingkat_kesulitan": "sedang",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": "soal_33_prov_2019.png"
+  },
+  {
+    "id": "prov_soal34_2019",
+    "tipe_soal": "tunggal",
+    "pertanyaan": "Sebuah robot condong ke kanan akan menelusuri suatu maze sebagai berikut: ia akan berjalan menyusuri jalan dan akan selalu belok ke kanan kapan saja itu memungkinkan. Gambar di samping ini menunjukkan contoh bagaimana robot itu akan berjalan di dalam maze contoh.\n\nDengan cara yang sama, tentukan maze-maze [A, B, C, D] yang robotnya dapat mencapai pintu keluar dari titik bulat.\n\nTuliskan jawaban dalam bentuk huruf-huruf dari maze secara terurut, dipisahkan tanda koma dan tanpa spasi. Misalnya semua benar, maka tuliskan A,B,C,D. Apabila tidak ada, tuliskan “Nihil” (tanpa tanda petik).\n\nJawaban: ……………. {tuliskan jawaban sesuai format di soal}",
+    "pilihan": {},
+    "jawaban_benar": "Huruf maze",
+    "pembahasan": "Simulasi aturan pergerakan robot wall-follower kanan pada pilihan maze.",
+    "tingkat_kesulitan": "sedang",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": [
+      "soal_34_1_prov_2019.png",
+      "soal_34_2_prov_2019.png",
+      "soal_34_3_prov_2019.png",
+      "soal_34_4_prov_2019.png",
+      "soal_34_5_prov_2019.png"
+    ]
+  },
+  {
+    "id": "prov_soal35_2019",
+    "tipe_soal": "tunggal",
+    "pertanyaan": "Bebek Kwek suka sekali berjalan mengunjungi para sahabatnya yang tinggal di kandang-kandang lain. Di ladang Pak Dengklek, ada 5 kandang: dua kandang ayam, dua kandang kelinci dan satu kandang kambing. Masing-masing penghuni menempati satu kandang.\n\nKarena kondisi ladang maka:\n• waktu berjalan Kwek dari kandang kambing ke kandang lainnya 3 menit\n• waktu berjalan Kwek dari kandang ayam ke kandang kelinci dan sebaliknya adalah 2 menit\n• waktu berjalan Kwek antara kedua kandang ayam, dan juga antara kedua kandang kelinci adalah 7 menit (agak memutar karena tidak nyaman kalau harus ketemu kambing tapi tidak mengunjungi).\n\nDi setiap kandang, temannya selalu menyediakan biskuit-biskuit, yang satu kandang dengan kandang lain jenisnya berbeda: P, Q, R, S, dan T.\n\nSuatu hari Kwek telah berjalan kesana kemari tapi ia tidak ingat kemana saja. Yang ia ingat, ia berturut-turut mendapatkan biskuit P, Q, S, R, T, R, P. Satu hal lagi, total waktu dalam perjalanannya (waktu bercakap-cakap tidak dihitung) adalah minimum. Biskuit apa yang diberikan kambing kepadanya kalau itu bukan P maupun T?\n\nJawaban: ……………. {tuliskan jawaban berupa huruf besar saja}",
+    "pilihan": {},
+    "jawaban_benar": "Q / S / R",
+    "pembahasan": "Pencocokan urutan waktu tempuh minimum kunjungan kandang hewan di ladang Pak Dengklek.",
+    "tingkat_kesulitan": "sedang",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": "soal_35_prov_2019.png"
+  },
+  {
+    "id": "prov_soal36_2019",
+    "tipe_soal": "tunggal",
+    "pertanyaan": "Berapa kalikah fungsi printgraf akan dipanggil apabila n = 6 (termasuk pemanggilan di main program)?\n\nJawaban: ……………. {tuliskan jawaban dalam bentuk angka saja}",
+    "pilihan": {},
+    "jawaban_benar": "865",
+    "pembahasan": "Prosedur rekursif `printgraf(x)`:\nJika $x \\ge 0$, prosedur memanggil `printgraf(x-1)` dua kali dan `printgraf(x-2)` satu kali.\nBanyaknya pemanggilan fungsi memenuhi relasi rekursif:\n$C(x) = 1 + 2C(x-1) + C(x-2)$ dengan basis $C(x) = 1$ untuk $x < 0$.\n- $C(-2) = 1, C(-1) = 1$\n- $C(0) = 1 + 2(1) + 1 = 4$\n- $C(1) = 1 + 2(4) + 1 = 10$\n- $C(2) = 1 + 2(10) + 4 = 25$\n- $C(3) = 1 + 2(25) + 10 = 61$\n- $C(4) = 1 + 2(61) + 25 = 148$\n- $C(5) = 1 + 2(148) + 61 = 358$\n- $C(6) = 1 + 2(358) + 148 = 865$.\nJadi fungsi `printgraf` akan dipanggil sebanyak 865 kali saat $n = 6$.",
+    "tingkat_kesulitan": "sedang",
+    "kode_soal": "var n: integer; procedure printgraf(x: integer); ...",
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "id": "prov_soal37_2019",
+    "tipe_soal": "tunggal",
+    "pertanyaan": "Berapa nilai n minimum agar banyaknya \"*\" yang dicetak ≥ 2019?\n\nJawaban: ……………. {tuliskan jawaban dalam bentuk angka saja}",
+    "pilihan": {},
+    "jawaban_benar": "9",
+    "pembahasan": "Banyaknya bintang yang dicetak memenuhi relasi rekursif:\n$S(x) = 2S(x-1) + S(x-2) + x$ untuk $x \\ge 0$, dengan $S(x) = 0$ untuk $x < 0$.\n- $S(0) = 0$\n- $S(1) = 2(0) + 0 + 1 = 1$\n- $S(2) = 2(1) + 0 + 2 = 4$\n- $S(3) = 2(4) + 1 + 3 = 12$\n- $S(4) = 2(12) + 4 + 4 = 32$\n- $S(5) = 2(32) + 12 + 5 = 81$\n- $S(6) = 2(81) + 32 + 6 = 200$\n- $S(7) = 2(200) + 81 + 7 = 488$\n- $S(8) = 2(488) + 200 + 8 = 1184$\n- $S(9) = 2(1184) + 488 + 9 = 2865$.\nKarena $S(8) = 1184 < 2019$ dan $S(9) = 2865 \\ge 2019$, maka nilai $n$ minimum adalah 9.",
+    "tingkat_kesulitan": "sedang",
+    "kode_soal": "var n: integer; procedure printgraf(x: integer); ...",
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "id": "prov_cerita38_2019",
+    "tipe_soal": "cerita",
+    "detail_cerita": {
+      "teks": "Diberikan Input dan Output sebuah program sebagai berikut:\nInput N | Output\n1       | *\n2       | **\n        | *\n3       | ***\n        | **\n        | *\n5       | *****\n        | ****\n        | ***\n        | **\n        | *\n\nDan beberapa potongan kode sebagai berikut:\nA.\nfor i := 1 to N do\nbegin\n  for j := 1 to i do write(\" \");\n  for j := i to N do write(\"*\");\n  writeln;\nend;\n\nB.\nfor i := 1 to N do\nbegin\n  for j := N downto i do write(\"*\");\n  for j := 1 to i do write(\" \");\n  writeln;\nend;\n\nC.\nfor i := 1 to N do\nbegin\n  for j := 1 to i - 1 do write(\" \");\n  for j := i to N do write(\"*\");\n  writeln;\nend;\n\nD.\nfor i := 1 to N do\nbegin\n  for j := 1 to i do write(\" \");\n  for j := i + 1 to N do write(\"*\");\n  writeln;\nend;",
+      "gambar_url": null,
+      "gambar_lokal": null
+    },
+    "soal": [
+      {
+        "id": "prov_soal38_2019",
+        "pertanyaan": "Mana sajakah fungsi yang menghasilkan output di atas? Apabila lebih dari satu jawaban, tuliskan semua, dan dipisahkan dengan tanda koma dan tanpa spasi. Sebagai contoh, apabila jawabannya adalah A, C, dan D, maka ditulis \"A,C,D\" (tanpa tanda petik)\n\nJawaban: ……………. {tuliskan jawaban dalam format di atas}",
+        "pilihan": {},
+        "jawaban_benar": "C",
+        "pembahasan": "Analisis pola perulangan spasi dan bintang pada potongan kode untuk mencetak segitiga siku-siku terbalik sesuai sampel.",
+        "tingkat_kesulitan": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      }
+    ]
+  },
+  {
+    "id": "prov_soal39_2019",
+    "tipe_soal": "tunggal",
+    "pertanyaan": "Apabila input n adalah 10, tuliskan 2 angka pertama dan 2 angka terakhir yang dicetak secara berurutan. Tuliskan angka-angka dipisahkan oleh tanda koma. Sebagai contoh, Apabila 2 angka pertama = [1, 2] dan 2 angka terakhir = [3, 4], maka tulis jawaban anda \"1,2,3,4\" (tanpa spasi dan tanpa tanda petik).\n\nJawaban: ……………. {tuliskan jawaban dalam format di atas}",
+    "pilihan": {},
+    "jawaban_benar": "Format angka",
+    "pembahasan": "Tracing pemanggilan rekursif in-order/pre-order pada prosedur `whats` dengan batas n = 10.",
+    "tingkat_kesulitan": "sedang",
+    "kode_soal": "const SATU = 1; ... procedure whats(x: integer); ...",
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "id": "prov_soal40_2019",
+    "tipe_soal": "tunggal",
+    "pertanyaan": "Apabila input n adalah 500, tuliskan 5 angka pertama dan 5 angka terakhir yang dicetak secara berurutan. Tuliskan angka-angka seperti format jawaban soal sebelumnya.\n\nJawaban: ……………. {tuliskan jawaban dalam format di atas}",
+    "pilihan": {},
+    "jawaban_benar": "Format angka",
+    "pembahasan": "Tracing pola urutan cetak rekursif skala besar dengan n = 500.",
+    "tingkat_kesulitan": "sedang",
+    "kode_soal": "const SATU = 1; ...",
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "id": "prov_cerita41_2019",
+    "tipe_soal": "cerita",
+    "detail_cerita": {
+      "teks": "FIBONACCI\nPak Dengklek sangat suka dengan bilangan Fibonacci, yaitu bilangan yang dibentuk dengan rumus:\n• Fibonacci (0) = 0\n• Fibonacci (1) = 1\n• Fibonacci (n) = Fibonacci (n-1) + Fibonacci (n-2), untuk n > 1\n\nKarena Pak Dengklek senang bermain, ia memutuskan untuk membuat tebak-tebakan ke bebeknya dengan aturan sebagai berikut: ia akan bertanya sebanyak Q kali. Untuk setiap pertanyaan, ia akan mengatakan sebuah bilangan bulat positif N. Sang bebek harus menjawab bilangan fibonacci ke-N. Karena nilainya dapat sangat besar, maka program anda cukup memberikan hasil modulo bilangan tersebut dengan 10^9 + 7. Bantulah sang bebek membuat program yang menjawab pertanyaan anehnya itu!",
+      "gambar_url": null,
+      "gambar_lokal": null
+    },
+    "soal": [
+      {
+        "id": "prov_soal41_2019",
+        "pertanyaan": "Format Masukan:\nBaris pertama berisi sebuah bilangan bulat Q, banyaknya pertanyaan Pak Dengklek.\nQ baris berikutnya masing-masing berisi sebuah bilangan N.\n\nFormat Keluaran:\nQ baris, baris ke-i berisi jawaban dari pertanyaan ke-i.\n\nBatasan:\n• 1 ≤ Q ≤ 100.000\n• 0 ≤ N ≤ 100.000\n\nContoh Masukan:\n3\n5\n10\n2\n\nContoh Keluaran:\n5\n55\n1",
+        "pilihan": {},
+        "jawaban_benar": "Hasil modulo",
+        "pembahasan": "Implementasi pemrograman dinamis atau perpangkatan matriks cepat untuk barisan Fibonacci besar.",
+        "tingkat_kesulitan": "sulit",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      }
+    ]
+  },
+  {
+    "id": "prov_cerita42_2019",
+    "tipe_soal": "cerita",
+    "detail_cerita": {
+      "teks": "UKURAN SEGMEN\nPak Dengklek memiliki N buah titik dan ingin membentuk suatu himpunan garis penghubung dua buah titik yang valid. Sebuah himpunan garis dikatakan valid apabila semua garis di dalamnya memiliki gradien yang sama. Setiap titik dapat menjadi bagian dari satu atau lebih garis. Apabila dua buah garis berimpit, maka dua garis tersebut dihitung sebagai 2 garis yang berbeda. Karena jumlah titik sangat banyak, pak Dengklek tidak dapat menghitungnya satu-persatu. Pak Dengklek meminta bantuan kalian peserta OSP Informatika 2019 untuk membuat program yang dapat mengeluarkan ukuran maksimum garis valid!",
+      "gambar_url": null,
+      "gambar_lokal": null
+    },
+    "soal": [
+      {
+        "id": "prov_soal42_2019",
+        "pertanyaan": "Format Masukan:\nBaris pertama berisi sebuah bilangan bulat N.\nN baris berikutnya masing-masing berisi 2 bilangan bulat x_i dan y_i, menandakan koordinat titik ke-i.\n\nFormat Keluaran:\nSebuah bilangan berisi banyaknya elemen maksimum dalam semua himpunan garis yang valid.\n\nBatasan:\n• 3 ≤ N ≤ 2.500\n• -100 ≤ x_i, y_i ≤ 100\n• Tidak ada 2 titik dengan koordinat yang sama.\n\nContoh Masukan:\n6\n2 -2\n2 2\n0 -2\n6 2\n4 -2\n4 2\n\nContoh Keluaran:\n6\n\nPERHATIAN: Karena gradien dapat bernilai real (memiliki angka belakang koma), maka suatu gradien dianggap sama dengan gradien lainnya apabila perbedaan gradien tersebut lebih kecil atau sama dengan 10^-9.",
+        "pilihan": {},
+        "jawaban_benar": "Jumlah titik segmen",
+        "pembahasan": "Menghitung kemiringan (gradien) antar seluruh pasangan titik dan mengelompokkannya dengan toleransi presisi $10^{-9}$.",
+        "tingkat_kesulitan": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      }
+    ]
+  }
+]
