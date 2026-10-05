@@ -1,9 +1,12 @@
 """Penilaian stateless untuk endpoint /hitung/* — fungsi murni, tanpa database.
 
-Laravel mengirim kunci, jawaban, level, dan materi tiap soal; modul ini
-mengembalikan skor berbobot (Mudah=1, Sedang=2, Sulit=3), predikat (opsional),
-dan Peta Kompetensi per Materi. Semua rumus dipakai ulang dari scoring.py dan
-pemetaan.py agar satu sumber kebenaran.
+Modul ini mengembalikan skor berbobot (Mudah=1, Sedang=2, Sulit=3), predikat
+(opsional), dan Peta Kompetensi per Materi. Semua rumus dipakai ulang dari
+scoring.py dan pemetaan.py agar satu sumber kebenaran.
+
+Catatan: dua endpoint yang dipanggil Laravel (/hitung/penilaian dan
+/hitung/pretest) memakai adapter data_analytics.laravel karena Laravel
+mengirim bobot eksplisit per soal (bukan level) dengan nama field-nya sendiri.
 """
 
 from __future__ import annotations

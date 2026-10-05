@@ -1,19 +1,30 @@
 """FastAPI app stateless untuk kalkulasi skor — dipanggil backend Laravel lewat
-network Docker privat. Tidak ada akses database & autentikasi di layanan ini
-(keduanya tanggung jawab Laravel).
+network Docker privat.
 
 Endpoint:
 - GET  /health
-- POST /hitung/penilaian : skor berbobot (+ predikat opsional) dari jawaban
-- POST /hitung/pretest   : skor + Peta Kompetensi per Materi + Materi lemah
-- POST /hitung/latihan   : skor + lulus (>= threshold, default 50) + akurasi per materi
-- POST /hitung/simulasi  : seperti pretest + lulus/tidak (nilai >= passing grade)
+- POST /hitung/penilaian : nilai berbobot dari jawaban (kontrak Laravel:
+  request {soal[{soal_id, tipe_soal, bobot, jawaban_user, kunci_jawaban}]},
+  respons {nilai, jawaban[{soal_id, status_benar}]})
+- POST /hitung/pretest   : nilai + pemetaan per materi + materi wajib
+  (kontrak Laravel, dipakai LatihanService/PretestService/SimulasiService
+  lewat PerhitunganClient)
+- POST /hitung/latihan   : skor + lulus + akurasi per materi (skema internal,
+  saat ini tidak dipanggil Laravel)
+- POST /hitung/simulasi  : seperti pretest + lulus/tidak (skema internal,
+  saat ini tidak dipanggil Laravel)
+
+Bobot dikirim eksplisit per soal oleh Laravel (bukan diturunkan dari level).
+Semua endpoint /hitung/* mewajibkan header X-Internal-Token sesuai kontrak
+BE-11 backend Laravel.
 """
 
 from __future__ import annotations
 
-from fastapi import FastAPI, HTTPException
+from fastapi import Depends, FastAPI, Header, HTTPException
 
+from data_analytics.config import get_settings
+from data_analytics.laravel import nilai_paket, peta_pretest
 from data_analytics.penilaian import (
     HasilPenilaian,
     PetaBerbobot,
@@ -28,16 +39,25 @@ from data_analytics.schemas import (
     HitungLatihanRequest,
     HitungLatihanResponse,
     HitungHasilSoalItem,
-    HitungPenilaianRequest,
-    HitungPenilaianResponse,
     HitungPetaMateriItem,
     HitungPretestRequest,
-    HitungPretestResponse,
     HitungSimulasiRequest,
     HitungSimulasiResponse,
+    LaravelPenilaianRequest,
+    LaravelPenilaianResponse,
+    LaravelPretestRequest,
+    LaravelPretestResponse,
 )
 
 app = FastAPI(title="SIAP OSN — Layanan Hitung Skor")
+
+
+def _wajib_token(x_internal_token: str | None = Header(default=None)) -> None:
+    """Setiap permintaan /hitung/* membawa header X-Internal-Token (kontrak
+    BE-11). Token salah/dihilangkan → 403, yang di sisi Laravel dicatat kritis
+    dan tidak dicoba lagi."""
+    if x_internal_token != get_settings().internal_api_token:
+        raise HTTPException(status_code=403, detail="token internal tidak valid")
 
 
 @app.get("/health")
@@ -81,27 +101,28 @@ def _response_dasar(hasil: HasilPenilaian) -> dict:
     }
 
 
-@app.post("/hitung/penilaian", response_model=HitungPenilaianResponse)
-def hitung_penilaian(req: HitungPenilaianRequest) -> HitungPenilaianResponse:
+@app.post("/hitung/penilaian", response_model=LaravelPenilaianResponse)
+def hitung_penilaian(
+    req: LaravelPenilaianRequest, _: None = Depends(_wajib_token)
+) -> LaravelPenilaianResponse:
     try:
-        hasil = nilai_jawaban(_soal(req), aturan_predikat=_aturan(req))
+        nilai, jawaban = nilai_paket(req.soal)
     except ValueError as e:
         raise HTTPException(status_code=422, detail=str(e)) from e
-    return HitungPenilaianResponse(**_response_dasar(hasil))
+    return LaravelPenilaianResponse(nilai=nilai, jawaban=jawaban)  # type: ignore[arg-type]
 
 
-@app.post("/hitung/pretest", response_model=HitungPretestResponse)
-def hitung_pretest(req: HitungPretestRequest) -> HitungPretestResponse:
-    soal = _soal(req)
+@app.post("/hitung/pretest", response_model=LaravelPretestResponse)
+def hitung_pretest(
+    req: LaravelPretestRequest, _: None = Depends(_wajib_token)
+) -> LaravelPretestResponse:
     try:
-        hasil = nilai_jawaban(soal, aturan_predikat=_aturan(req))
-        peta, lemah = hitung_pemetaan(
-            soal, ambang_lemah=req.ambang_lemah, ambang_kuat=req.ambang_kuat
-        )
+        nilai, jawaban = nilai_paket(req.soal)
+        pemetaan, materi_wajib = peta_pretest(req.soal, req.materi, req.jumlah_materi_wajib)
     except ValueError as e:
         raise HTTPException(status_code=422, detail=str(e)) from e
-    return HitungPretestResponse(
-        **_response_dasar(hasil), pemetaan=_peta(peta), materi_lemah=lemah
+    return LaravelPretestResponse(  # type: ignore[arg-type]
+        nilai=nilai, jawaban=jawaban, pemetaan=pemetaan, materi_wajib=materi_wajib
     )
 
 
@@ -121,7 +142,9 @@ def _peta(peta: list[PetaBerbobot]) -> list[HitungPetaMateriItem]:
 
 
 @app.post("/hitung/simulasi", response_model=HitungSimulasiResponse)
-def hitung_simulasi(req: HitungSimulasiRequest) -> HitungSimulasiResponse:
+def hitung_simulasi(
+    req: HitungSimulasiRequest, _: None = Depends(_wajib_token)
+) -> HitungSimulasiResponse:
     try:
         h = nilai_simulasi(
             _soal(req),
@@ -142,7 +165,9 @@ def hitung_simulasi(req: HitungSimulasiRequest) -> HitungSimulasiResponse:
 
 
 @app.post("/hitung/latihan", response_model=HitungLatihanResponse)
-def hitung_latihan(req: HitungLatihanRequest) -> HitungLatihanResponse:
+def hitung_latihan(
+    req: HitungLatihanRequest, _: None = Depends(_wajib_token)
+) -> HitungLatihanResponse:
     try:
         h = nilai_latihan(_soal(req), threshold=req.threshold)
     except ValueError as e:

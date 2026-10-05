@@ -505,3 +505,70 @@ class HitungLatihanResponse(BaseModel):
     skor: float
     lulus: bool
     akurasi_per_materi: list[HitungAkurasiMateriItem]
+
+
+# --- Kontrak Laravel (backend Osn-Readiness-Web) -------------------------------
+# Bentuk wire yang dikirim PerhitunganClient (Laravel) dan divalidasi ketat di
+# sana (lihat tests/Feature/Clients/PerhitunganClientTest.php di repo Laravel).
+# Bedanya dari skema Hitung* di atas: id berupa int, bobot dikirim eksplisit
+# per soal (bukan diturunkan dari level — Laravel tidak mengirim level),
+# tipe_soal memakai nilai enum Laravel ('pilihan_ganda' | 'isian'), dan
+# respons memakai nama field 'nilai'/'jawaban'/'status_benar' plus baris
+# pemetaan lengkap dan daftar materi_wajib.
+
+
+class LaravelSoalItem(BaseModel):
+    soal_id: int
+    tipe_soal: str
+    bobot: int = Field(ge=0)
+    jawaban_user: str | None = None
+    kunci_jawaban: str
+
+
+class LaravelPenilaianRequest(BaseModel):
+    soal: list[LaravelSoalItem] = Field(min_length=1)
+
+
+class LaravelJawabanItem(BaseModel):
+    soal_id: int
+    status_benar: bool
+
+
+class LaravelPenilaianResponse(BaseModel):
+    nilai: float
+    jawaban: list[LaravelJawabanItem]
+
+
+class LaravelMateriItem(BaseModel):
+    materi_id: int
+    urutan: int
+
+
+class LaravelPretestSoalItem(LaravelSoalItem):
+    materi_id: int
+
+
+class LaravelPretestRequest(BaseModel):
+    soal: list[LaravelPretestSoalItem] = Field(min_length=1)
+    materi: list[LaravelMateriItem] = Field(min_length=1)
+    jumlah_materi_wajib: int = Field(ge=0)
+
+
+class LaravelPemetaanItem(BaseModel):
+    materi_id: int
+    jumlah_soal: int
+    jumlah_benar: int
+    poin_didapat: int
+    poin_maksimal: int
+    persentase: float
+    peringkat: int
+
+
+class LaravelMateriWajibItem(BaseModel):
+    materi_id: int
+    prioritas: int
+
+
+class LaravelPretestResponse(LaravelPenilaianResponse):
+    pemetaan: list[LaravelPemetaanItem]
+    materi_wajib: list[LaravelMateriWajibItem]
