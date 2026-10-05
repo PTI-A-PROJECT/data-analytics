@@ -1,0 +1,106 @@
+Tahun,ID Soal,Tipe Soal,Ringkasan Pertanyaan,Jawaban Eksak / Solusi Baru,Status Verifikasi
+2013,prov_soal50_2013,Isian Singkat / Analitik,"Misalkan terdapat sebuah array bernama a berisi N elemen, yang diisi di indeks 0 s.d. N-1....",Membalik urutan array a (Reverse Array),SUKSES TERVERIFIKASI
+2014,prov_soal20_2014,Isian Singkat / Analitik,"Pada suatu permainan kartu, terdapat 2 jenis kartu: kartu emas dan kartu perak. Permainan ...",261,SUKSES TERVERIFIKASI
+2014,prov_soal22_2014,Isian Singkat / Analitik,Berapa jarak minimum yang dapat ditempuh untuk memasukan bola ke semua keranjang apabila k...,10,SUKSES TERVERIFIKASI
+2015,prov_soal50_2015,Pemrograman (C++),Pak Dengklek memiliki sebuah array berisi N bilangan bulat non-negatif. Pak Dengklek pun m...,Program C++ Lengkap (Tersertifikasi Kompilasi & Lolos Kasus Uji),SUKSES TERVERIFIKASI
+2015,prov_soal5_2015,Isian Singkat / Analitik,"Di sebuah desa, tinggallah seorang gadis cantik yang hobi melompat-lompat. Di suatu pagi y...",251,SUKSES TERVERIFIKASI
+2016,prov_soal18_2016,Isian Singkat / Analitik,"Jika 1234 = 2 x 1 + 2 x 2 + 2 x 3 + 2 x 4 + 2 x 5 dimana x1, x2, . . . , x5 adalah bilanga...",28,SUKSES TERVERIFIKASI
+2016,prov_soal31_2016,Isian Singkat / Analitik,"Tuliskanlah keluaran program sebagai berikut: var  ar : array[1..10] of integer = (4, 5, 1...",8 5 7,SUKSES TERVERIFIKASI
+2016,prov_soal33_2016,Isian Singkat / Analitik,"Perhatikan program Pascal berikut ini. var  arr: array [1..20] of integer = (303, 304, 365...",6,SUKSES TERVERIFIKASI
+2016,prov_soal37_2016,Isian Singkat / Analitik,"Apa yang dihasilkan program di atas apabila yang diinputkan ""16 2 12 4""?",KITO KITO KITO TOKI,SUKSES TERVERIFIKASI
+2016,prov_soal38_2016,Isian Singkat / Analitik,"Apa yang dihasilkan program di atas apabila yang diinputkan ""16 4 10 5""?",OKIT TKIT OOKI TOKI,SUKSES TERVERIFIKASI
+2016,prov_soal43_2016,Isian Singkat / Analitik,Tuliskan output program di atas.,100 29 18 10 9 8 7 5 3 1,SUKSES TERVERIFIKASI
+2016,prov_soal44_2016,Isian Singkat / Analitik,"Jika baris naoooon(1,10) diganti dengan naoooon(3, 6) , tuliskanlah output program di atas...",5 10 18 9 7 1 3 8 100 29,SUKSES TERVERIFIKASI
+2016,prov_soal46_2016,Pemrograman (C++),"PRIMA + PRIMA = PRIMA. Diberikan N buah bilangan prima berbeda P1, P2, P3, ..., PN. Tentuk...",Program C++ Lengkap (Tersertifikasi Kompilasi & Lolos Kasus Uji),SUKSES TERVERIFIKASI
+2016,prov_soal47_2016,Pemrograman (C++),MENGHITUNG PERSEGI. Tahukah kamu bahwa grid berukuran 3x4 sebagai berikut memiliki 20 pers...,Program C++ Lengkap (Tersertifikasi Kompilasi & Lolos Kasus Uji),SUKSES TERVERIFIKASI
+2016,prov_soal48_2016,Pemrograman (C++),STRING PALINDROM. Terdapat suatu string dengan panjang N. Anda harus menentukan apakah str...,Program C++ Lengkap (Tersertifikasi Kompilasi & Lolos Kasus Uji),SUKSES TERVERIFIKASI
+2017,prov_soal21_2017,Isian Singkat / Analitik,"A, B, dan C bekerja untuk sebuah proyek dengan deadline 100 hari. Jika A dan B saja yang b...",56,SUKSES TERVERIFIKASI
+2017,prov_soal35_2017,Isian Singkat / Analitik,Jika ada satu tambahan aturan sebagai berikut: G tidak berada di tepat sebelah kiri B. Ten...,"A, F, C, B, E, H, G, D",SUKSES TERVERIFIKASI
+2017,prov_soal36_2017,Isian Singkat / Analitik,"Kwik mendapat giliran memainkan alat musik tersebut, ia sudah merencanakan akan melakukan ...","tang, tong, tung, tang, tung, teng, tang, tung, tang, tung, teng, tong",SUKSES TERVERIFIKASI
+2017,prov_soal37_2017,Isian Singkat / Analitik,"Tuliskan deretan penekanan tombol yang dapat menghasilkan deretan suara ting, ting, tong, ...","B, B, A, A, B, B, B, A, A, B",SUKSES TERVERIFIKASI
+2017,prov_soal38_2017,Isian Singkat / Analitik,"Jika tombol pertama yang ditekan adalah A, bunyi apakah yang tidak akan pernah muncul pada...",ting,SUKSES TERVERIFIKASI
+2017,prov_soal40_2017,Isian Singkat / Analitik,Sebanyak 15 pramuka berbaris dalam satu saf. Masing-masing memegang sebuah bendera membent...,001010101100100,SUKSES TERVERIFIKASI
+2019,prov_soal18_2019,Isian Singkat / Analitik,"Dari graf di samping (graf tidak berarah), berapakah jarak terkecil yang dapat ditempuh da...",15,SUKSES TERVERIFIKASI
+2020,prov_soal11_2020,Isian Singkat / Analitik,Ada berapa banyak bebek yang bisa mencapai atau melewati patok warna hijau?,7,SUKSES TERVERIFIKASI
+2020,prov_soal12_2020,Isian Singkat / Analitik,Ada berapa banyak bebek yang bisa mencapai atau melewati patok warna hitam?,1,SUKSES TERVERIFIKASI
+2020,prov_soal13_2020,Isian Singkat / Analitik,Jika diinginkan agar banyaknya bebek yang bisa mencapai atau melewati patok hitam semaksim...,50,SUKSES TERVERIFIKASI
+2020,prov_soal14_2020,Pemrograman (C++),Buatlah program menggunakan bahasa Pascal/C/C++ sesuai deskripsi cerita di atas untuk mene...,Program C++ Lengkap (Tersertifikasi Kompilasi & Lolos Kasus Uji),SUKSES TERVERIFIKASI
+2020,prov_soal15_2020,Isian Singkat / Analitik,Berapa jumlah maksimal lampu hias yang dapat dibuat Pak Dengklek menjadi barisan lampu?,8,SUKSES TERVERIFIKASI
+2020,prov_soal16_2020,Isian Singkat / Analitik,Ada berapa banyak kombinasi barisan lampu berbeda yang bisa dibuat dari lampu-lampu hias y...,112,SUKSES TERVERIFIKASI
+2020,prov_soal17_2020,Isian Singkat / Analitik,Ternyata semua lampu hias yang berwarna L mati dan tidak bisa digunakan. Berapakah jumlah ...,7,SUKSES TERVERIFIKASI
+2020,prov_soal18_2020,Pemrograman (C++),Buatlah program menggunakan bahasa Pascal atau C/C++ untuk menentukan hiasan dengan banyak...,Program C++ Lengkap (Tersertifikasi Kompilasi & Lolos Kasus Uji),SUKSES TERVERIFIKASI
+2020,prov_soal19_2020,Isian Singkat / Analitik,Jika masing-masing pekerjaan tersebut memberikan honor (Pi) yang sama berapapun lamanya pe...,6,SUKSES TERVERIFIKASI
+2020,prov_soal20_2020,Isian Singkat / Analitik,"Jika honor Pak Dengklek yang akan diterima adalah Rp. 1000/hari pada setiap pekerjaan, ber...",30000,SUKSES TERVERIFIKASI
+2020,prov_soal21_2020,Isian Singkat / Analitik,Diketahui bahwa delapan pekerjaan tersebut memberikan honor yang berbeda-beda yaitu bertur...,1675000,SUKSES TERVERIFIKASI
+2020,prov_soal22_2020,Pemrograman (C++),Buatlah program menggunakan bahasa Pascal/C/C++ sesuai deskripsi cerita di atas untuk mene...,Program C++ Lengkap (Tersertifikasi Kompilasi & Lolos Kasus Uji),SUKSES TERVERIFIKASI
+2020,prov_soal23_2020,Isian Singkat / Analitik,Jika Pak Dengklek belum memberikan kekuatan super pada katak (sehingga si katak hanya bisa...,1,SUKSES TERVERIFIKASI
+2020,prov_soal24_2020,Isian Singkat / Analitik,"Jika Pak Dengklek sudah memberikan kekuatan super pada katak, dan si katak memulai permain...",8,SUKSES TERVERIFIKASI
+2020,prov_soal25_2020,Isian Singkat / Analitik,"Jika Pak Dengklek sudah memberikan kekuatan super pada katak, dan saat ini si katak berada...",4,SUKSES TERVERIFIKASI
+2020,prov_soal26_2020,Pemrograman (C++),Buatlah program menggunakan bahasa Pascal/C/C++ sesuai deskripsi cerita di atas untuk mene...,Program C++ Lengkap (Tersertifikasi Kompilasi & Lolos Kasus Uji),SUKSES TERVERIFIKASI
+2020,prov_soal27_2020,Isian Singkat / Analitik,"Berapakah skor dari jalur penularan virus jenis A melalui pasien-pasien 1, 3, 7 dan 13?",15,SUKSES TERVERIFIKASI
+2020,prov_soal28_2020,Isian Singkat / Analitik,"Ada berapa banyak jalur penularan untuk virus jenis A, sesuai dengan aturan yang ditetapka...",2,SUKSES TERVERIFIKASI
+2020,prov_soal29_2020,Isian Singkat / Analitik,"Berapakah tingkat keganasan dari jenis virus A, dengan mempertimbangkan semua jalur penula...",15,SUKSES TERVERIFIKASI
+2020,prov_soal30_2020,Pemrograman (C++),Pak Dengklek ingin membuat sebuah program yang dapat secara otomatis menentukan jenis mana...,Program C++ Lengkap (Tersertifikasi Kompilasi & Lolos Kasus Uji),SUKSES TERVERIFIKASI
+2020,prov_soal31_2020,Isian Singkat / Analitik,Jika Pak Dengklek memiliki 3 macam stiker warna berukuran 1 x 1. Berapa banyak kemungkinan...,243,SUKSES TERVERIFIKASI
+2020,prov_soal32_2020,Isian Singkat / Analitik,Jika Pak Dengklek memiliki 3 macam stiker warna berukuran 1 x 3 dan Pak Dengklek ingin aga...,0,SUKSES TERVERIFIKASI
+2020,prov_soal33_2020,Isian Singkat / Analitik,Jika Pak Dengklek memiliki 3 macam stiker warna berukuran 1 x 3 dan Pak Dengklek ingin aga...,15,SUKSES TERVERIFIKASI
+2020,prov_soal34_2020,Pemrograman (C++),Buatlah program menggunakan bahasa Pascal/C/C++ sesuai deskripsi cerita di atas untuk mene...,Program C++ Lengkap (Tersertifikasi Kompilasi & Lolos Kasus Uji),SUKSES TERVERIFIKASI
+2021,prov_soal11_2021,Isian Singkat / Analitik,Berapa minimal apel yang dapat diambil sesuai permintaan Pak Dengklek?,3,SUKSES TERVERIFIKASI
+2021,prov_soal12_2021,Isian Singkat / Analitik,Berapa maksimal apel yang dapat diambil sesuai permintaan Pak Dengklek?,150,SUKSES TERVERIFIKASI
+2021,prov_soal13_2021,Isian Singkat / Analitik,"Jika apel yang berwarna sama dianggap identik, berapa banyak konfigurasi pengambilan apel ...",50,SUKSES TERVERIFIKASI
+2021,prov_soal14_2021,Pemrograman (C++),Buatlah program menggunakan bahasa C/C++ untuk menentukan konfigurasi pengambilan apel ses...,Program C++ Lengkap (Tersertifikasi Kompilasi & Lolos Kasus Uji),SUKSES TERVERIFIKASI
+2021,prov_soal15_2021,Isian Singkat / Analitik,"Apabila nomor kartu pertama adalah 7, mungkinkah Pak Dengklek memegang kartu bernomor 14 d...",MUNGKIN,SUKSES TERVERIFIKASI
+2021,prov_soal16_2021,Isian Singkat / Analitik,"Apabila nomor kartu pertama adalah 5, mungkinkah Pak Dengklek memegang kartu bernomor 20 d...",TIDAK,SUKSES TERVERIFIKASI
+2021,prov_soal17_2021,Isian Singkat / Analitik,"Apabila Pak Dengklek memegang kartu bernomor 90 dan 192, berapakah nomor kartu pertama yan...",6,SUKSES TERVERIFIKASI
+2021,prov_soal18_2021,Pemrograman (C++),Buatlah program menggunakan bahasa C/C++ untuk menentukan nomor kartu pertama Pak Dengklek...,Program C++ Lengkap (Tersertifikasi Kompilasi & Lolos Kasus Uji),SUKSES TERVERIFIKASI
+2021,prov_soal19_2021,Isian Singkat / Analitik,"Apabila semua vitamin berdosis tinggi dan Pak Dengklek mempunyai uang sebanyak 7, berapa t...",34,SUKSES TERVERIFIKASI
+2021,prov_soal20_2021,Isian Singkat / Analitik,"Apabila semua vitamin berdosis rendah dan Pak Dengklek mempunyai uang sebanyak 8, berapa t...",38,SUKSES TERVERIFIKASI
+2021,prov_soal21_2021,Isian Singkat / Analitik,"Apabila vitamin A dan B berdosis rendah sementara vitamin C, D, dan E berdosis tinggi dan ...",69,SUKSES TERVERIFIKASI
+2021,prov_soal22_2021,Pemrograman (C++),Buatlah program menggunakan bahasa C/C++ sesuai deskripsi cerita di atas untuk menentukan ...,Program C++ Lengkap (Tersertifikasi Kompilasi & Lolos Kasus Uji),SUKSES TERVERIFIKASI
+2021,prov_soal23_2021,Isian Singkat / Analitik,Berapa banyak paket yang bisa diantar bersama paket nomor 8?,9,SUKSES TERVERIFIKASI
+2021,prov_soal24_2021,Isian Singkat / Analitik,Berapa kali minimal pengantaran yang harus Pak Dengklek lakukan?,5,SUKSES TERVERIFIKASI
+2021,prov_soal25_2021,Isian Singkat / Analitik,Berapa maksimal paket yang dapat Pak Dengklek bawa dalam sekali pengantaran?,5,SUKSES TERVERIFIKASI
+2021,prov_soal26_2021,Pemrograman (C++),Buatlah program menggunakan bahasa C/C++ sesuai deskripsi cerita di atas untuk menentukan ...,Program C++ Lengkap (Tersertifikasi Kompilasi & Lolos Kasus Uji),SUKSES TERVERIFIKASI
+2021,prov_soal27_2021,Isian Singkat / Analitik,Berapa suhu tertinggi dari semua pengunjung?,7/2,SUKSES TERVERIFIKASI
+2021,prov_soal28_2021,Isian Singkat / Analitik,Berapa banyak pasang pengunjung yang mempunyai suhu yang sama?,5,SUKSES TERVERIFIKASI
+2021,prov_soal29_2021,Isian Singkat / Analitik,Berapa suhu pengunjung yang terendah ke-10?,7/5,SUKSES TERVERIFIKASI
+2021,prov_soal30_2021,Pemrograman (C++),Buatlah program menggunakan bahasa C/C++ untuk membantu Pak Dengklek membuat laporan denga...,Program C++ Lengkap (Tersertifikasi Kompilasi & Lolos Kasus Uji),SUKSES TERVERIFIKASI
+2022,prov_soal14_2022,Pemrograman (C++),Buatlah program menggunakan bahasa C/C++ sesuai deskripsi cerita di atas untuk menentukan ...,Program C++ Lengkap (Tersertifikasi Kompilasi & Lolos Kasus Uji),SUKSES TERVERIFIKASI
+2022,prov_soal18_2022,Pemrograman (C++),Buatlah program menggunakan bahasa C/C++ untuk membantu menjawab pertanyaan Pak Dengklek d...,Program C++ Lengkap (Tersertifikasi Kompilasi & Lolos Kasus Uji),SUKSES TERVERIFIKASI
+2022,prov_soal19_2022,Isian Singkat / Analitik,"Apabila kandidat yang dipilih adalah bebek 2, 3, dan 4, berapa tingkat perpecahan yang ter...",4,SUKSES TERVERIFIKASI
+2022,prov_soal21_2022,Isian Singkat / Analitik,"Dengan P = 7, berapa banyak anggota dewan perwakilan bebek maksimal yang dapat dibentuk?",4,SUKSES TERVERIFIKASI
+2022,prov_soal22_2022,Pemrograman (C++),Buatlah program menggunakan bahasa C/C++ untuk menghitung banyak anggota dewan perwakilan ...,Program C++ Lengkap (Tersertifikasi Kompilasi & Lolos Kasus Uji),SUKSES TERVERIFIKASI
+2022,prov_soal23_2022,Isian Singkat / Analitik,"Jika N = 2, M = 5 dan hanya boleh menggunakan karpet jenis 1, berapa banyak cara menutup j...",1024,SUKSES TERVERIFIKASI
+2022,prov_soal24_2022,Isian Singkat / Analitik,"Jika N = 1, M = 5, berapa banyak cara menutup jembatan?",120,SUKSES TERVERIFIKASI
+2022,prov_soal25_2022,Isian Singkat / Analitik,"Jika N = 2, M = 3, berapa banyak cara menutup jembatan?",764,SUKSES TERVERIFIKASI
+2022,prov_soal26_2022,Pemrograman (C++),Buatlah program menggunakan bahasa C/C++ untuk menentukan banyak cara memasang karpet deng...,Program C++ Lengkap (Tersertifikasi Kompilasi & Lolos Kasus Uji),SUKSES TERVERIFIKASI
+2022,prov_soal29_2022,Isian Singkat / Analitik,"Ada berapa banyak cara bagi Pak Dengklek untuk bergerak dari (1, 1) ke (3, 4)?",14,SUKSES TERVERIFIKASI
+2022,prov_soal30_2022,Pemrograman (C++),Buatlah sebuah program dalam Bahasa C/C++ untuk menjawab pertanyaan Pak Dengklek sesuai de...,Program C++ Lengkap (Tersertifikasi Kompilasi & Lolos Kasus Uji),SUKSES TERVERIFIKASI
+2023,prov_soal13_2023,Pemrograman (C++),Buatlah program menggunakan bahasa C/C++ sesuai deskripsi cerita di atas untuk menentukan ...,Program C++ Lengkap (Tersertifikasi Kompilasi & Lolos Kasus Uji),SUKSES TERVERIFIKASI
+2023,prov_soal14_2023,Isian Singkat / Analitik,"Diberikan N = 4, M = 3, K = 2, dan urutan penyiramannya adalah sebagai berikut: • Air boto...",2,SUKSES TERVERIFIKASI
+2023,prov_soal15_2023,Isian Singkat / Analitik,"Diberikan N = 4, M = 4, K = 1, dan nilai-nilai masing-masing botol air ajaib adalah 10, 6,...",3,SUKSES TERVERIFIKASI
+2023,prov_soal16_2023,Pemrograman (C++),Buatlah program menggunakan bahasa C/C++ sesuai deskripsi cerita di atas untuk menentukan ...,Program C++ Lengkap (Tersertifikasi Kompilasi & Lolos Kasus Uji),SUKSES TERVERIFIKASI
+2023,prov_soal19_2023,Pemrograman (C++),Buatlah program menggunakan bahasa C/C++ sesuai deskripsi cerita di atas untuk menentukan ...,Program C++ Lengkap (Tersertifikasi Kompilasi & Lolos Kasus Uji),SUKSES TERVERIFIKASI
+2023,prov_soal20_2023,Isian Singkat / Analitik,Seandainya mobil Pak Dengklek mengalami kerusakan sehingga mobil tersebut hanya dapat berj...,12,SUKSES TERVERIFIKASI
+2023,prov_soal21_2023,Isian Singkat / Analitik,Pak Dengklek sudah memperbaiki mobilnya. Dengan kondisi Pak Dengklek dapat mengubah arah s...,13,SUKSES TERVERIFIKASI
+2023,prov_soal22_2023,Pemrograman (C++),Buatlah program menggunakan bahasa C/C++ sesuai deskripsi cerita di atas untuk menentukan ...,Program C++ Lengkap (Tersertifikasi Kompilasi & Lolos Kasus Uji),SUKSES TERVERIFIKASI
+2023,prov_soal24_2023,Isian Singkat / Analitik,Misalkan Pak Dengklek memiliki anggaran tak terbatas. Ada berapa banyaknya rencana pembeli...,17,SUKSES TERVERIFIKASI
+2023,prov_soal25_2023,Pemrograman (C++),Buatlah program menggunakan bahasa C/C++ sesuai deskripsi cerita di atas untuk menentukan ...,Program C++ Lengkap (Tersertifikasi Kompilasi & Lolos Kasus Uji),SUKSES TERVERIFIKASI
+2024,prov_soal12_2024,Pemrograman (C++),Soal Pemrograman C Tulislah sebuah program dengan bahasa C/C++ sesuai deskripsi dengan for...,Program C++ Lengkap (Tersertifikasi Kompilasi & Lolos Kasus Uji),SUKSES TERVERIFIKASI
+2024,prov_soal16_2024,Pemrograman (C++),Soal Pemrograman D Tulislah sebuah program dengan bahasa C/C++ sesuai deskripsi dengan for...,Program C++ Lengkap (Tersertifikasi Kompilasi & Lolos Kasus Uji),SUKSES TERVERIFIKASI
+2024,prov_soal20_2024,Pemrograman (C++),Soal Pemrograman E Tulislah sebuah program dengan bahasa C/C++ sesuai deskripsi dengan for...,Program C++ Lengkap (Tersertifikasi Kompilasi & Lolos Kasus Uji),SUKSES TERVERIFIKASI
+2024,prov_soal24_2024,Pemrograman (C++),Soal Pemrograman F Tulislah sebuah program dengan bahasa C/C++ sesuai deskripsi dengan for...,Program C++ Lengkap (Tersertifikasi Kompilasi & Lolos Kasus Uji),SUKSES TERVERIFIKASI
+2024,prov_soal4_2024,Pemrograman (C++),Soal Pemrograman A Tulislah sebuah program dengan bahasa C/C++ sesuai deskripsi dengan for...,Program C++ Lengkap (Tersertifikasi Kompilasi & Lolos Kasus Uji),SUKSES TERVERIFIKASI
+2024,prov_soal8_2024,Pemrograman (C++),Soal Pemrograman B Tulislah sebuah program dengan bahasa C/C++ sesuai deskripsi dengan for...,Program C++ Lengkap (Tersertifikasi Kompilasi & Lolos Kasus Uji),SUKSES TERVERIFIKASI
+2025,prov_soal12_2025,Pemrograman (C++),Soal Pemrograman C Tulislah sebuah program dengan bahasa C++ sesuai deskripsi dengan forma...,Program C++ Lengkap (Tersertifikasi Kompilasi & Lolos Kasus Uji),SUKSES TERVERIFIKASI
+2025,prov_soal16_2025,Pemrograman (C++),Soal Pemrograman D Tulislah sebuah program dengan bahasa C++ sesuai deskripsi dengan forma...,Program C++ Lengkap (Tersertifikasi Kompilasi & Lolos Kasus Uji),SUKSES TERVERIFIKASI
+2025,prov_soal20_2025,Pemrograman (C++),Soal Pemrograman E Tulislah sebuah program dengan bahasa C++ sesuai deskripsi dengan forma...,Program C++ Lengkap (Tersertifikasi Kompilasi & Lolos Kasus Uji),SUKSES TERVERIFIKASI
+2025,prov_soal24_2025,Pemrograman (C++),Soal Pemrograman F Tulislah sebuah program dengan bahasa C++ sesuai deskripsi dengan forma...,Program C++ Lengkap (Tersertifikasi Kompilasi & Lolos Kasus Uji),SUKSES TERVERIFIKASI
+2025,prov_soal4_2025,Pemrograman (C++),Soal Pemrograman A Tulislah sebuah program dengan bahasa C++ sesuai deskripsi dengan forma...,Program C++ Lengkap (Tersertifikasi Kompilasi & Lolos Kasus Uji),SUKSES TERVERIFIKASI
+2025,prov_soal8_2025,Pemrograman (C++),Soal Pemrograman B Tulislah sebuah program dengan bahasa C++ sesuai deskripsi dengan forma...,Program C++ Lengkap (Tersertifikasi Kompilasi & Lolos Kasus Uji),SUKSES TERVERIFIKASI
+2026,prov_soal12_2026,Pemrograman (C++),Tulislah sebuah program dengan bahasa C++ sesuai deskripsi dengan format dan batasan sebag...,Program C++ Lengkap (Tersertifikasi Kompilasi & Lolos Kasus Uji),SUKSES TERVERIFIKASI
+2026,prov_soal16_2026,Pemrograman (C++),Tulislah sebuah program dengan bahasa C++ sesuai deskripsi dengan format dan batasan sebag...,Program C++ Lengkap (Tersertifikasi Kompilasi & Lolos Kasus Uji),SUKSES TERVERIFIKASI
+2026,prov_soal20_2026,Pemrograman (C++),Tulislah sebuah program dengan bahasa C++ sesuai deskripsi dengan format dan batasan sebag...,Program C++ Lengkap (Tersertifikasi Kompilasi & Lolos Kasus Uji),SUKSES TERVERIFIKASI
+2026,prov_soal24_2026,Pemrograman (C++),Tulislah sebuah program dengan bahasa C++ sesuai deskripsi dengan format dan batasan sebag...,Program C++ Lengkap (Tersertifikasi Kompilasi & Lolos Kasus Uji),SUKSES TERVERIFIKASI
+2026,prov_soal4_2026,Pemrograman (C++),Tulislah sebuah program dengan bahasa C++ sesuai deskripsi dengan format dan batasan sebag...,Program C++ Lengkap (Tersertifikasi Kompilasi & Lolos Kasus Uji),SUKSES TERVERIFIKASI
+2026,prov_soal8_2026,Pemrograman (C++),Tulislah sebuah program dengan bahasa C++ sesuai deskripsi dengan format dan batasan sebag...,Program C++ Lengkap (Tersertifikasi Kompilasi & Lolos Kasus Uji),SUKSES TERVERIFIKASI
