@@ -1,127 +1,138 @@
 [
   {
-    "id": "prov_soal1_2020",
+    "soal_id": "prov_soal1_2020",
     "tipe_soal": "tunggal",
+    "materi_id": "prov-berhitung",
     "pertanyaan": "Diberikan sebuah barisan, 1, 4, 5, 16, 17, 20, 21, . . . , yang terurut menaik dan terbentuk dari bilangan 4 pangkat atau penjumlahan dari bilangan 4 pangkat yang berbeda (contoh: 4⁰, 4¹, 4¹ + 4⁰, 4², 4² + 4⁰, . . .). Tentukan bilangan ke 2020 yang dimodulo dengan 31.",
     "pilihan": {},
     "jawaban_benar": "17",
-    "pembahasan": "Barisan 1, 4, 5, 16, 17, 20, 21, ... dibentuk dari penjumlahan perpangkatan 4 yang bersesuaian dengan representasi biner indeks bilangan:\nRepresentasi biner dari $2020$ adalah:\n$2020 = 1024 + 512 + 256 + 128 + 64 + 32 + 4 = 11111100100_2$.\nSuku ke-2020 adalah:\n$S = 4^{10} + 4^9 + 4^8 + 4^7 + 4^6 + 4^5 + 4^2$.\nPerhatikan bahwa $4^5 = 1024 = 33 \\times 31 + 1 \\equiv 1 \\pmod{31}$. Maka periode pangkat 4 modulo 31 adalah 5:\n- $4^{10} \\equiv 4^0 = 1$\n- $4^9 \\equiv 4^4 = 256 \\equiv 8$\n- $4^8 \\equiv 4^3 = 64 \\equiv 2$\n- $4^7 \\equiv 4^2 = 16$\n- $4^6 \\equiv 4^1 = 4$\n- $4^5 \\equiv 4^0 = 1$\n- $4^2 = 16$.\nJumlah modulo 31:\n$S \\equiv 1 + 8 + 2 + 16 + 4 + 1 + 16 = 48 \\equiv 17 \\pmod{31}$.\nJadi bilangan ke-2020 dimodulo dengan 31 adalah 17.",
-    "tingkat_kesulitan": "sedang",
+    "pembahasan": "Soal barisan bilangan dan aritmatika modular. Barisan dibentuk dari representasi biner indeks ke perpangkatan 4 modulo 31.\n\n1. Bilangan ke-$k$ dalam barisan dibentuk dengan mengubah $k$ ke basis 2, lalu setiap digit biner bernilai 1 pada posisi $i$ (bobot $2^i$) digantikan dengan $4^i$.\n2. Konversi $2020$ ke basis 2:\n   $$2020 = 1024 + 512 + 256 + 128 + 64 + 32 + 4 = 11111100100_2$$\n   Maka suku ke-2020 adalah:\n   $$S = 4^{10} + 4^9 + 4^8 + 4^7 + 4^6 + 4^5 + 4^2$$\n3. Perhitungan modulo 31:\n   Karena $4^5 = 1024 = 33 \\times 31 + 1 \\equiv 1 \\pmod{31}$, periode pangkat 4 modulo 31 adalah 5:\n   - $4^{10} \\equiv 1 \\pmod{31}$\n   - $4^9 \\equiv 4^4 = 256 \\equiv 8 \\pmod{31}$\n   - $4^8 \\equiv 4^3 = 64 \\equiv 2 \\pmod{31}$\n   - $4^7 \\equiv 4^2 = 16 \\pmod{31}$\n   - $4^6 \\equiv 4^1 = 4 \\pmod{31}$\n   - $4^5 \\equiv 1 \\pmod{31}$\n   - $4^2 = 16 \\pmod{31}$\n4. Penjumlahan modulo 31:\n   $$S \\equiv 1 + 8 + 2 + 16 + 4 + 1 + 16 = 48 \\equiv 17 \\pmod{31}$$\nJadi bilangan ke-2020 dimodulo dengan 31 adalah 17.",
+    "level": "sedang",
     "kode_soal": null,
     "gambar_soal_url": null,
     "gambar_soal_lokal": null
   },
   {
-    "id": "prov_soal2_2020",
+    "soal_id": "prov_soal2_2020",
     "tipe_soal": "tunggal",
+    "materi_id": "prov-berhitung",
     "pertanyaan": "Di sebuah sekolah terdapat 4 klub. Berikut penjelasan anggota tiap klub.\n• Setiap siswa tergabung ke setidaknya satu klub.\n• Setiap anggota klub B adalah anggota klub A.\n• Sebagian anggota klub C adalah anggota klub B.\n• Semua anggota klub C yang merupakan anggota klub A juga merupakan anggota klub B.\n• Tidak ada anggota klub D yang merupakan anggota klub A.\n• Sebagian anggota klub D adalah anggota klub C.\n• Jumlah seluruh siswa adalah 140.\n• Jumlah anggota klub A dan klub C adalah 125.\n• Jumlah anggota klub B adalah 40.\n• Jumlah anggota klub D adalah 35.\n\nBerapa jumlah siswa yang merupakan anggota di 1 klub saja?",
     "pilihan": {},
-    "jawaban_benar": "Jumlah siswa 1 klub",
-    "pembahasan": "Analisis diagram Venn menggunakan prinsip himpunan berdasarkan kondisi hubungan antar klub A, B, C, dan D serta total siswa 140 untuk mencari jumlah siswa yang hanya menjadi anggota di 1 klub saja.",
-    "tingkat_kesulitan": "sedang",
+    "jawaban_benar": "80",
+    "pembahasan": "Soal teori himpunan dan diagram Venn dengan partisi wilayah saling lepas.\n\n1. Berdasarkan premis soal:\n   - $B \\subseteq A$, sehingga seluruh anggota klub $B$ berada di dalam $A$.\n   - Semua anggota $C \\cap A$ juga anggota $B$, sehingga $C \\cap A = C \\cap B$.\n   - Tidak ada anggota $D$ yang merupakan anggota $A$ ($D \\cap A = \\emptyset$), maka $D \\cap B = \\emptyset$.\n2. Partisi semesta $S$ ($|S| = 140$) menjadi wilayah-wilayah saling lepas:\n   - $x_1$: Anggota $A$ saja ($A \\setminus B$)\n   - $x_2$: Anggota $B$ saja (tidak ikut $C$)\n   - $x_3$: Anggota $B \\cap C$\n   - $x_4$: Anggota $C$ saja (tidak ikut $A, B, D$)\n   - $x_5$: Anggota $C \\cap D$\n   - $x_6$: Anggota $D$ saja\n3. Informasi jumlah anggota:\n   - Total siswa: $x_1 + x_2 + x_3 + x_4 + x_5 + x_6 = 140$.\n   - Klub $B$: $x_2 + x_3 = 40$.\n   - Klub $D$: $x_5 + x_6 = 35$.\n   - $|A \\cup C| = x_1 + (x_2 + x_3) + x_4 + x_5 = 125$.\n4. Menghitung siswa yang hanya menjadi anggota 1 klub saja ($x_1 + x_4 + x_6$):\n   - Dari total semesta: $|A \\cup C| + x_6 = 140 \\implies 125 + x_6 = 140 \\implies x_6 = 15$.\n   - Karena $x_5 + x_6 = 35$, maka $x_5 = 35 - 15 = 20$.\n   - Dari $|A \\cup C| = 125$:\n     $$x_1 + 40 + x_4 + 20 = 125 \\implies x_1 + x_4 = 65$$\n   - Maka siswa yang hanya menjadi anggota di 1 klub saja:\n     $$x_1 + x_4 + x_6 = 65 + 15 = 80$$",
+    "level": "sedang",
     "kode_soal": null,
     "gambar_soal_url": null,
     "gambar_soal_lokal": null
   },
   {
-    "id": "prov_soal3_2020",
+    "soal_id": "prov_soal3_2020",
     "tipe_soal": "tunggal",
+    "materi_id": "prov-bitwise",
     "pertanyaan": "Ada 6 orang yaitu Albert, Budi, Caca, Danis, Eka, dan Farah, yang masing-masing mengeluarkan sebuah pernyataan yang hanya bisa bernilai benar atau salah saja.\nAlbert : Pernyataanku bernilai benar\nBudi : Antara pernyataan Caca atau Albert bernilai benar, namun tidak keduanya\nCaca : Pernyataanku bernilai benar\nDanis : Pernyataan Budi bernilai benar\nEka : Pernyataan Caca bernilai benar\nFarah : Pernyataanku bernilai benar\n\nJika hanya ada tepat 1 pernyataan yang benar dari keenam pernyataan di atas, pernyataan siapakah yang benar?",
     "pilihan": {},
-    "jawaban_benar": "Nama orang",
-    "pembahasan": "Uji coba asumsi kebenaran (*truth value*) masing-masing orang secara bergantian untuk menemukan satu-satunya konfigurasi di mana tepat ada 1 pernyataan yang bernilai benar.",
-    "tingkat_kesulitan": "sedang",
+    "jawaban_benar": "Farah",
+    "pembahasan": "Soal penalaran logika analitika kebenaran pernyataan (truth-teller and liar puzzle).\n\n1. Pernyataan 6 orang:\n   - Albert: Pernyataanku bernilai benar ($A$)\n   - Budi: Antara pernyataan Caca atau Albert bernilai benar, namun tidak keduanya ($B \\iff C \\oplus A$)\n   - Caca: Pernyataanku bernilai benar ($C$)\n   - Danis: Pernyataan Budi bernilai benar ($D \\iff B$)\n   - Eka: Pernyataan Caca bernilai benar ($E \\iff C$)\n   - Farah: Pernyataanku bernilai benar ($F$)\n2. Syarat: Tepat ada 1 pernyataan benar dari keenam orang tersebut.\n3. Uji asumsi:\n   - Jika Albert benar ($A=1$): Budi menyatakan $C \\oplus A = 0 \\oplus 1 = 1$, maka Budi juga benar ($B=1$). Kontradiksi (ada minimal 2 orang benar).\n   - Jika Budi benar ($B=1$): Danis menyatakan Budi benar, maka Danis juga benar ($D=1$). Kontradiksi.\n   - Jika Caca benar ($C=1$): Eka menyatakan Caca benar, maka Eka juga benar ($E=1$). Kontradiksi.\n   - Jika Danis benar ($D=1$): Budi harus benar ($B=1$). Kontradiksi.\n   - Jika Eka benar ($E=1$): Caca harus benar ($C=1$). Kontradiksi.\n   - Jika Farah benar ($F=1$):\n     Maka $A=0, B=0, C=0, D=0, E=0$.\n     - Albert: 0 (konsisten bohong)\n     - Budi: $C \\oplus A = 0 \\oplus 0 = 0$ (konsisten bohong)\n     - Caca: 0 (konsisten bohong)\n     - Danis: $B = 0$ (konsisten bohong)\n     - Eka: $C = 0$ (konsisten bohong)\n     Semua bernilai salah dan hanya Farah yang benar. Konfigurasi konsisten.\nJadi pernyataan yang bernilai benar adalah pernyataan **Farah**.",
+    "level": "sedang",
     "kode_soal": null,
     "gambar_soal_url": null,
     "gambar_soal_lokal": null
   },
   {
-    "id": "prov_soal4_2020",
+    "soal_id": "prov_soal4_2020",
     "tipe_soal": "tunggal",
+    "materi_id": "prov-bitwise",
     "pertanyaan": "Empat orang sekawan yaitu Kwak, Kwik, Kwek, dan Kwok akan berlibur ke kota Bandung. Akan tetapi karena satu dan lain hal, beberapa (bisa saja tidak ada) dari mereka gagal untuk berlibur ke Kota Bandung. Mereka akhirnya menetapkan aturan berikut untuk menentukan siapa yang akan berlibur ke Kota Bandung.\n• Jika Kwak pergi ke Bandung maka Kwik juga akan ikut ke Bandung\n• Hanya tepat salah satu dari Kwik atau Kwek yang akan pergi ke Bandung\n• Jika Kwek pergi ke Bandung maka Kwak dan Kwok keduanya harus pergi ke Bandung\n• Jika Kwok tidak pergi ke Bandung, maka Kwik juga tidak akan pergi ke Bandung.\n\nBerapa banyak kemungkinan orang-orang yang akan pergi ke Bandung?",
     "pilihan": {},
-    "jawaban_benar": "Jumlah kemungkinan",
-    "pembahasan": "Evaluasi seluruh kombinasi keikutsertaan 4 orang (16 kemungkinan) terhadap 4 aturan implikasi logika yang diberikan untuk menghitung jumlah konfigurasi yang valid.",
-    "tingkat_kesulitan": "mudah",
+    "jawaban_benar": "2",
+    "pembahasan": "Soal logika proposisi dan evaluasi syarat implikasi pada kombinasi keikutsertaan.\n\n1. Variabel keikutsertaan: $A$ (Kwak), $B$ (Kwik), $C$ (Kwek), $D$ (Kwok) $\\in \\{0, 1\\}$.\n2. Aturan logika:\n   - (1) $A \\implies B$\n   - (2) $B \\oplus C = 1$ (tepat salah satu dari Kwik atau Kwek pergi)\n   - (3) $C \\implies (A \\land D)$\n   - (4) $\\neg D \\implies \\neg B \\iff B \\implies D$\n3. Analisis kasus:\n   - Kasus 1: $C = 1$ (Kwek pergi).\n     Dari aturan (2), $B = 0$.\n     Dari aturan (3), $A = 1$ dan $D = 1$.\n     Namun aturan (1) mensyaratkan $A \\implies B$. Karena $A=1$ dan $B=0$, aturan (1) dilanggar. Jadi kasus $C=1$ tidak mungkin.\n   - Kasus 2: $C = 0$ (Kwek tidak pergi).\n     Dari aturan (2), $B = 1$ (Kwik pergi).\n     Dari aturan (4), $B=1 \\implies D=1$ (Kwok pergi).\n     Aturan (3) otomatis terpenuhi karena premis $C=0$.\n     Aturan (1) $A \\implies B$ bernilai benar untuk $A=0$ maupun $A=1$ karena $B=1$.\n4. Konfigurasi yang valid:\n   - Konfigurasi 1: $A=0, B=1, C=0, D=1$ (Kwik dan Kwok pergi).\n   - Konfigurasi 2: $A=1, B=1, C=0, D=1$ (Kwak, Kwik, dan Kwok pergi).\nTotal kemungkinan konfigurasi adalah **2**.",
+    "level": "mudah",
     "kode_soal": null,
     "gambar_soal_url": null,
     "gambar_soal_lokal": null
   },
   {
-    "id": "prov_soal5_2020",
+    "soal_id": "prov_soal5_2020",
     "tipe_soal": "tunggal",
+    "materi_id": "prov-bitwise",
     "pertanyaan": "Perhatikan operasi logika berikut!\nP = (A and (not B)) or ((C or (not D)) and (not E))\nQ = ((not A) or (not B)) and (((not C) and D) or (not E))\nR = P and Q\n\nJika nilai A = True, B = True, C = True, D = True, dan E = False, tentukan nilai P, Q dan R berturut-turut?",
     "pilihan": {},
-    "jawaban_benar": "True/False",
-    "pembahasan": "Substitusi nilai boolean A, B, C, D, dan E ke dalam ekspresi P dan Q, lalu evaluasi menggunakan operator logika and, or, not untuk mendapatkan nilai akhir P, Q, dan R.",
-    "tingkat_kesulitan": "mudah",
+    "jawaban_benar": "True, False, False",
+    "pembahasan": "Soal evaluasi aljabar boolean bertingkat pada operator logika and, or, dan not.\n\n1. Substitusi nilai awal:\n   $$A = \\text{True}, B = \\text{True}, C = \\text{True}, D = \\text{True}, E = \\text{False}$$\n2. Evaluasi $P$:\n   $$P = (A \\land \\neg B) \\lor ((C \\lor \\neg D) \\land \\neg E)$$\n   - $A \\land \\neg B = \\text{True} \\land \\text{False} = \\text{False}$\n   - $C \\lor \\neg D = \\text{True} \\lor \\text{False} = \\text{True}$\n   - $(C \\lor \\neg D) \\land \\neg E = \\text{True} \\land \\text{True} = \\text{True}$\n   - $P = \\text{False} \\lor \\text{True} = \\text{True}$\n3. Evaluasi $Q$:\n   $$Q = (\\neg A \\lor \\neg B) \\land (((\\neg C \\land D) \\lor \\neg E))$$\n   - $\\neg A \\lor \\neg B = \\text{False} \\lor \\text{False} = \\text{False}$\n   - $Q = \\text{False} \\land (\\dots) = \\text{False}$\n4. Evaluasi $R$:\n   $$R = P \\land Q = \\text{True} \\land \\text{False} = \\text{False}$$\nMaka nilai $P, Q, R$ berturut-turut adalah **True, False, False**.",
+    "level": "mudah",
     "kode_soal": null,
     "gambar_soal_url": null,
     "gambar_soal_lokal": null
   },
   {
-    "id": "prov_soal6_2020",
+    "soal_id": "prov_soal6_2020",
     "tipe_soal": "tunggal",
+    "materi_id": "prov-geometri",
     "pertanyaan": "Pak Dengklek memiliki 8 titik yang terletak pada koordinat: (2, 5), (3, 8), (3, 4), (4, 8), (4, 0), (3, 3), (0, 4), (0, 0). Beliau ingin menutupi kedelapan titik tersebut dengan sebuah poligon sedemikian sehingga setiap titik milik Pak Dengklek berada di dalam (atau di tepi) poligon tersebut. Berapa keliling poligon terkecil yang memenuhi keinginan Pak Dengklek?",
     "pilihan": {},
-    "jawaban_benar": "Keliling poligon",
-    "pembahasan": "Menerapkan algoritma pembungkus cembung (*Convex Hull*) untuk menemukan titik-titik terluar yang membentuk poligon minimum yang melingkupi kedelapan titik, kemudian menghitung total kelilingnya.",
-    "tingkat_kesulitan": "sulit",
+    "jawaban_benar": "22",
+    "pembahasan": "Soal geometri komputasional untuk menentukan keliling Convex Hull (pembungkus cembung terkecil) dari 8 titik koordinat.\n\n1. Titik-titik yang diberikan: $(2, 5), (3, 8), (3, 4), (4, 8), (4, 0), (3, 3), (0, 4), (0, 0)$.\n2. Titik-titik sudut terluar pembentuk Convex Hull:\n   $$P_1=(0, 0), P_2=(4, 0), P_3=(4, 8), P_4=(3, 8), P_5=(0, 4)$$\n3. Panjang masing-masing sisi:\n   - $d(P_1, P_2) = \\sqrt{(4-0)^2 + 0^2} = 4$\n   - $d(P_2, P_3) = \\sqrt{0^2 + (8-0)^2} = 8$\n   - $d(P_3, P_4) = \\sqrt{(3-4)^2 + 0^2} = 1$\n   - $d(P_4, P_5) = \\sqrt{(0-3)^2 + (4-8)^2} = \\sqrt{9 + 16} = 5$\n   - $d(P_5, P_1) = \\sqrt{0^2 + (0-4)^2} = 4$\n4. Keliling poligon terkecil:\n   $$\\text{Keliling} = 4 + 8 + 1 + 5 + 4 = 22$$",
+    "level": "sulit",
     "kode_soal": null,
     "gambar_soal_url": null,
     "gambar_soal_lokal": null
   },
   {
-    "id": "prov_soal7_2020",
+    "soal_id": "prov_soal7_2020",
     "tipe_soal": "tunggal",
+    "materi_id": "prov-graf",
     "pertanyaan": "Kerajaan Zidan sedang berperang melawan Kerajaan Ahmad. Salah satu mata-mata Kerajaan Zidan berhasil mendapatkan peta logistik Kerajaan Ahmad. Sumber logistik Kerajaan Ahmad berada di node bernomor 1 dan Kerajaan Ahmad berada di node bernomor 9. Kerajaan Zidan ingin memutus jalur logistik Kerajaan Ahmad agar memenangkan perang. Dengan kata lain, Kerajaan Zidan ingin menghancurkan beberapa jalan sedemikian sehingga tidak ada jalan yang bisa digunakan untuk mencapai node 9 dari node 1, dan sebaliknya. Bilangan yang tertera pada jalan merupakan biaya yang dibutuhkan Kerajaan Zidan untuk menghancurkan jalan tersebut. Berapa total biaya minimum yang dibutuhkan Kerajaan Zidan?",
     "pilihan": {},
-    "jawaban_benar": "Biaya minimum",
-    "pembahasan": "Penyelesaian masalah minimum cut / maximum flow pada graf berbobot untuk memutus jalur antara node 1 dan node 9 dengan biaya minimum.",
-    "tingkat_kesulitan": "sulit",
+    "jawaban_benar": "46",
+    "pembahasan": "Soal teori graf optimasi pemutusan jalur logistik (Minimum Cut / Maximum Flow pada graf berbobot tak berarah).\n\n1. Masalah memutus semua jalur antara simpul 1 dan simpul 9 dengan biaya minimum setara dengan mencari bobot partisi Minimum Cut antara 1 dan 9.\n2. Partisi optimal membagi simpul menjadi:\n   $$S = \\{1, 2, 3, 4, 6\\} \\quad \\text{dan} \\quad T = \\{5, 7, 8, 9\\}$$\n3. Jalan antar-partisi yang dipotong dan biayanya:\n   - $(2, 5)$ dengan bobot 3\n   - $(2, 7)$ dengan bobot 13\n   - $(7, 4)$ dengan bobot 4\n   - $(3, 5)$ dengan bobot 7\n   - $(3, 8)$ dengan bobot 9\n   - $(8, 6)$ dengan bobot 10\n4. Total biaya pemotongan minimum:\n   $$\\text{Biaya} = 3 + 13 + 4 + 7 + 9 + 10 = 46$$",
+    "level": "sulit",
     "kode_soal": null,
     "gambar_soal_url": null,
     "gambar_soal_lokal": "soal_7_prov_2020.png"
   },
   {
-    "id": "prov_soal8_2020",
+    "soal_id": "prov_soal8_2020",
     "tipe_soal": "tunggal",
+    "materi_id": "prov-berhitung",
     "pertanyaan": "Terdapat 4 ekor bebek berwarna merah, 3 ekor bebek berwarna biru, dan 2 ekor bebek berwarna hijau. Kesembilan bebek tersebut diminta untuk berbaris oleh Pak Dengklek dengan ketentuan:\n• Setiap bebek yang berwarna sama tidak bisa dibedakan\n• Untuk setiap pasang bebek yang berwarna sama, tidak boleh ada bebek lain yang warnanya berbeda yang berada di antara sepasang bebek tersebut.\n\nAda berapa macam posisikah yang mungkin dalam barisan bebek tersebut?",
     "pilihan": {},
-    "jawaban_benar": "Jumlah posisi",
-    "pembahasan": "Karena bebek dengan warna yang sama tidak boleh dipisahkan oleh warna lain, blok warna merah, biru, dan hijau dapat dianggap sebagai 3 obyek utama yang disusun secara permutasi ($3!$), dikalikan dengan posisi internal masing-masing warna.",
-    "tingkat_kesulitan": "sedang",
+    "jawaban_benar": "6",
+    "pembahasan": "Soal kombinatorika dan permutasi blok dengan objek identik.\n\n1. Terdapat 4 bebek merah (M), 3 bebek biru (B), dan 2 bebek hijau (H).\n2. Syarat soal:\n   - Setiap bebek yang berwarna sama **tidak bisa dibedakan** (identik).\n   - Bebek yang berwarna sama harus berada dalam satu kelompok berdampingan (membentuk 1 blok warna).\n3. Karena bebek sewarna identik, susunan bebek di dalam tiap blok warna bersifat unik (1 cara).\n4. Posisi barisan bebek semata-mata ditentukan oleh urutan susunan ketiga blok warna (M, B, H):\n   $$3! = 3 \\times 2 \\times 1 = 6$$\nMaka ada 6 macam posisi barisan yang mungkin.",
+    "level": "sedang",
     "kode_soal": null,
     "gambar_soal_url": null,
     "gambar_soal_lokal": null
   },
   {
-    "id": "prov_soal9_2020",
+    "soal_id": "prov_soal9_2020",
     "tipe_soal": "tunggal",
+    "materi_id": "prov-rekursi",
     "pertanyaan": "Pak Dengklek memiliki sebuah fungsi f yang dapat dinyatakan sebagai berikut:\nf(n) = 1, jika n ≤ 1\nf(n) = f(⌊n/2⌋) * 2 + n, jika n > 1\n\nBerapakah nilai f(1048576)?",
     "pilihan": {},
-    "jawaban_benar": "Nilai fungsi",
-    "pembahasan": "Menjabarkan pola rekurensi fungsi $f(n)$ untuk nilai $1048576$ ($2^{20}$), yang menunjukkan hubungan iteratif penambahan nilai berdasarkan operasi pembagian 2.",
-    "tingkat_kesulitan": "sedang",
+    "jawaban_benar": "22020096",
+    "pembahasan": "Soal analisis relasi rekurens Divide and Conquer dan aljabar eksponensial.\n\n1. Relasi rekursi:\n   $$f(n) = 2 \\cdot f(\\lfloor n/2 \\rfloor) + n \\quad (n > 1), \\quad f(1) = 1$$\n2. Untuk nilai $n = 2^k$:\n   - $f(2^0) = 1 = (0 + 1) \\cdot 2^0$\n   - $f(2^1) = 2(1) + 2 = 4 = (1 + 1) \\cdot 2^1$\n   - $f(2^2) = 2(4) + 4 = 12 = (2 + 1) \\cdot 2^2$\n   - $f(2^3) = 2(12) + 8 = 32 = (3 + 1) \\cdot 2^3$\n   Secara umum berlaku formula tertutup:\n   $$f(2^k) = (k + 1) \\cdot 2^k$$\n3. Untuk $n = 1048576 = 2^{20}$, nilai $k = 20$:\n   $$f(1048576) = (20 + 1) \\cdot 2^{20} = 21 \\cdot 1048576 = 22020096$$",
+    "level": "sedang",
     "kode_soal": null,
     "gambar_soal_url": null,
     "gambar_soal_lokal": null
   },
   {
-    "id": "prov_soal10_2020",
+    "soal_id": "prov_soal10_2020",
     "tipe_soal": "tunggal",
+    "materi_id": "prov-strategi",
     "pertanyaan": "Pak Dengklek memiliki sebuah sekuens S = {2, 14, 7, 20, 5, 3, 8, 11, 18, 4, 10, 12, 1, 6, 9, 19, 15, 16, 13, 17}. Subsekuens dari sebuah sekuens S bisa didapatkan dengan menghilangkan beberapa elemen dari S namun dengan tetap mempertahankan urutannya. Sebagai Contoh: {2, 7, 13, 17} adalah subsekuens dari S, sedangkan {14, 2, 20} bukanlah subsekuens dari S karena urutannya berubah (2 muncul lebih dahulu dari 14 di S). Pak Dengklek ingin mencari sebuah subsekuens menaik dari S. Sebuah subsekuens dikatakan menaik jika dan hanya jika elemen-elemen yang ada di dalam subsekuens tersebut tersusun secara menaik. Sebagai Contoh: {2, 7, 20}. Berapa banyaknya elemen dari subsekuens menaik terpanjang yang bisa dibentuk dari sekuens S?",
     "pilihan": {},
-    "jawaban_benar": "Panjang LIS",
-    "pembahasan": "Mencari panjang Longest Increasing Subsequence (LIS) pada sekuens S yang diberikan menggunakan algoritma pemrograman dinamis.",
-    "tingkat_kesulitan": "sulit",
+    "jawaban_benar": "8",
+    "pembahasan": "Soal algoritma Longest Increasing Subsequence (LIS) pada sekuens bilangan bulat.\n\n1. Berdasarkan naskah asli ujian KSN-P 2020, sekuens lengkap $S$ memuat 20 elemen:\n   $$S = \\{2, 14, 7, 20, 5, 3, 8, 11, 18, 4, 10, 12, 1, 6, 9, 19, 15, 16, 13, 17\\}$$\n2. Menentukan subsekuens menaik terpanjang (LIS):\n   Salah satu kandidat subsekuens menaik dengan panjang 8 adalah:\n   $$\\{2, 5, 8, 11, 12, 15, 16, 17\\}$$\n   Verifikasi kemunculan elemen pada $S$:\n   - 2 (indeks 1)\n   - 5 (indeks 5)\n   - 8 (indeks 7)\n   - 11 (indeks 8)\n   - 12 (indeks 12)\n   - 15 (indeks 17)\n   - 16 (indeks 18)\n   - 17 (indeks 20)\n3. Tidak terdapat subsekuens menaik dengan panjang $\\ge 9$. Panjang LIS maksimum adalah **8**.",
+    "level": "sulit",
     "kode_soal": null,
     "gambar_soal_url": null,
     "gambar_soal_lokal": null
   },
   {
-    "id": "prov_cerita11_2020",
+    "soal_id": "prov_cerita11_2020",
     "tipe_soal": "cerita",
+    "materi_id": "prov-aritmetika",
     "detail_cerita": {
       "teks": "B1. Lari Jauh\n\nPak Dengklek mengadakan lomba lari jauh untuk bebek-bebeknya. Rute lomba lari Pak Dengklek merupakan garis lurus. Di rute lomba lari tersebut, terdapat N patok, dinomori 1 sampai N. Patok ke-i berjarak Ai kilometer dari patok sebelumnya, patok pertama berjarak A1 kilometer dari garis mulai. Ada K bebek yang mengikuti lomba lari, dinomori 1 sampai K. Bebek ke-i dapat berlari sejauh Bi kilometer. Semua bebek mulai berlari dari garis mulai. Pak Dengklek meminta Anda untuk menentukan nomor patok terjauh yang bisa dilewati oleh setiap bebeknya.\n\nSebagai uji coba sebelum perlombaan berlangsung, Pak Dengklek memasang 5 buah patok berwarna berturut-turut merah, kuning, hijau, biru, hitam dengan nilai Ai masing-masing berturut-turut 4, 6, 11, 18, dan 12. Kemudian, Pak Dengklek meminta 10 bebeknya untuk berlatih, dan diketahui kemampuan berlari setiap bebek adalah sebagai berikut:\nBebek ke-i: 1  | 2  | 3  | 4  | 5  | 6  | 7  | 8  | 9  | 10\nNilai Bi  : 10 | 15 | 24 | 40 | 25 | 16 | 52 | 45 | 38 | 39",
       "gambar_url": null,
@@ -129,34 +140,37 @@
     },
     "soal": [
       {
-        "id": "prov_soal11_2020",
+        "soal_id": "prov_soal11_2020",
+        "materi_id": "prov-aritmetika",
         "pertanyaan": "Ada berapa banyak bebek yang bisa mencapai atau melewati patok warna hijau?",
         "pilihan": {},
         "jawaban_benar": "Jumlah bebek",
         "pembahasan": "Menghitung jarak kumulatif setiap patok ($A_i$) hingga patok hijau, lalu membandingkannya dengan kemampuan lari masing-masing bebek ($B_i$).",
-        "tingkat_kesulitan": "sedang",
+        "level": "sedang",
         "kode_soal": null,
         "gambar_soal_url": null,
         "gambar_soal_lokal": null
       },
       {
-        "id": "prov_soal12_2020",
+        "soal_id": "prov_soal12_2020",
+        "materi_id": "prov-aritmetika",
         "pertanyaan": "Ada berapa banyak bebek yang bisa mencapai atau melewati patok warna hitam?",
         "pilihan": {},
         "jawaban_benar": "Jumlah bebek",
         "pembahasan": "Menghitung total jarak kumulatif sampai patok hitam terakhir dan menyaring jumlah bebek yang memiliki kemampuan $B_i$ mencukupi.",
-        "tingkat_kesulitan": "sedang",
+        "level": "sedang",
         "kode_soal": null,
         "gambar_soal_url": null,
         "gambar_soal_lokal": null
       },
       {
-        "id": "prov_soal13_2020",
+        "soal_id": "prov_soal13_2020",
+        "materi_id": "prov-aritmetika",
         "pertanyaan": "Jika diinginkan agar banyaknya bebek yang bisa mencapai atau melewati patok hitam semaksimal mungkin, berapakah jarak maksimal yang harus dibuat antara patok biru dan patok hitam, dengan ketentuan patok hitam harus berada setelah patok biru.",
         "pilihan": {},
         "jawaban_benar": "Jarak maksimal",
         "pembahasan": "Optimasi jarak antar patok dengan memperhatikan batasan kemampuan lari maksimal dari himpunan bebek yang ingin diakomodasi.",
-        "tingkat_kesulitan": "sedang",
+        "level": "sedang",
         "kode_soal": null,
         "gambar_soal_url": null,
         "gambar_soal_lokal": null
@@ -165,8 +179,9 @@
     "gambar_soal_lokal": "soal_B1_1_prov_2020.png"
   },
   {
-    "id": "prov_cerita14_2020",
+    "soal_id": "prov_cerita14_2020",
     "tipe_soal": "cerita",
+    "materi_id": "prov-aritmetika",
     "detail_cerita": {
       "teks": "B1. Lari Jauh\n\nPak Dengklek mengadakan lomba lari jauh untuk bebek-bebeknya. Rute lomba lari Pak Dengklek merupakan garis lurus. Di rute lomba lari tersebut, terdapat N patok, dinomori 1 sampai N. Patok ke-i berjarak Ai kilometer dari patok sebelumnya, patok pertama berjarak A1 kilometer dari garis mulai. Ada K bebek yang mengikuti lomba lari, dinomori 1 sampai K. Bebek ke-i dapat berlari sejauh Bi kilometer. Semua bebek mulai berlari dari garis mulai. Pak Dengklek meminta Anda untuk menentukan nomor patok terjauh yang bisa dilewati oleh setiap bebeknya.",
       "gambar_url": null,
@@ -174,12 +189,13 @@
     },
     "soal": [
       {
-        "id": "prov_soal14_2020",
+        "soal_id": "prov_soal14_2020",
+        "materi_id": "prov-aritmetika",
         "pertanyaan": "Buatlah program menggunakan bahasa Pascal/C/C++ sesuai deskripsi cerita di atas untuk menentukan nomor patok terakhir yang dilewati oleh setiap bebek-bebek Pak Dengklek dengan ketentuan sebagai berikut:\nFormat Masukan:\nBaris pertama berisi dua bilangan N dan K. Baris kedua berisi N bilangan yang dipisahkan spasi, bilangan ke-i menyatakan Ai. Baris ketiga berisi K bilangan yang dipisahkan spasi, bilangan ke-i menyatakan Bi.\n\nFormat Keluaran:\nBerisi K baris, yang masing-masing terdiri dari satu bilangan. Bilangan pada baris ke-i menyatakan nomor patok terakhir yang dicapai atau dilewati bebek ke-i.\n\nContoh Masukan:\n5 5\n1 2 1 2 1\n2 3 5 6 10\n\nContoh Keluaran:\n1\n2\n3\n4\n5\n\nPenjelasan Contoh:\nPatok terakhir yang dilalui bebek pertama adalah patok pertama, maka keluaran pertama adalah 1. Patok terakhir yang dilalui bebek keempat adalah patok keempat, maka keluaran keempat adalah 4.\n\nBatasan:\nUntuk kasus uji pada subtask 1, berlaku (Point 50%):\n• 1 ≤ N ≤ 100\n• 1 ≤ K ≤ 100\n• 1 ≤ Ai ≤ 100\n• 1 ≤ Bi ≤ 1000\nUntuk kasus uji pada subtask 2, berlaku (Point 50%):\n• 1 ≤ N ≤ 100000\n• 1 ≤ K ≤ 100000\n• 1 ≤ Ai ≤ 10000\n• 1 ≤ Bi ≤ 10000",
         "pilihan": {},
         "jawaban_benar": "Program / Solusi Algoritma",
         "pembahasan": "Implementasi pencarian batas jarak kumulatif patok menggunakan binary search atau prefix sum untuk mencetak patok terjauh setiap bebek.",
-        "tingkat_kesulitan": "sedang",
+        "level": "sedang",
         "kode_soal": null,
         "gambar_soal_url": null,
         "gambar_soal_lokal": null
@@ -187,8 +203,9 @@
     ]
   },
   {
-    "id": "prov_cerita15_2020",
+    "soal_id": "prov_cerita15_2020",
     "tipe_soal": "cerita",
+    "materi_id": "prov-berhitung",
     "detail_cerita": {
       "teks": "B2. Lampu Hias Warna Warni\n\nPak Dengklek memiliki N buah lampu hias berwarna-warni. Setiap warna dinyatakan dengan huruf 'A' sampai 'Z'. Ia ingin menghias ruangan dengan sebuah barisan lampu. Hiasan yang diinginkannya harus memenuhi aturan berikut.\n• Barisan lampu hias terdiri atas setidaknya tiga buah lampu hias.\n• Tiga lampu pertama (bernomor 1, 2, dan 3) memiliki warna yang berbeda satu sama lain.\n• Untuk setiap i > 3, warna lampu ke-i sama dengan warna lampu ke-(i-3).\nDengan aturan di atas, bisa saja ada lampu hias yang tidak dipakai.\nTugas Anda adalah mencari banyaknya lampu hias yang bisa digunakan pada barisan lampu terpanjang yang memenuhi syarat-syarat di atas jika diberikan daftar lampu hias yang tersedia.\n\nJika Pak Dengklek mempunyai 14 lampu hias dengan warna berturut-turut yaitu sebagai berikut: O, N, L, I, N, L, L, L, N, L, N, O, I, L",
       "gambar_url": null,
@@ -196,34 +213,37 @@
     },
     "soal": [
       {
-        "id": "prov_soal15_2020",
+        "soal_id": "prov_soal15_2020",
+        "materi_id": "prov-berhitung",
         "pertanyaan": "Berapa jumlah maksimal lampu hias yang dapat dibuat Pak Dengklek menjadi barisan lampu?",
         "pilihan": {},
         "jawaban_benar": "Jumlah maksimal",
         "pembahasan": "Analisis aturan pembentukan barisan lampu dengan pola periodik modulo 3 untuk mencari panjang maksimum dari data yang tersedia.",
-        "tingkat_kesulitan": "sedang",
+        "level": "sedang",
         "kode_soal": null,
         "gambar_soal_url": null,
         "gambar_soal_lokal": null
       },
       {
-        "id": "prov_soal16_2020",
+        "soal_id": "prov_soal16_2020",
+        "materi_id": "prov-berhitung",
         "pertanyaan": "Ada berapa banyak kombinasi barisan lampu berbeda yang bisa dibuat dari lampu-lampu hias yang tersedia?",
         "pilihan": {},
         "jawaban_benar": "Jumlah kombinasi",
         "pembahasan": "Menghitung permutasi dan kombinasi pemilihan warna lampu yang memenuhi syarat tiga lampu awal berbeda dan pola perulangan berikutnya.",
-        "tingkat_kesulitan": "sedang",
+        "level": "sedang",
         "kode_soal": null,
         "gambar_soal_url": null,
         "gambar_soal_lokal": null
       },
       {
-        "id": "prov_soal17_2020",
+        "soal_id": "prov_soal17_2020",
+        "materi_id": "prov-berhitung",
         "pertanyaan": "Ternyata semua lampu hias yang berwarna L mati dan tidak bisa digunakan. Berapakah jumlah maksimal lampu hias yang dapat digunakan oleh Pak Dengklek menjadi barisan lampu sekarang?",
         "pilihan": {},
         "jawaban_benar": "Jumlah maksimal baru",
         "pembahasan": "Menghitung ulang panjang barisan lampu maksimum setelah elemen dengan warna 'L' dieliminasi dari daftar.",
-        "tingkat_kesulitan": "sedang",
+        "level": "sedang",
         "kode_soal": null,
         "gambar_soal_url": null,
         "gambar_soal_lokal": null
@@ -232,8 +252,9 @@
     "gambar_soal_lokal": "soal_B2_1_prov_2020.png"
   },
   {
-    "id": "prov_cerita18_2020",
+    "soal_id": "prov_cerita18_2020",
     "tipe_soal": "cerita",
+    "materi_id": "prov-berhitung",
     "detail_cerita": {
       "teks": "B2. Lampu Hias Warna Warni\n\nPak Dengklek memiliki N buah lampu hias berwarna-warni. Setiap warna dinyatakan dengan huruf 'A' sampai 'Z'. Ia ingin menghias ruangan dengan sebuah barisan lampu. Hiasan yang diinginkannya harus memenuhi aturan berikut.\n• Barisan lampu hias terdiri atas setidaknya tiga buah lampu hias.\n• Tiga lampu pertama (bernomor 1, 2, dan 3) memiliki warna yang berbeda satu sama lain.\n• Untuk setiap i > 3, warna lampu ke-i sama dengan warna lampu ke-(i-3).\nDengan aturan di atas, bisa saja ada lampu hias yang tidak dipakai.\nTugas Anda adalah mencari banyaknya lampu hias yang bisa digunakan pada barisan lampu terpanjang yang memenuhi syarat-syarat di atas jika diberikan daftar lampu hias yang tersedia.",
       "gambar_url": null,
@@ -241,12 +262,13 @@
     },
     "soal": [
       {
-        "id": "prov_soal18_2020",
-        "pertanyaan": "Buatlah program menggunakan bahasa Pascal atau C/C++ untuk menentukan hiasan dengan banyak lampu hias maksimal yang dapat dibuat oleh Pak Dengklek dengan ketentuan sebagai berikut:\nFormat Masukan:\nBaris pertama berisi sebuah bilangan bulat N. Baris berikutnya berisi N buah karakter 'A' sampai 'Z' yang menyatakan warna dari lampu-lampu hias Pak Dengklek.\n\nFormat Keluaran:\nSatu baris yang berisi sebuah bilangan bulat yang menyatakan banyaknya lampu hias maksimal yang bisa digunakan dalam sebuah barisan lampu. Apabila tidak mungkin dibuat hiasan dengan aturan di atas, keluarkan sebuah baris berisi -1.\n\nContoh Masukan 1:\n9\nLSKLSPLSN\nContoh Keluaran 1:\n5\n\nContoh Masukan 2:\n3\nPJJ\nContoh Keluaran 2:\n-1\n\nContoh Masukan 3:\n10\nXYZXYZXYZX\nContoh Keluaran 3:\n10\n\nPenjelasan Contoh:\nPada contoh pertama, salah satu barisan lampu terpanjang yang bisa dibentuk adalah ‘LSKLS’ yang menggunakan 5 buah lampu hias. Pada contoh kedua, tidak ada barisan lampu yang dapat dibentuk karena hanya ada dua warna lampu hias yang berbeda.\n\nBatasan:\nUntuk kasus uji pada subtask 1, berlaku (Point 50%):\n• 1 ≤ N ≤ 100\n• Banyaknya warna lampu maksimal 5 jenis.\nUntuk kasus uji pada subtask 2, berlaku (Point 50%):\n• 1 ≤ N ≤ 1000\n• Banyaknya warna lampu maksimal 26 jenis.",
+        "soal_id": "prov_soal18_2020",
+        "materi_id": "prov-berhitung",
+        "pertanyaan": "Buatlah program menggunakan bahasa Pascal atau C/C++ untuk menentukan hiasan dengan banyak lampu hias maksimal yang dapat dibuat oleh Pak Dengklek dengan ketentuan sebagai berikut:\nFormat Masukan:\nBaris pertama berisi sebuah bilangan bulat N. Baris berikutnya berisi N buah karakter 'A' sampai 'Z' yang menyatakan warna dari lampu-lampu hias Pak Dengklek.\n\nFormat Keluaran:\nSatu baris yang berisi sebuah bilangan bulat yang menyatakan banyaknya lampu hias maksimal yang bisa digunakan dalam sebuah barisan lampu. Apabila tidak mungkin dibuat hiasan dengan aturan di atas, keluarkan sebuah baris berisi -1.\n\nContoh Masukan 1:\n9\nLSKLSPLSN\nContoh Keluaran 1:\n5\n\nContoh Masukan 2:\n3\nPJJ\nContoh Keluaran 2:\n-1\n\nContoh Masukan 3:\n10\nXYZXYZXYZX\nContoh Keluaran 3:\n10\n\nPenjelasan Contoh:\nPada contoh pertama, salah satu barisan lampu terpanjang yang bisa dibentuk adalah 'LSKLS' yang menggunakan 5 buah lampu hias. Pada contoh kedua, tidak ada barisan lampu yang dapat dibentuk karena hanya ada dua warna lampu hias yang berbeda.\n\nBatasan:\nUntuk kasus uji pada subtask 1, berlaku (Point 50%):\n• 1 ≤ N ≤ 100\n• Banyaknya warna lampu maksimal 5 jenis.\nUntuk kasus uji pada subtask 2, berlaku (Point 50%):\n• 1 ≤ N ≤ 1000\n• Banyaknya warna lampu maksimal 26 jenis.",
         "pilihan": {},
         "jawaban_benar": "Program / Solusi Algoritma",
         "pembahasan": "Implementasi pemrograman dinamis atau pencarian frekuensi warna untuk menemukan barisan lampu terpanjang sesuai aturan.",
-        "tingkat_kesulitan": "sulit",
+        "level": "sulit",
         "kode_soal": null,
         "gambar_soal_url": null,
         "gambar_soal_lokal": null
@@ -254,8 +276,9 @@
     ]
   },
   {
-    "id": "prov_cerita19_2020",
+    "soal_id": "prov_cerita19_2020",
     "tipe_soal": "cerita",
+    "materi_id": "prov-strategi",
     "detail_cerita": {
       "teks": "B3. Kerja Freelance\n\nDi masa pandemi COVID-19 yang sangat sulit seperti sekarang ini, Pak Dengklek juga merasakan penurunan pendapatan yang ia terima tiap bulannya. Padahal dia membutuhkan banyak pemasukan untuk membeli makan ayam-ayamnya yang jumlahnya tiap hari selalu bertambah karena telur-telur ayamnya menetas. Oleh karena itu Pak Dengklek harus mencari akal bagaimana caranya untuk mendapatkan pemasukan tambahan. Karena masalah di atas, akhirnya Pak Dengklek memutuskan untuk mengambil pekerjaan pada sebuah situs freelance, alasannya karena sebagian besar pekerjaannya bisa dilakukan dari rumah atau yang juga populer dengan sebutan work from home (WFH). Pada situs tersebut, Pak Dengklek menemukan M pekerjaan yang sesuai dengan keahliannya. Setiap pekerjaan memiliki tiga informasi yaitu pada hari keberapa pekerjaan harus dimulai (Si), pada hari keberapa pekerjaan harus selesai (Ei), dan berapa honor yang akan diperoleh Pak Dengklek setelah dia menyelesaikan pekerjaan tersebut (Pi). Karena keterbatasan tenaga dan waktu, tentunya tidak semua M pekerjaan harus diambil oleh Pak Dengklek. Pak Dengklek memiliki Batasan yaitu ia hanya akan mengerjakan satu pekerjaan dalam satu waktu, dan setiap pekerjaan akan dikerjakan sesuai dengan waktu yang diperlukan hingga tuntas. Jika suatu pekerjaan telah selesai, Pak Dengklek bisa memilih istirahat atau memilih untuk memulai pekerjaan lainnya di hari berikutnya sesuai dengan waktu yang memungkinkan. Tentunya yang diinginkan Pak Dengklek adalah mengambil pekerjaan dengan urutan tertentu dari M pekerjaan yang ada supaya bisa menghasilkan pendapatan tambahan semaksimal mungkin.\n\nDiketahui 8 pekerjaan berikut yang sesuai dengan keahlian Pak Dengklek:\nPekerjaan A: Si = 1,  Ei = 10\nPekerjaan B: Si = 16, Ei = 20\nPekerjaan C: Si = 16, Ei = 17\nPekerjaan D: Si = 11, Ei = 15\nPekerjaan E: Si = 18, Ei = 19\nPekerjaan F: Si = 21, Ei = 27\nPekerjaan G: Si = 29, Ei = 31\nPekerjaan H: Si = 28, Ei = 30",
       "gambar_url": null,
@@ -263,34 +286,37 @@
     },
     "soal": [
       {
-        "id": "prov_soal19_2020",
+        "soal_id": "prov_soal19_2020",
+        "materi_id": "prov-strategi",
         "pertanyaan": "Jika masing-masing pekerjaan tersebut memberikan honor (Pi) yang sama berapapun lamanya pekerjaan, berapa banyak pekerjaan yang bisa diambil oleh Pak Dengklek sehingga pendapatan Pak Dengklek maksimal?",
         "pilihan": {},
         "jawaban_benar": "Jumlah pekerjaan",
         "pembahasan": "Penyelesaian masalah penjadwalan interval (*Interval Scheduling / Activity Selection Problem*) untuk memaksimalkan jumlah pekerjaan tanpa tumpang tindih.",
-        "tingkat_kesulitan": "sedang",
+        "level": "sedang",
         "kode_soal": null,
         "gambar_soal_url": null,
         "gambar_soal_lokal": null
       },
       {
-        "id": "prov_soal20_2020",
+        "soal_id": "prov_soal20_2020",
+        "materi_id": "prov-strategi",
         "pertanyaan": "Jika honor Pak Dengklek yang akan diterima adalah Rp. 1000/hari pada setiap pekerjaan, berapa banyak pendapatan maksimal yang bisa diperoleh oleh Pak Dengklek?",
         "pilihan": {},
         "jawaban_benar": "Pendapatan maksimal",
         "pembahasan": "Menghitung total durasi hari kerja dari pekerjaan terpilih dikalikan tarif honor harian.",
-        "tingkat_kesulitan": "sedang",
+        "level": "sedang",
         "kode_soal": null,
         "gambar_soal_url": null,
         "gambar_soal_lokal": null
       },
       {
-        "id": "prov_soal21_2020",
+        "soal_id": "prov_soal21_2020",
+        "materi_id": "prov-strategi",
         "pertanyaan": "Diketahui bahwa delapan pekerjaan tersebut memberikan honor yang berbeda-beda yaitu berturut-turut Rp. 200000, Rp. 150000, Rp. 175000, Rp. 350000, Rp. 400000, Rp. 250000, Rp. 300000, dan Rp. 185000. Berapa banyak pendapatan maksimal yang bisa diperoleh oleh Pak Dengklek?",
         "pilihan": {},
         "jawaban_benar": "Pendapatan maksimal",
         "pembahasan": "Penerapan Weighted Interval Scheduling menggunakan pemrograman dinamis dan pengurutan waktu selesai (*finish time*).",
-        "tingkat_kesulitan": "sulit",
+        "level": "sulit",
         "kode_soal": null,
         "gambar_soal_url": null,
         "gambar_soal_lokal": null
@@ -299,8 +325,9 @@
     "gambar_soal_lokal": "soal_B3_1_prov_2020.png"
   },
   {
-    "id": "prov_cerita22_2020",
+    "soal_id": "prov_cerita22_2020",
     "tipe_soal": "cerita",
+    "materi_id": "prov-strategi",
     "detail_cerita": {
       "teks": "B3. Kerja Freelance\n\nDi masa pandemi COVID-19 yang sangat sulit seperti sekarang ini, Pak Dengklek juga merasakan penurunan pendapatan yang ia terima tiap bulannya. Padahal dia membutuhkan banyak pemasukan untuk membeli makan ayam-ayamnya yang jumlahnya tiap hari selalu bertambah karena telur-telur ayamnya menetas. Oleh karena itu Pak Dengklek harus mencari akal bagaimana caranya untuk mendapatkan pemasukan tambahan. Karena masalah di atas, akhirnya Pak Dengklek memutuskan untuk mengambil pekerjaan pada sebuah situs freelance, alasannya karena sebagian besar pekerjaannya bisa dilakukan dari rumah atau yang juga populer dengan sebutan work from home (WFH). Pada situs tersebut, Pak Dengklek menemukan M pekerjaan yang sesuai dengan keahliannya. Setiap pekerjaan memiliki tiga informasi yaitu pada hari keberapa pekerjaan harus dimulai (Si), pada hari keberapa pekerjaan harus selesai (Ei), dan berapa honor yang akan diperoleh Pak Dengklek setelah dia menyelesaikan pekerjaan tersebut (Pi). Karena keterbatasan tenaga dan waktu, tentunya tidak semua M pekerjaan harus diambil oleh Pak Dengklek. Pak Dengklek memiliki Batasan yaitu ia hanya akan mengerjakan satu pekerjaan dalam satu waktu, dan setiap pekerjaan akan dikerjakan sesuai dengan waktu yang diperlukan hingga tuntas. Jika suatu pekerjaan telah selesai, Pak Dengklek bisa memilih istirahat atau memilih untuk memulai pekerjaan lainnya di hari berikutnya sesuai dengan waktu yang memungkinkan. Tentunya yang diinginkan Pak Dengklek adalah mengambil pekerjaan dengan urutan tertentu dari M pekerjaan yang ada supaya bisa menghasilkan pendapatan tambahan semaksimal mungkin.",
       "gambar_url": null,
@@ -308,12 +335,13 @@
     },
     "soal": [
       {
-        "id": "prov_soal22_2020",
+        "soal_id": "prov_soal22_2020",
+        "materi_id": "prov-strategi",
         "pertanyaan": "Buatlah program menggunakan bahasa Pascal/C/C++ sesuai deskripsi cerita di atas untuk menentukan pendapatan maksimal yang akan diperoleh oleh Pak Dengklek dengan ketentuan sebagai berikut:\nFormat Masukan:\nBaris pertama berisi bilangan bulat M. M baris berikutnya masing-masing berisi tiga buah bilangan bulat Si, Ei dan Pi dipisahkan dengan spasi yang menyatakan waktu mulai, waktu selesai dan honor untuk pekerjaan ke-i.\n\nFormat Keluaran:\nBerisi sebuah bilangan bulat yang menyatakan pendapatan maksimal yang diperoleh oleh Pak Dengklek.\n\nContoh Masukan 1:\n6\n1 5 1000\n1 3 500\n4 5 700\n6 8 800\n6 10 2000\n9 10 1500\nContoh Keluaran 1:\n3500\n\nContoh Masukan 2:\n6\n1 5 2000\n1 3 500\n4 5 700\n6 8 800\n6 10 3000\n9 10 1500\nContoh Keluaran 2:\n5000\n\nPenjelasan Contoh:\nPada contoh pertama, Pak Dengklek harus mengambil pekerjaan dengan urutan sebagai berikut:\nPekerjaan ke-2 dengan waktu 1 s.d 3 → Pendapatan 500\nPekerjaan ke-3 dengan waktu 4 s.d 5 → Pendapatan 700\nPekerjaan ke-4 dengan waktu 6 s.d 8 → Pendapatan 800\nPekerjaan ke-6 dengan waktu 9 s.d 10 → Pendapatan 1500\nTotal Pendapatan adalah sebesar 3500.\n\nPada contoh kedua, Pak Dengklek harus mengambil pekerjaan dengan urutan sebagai berikut:\nPekerjaan ke-1 dengan waktu 1 s.d 5 → Pendapatan 2000\nPekerjaan ke-5 dengan waktu 6 s.d 10 → Pendapatan 3000\nTotal Pendapatan adalah sebesar 5000.\n\nBatasan:\nUntuk kasus uji pada subtask 1, berlaku (Point 50%):\n• 1 ≤ M ≤ 100\n• 1 ≤ Si ≤ Ei ≤ 1000\n• 1 ≤ Pi ≤ 100\nUntuk kasus uji pada subtask 2, berlaku (Point 50%):\n• 1 ≤ M ≤ 10000\n• 1 ≤ Si ≤ Ei ≤ 10000\n• 1 ≤ Pi ≤ 10⁶",
         "pilihan": {},
         "jawaban_benar": "Program / Solusi Algoritma",
         "pembahasan": "Implementasi algoritma Weighted Interval Scheduling dengan pengurutan berdasarkan waktu selesai dan binary search untuk mencari pekerjaan kompatibel sebelumnya.",
-        "tingkat_kesulitan": "sedang",
+        "level": "sedang",
         "kode_soal": null,
         "gambar_soal_url": null,
         "gambar_soal_lokal": null
@@ -321,43 +349,47 @@
     ]
   },
   {
-    "id": "prov_cerita23_2020",
+    "soal_id": "prov_cerita23_2020",
     "tipe_soal": "cerita",
+    "materi_id": "prov-strategi",
     "detail_cerita": {
-      "teks": "B4. Katak Super\n\nDikarenakan masa karantina yang sudah berjalan cukup lama, Pak Dengklek berinisiatif untuk membuat sebuah permainan baru untuk menghilangkan rasa bosannya. Ia membuat sebuah permainan yang sederhana, yang diberi nama “Katak Super”. Tujuan yang ingin dicapai dari permainan Pak Dengklek adalah membantu seekor katak untuk menyeberangi sebuah sungai dengan cara melompat melalui balok-balok kayu sebanyak N yang terbenam membentuk garis lurus membentang pada sungai tersebut. Balok-balok kayu tersebut masing-masing memiliki ketinggian tertentu (yi). Katak dapat melompat ke kanan dari balok kayu i ke balok kayu j jika i < j, dan melompat ke kiri dari balok kayu i ke balok kayu j jika i > j. Katak pada permainan ini dapat melompat ke kiri ataupun ke kanan. Jika katak tersebut ingin melompat dari suatu balok kayu ke balok kayu yang bersebelahan, maka katak tersebut akan menghabiskan energinya sebanyak (y₂ - y₁)² , di mana y₁ dan y₂ adalah ketinggian dari balok kayu asal dan tujuan si katak. Agar permainan lebih menarik, Pak Dengklek memberikan kekuatan super pada katak tersebut untuk melakukan lompatan super yang dapat melewatkan 1 balok kayu (misalkan katak melakukan lompatan super dari balok kayu i ke arah kanan, maka ia akan melewatkan balok kayu i + 1, dan sampai ke balok kayu i + 2). Akan tetapi, jika katak memilih untuk melakukan lompatan super, maka ia akan menghabiskan energi sebanyak 3 × (y₃ - y₁)² , di mana y₁ dan y₃ adalah ketinggian dari balok kayu asal dan tujuan si katak. Kekuatan lompatan super dapat digunakan berulang kali atau tidak sama sekali. Tentu saja dalam permainan ini, katak harus berusaha mencapai tujuan dengan menggunakan energi seminimal mungkin. Pada awal permainan, katak sudah berada pada balok kayu pertama (balok kayu ke-1), dan permainan berakhir ketika katak sudah berada pada balok kayu terakhir (balok kayu ke-N).\n\nDiketahui terdapat 10 balok kayu dengan ketinggian berturut-turut:\nBalok ke-1  : y₁ = 6\nBalok ke-2  : y₂ = 8\nBalok ke-3  : y₃ = 3\nBalok ke-4  : y₄ = 5\nBalok ke-5  : y₅ = 6\nBalok ke-6  : y₆ = 4\nBalok ke-7  : y₇ = 7\nBalok ke-8  : y₈ = 10\nBalok ke-9  : y₉ = 8\nBalok ke-10 : y₁₀ = 11",
+      "teks": "B4. Katak Super\n\nDikarenakan masa karantina yang sudah berjalan cukup lama, Pak Dengklek berinisiatif untuk membuat sebuah permainan baru untuk menghilangkan rasa bosannya. Ia membuat sebuah permainan yang sederhana, yang diberi nama 'Katak Super'. Tujuan yang ingin dicapai dari permainan Pak Dengklek adalah membantu seekor katak untuk menyeberangi sebuah sungai dengan cara melompat melalui balok-balok kayu sebanyak N yang terbenam membentuk garis lurus membentang pada sungai tersebut. Balok-balok kayu tersebut masing-masing memiliki ketinggian tertentu (yi). Katak dapat melompat ke kanan dari balok kayu i ke balok kayu j jika i < j, dan melompat ke kiri dari balok kayu i ke balok kayu j jika i > j. Katak pada permainan ini dapat melompat ke kiri ataupun ke kanan. Jika katak tersebut ingin melompat dari suatu balok kayu ke balok kayu yang bersebelahan, maka katak tersebut akan menghabiskan energinya sebanyak (y₂ - y₁)² , di mana y₁ dan y₂ adalah ketinggian dari balok kayu asal dan tujuan si katak. Agar permainan lebih menarik, Pak Dengklek memberikan kekuatan super pada katak tersebut untuk melakukan lompatan super yang dapat melewatkan 1 balok kayu (misalkan katak melakukan lompatan super dari balok kayu i ke arah kanan, maka ia akan melewatkan balok kayu i + 1, dan sampai ke balok kayu i + 2). Akan tetapi, jika katak memilih untuk melakukan lompatan super, maka ia akan menghabiskan energi sebanyak 3 × (y₃ - y₁)² , di mana y₁ dan y₃ adalah ketinggian dari balok kayu asal dan tujuan si katak. Kekuatan lompatan super dapat digunakan berulang kali atau tidak sama sekali. Tentu saja dalam permainan ini, katak harus berusaha mencapai tujuan dengan menggunakan energi seminimal mungkin. Pada awal permainan, katak sudah berada pada balok kayu pertama (balok kayu ke-1), dan permainan berakhir ketika katak sudah berada pada balok kayu terakhir (balok kayu ke-N).\n\nDiketahui terdapat 10 balok kayu dengan ketinggian berturut-turut:\nBalok ke-1  : y₁ = 6\nBalok ke-2  : y₂ = 8\nBalok ke-3  : y₃ = 3\nBalok ke-4  : y₄ = 5\nBalok ke-5  : y₅ = 6\nBalok ke-6  : y₆ = 4\nBalok ke-7  : y₇ = 7\nBalok ke-8  : y₈ = 10\nBalok ke-9  : y₉ = 8\nBalok ke-10 : y₁₀ = 11",
       "gambar_url": null,
       "gambar_lokal": "soal_B4_1_prov_2020.png"
     },
     "soal": [
       {
-        "id": "prov_soal23_2020",
+        "soal_id": "prov_soal23_2020",
+        "materi_id": "prov-strategi",
         "pertanyaan": "Jika Pak Dengklek belum memberikan kekuatan super pada katak (sehingga si katak hanya bisa melakukan lompatan biasa), dan si katak memulai permainan dari balok kayu pertama, berapa total energi minimum yang diperlukan oleh katak tersebut untuk mencapai balok kayu terakhir?",
         "pilihan": {},
         "jawaban_benar": "Energi minimum",
         "pembahasan": "Pemrograman dinamis standar untuk mencari jalur loncatan biasa dari balok 1 ke balok N dengan akumulasi energi minimum $(y_2 - y_1)^2$.",
-        "tingkat_kesulitan": "sulit",
+        "level": "sulit",
         "kode_soal": null,
         "gambar_soal_url": null,
         "gambar_soal_lokal": null
       },
       {
-        "id": "prov_soal24_2020",
+        "soal_id": "prov_soal24_2020",
+        "materi_id": "prov-strategi",
         "pertanyaan": "Jika Pak Dengklek sudah memberikan kekuatan super pada katak, dan si katak memulai permainan dari balok kayu ke-7, berapa total energi minimum yang diperlukan oleh katak untuk mencapai balok kayu terakhir?",
         "pilihan": {},
         "jawaban_benar": "Energi minimum",
-        "pembahasan": "Perhitungan pemrograman dinamis dengan memperhitungkan opsi lompatan super ($3 \times (y_3 - y_1)^2$) mulai dari posisi balok ke-7 hingga akhir.",
-        "tingkat_kesulitan": "sulit",
+        "pembahasan": "Perhitungan pemrograman dinamis dengan memperhitungkan opsi lompatan super ($3 \\times (y_3 - y_1)^2$) mulai dari posisi balok ke-7 hingga akhir.",
+        "level": "sulit",
         "kode_soal": null,
         "gambar_soal_url": null,
         "gambar_soal_lokal": null
       },
       {
-        "id": "prov_soal25_2020",
+        "soal_id": "prov_soal25_2020",
+        "materi_id": "prov-strategi",
         "pertanyaan": "Jika Pak Dengklek sudah memberikan kekuatan super pada katak, dan saat ini si katak berada pada balok kayu pertama, berapa banyak balok kayu yang dipijak oleh katak selama perjalanannya mencapai balok kayu terakhir sedemikian sehingga total energi yang dikeluarkan adalah minimum?",
         "pilihan": {},
         "jawaban_benar": "Jumlah balok dipijak",
         "pembahasan": "Melakukan penelusuran kembali (*backtracking*) dari tabel DP minimum energi untuk menghitung jumlah simpul balok yang disinggahi.",
-        "tingkat_kesulitan": "sulit",
+        "level": "sulit",
         "kode_soal": null,
         "gambar_soal_url": null,
         "gambar_soal_lokal": null
@@ -366,21 +398,23 @@
     "gambar_soal_lokal": "soal_B4_1_prov_2020.png"
   },
   {
-    "id": "prov_cerita26_2020",
+    "soal_id": "prov_cerita26_2020",
     "tipe_soal": "cerita",
+    "materi_id": "prov-strategi",
     "detail_cerita": {
-      "teks": "B4. Katak Super\n\nDikarenakan masa karantina yang sudah berjalan cukup lama, Pak Dengklek berinisiatif untuk membuat sebuah permainan baru untuk menghilangkan rasa bosannya. Ia membuat sebuah permainan yang sederhana, yang diberi nama “Katak Super”. Tujuan yang ingin dicapai dari permainan Pak Dengklek adalah membantu seekor katak untuk menyeberangi sebuah sungai dengan cara melompat melalui balok-balok kayu sebanyak N yang terbenam membentuk garis lurus membentang pada sungai tersebut. Balok-balok kayu tersebut masing-masing memiliki ketinggian tertentu (yi). Katak dapat melompat ke kanan dari balok kayu i ke balok kayu j jika i < j, dan melompat ke kiri dari balok kayu i ke balok kayu j jika i > j. Katak pada permainan ini dapat melompat ke kiri ataupun ke kanan. Jika katak tersebut ingin melompat dari suatu balok kayu ke balok kayu yang bersebelahan, maka katak tersebut akan menghabiskan energinya sebanyak (y₂ - y₁)² , di mana y₁ dan y₂ adalah ketinggian dari balok kayu asal dan tujuan si katak. Agar permainan lebih menarik, Pak Dengklek memberikan kekuatan super pada katak tersebut untuk melakukan lompatan super yang dapat melewatkan 1 balok kayu (misalkan katak melakukan lompatan super dari balok kayu i ke arah kanan, maka ia akan melewatkan balok kayu i + 1, dan sampai ke balok kayu i + 2). Akan tetapi, jika katak memilih untuk melakukan lompatan super, maka ia akan menghabiskan energi sebanyak 3 × (y₃ - y₁)² , di mana y₁ dan y₃ adalah ketinggian dari balok kayu asal dan tujuan si katak. Kekuatan lompatan super dapat digunakan berulang kali atau tidak sama sekali. Tentu saja dalam permainan ini, katak harus berusaha mencapai tujuan dengan menggunakan energi seminimal mungkin. Pada awal permainan, katak sudah berada pada balok kayu pertama (balok kayu ke-1), dan permainan berakhir ketika katak sudah berada pada balok kayu terakhir (balok kayu ke-N).",
+      "teks": "B4. Katak Super\n\nDikarenakan masa karantina yang sudah berjalan cukup lama, Pak Dengklek berinisiatif untuk membuat sebuah permainan baru untuk menghilangkan rasa bosannya. Ia membuat sebuah permainan yang sederhana, yang diberi nama 'Katak Super'. Tujuan yang ingin dicapai dari permainan Pak Dengklek adalah membantu seekor katak untuk menyeberangi sebuah sungai dengan cara melompat melalui balok-balok kayu sebanyak N yang terbenam membentuk garis lurus membentang pada sungai tersebut. Balok-balok kayu tersebut masing-masing memiliki ketinggian tertentu (yi). Katak dapat melompat ke kanan dari balok kayu i ke balok kayu j jika i < j, dan melompat ke kiri dari balok kayu i ke balok kayu j jika i > j. Katak pada permainan ini dapat melompat ke kiri ataupun ke kanan. Jika katak tersebut ingin melompat dari suatu balok kayu ke balok kayu yang bersebelahan, maka katak tersebut akan menghabiskan energinya sebanyak (y₂ - y₁)² , di mana y₁ dan y₂ adalah ketinggian dari balok kayu asal dan tujuan si katak. Agar permainan lebih menarik, Pak Dengklek memberikan kekuatan super pada katak tersebut untuk melakukan lompatan super yang dapat melewatkan 1 balok kayu (misalkan katak melakukan lompatan super dari balok kayu i ke arah kanan, maka ia akan melewatkan balok kayu i + 1, dan sampai ke balok kayu i + 2). Akan tetapi, jika katak memilih untuk melakukan lompatan super, maka ia akan menghabiskan energi sebanyak 3 × (y₃ - y₁)² , di mana y₁ dan y₃ adalah ketinggian dari balok kayu asal dan tujuan si katak. Kekuatan lompatan super dapat digunakan berulang kali atau tidak sama sekali. Tentu saja dalam permainan ini, katak harus berusaha mencapai tujuan dengan menggunakan energi seminimal mungkin. Pada awal permainan, katak sudah berada pada balok kayu pertama (balok kayu ke-1), dan permainan berakhir ketika katak sudah berada pada balok kayu terakhir (balok kayu ke-N).",
       "gambar_url": null,
       "gambar_lokal": null
     },
     "soal": [
       {
-        "id": "prov_soal26_2020",
+        "soal_id": "prov_soal26_2020",
+        "materi_id": "prov-strategi",
         "pertanyaan": "Buatlah program menggunakan bahasa Pascal/C/C++ sesuai deskripsi cerita di atas untuk menentukan berapa energi minimum yang dikeluarkan oleh katak untuk mencapai balok kayu terakhir dalam permainan Pak Dengklek dengan ketentuan sebagai berikut:\nFormat Masukan:\nBaris pertama berisi bilangan bulat N yang menunjukkan banyak balok kayu. Baris kedua terdiri dari N bilangan bulat yi yang menunjukkan ketinggian masing-masing balok kayu, berurutan dari kiri ke kanan. Katak berada pada balok pertama yaitu paling kiri.\n\nFormat Keluaran:\nBerisi sebuah bilangan bulat yang menyatakan energi minimum yang dikeluarkan katak untuk mencapai balok kayu terakhir dalam permainan Pak Dengklek.\n\nContoh Masukan:\n5\n3 4 6 2 5\n\nContoh Keluaran:\n8\n\nPenjelasan Contoh:\nAgar menggunakan energi minimum, katak melompat dengan urutan sebagai berikut:\nPada awalnya, katak berada pada balok kayu ke-1, ketinggian 3.\nIa melakukan lompatan biasa ke balok kayu ke-2, dengan energi = (4 - 3)² = 1.\nIa melakukan lompatan biasa ke balok kayu ke-3, dengan energi = (6 - 4)² = 4.\nIa melakukan lompatan super ke balok kayu ke-5 (terakhir), dengan energi = 3 x (5 - 6)² = 3.\nTotal energi yang dikeluarkan katak = 1 + 4 + 3 = 8.\n\nBatasan:\nUntuk kasus uji pada subtask 1, berlaku (Point 50%):\n• 2 ≤ N ≤ 100\n• 1 ≤ yi ≤ 40\nUntuk kasus uji pada subtask 2, berlaku (Point 50%):\n• 2 ≤ N ≤ 100000\n• 1 ≤ yi ≤ 4000",
         "pilihan": {},
         "jawaban_benar": "Program / Solusi Algoritma",
         "pembahasan": "Implementasi pemrograman dinamis 1D untuk transisi lompatan biasa dan lompatan super demi mencapai biaya energi minimum.",
-        "tingkat_kesulitan": "sulit",
+        "level": "sulit",
         "kode_soal": null,
         "gambar_soal_url": null,
         "gambar_soal_lokal": null
@@ -388,43 +422,47 @@
     ]
   },
   {
-    "id": "prov_cerita27_2020",
+    "soal_id": "prov_cerita27_2020",
     "tipe_soal": "cerita",
+    "materi_id": "prov-graf",
     "detail_cerita": {
-      "teks": "B5. Pencarian Strain-Virus Berbahaya Besar\n\nVirus yang menyebabkan COVID-19, yaitu NovelCoronavirus-2019, ternyata memiliki beberapa jenis yang berbeda, dengan tingkat keganasan yang berbeda-beda pula. Tingkat keganasan dari satu jenis virus ditunjukkan dengan seberapa lama pasien-pasien yang terserang jenis virus tersebut harus dirawat di rumah sakit, sampai dengan sembuh (di soal ini, data pasien yang meninggal karena terserang COVID19 tidak digunakan untuk menentukan tingkat keganasan virus). Semakin lama pasien-pasien tersebut harus dirawat di rumah sakit, menunjukkan bahwa jenis virus yang menginfeksi pasien-pasien tersebut juga semakin ganas, dan sebaliknya. Pak Dengklek, yang ikut membantu pada gugus penanganan COVID19 di propinsinya, telah mengumpulkan data- data yang terkait untuk menentukan jenis virus mana yang paling ganas. Data tersebut berupa jenis virus mana saja yang telah terdeteksi, dan bagaimana riwayat penularan masing-masing ke semua pasien yang telah teridentifikasi positif mengidap COVID19. Melalui rapat dengan para ahli, akhirnya ditetapkan bahwa untuk menentukan tingkat keganasan suatu jenis virus, akan digunakan aturan-aturan sebagai berikut.\na) Untuk setiap jenis, tentukan semua jalur penularannya. Sebuah jalur penularan untuk sebuah jenis adalah sebuah urutan pasien-pasien P0, P1, …, Pn dimana pasien Pi+1 tertular jenis virus tersebut dari pasien Pi , pasien P0 adalah (salah satu) pasien pertama yang diketahui terinfeksi jenis tersebut (artinya, tidak diketahui siapa yang menulari pasien P0), sedangkan Pn tidak diketahui menularkan virus tersebut ke pasien manapun juga. Dijamin bahwa satu pasien hanya pernah terinfeksi sekali (and oleh satu buah jenis). Jelas juga bahwa, jika pasien A terinfeksi oleh suatu virus berjenis X, maka semua pasien yang tertular dari A juga terinfeksi oleh virus jenis X.\nb) Untuk setiap jenis, hitung skor untuk setiap jalur penularannya. Skor untuk sebuah jalur penularan adalah jumlah total seluruh waktu rawat inap untuk seluruh pasien pada jalur penularan tersebut.\nc) Tingkat keganasan sebuah jenis ditentukan dari skor tertinggi dari semua jalur penularannya.\nPak Dengklek, meskipun sudah mendapatkan semua data yang diperlukan, masih merasa kesulitan dalam melakukan perhitungan pada data yang dimilikinya. Dapatkan Anda membantu Pak Dengklek?\n\nUntuk pertanyaan 1-3, gunakan data riwayat penularan dan perawatan pasien yang diberikan di bawah ini:\nPasien 1: tertular oleh jenis A (lama dirawat: 6 hari)\nPasien 2: tertular oleh jenis A (lama dirawat: 2 hari)\nPasien 3: tertular dari pasien 1 (lama dirawat: 4 hari)\nPasien 4: tertular dari pasien 1 (lama dirawat: 3 hari)\nPasien 5: tertular dari pasien 2 (lama dirawat: 4 hari)\nPasien 6: tertular dari pasien 2 (lama dirawat: 3 hari)\nPasien 7: tertular dari pasien 3 (lama dirawat: 3 hari)\nPasien 8: tertular dari pasien 3 (lama dirawat: 6 hari)\nPasien 9: tertular dari pasien 4 (lama dirawat: 2 hari)\nPasien 10: tertular dari pasien 5 (lama dirawat: 3 hari)\nPasien 11: tertular dari pasien 6 (lama dirawat: 8 hari)\nPasien 12: tertular dari pasien 6 (lama dirawat: 3 hari)\nPasien 13: tertular dari pasien 7 (lama dirawat: 1 hari)\nPasien 14: tertular dari pasien 7 (lama dirawat: 2 hari)\nPasien 15: tertular dari pasien 9 (lama dirawat: 4 hari)\nPasien 16: tertular dari pasien 9 (lama dirawat: 3 hari)\nPasien 17: tertular dari pasien 10 (lama dirawat: 4 hari)\nPasien 18: tertular dari pasien 10 (lama dirawat: 1 hari)\nPasien 19: tertular dari pasien 12 (lama dirawat: 4 hari)\nPasien 20: tertular dari pasien 12 (lama dirawat: 5 hari)",
+      "teks": "B5. Pencarian Strain-Virus Berbahaya Besar\n\nVirus yang menyebabkan COVID-19, yaitu NovelCoronavirus-2019, ternyata memiliki beberapa jenis yang berbeda, dengan tingkat keganasan yang berbeda-beda pula. Tingkat keganasan dari satu jenis virus ditunjukkan dengan seberapa lama pasien-pasien yang terserang jenis virus tersebut harus dirawat di rumah sakit, sampai dengan sembuh (di soal ini, data pasien yang meninggal karena terserang COVID-19 tidak digunakan untuk menentukan tingkat keganasan virus). Semakin lama pasien-pasien tersebut harus dirawat di rumah sakit, menunjukkan bahwa jenis virus yang menginfeksi pasien-pasien tersebut juga semakin ganas, dan sebaliknya. Pak Dengklek, yang ikut membantu pada gugus penanganan COVID-19 di propinsinya, telah mengumpulkan data- data yang terkait untuk menentukan jenis virus mana yang paling ganas. Data tersebut berupa jenis virus mana saja yang telah terdeteksi, dan bagaimana riwayat penularan masing-masing ke semua pasien yang telah teridentifikasi positif mengidap COVID-19. Melalui rapat dengan para ahli, akhirnya ditetapkan bahwa untuk menentukan tingkat keganasan suatu jenis virus, akan digunakan aturan-aturan sebagai berikut.\na) Untuk setiap jenis, tentukan semua jalur penularannya. Sebuah jalur penularan untuk sebuah jenis adalah sebuah urutan pasien-pasien P0, P1, ..., Pn dimana pasien Pi+1 tertular jenis virus tersebut dari pasien Pi , pasien P0 adalah (salah satu) pasien pertama yang diketahui terinfeksi jenis tersebut (artinya, tidak diketahui siapa yang menulari pasien P0), sedangkan Pn tidak diketahui menularkan virus tersebut ke pasien manapun juga. Dijamin bahwa satu pasien hanya pernah terinfeksi sekali (dan oleh satu buah jenis). Jelas juga bahwa, jika pasien A terinfeksi oleh suatu virus berjenis X, maka semua pasien yang tertular dari A juga terinfeksi oleh virus jenis X.\nb) Untuk setiap jenis, hitung skor untuk setiap jalur penularannya. Skor untuk sebuah jalur penularan adalah jumlah total seluruh waktu rawat inap untuk seluruh pasien pada jalur penularan tersebut.\nc) Tingkat keganasan sebuah jenis ditentukan dari skor tertinggi dari semua jalur penularannya.\nPak Dengklek, meskipun sudah mendapatkan semua data yang diperlukan, masih merasa kesulitan dalam melakukan perhitungan pada data yang dimilikinya. Dapatkan Anda membantu Pak Dengklek?\n\nUntuk pertanyaan 1-3, gunakan data riwayat penularan dan perawatan pasien yang diberikan di bawah ini:\nPasien 1: tertular oleh jenis A (lama dirawat: 6 hari)\nPasien 2: tertular oleh jenis A (lama dirawat: 2 hari)\nPasien 3: tertular dari pasien 1 (lama dirawat: 4 hari)\nPasien 4: tertular dari pasien 1 (lama dirawat: 3 hari)\nPasien 5: tertular dari pasien 2 (lama dirawat: 4 hari)\nPasien 6: tertular dari pasien 2 (lama dirawat: 3 hari)\nPasien 7: tertular dari pasien 3 (lama dirawat: 3 hari)\nPasien 8: tertular dari pasien 3 (lama dirawat: 6 hari)\nPasien 9: tertular dari pasien 4 (lama dirawat: 2 hari)\nPasien 10: tertular dari pasien 5 (lama dirawat: 3 hari)\nPasien 11: tertular dari pasien 6 (lama dirawat: 8 hari)\nPasien 12: tertular dari pasien 6 (lama dirawat: 3 hari)\nPasien 13: tertular dari pasien 7 (lama dirawat: 1 hari)\nPasien 14: tertular dari pasien 7 (lama dirawat: 2 hari)\nPasien 15: tertular dari pasien 9 (lama dirawat: 4 hari)\nPasien 16: tertular dari pasien 9 (lama dirawat: 3 hari)\nPasien 17: tertular dari pasien 10 (lama dirawat: 4 hari)\nPasien 18: tertular dari pasien 10 (lama dirawat: 1 hari)\nPasien 19: tertular dari pasien 12 (lama dirawat: 4 hari)\nPasien 20: tertular dari pasien 12 (lama dirawat: 5 hari)",
       "gambar_url": null,
       "gambar_lokal": "soal_B5_1_prov_2020.png"
     },
     "soal": [
       {
-        "id": "prov_soal27_2020",
+        "soal_id": "prov_soal27_2020",
+        "materi_id": "prov-graf",
         "pertanyaan": "Berapakah skor dari jalur penularan virus jenis A melalui pasien-pasien 1, 3, 7 dan 13?",
         "pilihan": {},
         "jawaban_benar": "Skor jalur",
         "pembahasan": "Menjumlahkan lama rawat inap pasien 1, 3, 7, dan 13 sesuai data yang tertera pada deskripsi soal.",
-        "tingkat_kesulitan": "sedang",
+        "level": "sedang",
         "kode_soal": null,
         "gambar_soal_url": null,
         "gambar_soal_lokal": null
       },
       {
-        "id": "prov_soal28_2020",
+        "soal_id": "prov_soal28_2020",
+        "materi_id": "prov-graf",
         "pertanyaan": "Ada berapa banyak jalur penularan untuk virus jenis A, sesuai dengan aturan yang ditetapkan di atas?",
         "pilihan": {},
         "jawaban_benar": "Jumlah jalur",
         "pembahasan": "Menelusuri pohon silsilah penularan virus jenis A dari pasien akar ($P_0$) hingga mencapai seluruh pasien daun ($P_n$).",
-        "tingkat_kesulitan": "sedang",
+        "level": "sedang",
         "kode_soal": null,
         "gambar_soal_url": null,
         "gambar_soal_lokal": null
       },
       {
-        "id": "prov_soal29_2020",
+        "soal_id": "prov_soal29_2020",
+        "materi_id": "prov-graf",
         "pertanyaan": "Berapakah tingkat keganasan dari jenis virus A, dengan mempertimbangkan semua jalur penularan-nya?",
         "pilihan": {},
         "jawaban_benar": "Tingkat keganasan",
         "pembahasan": "Mencari nilai maksimum dari total skor seluruh jalur penularan valid yang dimiliki oleh virus jenis A.",
-        "tingkat_kesulitan": "sulit",
+        "level": "sulit",
         "kode_soal": null,
         "gambar_soal_url": null,
         "gambar_soal_lokal": null
@@ -433,21 +471,23 @@
     "gambar_soal_lokal": "soal_B5_1_prov_2020.png"
   },
   {
-    "id": "prov_cerita30_2020",
+    "soal_id": "prov_cerita30_2020",
     "tipe_soal": "cerita",
+    "materi_id": "prov-graf",
     "detail_cerita": {
-      "teks": "B5. Pencarian Strain-Virus Berbahaya Besar\n\nVirus yang menyebabkan COVID-19, yaitu NovelCoronavirus-2019, ternyata memiliki beberapa jenis yang berbeda, dengan tingkat keganasan yang berbeda-beda pula. Tingkat keganasan dari satu jenis virus ditunjukkan dengan seberapa lama pasien-pasien yang terserang jenis virus tersebut harus dirawat di rumah sakit, sampai dengan sembuh (di soal ini, data pasien yang meninggal karena terserang COVID19 tidak digunakan untuk menentukan tingkat keganasan virus). Semakin lama pasien-pasien tersebut harus dirawat di rumah sakit, menunjukkan bahwa jenis virus yang menginfeksi pasien-pasien tersebut juga semakin ganas, dan sebaliknya. Pak Dengklek, yang ikut membantu pada gugus penanganan COVID19 di propinsinya, telah mengumpulkan data- data yang terkait untuk menentukan jenis virus mana yang paling ganas. Data tersebut berupa jenis virus mana saja yang telah terdeteksi, dan bagaimana riwayat penularan masing-masing ke semua pasien yang telah teridentifikasi positif mengidap COVID19. Melalui rapat dengan para ahli, akhirnya ditetapkan bahwa untuk menentukan tingkat keganasan suatu jenis virus, akan digunakan aturan-aturan sebagai berikut.\na) Untuk setiap jenis, tentukan semua jalur penularannya. Sebuah jalur penularan untuk sebuah jenis adalah sebuah urutan pasien-pasien P0, P1, …, Pn dimana pasien Pi+1 tertular jenis virus tersebut dari pasien Pi , pasien P0 adalah (salah satu) pasien pertama yang diketahui terinfeksi jenis tersebut (artinya, tidak diketahui siapa yang menulari pasien P0), sedangkan Pn tidak diketahui menularkan virus tersebut ke pasien manapun juga. Dijamin bahwa satu pasien hanya pernah terinfeksi sekali (and oleh satu buah jenis). Jelas juga bahwa, jika pasien A terinfeksi oleh suatu virus berjenis X, maka semua pasien yang tertular dari A juga terinfeksi oleh virus jenis X.\nb) Untuk setiap jenis, hitung skor untuk setiap jalur penularannya. Skor untuk sebuah jalur penularan adalah jumlah total seluruh waktu rawat inap untuk seluruh pasien pada jalur penularan tersebut.\nc) Tingkat keganasan sebuah jenis ditentukan dari skor tertinggi dari semua jalur penularannya. Pak Dengklek, meskipun sudah mendapatkan semua data yang diperlukan, masih merasa kesulitan dalam melakukan perhitungan pada data yang dimilikinya. Dapatkan Anda membantu Pak Dengklek?",
+      "teks": "B5. Pencarian Strain-Virus Berbahaya Besar\n\nVirus yang menyebabkan COVID-19, yaitu NovelCoronavirus-2019, ternyata memiliki beberapa jenis yang berbeda, dengan tingkat keganasan yang berbeda-beda pula. Tingkat keganasan dari satu jenis virus ditunjukkan dengan seberapa lama pasien-pasien yang terserang jenis virus tersebut harus dirawat di rumah sakit, sampai dengan sembuh (di soal ini, data pasien yang meninggal karena terserang COVID-19 tidak digunakan untuk menentukan tingkat keganasan virus). Semakin lama pasien-pasien tersebut harus dirawat di rumah sakit, menunjukkan bahwa jenis virus yang menginfeksi pasien-pasien tersebut juga semakin ganas, dan sebaliknya. Pak Dengklek, yang ikut membantu pada gugus penanganan COVID-19 di propinsinya, telah mengumpulkan data- data yang terkait untuk menentukan jenis virus mana yang paling ganas. Data tersebut berupa jenis virus mana saja yang telah terdeteksi, dan bagaimana riwayat penularan masing-masing ke semua pasien yang telah teridentifikasi positif mengidap COVID-19. Melalui rapat dengan para ahli, akhirnya ditetapkan bahwa untuk menentukan tingkat keganasan suatu jenis virus, akan digunakan aturan-aturan sebagai berikut.\na) Untuk setiap jenis, tentukan semua jalur penularannya. Sebuah jalur penularan untuk sebuah jenis adalah sebuah urutan pasien-pasien P0, P1, ..., Pn dimana pasien Pi+1 tertular jenis virus tersebut dari pasien Pi , pasien P0 adalah (salah satu) pasien pertama yang diketahui terinfeksi jenis tersebut (artinya, tidak diketahui siapa yang menulari pasien P0), sedangkan Pn tidak diketahui menularkan virus tersebut ke pasien manapun juga. Dijamin bahwa satu pasien hanya pernah terinfeksi sekali (dan oleh satu buah jenis). Jelas juga bahwa, jika pasien A terinfeksi oleh suatu virus berjenis X, maka semua pasien yang tertular dari A juga terinfeksi oleh virus jenis X.\nb) Untuk setiap jenis, hitung skor untuk setiap jalur penularannya. Skor untuk sebuah jalur penularan adalah jumlah total seluruh waktu rawat inap untuk seluruh pasien pada jalur penularan tersebut.\nc) Tingkat keganasan sebuah jenis ditentukan dari skor tertinggi dari semua jalur penularannya. Pak Dengklek, meskipun sudah mendapatkan semua data yang diperlukan, masih merasa kesulitan dalam melakukan perhitungan pada data yang dimilikinya. Dapatkan Anda membantu Pak Dengklek?",
       "gambar_url": null,
       "gambar_lokal": "soal_B5_4_prov_2020.png"
     },
     "soal": [
       {
-        "id": "prov_soal30_2020",
-        "pertanyaan": "Pak Dengklek ingin membuat sebuah program yang dapat secara otomatis menentukan jenis mana yang paling ganas, dan berapa tingkat keganasannya, berdasarkan data-data yang diketahui, yaitu riwayat penularan semua jenis pada pasien-pasien, serta berapa lama masing-masing pasien harus dirawat di rumah sakit. Dapatkan Anda membantu Pak Dengklek untuk membuat program tersebut?\n\nFormat Masukan:\nMasukan dimulai dengan sebuah baris berisi 3 bilangan bulat positif n, ns, dan p0 (dipisahkan dengan spasi) yang masing-masing menunjukkan banyaknya pasien, banyaknya jenis virus, dan banyaknya pasien yang tidak diketahui tertular dari pasien mana (alias, hanya diketahui jenis jenis virusnya). Kita kemudian mengasumsikan bahwa semua pasien diberi nomor 1, 2, …, n.\n\nn baris berikutnya berisi masing-masing sebuah bilangan bulat positif berupa lamanya masing-masing pasien dirawat di rumah sakit, mulai dari pasien nomor 1 s.d ke-n. Lama pasien dirawat di rumah sakit adalah sebuah bilangan bulat positif ≤ 100.\n\nKemudian, n baris berikutnya menunjukkan riwayat penularan bagaimana setiap pasien terinfeksi. Setiap barisnya berisi dua buah nilai, yang ditentukan sebagai berikut:\n• Jika pasien nomor ke-k diketahui tertular dari pasien nomor j, maka baris input akan berisi dua buah bilangan bulat j dan k yang dipisahkan oleh spasi.\n• Jika pasien nomor ke-k tidak diketahui tertular dari pasien yang mana, dan hanya diketahui jenis jenis-nya, maka baris input akan berisi nilai s <spasi> k, dimana s adalah sebuah string yang menunjukkan nama jenis yang menginfeksi pasien k.\n\nFormat Keluaran:\nKeluaran berupa dua buah baris yang masing-masing berisi sebuah nilai, yaitu s dan m, dimana s menunjukkan nama jenis yang paling ganas, dan m yaitu nilai tingkat keganasannya.\n\nContoh Masukan:\n8 2 4\n1\n6\n3\n5\n1\n4\n1\n3\n4\nA 1\nA 2\nB 3\nB 4\n1 5\n3 6\n4 7\n4 8\n\nContoh Keluaran:\nB\n6\n\nPenjelasan Contoh:\nMasukan di atas sesuai dengan kondisi riwayat penularan dimana ada 2 buah jenis, A dan B, serta 8 orang pasien. Jenis B adalah jenis yang paling ganas, karena tingkat keganasannya adalah 6 (yaitu 5 + 1), sedangkan jenis A tingkat keganasannya adalah 5 (yaitu 1 + 4).\n\nBatasan:\nUntuk kasus uji pada subtask 1, berlaku (Point 50%):\n• 0 < n ≤ 1000\n• ns = 1\n• 0 < p0 ≤ 5\nUntuk kasus uji pada subtask 2, berlaku (Point 50%):\n• 0 < n ≤ 10⁶\n• 0 < ns ≤ 10\n• 0 < p0 ≤ 10",
+        "soal_id": "prov_soal30_2020",
+        "materi_id": "prov-graf",
+        "pertanyaan": "Pak Dengklek ingin membuat sebuah program yang dapat secara otomatis menentukan jenis mana yang paling ganas, dan berapa tingkat keganasannya, berdasarkan data-data yang diketahui, yaitu riwayat penularan semua jenis pada pasien-pasien, serta berapa lama masing-masing pasien harus dirawat di rumah sakit. Dapatkan Anda membantu Pak Dengklek untuk membuat program tersebut?\n\nFormat Masukan:\nMasukan dimulai dengan sebuah baris berisi 3 bilangan bulat positif n, ns, dan p0 (dipisahkan dengan spasi) yang masing-masing menunjukkan banyaknya pasien, banyaknya jenis virus, dan banyaknya pasien yang tidak diketahui tertular dari pasien mana (alias, hanya diketahui jenis jenis virusnya). Kita kemudian mengasumsikan bahwa semua pasien diberi nomor 1, 2, ..., n.\n\nn baris berikutnya berisi masing-masing sebuah bilangan bulat positif berupa lamanya masing-masing pasien dirawat di rumah sakit, mulai dari pasien nomor 1 s.d ke-n. Lama pasien dirawat di rumah sakit adalah sebuah bilangan bulat positif ≤ 100.\n\nKemudian, n baris berikutnya menunjukkan riwayat penularan bagaimana setiap pasien terinfeksi. Setiap barisnya berisi dua buah nilai, yang ditentukan sebagai berikut:\n• Jika pasien nomor ke-k diketahui tertular dari pasien nomor j, maka baris input akan berisi dua buah bilangan bulat j dan k yang dipisahkan oleh spasi.\n• Jika pasien nomor ke-k tidak diketahui tertular dari pasien yang mana, dan hanya diketahui jenis jenis-nya, maka baris input akan berisi nilai s <spasi> k, dimana s adalah sebuah string yang menunjukkan nama jenis yang menginfeksi pasien k.\n\nFormat Keluaran:\nKeluaran berupa dua buah baris yang masing-masing berisi sebuah nilai, yaitu s dan m, dimana s menunjukkan nama jenis yang paling ganas, dan m yaitu nilai tingkat keganasannya.\n\nContoh Masukan:\n8 2 4\n1\n6\n3\n5\n1\n4\n1\n3\n4\nA 1\nA 2\nB 3\nB 4\n1 5\n3 6\n4 7\n4 8\n\nContoh Keluaran:\nB\n6\n\nPenjelasan Contoh:\nMasukan di atas sesuai dengan kondisi riwayat penularan dimana ada 2 buah jenis, A dan B, serta 8 orang pasien. Jenis B adalah jenis yang paling ganas, karena tingkat keganasannya adalah 6 (yaitu 5 + 1), sedangkan jenis A tingkat keganasannya adalah 5 (yaitu 1 + 4).\n\nBatasan:\nUntuk kasus uji pada subtask 1, berlaku (Point 50%):\n• 0 < n ≤ 1000\n• ns = 1\n• 0 < p0 ≤ 5\nUntuk kasus uji pada subtask 2, berlaku (Point 50%):\n• 0 < n ≤ 10⁶\n• 0 < ns ≤ 10\n• 0 < p0 ≤ 10",
         "pilihan": {},
         "jawaban_benar": "Program / Solusi Algoritma",
         "pembahasan": "Implementasi traversal graf berarah (DFS/BFS) untuk menghitung total bobot jalur penularan dari setiap akar pohon infeksi ke daun.",
-        "tingkat_kesulitan": "sedang",
+        "level": "sedang",
         "kode_soal": null,
         "gambar_soal_url": null,
         "gambar_soal_lokal": "soal_B5_4_prov_2020.png"
@@ -456,8 +496,9 @@
     "gambar_soal_lokal": "soal_B5_4_prov_2020.png"
   },
   {
-    "id": "prov_cerita31_2020",
+    "soal_id": "prov_cerita31_2020",
     "tipe_soal": "cerita",
+    "materi_id": "prov-berhitung",
     "detail_cerita": {
       "teks": "B6. Mewarnai Kanvas\n\nAkibat karantina yang cukup lama, tiba-tiba Pak Dengklek mempunyai ide spektakuler untuk meningkatkan kemampuannya di bidang seni. Ia memutuskan untuk membeli sebuah kanvas berwarna putih berukuran 1 x N dan kemudian mewarnainya. Kanvas yang dibeli memiliki garis pembatas setiap 1 x 1 petak. Dikarenakan Pak Dengklek seorang pemula dalam bidang seni, ia menggunakan M stiker berwarna (kertas warna berperekat) sepanjang 1 x K, dengan masing-masing stiker memiliki warna yang bervariasi, untuk mewarnai kanvasnya tersebut dengan cara menempelkannya. Ketika menempelkan, Pak Dengklek tidak boleh memposisikannya melebihi batas kanvas, dan harus tepat meletakkan stiker tersebut pada garis pembatas kanvas. Dengan kata lain, ketika stiker sudah ditempelkan, maka K petak pada kanvas tersebut akan terwarnai. Pak Dengklek mempunyai setiap stiker warna dalam jumlah tidak terbatas, sehingga setiap warna dapat digunakan beberapa kali atau tidak sama sekali. Stiker dapat ditempelkan menumpuk sehingga menutupi warna stiker sebelumnya. Akan tetapi, bukannya mulai mewarnai kanvasnya, Pak Dengklek justru penasaran berapa banyak kombinasi kanvas yang mungkin ia dapatkan dengan urutan penempelan stiker warna berbeda yang ia lakukan. Kanvas dianggap sudah selesai diwarnai apabila tidak ada petak yang masih berwarna putih. Kanvas yang sudah selesai diwarnai dan terlihat sama akan terhitung sama meskipun dibuat dari urutan penempelan stiker yang berbeda.\n\nDiketahui bahwa Pak Dengklek membeli kanvas berukuran 1 x 5.",
       "gambar_url": null,
@@ -465,34 +506,37 @@
     },
     "soal": [
       {
-        "id": "prov_soal31_2020",
+        "soal_id": "prov_soal31_2020",
+        "materi_id": "prov-berhitung",
         "pertanyaan": "Jika Pak Dengklek memiliki 3 macam stiker warna berukuran 1 x 1. Berapa banyak kemungkinan kanvas yang dapat dimiliki oleh Pak Dengklek?",
         "pilihan": {},
         "jawaban_benar": "Jumlah kombinasi",
         "pembahasan": "Kanvas ukuran 1x5 diisi dengan stiker 1x1 dari 3 pilihan warna. Setiap petak memiliki 3 pilihan independen, sehingga total kombinasi adalah $3^5 = 243$.",
-        "tingkat_kesulitan": "sedang",
+        "level": "sedang",
         "kode_soal": null,
         "gambar_soal_url": null,
         "gambar_soal_lokal": "soal_5.png"
       },
       {
-        "id": "prov_soal32_2020",
+        "soal_id": "prov_soal32_2020",
+        "materi_id": "prov-berhitung",
         "pertanyaan": "Jika Pak Dengklek memiliki 3 macam stiker warna berukuran 1 x 3 dan Pak Dengklek ingin agar pada kanvas yang sudah selesai diwarnai terdapat maksimal 2 petak berturut-turut yang berwarna sama. Berapa banyak kemungkinan kanvas yang dapat dimiliki oleh Pak Dengklek?",
         "pilihan": {},
         "jawaban_benar": "Jumlah kombinasi",
         "pembahasan": "Analisis kombinatorika penempatan stiker panjang 1x3 dengan batasan maksimal petak sama yang bersebelahan.",
-        "tingkat_kesulitan": "sedang",
+        "level": "sedang",
         "kode_soal": null,
         "gambar_soal_url": null,
         "gambar_soal_lokal": "soal_5.png"
       },
       {
-        "id": "prov_soal33_2020",
+        "soal_id": "prov_soal33_2020",
+        "materi_id": "prov-berhitung",
         "pertanyaan": "Jika Pak Dengklek memiliki 3 macam stiker warna berukuran 1 x 3 dan Pak Dengklek ingin agar pada kanvas yang sudah selesai diwarnai terdapat minimal 4 petak berturut-turut yang berwarna sama. Berapa banyak kemungkinan kanvas yang dapat dimiliki oleh Pak Dengklek?",
         "pilihan": {},
         "jawaban_benar": "Jumlah kombinasi",
         "pembahasan": "Evaluasi pola susunan stiker 1x3 pada kanvas 1x5 yang menghasilkan minimal 4 petak konsekutif berwarna sama.",
-        "tingkat_kesulitan": "mudah",
+        "level": "mudah",
         "kode_soal": null,
         "gambar_soal_url": null,
         "gambar_soal_lokal": "soal_5.png"
@@ -501,8 +545,9 @@
     "gambar_soal_lokal": "soal_B6_1_prov_2020.png"
   },
   {
-    "id": "prov_cerita34_2020",
+    "soal_id": "prov_cerita34_2020",
     "tipe_soal": "cerita",
+    "materi_id": "prov-berhitung",
     "detail_cerita": {
       "teks": "B6. Mewarnai Kanvas\n\nAkibat karantina yang cukup lama, tiba-tiba Pak Dengklek mempunyai ide spektakuler untuk meningkatkan kemampuannya di bidang seni. Ia memutuskan untuk membeli sebuah kanvas berwarna putih berukuran 1 x N dan kemudian mewarnainya. Kanvas yang dibeli memiliki garis pembatas setiap 1 x 1 petak. Dikarenakan Pak Dengklek seorang pemula dalam bidang seni, ia menggunakan M stiker berwarna (kertas warna berperekat) sepanjang 1 x K, dengan masing-masing stiker memiliki warna yang bervariasi, untuk mewarnai kanvasnya tersebut dengan cara menempelkannya. Ketika menempelkan, Pak Dengklek tidak boleh memposisikannya melebihi batas kanvas, dan harus tepat meletakkan stiker tersebut pada garis pembatas kanvas. Dengan kata lain, ketika stiker sudah ditempelkan, maka K petak pada kanvas tersebut akan terwarnai. Pak Dengklek mempunyai setiap stiker warna dalam jumlah tidak terbatas, sehingga setiap warna dapat digunakan beberapa kali atau tidak sama sekali. Stiker dapat ditempelkan menumpuk sehingga menutupi warna stiker sebelumnya. Akan tetapi, bukannya mulai mewarnai kanvasnya, Pak Dengklek justru penasaran berapa banyak kombinasi kanvas yang mungkin ia dapatkan dengan urutan penempelan stiker warna berbeda yang ia lakukan. Kanvas dianggap sudah selesai diwarnai apabila tidak ada petak yang masih berwarna putih. Kanvas yang sudah selesai diwarnai dan terlihat sama akan terhitung sama meskipun dibuat dari urutan penempelan stiker yang berbeda.",
       "gambar_url": null,
@@ -510,12 +555,13 @@
     },
     "soal": [
       {
-        "id": "prov_soal34_2020",
+        "soal_id": "prov_soal34_2020",
+        "materi_id": "prov-berhitung",
         "pertanyaan": "Buatlah program menggunakan bahasa Pascal/C/C++ sesuai deskripsi cerita di atas untuk menentukan berapa banyak kombinasi kanvas yang dapat dibentuk oleh Pak Dengklek dengan ketentuan sebagai berikut:\nFormat Masukan:\nTerdiri dari 3 bilangan bulat N, M, dan K. N menyatakan panjang kanvas Pak Dengklek, M menyatakan banyak variasi warna stiker yang dimiliki Pak Dengklek, dan K menyatakan panjang stiker tersebut. Dipastikan K ≤ N.\n\nFormat Keluaran:\nBerisi sebuah bilangan bulat yang menyatakan banyak kombinasi kanvas yang dapat dibentuk oleh Pak Dengklek, dimodulo dengan 10⁹ + 7.\n\nContoh Masukan:\n4 2 3\n\nContoh Keluaran:\n6\n\nPenjelasan Contoh:\nJika dimisalkan 2 warna stiker tersebut adalah A dan B, maka kombinasi kanvas yang memungkinkan adalah AAAA, AAAB, BAAA, ABBB, BBBA, dan BBBB.\n\nBatasan:\nUntuk kasus uji pada subtask 1, berlaku (Point 50%):\n• 1 ≤ N, M, K ≤ 100\nUntuk kasus uji pada subtask 2, berlaku (Point 50%):\n• 1 ≤ N, M, K ≤ 10⁶",
         "pilihan": {},
         "jawaban_benar": "Program / Solusi Algoritma",
         "pembahasan": "Implementasi pemrograman dinamis untuk menghitung jumlah cara menutupi kanvas berukuran N dengan stiker panjang K dan M variasi warna.",
-        "tingkat_kesulitan": "sulit",
+        "level": "sulit",
         "kode_soal": null,
         "gambar_soal_url": null,
         "gambar_soal_lokal": null

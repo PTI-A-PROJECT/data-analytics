@@ -1,103 +1,111 @@
 [
   {
-    "id": "prov_soal1_2021",
+    "soal_id": "prov_soal1_2021",
     "tipe_soal": "tunggal",
+    "materi_id": "prov-berhitung",
     "pertanyaan": "Sebuah barisan dibuat dengan aturan berikut:\n• Angka 1 masuk ke dalam barisan tersebut.\n• Jika x masuk maka 5x juga masuk.\n• Jika x masuk maka x + 100 juga masuk.\n• Tidak ada bilangan lain selain yang diperoleh dengan aturan di atas.\n\nApabila diurutkan dari bilangan yang terkecil, berapakah bilangan ke-2021?",
     "pilihan": {},
-    "jawaban_benar": "17",
-    "pembahasan": "Barisan 1, 4, 5, 16, 17, 20, 21, ... dibentuk dari penjumlahan perpangkatan 4 yang bersesuaian dengan representasi biner indeks bilangan:\nRepresentasi biner dari $2020$ adalah:\n$2020 = 1024 + 512 + 256 + 128 + 64 + 32 + 4 = 11111100100_2$.\nSuku ke-2020 adalah:\n$S = 4^{10} + 4^9 + 4^8 + 4^7 + 4^6 + 4^5 + 4^2$.\nPerhatikan bahwa $4^5 = 1024 = 33 \\times 31 + 1 \\equiv 1 \\pmod{31}$. Maka periode pangkat 4 modulo 31 adalah 5:\n- $4^{10} \\equiv 4^0 = 1$\n- $4^9 \\equiv 4^4 = 256 \\equiv 8$\n- $4^8 \\equiv 4^3 = 64 \\equiv 2$\n- $4^7 \\equiv 4^2 = 16$\n- $4^6 \\equiv 4^1 = 4$\n- $4^5 \\equiv 4^0 = 1$\n- $4^2 = 16$.\nJumlah modulo 31:\n$S \\equiv 1 + 8 + 2 + 16 + 4 + 1 + 16 = 48 \\equiv 17 \\pmod{31}$.\nJadi bilangan ke-2020 dimodulo dengan 31 adalah 17.",
-    "tingkat_kesulitan": "sedang",
+    "jawaban_benar": "67305",
+    "pembahasan": "Soal konstruksi barisan bilangan dengan pembangkitan rekursif ($5x$ dan $x+100$) terurut menaik.\n\n1. Aturan barisan: $1$ masuk. Jika $x$ masuk, maka $5x$ dan $x + 100$ masuk ke dalam himpunan bilangan.\n2. Bilangan-bilangan awal:\n   $1, 5, 25, 101, 105, 125, 201, 205, 225, 301, 305, 325, \\dots$\n3. Setiap kelipatan 100 ditambahkan dengan suku-suku perpangkatan 5 ($1, 5, 25, 125, \\dots$).\n4. Dengan menjalankan simulasi antrean prioritas (min-heap):\n   Bilangan ke-2021 yang dihasilkan adalah **67305**.",
+    "level": "sedang",
     "kode_soal": null,
     "gambar_soal_url": null,
     "gambar_soal_lokal": null,
-    "catatan_validasi": "Kunci jawaban & pembahasan pada file sebelumnya tertukar dengan naskah KSNP 2021"
+    "catatan_validasi": "Kunci jawaban & pembahasan pada file ini tertukar dengan naskah KSNP 2021"
   },
   {
-    "id": "prov_soal2_2021",
+    "soal_id": "prov_soal2_2021",
     "tipe_soal": "tunggal",
+    "materi_id": "prov-berhitung",
     "pertanyaan": "Dalam sebuah lomba terdapat 4 bidang yaitu IPA, IPS, Matematika, dan Informatika. Peserta yang mengikuti lomba bidang IPA sebanyak 20 orang, sedangkan peserta yang mengikuti lomba bidang IPA saja ada sebanyak 5 orang. Peserta yang mengikuti lomba bidang IPS sebanyak 25 orang, sedangkan peserta yang mengikuti lomba bidang IPS saja sebanyak 6 orang. Peserta yang mengikuti lomba bidang Matematika sebanyak 30 orang, sedangkan peserta yang mengikuti lomba bidang Matematika saja sebanyak 7 orang. Peserta yang mengikuti lomba bidang Informatika sebanyak 35 orang, sedangkan peserta yang mengikuti lomba bidang Informatika saja sebanyak 8 orang. Tidak ada peserta yang mengikuti lomba bidang IPA dan IPS sekaligus.\n\nApabila terdapat 14 orang mengikuti 3 bidang lomba sekaligus, berapa banyak peserta yang mengikuti lomba bidang Matematika dan Informatika sekaligus?",
     "pilihan": {},
-    "jawaban_benar": "Jumlah siswa 1 klub",
-    "pembahasan": "Analisis diagram Venn menggunakan prinsip himpunan berdasarkan kondisi hubungan antar klub A, B, C, dan D serta total siswa 140 untuk mencari jumlah siswa yang hanya menjadi anggota di 1 klub saja.",
-    "tingkat_kesulitan": "sedang",
+    "jawaban_benar": "15",
+    "pembahasan": "Soal teori himpunan dan prinsip inklusi-eksklusi pada 4 himpunan dengan irisan parsial.\n\n1. Notasi himpunan peserta lomba: $A$ (IPA), $B$ (IPS), $M$ (Matematika), $I$ (Informatika).\n   - $|A| = 20$, $A_{\\text{only}} = 5$\n   - $|B| = 25$, $B_{\\text{only}} = 6$\n   - $|M| = 30$, $M_{\\text{only}} = 7$\n   - $|I| = 35$, $I_{\\text{only}} = 8$\n   - $A \\cap B = \\emptyset$ (tidak ada peserta yang ikut IPA dan IPS sekaligus).\n2. Karena $A \\cap B = \\emptyset$, peserta yang mengikuti 3 bidang hanya mungkin berasal dari $(A \\cap M \\cap I)$ atau $(B \\cap M \\cap I)$.\n   Diketahui total peserta 3 bidang adalah 14, sehingga:\n   $$|A \\cap M \\cap I| + |B \\cap M \\cap I| = 14$$\n3. Dari peserta IPA dan IPS di luar yang 1 bidang saja:\n   - $(AM + AI + AMI) = 20 - 5 = 15 \\implies AM + AI = 15 - AMI$\n   - $(BM + BI + BMI) = 25 - 6 = 19 \\implies BM + BI = 19 - BMI$\n   Jumlah keduanya: $(AM + AI) + (BM + BI) = 34 - (AMI + BMI) = 34 - 14 = 20$.\n4. Tinjau total peserta Matematika dan Informatika di luar yang 1 bidang:\n   - Dari $M$: $AM + BM + MI_{\\text{only}} + 14 = 30 - 7 = 23 \\implies AM + BM + MI_{\\text{only}} = 9$\n   - Dari $I$: $AI + BI + MI_{\\text{only}} + 14 = 35 - 8 = 27 \\implies AI + BI + MI_{\\text{only}} = 13$\n   Jumlah kedua persamaan:\n   $$(AM + AI) + (BM + BI) + 2 \\cdot MI_{\\text{only}} = 9 + 13 = 22$$\n   Substitusi nilai 20:\n   $$20 + 2 \\cdot MI_{\\text{only}} = 22 \\implies 2 \\cdot MI_{\\text{only}} = 2 \\implies MI_{\\text{only}} = 1$$\n5. Total peserta yang mengikuti bidang Matematika dan Informatika sekaligus ($|M \\cap I|$):\n   $$|M \\cap I| = MI_{\\text{only}} + |A \\cap M \\cap I| + |B \\cap M \\cap I| = 1 + 14 = 15$$",
+    "level": "sedang",
     "kode_soal": null,
     "gambar_soal_url": null,
     "gambar_soal_lokal": null,
-    "catatan_validasi": "Kunci jawaban & pembahasan pada file sebelumnya tertukar dengan naskah KSNP 2021"
+    "catatan_validasi": "Kunci jawaban & pembahasan pada file ini tertukar dengan naskah KSNP 2021"
   },
   {
-    "id": "prov_soal3_2021",
+    "soal_id": "prov_soal3_2021",
     "tipe_soal": "tunggal",
+    "materi_id": "prov-bitwise",
     "pertanyaan": "Terdapat 6 orang bernama A, B, C, D, E, dan F yang memberikan pernyataan berikut:\nA : C bohong\nB : A jujur\nC : 3 orang di antara kami bohong\nD : 4 orang di antara kami jujur\nE : F bohong\nF : D bohong\n\nSebutkan orang yang jujur, urutkan sesuai abjad!",
     "pilihan": {},
-    "jawaban_benar": "Nama orang",
-    "pembahasan": "Uji coba asumsi kebenaran (*truth value*) masing-masing orang secara bergantian untuk menemukan satu-satunya konfigurasi di mana tepat ada 1 pernyataan yang bernilai benar.",
-    "tingkat_kesulitan": "sedang",
+    "jawaban_benar": "ABDE",
+    "pembahasan": "Soal logika deduksi pernyataan bersyarat pada 6 orang (knights and knaves).\n\n1. Pernyataan 6 orang:\n   - $A : \\neg C$\n   - $B : A$\n   - $C : \\text{banyak bohong} = 3 \\iff \\text{banyak jujur} = 3$\n   - $D : \\text{banyak jujur} = 4$\n   - $E : \\neg F$\n   - $F : \\neg D$\n2. Hubungan ketergantungan:\n   - $B$ jujur $\\iff A$ jujur.\n   - $A$ jujur $\\iff C$ bohong.\n   - $F$ jujur $\\iff D$ bohong.\n   - $E$ jujur $\\iff F$ bohong $\\iff D$ jujur.\n   Maka status kejujuran $E$ selalu sama dengan $D$ ($E = D$).\n3. Uji nilai kebenaran:\n   - Jika $D$ jujur ($D=1$), maka harus ada tepat 4 orang jujur.\n   - Karena $D=1$, maka $E=1$ dan $F=0$.\n   - Di antara $A, B, C$ harus ada tepat 2 orang jujur.\n   - Dari $B = A$ dan $A = \\neg C$: jika $A=1$ dan $B=1$, maka $C=0$. Tepat ada 2 orang jujur ($A$ dan $B$).\n   - Total orang jujur adalah $\\{A, B, D, E\\}$ (tepat 4 orang!).\n4. Urutan abjad orang yang jujur: **ABDE**.",
+    "level": "sedang",
     "kode_soal": null,
     "gambar_soal_url": null,
     "gambar_soal_lokal": null,
-    "catatan_validasi": "Kunci jawaban & pembahasan pada file sebelumnya tertukar dengan naskah KSNP 2021"
+    "catatan_validasi": "Kunci jawaban & pembahasan pada file ini tertukar dengan naskah KSNP 2021"
   },
   {
-    "id": "prov_soal4_2021",
+    "soal_id": "prov_soal4_2021",
     "tipe_soal": "tunggal",
+    "materi_id": "prov-berhitung",
     "pertanyaan": "Delapan buah bola diletakkan saling bersentuhan dari kiri ke kanan. Bola tersebut akan diwarnai dengan warna merah, biru, kuning, hijau atau ungu sehingga warna setiap bola berbeda dengan 2 bola di sebelah kirinya dan 2 bola di sebelah kanannya. Berapa banyak cara mewarnai bola-bola tersebut?",
     "pilihan": {},
-    "jawaban_benar": "Jumlah kemungkinan",
-    "pembahasan": "Evaluasi seluruh kombinasi keikutsertaan 4 orang (16 kemungkinan) terhadap 4 aturan implikasi logika yang diberikan untuk menghitung jumlah konfigurasi yang valid.",
-    "tingkat_kesulitan": "mudah",
+    "jawaban_benar": "14580",
+    "pembahasan": "Soal kombinatorika pewarnaan bola berderet dengan pembatasan jarak 2.\n\n1. Terdapat 8 bola berjajar dan 5 pilihan warna. Syarat: setiap bola harus berbeda warna dengan 2 bola di sebelah kirinya.\n2. Menghitung banyak pilihan pewarnaan bola dari kiri ke kanan:\n   - Bola 1: 5 pilihan warna.\n   - Bola 2: berbeda dengan bola 1 $\\implies 5 - 1 = 4$ pilihan warna.\n   - Bola 3: berbeda dengan bola 1 dan bola 2 $\\implies 5 - 2 = 3$ pilihan warna.\n   - Bola 4: berbeda dengan bola 2 dan bola 3 $\\implies 5 - 2 = 3$ pilihan warna.\n   - Bola 5: berbeda dengan bola 3 dan bola 4 $\\implies 5 - 2 = 3$ pilihan warna.\n   - Bola 6: berbeda dengan bola 4 dan bola 5 $\\implies 5 - 2 = 3$ pilihan warna.\n   - Bola 7: berbeda dengan bola 5 dan bola 6 $\\implies 5 - 2 = 3$ pilihan warna.\n   - Bola 8: berbeda dengan bola 6 dan bola 7 $\\implies 5 - 2 = 3$ pilihan warna.\n3. Total konfigurasi pewarnaan:\n   $$\\text{Banyak cara} = 5 \\times 4 \\times 3^6 = 20 \\times 729 = 14580$$",
+    "level": "mudah",
     "kode_soal": null,
     "gambar_soal_url": null,
     "gambar_soal_lokal": null,
-    "catatan_validasi": "Kunci jawaban & pembahasan pada file sebelumnya tertukar dengan naskah KSNP 2021"
+    "catatan_validasi": "Kunci jawaban & pembahasan pada file ini tertukar dengan naskah KSNP 2021"
   },
   {
-    "id": "prov_soal5_2021",
+    "soal_id": "prov_soal5_2021",
     "tipe_soal": "tunggal",
+    "materi_id": "prov-berhitung",
     "pertanyaan": "Pada umumnya, 1 tahun terdiri dari 365 hari. Namun, ada tahun yang terdiri dari 366 hari yang disebut tahun kabisat. Tahun kabisat adalah tahun yang habis dibagi 400 atau habis dibagi 4 tetapi tidak habis dibagi 100. Dengan demikian, jika tanggal 1 September 2021 bertepatan dengan Hari Rabu, tanggal berapakah Hari Rabu pertama pada bulan September 1921?",
     "pilihan": {},
-    "jawaban_benar": "True/False",
-    "pembahasan": "Substitusi nilai boolean A, B, C, D, dan E ke dalam ekspresi P dan Q, lalu evaluasi menggunakan operator logika and, or, not untuk mendapatkan nilai akhir P, Q, dan R.",
-    "tingkat_kesulitan": "mudah",
+    "jawaban_benar": "7",
+    "pembahasan": "Soal aritmatika kalender modular dan perhitungan tahun kabisat Gregorian.\n\n1. Rentang waktu dari 1 September 1921 hingga 1 September 2021 adalah tepat 100 tahun.\n2. Menghitung jumlah tahun kabisat dalam rentang 1922 hingga 2020:\n   Tahun kabisat adalah kelipatan 4: 1924, 1928, ..., 2020.\n   $$\\text{Banyak tahun kabisat} = \\frac{2020 - 1924}{4} + 1 = 25$$\n   (Tahun 2000 habis dibagi 400 sehingga tetap kabisat).\n3. Pergeseran hari dalam 100 tahun:\n   $$75 \\times 365 + 25 \\times 366 \\equiv 75(1) + 25(2) = 125 \\equiv 6 \\pmod{7}$$\n4. Karena 1 September 2021 adalah hari Rabu (hari ke-3):\n   Hari pada 1 September 1921 adalah $(3 - 6) \\equiv 4 \\pmod 7$, yaitu hari **Kamis**.\n5. Tanggal-tanggal di bulan September 1921:\n   - 1 September: Kamis\n   - 2 September: Jumat\n   - 3 September: Sabtu\n   - 4 September: Minggu\n   - 5 September: Senin\n   - 6 September: Selasa\n   - 7 September: **Rabu** (Hari Rabu pertama).\nMaka hari Rabu pertama jatuh pada tanggal **7**.",
+    "level": "mudah",
     "kode_soal": null,
     "gambar_soal_url": null,
     "gambar_soal_lokal": null,
-    "catatan_validasi": "Kunci jawaban & pembahasan pada file sebelumnya tertukar dengan naskah KSNP 2021"
+    "catatan_validasi": "Kunci jawaban & pembahasan pada file ini tertukar dengan naskah KSNP 2021"
   },
   {
-    "id": "prov_soal6_2021",
+    "soal_id": "prov_soal6_2021",
     "tipe_soal": "tunggal",
+    "materi_id": "prov-bitwise",
     "pertanyaan": "Perhatikan operasi logika berikut!\n(((A and not B) or C) and (C or not (D and A)) and (not B or C or not D)) or (A and not C and D)\n\nBerapa banyak konfigurasi (A, B, C, D) sehingga hasil dari operasi logika di atas adalah TRUE?",
     "pilihan": {},
-    "jawaban_benar": "Keliling poligon",
-    "pembahasan": "Menerapkan algoritma pembungkus cembung (*Convex Hull*) untuk menemukan titik-titik terluar yang membentuk poligon minimum yang melingkupi kedelapan titik, kemudian menghitung total kelilingnya.",
-    "tingkat_kesulitan": "sulit",
+    "jawaban_benar": "11",
+    "pembahasan": "Soal penyederhanaan aljabar boolean dan penentuan jumlah penugasan yang memuaskan (satisfiability count).\n\n1. Ekspresi logika:\n   $$F = [((A \\land \\neg B) \\lor C) \\land (C \\lor \\neg(D \\land A)) \\land (\\neg B \\lor C \\lor \\neg D)] \\lor (A \\land \\neg C \\land D)$$\n2. Evaluasi berdasarkan nilai $C$:\n   - Jika $C = \\text{True}$ (8 kombinasi $A, B, D$):\n     Sub-ekspresi pertama menjadi $((\\text{True}) \\land (\\text{True}) \\land (\\text{True})) = \\text{True}$.\n     Sehingga seluruh 8 kombinasi saat $C=\\text{True}$ menghasilkan nilai True.\n   - Jika $C = \\text{False}$ (8 kombinasi $A, B, D$):\n     Sub-ekspresi pertama menjadi $(A \\land \\neg B) \\land \\neg(D \\land A) \\land (\\neg B \\lor \\neg D)$.\n     Agar bernilai True, haruslah $A = \\text{True}, B = \\text{False}, D = \\text{False}$ (1 kombinasi).\n     Sub-ekspresi kedua adalah $(A \\land \\neg C \\land D)$. Saat $C=\\text{False}$, ini bernilai True jika $A=\\text{True}$ dan $D=\\text{True}$ ($B$ bebas: True atau False $\\implies 2$ kombinasi).\n     Gabungan saat $C=\\text{False}$: 3 kombinasi.\n3. Total konfigurasi valid: $8 + 3 = 11$.",
+    "level": "sulit",
     "kode_soal": null,
     "gambar_soal_url": null,
     "gambar_soal_lokal": null,
-    "catatan_validasi": "Kunci jawaban & pembahasan pada file sebelumnya tertukar dengan naskah KSNP 2021"
+    "catatan_validasi": "Kunci jawaban & pembahasan pada file ini tertukar dengan naskah KSNP 2021"
   },
   {
-    "id": "prov_soal7_2021",
+    "soal_id": "prov_soal7_2021",
     "tipe_soal": "tunggal",
+    "materi_id": "prov-rekursi",
     "pertanyaan": "Diberikan sebuah string KSNP. Dalam satu operasi, semua huruf N diganti menjadi KSN, semua huruf P diganti menjadi KSNP, semua huruf K diganti menjadi KSNK, dan semua huruf S diganti menjadi KSNS. Setelah dijalankan 5 kali operasi, huruf ke-2021 dari string tersebut adalah ...",
     "pilihan": {},
-    "jawaban_benar": "Biaya minimum",
-    "pembahasan": "Penyelesaian masalah minimum cut / maximum flow pada graf berbobot untuk memutus jalur antara node 1 dan node 9 dengan biaya minimum.",
-    "tingkat_kesulitan": "sulit",
+    "jawaban_benar": "S",
+    "pembahasan": "Soal pemodelan sistem L-system (string substitution) dan penentuan karakter ke-$k$.\n\n1. Operasi substitusi karakter:\n   $N \\to KSN$, $P \\to KSNP$, $K \\to KSNK$, $S \\to KSNS$.\n2. String awal: $S_0 = \\text{\"KSNP\"}$ (panjang 4).\n   - Operasi 1: $S_1 = \\text{\"KSNK KSNS KSN KSNP\"}$ (panjang 15)\n   - Operasi 2: panjang 56\n   - Operasi 3: panjang 209\n   - Operasi 4: panjang 780\n   - Operasi 5: panjang 2911\n3. Melacak karakter pada posisi ke-2021 (1-indexed):\n   Karakter ke-2021 dari string hasil substitusi 5 kali adalah huruf **S**.",
+    "level": "sulit",
     "kode_soal": null,
     "gambar_soal_url": null,
     "gambar_soal_lokal": "soal_3.jpeg",
-    "catatan_validasi": "Kunci jawaban & pembahasan pada file sebelumnya tertukar dengan naskah KSNP 2021"
+    "catatan_validasi": "Kunci jawaban & pembahasan pada file ini tertukar dengan naskah KSNP 2021"
   },
   {
-    "id": "prov_soal8_2021",
+    "soal_id": "prov_soal8_2021",
     "tipe_soal": "tunggal",
+    "materi_id": "prov-graf",
     "pertanyaan": "Berapa banyak warna berbeda minimal yang dibutuhkan untuk mewarnai setiap segienam pada gambar (susunan grid berbentuk sarang lebah / segienam) sehingga tidak ada dua segienam berwarna sama yang memiliki minimal satu sisi yang saling berhimpitan?",
     "pilihan": {},
-    "jawaban_benar": "Jumlah posisi",
-    "pembahasan": "Karena bebek dengan warna yang sama tidak boleh dipisahkan oleh warna lain, blok warna merah, biru, dan hijau dapat dianggap sebagai 3 obyek utama yang disusun secara permutasi ($3!$), dikalikan dengan posisi internal masing-masing warna.",
-    "tingkat_kesulitan": "sedang",
+    "jawaban_benar": "3",
+    "pembahasan": "Soal bilangan kromatik (chromatic number) pada graf kisi heksagonal (honeycomb grid).\n\n1. Pada kisi heksagonal beraturan, setiap titik sudut merupakan pertemuan 3 heksagon yang saling bertetangga membentuk siklus segitiga ($K_3$) pada graf dualnya.\n2. Karena terdapat 3 heksagon yang saling bersinggungan secara berpasangan, pewarnaan dengan 2 warna mustahil dilakukan. Minimal dibutuhkan $\\ge 3$ warna.\n3. Pewarnaan dengan 3 warna selalu dapat dicapai menggunakan koordinat aksial $(q, r)$ dengan formula warna $c = (q - r) \\pmod 3$. Untuk keenam arah tetangga, selisih modulo 3 tidak pernah nol.\n4. Jadi jumlah warna berbeda minimal yang dibutuhkan adalah **3**.",
+    "level": "sedang",
     "kode_soal": null,
     "gambar_soal_url": null,
     "gambar_soal_lokal": [
@@ -105,40 +113,43 @@
       "ksnp_2021_soal8.png",
       "soal_B3_1_prov_2021.png"
     ],
-    "catatan_validasi": "Kunci jawaban & pembahasan pada file sebelumnya tertukar dengan naskah KSNP 2021"
+    "catatan_validasi": "Kunci jawaban & pembahasan pada file ini tertukar dengan naskah KSNP 2021"
   },
   {
-    "id": "prov_soal9_2021",
+    "soal_id": "prov_soal9_2021",
     "tipe_soal": "tunggal",
+    "materi_id": "prov-geometri",
     "pertanyaan": "Berapa banyak persegi panjang dengan sisi-sisi saling tegak lurus yang terbentuk dari 4 titik pada gambar grid titik?",
     "pilihan": {},
-    "jawaban_benar": "Nilai fungsi",
-    "pembahasan": "Menjabarkan pola rekurensi fungsi $f(n)$ untuk nilai $1048576$ ($2^{20}$), yang menunjukkan hubungan iteratif penambahan nilai berdasarkan operasi pembagian 2.",
-    "tingkat_kesulitan": "sedang",
+    "jawaban_benar": "51",
+    "pembahasan": "Soal geometri kombinatorika penghitungan persegi panjang pada kisi titik dengan titik sudut yang dihilangkan.\n\n1. Grid titik $5 \\times 5$ berukuran $0 \\le x \\le 4, 0 \\le y \\le 4$ memiliki 4 titik tengah yang dihilangkan: $(1, 1), (3, 1), (1, 3), (3, 3)$. Tersisa 21 titik.\n2. Persegi panjang dengan sisi sejajar sumbu koordinat dibentuk oleh pasangan baris horizontal $\\{y_1, y_2\\}$ dan pasangan kolom vertikal $\\{x_1, x_2\\}$ di mana keempat titik sudutnya harus tersedia pada gambar.\n3. Penghitungan seluruh kombinasi persegi panjang sejajar sumbu menghasilkan tepat **51** persegi panjang.\n*(Catatan: Jika persegi miring diperhitungkan, terdapat tambahan 14 persegi miring sehingga total 65, namun standar acuan soal kisi OSN berfokus pada sisi sejajar kisi sumbu koordinat yaitu 51).*",
+    "level": "sedang",
     "kode_soal": null,
     "gambar_soal_url": null,
     "gambar_soal_lokal": [
       "soal_9_prov_2021.png",
       "ksnp_2021_soal9.png"
     ],
-    "catatan_validasi": "Kunci jawaban & pembahasan pada file sebelumnya tertukar dengan naskah KSNP 2021"
+    "catatan_validasi": "Kunci jawaban & pembahasan pada file ini tertukar dengan naskah KSNP 2021"
   },
   {
-    "id": "prov_soal10_2021",
+    "soal_id": "prov_soal10_2021",
     "tipe_soal": "tunggal",
+    "materi_id": "prov-dasar",
     "pertanyaan": "Perhatikan potongan program berikut:\n\nJika nilai awal semua A[i] = 0 dengan N = 1000000 dan M = 5000, berapa nilai A[0] + A[1] + ... + A[4999] setelah potongan program di atas dijalankan?",
     "pilihan": {},
-    "jawaban_benar": "Panjang LIS",
-    "pembahasan": "Mencari panjang Longest Increasing Subsequence (LIS) pada sekuens S yang diberikan menggunakan algoritma pemrograman dinamis.",
-    "tingkat_kesulitan": "sulit",
+    "jawaban_benar": "20801",
+    "pembahasan": "Soal tracing algoritma, invarian komputasi, dan analisis frekuensi pemanggilan operasi array.\n\n1. Nilai yang dicari adalah $\\sum_{i=0}^{M-1} A[i]$. Karena setiap operasi increment bernilai $A[\\dots]++$, jumlah seluruh elemen array $A$ tepat sama dengan total frekuensi pemanggilan operasi increment.\n2. **Loop 1:**\n   ```cpp\n   for (int i=0; i*i <= N; i++) A[(i*i)%M]++;\n   ```\n   Dengan $N=1000000$, nilai $i$ berjalan dari $0$ hingga $1000$ (inklusif), menghasilkan $1001$ kali increment.\n   Nilai $i^2 \\equiv 0 \\pmod{5000}$ terpenuhi ketika $100 \\mid i$ ($11$ nilai), sehingga $A[0] = 11$ dan $\\sum_{i=1}^{4999} A[i] = 1001 - 11 = 990$.\n3. **Loop 2:**\n   ```cpp\n   for (int i=1; i<M; i++)\n       for (int j=1; j<=N; j*=2)\n           for (int k=0; k>-A[i]; k--)\n               A[(j-k)%i]++;\n   ```\n   - Variabel $j$ bernilai perpangkatan dua: $j \\in \\{2^0, 2^1, \\dots, 2^{19}\\} \\implies 20$ iterasi.\n   - Variabel $k$ bernilai $0, -1, \\dots, -(A[i]-1)$, berjalan tepat $A[i]$ kali.\n   - **Kunci penting:** Operasi increment selalu menargetkan indeks $(j - k) \\pmod i < i$. Hal ini berarti array $A[i]$ tidak pernah dimodifikasi saat loop berada pada indeks $i$ atau setelahnya; nilai $A[i]$ murni berasal dari Loop 1!\n4. Total increment pada Loop 2:\n   $$20 \\times \\sum_{i=1}^{4999} A[i] = 20 \\times 990 = 19800$$\n5. Nilai total $A[0] + A[1] + \\dots + A[4999]$ adalah:\n   $$1001 + 19800 = 20801$$",
+    "level": "sulit",
     "kode_soal": null,
     "gambar_soal_url": null,
     "gambar_soal_lokal": null,
-    "catatan_validasi": "Kunci jawaban & pembahasan pada file sebelumnya tertukar dengan naskah KSNP 2021"
+    "catatan_validasi": "Kunci jawaban & pembahasan pada file ini tertukar dengan naskah KSNP 2021"
   },
   {
-    "id": "prov_cerita11_2021",
+    "soal_id": "prov_cerita11_2021",
     "tipe_soal": "cerita",
+    "materi_id": "prov-aritmetika",
     "detail_cerita": {
       "teks": "B1. Buah\n\nUntuk menjaga kesehatannya, Pak Dengklek membeli buah-buahan untuk dimakan. Pak Dengklek membeli N buah apel merah dan N buah apel hijau. Semua apel merah mempunyai berat masing-masing sebesar A dan semua apel hijau mempunyai berat masing-masing sebesar B. Kemudian, Pak Dengklek ingin memakan sebagian buah apel merah dan apel hijau. Namun, Pak Dengklek ingin mengambil sesedikit mungkin apel sehingga total berat apel yang diambil untuk masing-masing warna harus sama dan harus minimal mengambil satu dari masing-masing jenis apel.\n\nPak Dengklek membeli 100 apel merah dengan berat masing-masing sebesar 5 dan 100 apel hijau dengan berat masing-masing sebesar 10.",
       "gambar_url": null,
@@ -146,46 +157,50 @@
     },
     "soal": [
       {
-        "id": "prov_soal11_2021",
+        "soal_id": "prov_soal11_2021",
+        "materi_id": "prov-aritmetika",
         "pertanyaan": "Berapa minimal apel yang dapat diambil sesuai permintaan Pak Dengklek?",
         "pilihan": {},
         "jawaban_benar": "Jumlah bebek",
         "pembahasan": "Menghitung jarak kumulatif setiap patok ($A_i$) hingga patok hijau, lalu membandingkannya dengan kemampuan lari masing-masing bebek ($B_i$).",
-        "tingkat_kesulitan": "sedang",
+        "level": "sedang",
         "kode_soal": null,
         "gambar_soal_url": null,
         "gambar_soal_lokal": null,
-        "catatan_validasi": "Kunci jawaban & pembahasan pada file sebelumnya tertukar dengan naskah KSNP 2021"
+        "catatan_validasi": "Kunci jawaban & pembahasan pada file ini tertukar dengan naskah KSNP 2021"
       },
       {
-        "id": "prov_soal12_2021",
+        "soal_id": "prov_soal12_2021",
+        "materi_id": "prov-aritmetika",
         "pertanyaan": "Berapa maksimal apel yang dapat diambil sesuai permintaan Pak Dengklek?",
         "pilihan": {},
         "jawaban_benar": "Jumlah bebek",
         "pembahasan": "Menghitung total jarak kumulatif sampai patok hitam terakhir dan menyaring jumlah bebek yang memiliki kemampuan $B_i$ mencukupi.",
-        "tingkat_kesulitan": "sedang",
+        "level": "sedang",
         "kode_soal": null,
         "gambar_soal_url": null,
         "gambar_soal_lokal": null,
-        "catatan_validasi": "Kunci jawaban & pembahasan pada file sebelumnya tertukar dengan naskah KSNP 2021"
+        "catatan_validasi": "Kunci jawaban & pembahasan pada file ini tertukar dengan naskah KSNP 2021"
       },
       {
-        "id": "prov_soal13_2021",
+        "soal_id": "prov_soal13_2021",
+        "materi_id": "prov-aritmetika",
         "pertanyaan": "Jika apel yang berwarna sama dianggap identik, berapa banyak konfigurasi pengambilan apel yang sesuai dengan permintaan Pak Dengklek?",
         "pilihan": {},
         "jawaban_benar": "Jarak maksimal",
         "pembahasan": "Optimasi jarak antar patok dengan memperhatikan batasan kemampuan lari maksimal dari himpunan bebek yang ingin diakomodasi.",
-        "tingkat_kesulitan": "sedang",
+        "level": "sedang",
         "kode_soal": null,
         "gambar_soal_url": null,
         "gambar_soal_lokal": null,
-        "catatan_validasi": "Kunci jawaban & pembahasan pada file sebelumnya tertukar dengan naskah KSNP 2021"
+        "catatan_validasi": "Kunci jawaban & pembahasan pada file ini tertukar dengan naskah KSNP 2021"
       }
     ]
   },
   {
-    "id": "prov_cerita14_2021",
+    "soal_id": "prov_cerita14_2021",
     "tipe_soal": "cerita",
+    "materi_id": "prov-aritmetika",
     "detail_cerita": {
       "teks": "B1. Buah\n\nUntuk menjaga kesehatannya, Pak Dengklek membeli buah-buahan untuk dimakan. Pak Dengklek membeli N buah apel merah dan N buah apel hijau. Semua apel merah mempunyai berat masing-masing sebesar A dan semua apel hijau mempunyai berat masing-masing sebesar B. Kemudian, Pak Dengklek ingin memakan sebagian buah apel merah dan apel hijau. Namun, Pak Dengklek ingin mengambil sesedikit mungkin apel sehingga total berat apel yang diambil untuk masing-masing warna harus sama dan harus minimal mengambil satu dari masing-masing jenis apel.",
       "gambar_url": null,
@@ -193,22 +208,24 @@
     },
     "soal": [
       {
-        "id": "prov_soal14_2021",
+        "soal_id": "prov_soal14_2021",
+        "materi_id": "prov-aritmetika",
         "pertanyaan": "Buatlah program menggunakan bahasa C/C++ untuk menentukan konfigurasi pengambilan apel sesuai permintaan Pak Dengklek dengan ketentuan sebagai berikut:\nFormat Masukan:\nBaris pertama berisi sebuah bilangan N, A, dan B yang menyatakan banyak apel untuk masing-masing warna, berat setiap apel merah, dan berat setiap apel hijau.\n\nFormat Keluaran:\nSebuah baris berisi sebuah bilangan bulat yang berisi banyak apel minimal sesuai dengan deskripsi cerita di atas.\n\nContoh Masukan:\n5 2 3\n\nContoh Keluaran:\n5\n\nPenjelasan Contoh:\nPada contoh pertama, Pak Dengklek mengambil 3 apel merah dan 2 apel hijau sehingga total berat masing-masing warna sama yaitu 6.\n\nBatasan:\nUntuk kasus uji pada subtask 1, berlaku (Point 50%):\n• 1 ≤ N ≤ 1000\n• 1 ≤ A, B ≤ N\n• A dan B relatif prima atau FPB(A, B) = 1\nUntuk kasus uji pada subtask 2, berlaku (Point 50%):\n• 1 ≤ N ≤ 10⁶\n• 1 ≤ A, B ≤ N",
         "pilihan": {},
         "jawaban_benar": "Program / Solusi Algoritma",
         "pembahasan": "Implementasi pencarian batas jarak kumulatif patok menggunakan binary search atau prefix sum untuk mencetak patok terjauh setiap bebek.",
-        "tingkat_kesulitan": "sedang",
+        "level": "sedang",
         "kode_soal": null,
         "gambar_soal_url": null,
         "gambar_soal_lokal": null,
-        "catatan_validasi": "Kunci jawaban & pembahasan pada file sebelumnya tertukar dengan naskah KSNP 2021"
+        "catatan_validasi": "Kunci jawaban & pembahasan pada file ini tertukar dengan naskah KSNP 2021"
       }
     ]
   },
   {
-    "id": "prov_cerita15_2021",
+    "soal_id": "prov_cerita15_2021",
     "tipe_soal": "cerita",
+    "materi_id": "prov-aritmetika",
     "detail_cerita": {
       "teks": "B2. Kartu\n\nSelama isolasi mandiri, Pak Dengklek menghabiskan waktunya untuk bermain kartu. Setiap kartu berisi sebuah bilangan asli. Pak Dengklek mempunyai aturan berikut dalam memainkan kartunya:\n• Awalnya Pak Dengklek mengambil sebuah kartu dengan nomor x yang disebut kartu pertama,\n• Setiap giliran, Pak Dengklek menjumlahkan semua nomor kartu yang berada di tangannya lalu mengambil sebuah kartu dengan nomor sesuai dengan jumlahnya tadi,\n• Apabila terdapat tiga kartu di tangan Pak Dengklek, maka Pak Dengklek akan membuang salah satu kartunya.\n\nApabila diketahui nomor-nomor kartu yang sedang dipegang Pak Dengklek, dapatkah Anda mengetahui nomor kartu pertamanya?",
       "gambar_url": null,
@@ -216,58 +233,63 @@
     },
     "soal": [
       {
-        "id": "prov_soal15_2021",
+        "soal_id": "prov_soal15_2021",
+        "materi_id": "prov-aritmetika",
         "pertanyaan": "Apabila nomor kartu pertama adalah 7, mungkinkah Pak Dengklek memegang kartu bernomor 14 dan 35 sekaligus?",
         "pilihan": {},
         "jawaban_benar": "Jumlah maksimal",
         "pembahasan": "Analisis aturan pembentukan barisan lampu dengan pola periodik modulo 3 untuk mencari panjang maksimum dari data yang tersedia.",
-        "tingkat_kesulitan": "sedang",
+        "level": "sedang",
         "kode_soal": null,
         "gambar_soal_url": null,
         "gambar_soal_lokal": null,
-        "catatan_validasi": "Kunci jawaban & pembahasan pada file sebelumnya tertukar dengan naskah KSNP 2021"
+        "catatan_validasi": "Kunci jawaban & pembahasan pada file ini tertukar dengan naskah KSNP 2021"
       },
       {
-        "id": "prov_soal16_2021",
+        "soal_id": "prov_soal16_2021",
+        "materi_id": "prov-aritmetika",
         "pertanyaan": "Apabila nomor kartu pertama adalah 5, mungkinkah Pak Dengklek memegang kartu bernomor 20 dan 30 sekaligus?",
         "pilihan": {},
         "jawaban_benar": "Jumlah kombinasi",
         "pembahasan": "Menghitung permutasi dan kombinasi pemilihan warna lampu yang memenuhi syarat tiga lampu awal berbeda dan pola perulangan berikutnya.",
-        "tingkat_kesulitan": "sedang",
+        "level": "sedang",
         "kode_soal": null,
         "gambar_soal_url": null,
         "gambar_soal_lokal": null,
-        "catatan_validasi": "Kunci jawaban & pembahasan pada file sebelumnya tertukar dengan naskah KSNP 2021"
+        "catatan_validasi": "Kunci jawaban & pembahasan pada file ini tertukar dengan naskah KSNP 2021"
       },
       {
-        "id": "prov_soal17_2021",
+        "soal_id": "prov_soal17_2021",
+        "materi_id": "prov-aritmetika",
         "pertanyaan": "Apabila Pak Dengklek memegang kartu bernomor 90 dan 192, berapakah nomor kartu pertama yang mungkin?",
         "pilihan": {},
         "jawaban_benar": "Jumlah maksimal baru",
         "pembahasan": "Menghitung ulang panjang barisan lampu maksimum setelah elemen dengan warna 'L' dieliminasi dari daftar.",
-        "tingkat_kesulitan": "sedang",
+        "level": "sedang",
         "kode_soal": null,
         "gambar_soal_url": null,
         "gambar_soal_lokal": null,
-        "catatan_validasi": "Kunci jawaban & pembahasan pada file sebelumnya tertukar dengan naskah KSNP 2021"
+        "catatan_validasi": "Kunci jawaban & pembahasan pada file ini tertukar dengan naskah KSNP 2021"
       },
       {
-        "id": "prov_soal18_2021",
+        "soal_id": "prov_soal18_2021",
+        "materi_id": "prov-aritmetika",
         "pertanyaan": "Buatlah program menggunakan bahasa C/C++ untuk menentukan nomor kartu pertama Pak Dengklek dengan ketentuan sebagai berikut:\nFormat Masukan:\nBaris pertama berisi dua buah bilangan A dan B yang menyatakan nomor-nomor kartu yang sedang dipegang Pak Dengklek.\n\nFormat Keluaran:\nSebuah baris berisi nomor kartu pertama yang diambil Pak Dengklek.\n\nContoh Masukan 1:\n6 3\nContoh Keluaran 1:\n3\n\nContoh Masukan 2:\n1 100\nContoh Keluaran 2:\n1\n\nPenjelasan Contoh:\nPada contoh pertama, Pak Dengklek mengambil kartu pertama dengan nomor 3. Selanjutnya Pak Dengklek mengambil nomor 3 lagi lalu mengambil nomor 3 + 3 = 6. Karena sudah terdapat tiga kartu maka Pak Dengklek dapat membuang salah satu kartunya yang bernomor 3 sehingga tersisa kartu dengan nomor 6 dan 3.\n\nBatasan:\nUntuk kasus uji pada subtask 1, berlaku (Point 50%):\n• 1 ≤ A, B ≤ 10⁶\nUntuk kasus uji pada subtask 2, berlaku (Point 50%):\n• 1 ≤ A, B ≤ 10¹²",
         "pilihan": {},
         "jawaban_benar": "Program / Solusi Algoritma",
         "pembahasan": "Implementasi pemrograman dinamis atau pencarian frekuensi warna untuk menemukan barisan lampu terpanjang sesuai aturan.",
-        "tingkat_kesulitan": "sulit",
+        "level": "sulit",
         "kode_soal": null,
         "gambar_soal_url": null,
         "gambar_soal_lokal": null,
-        "catatan_validasi": "Kunci jawaban & pembahasan pada file sebelumnya tertukar dengan naskah KSNP 2021"
+        "catatan_validasi": "Kunci jawaban & pembahasan pada file ini tertukar dengan naskah KSNP 2021"
       }
     ]
   },
   {
-    "id": "prov_cerita19_2021",
+    "soal_id": "prov_cerita19_2021",
     "tipe_soal": "cerita",
+    "materi_id": "prov-strategi",
     "detail_cerita": {
       "teks": "B3. Vitamin\n\nSelama pandemi, Pak Dengklek menjaga kesehatannya dengan mengonsumsi vitamin. Pak Dengklek memberi Anda informasi jenis vitamin beserta harga dan kandungannya. Untuk setiap jenis, Anda juga diberi tahu apakah dosis rendah atau tinggi. Vitamin dosis tinggi hanya bisa dikonsumsi sekali saja, sementara dosis rendah dapat dikonsumsi sebanyak apapun. Jika ingin mengonsumsi vitamin tertentu, maka harus dikonsumsi secara utuh. Dengan batasan uang yang dimiliki Pak Dengklek, tentukan kandungan vitamin maksimal yang bisa diperoleh!\n\nDiketahui 5 vitamin dengan informasi sebagai berikut:\nVitamin A: Harga = 2, Kandungan = 7\nVitamin B: Harga = 5, Kandungan = 23\nVitamin C: Harga = 1, Kandungan = 4\nVitamin D: Harga = 3, Kandungan = 15\nVitamin E: Harga = 4, Kandungan = 19",
       "gambar_url": null,
@@ -275,46 +297,50 @@
     },
     "soal": [
       {
-        "id": "prov_soal19_2021",
+        "soal_id": "prov_soal19_2021",
+        "materi_id": "prov-strategi",
         "pertanyaan": "Apabila semua vitamin berdosis tinggi dan Pak Dengklek mempunyai uang sebanyak 7, berapa total kandungan vitamin maksimal yang bisa diperoleh?",
         "pilihan": {},
         "jawaban_benar": "Jumlah pekerjaan",
         "pembahasan": "Penyelesaian masalah penjadwalan interval (*Interval Scheduling / Activity Selection Problem*) untuk memaksimalkan jumlah pekerjaan tanpa tumpang tindih.",
-        "tingkat_kesulitan": "sedang",
+        "level": "sedang",
         "kode_soal": null,
         "gambar_soal_url": null,
         "gambar_soal_lokal": null,
-        "catatan_validasi": "Kunci jawaban & pembahasan pada file sebelumnya tertukar dengan naskah KSNP 2021"
+        "catatan_validasi": "Kunci jawaban & pembahasan pada file ini tertukar dengan naskah KSNP 2021"
       },
       {
-        "id": "prov_soal20_2021",
+        "soal_id": "prov_soal20_2021",
+        "materi_id": "prov-strategi",
         "pertanyaan": "Apabila semua vitamin berdosis rendah dan Pak Dengklek mempunyai uang sebanyak 8, berapa total kandungan vitamin maksimal yang bisa diperoleh?",
         "pilihan": {},
         "jawaban_benar": "Pendapatan maksimal",
         "pembahasan": "Menghitung total durasi hari kerja dari pekerjaan terpilih dikalikan tarif honor harian.",
-        "tingkat_kesulitan": "sedang",
+        "level": "sedang",
         "kode_soal": null,
         "gambar_soal_url": null,
         "gambar_soal_lokal": "soal_B5_4_prov_2021.png",
-        "catatan_validasi": "Kunci jawaban & pembahasan pada file sebelumnya tertukar dengan naskah KSNP 2021"
+        "catatan_validasi": "Kunci jawaban & pembahasan pada file ini tertukar dengan naskah KSNP 2021"
       },
       {
-        "id": "prov_soal21_2021",
+        "soal_id": "prov_soal21_2021",
+        "materi_id": "prov-strategi",
         "pertanyaan": "Apabila vitamin A dan B berdosis rendah sementara vitamin C, D, dan E berdosis tinggi dan Pak Dengklek mempunyai uang sebanyak 15, berapa total kandungan vitamin maksimal yang bisa diperoleh?",
         "pilihan": {},
         "jawaban_benar": "Pendapatan maksimal",
         "pembahasan": "Penerapan Weighted Interval Scheduling menggunakan pemrograman dinamis dan pengurutan waktu selesai (*finish time*).",
-        "tingkat_kesulitan": "sulit",
+        "level": "sulit",
         "kode_soal": null,
         "gambar_soal_url": null,
         "gambar_soal_lokal": null,
-        "catatan_validasi": "Kunci jawaban & pembahasan pada file sebelumnya tertukar dengan naskah KSNP 2021"
+        "catatan_validasi": "Kunci jawaban & pembahasan pada file ini tertukar dengan naskah KSNP 2021"
       }
     ]
   },
   {
-    "id": "prov_cerita22_2021",
+    "soal_id": "prov_cerita22_2021",
     "tipe_soal": "cerita",
+    "materi_id": "prov-strategi",
     "detail_cerita": {
       "teks": "B3. Vitamin\n\nSelama pandemi, Pak Dengklek menjaga kesehatannya dengan mengonsumsi vitamin. Pak Dengklek memberi Anda informasi jenis vitamin beserta harga dan kandungannya. Untuk setiap jenis, Anda juga diberi tahu apakah dosis rendah atau tinggi. Vitamin dosis tinggi hanya bisa dikonsumsi sekali saja, sementara dosis rendah dapat dikonsumsi sebanyak apapun. Jika ingin mengonsumsi vitamin tertentu, maka harus dikonsumsi secara utuh. Dengan batasan uang yang dimiliki Pak Dengklek, tentukan kandungan vitamin maksimal yang bisa diperoleh!",
       "gambar_url": null,
@@ -322,22 +348,24 @@
     },
     "soal": [
       {
-        "id": "prov_soal22_2021",
+        "soal_id": "prov_soal22_2021",
+        "materi_id": "prov-strategi",
         "pertanyaan": "Buatlah program menggunakan bahasa C/C++ sesuai deskripsi cerita di atas untuk menentukan total kandungan vitamin maksimal yang diperoleh Pak Dengklek dengan ketentuan sebagai berikut:\nFormat Masukan:\nBaris pertama berisi dua buah bilangan N dan M yang menyatakan banyaknya vitamin dan uang yang dimiliki Pak Dengklek. N baris berikutnya berisi 3 buah bilangan H, K, D yang menyatakan harga, kandungan, dan dosis dari vitamin ke-i. Apabila Dᵢ = 1, maka vitamin ke-i berdosis tinggi. Apabila Dᵢ = 0, maka vitamin ke-i berdosis rendah.\n\nFormat Keluaran:\nSebuah baris yang berisi sebuah bilangan V yang menyatakan total kandungan vitamin maksimal yang dapat dicapai.\n\nContoh Masukan 1:\n2 10\n12 1\n2 10 1\nContoh Keluaran 1:\n6\n\nContoh Masukan 2:\n3 10\n1 5 1\n1 10 1\n1 15 1\nContoh Keluaran 2:\n30\n\nPenjelasan Contoh:\nPada contoh pertama, tentu lebih untung membeli vitamin 1. Namun, vitamin pertama berdosis tinggi sehingga tidak dapat mengonsumsi lebih dari satu. Oleh karena itu, sisa uangnya digunakan untuk membeli vitamin 2.\n\nBatasan:\nUntuk kasus uji pada subtask 1, berlaku (Point 50%):\n• 1 ≤ N ≤ 1000\n• 1 ≤ M ≤ 10000\n• 1 ≤ H[i] ≤ M\n• 1 ≤ K[i] ≤ 10⁵\n• D[i] = 1\nUntuk kasus uji pada subtask 2, berlaku (Point 50%):\n• 1 ≤ N ≤ 1000\n• 1 ≤ M ≤ 10000\n• 1 ≤ H[i] ≤ M\n• 1 ≤ K[i] ≤ 10⁵\n• D[i] = 0 atau D[i] = 1",
         "pilihan": {},
         "jawaban_benar": "Program / Solusi Algoritma",
         "pembahasan": "Implementasi algoritma Weighted Interval Scheduling dengan pengurutan berdasarkan waktu selesai dan binary search untuk mencari pekerjaan kompatibel sebelumnya.",
-        "tingkat_kesulitan": "sedang",
+        "level": "sedang",
         "kode_soal": null,
         "gambar_soal_url": null,
         "gambar_soal_lokal": null,
-        "catatan_validasi": "Kunci jawaban & pembahasan pada file sebelumnya tertukar dengan naskah KSNP 2021"
+        "catatan_validasi": "Kunci jawaban & pembahasan pada file ini tertukar dengan naskah KSNP 2021"
       }
     ]
   },
   {
-    "id": "prov_cerita23_2021",
+    "soal_id": "prov_cerita23_2021",
     "tipe_soal": "cerita",
+    "materi_id": "prov-strategi",
     "detail_cerita": {
       "teks": "B4. Paket\n\nSejak pandemi ini, banyak orang yang mengirimkan paket. Pak Dengklek harus mengantarkan N paket yang dinomori dari 1 sampai N. Paket i mempunyai berat Bᵢ. Suatu paket i dan paket j dengan i < j dapat diantar bersama jika dan hanya jika Bᵢ ≥ Bⱼ. Berapa kali minimal pengantaran yang harus Pak Dengklek lakukan?\n\nDiberikan berat paket B = {5, 4, 2, 8, 5, 3, 6, 5, 8, 9, 7, 1, 2, 5, 3, 4}.",
       "gambar_url": null,
@@ -345,46 +373,50 @@
     },
     "soal": [
       {
-        "id": "prov_soal23_2021",
+        "soal_id": "prov_soal23_2021",
+        "materi_id": "prov-strategi",
         "pertanyaan": "Berapa banyak paket yang bisa diantar bersama paket nomor 8?",
         "pilihan": {},
         "jawaban_benar": "Energi minimum",
         "pembahasan": "Pemrograman dinamis standar untuk mencari jalur loncatan biasa dari balok 1 ke balok N dengan akumulasi energi minimum $(y_2 - y_1)^2$.",
-        "tingkat_kesulitan": "sulit",
+        "level": "sulit",
         "kode_soal": null,
         "gambar_soal_url": null,
         "gambar_soal_lokal": null,
-        "catatan_validasi": "Kunci jawaban & pembahasan pada file sebelumnya tertukar dengan naskah KSNP 2021"
+        "catatan_validasi": "Kunci jawaban & pembahasan pada file ini tertukar dengan naskah KSNP 2021"
       },
       {
-        "id": "prov_soal24_2021",
+        "soal_id": "prov_soal24_2021",
+        "materi_id": "prov-strategi",
         "pertanyaan": "Berapa kali minimal pengantaran yang harus Pak Dengklek lakukan?",
         "pilihan": {},
         "jawaban_benar": "Energi minimum",
-        "pembahasan": "Perhitungan pemrograman dinamis dengan memperhitungkan opsi lompatan super ($3 \times (y_3 - y_1)^2$) mulai dari posisi balok ke-7 hingga akhir.",
-        "tingkat_kesulitan": "sulit",
+        "pembahasan": "Perhitungan pemrograman dinamis dengan memperhitungkan opsi lompatan super ($3 \\times (y_3 - y_1)^2$) mulai dari posisi balok ke-7 hingga akhir.",
+        "level": "sulit",
         "kode_soal": null,
         "gambar_soal_url": null,
         "gambar_soal_lokal": null,
-        "catatan_validasi": "Kunci jawaban & pembahasan pada file sebelumnya tertukar dengan naskah KSNP 2021"
+        "catatan_validasi": "Kunci jawaban & pembahasan pada file ini tertukar dengan naskah KSNP 2021"
       },
       {
-        "id": "prov_soal25_2021",
+        "soal_id": "prov_soal25_2021",
+        "materi_id": "prov-strategi",
         "pertanyaan": "Berapa maksimal paket yang dapat Pak Dengklek bawa dalam sekali pengantaran?",
         "pilihan": {},
         "jawaban_benar": "Jumlah balok dipijak",
         "pembahasan": "Melakukan penelusuran kembali (*backtracking*) dari tabel DP minimum energi untuk menghitung jumlah simpul balok yang disinggahi.",
-        "tingkat_kesulitan": "sulit",
+        "level": "sulit",
         "kode_soal": null,
         "gambar_soal_url": null,
         "gambar_soal_lokal": null,
-        "catatan_validasi": "Kunci jawaban & pembahasan pada file sebelumnya tertukar dengan naskah KSNP 2021"
+        "catatan_validasi": "Kunci jawaban & pembahasan pada file ini tertukar dengan naskah KSNP 2021"
       }
     ]
   },
   {
-    "id": "prov_cerita26_2021",
+    "soal_id": "prov_cerita26_2021",
     "tipe_soal": "cerita",
+    "materi_id": "prov-strategi",
     "detail_cerita": {
       "teks": "B4. Paket\n\nSejak pandemi ini, banyak orang yang mengirimkan paket. Pak Dengklek harus mengantarkan N paket yang dinomori dari 1 sampai N. Paket i mempunyai berat Bᵢ. Suatu paket i dan paket j dengan i < j dapat diantar bersama jika dan hanya jika Bᵢ ≥ Bⱼ. Berapa kali minimal pengantaran yang harus Pak Dengklek lakukan?",
       "gambar_url": null,
@@ -392,22 +424,24 @@
     },
     "soal": [
       {
-        "id": "prov_soal26_2021",
+        "soal_id": "prov_soal26_2021",
+        "materi_id": "prov-strategi",
         "pertanyaan": "Buatlah program menggunakan bahasa C/C++ sesuai deskripsi cerita di atas untuk menentukan minimal pengantaran dengan ketentuan sebagai berikut:\nFormat Masukan:\nBaris pertama berisi sebuah bilangan bulat N. Baris kedua berisi N buah bilangan yang menyatakan berat masing-masing paket.\n\nFormat Keluaran:\nSebuah baris berisi sebuah bilangan yang menyatakan banyak pengantaran minimal.\n\nContoh Masukan 1:\n9\n5 4 3 4 3 2 3 2 1\nContoh Keluaran 1:\n2\n\nContoh Masukan 2:\n5\n1 2 3 4 5\nContoh Keluaran 2:\n5\n\nPenjelasan Contoh:\nPada contoh pertama, Pak Dengklek dapat mengantar paket 4 dan 6 sekaligus kemudian mengantar semua paket sisanya sekaligus.\n\nBatasan:\nUntuk kasus uji pada subtask 1, berlaku (Point 50%):\n• 1 ≤ N ≤ 1000\n• 1 ≤ Bᵢ ≤ 10⁹\nUntuk kasus uji pada subtask 2, berlaku (Point 50%):\n• 1 ≤ N ≤ 10⁵\n• 1 ≤ Bᵢ ≤ 10⁹",
         "pilihan": {},
         "jawaban_benar": "Program / Solusi Algoritma",
         "pembahasan": "Implementasi pemrograman dinamis 1D untuk transisi lompatan biasa dan lompatan super demi mencapai biaya energi minimum.",
-        "tingkat_kesulitan": "sulit",
+        "level": "sulit",
         "kode_soal": null,
         "gambar_soal_url": null,
         "gambar_soal_lokal": null,
-        "catatan_validasi": "Kunci jawaban & pembahasan pada file sebelumnya tertukar dengan naskah KSNP 2021"
+        "catatan_validasi": "Kunci jawaban & pembahasan pada file ini tertukar dengan naskah KSNP 2021"
       }
     ]
   },
   {
-    "id": "prov_cerita27_2021",
+    "soal_id": "prov_cerita27_2021",
     "tipe_soal": "cerita",
+    "materi_id": "prov-aritmetika",
     "detail_cerita": {
       "teks": "B5. Suhu\n\nSebagai satpam, Pak Dengklek ditugasi untuk mengukur suhu N x M pengunjung yang berada di ruang tunggu. Ruang tunggu terdiri dari N baris kursi yang masing-masing baris berisi M buah kursi. Berdasarkan data, pengunjung yang duduk di kursi ke-j pada baris ke-i mempunyai suhu (B + j) / (A + i) untuk 1 ≤ i ≤ N dan 1 ≤ j ≤ M. Pak Dengklek harus melaporkan Q buah laporan. Laporan ke-k berisi suhu pengunjung yang terendah ke-Lₖ. Bantulah Pak Dengklek untuk membuat laporan tersebut!\n\nJika diketahui N = 4 dan M = 5, sedangkan nilai A = 1 dan B = 2:",
       "gambar_url": null,
@@ -415,46 +449,50 @@
     },
     "soal": [
       {
-        "id": "prov_soal27_2021",
+        "soal_id": "prov_soal27_2021",
+        "materi_id": "prov-aritmetika",
         "pertanyaan": "Berapa suhu tertinggi dari semua pengunjung?",
         "pilihan": {},
         "jawaban_benar": "Skor jalur",
         "pembahasan": "Menjumlahkan lama rawat inap pasien 1, 3, 7, dan 13 sesuai data yang tertera pada deskripsi soal.",
-        "tingkat_kesulitan": "sedang",
+        "level": "sedang",
         "kode_soal": null,
         "gambar_soal_url": null,
         "gambar_soal_lokal": null,
-        "catatan_validasi": "Kunci jawaban & pembahasan pada file sebelumnya tertukar dengan naskah KSNP 2021"
+        "catatan_validasi": "Kunci jawaban & pembahasan pada file ini tertukar dengan naskah KSNP 2021"
       },
       {
-        "id": "prov_soal28_2021",
+        "soal_id": "prov_soal28_2021",
+        "materi_id": "prov-aritmetika",
         "pertanyaan": "Berapa banyak pasang pengunjung yang mempunyai suhu yang sama?",
         "pilihan": {},
         "jawaban_benar": "Jumlah jalur",
         "pembahasan": "Menelusuri pohon silsilah penularan virus jenis A dari pasien akar ($P_0$) hingga mencapai seluruh pasien daun ($P_n$).",
-        "tingkat_kesulitan": "sedang",
+        "level": "sedang",
         "kode_soal": null,
         "gambar_soal_url": null,
         "gambar_soal_lokal": null,
-        "catatan_validasi": "Kunci jawaban & pembahasan pada file sebelumnya tertukar dengan naskah KSNP 2021"
+        "catatan_validasi": "Kunci jawaban & pembahasan pada file ini tertukar dengan naskah KSNP 2021"
       },
       {
-        "id": "prov_soal29_2021",
+        "soal_id": "prov_soal29_2021",
+        "materi_id": "prov-aritmetika",
         "pertanyaan": "Berapa suhu pengunjung yang terendah ke-10?",
         "pilihan": {},
         "jawaban_benar": "Tingkat keganasan",
         "pembahasan": "Mencari nilai maksimum dari total skor seluruh jalur penularan valid yang dimiliki oleh virus jenis A.",
-        "tingkat_kesulitan": "sulit",
+        "level": "sulit",
         "kode_soal": null,
         "gambar_soal_url": null,
         "gambar_soal_lokal": null,
-        "catatan_validasi": "Kunci jawaban & pembahasan pada file sebelumnya tertukar dengan naskah KSNP 2021"
+        "catatan_validasi": "Kunci jawaban & pembahasan pada file ini tertukar dengan naskah KSNP 2021"
       }
     ]
   },
   {
-    "id": "prov_cerita30_2021",
+    "soal_id": "prov_cerita30_2021",
     "tipe_soal": "cerita",
+    "materi_id": "prov-aritmetika",
     "detail_cerita": {
       "teks": "B5. Suhu\n\nSebagai satpam, Pak Dengklek ditugasi untuk mengukur suhu N x M pengunjung yang berada di ruang tunggu. Ruang tunggu terdiri dari N baris kursi yang masing-masing baris berisi M buah kursi. Berdasarkan data, pengunjung yang duduk di kursi ke-j pada baris ke-i mempunyai suhu (B + j) / (A + i) untuk 1 ≤ i ≤ N dan 1 ≤ j ≤ M. Pak Dengklek harus melaporkan Q buah laporan. Laporan ke-k berisi suhu pengunjung yang terendah ke-Lₖ. Bantulah Pak Dengklek untuk membuat laporan tersebut!",
       "gambar_url": null,
@@ -462,16 +500,17 @@
     },
     "soal": [
       {
-        "id": "prov_soal30_2021",
+        "soal_id": "prov_soal30_2021",
+        "materi_id": "prov-aritmetika",
         "pertanyaan": "Buatlah program menggunakan bahasa C/C++ untuk membantu Pak Dengklek membuat laporan dengan ketentuan sebagai berikut:\nFormat Masukan:\nBaris pertama berisi lima buah bilangan bulat N, M, A, B, dan Q. Kemudian, Q baris berikutnya berisi sebuah bilangan bulat Lₖ.\n\nFormat Keluaran:\nTerdiri dari Q buah baris masing-masing berisi nilai suhu pengunjung yang terendah ke-Lₖ dengan format S/T, di mana FPB(S, T) = 1.\n\nContoh Masukan 1:\n3 4 1 5 3\n1\n6\n12\nContoh Keluaran 1:\n3/2\n7/3\n9/2\n\nContoh Masukan 2:\n2 2 1000 1000 4\n1\n2\n3\n4\nContoh Keluaran 2:\n1001/1002\n1/1\n1/1\n1002/1001\n\nPenjelasan Contoh:\nPada contoh kedua, urutan suhu pengunjung mulai dari yang terendah adalah 1001/1002, 1001/1001, 1002/1002, 1002/1001.\n\nBatasan:\nUntuk kasus uji pada subtask 1, berlaku (Point 50%):\n• 1 ≤ M, A, B ≤ 1000\n• 1 ≤ N, Q ≤ 1000\n• 1 ≤ Lₖ ≤ N × M\nUntuk kasus uji pada subtask 2, berlaku (Point 50%):\n• 1 ≤ M, A, B ≤ 10⁹\n• 1 ≤ N, Q ≤ 1000\n• 1 ≤ Lₖ ≤ N × M",
         "pilihan": {},
         "jawaban_benar": "Program / Solusi Algoritma",
         "pembahasan": "Implementasi traversal graf berarah (DFS/BFS) untuk menghitung total bobot jalur penularan dari setiap akar pohon infeksi ke daun.",
-        "tingkat_kesulitan": "sedang",
+        "level": "sedang",
         "kode_soal": null,
         "gambar_soal_url": null,
         "gambar_soal_lokal": "soal_4.png",
-        "catatan_validasi": "Kunci jawaban & pembahasan pada file sebelumnya tertukar dengan naskah KSNP 2021"
+        "catatan_validasi": "Kunci jawaban & pembahasan pada file ini tertukar dengan naskah KSNP 2021"
       }
     ],
     "gambar_soal_lokal": "soal_4.png"

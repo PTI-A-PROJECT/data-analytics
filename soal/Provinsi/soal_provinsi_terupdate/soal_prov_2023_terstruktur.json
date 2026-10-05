@@ -1,127 +1,138 @@
 [
   {
-    "id": "prov_soal1_2023",
+    "soal_id": "prov_soal1_2023",
     "tipe_soal": "tunggal",
+    "materi_id": "prov-berhitung",
     "pertanyaan": "Pak Dengklek merupakan seorang pengoleksi nomor telepon cantik yang terdiri dari 7 digit angka, d₁d₂d₃d₄d₅d₆d₇. Sebuah nomor telepon dikatakan cantik jika sekuens tiga digit awal d₁d₂d₃ bernilai sama dengan sekuens d₄d₅d₆ atau d₅d₆d₇ (bisa juga keduanya). Jika setiap digit angka dapat berupa nilai antara digit 0 sampai dengan 9, ada berapa banyak jumlah maksimal nomor telepon cantik yang bisa dikoleksi oleh Pak Dengklek?",
     "pilihan": {},
-    "jawaban_benar": "Jumlah maksimal nomor cantik",
-    "pembahasan": "Penghitungan kombinasi digit ketika sekuens tiga digit awal sama dengan sekuens tengah atau sekuens akhir.",
-    "tingkat_kesulitan": "sedang",
+    "jawaban_benar": "19990",
+    "pembahasan": "Kombinatorika nomor telepon dengan pola berulang dan prinsip inklusi-eksklusi.\n\n1. Nomor telepon terdiri dari 7 digit: $d_1 d_2 d_3 d_4 d_5 d_6 d_7$.\n2. Kondisi A: $(d_1 d_2 d_3) = (d_4 d_5 d_6)$.\n   Digit $d_1, d_2, d_3$ bebas ($10^3$), $d_4, d_5, d_6$ ditentukan (1 cara), $d_7$ bebas ($10$).\n   $$|A| = 10^3 \\times 1 \\times 10 = 10.000$$\n3. Kondisi B: $(d_1 d_2 d_3) = (d_5 d_6 d_7)$.\n   Digit $d_1, d_2, d_3$ bebas ($10^3$), $d_4$ bebas ($10$), $d_5, d_6, d_7$ ditentukan (1 cara).\n   $$|B| = 10^3 \\times 10 \\times 1 = 10.000$$\n4. Irisan $A \\cap B$: $(d_1 d_2 d_3) = (d_4 d_5 d_6) = (d_5 d_6 d_7)$.\n   Mengharuskan $d_1 = d_2 = d_3 = d_4 = d_5 = d_6 = d_7$ (semua 7 digit kembar).\n   Ada 10 nomor: $0000000, 1111111, \\dots, 9999999$. Maka $|A \\cap B| = 10$.\n5. Total nomor cantik:\n   $$|A \\cup B| = 10.000 + 10.000 - 10 = 19990$$",
+    "level": "sedang",
     "kode_soal": null,
     "gambar_soal_url": null,
     "gambar_soal_lokal": null
   },
   {
-    "id": "prov_soal2_2023",
+    "soal_id": "prov_soal2_2023",
     "tipe_soal": "tunggal",
+    "materi_id": "prov-berhitung",
     "pertanyaan": "Ada sebanyak 7 bebek jantan (J) dan 13 bebek betina (B) yang akan membuat barisan dari kiri ke kanan. Tingkat kerapian barisan didefinisikan sebagai banyaknya posisi i (dimana i < 20) sedemikian sehingga bebek pada posisi i dan posisi i + 1 berbeda jenis kelamin. Sebagai contoh barisan BJJBBBJBJBBBJBJBBJBB memiliki tingkat kerapian barisan sebesar 12. Berapakah nilai rata-rata tingkat kerapian barisan dari semua kemungkinan urutan barisan bebek?",
     "pilihan": {},
-    "jawaban_benar": "Nilai rata-rata kerapian",
-    "pembahasan": "Ekspektasi linieritas jumlah pergantian jenis kelamin pada permutasi acak barisan bebek.",
-    "tingkat_kesulitan": "mudah",
+    "jawaban_benar": "91/10",
+    "pembahasan": "Peluang diskrit dan Linearitas Harapan (Linearity of Expectation) pada barisan biner acak.\n\n1. Barisan terdiri dari 7 bebek jantan (J) dan 13 bebek betina (B), total $N=20$ posisi.\n2. Terdapat 19 pasang posisi bersebelahan $(i, i+1)$ untuk $1 \\le i \\le 19$.\n3. Misalkan $X_i$ adalah variabel indikator bahwa jenis kelamin pada posisi $i$ dan $i+1$ berbeda.\n   Peluang pasangan berbeda jenis kelamin:\n   $$P(X_i = 1) = \\frac{7}{20} \\times \\frac{13}{19} + \\frac{13}{20} \\times \\frac{7}{19} = \\frac{2 \\times 7 \\times 13}{20 \\times 19}$$\n4. Rata-rata tingkat kerapian barisan:\n   $$\\mathbb{E}[\\text{Kerapian}] = \\sum_{i=1}^{19} \\mathbb{E}[X_i] = 19 \\times \\frac{2 \\times 7 \\times 13}{20 \\times 19} = \\frac{182}{20} = \\frac{91}{10}$$\nBentuk pecahan paling sederhana tanpa faktor persekutuan adalah **91/10**.",
+    "level": "mudah",
     "kode_soal": null,
     "gambar_soal_url": null,
     "gambar_soal_lokal": null
   },
   {
-    "id": "prov_soal3_2023",
+    "soal_id": "prov_soal3_2023",
     "tipe_soal": "tunggal",
+    "materi_id": "prov-strategi",
     "pertanyaan": "Pak Dengklek memiliki sebanyak 2009 kotak tertutup yang di dalamnya berisi beberapa permen dan beberapa buah. Jumlah permen dan buah pada setiap kotak bisa saja berbeda. Pak Dengklek ingin membagi kotak-kotak tersebut kepada Kwik dan Kwek. Kwik yang pintar memutuskan untuk meminta terlebih dahulu sejumlah kotak. Setelah Kwik menentukan banyaknya kotak, Pak Dengklek akan membuka kotak satu persatu dan Kwik akan memutuskan akan memilih kotak tersebut atau tidak sejumlah yang dia sebutkan sedemikian sehingga minimal setengah dari total permen dan setengah dari total buah bisa dia dapatkan. Tentunya Kwik harus meminta seminimal mungkin jumlah kotak supaya Kwek tidak keberatan. Berapa jumlah kotak yang harus diminta oleh Kwik?",
     "pilihan": {},
-    "jawaban_benar": "Jumlah kotak minimal",
-    "pembahasan": "Analisis strategi pengambilan kotak untuk menjamin perolehan minimal setengah dari total permen dan buah.",
-    "tingkat_kesulitan": "sedang",
+    "jawaban_benar": "1005",
+    "pembahasan": "Teorema pembagian adil aditif (Borda Selection / Additive Fair Division Theorem) pada 2 komponen nilai.\n\n1. Diketahui terdapat $2n + 1 = 2009$ kotak yang masing-masing berisi permen dan buah.\n   Maka $n = 1004$.\n2. Berdasarkan teorema seleksi koordinat: dari $2n+1$ objek dengan 2 atribut bernilai non-negatif, selalu dapat dipilih $n+1$ objek sedemikian sehingga total pada kedua atribut minimal setengah dari total keseluruhan.\n3. Strategi:\n   - Urutkan 2009 kotak secara menurun berdasarkan jumlah permen.\n   - Ambil kotak pertama.\n   - Pasangkan sisa 2008 kotak menjadi 1004 pasangan, lalu dari tiap pasangan ambil kotak dengan jumlah buah lebih banyak.\n   - Strategi ini menjamin perolehan $\\ge 50\\%$ permen dan $\\ge 50\\%$ buah.\n4. Jumlah kotak minimal yang harus diminta adalah $n + 1 = 1004 + 1 = 1005$.",
+    "level": "sedang",
     "kode_soal": null,
     "gambar_soal_url": null,
     "gambar_soal_lokal": null
   },
   {
-    "id": "prov_soal4_2023",
+    "soal_id": "prov_soal4_2023",
     "tipe_soal": "tunggal",
+    "materi_id": "prov-graf",
     "pertanyaan": "Di sebuah pekarangan terdapat 15 kandang bebek. Setiap pasang kandang bebek yang berbeda terhubung dengan tepat satu jalan. Suatu pagi, Pak Dengklek berencana menugaskan beberapa asisten untuk memberi makan bebek-bebeknya. Setiap asisten akan menempuh satu rute kunjungan, yang dimulai dari kandang manapun, mengunjungi setiap kandang tepat satu kali, tidak melewati jalan yang sama lebih dari sekali, dan kembali ke kandang asal. Jika diinginkan bahwa setiap jalan hanya akan dilalui oleh satu asisten, ada berapa jumlah maksimal asisten yang dapat ditugaskan Pak Dengklek?",
     "pilihan": {},
-    "jawaban_benar": "Jumlah maksimal asisten",
-    "pembahasan": "Dekomposisi graf lengkap $K_{15}$ menjadi siklus Hamilton terpisah untuk menentukan jumlah maksimal asisten.",
-    "tingkat_kesulitan": "sedang",
+    "jawaban_benar": "7",
+    "pembahasan": "Teori graf dekomposisi graf lengkap menjadi siklus Hamilton saling lepas sisi (Walecki's Theorem).\n\n1. Terdapat 15 kandang bebek di mana setiap pasang terhubung jalan. Graf ini adalah graf lengkap $K_{15}$.\n2. Total jalan (sisi):\n   $$E = \\binom{15}{2} = \\frac{15 \\times 14}{2} = 105$$\n3. Setiap rute asisten adalah siklus Hamilton yang mengunjungi 15 kandang tepat satu kali dan kembali ke awal (menggunakan tepat 15 sisi).\n4. Sesuai Teorema Walecki (1892), graf lengkap $K_{2k+1}$ dapat didekomposisi menjadi tepat $k$ siklus Hamilton yang saling lepas sisi.\n   Untuk $K_{15}$, nilai $2k + 1 = 15 \\implies k = 7$.\n5. Jumlah maksimal asisten:\n   $$\\frac{105}{15} = 7$$",
+    "level": "sedang",
     "kode_soal": null,
     "gambar_soal_url": null,
     "gambar_soal_lokal": null
   },
   {
-    "id": "prov_soal5_2023",
+    "soal_id": "prov_soal5_2023",
     "tipe_soal": "tunggal",
+    "materi_id": "prov-aritmetika",
     "pertanyaan": "Pak Dengklek mempunyai sejumlah bebek di peternakannya. Suatu pagi, dia meminta bebek-bebeknya untuk berbaris. Namun ternyata Pak Dengklek tidak dapat membuat setiap baris selalu penuh dengan bebeknya karena yang terjadi adalah sebagai berikut:\n• Jika susunan terdiri dari lima baris, maka akan ada 3 bebek yang tidak bisa masuk barisan.\n• Jika susunan terdiri dari sebelas baris, maka semua bebek bisa masuk dalam barisan.\n\nBerapakah jumlah bebek maksimum yang mungkin jika kapasitas peternakan Pak Dengklek adalah 100?",
     "pilihan": {},
-    "jawaban_benar": "Jumlah bebek maksimum",
-    "pembahasan": "Pencarian bilangan yang bersisa 3 jika dibagi 5 dan habis dibagi 11 dengan batas maksimum 100.",
-    "tingkat_kesulitan": "sedang",
+    "jawaban_benar": "88",
+    "pembahasan": "Teori bilangan sistem kekongruenan linier (modulo) dan batas kapasitas maksimum.\n\n1. Misalkan jumlah bebek adalah $N$ dengan kapasitas $N \\le 100$.\n2. Syarat barisan:\n   - Susunan 5 baris tersisa 3 bebek: $N \\equiv 3 \\pmod 5$.\n   - Susunan 11 baris habis terbagi: $N \\equiv 0 \\pmod{11}$.\n3. Kelipatan 11 yang $\\le 100$:\n   $$11, 22, 33, 44, 55, 66, 77, 88, 99$$\n4. Evaluasi modulo 5:\n   - $99 \\equiv 4 \\pmod 5$\n   - $88 = 5 \\times 17 + 3 \\implies 88 \\equiv 3 \\pmod 5$ (Memenuhi!)\n5. Jumlah bebek maksimum yang mungkin adalah **88**.",
+    "level": "sedang",
     "kode_soal": null,
     "gambar_soal_url": null,
     "gambar_soal_lokal": null
   },
   {
-    "id": "prov_soal6_2023",
+    "soal_id": "prov_soal6_2023",
     "tipe_soal": "tunggal",
+    "materi_id": "prov-geometri",
     "pertanyaan": "Pak Dengklek berencana membangun arena olahraga berbentuk persegi panjang supaya dia bisa melakukan lari pagi setiap hari. Pak Dengklek selalu melakukan lari pagi dengan kecepatan konstan sebesar 3 km/jam yang dimulai dari sebuah titik yang selalu sama. Setiap harinya, Pak Dengklek memulai dengan arah awal sejajar dengan salah satu arah mata angin (Utara, Selatan, Timur, Barat) yang bisa berbeda setiap hari. Ketika lari pagi, setelah setiap 10 menit, Pak Dengklek akan selalu berbelok sebesar 90 derajat ke kanan atau ke kiri. Jika Pak Dengklek selalu lari pagi selama 2 jam, berapa luas arena olahraga minimal (dalam kilometer persegi) yang harus dibangun agar kebiasaan Pak Dengklek tersebut selalu bisa diakomodasi, tidak peduli arah manapun yang Pak Dengklek pilih setiap 10 menitnya?",
     "pilihan": {},
-    "jawaban_benar": "Luas arena minimal",
-    "pembahasan": "Analisis batas area pergerakan random walk berbelok 90 derajat setiap 10 menit dengan kecepatan konstan.",
-    "tingkat_kesulitan": "mudah",
+    "jawaban_benar": "36",
+    "pembahasan": "Kinematika lintasan kisi ortogonal dan penentuan luas bounding box minimal.\n\n1. Waktu tempuh 2 jam = 120 menit dengan kecepatan konstan 3 km/jam.\n   Berbelok $90^\\circ$ setiap 10 menit $\\implies 120/10 = 12$ segmen.\n   Panjang setiap segmen: $3 \\times (10/60) = 0,5$ km.\n2. Karena selalu berbelok $90^\\circ$, arah gerak bergantian antara horizontal dan vertikal:\n   Terdapat 6 segmen horizontal dan 6 segmen vertikal.\n3. Jangkauan pergerakan maksimum dari titik awal:\n   - Sumbu horizontal: perpindahan terjauh searah adalah $6 \\times 0,5 = 3$ km (ke kiri maupun ke kanan). Bentang lebar minimal: $3 - (-3) = 6$ km.\n   - Sumbu vertikal: perpindahan terjauh searah adalah $6 \\times 0,5 = 3$ km (ke atas maupun ke bawah). Bentang tinggi minimal: $3 - (-3) = 6$ km.\n4. Luas arena persegi panjang minimal:\n   $$\\text{Luas} = 6 \\times 6 = 36 \\text{ km}^2$$",
+    "level": "mudah",
     "kode_soal": null,
     "gambar_soal_url": null,
     "gambar_soal_lokal": null
   },
   {
-    "id": "prov_soal7_2023",
+    "soal_id": "prov_soal7_2023",
     "tipe_soal": "tunggal",
+    "materi_id": "prov-graf",
     "pertanyaan": "Pak Dengklek berencana membuka 8 kelas pelatihan, A, B, C, D, E, F, G, dan H untuk bebek-bebeknya. Pak Dengklek menjadwalkan dia dan beberapa temannya untuk mengajar. Setiap kelas membutuhkan waktu sehari penuh. Dalam sehari, bisa lebih dari satu kelas yang dijadwalkan. Sayangnya, beberapa kelas tidak bisa dijadwalkan pada hari yang sama, karena bisa jadi diampu oleh pengajar yang sama. Berikut adalah informasi kelas-kelas yang tidak boleh dijadwalkan pada hari yang sama, untuk setiap kelas:\n• Kelas A: B dan E\n• Kelas B: A, D dan E\n• Kelas C: D dan G\n• Kelas D: B, C, E, F, G, dan H\n• Kelas E: A, B, D, dan H\n• Kelas F: D, G dan H\n• Kelas G: C, D dan F\n• Kelas H: D, E, dan F\n\nBerapa jumlah minimal hari yang diperlukan sedemikian sehingga 8 kelas tersebut bisa dijadwalkan tanpa bentrok satu sama lain?",
     "pilihan": {},
-    "jawaban_benar": "Jumlah minimal hari",
-    "pembahasan": "Pewarnaan simpul minimum (*graph coloring*) pada graf ketidakcocokan jadwal kelas.",
-    "tingkat_kesulitan": "sedang",
+    "jawaban_benar": "3",
+    "pembahasan": "Pewarnaan graf (Graph Coloring) untuk penjadwalan kelas tanpa bentrok (bilangan kromatik).\n\n1. Simpul menyatakan 8 kelas: A, B, C, D, E, F, G, H. Sisi menyatakan jadwal yang bentrok.\n2. Terdapat subgraf segitiga ($K_3$) seperti $\\{D, B, E\\}$ yang saling bertetangga, sehingga mustahil dijadwalkan dalam 2 hari (dibutuhkan $\\ge 3$ hari).\n3. Jadwal 3 hari (pewarnaan 3 warna) yang valid:\n   - Hari 1: Kelas A, D (keduanya tidak bertetangga)\n   - Hari 2: Kelas B, G, H (ketiganya saling tidak bertetangga)\n   - Hari 3: Kelas C, E, F (ketiganya saling tidak bertetangga)\n4. Jumlah minimal hari yang diperlukan adalah **3**.",
+    "level": "sedang",
     "kode_soal": null,
     "gambar_soal_url": null,
     "gambar_soal_lokal": "soal_7_prov_2023.png"
   },
   {
-    "id": "prov_soal8_2023",
+    "soal_id": "prov_soal8_2023",
     "tipe_soal": "tunggal",
+    "materi_id": "prov-berhitung",
     "pertanyaan": "Di belakang rumah Pak Dengklek, ada peternakan yang sangat luas yang di dalamnya terdapat sebanyak 50 hewan ternak yang terdiri dari 25 kambing, 16 sapi, dan 9 domba. Semua hewan ini disebar ke dalam tiga subarea peternakan yang masing-masing diawasi oleh Kwak, Kwik, atau Kwok. Kwak mengawasi sebanyak 18 hewan ternak, setengah diantaranya adalah kambing. Kwik mengawasi sebanyak 17 hewan ternak, dua diantaranya adalah domba. Sedangkan Kwok mengawasi ketiga jenis hewan ternak dengan jumlah yang sama. Jika setiap hewan dipastikan hanya diawasi oleh satu orang, berapakah jumlah sapi yang diawasi oleh Kwik?",
     "pilihan": {},
-    "jawaban_benar": "Jumlah sapi Kwik",
-    "pembahasan": "Penyelesaian sistem persamaan pembagian hewan ternak pada tiga subarea pengawasan.",
-    "tingkat_kesulitan": "mudah",
+    "jawaban_benar": "4",
+    "pembahasan": "Sistem persamaan linier dan penentuan alokasi elemen himpunan.\n\n1. Total ternak: 25 kambing, 16 sapi, 9 domba (Total 50).\n2. Pembagian pengawasan:\n   - Kwak: mengawasi 18 ternak, setengahnya kambing $\\implies 9$ kambing, dan $18 - 9 = 9$ (sapi + domba).\n   - Kwik: mengawasi 17 ternak, 2 diantaranya domba $\\implies 2$ domba, dan $17 - 2 = 15$ (kambing + sapi).\n   - Kwok: mengawasi $50 - 18 - 17 = 15$ ternak dengan jumlah jenis sama $\\implies 5$ kambing, $5$ sapi, $5$ domba.\n3. Menghitung sapi yang diawasi Kwik:\n   - Total domba = 9. Kwok mengawasi 5 domba, Kwik mengawasi 2 domba $\\implies$ domba Kwak = $9 - 5 - 2 = 2$ domba.\n   - Sapi Kwak = $9 - 2 = 7$ sapi.\n   - Total sapi = 16. Maka sapi Kwik = $16 - 5 - 7 = 4$ sapi.\nJumlah sapi yang diawasi oleh Kwik adalah **4**.",
+    "level": "mudah",
     "kode_soal": null,
     "gambar_soal_url": null,
     "gambar_soal_lokal": null
   },
   {
-    "id": "prov_soal9_2023",
+    "soal_id": "prov_soal9_2023",
     "tipe_soal": "tunggal",
+    "materi_id": "prov-berhitung",
     "pertanyaan": "Kwok baru mendapat pelajaran tentang bilangan bulat di sekolahnya. Sesampainya di rumah dia melihat tembok dan langsung antusias untuk menuliskan semua digit yang dipelajari dari 1 sampai 999 tanpa spasi seperti ilustrasi berikut:\n12345678910111213...995996997998999\n\nSetelah selesai menulis, Kwok penasaran, berapakah nilai dari digit ke-2023?",
     "pilihan": {},
-    "jawaban_benar": "Digit ke-2023",
-    "pembahasan": "Perhitungan panjang digit dari bilangan 1 digit, 2 digit, dan 3 digit untuk menemukan angka pada posisi ke-2023.",
-    "tingkat_kesulitan": "sedang",
+    "jawaban_benar": "7",
+    "pembahasan": "Penghitungan digit sekuens konkatenasi bilangan bulat terurut.\n\n1. Digit dari bilangan 1 digit ($1..9$):\n   $9 \\times 1 = 9$ digit (digit 1 s.d. 9).\n2. Digit dari bilangan 2 digit ($10..99$):\n   $90 \\times 2 = 180$ digit (digit 10 s.d. 189).\n   Total digit hingga angka 99: $9 + 180 = 189$ digit.\n3. Sisa digit menuju digit ke-2023:\n   $$2023 - 189 = 1834 \\text{ digit}$$\n4. Bilangan 3 digit menyumbang 3 digit per bilangan:\n   $$1834 = 611 \\times 3 + 1$$\n   Melewati 611 bilangan 3 digit penuh: dari 100 hingga $100 + 611 - 1 = 710$.\n5. Sisa 1 digit jatuh pada digit pertama dari bilangan berikutnya (bilangan 711).\n   Digit pertama dari 711 adalah **7**.",
+    "level": "sedang",
     "kode_soal": null,
     "gambar_soal_url": null,
     "gambar_soal_lokal": null
   },
   {
-    "id": "prov_soal10_2023",
+    "soal_id": "prov_soal10_2023",
     "tipe_soal": "tunggal",
+    "materi_id": "prov-berhitung",
     "pertanyaan": "Pada fase grup sebuah pertandingan, Kwak, Kwik, Kwek, dan Kwok berada dalam grup yang sama. Setiap bebek akan bertanding dengan bebek lainnya dengan ketentuan jika menang akan mendapat 3 poin, jika seri masing-masing 1 poin, jika kalah tidak mendapatkan poin. Kwak memenangkan pertandingan saat melawan Kwik dan Kwok. Kwek bermain seri saat bertanding melawan Kwak dan Kwok. Kwik menang melawan Kwok. Di akhir fase grup, Kwek menempati posisi runner up juara dengan nilai 5 poin. Berapakah nilai yang diperoleh Kwek saat melawan Kwik?",
     "pilihan": {},
-    "jawaban_benar": "Poin Kwek vs Kwik",
-    "pembahasan": "Rekonstruksi tabel hasil pertandingan *round-robin* berdasarkan perolehan poin dan riwayat menang/seri.",
-    "tingkat_kesulitan": "sedang",
+    "jawaban_benar": "3",
+    "pembahasan": "Analisis klasemen dan perolehan poin turnamen round-robin.\n\n1. Aturan poin: Menang = 3 poin, Seri = 1 poin, Kalah = 0 poin.\n2. Hasil pertandingan yang diketahui:\n   - Kwak menang vs Kwik (+3) dan vs Kwok (+3)\n   - Kwek seri vs Kwak (+1) dan vs Kwok (+1)\n   - Kwik menang vs Kwok (+3)\n3. Poin sementara sebelum pertandingan Kwek vs Kwik:\n   - Kwak: $3 + 3 + 1 = 7$ poin\n   - Kwok: $0 + 0 + 1 = 1$ poin\n   - Kwek: $1 + 1 = 2$ poin\n   - Kwik: $0 + 3 = 3$ poin\n4. Di akhir turnamen, Kwek menjadi runner up dengan 5 poin.\n   Maka pada pertandingan melawan Kwik, Kwek memperoleh:\n   $$5 - 2 = 3 \\text{ poin (Kwek menang melawan Kwik)}$$\nNilai yang diperoleh Kwek saat melawan Kwik adalah **3**.",
+    "level": "sedang",
     "kode_soal": null,
     "gambar_soal_url": null,
     "gambar_soal_lokal": null
   },
   {
-    "id": "prov_cerita11_2023",
+    "soal_id": "prov_cerita11_2023",
     "tipe_soal": "cerita",
+    "materi_id": "prov-aritmetika",
     "detail_cerita": {
       "teks": "B1. Menjual Kentang\n\nPak Dengklek baru berjalan-jalan di kota Wonosobo, sambil menikmati keindahan alam dan aneka makanan yang tersedia di sana. Pak Dengklek menyadari bahwa salah satu hasil bumi dari Wonosobo yang terkenal kualitasnya bagus adalah kentang. Pak Dengklek berencana mengangkut dua truk kentang dari Wonosobo lalu menjualnya di Jakarta (sebut saja sebagai truk A dan truk B). Truk A telah berisi N buah kentang, dengan bobot-bobot A₁, A₂, ..., Aₙ dan truk B telah berisi M buah kentang dengan bobot-bobot B₁, B₂, ..., Bₘ.\n\nSebelum dikirimkan ke Jakarta, Pak Dengklek ingin memastikan bahwa rata-rata bobot kentang di truk A harus lebih besar dari rata-rata bobot kentang di truk B, karena ia ingin menjual kentang-kentang pada truk A dengan harga yang lebih mahal. Untuk dapat mencapai tujuan ini, Pak Dengklek berencana melakukan satu kali pemindahan sejumlah (mungkin nol) kentang dari truk B ke truk A, dengan peraturan sebagai berikut:\n1. Apabila Pak Dengklek memindahkan sebuah kentang dengan bobot b dari truk B ke truk A, maka semua kentang yang ada di truk B dengan bobot ≥ b juga harus dipindahkan ke truk A.\n2. Setelah dilakukan pemindahan, truk B tidak boleh kosong (minimal harus tersisa 1 buah kentang di truk B).\n3. Setelah proses pemindahan selesai, rata-rata bobot kentang di truk A harus lebih besar dari rata-rata bobot kentang di truk B.\n\nPak Dengklek tentunya ingin agar proses ini dapat dilakukan seefisien mungkin. Dapatkah Anda membantu Pak Dengklek menentukan berapa total bobot minimum dari kentang-kentang yang dipindahkan Pak Dengklek dari truk B ke truk A agar tujuan di atas tercapai?\n\nUntuk menjawab pertanyaan 1 dan 2 di bawah ini, asumsikan bahwa N = 5 dan M = 6, dan bobot-bobot kentang pada truk A dan truk B masing-masing adalah:\nA = {7, 2, 3, 8, 5}\nB = {6, 8, 5, 8, 12, 10}",
       "gambar_url": null,
@@ -129,23 +140,25 @@
     },
     "soal": [
       {
-        "id": "prov_soal11_2023",
+        "soal_id": "prov_soal11_2023",
+        "materi_id": "prov-aritmetika",
         "pertanyaan": "Seandainya Pak Dengklek ingin memindahkan kentang dengan bobot 6 dari truk B ke truk A, berapakah total bobot kentang yang harus dipindahkan Pak Dengklek dari truk B ke truk A, sesuai dengan aturan di atas?",
         "pilihan": {},
         "jawaban_benar": "Total bobot",
-        "pembahasan": "Perhitungan pemindahan kentang dengan bobot 6 beserta konsekuensi aturan bobot $\nge b$.",
-        "tingkat_kesulitan": "sedang",
+        "pembahasan": "Perhitungan pemindahan kentang dengan bobot 6 beserta konsekuensi aturan bobot $\\ge b$.",
+        "level": "sedang",
         "kode_soal": null,
         "gambar_soal_url": null,
         "gambar_soal_lokal": null
       },
       {
-        "id": "prov_soal12_2023",
+        "soal_id": "prov_soal12_2023",
+        "materi_id": "prov-aritmetika",
         "pertanyaan": "Berapakah total bobot minimum dari kentang-kentang yang dipindahkan dari truk B ke truk A agar tujuan Pak Dengklek tercapai?",
         "pilihan": {},
         "jawaban_benar": "Total bobot minimum",
         "pembahasan": "Pencarian subset kentang optimal dari truk B ke truk A untuk membalikkan kondisi rata-rata.",
-        "tingkat_kesulitan": "mudah",
+        "level": "mudah",
         "kode_soal": null,
         "gambar_soal_url": null,
         "gambar_soal_lokal": null
@@ -153,8 +166,9 @@
     ]
   },
   {
-    "id": "prov_cerita13_2023",
+    "soal_id": "prov_cerita13_2023",
     "tipe_soal": "cerita",
+    "materi_id": "prov-aritmetika",
     "detail_cerita": {
       "teks": "B1. Menjual Kentang\n\nPak Dengklek baru berjalan-jalan di kota Wonosobo, sambil menikmati keindahan alam dan aneka makanan yang tersedia di sana. Pak Dengklek menyadari bahwa salah satu hasil bumi dari Wonosobo yang terkenal kualitasnya bagus adalah kentang. Pak Dengklek berencana mengangkut dua truk kentang dari Wonosobo lalu menjualnya di Jakarta (sebut saja sebagai truk A dan truk B). Truk A telah berisi N buah kentang, dengan bobot-bobot A₁, A₂, ..., Aₙ dan truk B telah berisi M buah kentang dengan bobot-bobot B₁, B₂, ..., Bₘ.\n\nSebelum dikirimkan ke Jakarta, Pak Dengklek ingin memastikan bahwa rata-rata bobot kentang di truk A harus lebih besar dari rata-rata bobot kentang di truk B, karena ia ingin menjual kentang-kentang pada truk A dengan harga yang lebih mahal. Untuk dapat mencapai tujuan ini, Pak Dengklek berencana melakukan satu kali pemindahan sejumlah (mungkin nol) kentang dari truk B ke truk A, dengan peraturan sebagai berikut:\n1. Apabila Pak Dengklek memindahkan sebuah kentang dengan bobot b dari truk B ke truk A, maka semua kentang yang ada di truk B dengan bobot ≥ b juga harus dipindahkan ke truk A.\n2. Setelah dilakukan pemindahan, truk B tidak boleh kosong (minimal harus tersisa 1 buah kentang di truk B).\n3. Setelah proses pemindahan selesai, rata-rata bobot kentang di truk A harus lebih besar dari rata-rata bobot kentang di truk B.\n\nPak Dengklek tentunya ingin agar proses ini dapat dilakukan seefisien mungkin. Dapatkah Anda membantu Pak Dengklek menentukan berapa total bobot minimum dari kentang-kentang yang dipindahkan Pak Dengklek dari truk B ke truk A agar tujuan di atas tercapai?",
       "gambar_url": null,
@@ -162,12 +176,13 @@
     },
     "soal": [
       {
-        "id": "prov_soal13_2023",
+        "soal_id": "prov_soal13_2023",
+        "materi_id": "prov-aritmetika",
         "pertanyaan": "Buatlah program menggunakan bahasa C/C++ sesuai deskripsi cerita di atas untuk menentukan total bobot kentang terkecil yang perlu dipindahkan oleh Pak Dengklek agar tujuan tercapai sesuai dengan peraturan di atas.\n\nFormat Masukan:\nBaris pertama berisi dua buah bilangan: N (banyaknya kentang di truk A) dan M (banyaknya kentang di truk B). Baris kedua berisi N buah bilangan, menyatakan bobot-bobot kentang di truk A, sedangkan baris ketiga berisi M buah bilangan, menyatakan bobot-bobot kentang di truk B.\n\nFormat Keluaran:\nKeluaran terdiri dari satu baris, yaitu sebuah bilangan yang menyatakan berapa total bobot kentang yang harus dipindahkan dari truk B ke truk A sehingga tujuan Pak Dengklek tercapai. Apabila tujuan tersebut tidak mungkin tercapai berdasarkan kondisi yang ada, keluarkan nilai -1.\n\nPeringatan: Untuk dapat menjawab pertanyaan ini dengan benar, program Anda mungkin perlu menggunakan tipe data long long untuk dapat menyimpan data dengan nilai yang besar. Tipe data int saja mungkin tidak cukup!\n\nContoh Masukan:\n3 4\n5 1 3\n8 5 4 9\n\nContoh Keluaran:\n17\n\nPenjelasan Contoh:\nTruk A berisi 3 kentang dengan bobot-bobot = {5, 1, 3}, sehingga rata-ratanya = (5 + 1 + 3) / 3 = 3. Truk B berisi 4 kentang dengan bobot-bobot = {8, 5, 4, 9} sehingga rata-ratanya = (4 + 5 + 8 + 9) / 4 = 6.5. Pak Dengklek dapat memindahkan kentang dengan bobot 8 dan 9 (total = 8 + 9 = 17) dari truk B ke truk A, sehingga rata-rata bobot kentang di truk A menjadi (5 + 1 + 3 + 8 + 9) / 5 = 5.2, sedangkan rata-rata bobot kentang di truk B menjadi (4 + 5) / 2 = 4.5. Dalam hal ini, tercapai tujuan Pak Dengklek, yaitu rata-rata bobot kentang di truk A menjadi lebih besar dari rata-rata bobot kentang di truk B, dan semua peraturan terpenuhi. Tidak ada cara lain yang dapat digunakan Pak Dengklek untuk mencapai tujuan ini dengan total bobot lebih kecil dari 17. Oleh karena itu, jawaban pada kasus ini adalah 17.\n\nBatasan:\nUntuk semua kasus uji berlaku:\n• 1 ≤ N, M ≤ 100 000\n• 1 ≤ Aᵢ, Bᵢ ≤ 100 000\nSubtask 1 (20%):\nSubtask ini hanya berisi satu kasus uji, yaitu sebagai berikut:\n8 10\n5 6 3 4 2 7 4 5\n7 5 5 7 3 4 3 6 5 3\nSubtask 2 (30%):\nPada subtask ini berlaku:\n• 1 ≤ N, M ≤ 1000\n• 1 ≤ Aᵢ, Bᵢ ≤ 1000\n• Tidak ada dua kentang dengan bobot yang sama\nSubtask 3 (50%):\nTidak ada batasan tambahan.",
         "pilihan": {},
         "jawaban_benar": "Program / Solusi Algoritma",
         "pembahasan": "Implementasi pengurutan dan pencarian nilai optimum pemindahan kentang antar truk.",
-        "tingkat_kesulitan": "sedang",
+        "level": "sedang",
         "kode_soal": null,
         "gambar_soal_url": null,
         "gambar_soal_lokal": null
@@ -175,8 +190,9 @@
     ]
   },
   {
-    "id": "prov_cerita14_2023",
+    "soal_id": "prov_cerita14_2023",
     "tipe_soal": "cerita",
+    "materi_id": "prov-strategi",
     "detail_cerita": {
       "teks": "B2. Masa Pertumbuhan\n\nPohon kelapa Pak Dengklek sedang mengalami masa pertumbuhan. Masa pertumbuhannya berlangsung dari hari 0 sampai dengan hari N. Pada akhir hari 0, tinggi pohon kelapa adalah M satuan. Pada awal masing-masing hari d (d > 0), tinggi pohon kelapa sama dengan K satuan lebih tinggi dari tingginya pada akhir hari d - 1.\n\nPak Dengklek mempunyai N botol berisi air ajaib yang dinomori dari 1 sampai N. Setiap botol mempunyai nilai Aᵢ. Selama masing-masing hari d (d > 0), Pak Dengklek harus menyirami pohon kelapanya dengan salah satu botol air ajaibnya hingga habis. Jika Pak Dengklek menyirami dengan air dari botol i pada suatu hari dan tinggi pohon kelapa pada awal hari itu adalah h, maka tingginya akan berubah menjadi max(h, Aᵢ) pada akhir hari tersebut. Setelah sebuah botol dihabiskan, botol itu tidak bisa digunakan lagi untuk menyiram pada hari-hari selanjutnya.\n\nPerhatikan bahwa terdapat dua jenis pertambahan tinggi, yaitu pertambahan tinggi sebesar K satuan pada setiap pergantian hari dan pertambahan tinggi akibat penyiraman yang terjadi di dalam setiap hari.\n\nSuatu botol air ajaib dikatakan berguna jika dan hanya jika menyiram air dari botol tersebut membuat tinggi pohon kelapa bertambah pada hari itu. Berapa maksimum banyaknya botol air ajaib yang berguna jika Pak Dengklek bisa menentukan urutan botol yang digunakan pada urutan penyiraman?",
       "gambar_url": null,
@@ -184,34 +200,37 @@
     },
     "soal": [
       {
-        "id": "prov_soal14_2023",
+        "soal_id": "prov_soal14_2023",
+        "materi_id": "prov-strategi",
         "pertanyaan": "Diberikan N = 4, M = 3, K = 2, dan urutan penyiramannya adalah sebagai berikut:\n• Air botol dengan nilai 4 disiram pada hari 1.\n• Air botol dengan nilai 9 disiram pada hari 2.\n• Air botol dengan nilai 10 disiram pada hari 3.\n• Air botol dengan nilai 15 disiram pada hari 4.\n\nBerapa banyaknya botol air ajaib yang berguna?",
         "pilihan": {},
         "jawaban_benar": "Jumlah botol berguna",
         "pembahasan": "Evaluasi penambahan tinggi pohon kelapa dengan pertambahan harian K dan botol air ajaib.",
-        "tingkat_kesulitan": "mudah",
+        "level": "mudah",
         "kode_soal": null,
         "gambar_soal_url": null,
         "gambar_soal_lokal": null
       },
       {
-        "id": "prov_soal15_2023",
+        "soal_id": "prov_soal15_2023",
+        "materi_id": "prov-strategi",
         "pertanyaan": "Diberikan N = 4, M = 4, K = 1, dan nilai-nilai masing-masing botol air ajaib adalah 10, 6, 9, dan 11. Berapa maksimum banyaknya botol air ajaib yang berguna jika Pak Dengklek bisa menentukan urutan botol yang digunakan pada urutan penyiraman?",
         "pilihan": {},
         "jawaban_benar": "Jumlah botol berguna",
         "pembahasan": "Simulasi penyiraman dengan nilai botol tertentu untuk memaksimalkan jumlah botol berguna.",
-        "tingkat_kesulitan": "sedang",
+        "level": "sedang",
         "kode_soal": null,
         "gambar_soal_url": null,
         "gambar_soal_lokal": null
       },
       {
-        "id": "prov_soal16_2023",
+        "soal_id": "prov_soal16_2023",
+        "materi_id": "prov-strategi",
         "pertanyaan": "Buatlah program menggunakan bahasa C/C++ sesuai deskripsi cerita di atas untuk menentukan maksimum banyaknya botol air ajaib yang berguna jika Pak Dengklek bisa menentukan urutan botol yang digunakan pada urutan penyiraman, dengan ketentuan sebagai berikut:\n\nFormat Masukan:\nBaris pertama berisi tiga buah bilangan: N (banyaknya botol air ajaib), M (tinggi pohon kelapa pada akhir hari 0), dan K (seberapa besar tinggi pohon kelapa bertambah untuk setiap pergantian hari). Baris berikutnya berisi N buah bilangan bulat yang menyatakan nilai-nilai A₁, A₂, A₃, ..., Aₙ (nilai masing-masing botol air ajaib).\n\nFormat Keluaran:\nSebuah baris berisi sebuah bilangan bulat yang menyatakan maksimum banyaknya botol air ajaib yang berguna jika Pak Dengklek bisa menentukan urutan botol yang digunakan pada urutan penyiraman.\n\nContoh Masukan 1:\n6 3 2\n10 6 18 16 9 10\nContoh Keluaran 1:\n3\n\nContoh Masukan 2:\n2 65 0\n0 2 65\nContoh Keluaran 2:\n0\n\nPenjelasan Contoh:\nPada contoh pertama, salah satu cara Pak Dengklek bisa membuat supaya terdapat 3 botol air ajaib berguna adalah dengan melakukan hal berikut:\n• Pada akhir hari 0, tingginya 3 satuan.\n• Pada awal hari 1, tingginya 3 + 2 = 5 satuan. Siram dengan air dari botol 4. Tingginya menjadi max(5, 6) = 6 satuan. Botol ini berguna.\n• Pada awal hari 2, tingginya 6 + 2 = 8 satuan. Siram dengan air dari botol 2. Tingginya menjadi max(8, 10) = 10 satuan. Botol ini berguna.\n• Pada awal hari 3, tingginya 10 + 2 = 12 satuan. Siram dengan air dari botol 1. Tingginya menjadi max(12, 9) = 12 satuan. Botol ini tidak berguna.\n• Pada awal hari 4, tingginya 12 + 2 = 14 satuan. Siram dengan air dari botol 6. Tingginya menjadi max(14, 16) = 16 satuan. Botol ini berguna.\n• Pada awal hari 5, tingginya 16 + 2 = 18 satuan. Siram dengan air dari botol 5. Tingginya menjadi max(18, 18) = 18 satuan. Botol ini tidak berguna.\n• Pada awal hari 6, tingginya 18 + 2 = 20 satuan. Siram dengan air dari botol 3. Tingginya menjadi max(20, 10) = 20 satuan. Botol ini tidak berguna.\n\nBatasan:\nUntuk semua kasus uji berlaku:\n• 1 ≤ N ≤ 100 000\n• 1 ≤ M ≤ 10⁹\n• 0 ≤ K ≤ 10⁹\n• 1 ≤ Aᵢ ≤ 10⁹\nSubtask 1 (20%):\nSubtask ini hanya berisi satu kasus uji, yaitu sebagai berikut:\n10 37 11\n107 83 61 140 152 98 72 183 78 41\nSubtask 2 (30%):\nPada subtask ini, dijamin bahwa:\n• M ≤ 100 000\n• K = 0\n• Aᵢ ≤ 100 000\nSubtask 3 (50%):\nTidak ada batasan tambahan.",
         "pilihan": {},
         "jawaban_benar": "Program / Solusi Algoritma",
         "pembahasan": "Implementasi algoritma *greedy* atau pemrograman dinamis untuk mengoptimalkan urutan penyiraman pohon kelapa.",
-        "tingkat_kesulitan": "sulit",
+        "level": "sulit",
         "kode_soal": null,
         "gambar_soal_url": null,
         "gambar_soal_lokal": null
@@ -219,8 +238,9 @@
     ]
   },
   {
-    "id": "prov_cerita17_2023",
+    "soal_id": "prov_cerita17_2023",
     "tipe_soal": "cerita",
+    "materi_id": "prov-graf",
     "detail_cerita": {
       "teks": "B3. Pembangkit Listrik\n\nPak Dengklek mendapat tugas untuk menyusun rencana pengadaan jaringan listrik di sebuah daerah yang masih terpencil. Pada daerah tersebut, terdapat N buah desa (dinomori dari 1 s/d N) yang belum mendapatkan aliran listrik sama sekali. Tujuan Pak Dengklek adalah agar semua desa tersebut mendapatkan aliran listrik. Untuk mencapai tujuan tersebut, Pak Dengklek akan membangun satu atau lebih pembangkit listrik di satu atau lebih desa. Dalam melaksanakan rencana pembangunan ini, Pak Dengklek akan dibantu oleh M buah perusahaan kontraktor (dinomori dari 1 s/d M) yang siap untuk ditugaskan untuk membangun pembangkit listrik.\n\nSetiap desa memiliki tingkat kesulitan untuk dibangun sebuah pembangkit listrik di desa tersebut. Desa nomor ke-i memiliki tingkat kesulitan Aᵢ (1 ≤ i ≤ N). Selain itu, setiap perusahaan juga memiliki tarif biaya untuk pembangunan sebuah pembangkit listrik. Perusahaan ke-i memiliki tarif Bᵢ (1 ≤ i ≤ M). Apabila sebuah perusahaan memiliki tarif p dan akan membangun pembangkit listrik pada sebuah desa dengan tingkat kesulitan q, maka biaya yang diperlukan oleh perusahaan tersebut dalam membangun pembangkit listrik di desa itu adalah p × q. Lebih lanjut, dalam sebuah peraturan pemerintah, telah ditetapkan bahwa satu perusahaan hanya boleh membangun maksimal satu pembangkit listrik saja.\n\nPak Dengklek juga memiliki data mengenai keterhubungan antar desa. Setiap pasang desa mungkin terhubung satu dengan yang lain menggunakan sebuah jalan (dua arah). Secara keseluruhan, terdapat K buah jalan yang masing-masing menghubungkan sepasang desa yang berbeda. Apabila satu desa telah mendapat aliran listrik, maka semua desa yang lain yang terhubung (baik secara langsung maupun tidak langsung) ke desa tersebut, juga akan mendapat aliran listrik, tanpa harus memiliki pembangkit listrik sendiri.\n\nPak Dengklek ingin merancang strategi pembangunan pembangkit listrik sedemikian rupa sehingga semua desa dapat teraliri listrik, dan total biaya yang diperlukan adalah sekecil mungkin. Dapatkah Anda membantu Pak Dengklek untuk mencapai tujuan tersebut?\n\nUntuk menjawab pertanyaan 1 dan 2, perhatikan ilustrasi N = 6 buah desa (A, B, C, D, E, dan F) serta situasi keterhubungan antar desa-desa tersebut dengan adanya K = 5 jalan. Tingkat kesulitan membangun pembangkit listrik di masing-masing desa adalah: A = 3, B = 2, C = 7, D = 5, E = 1, F = 6.",
       "gambar_url": null,
@@ -228,23 +248,25 @@
     },
     "soal": [
       {
-        "id": "prov_soal17_2023",
+        "soal_id": "prov_soal17_2023",
+        "materi_id": "prov-graf",
         "pertanyaan": "Jika terdapat dua perusahaan: Perusahaan 1 dengan tarif 5 dan Perusahaan 2 dengan tarif 7, lalu Pak Dengklek meminta Perusahaan 1 membangun pembangkit listrik di desa A dan Perusahaan 2 di desa E, maka seluruh desa akan teraliri listrik dari kedua pembangkit tersebut. Dalam hal ini, berapakah total biaya yang harus dikeluarkan oleh Pak Dengklek?",
         "pilihan": {},
         "jawaban_benar": "Total biaya",
         "pembahasan": "Perhitungan biaya perkalian tarif perusahaan dengan tingkat kesulitan desa.",
-        "tingkat_kesulitan": "sedang",
+        "level": "sedang",
         "kode_soal": null,
         "gambar_soal_url": null,
         "gambar_soal_lokal": "soal_B3_1_prov_2023.png"
       },
       {
-        "id": "prov_soal18_2023",
+        "soal_id": "prov_soal18_2023",
+        "materi_id": "prov-graf",
         "pertanyaan": "Jika terdapat 3 perusahaan: Perusahaan 1 dengan tarif 10, Perusahaan 2 dengan tarif 6 dan Perusahaan 3 dengan tarif 7, berapakah total biaya terkecil yang harus dikeluarkan Pak Dengklek untuk dapat mengalirkan listrik ke semua desa tersebut?",
         "pilihan": {},
         "jawaban_benar": "Total biaya terkecil",
         "pembahasan": "Pencarian komponen terhubung (*connected components*) dan pemilihan kombinasi tarif minimum.",
-        "tingkat_kesulitan": "sedang",
+        "level": "sedang",
         "kode_soal": null,
         "gambar_soal_url": null,
         "gambar_soal_lokal": "soal_B3_1_prov_2023.png"
@@ -253,8 +275,9 @@
     "gambar_soal_lokal": "soal_B3_1_prov_2023.png"
   },
   {
-    "id": "prov_cerita19_2023",
+    "soal_id": "prov_cerita19_2023",
     "tipe_soal": "cerita",
+    "materi_id": "prov-graf",
     "detail_cerita": {
       "teks": "B3. Pembangkit Listrik\n\nPak Dengklek mendapat tugas untuk menyusun rencana pengadaan jaringan listrik di sebuah daerah yang masih terpencil. Pada daerah tersebut, terdapat N buah desa (dinomori dari 1 s/d N) yang belum mendapatkan aliran listrik sama sekali. Tujuan Pak Dengklek adalah agar semua desa tersebut mendapatkan aliran listrik. Untuk mencapai tujuan tersebut, Pak Dengklek akan membangun satu atau lebih pembangkit listrik di satu atau lebih desa. Dalam melaksanakan rencana pembangunan ini, Pak Dengklek akan dibantu oleh M buah perusahaan kontraktor (dinomori dari 1 s/d M) yang siap untuk ditugaskan untuk membangun pembangkit listrik.\n\nSetiap desa memiliki tingkat kesulitan untuk dibangun sebuah pembangkit listrik di desa tersebut. Desa nomor ke-i memiliki tingkat kesulitan Aᵢ (1 ≤ i ≤ N). Selain itu, setiap perusahaan juga memiliki tarif biaya untuk pembangunan sebuah pembangkit listrik. Perusahaan ke-i memiliki tarif Bᵢ (1 ≤ i ≤ M). Apabila sebuah perusahaan memiliki tarif p dan akan membangun pembangkit listrik pada sebuah desa dengan tingkat kesulitan q, maka biaya yang diperlukan oleh perusahaan tersebut dalam membangun pembangkit listrik di desa itu adalah p × q. Lebih lanjut, dalam sebuah peraturan pemerintah, telah ditetapkan bahwa satu perusahaan hanya boleh membangun maksimal satu pembangkit listrik saja.\n\nPak Dengklek juga memiliki data mengenai keterhubungan antar desa. Setiap pasang desa mungkin terhubung satu dengan yang lain menggunakan sebuah jalan (dua arah). Secara keseluruhan, terdapat K buah jalan yang masing-masing menghubungkan sepasang desa yang berbeda. Apabila satu desa telah mendapat aliran listrik, maka semua desa yang lain yang terhubung (baik secara langsung maupun tidak langsung) ke desa tersebut, juga akan mendapat aliran listrik, tanpa harus memiliki pembangkit listrik sendiri.\n\nPak Dengklek ingin merancang strategi pembangunan pembangkit listrik sedemikian rupa sehingga semua desa dapat teraliri listrik, dan total biaya yang diperlukan adalah sekecil mungkin. Dapatkah Anda membantu Pak Dengklek untuk mencapai tujuan tersebut?",
       "gambar_url": null,
@@ -262,12 +285,13 @@
     },
     "soal": [
       {
-        "id": "prov_soal19_2023",
+        "soal_id": "prov_soal19_2023",
+        "materi_id": "prov-graf",
         "pertanyaan": "Buatlah program menggunakan bahasa C/C++ sesuai deskripsi cerita di atas untuk menentukan total biaya terkecil yang harus dikeluarkan Pak Dengklek untuk mengalirkan listrik ke semua desa, dengan ketentuan sebagai berikut:\n\nFormat Masukan:\nBaris pertama berisi tiga buah bilangan: N (banyaknya desa), M (banyaknya perusahaan), dan K (banyaknya jalan antar desa). Setiap desa diberi nomor 1 s/d N, sedangkan setiap perusahaan juga diberikan nomor 1 s/d M. Baris berikutnya berisi N buah bilangan bulat positif yang menyatakan tingkat kesulitan membangun pembangkit listrik di masing-masing desa (mulai dari desa nomor 1 s/d desa nomor N). Baris berikutnya berisi M buah bilangan bulat positif, menyatakan tarif dari perusahaan 1 s/d perusahaan M. K baris terakhir berisi masing-masing dua buah bilangan bulat, P dan Q, yang menunjukkan bahwa ada jalan (dua arah) yang menghubungkan desa nomor P dan desa nomor Q.\n\nFormat Keluaran:\nSebuah baris berisi sebuah bilangan bulat positif, menyatakan total biaya terkecil yang diperlukan oleh Pak Dengklek untuk membangun satu atau lebih pembangkit listrik, sedemikian rupa sehingga semua desa dapat teraliri aliran listrik. Apabila tidak dimungkinkan untuk mencapai tujuan tersebut, dengan tetap memenuhi peraturan yang ada, maka keluarkan nilai -1.\n\nPeringatan: Untuk dapat menjawab pertanyaan ini dengan benar, program Anda mungkin perlu menggunakan tipe data long long untuk dapat menyimpan data dengan nilai yang besar. Tipe data int saja mungkin tidak cukup!\n\nContoh Masukan 1:\n3 4 1\n2 5 3\n7 5 6 3\n2 3\nContoh Keluaran 1:\n19\n\nContoh Masukan 2:\n3 2 0\n4 8 2\n1 3\nContoh Keluaran 2:\n-1\n\nPenjelasan Contoh:\nPada kasus pertama, terdapat 3 desa, masing-masing dengan tingkat kesulitan 2, 5 dan 3. Terdapat 4 perusahaan, masing-masing dengan tarif 7, 5, 6 dan 3. Selain itu, terdapat satu buah jalan yang menghubungkan desa nomor 2 (dengan tingkat kesulitan 5) dengan desa nomor 3 (dengan tingkat kesulitan 3). Dalam hal ini, Pak Dengklek dapat meminta Perusahaan 4 (dengan tarif 3) untuk membangun pembangkit listrik di desa nomor 3 (dengan tingkat kesulitan 3) dengan biaya sebesar 3 * 3 = 9. Selanjutnya Pak Dengklek meminta Perusahaan 2 (dengan tarif 5) untuk membangun pembangkit listrik di desa nomor 1 (dengan tingkat kesulitan 2), dengan biaya sebesar 5 * 2 = 10. Desa nomor 2 tidak perlu dibangun pembangkit listrik lagi, karena akan mendapatkan aliran listrik dari desa nomor 3. Dengan demikian, seluruh desa telah teraliri listrik, dan total biaya yang diperlukan adalah 9 + 10 = 19. Tidak ada rencana pembangunan yang lain yang memenuhi peraturan dan tujuan yang telah ditetapkan, namun dengan total biaya lebih kecil dari 19. Oleh karena itu, jawaban untuk kasus ini adalah 19.\n\nPada kasus kedua, terdapat 3 desa dan 2 perusahaan, namun tidak ada jalan sama sekali yang menghubungkan antar desa. Sehingga, tidak mungkin dibuat rencana pembangunan dimana setiap perusahaan hanya membangun maksimal 1 pembangkit listrik, dan semua desa dapat teraliri listrik. Oleh karena itu, jawaban pada kasus kedua ini adalah -1.\n\nBatasan:\nUntuk semua kasus uji berlaku:\n• 1 ≤ N, M ≤ 100 000\n• 0 ≤ K ≤ 200 000\n• 1 ≤ Aᵢ ≤ 1 000 000\n• 1 ≤ Bᵢ ≤ 1 000 000\n• Tidak ada jalan yang menghubungkan suatu desa dengan desa itu sendiri.\n• Untuk setiap pasangan desa berbeda, hanya terdapat paling banyak satu jalan yang menghubungkan keduanya.\nSubtask 1 (20%):\nSubtask ini hanya berisi satu kasus uji, yaitu sebagai berikut:\n8 4 5\n7 5 3 10 2 8 6 9\n25 10 35 30\n1 2\n3 4\n5 4\n4 6\n3 5\nSubtask 2 (30%):\nPada subtask ini, dijamin bahwa:\n• K = 0\n• 1 ≤ Aᵢ ≤ 100\n• 1 ≤ Bᵢ ≤ 100\nSubtask 3 (50%):\nTidak ada batasan tambahan.",
         "pilihan": {},
         "jawaban_benar": "Program / Solusi Algoritma",
         "pembahasan": "Implementasi algoritma *Minimum Spanning Tree* atau *Union-Find* untuk menghubungkan komponen desa dengan biaya minimum.",
-        "tingkat_kesulitan": "sedang",
+        "level": "sedang",
         "kode_soal": null,
         "gambar_soal_url": null,
         "gambar_soal_lokal": null
@@ -275,8 +299,9 @@
     ]
   },
   {
-    "id": "prov_cerita20_2023",
+    "soal_id": "prov_cerita20_2023",
     "tipe_soal": "cerita",
+    "materi_id": "prov-strategi",
     "detail_cerita": {
       "teks": "B4. Mengumpulkan Artefak\n\nPak Dengklek adalah seorang arkeolog yang sedang melakukan penelitian arkeologi di suatu negara terpencil. Terdapat N situs arkeologi yang ditempatkan dalam satu baris, situs ke-i terletak di koordinat Aᵢ dan artefak pada situs ke-i mempunyai nilai Bᵢ.\n\nPada awal mula, Pak Dengklek berada di koordinat X. Pak Dengklek mempunyai sebuah mobil yang mempunyai kapasitas bensin K liter dan mobil tersebut memerlukan tepat 1 liter bensin untuk menempuh 1 satuan di koordinat. Saat Pak Dengklek melewati situs arkeologi, Pak Dengklek akan mendapatkan artefak dari situs tersebut.\n\nPak Dengklek dapat mengubah arah mobil sesuai keinginannya tanpa membuang bensin. Pak Dengklek boleh melewati suatu situs arkeologi lebih dari sekali, akan tetapi Pak Dengklek hanya mendapatkan satu artefak saja, yaitu pada saat pertama kali Pak Dengklek melewati situs tersebut. Berapa jumlah terbesar yang mungkin dari nilai artefak-artefak yang terkumpul?\n\nUntuk menjawab pertanyaan 1 dan 2, perhatikan kondisi N = 5 situs artefak yang terletak di koordinat A = {3, 12, 15, 21, 40} dan artefak pada situs-situs tersebut mempunyai nilai B = {9, 1, 3, 8, 42}. Pak Dengklek berada di koordinat X = 9 dengan kapasitas bensin mobil K = 20 liter.",
       "gambar_url": null,
@@ -284,23 +309,25 @@
     },
     "soal": [
       {
-        "id": "prov_soal20_2023",
+        "soal_id": "prov_soal20_2023",
+        "materi_id": "prov-strategi",
         "pertanyaan": "Seandainya mobil Pak Dengklek mengalami kerusakan sehingga mobil tersebut hanya dapat berjalan ke kanan (ke arah positif), berapakah jumlah terbesar yang mungkin dari nilai artefak-artefak yang didapat Pak Dengklek?",
         "pilihan": {},
         "jawaban_benar": "Jumlah terbesar artefak",
         "pembahasan": "Simulasi pergerakan mobil satu arah ke kanan dengan batas kapasitas bensin K.",
-        "tingkat_kesulitan": "sedang",
+        "level": "sedang",
         "kode_soal": null,
         "gambar_soal_url": null,
         "gambar_soal_lokal": "soal_B4_1_prov_2023.png"
       },
       {
-        "id": "prov_soal21_2023",
+        "soal_id": "prov_soal21_2023",
+        "materi_id": "prov-strategi",
         "pertanyaan": "Pak Dengklek sudah memperbaiki mobilnya. Dengan kondisi Pak Dengklek dapat mengubah arah sesuai keinginannya, berapakah jumlah terbesar yang mungkin dari nilai artefak-artefak yang didapat Pak Dengklek?",
         "pilihan": {},
         "jawaban_benar": "Jumlah terbesar artefak",
         "pembahasan": "Optimasi pergerakan bolak-balik (dua arah) untuk mengumpulkan nilai artefak maksimum.",
-        "tingkat_kesulitan": "sedang",
+        "level": "sedang",
         "kode_soal": null,
         "gambar_soal_url": null,
         "gambar_soal_lokal": "soal_B4_1_prov_2023.png"
@@ -309,8 +336,9 @@
     "gambar_soal_lokal": "soal_B4_1_prov_2023.png"
   },
   {
-    "id": "prov_cerita22_2023",
+    "soal_id": "prov_cerita22_2023",
     "tipe_soal": "cerita",
+    "materi_id": "prov-strategi",
     "detail_cerita": {
       "teks": "B4. Mengumpulkan Artefak\n\nPak Dengklek adalah seorang arkeolog yang sedang melakukan penelitian arkeologi di suatu negara terpencil. Terdapat N situs arkeologi yang ditempatkan dalam satu baris, situs ke-i terletak di koordinat Aᵢ dan artefak pada situs ke-i mempunyai nilai Bᵢ.\n\nPada awal mula, Pak Dengklek berada di koordinat X. Pak Dengklek mempunyai sebuah mobil yang mempunyai kapasitas bensin K liter dan mobil tersebut memerlukan tepat 1 liter bensin untuk menempuh 1 satuan di koordinat. Saat Pak Dengklek melewati situs arkeologi, Pak Dengklek akan mendapatkan artefak dari situs tersebut.\n\nPak Dengklek dapat mengubah arah mobil sesuai keinginannya tanpa membuang bensin. Pak Dengklek boleh melewati suatu situs arkeologi lebih dari sekali, akan tetapi Pak Dengklek hanya mendapatkan satu artefak saja, yaitu pada saat pertama kali Pak Dengklek melewati situs tersebut. Berapa jumlah terbesar yang mungkin dari nilai artefak-artefak yang terkumpul?",
       "gambar_url": null,
@@ -318,12 +346,13 @@
     },
     "soal": [
       {
-        "id": "prov_soal22_2023",
+        "soal_id": "prov_soal22_2023",
+        "materi_id": "prov-strategi",
         "pertanyaan": "Buatlah program menggunakan bahasa C/C++ sesuai deskripsi cerita di atas untuk menentukan jumlah terbesar yang mungkin dari nilai artefak-artefak yang didapat Pak Dengklek, dengan ketentuan sebagai berikut:\n\nFormat Masukan:\nBaris pertama berisi tiga buah bilangan: N (banyaknya situs arkeologi), K (kapasitas bensin mobil Pak Dengklek), dan X (posisi Pak Dengklek dan mobilnya pada awalnya). Baris kedua berisi N buah bilangan bulat yang menyatakan nilai-nilai A₁, A₂, A₃, ..., Aₙ yaitu posisi koordinat tiap situs arkeologi. Baris ketiga berisi N buah bilangan bulat yang menyatakan nilai-nilai B₁, B₂, B₃, ..., Bₙ yaitu nilai dari artefak yang terletak di tiap situs arkeologi.\n\nFormat Keluaran:\nSebuah baris berisi sebuah bilangan bulat yang menyatakan maksimum jumlah nilai artefak yang dapat dikumpulkan.\n\nPeringatan: Untuk dapat menjawab pertanyaan ini dengan benar, program Anda mungkin perlu menggunakan tipe data long long untuk dapat menyimpan data dengan nilai yang besar. Tipe data int saja mungkin tidak cukup!\n\nContoh Masukan 1:\n4 3 5\n0 4 6 10\n135 72 7 1273\nContoh Keluaran 1:\n79\n\nContoh Masukan 2:\n1 1273 969345\n15073\n969345\nContoh Keluaran 2:\n15073\n\nPenjelasan Contoh:\nPada contoh pertama, Pak Dengklek tidak bisa mencapai situs pertama, karena jarak dari posisi awal Pak Dengklek dengan situs pertama adalah X - A₁ = 5 dan mobil dengan kapasitas bensin 3 liter tidak bisa menempuh jarak lebih dari 3 satuan. Pak Dengklek juga tidak bisa mencapai situs keempat. Dengan bensin 3 liter, Pak Dengklek bisa mendapatkan artefak yang terletak di situs kedua dan situs ketiga dengan cara berikut:\n• Pak Dengklek bergerak ke kiri sebanyak 1 satuan. Sekarang, Pak Dengklek berada di koordinat 4 dan mendapatkan artefak bernilai 72 dari situs kedua yang terletak di koordinat tersebut. Bensin mobil Pak Dengklek tersisa 2 liter.\n• Pak Dengklek bergerak ke kanan sebanyak 1 satuan. Sekarang, Pak Dengklek berada di koordinat 5 dan tidak mendapatkan artefak baru. Bensin mobil Pak Dengklek tersisa 2 liter.\n• Pak Dengklek bergerak ke kanan sebanyak 1 satuan. Sekarang, Pak Dengklek berada di koordinat 6 dan mendapatkan artefak bernilai 7 dari situs ketiga yang terletak di koordinat tersebut. Bensin mobil Pak Dengklek tersisa 0 liter.\nTotal nilai artefak = 72 + 7 = 79.\n\nPada contoh kedua, Pak Dengklek mendapatkan artefak pada satu-satunya situs arkeologi tanpa menggunakan mobilnya. Perhatikan bahwa kita bisa menggunakan mobil tersebut untuk melewati situs arkeologi tersebut berulang kali, akan tetapi nilai artefak hanya akan terhitung sekali.\n\nBatasan:\nUntuk semua kasus uji berlaku:\n• 1 ≤ N ≤ 100 000\n• 0 ≤ K, X, Aᵢ ≤ 10⁹\n• A₁ < A₂ < ... < Aₙ₋₁ < Aₙ\n• 0 ≤ Bᵢ ≤ 10⁹\nSubtask 1 (20%):\nSubtask ini hanya berisi satu kasus uji, yaitu sebagai berikut:\n10 67 25\n0 7 19 23 32 34 69 92 101 123\n23 64 56 26 43 35 72 55 14 25\nSubtask 2 (30%):\nPada subtask ini, dijamin bahwa:\n• N ≤ 500\n• K, X, Aᵢ ≤ 5000\nSubtask 3 (50%):\nTidak ada batasan tambahan.",
         "pilihan": {},
         "jawaban_benar": "Program / Solusi Algoritma",
         "pembahasan": "Implementasi pemrograman dinamis interval atau *greedy* untuk pengumpulan artefak dengan batasan bensin.",
-        "tingkat_kesulitan": "sulit",
+        "level": "sulit",
         "kode_soal": null,
         "gambar_soal_url": null,
         "gambar_soal_lokal": null
@@ -331,8 +360,9 @@
     ]
   },
   {
-    "id": "prov_cerita23_2023",
+    "soal_id": "prov_cerita23_2023",
     "tipe_soal": "cerita",
+    "materi_id": "prov-graf",
     "detail_cerita": {
       "teks": "B5. Membeli Oleh-Oleh\n\nPak Dengklek adalah seorang turis yang baru saja tiba di Negara Toki. Negara Toki terdiri dari N buah kota yang dihubungi dengan N - 1 jalan raya. Setiap jalan raya hanya menghubungkan tepat dua kota berbeda. Diketahui bahwa kota-kota Negara Toki tersusun sedemikian sehingga terdapat cara untuk pergi dari setiap kota ke kota lain manapun melalui satu atau lebih jalan raya. Kota-kota Negara Toki dinomori dari 1 hingga N.\n\nPak Dengklek mulai dari kota 1. Ia ingin mengunjungi berbagai kota di Negara Toki. Namun, karena Pak Dengklek mudah bosan, ia tidak ingin mengunjungi kota yang sama lebih dari sekali. Dari suatu kota X, Pak Dengklek dapat pergi ke kota Y jika Pak Dengklek belum pernah mengunjungi kota tersebut sebelumnya dan kota X dan kota Y terhubungi secara langsung dengan jalan raya. Tentu saja, setelah sampai pada kota Y, Pak Dengklek tidak ingin pernah mengunjungi kota X lagi.\n\nSetiap kota di Negara Toki menyediakan oleh-oleh yang khas dari kota tersebut. Saat Pak Dengklek berada pada suatu kota i, Pak Dengklek bisa memilih untuk membeli sebuah oleh-oleh dari kota tersebut yang berharga Aᵢ rupiah.\n\nSebelum Pak Dengklek mulai bepergian, ia perlu membuat rencana pembelian oleh-olehnya, yaitu oleh-oleh dari kota mana saja yang akan ia beli. Tentu saja, rencana tersebut harus bisa diterapkan. Dengan kata lain, harus terdapat cara untuk mengunjungi setiap kota untuk masing-masing oleh-oleh yang ingin dibeli jika memulai perjalanan dari kota 1 tanpa mengunjungi kota yang sama lebih dari sekali, serta Pak Dengklek harus mempunyai uang yang cukup. Jika awalnya Pak Dengklek memiliki anggaran K rupiah, berarti jumlah harga oleh-oleh pada rencana pembeliannya tidak boleh melebihi K rupiah. Diperlukan juga bahwa pada rencana pembeliannya, Pak Dengklek harus membeli setidaknya satu oleh-oleh.\n\nDua buah rencana pembelian oleh-oleh dikatakan berbeda jika dan hanya jika terdapat setidaknya satu kota yang oleh-olehnya hanya Pak Dengklek beli di salah satu dari dua rencana tersebut.\n\nPak Dengklek belum menentukan berapa anggaran untuk perjalanan ini. Maka, untuk masing-masing K dari 1 hingga M, Pak Dengklek ingin mencari tahu berapa banyaknya rencana pembelian oleh-oleh berbeda yang bisa diterapkan!\nKarena jawaban bisa sangat besar, keluarkan jawaban modulo 1 000 000 000.\n\nUntuk menjawab pertanyaan 1 dan 2, perhatikan peta keterhubungan kota berikut: N = 6, dengan jalan menghubungkan (1,2), (1,6), (2,3), (2,4), dan (6,5).",
       "gambar_url": null,
@@ -340,24 +370,26 @@
     },
     "soal": [
       {
-        "id": "prov_soal23_2023",
+        "soal_id": "prov_soal23_2023",
+        "materi_id": "prov-graf",
         "pertanyaan": "Pak Dengklek berencana untuk membeli oleh-oleh dari kota 2, kota 3, dan kota 4. Diketahui bahwa harga oleh-oleh dari kota 2, kota 3, dan kota 4 secara berturut-turut adalah 2, 3, dan 4 rupiah. Diketahui juga bahwa Pak Dengklek mempunyai anggaran 10 rupiah. Apakah rencana pembelian oleh-oleh tersebut bisa diterapkan? Jawab 0 untuk TIDAK, dan 1 untuk YA.",
         "pilihan": {},
         "jawaban_benar": "0",
         "pembahasan": "Pengecekan validitas jalur kunjungan kota tanpa mengunjungi kota yang sama lebih dari sekali.",
-        "tingkat_kesulitan": "sedang",
+        "level": "sedang",
         "kode_soal": null,
         "gambar_soal_url": null,
         "gambar_soal_lokal": "soal_B5_1_prov_2023.png",
         "variasi_jawaban": "1"
       },
       {
-        "id": "prov_soal24_2023",
+        "soal_id": "prov_soal24_2023",
+        "materi_id": "prov-graf",
         "pertanyaan": "Misalkan Pak Dengklek memiliki anggaran tak terbatas. Ada berapa banyaknya rencana pembelian oleh-oleh berbeda yang bisa diterapkan?",
         "pilihan": {},
         "jawaban_benar": "Jumlah rencana berbeda",
         "pembahasan": "Menghitung total subhimpunan jalur pohon yang valid untuk pembelian oleh-oleh.",
-        "tingkat_kesulitan": "sedang",
+        "level": "sedang",
         "kode_soal": null,
         "gambar_soal_url": null,
         "gambar_soal_lokal": "soal_B5_1_prov_2023.png"
@@ -366,8 +398,9 @@
     "gambar_soal_lokal": "soal_B5_1_prov_2023.png"
   },
   {
-    "id": "prov_cerita25_2023",
+    "soal_id": "prov_cerita25_2023",
     "tipe_soal": "cerita",
+    "materi_id": "prov-graf",
     "detail_cerita": {
       "teks": "B5. Membeli Oleh-Oleh\n\nPak Dengklek adalah seorang turis yang baru saja tiba di Negara Toki. Negara Toki terdiri dari N buah kota yang dihubungi dengan N - 1 jalan raya. Setiap jalan raya hanya menghubungkan tepat dua kota berbeda. Diketahui bahwa kota-kota Negara Toki tersusun sedemikian sehingga terdapat cara untuk pergi dari setiap kota ke kota lain manapun melalui satu atau lebih jalan raya. Kota-kota Negara Toki dinomori dari 1 hingga N.\n\nPak Dengklek mulai dari kota 1. Ia ingin mengunjungi berbagai kota di Negara Toki. Namun, karena Pak Dengklek mudah bosan, ia tidak ingin mengunjungi kota yang sama lebih dari sekali. Dari suatu kota X, Pak Dengklek dapat pergi ke kota Y jika Pak Dengklek belum pernah mengunjungi kota tersebut sebelumnya dan kota X dan kota Y terhubungi secara langsung dengan jalan raya. Tentu saja, setelah sampai pada kota Y, Pak Dengklek tidak ingin pernah mengunjungi kota X lagi.\n\nSetiap kota di Negara Toki menyediakan oleh-oleh yang khas dari kota tersebut. Saat Pak Dengklek berada pada suatu kota i, Pak Dengklek bisa memilih untuk membeli sebuah oleh-oleh dari kota tersebut yang berharga Aᵢ rupiah.\n\nSebelum Pak Dengklek mulai bepergian, ia perlu membuat rencana pembelian oleh-olehnya, yaitu oleh-oleh dari kota mana saja yang akan ia beli. Tentu saja, rencana tersebut harus bisa diterapkan. Dengan kata lain, harus terdapat cara untuk mengunjungi setiap kota untuk masing-masing oleh-oleh yang ingin dibeli jika memulai perjalanan dari kota 1 tanpa mengunjungi kota yang sama lebih dari sekali, serta Pak Dengklek harus mempunyai uang yang cukup. Jika awalnya Pak Dengklek memiliki anggaran K rupiah, berarti jumlah harga oleh-oleh pada rencana pembeliannya tidak boleh melebihi K rupiah. Diperlukan juga bahwa pada rencana pembeliannya, Pak Dengklek harus membeli setidaknya satu oleh-oleh.\n\nDua buah rencana pembelian oleh-oleh dikatakan berbeda jika dan hanya jika terdapat setidaknya satu kota yang oleh-olehnya hanya Pak Dengklek beli di salah satu dari dua rencana tersebut.\n\nPak Dengklek belum menentukan berapa anggaran untuk perjalanan ini. Maka, untuk masing-masing K dari 1 hingga M, Pak Dengklek ingin mencari tahu berapa banyaknya rencana pembelian oleh-oleh berbeda yang bisa diterapkan!\nKarena jawaban bisa sangat besar, keluarkan jawaban modulo 1 000 000 000.",
       "gambar_url": null,
@@ -375,12 +408,13 @@
     },
     "soal": [
       {
-        "id": "prov_soal25_2023",
+        "soal_id": "prov_soal25_2023",
+        "materi_id": "prov-graf",
         "pertanyaan": "Buatlah program menggunakan bahasa C/C++ sesuai deskripsi cerita di atas untuk menentukan banyaknya rencana pembelian oleh-oleh berbeda, dengan ketentuan sebagai berikut:\n\nFormat Masukan:\nBaris pertama berisi dua buah bilangan: N (banyaknya kota) dan M (anggaran maksimum Pak Dengklek). Baris kedua berisi N buah bilangan bulat yang menyatakan nilai-nilai A₁, A₂, A₃, ..., Aₙ yaitu harga oleh-oleh dari tiap kota. N - 1 baris selanjutnya menyatakan jalan raya pada Negara Toki. Pada baris ke-i, terdapat dua buah bilangan bulat Uᵢ dan Vᵢ, yang menyatakan jalan raya ke-i menghubungkan kota Uᵢ dan Vᵢ.\n\nFormat Keluaran:\nSebuah baris berisi M buah bilangan bulat. Bilangan ke-K menyatakan banyaknya rencana pembelian oleh-oleh berbeda jika anggaran Pak Dengklek sebesar K rupiah, untuk setiap K dari 1 sampai M.\n\nContoh Masukan 1:\n5 10\n5 7 2 3 2\n1 2\n2 3\n3 4\n4 5\nContoh Keluaran 1:\n0 2 2 2 4 7 7 11 12 15\n\nContoh Masukan 2:\n6 10\n1 2 3 4 5 6\n1 2\n2 3\n2 4\n1 6\n6 5\nContoh Keluaran 2:\n1 2 4 6 9 13 15 15 15 15\n\nPenjelasan Contoh:\nPada contoh pertama, jika anggaran Pak Dengklek sebesar 5 rupiah, salah satu contoh rencana pembelian oleh-oleh yang mungkin adalah membeli oleh-oleh dari kota 1. Contoh rencana lain adalah membeli oleh-oleh dari kota 3 dan kota 4. Perhatikan bahwa contoh kasus uji pertama memenuhi Subtask 2.\n\nBatasan:\nUntuk semua kasus uji berlaku:\n• 2 ≤ N ≤ 100\n• 1 ≤ M ≤ 100 000\n• 1 ≤ Aᵢ ≤ M\n• 1 ≤ Uᵢ, Vᵢ ≤ N\n• Dijamin terdapat cara untuk pergi dari setiap kota ke kota lain manapun melalui satu atau lebih jalan raya.\nSubtask 1 (20%):\nSubtask ini hanya berisi satu kasus uji, yaitu sebagai berikut:\n15 20\n1 2 3 4 5 1 2 3 4 5 1 2 3 4 5\n1 2\n1 3\n2 4\n2 5\n3 6\n3 7\n4 8\n4 9\n5 10\n5 11\n6 12\n6 13\n7 14\n7 15\nSubtask 2 (30%):\nPada subtask ini, dijamin bahwa:\n• Uᵢ = i dan Vᵢ = i + 1\nSubtask 3 (50%):\nTidak ada batasan tambahan.",
         "pilihan": {},
         "jawaban_benar": "Program / Solusi Algoritma",
         "pembahasan": "Implementasi *Tree Knapsack* / pemrograman dinamis pada pohon (*Tree DP*) untuk menghitung kombinasi pembelian.",
-        "tingkat_kesulitan": "sulit",
+        "level": "sulit",
         "kode_soal": null,
         "gambar_soal_url": null,
         "gambar_soal_lokal": null

@@ -1,102 +1,118 @@
 [
   {
-    "id": "prov_soal1_2010",
+    "soal_id": "prov_soal1_2010",
     "tipe_soal": "tunggal",
+    "materi_id": "prov-berhitung",
     "pertanyaan": "Udin sudah bisa menjumlah bilangan, tetapi baru saja belajar menulis angka. Udin baru bisa menulis angka 1, 2, 3 dan 4. Tetapi dia tidak menyadari bahwa angka 1 dan 4 berbeda, bagi Udin \"angka 4 adalah cara lain untuk menuliskan angka 1.\" Selain itu bilangan beberapa dijit seperti 132 adalah bilangan yang bernilai sama dengan hasil penjumlahan dari digit-digit itu sendiri. Contoh : 132 = 1 + 3 + 2 = 6 dan 112314 = 1 + 1 + 2 + 3 + 1 + 1 = 9 (ingat, Udin menganggap 4 adalah 1). Sekarang, Udin ingin tahu berapa banyak cara yang dapat dilakukannya untuk menuliskan sebuah bilangan bernilai tertentu. Misalnya 2, Udin dapat menuliskan 5 bilangan yaitu : 11, 14, 41, 44 dan 2. Ada berapa banyak kemungkinan bilangan beberapa digit yang menurut Udin bernilai 3?",
     "pilihan": {},
     "jawaban_benar": "13",
     "pembahasan": "Bilangan bernilai 3 menurut Udin disusun dari digit bernilai efektif 1, 2, atau 3 (di mana angka 4 dianggap bernilai 1):\n1. Komposisi (3): ada 1 cara, yaitu '3'.\n2. Komposisi (2, 1): ada 1 cara untuk angka 2 dan 2 cara untuk angka 1 ('1' atau '4') $\\implies 1 \\times 2 = 2$ cara ('21', '24').\n3. Komposisi (1, 2): ada 2 cara untuk angka 1 ('1' atau '4') dan 1 cara untuk angka 2 $\\implies 2 \\times 1 = 2$ cara ('12', '42').\n4. Komposisi (1, 1, 1): masing-masing ada 2 pilihan ('1' atau '4') $\\implies 2 \\times 2 \\times 2 = 8$ cara ('111', '114', '141', '144', '411', '414', '441', '444').\nTotal kemungkinan bilangan yang bernilai 3 menurut Udin adalah $1 + 2 + 2 + 8 = 13$ cara.",
-    "tingkat_kesulitan": "sedang",
+    "level": "sedang",
     "kode_soal": null,
     "gambar_soal_url": null,
-    "gambar_soal_lokal": null
+    "gambar_soal_lokal": null,
+    "nomor_soal": 1
   },
   {
-    "id": "prov_soal2_2010",
+    "soal_id": "prov_soal2_2010",
     "tipe_soal": "tunggal",
-    "pertanyaan": "Panitia penyelenggara OSN bagian akomodasi mengatur penempatan para delegasi wakil-wakil provinsi di sebuah hotel. Delegasi-delegasi itu masing-masing dengan anggota yang jumlahnya bervariasi, dan rencana kedatangannya pun tidak bersamaan. Para anggota delegasi yang sama diasumsikan datang bersamaan. Karena jumlah kamar di hotel itu agak terbatas, panitia menetapkan suatu pengaturan. Selama kamar-kamar kosong masih tersedia, setiap kamar kosong ditempati oleh dua orang dari delegasi yang sama. Jika jumlahnya ganjil, yang satu orang itu akan ditentukan belakangan setelah yang berdua-berdua selesai ditempatkan. Selama masih ada kamar kosong, yang satu orang itu pun ditempatkan di kamar yang kosong. Saat tidak ada kamar kosong tesisa, setiap orang yang baru datang akan ditempatkan di kamar yang baru ditempati sendirian. Jika ada beberapa pilihan kamar kosong, selalu dipilih kamar dengan nomor yang paling kecil. Jika tidak ada lagi kamar kosong, tapi ada beberapa kamar yang masih satu orang, juga dipilih mulai dari kamar dengan nomor terkecil. Sekarang anda ketahui ada 8 kamar di hotel itu dan ada 8 delegasi yang akan datang yang jumlahnya berturut-turut sesuai dengan urutan waktu kedatangan adalah 3, 1, 3, 2, 1, 3, 2, 1. Jika kamar dinomori dari 1 sampai dengan 8, dan delegasi dinomori sesuai dengan urutan kedatangan dari 1 sampai 8, dengan siapakah anggota delegasi provinsi ke 8 akan sekamar?",
+    "materi_id": "prov-strategi",
+    "pertanyaan": "Panitia penyelenggara OSN bagian akomodasi mengatur penempatan para delegasi wakil-wakil provinsi di sebuah hotel. Delegasi-delegasi itu masing-masing dengan anggota yang jumlahnya bervariasi, dan rencana kedatangannya pun tidak bersamaan. Para anggota delegasi yang sama diasumsikan datang bersamaan. Karena jumlah kamar di hotel itu agak terbatas, panitia menetapkan suatu pengaturan. Selama kamar-kamar kosong masih tersedia, setiap kamar kosong ditempati oleh dua orang dari delegasi yang sama. Jika jumlahnya ganjil, yang satu orang itu akan ditentukan belakangan setelah yang berdua-berdua selesai ditempatkan. Selama masih ada kamar kosong, yang satu orang itu pun ditempatkan di kamar yang kosong. Saat tidak ada kamar kosong tersisa, setiap orang yang baru datang akan ditempatkan di kamar yang baru ditempati sendirian. Jika ada beberapa pilihan kamar kosong, selalu dipilih kamar dengan nomor yang paling kecil. Jika tidak ada lagi kamar kosong, tapi ada beberapa kamar yang masih satu orang, juga dipilih mulai dari kamar dengan nomor terkecil. Sekarang anda ketahui ada 8 kamar di hotel itu dan ada 8 delegasi yang akan datang yang jumlahnya berturut-turut sesuai dengan urutan waktu kedatangan adalah 3, 1, 3, 2, 1, 3, 2, 1. Jika kamar dinomori dari 1 sampai dengan 8, dan delegasi dinomori sesuai dengan urutan kedatangan dari 1 sampai 8, dengan siapakah anggota delegasi provinsi ke 8 akan sekamar?",
     "pilihan": {},
     "jawaban_benar": "Delegasi 5",
     "pembahasan": "Simulasi pengisian kamar secara berurutan sesuai aturan nomor terkecil dan sisa anggota ganjil menempatkan delegasi ke-8 satu kamar dengan delegasi ke-5.",
-    "tingkat_kesulitan": "sedang",
+    "level": "sedang",
     "kode_soal": null,
     "gambar_soal_url": null,
-    "gambar_soal_lokal": null
+    "gambar_soal_lokal": null,
+    "nomor_soal": 2
   },
   {
-    "id": "prov_cerita1_2010",
+    "soal_id": "prov_cerita1_2010",
     "tipe_soal": "cerita",
+    "materi_id": "prov-bitwise",
     "detail_cerita": {
-      "teks": "Deskripsi Untuk Soal Nomor 3 dan 7\n\nTerdapat N buah lampu b 1 , b 2 , ...b n dan tombolnya masing-masing di bawah setiap lampu itu. Tombol itu berperilaku aneh, jika tombol suatu lampu b i ditekan sekali, lampu b i berubah dari mati menjadi terang atau dari terang menjadi mati. Selain itu, ada beberapa lampu yang ikut berubah, mati menjadi terang atau terang menjadi mati. Hubungan lampu-lampu lain yang ikut berubah dinyatakan dengan relasi (i, j). Jika relasi (i, j) itu ada, maka penekanan tombol di b i akan berdampak juga pada lampu di b j selain b i itu sendiri, dan sebaliknya, penekanan tombol di b j berdampak juga pada lampu di b i .",
+      "teks": "Deskripsi Untuk Soal Nomor 3 dan 7\n\nTerdapat N buah lampu b1, b2, ...bn dan tombolnya masing-masing di bawah setiap lampu itu. Tombol itu berperilaku aneh, jika tombol suatu lampu bi ditekan sekali, lampu bi berubah dari mati menjadi terang atau dari terang menjadi mati. Selain itu, ada beberapa lampu yang ikut berubah, mati menjadi terang atau terang menjadi mati. Hubungan lampu-lampu lain yang ikut berubah dinyatakan dengan relasi (i, j). Jika relasi (i, j) itu ada, maka penekanan tombol di bi akan berdampak juga pada lampu di bj selain bi itu sendiri, dan sebaliknya, penekanan tombol di bj berdampak juga pada lampu di bi.",
       "gambar_url": null,
       "gambar_lokal": null
     },
     "soal": [
       {
-        "id": "prov_soal3_2010",
-        "pertanyaan": "Ada 5 buah lampu: b 1 , b 2 , b 3 , b 4 ,dan b 5 , dan terdapat relasi (1, 2), (1, 5), (2, 3), (2, 4), (3, 5), (4, 5). Jika mula-mula seluruh lampu mati, apa yang terjadi dengan b 1 dan b 2 jika dilakukan penekanan berturut-turut pada tombol-tombol b 1 , b 2 , dan b 3 , dan b 5 , masing-masing sekali? Jawab dengan memilih:",
+        "soal_id": "prov_soal3_2010",
+        "materi_id": "prov-bitwise",
+        "pertanyaan": "Ada 5 buah lampu: b1, b2, b3, b4, dan b5, dan terdapat relasi (1, 2), (1, 5), (2, 3), (2, 4), (3, 5), (4, 5). Jika mula-mula seluruh lampu mati, apa yang terjadi dengan b1 dan b2 jika dilakukan penekanan berturut-turut pada tombol-tombol b1, b2, dan b3, dan b5, masing-masing sekali? Jawab dengan memilih:",
         "pilihan": {
           "a": "keduanya mati,",
           "b": "keduanya terang,",
-          "c": "b 1 terang dan b 2 mati, atau",
-          "d": "mati dan b 2 terang"
+          "c": "b1 terang dan b2 mati, atau",
+          "d": "mati dan b2 terang"
         },
         "jawaban_benar": "b",
         "pembahasan": "Tracing status nyala/mati lampu berdasarkan paritas jumlah penekanan tombol dan relasi ketetanggaan menghasilkan kedua lampu dalam kondisi terang.",
-        "tingkat_kesulitan": "sedang",
+        "level": "sedang",
         "kode_soal": null,
         "gambar_soal_url": null,
-        "gambar_soal_lokal": null
+        "gambar_soal_lokal": null,
+        "nomor_soal": 3
       },
       {
-        "id": "prov_soal4_2010",
+        "soal_id": "prov_soal4_2010",
+        "materi_id": "prov-bitwise",
         "pertanyaan": "Jika mula-mula seluruh lampu mati, tuliskan berapa banyak penekanan sesedikit-sedikitnya untuk membuat semua lampu menjadi terang dilakukan?",
         "pilihan": {},
         "jawaban_benar": "2",
         "pembahasan": "Analisis aljabar linear modulo 2 (GF(2)) pada matriks ketetanggan lampu menunjukkan bahwa minimum penekanan tombol yang diperlukan adalah 2 kali.",
-        "tingkat_kesulitan": "sedang",
+        "level": "sedang",
         "kode_soal": null,
         "gambar_soal_url": null,
-        "gambar_soal_lokal": null
+        "gambar_soal_lokal": null,
+        "nomor_soal": 4
       },
       {
-        "id": "prov_soal5_2010",
+        "soal_id": "prov_soal5_2010",
+        "materi_id": "prov-bitwise",
         "pertanyaan": "Jika ditambahkan relasi (2, 4) dengan pertanyaan yang sama dengan no 4, bagaimana jawaban anda sekarang?",
         "pilihan": {},
         "jawaban_benar": "c",
         "pembahasan": "Penambahan relasi (2, 4) mengubah paritas perubahan lampu, menghasilkan $b_1$ terang dan $b_2$ mati.",
-        "tingkat_kesulitan": "sedang",
+        "level": "sedang",
         "kode_soal": null,
         "gambar_soal_url": null,
-        "gambar_soal_lokal": null
+        "gambar_soal_lokal": null,
+        "nomor_soal": 5
       },
       {
-        "id": "prov_soal6_2010",
-        "pertanyaan": "Seperti pada pertanyaan no. 5 yaitu adanya relasi tambahan (2, 4), kecuali hanya satu yang terang yaitu b 2 , tuliskan jumlah penekanan minimal (sesedikit mungkin) untuk membuat semua terang?",
+        "soal_id": "prov_soal6_2010",
+        "materi_id": "prov-bitwise",
+        "pertanyaan": "Seperti pada pertanyaan no. 5 yaitu adanya relasi tambahan (2, 4), kecuali hanya satu yang terang yaitu b2, tuliskan jumlah penekanan minimal (sesedikit mungkin) untuk membuat semua terang?",
         "pilihan": {},
         "jawaban_benar": "1",
         "pembahasan": "Dengan kondisi awal tertentu, cukup 1 kali penekanan tombol yang tepat untuk menyalakan seluruh lampu.",
-        "tingkat_kesulitan": "sedang",
+        "level": "sedang",
         "kode_soal": null,
         "gambar_soal_url": null,
-        "gambar_soal_lokal": null
+        "gambar_soal_lokal": null,
+        "nomor_soal": 6
       },
       {
-        "id": "prov_soal7_2010",
-        "pertanyaan": "Untuk 8 lampu dengan relasi-relasi: (5, 8), (1, 5), (8, 6), (1, 2), (7, 3), ( 8, 3), (6, 7), (2, 6), (7, 5),(5, 4),(4, 2),(3, 4). Semula semua mati, berapa penekanan yang dilakukan sesedikitsedikitnya agar semua lampu menjadi terang?",
+        "soal_id": "prov_soal7_2010",
+        "materi_id": "prov-bitwise",
+        "pertanyaan": "Untuk 8 lampu dengan relasi-relasi: (5, 8), (1, 5), (8, 6), (1, 2), (7, 3), (8, 3), (6, 7), (2, 6), (7, 5), (5, 4), (4, 2), (3, 4). Semula semua mati, berapa penekanan yang dilakukan sesedikit-sedikitnya agar semua lampu menjadi terang?",
         "pilihan": {},
         "jawaban_benar": "3",
         "pembahasan": "Penyelesaian sistem persamaan linier modular graf 8 simpul menghasilkan minimum 3 penekanan.",
-        "tingkat_kesulitan": "sulit",
+        "level": "sulit",
         "kode_soal": null,
         "gambar_soal_url": null,
-        "gambar_soal_lokal": null
+        "gambar_soal_lokal": null,
+        "nomor_soal": 7
       }
     ]
   },
   {
-    "id": "prov_cerita2_2010",
+    "soal_id": "prov_cerita2_2010",
     "tipe_soal": "cerita",
+    "materi_id": "prov-strategi",
     "detail_cerita": {
       "teks": "Deskripsi Untuk Soal Nomor 8 dan 10\n\nA dan B melakukan permainan batu. Terdapat N buah tumpukan batu. Di bagian bawah tumpukan terdapat kertas bertuliskan suatu bilangan bulat positif menyatakan nilai tumpukan. Setiap pemain bergantian mengambil satu batu. Setiap pemain yang mengambil batu terakhir dari suatu tumpukan akan mendapatkan skor sebesar nilai tumpukan ybs. Di awal permainan, jumlah batu setiap susunan diketahui, dan nilai-nilai tumpukannya juga diketahui.",
       "gambar_url": null,
@@ -104,77 +120,89 @@
     },
     "soal": [
       {
-        "id": "prov_soal8_2010",
+        "soal_id": "prov_soal8_2010",
+        "materi_id": "prov-strategi",
         "pertanyaan": "Berikut ini ada 4 tumpukan seperti pada table di bawah ini. A hendak melakukan langkah pertama kalinya. Dengan asumsi B adalah pemain yang tidak pernah melakukan kesalahan dalam memilih langkahnya, hitunglah berapa skor akhir maksimum yang dapat ia kumpulkan. No Tumpukan 1 2 3 4 Nilai Tumpukan 5 4 15 457 Jumlah Batu pada tumpukan 2 3 1 5",
         "pilihan": {},
         "jawaban_benar": "477",
         "pembahasan": "Strategi minimax memastikan pemain memilih tumpukan bernilai besar terlebih dahulu, menghasilkan skor maksimum 477.",
-        "tingkat_kesulitan": "sedang",
+        "level": "sedang",
         "kode_soal": null,
         "gambar_soal_url": null,
-        "gambar_soal_lokal": null
+        "gambar_soal_lokal": null,
+        "nomor_soal": 8
       },
       {
-        "id": "prov_soal9_2010",
+        "soal_id": "prov_soal9_2010",
+        "materi_id": "prov-strategi",
         "pertanyaan": "Berikut ini ada 8 tumpukan. A hendak melakukan langkah pertama kalinya. Dengan asumsi B adalah pemain yang tidak pernah melakukan kesalahan dalam memilih langkahnya, hitunglah berapa skor akhir maksimum yang dapat ia kumpulkan. No Tumpukan 1 2 3 4 5 6 7 8 Nilai Tumpukan 5 4 15 457 345 13 235 346 Jumlah Batu pada tumpukan 2 3 1 4 5 1 3 2",
         "pilihan": {},
         "jawaban_benar": "1118",
         "pembahasan": "Simulasi pengambilan batu optimal berdasarkan nilai tumpukan tertinggi memberikan total skor 1118.",
-        "tingkat_kesulitan": "sulit",
+        "level": "sulit",
         "kode_soal": null,
         "gambar_soal_url": null,
-        "gambar_soal_lokal": null
+        "gambar_soal_lokal": null,
+        "nomor_soal": 9
       },
       {
-        "id": "prov_soal10_2010",
-        "pertanyaan": "Mengacu pada table di pertanyaan no. 0, seandainya aturan diubah: seorang pemain dapat mengambil 1 atau 2 batu pada setiap gilirannya dan A akan jalan pertama kali, siapakah yang akan mendapatkan nilai tumpukan ke empat?",
+        "soal_id": "prov_soal10_2010",
+        "materi_id": "prov-strategi",
+        "pertanyaan": "Mengacu pada table di pertanyaan no. 8, seandainya aturan diubah: seorang pemain dapat mengambil 1 atau 2 batu pada setiap gilirannya dan A akan jalan pertama kali, siapakah yang akan mendapatkan nilai tumpukan ke empat?",
         "pilihan": {},
         "jawaban_benar": "B",
         "pembahasan": "Analisis paritas jumlah batu dan pilihan pengambilan (1 atau 2 batu) menentukan pemenang pada tumpukan ke-4 adalah pemain B.",
-        "tingkat_kesulitan": "sedang",
+        "level": "sedang",
         "kode_soal": null,
         "gambar_soal_url": null,
-        "gambar_soal_lokal": null
+        "gambar_soal_lokal": null,
+        "nomor_soal": 10
       }
     ]
   },
   {
-    "id": "prov_cerita3_2010",
+    "soal_id": "prov_cerita3_2010",
     "tipe_soal": "cerita",
+    "materi_id": "prov-berhitung",
     "detail_cerita": {
-      "teks": "Deskripsi Untuk Soal Nomor 11 dan 12\n\nSuatu papan catur N x N setiapnya berisi bilangan nonnegatif. Di awal suatu bidak berada kotak (1, 1) atau yang di pojok kiri atas. Berikutnya secara berulang bidak dapat dipindahkan (1) horizontal ke kanan , atau (2) vertikal ke bawah sekian kotak sebanyak dengan bilangan pada kotak terakhir bidak itu berada, kecuali kalau membawa bidak keluar dari papan. Tujuan akhir adalah kotak (N, N) atau yang pojok kanan bawah. Bila bilangan terakhir adalah 0 dan bukan di pojok maka bidak berhenti (tidak dapat melanjutkan langkah kecuali kalau sudah mencapai tujuan).",
+      "teks": "Deskripsi Untuk Soal Nomor 11 dan 12\n\nSuatu papan catur N x N setiapnya berisi bilangan nonnegatif. Di awal suatu bidak berada kotak (1, 1) atau yang di pojok kiri atas. Berikutnya secara berulang bidak dapat dipindahkan (1) horizontal ke kanan, atau (2) vertikal ke bawah sekian kotak sebanyak dengan bilangan pada kotak terakhir bidak itu berada, kecuali kalau membawa bidak keluar dari papan. Tujuan akhir adalah kotak (N, N) atau yang pojok kanan bawah. Bila bilangan terakhir adalah 0 dan bukan di pojok maka bidak berhenti (tidak dapat melanjutkan langkah kecuali kalau sudah mencapai tujuan).",
       "gambar_url": null,
       "gambar_lokal": "soal_12_prov_2010.png"
     },
     "soal": [
       {
-        "id": "prov_soal11_2010",
+        "soal_id": "prov_soal11_2010",
+        "materi_id": "prov-berhitung",
         "pertanyaan": "Untuk papan catur berukuran 4x4 berikut ini temukanlah ada berapa lintasan langkah-langkah yang berbeda untuk membawa bidak dari posisi awal (kotak (1, 1)) ke tujuan (kotak (4,4)).",
         "pilihan": {},
         "jawaban_benar": "3",
         "pembahasan": "Penelusuran graf dari (1,1) ke (4,4) mengikuti nilai loncatan angka di dalam sel grid menghasilkan tepat 3 jalur berbeda.",
-        "tingkat_kesulitan": "sedang",
+        "level": "sedang",
         "kode_soal": null,
         "gambar_soal_url": "https://www.kujawab.com/r2/migrated/be4af7ff1afb4d92fba5d75ed24ab31e.png",
-        "gambar_soal_lokal": "soal_11_prov_2010.png"
+        "gambar_soal_lokal": "soal_11_prov_2010.png",
+        "nomor_soal": 11
       },
       {
-        "id": "prov_soal12_2010",
+        "soal_id": "prov_soal12_2010",
+        "materi_id": "prov-berhitung",
         "pertanyaan": "Untuk papan catur berukuran 4x4 berikut ini temukanlah ada berapa lintasan langkah-langkah yang berbeda untuk membawa bidak dari posisi awal (kotak (1, 1)) ke tujuan (kotak (10, 10)).",
         "pilihan": {},
         "jawaban_benar": "6",
         "pembahasan": "Penghitungan lintasan valid dari titik awal ke tujuan pada grid yang diperluas menghasilkan 6 jalur.",
-        "tingkat_kesulitan": "sedang",
+        "level": "sedang",
         "kode_soal": null,
         "gambar_soal_url": "https://www.kujawab.com/r2/migrated/d918b65b56d5027f9c6c1ed6b016c619.png",
-        "gambar_soal_lokal": "soal_12_prov_2010.png"
+        "gambar_soal_lokal": "soal_12_prov_2010.png",
+        "nomor_soal": 12
       }
     ],
     "gambar_soal_lokal": "soal_12_prov_2010.png"
   },
   {
-    "id": "prov_cerita4_2010",
+    "soal_id": "prov_cerita4_2010",
     "tipe_soal": "cerita",
+    "materi_id": "prov-berhitung",
     "detail_cerita": {
       "teks": "Deskripsi Untuk Soal Nomor 13 dan 15\n\nPak Umar menaruh barang berharganya di sebuah brankas (lemari besi) dengan kunci kombinasi 7 digit setiap digit adalah bilangan 0 sampai dengan 9.",
       "gambar_url": null,
@@ -182,62 +210,72 @@
     },
     "soal": [
       {
-        "id": "prov_soal13_2010",
+        "soal_id": "prov_soal13_2010",
+        "materi_id": "prov-berhitung",
         "pertanyaan": "Suatu ketika Pak Umar mengatur kombinasinya sedemikian rupa sehingga tidak ada digit yang digunakan berulang (setiap digit maksimum satu kali). Suatu ketika ia lupa bilangan kombinasi tersebut dan meminta anda untuk mencoba-coba berbagai kemungkinan. Ada berapa kemungkinan kombinasi yang mungkin anda harus coba?",
         "pilihan": {},
         "jawaban_benar": "544320",
         "pembahasan": "Menggunakan permutasi 7 dari 10 angka: $P(10, 7) = \\frac{10!}{3!} = 604800$ atau penyesuaian angka tanpa digit awal 0 menghasilkan 544320.",
-        "tingkat_kesulitan": "sedang",
+        "level": "sedang",
         "kode_soal": null,
         "gambar_soal_url": null,
-        "gambar_soal_lokal": null
+        "gambar_soal_lokal": null,
+        "nomor_soal": 13
       },
       {
-        "id": "prov_soal14_2010",
+        "soal_id": "prov_soal14_2010",
+        "materi_id": "prov-berhitung",
         "pertanyaan": "Supaya tidak mudah kelupaan lagi ia men-set 3 digit berharga 0 (tidak tahu digit yang mana!) dan lainnya seperti sebelumnya maksimum hanya muncul 1 kali dalam kode (kecuali yang 0 tsb). Anda berancang-ancang kalau suatu ketika Pak Umar lupa kembali maka anda berhitung ada berapa kemungkinan kombinasi yang nanti harus dicoba.",
         "pilihan": {},
         "jawaban_benar": "75600",
         "pembahasan": "Kombinasi posisi untuk tiga angka 0 dan permutasi sisa digit non-nol menghasilkan total 75600 kemungkinan.",
-        "tingkat_kesulitan": "sedang",
+        "level": "sedang",
         "kode_soal": null,
         "gambar_soal_url": null,
-        "gambar_soal_lokal": null
+        "gambar_soal_lokal": null,
+        "nomor_soal": 14
       },
       {
-        "id": "prov_soal15_2010",
+        "soal_id": "prov_soal15_2010",
+        "materi_id": "prov-berhitung",
         "pertanyaan": "Supaya semakin lebih mudah untuk diingatnya, maklum makin hari tambah pelupa saja, Pak Umar mensetnya kembali sedemikian rupa sehingga bilangan-bilangan itu tidak ada yang sama dan meningkat harganya dari kiri ke kanan. Ada berapa kemungkinan kombinasi?",
         "pilihan": {},
         "jawaban_benar": "120",
         "pembahasan": "Jika digit-digit harus unik dan tersusun menaik secara ketat dari kiri ke kanan, pemilihan 7 angka dari 10 angka tanpa pengulangan hanya memiliki 1 susunan unik per kombinasi, yaitu sebanyak $\\binom{10}{7} = 120$ cara.",
-        "tingkat_kesulitan": "sedang",
+        "level": "sedang",
         "kode_soal": null,
         "gambar_soal_url": null,
-        "gambar_soal_lokal": null
+        "gambar_soal_lokal": null,
+        "nomor_soal": 15
       }
     ]
   },
   {
-    "id": "prov_cerita5_2010",
+    "soal_id": "prov_cerita5_2010",
     "tipe_soal": "cerita",
+    "materi_id": "prov-strategi",
     "detail_cerita": {
-      "teks": "Deskripsi Untuk Soal Nomor 16 dan 17\n\nDalam satu keluarga tedapat 8 bersaudara.kandung mereka adalah S, T, U V, W, X, Y dan Z. Urutan nama ini tidak berarti menunjukkan urutan umur, yang diketahui, orang-tua mereka melahirkan anak-anak itu dengan perbedaan hanya 1 tahun berturut-turut. Diketahui juga bahwa: Umur W lebih tua 4 tahun dari Z dan 3 tahun lebih muda dari X Sedangkan S lebih tua dari T, dan lebih muda dari X Umur U adalah umur rata-rata dari umur V dan X",
+      "teks": "Deskripsi Untuk Soal Nomor 16 dan 17\n\nDalam satu keluarga terdapat 8 bersaudara kandung mereka adalah S, T, U, V, W, X, Y dan Z. Urutan nama ini tidak berarti menunjukkan urutan umur, yang diketahui, orang-tua mereka melahirkan anak-anak itu dengan perbedaan hanya 1 tahun berturut-turut. Diketahui juga bahwa: Umur W lebih tua 4 tahun dari Z dan 3 tahun lebih muda dari X. Sedangkan S lebih tua dari T, dan lebih muda dari X. Umur U adalah umur rata-rata dari umur V dan X.",
       "gambar_url": null,
       "gambar_lokal": null
     },
     "soal": [
       {
-        "id": "prov_soal16_2010",
+        "soal_id": "prov_soal16_2010",
+        "materi_id": "prov-strategi",
         "pertanyaan": "Jika yang paling muda diketahui berumur 8, berapakah umur W ?",
         "pilihan": {},
         "jawaban_benar": "14",
         "pembahasan": "Menyusun rentang umur anak dari termuda (8) hingga tertua berdasarkan selisih umur yang diberikan menempatkan umur W di angka 14.",
-        "tingkat_kesulitan": "sedang",
+        "level": "sedang",
         "kode_soal": null,
         "gambar_soal_url": null,
-        "gambar_soal_lokal": null
+        "gambar_soal_lokal": null,
+        "nomor_soal": 16
       },
       {
-        "id": "prov_soal17_2010",
+        "soal_id": "prov_soal17_2010",
+        "materi_id": "prov-strategi",
         "pertanyaan": "Jika V lebih muda dari W, manakah urutan yang paling mungkin dari pilihan di bawah ini jika diurutkan mulai dari yang tertua hingga yang termuda?",
         "pilihan": {
           "a": "X, S, U, W, V, T, Y, Z",
@@ -248,16 +286,18 @@
         },
         "jawaban_benar": "a",
         "pembahasan": "Pencocokan urutan berdasarkan pertidaksamaan umur relasional antar saudara kandung yang paling konsisten adalah opsi a.",
-        "tingkat_kesulitan": "sedang",
+        "level": "sedang",
         "kode_soal": null,
         "gambar_soal_url": null,
-        "gambar_soal_lokal": null
+        "gambar_soal_lokal": null,
+        "nomor_soal": 17
       }
     ]
   },
   {
-    "id": "prov_cerita6_2010",
+    "soal_id": "prov_cerita6_2010",
     "tipe_soal": "cerita",
+    "materi_id": "prov-strategi",
     "detail_cerita": {
       "teks": "Deskripsi Untuk Soal Nomor 18 dan 20\n\nDalam suatu acara jamuan makan malam yang diikuti oleh delapan orang (enam tamu ditambah tuan rumah dan nyonya rumah), mereka duduk di sekeliling meja memanjang. Para tamu, masing-masing tiga orang duduk di sisi-sisi meja. Tuan rumah duduk di salah satu ujung meja dan nyonya",
       "gambar_url": null,
@@ -265,18 +305,21 @@
     },
     "soal": [
       {
-        "id": "prov_soal18_2010",
+        "soal_id": "prov_soal18_2010",
+        "materi_id": "prov-strategi",
         "pertanyaan": "Dari informasi di atas satu orang lagi yaitu Eko, periksalah apakah ia: I. tuan rumah II. duduk di sebelah kanan Diana III. duduk di seberang Cindy Berapa banyak dari ketiga pernyatan itu mana yang benar? (Jawab dengan menuliskan hanya angka-angka romawi dari pernyataan yang anda anggap benar, jika tidak ada yang benar jawab dengan \"TIDAK ADA\").",
         "pilihan": {},
         "jawaban_benar": "I dan III",
         "pembahasan": "Analisis posisi duduk tamu dan tuan rumah membuktikan pernyataan I dan III bernilai benar.",
-        "tingkat_kesulitan": "sedang",
+        "level": "sedang",
         "kode_soal": null,
         "gambar_soal_url": null,
-        "gambar_soal_lokal": null
+        "gambar_soal_lokal": null,
+        "nomor_soal": 18
       },
       {
-        "id": "prov_soal19_2010",
+        "soal_id": "prov_soal19_2010",
+        "materi_id": "prov-strategi",
         "pertanyaan": "Jika diketahui bahwa setiap orang duduk berseberangan dengan suami atau isterinya, mana di antara yang berikut ini yang pasti adalah pasangan suami isteri ?",
         "pilihan": {
           "a": "Gunawan dan Helena",
@@ -287,95 +330,113 @@
         },
         "jawaban_benar": "b",
         "pembahasan": "Berdasarkan posisi tempat duduk berhadapan (seberangan) yang disyaratkan sebagai pasangan, Brigitta dan Firman duduk saling berhadapan.",
-        "tingkat_kesulitan": "sedang",
+        "level": "sedang",
         "kode_soal": null,
         "gambar_soal_url": null,
-        "gambar_soal_lokal": null
+        "gambar_soal_lokal": null,
+        "nomor_soal": 19
       },
       {
-        "id": "prov_soal20_2010",
+        "soal_id": "prov_soal20_2010",
+        "materi_id": "prov-strategi",
         "pertanyaan": "Di antara Ali, Brigitta, Cindy, Diana dan Eko, siapa dari mereka yang tidak duduk berdampingan dengan orang yang jenis kelaminnya sama dengannya?",
         "pilihan": {},
         "jawaban_benar": "Diana",
         "pembahasan": "Pemeriksaan jenis kelamin tetangga kursi di sebelah kiri dan kanan menunjukkan Diana memenuhi kriteria tersebut.",
-        "tingkat_kesulitan": "sedang",
+        "level": "sedang",
         "kode_soal": null,
         "gambar_soal_url": null,
-        "gambar_soal_lokal": null
-      },
-      {
-        "id": "prov_soal21_2010",
-        "pertanyaan": "Berikut ini ada dua potong algoritma pseupascal. // pertama \nreadln(x); \nrepeat \n writeln(x); \n x := x + 1; \nUntil x > 10; //kedua \nreadln(x); \nwhile x <= 10 do \nbegin \n writeln(x); \n x := x + 1; \nend; Apakah kedua potong algoritma itu berperilaku sama? Jika jawaban anda tidak, maka apa yang harus diharus dilakukan? Jawablah dengan memilih salah satu dari pilihan berikut dan menuliskan huruf pilihannya di lembar jawaban:",
-        "pilihan": {
-          "a": "sama, tidak perlu diapa-apakan lagi.",
-          "b": "tidak, pindahkan \"readln(x)\" ke dalam loop-while (sebelum \"writeln(x)\").",
-          "c": "tidak, tambahkan \"writeln(x)\" setelah \"readln(x)\" dan sebelum loop-while.",
-          "d": "tidak, tambahkan \"if x > 10 then writeln(x);\" setelah \"readln(x)\"",
-          "e": "tidak, tambahkan \"if x >= 10 then writeln(x);\" setelah \"readln(x)\" (F) ttidak, tapi tidak ada yang bisa dilakukan karena memang loop-repeat tidak bisa digantikan loop-while"
-        },
-        "jawaban_benar": "c",
-        "pembahasan": "Loop `repeat-until` selalu mengeksekusi blok minimal sekali sebelum pengecekan kondisi, sedangkan `while-do` mengecek di awal. Agar setara jika $x > 10$, perlu ditambahkan pencetakan awal seperti pada opsi c.",
-        "tingkat_kesulitan": "mudah",
-        "kode_soal": "// pertama \nreadln(x); \nrepeat \n writeln(x); \n x := x + 1; \nUntil x > 10;",
-        "gambar_soal_url": null,
-        "gambar_soal_lokal": null
-      },
-      {
-        "id": "prov_soal22_2010",
-        "pertanyaan": "Perhatikan potongan algoritma berikut. for i := 1 to n do \n for j := 1 to n do \n XX(i,j); Misalnya XX(i,j) dijalankan dengan harga berapapun bersifat konstan, dan potongan algoritma itu dengan harga n = 100, diperlukan waktu rata-rata 1 detik kira-kira berapa detik potongan algoritma ini dijalankan untuk nilai n = 2000?",
-        "pilihan": {},
-        "jawaban_benar": "400 detik",
-        "pembahasan": "Kompleksitas waktu adalah $O(n^2)$. Ketika $n$ naik dari 100 ke 2000 (faktor 20), waktu eksekusi naik sebesar $20^2 = 400$ kali lipat ($400 \times 1$ detik = 400 detik).",
-        "tingkat_kesulitan": "mudah",
-        "kode_soal": "for i := 1 to n do \n for j := 1 to n do \n XX(i,j);",
-        "gambar_soal_url": null,
-        "gambar_soal_lokal": null
-      },
-      {
-        "id": "prov_soal23_2010",
-        "pertanyaan": "Perhatikan potongan algoritma berikut. i := 1; \nwhile i <= n do \nbegin \n j := 1; \n while j <= n do \n begin \n writeln('*'); \n J := j * 10 \n end; \n i := i * 2; \nend; Berapa kali karakter * dituliskan untuk n = 1000?",
-        "pilihan": {},
-        "jawaban_benar": "40",
-        "pembahasan": "Variabel $i$ dilipatgandakan ($1, 2, 4, 8, \\dots, 1024$) berjalan sebanyak 10 kali. Variabel $j$ dikalikan 10 ($1, 10, 100, 1000$) berjalan sebanyak 4 kali. Total cetakan = $10 \times 4 = 40$ kali.",
-        "tingkat_kesulitan": "mudah",
-        "kode_soal": "i := 1; \nwhile i <= n do \nbegin \n j := 1; \n while j <= n do \n begin \n writeln('*'); \n J := j * 10 \n end; \n i := i * 2; \nend;",
-        "gambar_soal_url": null,
-        "gambar_soal_lokal": null
-      },
-      {
-        "id": "prov_soal24_2010",
-        "pertanyaan": "Mengacu pada potongan algoritma di pertanyaan no 23, jika n adalah suatu harga N yang cukup besar maka jumlah karakter * yang dituliskan proporsional dengan fungsi mana dari pilihan berikut ini?",
-        "pilihan": {
-          "a": "N",
-          "b": "N 2",
-          "c": "log N",
-          "d": "N log N",
-          "e": "(F) Tidak ada pilihan yang sesuai."
-        },
-        "jawaban_benar": "d",
-        "pembahasan": "Loop luar berjalan sebanyak $\\log_2 N$ kali, sedangkan loop dalam berjalan sebanyak $\\log_{10} N$ kali. Perkembangannya proporsional dengan $(\\log N)(\\log N)$ atau setara dengan kompleksitas logaritmik/pangkat logaritmik (pilihan d atau aproksimasi terkait).",
-        "tingkat_kesulitan": "mudah",
-        "kode_soal": null,
-        "gambar_soal_url": "http://latex.codecogs.com/gif.latex?%5Csqrt%7BN%7D",
-        "gambar_soal_lokal": "soal_30.png"
-      },
-      {
-        "id": "prov_soal25_2010",
-        "pertanyaan": "Perhatikan potongan algoritma berikut funtion Z(l: integer; r: integer); \nbegin \n if l < r then \n z := z(l, ((l+r) div 2) - 1) + z(((l+r) div 2) + 1, r) + 1 \n else \n z := 1; \nend; Berapakah yang akan dicetak pada pemanggilan fungsi Z(1, 10)?",
-        "pilihan": {},
-        "jawaban_benar": "15",
-        "pembahasan": "Fungsi rekursif pembagian biner (divide and conquer) menghitung simpul pohon rekursi untuk rentang 1 sampai 10, menghasilkan nilai 15.",
-        "tingkat_kesulitan": "sedang",
-        "kode_soal": "funtion Z(l: integer; r: integer); \nbegin \n if l < r then \n z := z(l, ((l+r) div 2) - 1) + z(((l+r) div 2) + 1, r) + 1 \n else \n z := 1; \nend;",
-        "gambar_soal_url": null,
-        "gambar_soal_lokal": null
+        "gambar_soal_lokal": null,
+        "nomor_soal": 20
       }
-    ],
-    "gambar_soal_lokal": "soal_30.png"
+    ]
   },
   {
-    "id": "prov_cerita7_2010",
+    "soal_id": "prov_soal21_2010",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-dasar",
+    "pertanyaan": "Berikut ini ada dua potong algoritma pseudopascal. // pertama \nreadln(x); \nrepeat \n writeln(x); \n x := x + 1; \nUntil x > 10; //kedua \nreadln(x); \nwhile x <= 10 do \nbegin \n writeln(x); \n x := x + 1; \nend; Apakah kedua potong algoritma itu berperilaku sama? Jika jawaban anda tidak, maka apa yang harus dilakukan? Jawablah dengan memilih salah satu dari pilihan berikut dan menuliskan huruf pilihannya di lembar jawaban:",
+    "pilihan": {
+      "a": "sama, tidak perlu diapa-apakan lagi.",
+      "b": "tidak, pindahkan \"readln(x)\" ke dalam loop-while (sebelum \"writeln(x)\").",
+      "c": "tidak, tambahkan \"writeln(x)\" setelah \"readln(x)\" dan sebelum loop-while.",
+      "d": "tidak, tambahkan \"if x > 10 then writeln(x);\" setelah \"readln(x)\"",
+      "e": "tidak, tambahkan \"if x >= 10 then writeln(x);\" setelah \"readln(x)\" (F) tidak, tapi tidak ada yang bisa dilakukan karena memang loop-repeat tidak bisa digantikan loop-while"
+    },
+    "jawaban_benar": "c",
+    "pembahasan": "Loop `repeat-until` selalu mengeksekusi blok minimal sekali sebelum pengecekan kondisi, sedangkan `while-do` mengecek di awal. Agar setara jika $x > 10$, perlu ditambahkan pencetakan awal seperti pada opsi c.",
+    "level": "mudah",
+    "kode_soal": "// pertama \nreadln(x); \nrepeat \n writeln(x); \n x := x + 1; \nUntil x > 10;",
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null,
+    "nomor_soal": 21
+  },
+  {
+    "soal_id": "prov_soal22_2010",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-dasar",
+    "pertanyaan": "Perhatikan potongan algoritma berikut. for i := 1 to n do \n for j := 1 to n do \n XX(i,j); Misalnya XX(i,j) dijalankan dengan harga berapapun bersifat konstan, dan potongan algoritma itu dengan harga n = 100, diperlukan waktu rata-rata 1 detik kira-kira berapa detik potongan algoritma ini dijalankan untuk nilai n = 2000?",
+    "pilihan": {},
+    "jawaban_benar": "400 detik",
+    "pembahasan": "Kompleksitas waktu adalah $O(n^2)$. Ketika $n$ naik dari 100 ke 2000 (faktor 20), waktu eksekusi naik sebesar $20^2 = 400$ kali lipat ($400 \\times 1$ detik = 400 detik).",
+    "level": "mudah",
+    "kode_soal": "for i := 1 to n do \n for j := 1 to n do \n XX(i,j);",
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null,
+    "nomor_soal": 22
+  },
+  {
+    "soal_id": "prov_soal23_2010",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-dasar",
+    "pertanyaan": "Perhatikan potongan algoritma berikut. i := 1; \nwhile i <= n do \nbegin \n j := 1; \n while j <= n do \n begin \n writeln('*'); \n J := j * 10 \n end; \n i := i * 2; \nend; Berapa kali karakter * dituliskan untuk n = 1000?",
+    "pilihan": {},
+    "jawaban_benar": "40",
+    "pembahasan": "Variabel $i$ dilipatgandakan ($1, 2, 4, 8, \\dots, 1024$) berjalan sebanyak 10 kali. Variabel $j$ dikalikan 10 ($1, 10, 100, 1000$) berjalan sebanyak 4 kali. Total cetakan = $10 \\times 4 = 40$ kali.",
+    "level": "mudah",
+    "kode_soal": "i := 1; \nwhile i <= n do \nbegin \n j := 1; \n while j <= n do \n begin \n writeln('*'); \n J := j * 10 \n end; \n i := i * 2; \nend;",
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null,
+    "nomor_soal": 23
+  },
+  {
+    "soal_id": "prov_soal24_2010",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-dasar",
+    "pertanyaan": "Mengacu pada potongan algoritma di pertanyaan no 23, jika n adalah suatu harga N yang cukup besar maka jumlah karakter * yang dituliskan proporsional dengan fungsi mana dari pilihan berikut ini?",
+    "pilihan": {
+      "a": "N",
+      "b": "N²",
+      "c": "log N",
+      "d": "N log N",
+      "e": "(F) Tidak ada pilihan yang sesuai."
+    },
+    "jawaban_benar": "d",
+    "pembahasan": "Loop luar berjalan sebanyak $\\log_2 N$ kali, sedangkan loop dalam berjalan sebanyak $\\log_{10} N$ kali. Perkembangannya proporsional dengan $(\\log N)(\\log N)$ atau setara dengan kompleksitas logaritmik/pangkat logaritmik (pilihan d atau aproksimasi terkait).",
+    "level": "mudah",
+    "kode_soal": null,
+    "gambar_soal_url": "http://latex.codecogs.com/gif.latex?%5Csqrt%7BN%7D",
+    "gambar_soal_lokal": null,
+    "nomor_soal": 24
+  },
+  {
+    "soal_id": "prov_soal25_2010",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-rekursi",
+    "pertanyaan": "Perhatikan potongan algoritma berikut function Z(l: integer; r: integer); \nbegin \n if l < r then \n z := z(l, ((l+r) div 2) - 1) + z(((l+r) div 2) + 1, r) + 1 \n else \n z := 1; \nend; Berapakah yang akan dicetak pada pemanggilan fungsi Z(1, 10)?",
+    "pilihan": {},
+    "jawaban_benar": "15",
+    "pembahasan": "Fungsi rekursif pembagian biner (divide and conquer) menghitung simpul pohon rekursi untuk rentang 1 sampai 10, menghasilkan nilai 15.",
+    "level": "sedang",
+    "kode_soal": "function Z(l: integer; r: integer); \nbegin \n if l < r then \n z := z(l, ((l+r) div 2) - 1) + z(((l+r) div 2) + 1, r) + 1 \n else \n z := 1; \nend;",
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null,
+    "nomor_soal": 25
+  },
+  {
+    "soal_id": "prov_cerita7_2010",
     "tipe_soal": "cerita",
+    "materi_id": "prov-dasar",
     "detail_cerita": {
       "teks": "Deskripsi Untuk Soal Nomor 26 dan 29\n\nTujuan dari algoritma ini adalah mencetak deret bilangan: 1, 2, 5, 10, 17, 26, 37, dan seterusnya selama hingga pertama kali mencetak angka yang > 1000. i := 1; \nj := 1; \nwhile (i <= 1000) do \nbegin \n writeln(i); \n ............ // perintah yang hilang \n j := j + 2; \nend; \nwriteln(i);",
       "gambar_url": null,
@@ -383,55 +444,64 @@
     },
     "soal": [
       {
-        "id": "prov_soal26_2010",
+        "soal_id": "prov_soal26_2010",
+        "materi_id": "prov-dasar",
         "pertanyaan": "Agar algoritma bekerja sesuai dengan yang diharapkan, perintah apakah yang harus dituliskan di bagian ............ // perintah yang hilang",
         "pilihan": {},
         "jawaban_benar": "i := i + j + 2;",
         "pembahasan": "Deret penambahan selisih bilangan ganjil ($+1, +3, +5, +7$) menunjukkan bahwa variabel $i$ bertambah sebesar nilai $j$ berikutnya dalam tiap iterasi.",
-        "tingkat_kesulitan": "mudah",
+        "level": "mudah",
         "kode_soal": "............ // perintah yang hilang",
         "gambar_soal_url": null,
         "gambar_soal_lokal": null,
-        "variasi_jawaban": "i := i + j"
+        "variasi_jawaban": "i := i + j",
+        "nomor_soal": 26
       },
       {
-        "id": "prov_soal27_2010",
+        "soal_id": "prov_soal27_2010",
+        "materi_id": "prov-dasar",
         "pertanyaan": "Bila pada ekspresi pemeriksaan kondisi loop-while (perintah while (i <= 1000) do ) variable i diganti dengan pemeriksaan variabel j menjadi while (j <= M) do berapakah harga yang terkecil yang mungkin untuk menggantikan M agar algoritma bekerja secara identik?",
         "pilihan": {},
         "jawaban_benar": "63",
         "pembahasan": "Variabel $j$ bertambah 2 setiap iterasi hingga melewati batas $i \\le 1000$ (di mana $31^2 < 1000 < 32^2$), sehingga nilai $M$ terkecil adalah 63.",
-        "tingkat_kesulitan": "mudah",
+        "level": "mudah",
         "kode_soal": "while (i <= 1000) do",
         "gambar_soal_url": null,
-        "gambar_soal_lokal": null
+        "gambar_soal_lokal": null,
+        "nomor_soal": 27
       },
       {
-        "id": "prov_soal28_2010",
+        "soal_id": "prov_soal28_2010",
+        "materi_id": "prov-dasar",
         "pertanyaan": "Bila angka 1000 pada ekspresi pemeriksaan kondisi loop-while (perintah while (i <= 1000) do ) diganti dengan angka 10000, berapakah angka yang akan dicetak oleh perintah writeln(i) pada baris terakhir?",
         "pilihan": {},
         "jawaban_benar": "10201",
         "pembahasan": "Suku deret berikutnya yang melewati 10000 adalah $101^2 = 10201$.",
-        "tingkat_kesulitan": "sedang",
+        "level": "sedang",
         "kode_soal": "while (i <= 1000) do",
         "gambar_soal_url": null,
-        "gambar_soal_lokal": null
+        "gambar_soal_lokal": null,
+        "nomor_soal": 28
       },
       {
-        "id": "prov_soal29_2010",
+        "soal_id": "prov_soal29_2010",
+        "materi_id": "prov-dasar",
         "pertanyaan": "Bila angka yang terakhir dicetak diharapkan adalah angka terbesar yang lebih kecil dari 500, maka angka ke berapakah itu dalam deret yang dicetak (catatan: yang pertama adalah 1, kedua adalah 2, dst)?",
         "pilihan": {},
         "jawaban_benar": "23",
         "pembahasan": "Bilangan kuadrat terdekat di bawah 500 adalah $22^2 + 1$ atau suku ke-23 dalam pola deret tersebut.",
-        "tingkat_kesulitan": "mudah",
+        "level": "mudah",
         "kode_soal": "while (i <= 1000) do",
         "gambar_soal_url": null,
-        "gambar_soal_lokal": null
+        "gambar_soal_lokal": null,
+        "nomor_soal": 29
       }
     ]
   },
   {
-    "id": "prov_cerita8_2010",
+    "soal_id": "prov_cerita8_2010",
     "tipe_soal": "cerita",
+    "materi_id": "prov-rekursi",
     "detail_cerita": {
       "teks": "Deskripsi Untuk Soal Nomor 30 dan 33\n\nfunction hitung(a: integer): integer; \nbegin \n if (a < 0) then \n begin \n write('-'); \n hitung(-a); \n end \n else if (a > 1) then \n begin \n tmp := hitung(a/2); \n write(a mod 2) \n end \n else writeln(a); \nend;",
       "gambar_url": null,
@@ -439,54 +509,63 @@
     },
     "soal": [
       {
-        "id": "prov_soal30_2010",
+        "soal_id": "prov_soal30_2010",
+        "materi_id": "prov-rekursi",
         "pertanyaan": "Apa yang akan dicetakkan pada pemanggilan hitung(100)?",
         "pilihan": {},
         "jawaban_benar": "1100100",
         "pembahasan": "Angka 100 dalam bentuk biner adalah 1100100.",
-        "tingkat_kesulitan": "mudah",
+        "level": "mudah",
         "kode_soal": null,
         "gambar_soal_url": null,
-        "gambar_soal_lokal": null
+        "gambar_soal_lokal": null,
+        "nomor_soal": 30
       },
       {
-        "id": "prov_soal31_2010",
+        "soal_id": "prov_soal31_2010",
+        "materi_id": "prov-rekursi",
         "pertanyaan": "Apa yang akan dicetakkan pada pemanggilan hitung(-150)?",
         "pilihan": {},
         "jawaban_benar": "-10010110",
         "pembahasan": "Angka 150 dalam biner adalah 10010110 dengan tambahan tanda negatif di depannya menjadi -10010110.",
-        "tingkat_kesulitan": "sedang",
+        "level": "sedang",
         "kode_soal": null,
         "gambar_soal_url": null,
-        "gambar_soal_lokal": null
+        "gambar_soal_lokal": null,
+        "nomor_soal": 31
       },
       {
-        "id": "prov_soal32_2010",
+        "soal_id": "prov_soal32_2010",
+        "materi_id": "prov-rekursi",
         "pertanyaan": "Pada pemanggilan hitung(1000) berapa kali perintah write(a mod 2) akan dijalankan?",
         "pilihan": {},
         "jawaban_benar": "9",
         "pembahasan": "Jumlah digit biner dari angka 1000 ($2^{10} = 1024$) adalah 10 digit, dengan 9 kali pemanggilan pencetakan sisa bagi rekursif.",
-        "tingkat_kesulitan": "sedang",
+        "level": "sedang",
         "kode_soal": "write(a mod 2)",
         "gambar_soal_url": null,
-        "gambar_soal_lokal": null
+        "gambar_soal_lokal": null,
+        "nomor_soal": 32
       },
       {
-        "id": "prov_soal33_2010",
+        "soal_id": "prov_soal33_2010",
+        "materi_id": "prov-rekursi",
         "pertanyaan": "Untuk pemanggilan hitung(M) menghasilkan keluaran berupa bilangan berdigit 8 berapa bilangan terkecil M yang mungkin?",
         "pilihan": {},
         "jawaban_benar": "128",
         "pembahasan": "Bilangan terkecil yang menghasilkan representasi biner 8 digit adalah $2^7 = 128$.",
-        "tingkat_kesulitan": "sedang",
+        "level": "sedang",
         "kode_soal": null,
         "gambar_soal_url": null,
-        "gambar_soal_lokal": null
+        "gambar_soal_lokal": null,
+        "nomor_soal": 33
       }
     ]
   },
   {
-    "id": "prov_cerita9_2010",
+    "soal_id": "prov_cerita9_2010",
     "tipe_soal": "cerita",
+    "materi_id": "prov-rekursi",
     "detail_cerita": {
       "teks": "Deskripsi Untuk Soal Nomor 34 dan 37\n\nvar D:array[0..6] of char = ('A','B','C','D','E','F','G'); \n\n// procedure untuk menukarkan isi array D[a] dan D[b] \nprocedure swap(a: integer; b: integer); \nvar tmp: char; \nbegin \n ...... // perintah-perintah untuk menukarkan \nend; \n\n// procedure untuk mencetak isi array dalam satu baris. \nprocedure printarray; \nvar i: integer; \nbegin \n ........ // perintah-perintah untuk mencetak \nend; \n\nprocedure ZZ(m: integer); \nvar i: integer; \nbegin \n if (m <= 0) then \n printarray \n else \n begin \n ZZ(m-1); \n for i := m-2 downto 0 do \n begin \n swap(i,m-1); \n ZZ(m-1); \n swap(i,m-1); \n end; \n end; \nend;",
       "gambar_url": null,
@@ -494,94 +573,110 @@
     },
     "soal": [
       {
-        "id": "prov_soal34_2010",
-        "pertanyaan": "Jika swap(a,b) dimaksudkan untuk menukarkan isi array D[a] dengan D[b], tuliskan perintahperintah yang seharusnya ada di bagian \". . . . . . . . .\" di dalam procedure swap tersebut.",
+        "soal_id": "prov_soal34_2010",
+        "materi_id": "prov-rekursi",
+        "pertanyaan": "Jika swap(a,b) dimaksudkan untuk menukarkan isi array D[a] dengan D[b], tuliskan perintah-perintah yang seharusnya ada di bagian \". . . . . . . . .\" di dalam procedure swap tersebut.",
         "pilihan": {},
         "jawaban_benar": "tmp := D[a]; D[a] := D[b]; D[b] := tmp;",
         "pembahasan": "Logika standar penukaran nilai dua variabel menggunakan variabel sementara `tmp`.",
-        "tingkat_kesulitan": "mudah",
+        "level": "mudah",
         "kode_soal": null,
         "gambar_soal_url": null,
-        "gambar_soal_lokal": null
+        "gambar_soal_lokal": null,
+        "nomor_soal": 34
       },
       {
-        "id": "prov_soal35_2010",
+        "soal_id": "prov_soal35_2010",
+        "materi_id": "prov-rekursi",
         "pertanyaan": "Pada pemanggilan ZZ(3), berapa kali procedure printarray akan dipanggil?",
         "pilihan": {},
         "jawaban_benar": "6",
         "pembahasan": "Jumlah permutasi dari 3 elemen adalah $3! = 6$ kali pemanggilan cetak.",
-        "tingkat_kesulitan": "mudah",
-        "kode_soal": {},
+        "level": "mudah",
+        "kode_soal": null,
         "gambar_soal_url": null,
-        "gambar_soal_lokal": null
+        "gambar_soal_lokal": null,
+        "nomor_soal": 35
       },
       {
-        "id": "prov_soal36_2010",
+        "soal_id": "prov_soal36_2010",
+        "materi_id": "prov-rekursi",
         "pertanyaan": "Misalkan ZZ(8) dijalankan di suatu computer selama 1 detik, kira-kira berapa lama ZZ(10) dijalankan?",
         "pilihan": {},
         "jawaban_benar": "90 detik",
-        "pembahasan": "Jumlah permutasi tumbuh secara faktorial ($n!$). Perbandingan $10! / 8! = 10 \times 9 = 90$ kali lebih lama, sehingga membutuhkan waktu sekitar 90 detik.",
-        "tingkat_kesulitan": "sedang",
+        "pembahasan": "Jumlah permutasi tumbuh secara faktorial ($n!$). Perbandingan $10! / 8! = 10 \\times 9 = 90$ kali lebih lama, sehingga membutuhkan waktu sekitar 90 detik.",
+        "level": "sedang",
         "kode_soal": null,
         "gambar_soal_url": null,
-        "gambar_soal_lokal": null
+        "gambar_soal_lokal": null,
+        "nomor_soal": 36
       },
       {
-        "id": "prov_soal37_2010",
+        "soal_id": "prov_soal37_2010",
+        "materi_id": "prov-rekursi",
         "pertanyaan": "Sebutkan SATU KATA saja yang menunjukkan proses apa yang dilakukan pseudocode ini pada data dalam array ?",
         "pilihan": {},
         "jawaban_benar": "Permutasi",
         "pembahasan": "Algoritma tersebut menghasilkan seluruh susunan urutan elemen (permutasi).",
-        "tingkat_kesulitan": "mudah",
+        "level": "mudah",
         "kode_soal": null,
         "gambar_soal_url": null,
-        "gambar_soal_lokal": null
+        "gambar_soal_lokal": null,
+        "nomor_soal": 37
       }
     ]
   },
   {
-    "id": "prov_cerita10_2010",
+    "soal_id": "prov_cerita10_2010",
     "tipe_soal": "cerita",
+    "materi_id": "prov-bitwise",
     "detail_cerita": {
-      "teks": "Deskripsi Untuk Soal Nomor 38 dan 40\n\nprocedure cek(a: Boolean; b:Boolean; c: Boolean; d:Boolean); \nbegin \n write(a,' ',b,' ',c,' ',d,' '); \n if ((a and not b) or c ) and not ((c and b) or (d and not\na. ) then \n writeln('kasus 1') \n else \n if ((not c and\nb. or (a and b and not c and\nd. ) then \n writeln('kasus 3') \n else writeln('kasus 4'); \nend;",
+      "teks": "Deskripsi Untuk Soal Nomor 38 dan 40\n\nprocedure cek(a: Boolean; b:Boolean; c: Boolean; d:Boolean); \nbegin \n write(a,' ',b,' ',c,' ',d,' '); \n if ((a and not b) or c ) and not ((c and b) or (d and not a)) then \n writeln('kasus 1') \n else \n if ((not c and b) or (a and b and not c and d)) then \n writeln('kasus 3') \n else writeln('kasus 4'); \nend;",
       "gambar_url": null,
       "gambar_lokal": null
     },
     "soal": [
       {
-        "id": "prov_soal38_2010",
+        "soal_id": "prov_soal38_2010",
+        "materi_id": "prov-bitwise",
         "pertanyaan": "Dengan suatu kombinasi harga a, b, c, d, prosedur mencetak \"kasus 3\", dengan kombinasi yang sama perintah writeln(a and b, ' - ',c and d) akan mencetak dua harga boolean apakah?",
         "pilihan": {},
         "jawaban_benar": "false - true",
         "pembahasan": "Kondisi 'kasus 3' memerlukan `not a and not b` (sehingga $a \\text{ and } b$ bernilai `false`) dan `c and d` bernilai `true`.",
-        "tingkat_kesulitan": "sedang",
+        "level": "sedang",
         "kode_soal": "writeln(a and b, ' - ',c and d)",
         "gambar_soal_url": null,
-        "gambar_soal_lokal": null
+        "gambar_soal_lokal": null,
+        "nomor_soal": 38
       },
       {
-        "id": "prov_soal39_2010",
-        "pertanyaan": "Dengan suatu kombinasi harga a, b, c, d, prosedur mencetak \"kasus 1\", dan diketahui a berharga true. dengan kombinasi yang sama perintah writeln(a and not b, , ' - ',not (c and d)) akan mencetak dua harga boolean apakah?",
+        "soal_id": "prov_soal39_2010",
+        "materi_id": "prov-bitwise",
+        "pertanyaan": "Dengan suatu kombinasi harga a, b, c, d, prosedur mencetak \"kasus 1\", dan diketahui a berharga true. dengan kombinasi yang sama perintah writeln(a and not b, ' - ',not (c and d)) akan mencetak dua harga boolean apakah?",
         "pilihan": {},
         "jawaban_benar": "true - true",
         "pembahasan": "Evaluasi substitusi nilai boolean $a=\\text{true}$ pada kondisi kasus 1 menghasilkan output `true` dan `true`.",
-        "tingkat_kesulitan": "sedang",
-        "kode_soal": "writeln(a and not b, , ' - ',not (c and d))",
+        "level": "sedang",
+        "kode_soal": "writeln(a and not b, ' - ',not (c and d))",
         "gambar_soal_url": null,
         "gambar_soal_lokal": null,
-        "variasi_jawaban": "sesuai evaluasi logika kasus 1"
+        "variasi_jawaban": "sesuai evaluasi logika kasus 1",
+        "nomor_soal": 39
       },
       {
-        "id": "prov_soal40_2010",
+        "soal_id": "prov_soal40_2010",
+        "tipe_soal": "tunggal",
+        "materi_id": "prov-bitwise",
         "pertanyaan": "Bila (b and c) berharga true, maka keluaran yang dicetak adalah?",
         "pilihan": {},
         "jawaban_benar": "Kasus 1",
         "pembahasan": "Jika $b$ dan $c$ bernilai `true`, penelusuran struktur `if-then-else` akan mengarah pada percabangan Kasus 1 atau Kasus 2 tergantung nilai $a$ dan $d$.",
-        "tingkat_kesulitan": "sedang",
+        "level": "sedang",
         "kode_soal": null,
         "gambar_soal_url": null,
         "gambar_soal_lokal": null,
-        "variasi_jawaban": "Kasus 2"
+        "variasi_jawaban": "Kasus 2",
+        "nomor_soal": 40
       }
     ]
   }

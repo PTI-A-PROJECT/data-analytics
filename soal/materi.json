@@ -1,0 +1,18 @@
+[
+  { "id": "kab-logika", "tingkat": "kabupaten", "topik": 1, "judul": "Aljabar Boolean & Himpunan" },
+  { "id": "kab-graf", "tingkat": "kabupaten", "topik": 2, "judul": "Graf & Geometri" },
+  { "id": "kab-kombinatorika", "tingkat": "kabupaten", "topik": 3, "judul": "Kombinatorika & Deret" },
+  { "id": "kab-simulasi", "tingkat": "kabupaten", "topik": 4, "judul": "Simulasi & Optimisasi" },
+  { "id": "kab-algoritma", "tingkat": "kabupaten", "topik": 5, "judul": "Algoritma & I/O" },
+
+  { "id": "prov-dasar", "tingkat": "provinsi", "topik": 1, "judul": "Dasar Pemrograman" },
+  { "id": "prov-bitwise", "tingkat": "provinsi", "topik": 2, "judul": "Logika & Bitwise" },
+  { "id": "prov-aritmetika", "tingkat": "provinsi", "topik": 3, "judul": "Aritmetika" },
+  { "id": "prov-berhitung", "tingkat": "provinsi", "topik": 4, "judul": "Aturan Berhitung" },
+  { "id": "prov-rekursi", "tingkat": "provinsi", "topik": 5, "judul": "Rekursi" },
+  { "id": "prov-sorting", "tingkat": "provinsi", "topik": 6, "judul": "Pencarian & Pengurutan" },
+  { "id": "prov-strategi", "tingkat": "provinsi", "topik": 7, "judul": "Strategi Pemecahan Masalah" },
+  { "id": "prov-struktur-data", "tingkat": "provinsi", "topik": 8, "judul": "Struktur Data" },
+  { "id": "prov-graf", "tingkat": "provinsi", "topik": 9, "judul": "Graf & Tree" },
+  { "id": "prov-geometri", "tingkat": "provinsi", "topik": 10, "judul": "Geometri Dasar" }
+]

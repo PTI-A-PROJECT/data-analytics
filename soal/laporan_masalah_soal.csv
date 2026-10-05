@@ -208,3 +208,141 @@ prov-2026-021,gambar_hilang,soal_2.png,Sudah Diperbaiki,"Field gambar lokal diis
 prov-2026-022,gambar_hilang,soal_2.png,Sudah Diperbaiki,"Field gambar lokal diisi '['soal_F_1_prov_2026.png', 'soal_F_2_prov_2026.png', 'soal_F_3_prov_2026.png', 'soal_F_4_prov_2026.png', 'soal_F_5_prov_2026.png']'"
 prov-2026-023,gambar_hilang,soal_2.png,Sudah Diperbaiki,"Field gambar lokal diisi '['soal_F_1_prov_2026.png', 'soal_F_2_prov_2026.png', 'soal_F_3_prov_2026.png', 'soal_F_4_prov_2026.png', 'soal_F_5_prov_2026.png']'"
 prov-2026-024,gambar_hilang,soal_2.png,Sudah Diperbaiki,"Field gambar lokal diisi '['soal_F_1_prov_2026.png', 'soal_F_2_prov_2026.png', 'soal_F_3_prov_2026.png', 'soal_F_4_prov_2026.png', 'soal_F_5_prov_2026.png']'"
+prov-2020-002,kunci_placeholder_dihitung,Placeholder [Jumlah siswa 1 klub] dihitung menggunakan partisi diagram Venn,Sudah Diperbaiki,Kunci diisi 80 dan pembahasan detail ditambahkan
+prov-2020-003,kunci_placeholder_dihitung,Placeholder [Nama orang] diuji logika analitika kebenaran pernyataan,Sudah Diperbaiki,Kunci diisi Farah dan pembahasan detail ditambahkan
+prov-2020-004,kunci_placeholder_dihitung,Placeholder [Jumlah kemungkinan] dianalisis logika proposisi,Sudah Diperbaiki,Kunci diisi 2 dan pembahasan detail ditambahkan
+prov-2020-005,kunci_placeholder_dihitung,Placeholder [True/False] dievaluasi aljabar boolean,Sudah Diperbaiki,"Kunci diisi True, False, False dan pembahasan detail ditambahkan"
+prov-2020-006,kunci_placeholder_dihitung,Placeholder [Keliling poligon] dihitung convex hull dari 8 koordinat,Sudah Diperbaiki,Kunci diisi 22 dan pembahasan detail ditambahkan
+prov-2020-007,kunci_placeholder_dihitung,Placeholder [Biaya minimum] dihitung min-cut pemutusan graf Zidan vs Ahmad,Sudah Diperbaiki,Kunci diisi 46 dan pembahasan detail ditambahkan
+prov-2020-008,kunci_placeholder_dihitung,Placeholder [Jumlah posisi] dihitung permutasi 3 blok warna bebek identik,Sudah Diperbaiki,Kunci diisi 6 dan pembahasan detail ditambahkan
+prov-2020-009,kunci_placeholder_dihitung,Placeholder [Nilai fungsi] dihitung relasi rekursif f(2^20),Sudah Diperbaiki,Kunci diisi 22020096 dan pembahasan detail ditambahkan
+prov-2020-010,teks_terpotong_dan_kunci,Sekuens S terpotong 9 elemen dan kunci placeholder [Panjang LIS],Sudah Diperbaiki,"Teks sekuens dilengkapi menjadi 20 elemen asli, kunci diisi 8"
+prov-2021-001,kunci_dan_pembahasan_salah_total,Tertimpa pembahasan dan kunci tahun 2020 (17),Sudah Diperbaiki,Kunci diperbaiki menjadi 67305 dan pembahasan barisan 5x/x+100 ditambahkan
+prov-2021-002,kunci_dan_pembahasan_salah_total,Tertimpa pembahasan 4 klub 2020 dan placeholder [Jumlah siswa 1 klub],Sudah Diperbaiki,Kunci diperbaiki menjadi 15 dan pembahasan inklusi-eksklusi 4 bidang lomba ditambahkan
+prov-2021-003,kunci_dan_pembahasan_salah_total,Tertimpa pembahasan 2020 dan placeholder [Nama orang],Sudah Diperbaiki,Kunci diperbaiki menjadi ABDE dan pembahasan deduksi kejujuran 6 orang ditambahkan
+prov-2021-004,kunci_dan_pembahasan_salah_total,Tertimpa pembahasan 2020 dan placeholder [Jumlah kemungkinan],Sudah Diperbaiki,Kunci diperbaiki menjadi 14580 dan pembahasan pewarnaan bola sekuensial ditambahkan
+prov-2021-005,kunci_dan_pembahasan_salah_total,Tertimpa pembahasan 2020 dan placeholder [True/False],Sudah Diperbaiki,Kunci diperbaiki menjadi 7 dan pembahasan kalender kabisat 1921-2021 ditambahkan
+prov-2021-006,kunci_dan_pembahasan_salah_total,Tertimpa pembahasan 2020 dan placeholder [Keliling poligon],Sudah Diperbaiki,Kunci diperbaiki menjadi 11 dan pembahasan kepuasan fungsi logika 4 variabel ditambahkan
+prov-2021-007,kunci_dan_pembahasan_salah_total,Tertimpa pembahasan 2020 dan placeholder [Biaya minimum],Sudah Diperbaiki,Kunci diperbaiki menjadi S dan pembahasan substitusi string 5 generasi ditambahkan
+prov-2021-008,kunci_dan_pembahasan_salah_total,Tertimpa pembahasan 2020 dan placeholder [Jumlah posisi],Sudah Diperbaiki,Kunci diperbaiki menjadi 3 dan pembahasan bilangan kromatik kisi heksagonal ditambahkan
+prov-2021-009,kunci_dan_pembahasan_salah_total,Tertimpa pembahasan 2020 dan placeholder [Nilai fungsi],Sudah Diperbaiki,Kunci diperbaiki menjadi 51 dan pembahasan kombinatorika persegi panjang kisi 5x5 ditambahkan
+prov-2021-010,kunci_dan_pembahasan_salah_total,Tertimpa pembahasan 2020 dan placeholder [Panjang LIS],Sudah Diperbaiki,Kunci diperbaiki menjadi 20801 dan pembahasan tracing invarian array A[i] ditambahkan
+prov-2022-001,kunci_placeholder_dihitung,Placeholder [Jumlah maksimal kalori] dihitung Bounded Knapsack DP,Sudah Diperbaiki,Kunci diisi 1066 dan pembahasan detail ditambahkan
+prov-2022-002,kunci_placeholder_dihitung,Placeholder [Jumlah pasangan] dihitung irisan bahasa diplomat,Sudah Diperbaiki,Kunci diisi 4 dan pembahasan detail ditambahkan
+prov-2022-003,kunci_placeholder_dihitung,Placeholder [Karakter huruf] dihitung modulo kata INFORMATIC,Sudah Diperbaiki,Kunci diisi OA dan pembahasan detail ditambahkan
+prov-2022-004,kunci_placeholder_dihitung,Placeholder [Jumlah rute] dihitung simple paths graf kandang A ke H,Sudah Diperbaiki,"Kunci diisi 10, gambar diekstrak dan pembahasan detail ditambahkan"
+prov-2022-005,kunci_placeholder_dihitung,Placeholder [Jumlah kemungkinan] dianalisis kombinatorika jadwal latihan,Sudah Diperbaiki,Kunci diisi 60 dan pembahasan detail ditambahkan
+prov-2022-006,kunci_placeholder_dihitung,Placeholder [Jumlah tiang maksimal] dihitung optimasi grid koordinat,Sudah Diperbaiki,Kunci diisi 132 dan pembahasan detail ditambahkan
+prov-2022-007,kunci_placeholder_dihitung,Placeholder [Jumlah cara] dihitung kombinatorika tim voli bola bebek,Sudah Diperbaiki,Kunci diisi 300 dan pembahasan detail ditambahkan
+prov-2022-008,kunci_placeholder_dihitung,Placeholder [Harga tiket] dihitung persamaan aljabar tiket konser musik,Sudah Diperbaiki,Kunci diisi 70000 dan pembahasan detail ditambahkan
+prov-2022-009,kunci_placeholder_dihitung,Placeholder [Hari ke-] disimulasikan siklus permen Kwok,Sudah Diperbaiki,Kunci diisi 342 dan pembahasan detail ditambahkan
+prov-2022-010,kunci_placeholder_dihitung,Placeholder [Nama kandang / tokoh] dianalisis spasial arah mata angin,Sudah Diperbaiki,Kunci diisi kwak dan pembahasan detail ditambahkan
+prov-2023-001,kunci_placeholder_dihitung,Placeholder [Jumlah maksimal nomor cantik] dihitung inklusi-eksklusi 7 digit,Sudah Diperbaiki,Kunci diisi 19990 dan pembahasan detail ditambahkan
+prov-2023-002,kunci_placeholder_dihitung,Placeholder [Nilai rata-rata kerapian] dihitung linearitas harapan,Sudah Diperbaiki,Kunci diisi 91/10 dan pembahasan detail ditambahkan
+prov-2023-003,kunci_placeholder_dihitung,Placeholder [Jumlah kotak minimal] dihitung teorema pembagian adil 2 atribut,Sudah Diperbaiki,Kunci diisi 1005 dan pembahasan detail ditambahkan
+prov-2023-004,kunci_placeholder_dihitung,Placeholder [Jumlah maksimal asisten] dihitung dekomposisi siklus Hamilton K15,Sudah Diperbaiki,Kunci diisi 7 dan pembahasan detail ditambahkan
+prov-2023-005,kunci_placeholder_dihitung,Placeholder [Jumlah bebek maksimum] dihitung sistem modulo 5 dan 11,Sudah Diperbaiki,Kunci diisi 88 dan pembahasan detail ditambahkan
+prov-2023-006,kunci_placeholder_dihitung,Placeholder [Luas arena minimal] dihitung bentang koordinat lari pagi 2 jam,Sudah Diperbaiki,Kunci diisi 36 dan pembahasan detail ditambahkan
+prov-2023-007,kunci_placeholder_dihitung,Placeholder [Jumlah minimal hari] dihitung pewarnaan graf kelas bentrok,Sudah Diperbaiki,Kunci diisi 3 dan pembahasan detail ditambahkan
+prov-2023-008,kunci_placeholder_dihitung,Placeholder [Jumlah sapi Kwik] dihitung sistem eliminasi ternak 50 hewan,Sudah Diperbaiki,Kunci diisi 4 dan pembahasan detail ditambahkan
+prov-2023-009,kunci_placeholder_dihitung,Placeholder [Digit ke-2023] dihitung sekuens konkatenasi 1..999,Sudah Diperbaiki,Kunci diisi 7 dan pembahasan detail ditambahkan
+prov-2023-010,kunci_placeholder_dihitung,Placeholder [Poin Kwek vs Kwik] dianalisis klasemen turnamen 4 bebek,Sudah Diperbaiki,Kunci diisi 3 dan pembahasan detail ditambahkan
+prov-2024-cerita1-a1,kunci_jawaban_salah,"Kunci jawaban sebelumnya 'B', seharusnya 'E' (NOSNOSO bukan string cantik OSN)",Sudah Diperbaiki,Kunci jawaban diubah menjadi 'E' dan pembahasan lengkap disertakan
+prov-2024-cerita1-a2,pembahasan_hilang,Kunci berupa teks placeholder 'Jumlah string',Sudah Diperbaiki,Kunci diisi '6' dan pembahasan lengkap ditambahkan
+prov-2024-cerita1-a3,pembahasan_hilang,Kunci berupa teks placeholder 'Benar / Salah',Sudah Diperbaiki,Kunci diisi 'SALAH' dan pembahasan lengkap ditambahkan
+prov-2024-cerita2-b1,pembahasan_hilang,Kunci berupa teks placeholder 'Pilihan skenario',Sudah Diperbaiki,Kunci diisi 'A' dan pembahasan lengkap ditambahkan
+prov-2024-cerita2-b2,pembahasan_hilang,Kunci berupa teks placeholder 'Jumlah kemungkinan',Sudah Diperbaiki,Kunci diisi '4' dan pembahasan lengkap ditambahkan
+prov-2024-cerita2-b3,pembahasan_hilang,Kunci berupa teks placeholder 'Benar / Salah',Sudah Diperbaiki,Kunci diisi 'BENAR' dan pembahasan lengkap ditambahkan
+prov-2024-cerita3-c1,pembahasan_hilang,Kunci berupa teks placeholder 'Jumlah panjang potongan',Sudah Diperbaiki,Kunci diisi '91' dan pembahasan lengkap ditambahkan
+prov-2024-cerita3-c2,pembahasan_hilang,Kunci berupa teks placeholder 'Benar / Salah',Sudah Diperbaiki,Kunci diisi 'BENAR' dan pembahasan lengkap ditambahkan
+prov-2024-cerita3-c3,pembahasan_hilang,Kunci berupa teks placeholder 'Batas ketinggian',Sudah Diperbaiki,Kunci diisi '57' dan pembahasan lengkap ditambahkan
+prov-2024-cerita4-d1,pembahasan_hilang,Kunci berupa teks placeholder 'String basis',Sudah Diperbaiki,Kunci diisi '610110' dan pembahasan lengkap ditambahkan
+prov-2024-cerita4-d2,pembahasan_hilang,Kunci berupa teks placeholder 'Pilihan skenario',Sudah Diperbaiki,Kunci diisi 'C' dan pembahasan lengkap ditambahkan
+prov-2024-cerita4-d3,pembahasan_hilang,Kunci berupa teks placeholder 'Jumlah bilangan',Sudah Diperbaiki,Kunci diisi '5' dan pembahasan lengkap ditambahkan
+prov-2024-cerita5-e1,pembahasan_hilang,Kunci berupa teks placeholder 'Total ketidakpuasan',Sudah Diperbaiki,Kunci diisi '8' dan pembahasan lengkap ditambahkan
+prov-2024-cerita5-e2,pembahasan_hilang,Kunci berupa teks placeholder 'Total ketidakpuasan',Sudah Diperbaiki,Kunci diisi '10' dan pembahasan lengkap ditambahkan
+prov-2024-cerita5-e3,pembahasan_hilang,Kunci berupa teks placeholder 'Benar / Salah',Sudah Diperbaiki,Kunci diisi 'SALAH' dan pembahasan lengkap ditambahkan
+prov-2024-cerita6-f1,pembahasan_hilang,Kunci berupa teks placeholder 'Jumlah angka',Sudah Diperbaiki,Kunci diisi '35' dan pembahasan lengkap ditambahkan
+prov-2024-cerita6-f2,pembahasan_hilang,Kunci berupa teks placeholder 'Jumlah terkecil',Sudah Diperbaiki,Kunci diisi '22' dan pembahasan lengkap ditambahkan
+prov-2024-cerita6-f3,pembahasan_hilang,Kunci berupa teks placeholder 'Jumlah terkecil',Sudah Diperbaiki,Kunci diisi '18' dan pembahasan lengkap ditambahkan
+prov-2025-cerita1-a1,kunci_jawaban_salah,"Kunci jawaban sebelumnya 'C', seharusnya 'B' (OSNPOP melanggar syarat kedua)",Sudah Diperbaiki,Kunci jawaban diubah menjadi 'B' dan pembahasan lengkap disertakan
+prov-2025-cerita1-a2,pembahasan_hilang,Kunci berupa teks placeholder 'Benar / Salah',Sudah Diperbaiki,Kunci diisi 'BENAR' dan pembahasan lengkap ditambahkan
+prov-2025-cerita1-a3,pembahasan_hilang,Kunci berupa teks placeholder 'String leksikografis terkecil',Sudah Diperbaiki,Kunci diisi 'SONOSOPP' dan pembahasan lengkap ditambahkan
+prov-2025-cerita2-b1,pembahasan_hilang,Kunci berupa teks placeholder 'Jumlah kardus maksimal',Sudah Diperbaiki,Kunci diisi '10' dan pembahasan lengkap ditambahkan
+prov-2025-cerita2-b2,pembahasan_hilang,Kunci berupa teks placeholder 'Benar / Salah',Sudah Diperbaiki,Kunci diisi 'BENAR' dan pembahasan lengkap ditambahkan
+prov-2025-cerita2-b3,pembahasan_hilang,Kunci berupa teks placeholder 'Panjang sisi gudang terkecil',Sudah Diperbaiki,Kunci diisi '11' dan pembahasan lengkap ditambahkan
+prov-2025-cerita3-c1,pembahasan_hilang,Kunci berupa teks placeholder 'Jumlah total telur',Sudah Diperbaiki,Kunci diisi '777777' dan pembahasan lengkap ditambahkan
+prov-2025-cerita3-c2,pembahasan_hilang,Kunci berupa teks placeholder 'Pilihan skenario',Sudah Diperbaiki,Kunci diisi 'B' dan pembahasan lengkap ditambahkan
+prov-2025-cerita3-c3,pembahasan_hilang,Kunci berupa teks placeholder 'Tipe telur optimal',Sudah Diperbaiki,Kunci diisi '5' dan pembahasan lengkap ditambahkan
+prov-2025-cerita4-d1,pembahasan_hilang,Kunci berupa teks placeholder 'Pilihan string',Sudah Diperbaiki,Kunci diisi 'B' dan pembahasan lengkap ditambahkan
+prov-2025-cerita4-d2,pembahasan_hilang,Kunci berupa teks placeholder 'Jumlah telur Balado maksimal',Sudah Diperbaiki,Kunci diisi '5' dan pembahasan lengkap ditambahkan
+prov-2025-cerita4-d3,pembahasan_hilang,Kunci berupa teks placeholder 'Jumlah telur Balado maksimal',Sudah Diperbaiki,Kunci diisi '8' dan pembahasan lengkap ditambahkan
+prov-2025-cerita5-e1,pembahasan_hilang,Kunci berupa teks placeholder 'Pilihan skenario',Sudah Diperbaiki,Kunci diisi 'D' dan pembahasan lengkap ditambahkan
+prov-2025-cerita5-e2,pembahasan_hilang,Kunci berupa teks placeholder 'Benar / Salah',Sudah Diperbaiki,Kunci diisi 'BENAR' dan pembahasan lengkap ditambahkan
+prov-2025-cerita5-e3,pembahasan_hilang,Kunci berupa teks placeholder 'Jumlah ikat maksimum',Sudah Diperbaiki,Kunci diisi '5' dan pembahasan lengkap ditambahkan
+prov-2025-cerita6-f1,pembahasan_hilang,Kunci berupa teks placeholder 'Pilihan kondisi',Sudah Diperbaiki,Kunci diisi 'E' dan pembahasan lengkap ditambahkan
+prov-2025-cerita6-f2,pembahasan_hilang,Kunci berupa teks placeholder 'Jumlah posisi awal bebek',Sudah Diperbaiki,Kunci diisi '499' dan pembahasan lengkap ditambahkan
+prov-2025-cerita6-f3,pembahasan_hilang,Kunci berupa teks placeholder 'Total nilai kerisihan',Sudah Diperbaiki,Kunci diisi '99' dan pembahasan lengkap ditambahkan
+prov-2026-cerita1-a1,pembahasan_hilang,Kunci berupa teks placeholder 'Jumlah kotak maksimum',Sudah Diperbaiki,Kunci diisi '2' dan pembahasan lengkap ditambahkan
+prov-2026-cerita1-a2,pembahasan_hilang,Kunci berupa teks placeholder 'Jumlah kotak maksimum dengan syarat',Sudah Diperbaiki,Kunci diisi '1' dan pembahasan lengkap ditambahkan
+prov-2026-cerita1-a3,pembahasan_hilang,Kunci berupa teks placeholder 'Nilai x terkecil',Sudah Diperbaiki,Kunci diisi '25' dan pembahasan lengkap ditambahkan
+prov-2026-cerita2-b1,pembahasan_hilang,Kunci berupa teks placeholder 'Total butir candil maksimum',Sudah Diperbaiki,Kunci diisi '12' dan pembahasan lengkap ditambahkan
+prov-2026-cerita2-b2,pembahasan_hilang,Kunci berupa teks placeholder 'Total butir candil maksimum',Sudah Diperbaiki,Kunci diisi '260' dan pembahasan lengkap ditambahkan
+prov-2026-cerita2-b3,pembahasan_hilang,Kunci berupa teks placeholder 'Benar / Salah',Sudah Diperbaiki,Kunci diisi 'BENAR' dan pembahasan lengkap ditambahkan
+prov-2026-cerita3-c1,pembahasan_hilang,Kunci berupa teks placeholder 'Pilihan nilai M',Sudah Diperbaiki,Kunci diisi 'E' dan pembahasan lengkap ditambahkan
+prov-2026-cerita3-c2,pembahasan_hilang,Kunci berupa teks placeholder 'Jumlah kemungkinan M',Sudah Diperbaiki,Kunci diisi '14' dan pembahasan lengkap ditambahkan
+prov-2026-cerita3-c3,pembahasan_hilang,Kunci berupa teks placeholder 'Jumlah kemungkinan M',Sudah Diperbaiki,Kunci diisi '175' dan pembahasan lengkap ditambahkan
+prov-2026-cerita4-d1,pembahasan_hilang,Kunci berupa teks placeholder 'Nilai S min',Sudah Diperbaiki,Kunci diisi '4' dan pembahasan lengkap ditambahkan
+prov-2026-cerita4-d2,pembahasan_hilang,Kunci berupa teks placeholder 'Jumlah porsi minimum',Sudah Diperbaiki,Kunci diisi '20' dan pembahasan lengkap ditambahkan
+prov-2026-cerita4-d3,pembahasan_hilang,Kunci berupa teks placeholder 'Nilai S min terbesar',Sudah Diperbaiki,Kunci diisi '8' dan pembahasan lengkap ditambahkan
+prov-2026-cerita5-e1,pembahasan_hilang,Kunci berupa teks placeholder 'Jumlah pagar estetik',Sudah Diperbaiki,Kunci diisi '3' dan pembahasan lengkap ditambahkan
+prov-2026-cerita5-e2,pembahasan_hilang,Kunci berupa teks placeholder 'Jumlah cara pembagian',Sudah Diperbaiki,Kunci diisi '11' dan pembahasan lengkap ditambahkan
+prov-2026-cerita5-e3,pembahasan_hilang,Kunci berupa teks placeholder 'Nilai N terkecil',Sudah Diperbaiki,Kunci diisi '13' dan pembahasan lengkap ditambahkan
+prov-2026-cerita6-f1,pembahasan_hilang,Kunci berupa teks placeholder 'Porsi maksimum',Sudah Diperbaiki,Kunci diisi '50' dan pembahasan lengkap ditambahkan
+prov-2026-cerita6-f2,pembahasan_hilang,Kunci berupa teks placeholder 'Benar / Salah',Sudah Diperbaiki,Kunci diisi 'SALAH' dan pembahasan lengkap ditambahkan
+prov-2026-cerita6-f3,pembahasan_hilang,Kunci berupa teks placeholder 'Porsi maksimum',Sudah Diperbaiki,Kunci diisi '146' dan pembahasan lengkap ditambahkan
+prov_soal6_2013,kunci_placeholder,Tahun 2013: Kunci jawaban sebelumnya berupa teks placeholder 'Analisis geometri penempatan titik',Sudah Diperbaiki,Kunci jawaban dihitung secara eksak menjadi '4' dan pembahasan naratif 2019 disertakan
+prov_soal35_2013,kunci_placeholder,Tahun 2013: Kunci jawaban sebelumnya berupa teks placeholder 'Nilai akumulasi',Sudah Diperbaiki,Kunci jawaban dihitung secara eksak menjadi '0' dan pembahasan naratif 2019 disertakan
+prov_soal19_2014,kunci_placeholder,Tahun 2014: Kunci jawaban sebelumnya berupa teks placeholder 'Penghitungan kombinasi ukuran grid',Sudah Diperbaiki,Kunci jawaban dihitung secara eksak menjadi '9851' dan pembahasan naratif 2019 disertakan
+prov_soal41_2014,kunci_placeholder,Tahun 2014: Kunci jawaban sebelumnya berupa teks placeholder 'Nilai kombinasi / fungsi',Sudah Diperbaiki,Kunci jawaban dihitung secara eksak menjadi '2950' dan pembahasan naratif 2019 disertakan
+prov_soal38_2015,kunci_placeholder,Tahun 2015: Kunci jawaban sebelumnya berupa teks placeholder 'Nilai minimum',Sudah Diperbaiki,Kunci jawaban dihitung secara eksak menjadi 'Tidak ada' dan pembahasan naratif 2019 disertakan
+prov_soal6_2016,kunci_placeholder,Tahun 2016: Kunci jawaban sebelumnya berupa teks placeholder 'Nilai kekuatan minimum',Sudah Diperbaiki,Kunci jawaban dihitung secara eksak menjadi '83' dan pembahasan naratif 2019 disertakan
+prov_soal10_2016,kunci_placeholder,Tahun 2016: Kunci jawaban sebelumnya berupa teks placeholder 'Daftar nama teman Pak Dengklek',Sudah Diperbaiki,Kunci jawaban dihitung secara eksak menjadi 'Bu Sura dan Pak Ganesh' dan pembahasan naratif 2019 disertakan
+prov_soal14_2016,kunci_placeholder,Tahun 2016: Kunci jawaban sebelumnya berupa teks placeholder 'Jumlah kombinasi persamaan valid',Sudah Diperbaiki,Kunci jawaban dihitung secara eksak menjadi '28' dan pembahasan naratif 2019 disertakan
+prov_soal15_2016,kunci_placeholder,Tahun 2016: Kunci jawaban sebelumnya berupa teks placeholder 'Jumlah kombinasi tepat 15 tusuk gigi',Sudah Diperbaiki,Kunci jawaban dihitung secara eksak menjadi '12' dan pembahasan naratif 2019 disertakan
+prov_soal19_2016,kunci_placeholder,Tahun 2016: Kunci jawaban sebelumnya berupa teks placeholder 'Nilai 5x + y',Sudah Diperbaiki,Kunci jawaban dihitung secara eksak menjadi '12' dan pembahasan naratif 2019 disertakan
+prov_soal20_2016,kunci_placeholder,Tahun 2016: Kunci jawaban sebelumnya berupa teks placeholder 'Nilai N',Sudah Diperbaiki,Kunci jawaban dihitung secara eksak menjadi '17' dan pembahasan naratif 2019 disertakan
+prov_soal21_2016,kunci_placeholder,Tahun 2016: Kunci jawaban sebelumnya berupa teks placeholder 'Jumlah bilangan minimum',Sudah Diperbaiki,Kunci jawaban dihitung secara eksak menjadi '5' dan pembahasan naratif 2019 disertakan
+prov_soal22_2016,kunci_placeholder,Tahun 2016: Kunci jawaban sebelumnya berupa teks placeholder 'Jumlah hari minimum',Sudah Diperbaiki,Kunci jawaban dihitung secara eksak menjadi '5' dan pembahasan naratif 2019 disertakan
+prov_soal23_2016,kunci_placeholder,Tahun 2016: Kunci jawaban sebelumnya berupa teks placeholder 'Jumlah hari minimum dengan 7 tim',Sudah Diperbaiki,Kunci jawaban dihitung secara eksak menjadi '5' dan pembahasan naratif 2019 disertakan
+prov_soal26_2016,kunci_placeholder,Tahun 2016: Kunci jawaban sebelumnya berupa teks placeholder 'Nilai output fungsi klok',Sudah Diperbaiki,Kunci jawaban dihitung secara eksak menjadi '118' dan pembahasan naratif 2019 disertakan
+prov_soal32_2016,kunci_placeholder,Tahun 2016: Kunci jawaban sebelumnya berupa teks placeholder 'Nilai output meong(888)',Sudah Diperbaiki,Kunci jawaban dihitung secara eksak menjadi '11' dan pembahasan naratif 2019 disertakan
+prov_soal36_2016,kunci_placeholder,Tahun 2016: Kunci jawaban sebelumnya berupa teks placeholder 'Jumlah pemanggilan',Sudah Diperbaiki,Kunci jawaban dihitung secara eksak menjadi '5' dan pembahasan naratif 2019 disertakan
+prov_soal17_2017,kunci_placeholder,Tahun 2017: Kunci jawaban sebelumnya berupa teks placeholder 'Nilai maksimum berlian',Sudah Diperbaiki,Kunci jawaban dihitung secara eksak menjadi '108' dan pembahasan naratif 2019 disertakan
+prov_soal18_2017,kunci_placeholder,Tahun 2017: Kunci jawaban sebelumnya berupa teks placeholder 'Nilai maksimum dengan re-ordering',Sudah Diperbaiki,Kunci jawaban dihitung secara eksak menjadi '207' dan pembahasan naratif 2019 disertakan
+prov_soal23_2017,kunci_placeholder,Tahun 2017: Kunci jawaban sebelumnya berupa teks placeholder 'Nilai maksimal penggemar',Sudah Diperbaiki,Kunci jawaban dihitung secara eksak menjadi '34' dan pembahasan naratif 2019 disertakan
+prov_soal25_2017,kunci_placeholder,"Tahun 2017: Kunci jawaban sebelumnya berupa teks placeholder 'Jumlah kombinasi p,q,r,s'",Sudah Diperbaiki,Kunci jawaban dihitung secara eksak menjadi '2' dan pembahasan naratif 2019 disertakan
+prov_soal27_2017,kunci_placeholder,Tahun 2017: Kunci jawaban sebelumnya berupa teks placeholder 'Daftar indeks paku cembung (Convex Hull)',Sudah Diperbaiki,"Kunci jawaban dihitung secara eksak menjadi '1, 2, 3, 9, 10, 12' dan pembahasan naratif 2019 disertakan"
+prov_soal30_2017,kunci_placeholder,Tahun 2017: Kunci jawaban sebelumnya berupa teks placeholder 'Nilai energi maksimal',Sudah Diperbaiki,Kunci jawaban dihitung secara eksak menjadi '1857' dan pembahasan naratif 2019 disertakan
+prov_soal42_2017,kunci_placeholder,Tahun 2017: Kunci jawaban sebelumnya berupa teks placeholder 'Nilai indeks i',Sudah Diperbaiki,Kunci jawaban dihitung secara eksak menjadi '9864' dan pembahasan naratif 2019 disertakan
+prov_soal45_2017,kunci_placeholder,Tahun 2017: Kunci jawaban sebelumnya berupa teks placeholder 'Nilai hasil pemanggilan',Sudah Diperbaiki,Kunci jawaban dihitung secara eksak menjadi '2' dan pembahasan naratif 2019 disertakan
+prov_soal47_2017,kunci_placeholder,Tahun 2017: Kunci jawaban sebelumnya berupa teks placeholder 'Jumlah hubungan kakek-cucu',Sudah Diperbaiki,Kunci jawaban dihitung secara eksak menjadi '6' dan pembahasan naratif 2019 disertakan
+prov_soal41_2018,kunci_placeholder,Tahun 2018: Kunci jawaban sebelumnya berupa teks placeholder 'Program penghitungan frekuensi nilai maksimum',Sudah Diperbaiki,Kunci jawaban dihitung secara eksak menjadi '3' dan pembahasan naratif 2019 disertakan
+prov_soal43_2018,kunci_placeholder,Tahun 2018: Kunci jawaban sebelumnya berupa teks placeholder 'Panjang subsekuens maksimum',Sudah Diperbaiki,Kunci jawaban dihitung secara eksak menjadi '7' dan pembahasan naratif 2019 disertakan
+prov_soal9_2019,kunci_placeholder,Tahun 2019: Kunci jawaban sebelumnya berupa teks placeholder 'Nilai biaya minimum (MST)',Sudah Diperbaiki,Kunci jawaban dihitung secara eksak menjadi '26' dan pembahasan naratif 2019 disertakan
+prov_soal10_2019,kunci_placeholder,Tahun 2019: Kunci jawaban sebelumnya berupa teks placeholder 'Nilai biaya MST kedua',Sudah Diperbaiki,Kunci jawaban dihitung secara eksak menjadi '26' dan pembahasan naratif 2019 disertakan
+prov_soal15_2019,kunci_placeholder,Tahun 2019: Kunci jawaban sebelumnya berupa teks placeholder 'Jumlah rute',Sudah Diperbaiki,Kunci jawaban dihitung secara eksak menjadi '12' dan pembahasan naratif 2019 disertakan
+prov_soal16_2019,kunci_placeholder,Tahun 2019: Kunci jawaban sebelumnya berupa teks placeholder 'Jumlah pembatalan minimal',Sudah Diperbaiki,Kunci jawaban dihitung secara eksak menjadi '3' dan pembahasan naratif 2019 disertakan
+prov_soal19_2019,kunci_placeholder,Tahun 2019: Kunci jawaban sebelumnya berupa teks placeholder 'Jumlah minimal',Sudah Diperbaiki,Kunci jawaban dihitung secara eksak menjadi '3' dan pembahasan naratif 2019 disertakan
+prov_soal24_2019,kunci_placeholder,Tahun 2019: Kunci jawaban sebelumnya berupa teks placeholder 'Nilai F(12)',Sudah Diperbaiki,Kunci jawaban dihitung secara eksak menjadi '36' dan pembahasan naratif 2019 disertakan
+prov_soal25_2019,kunci_placeholder,Tahun 2019: Kunci jawaban sebelumnya berupa teks placeholder 'Nilai F(200)',Sudah Diperbaiki,Kunci jawaban dihitung secara eksak menjadi '10000' dan pembahasan naratif 2019 disertakan
+prov_soal27_2019,kunci_placeholder,Tahun 2019: Kunci jawaban sebelumnya berupa teks placeholder 'Jumlah bebek babak akhir',Sudah Diperbaiki,Kunci jawaban dihitung secara eksak menjadi '8' dan pembahasan naratif 2019 disertakan
+prov_soal39_2019,kunci_placeholder,Tahun 2019: Kunci jawaban sebelumnya berupa teks placeholder 'Format angka',Sudah Diperbaiki,"Kunci jawaban dihitung secara eksak menjadi '7,3,4,8' dan pembahasan naratif 2019 disertakan"
+prov_soal40_2019,kunci_placeholder,Tahun 2019: Kunci jawaban sebelumnya berupa teks placeholder 'Format angka',Sudah Diperbaiki,"Kunci jawaban dihitung secara eksak menjadi '255,127,254,63,253,258,64,257,128,256' dan pembahasan naratif 2019 disertakan"
+prov_soal42_2019,kunci_placeholder,Tahun 2019: Kunci jawaban sebelumnya berupa teks placeholder 'Jumlah titik segmen',Sudah Diperbaiki,Kunci jawaban dihitung secara eksak menjadi '6' dan pembahasan naratif 2019 disertakan
+prov_soal30_2010,gambar_dummy,Pembersihan referensi gambar dummy 'soal_30.png' pada soal teks aritmatika/logika,Sudah Diperbaiki,Gambar lokal diubah menjadi null dan ketergantungan visual dummy dihapus
+prov_soal54_2016,gambar_dummy,Pembersihan referensi gambar dummy 'soal_54.png' yang tidak relevan dengan teks soal,Sudah Diperbaiki,Gambar lokal diubah menjadi null dan ketergantungan visual dummy dihapus
+prov_soal55_2016,gambar_dummy,Pembersihan referensi gambar dummy 'soal_55.png' yang tidak relevan dengan teks soal,Sudah Diperbaiki,Gambar lokal diubah menjadi null dan ketergantungan visual dummy dihapus
+prov_soal56_2016,gambar_dummy,Pembersihan referensi gambar dummy 'soal_56.png' yang tidak relevan dengan teks soal,Sudah Diperbaiki,Gambar lokal diubah menjadi null dan ketergantungan visual dummy dihapus
+prov_soal54_2017,gambar_dummy,Pembersihan referensi gambar dummy 'soal_54.png' yang tidak relevan dengan teks soal,Sudah Diperbaiki,Gambar lokal diubah menjadi null dan ketergantungan visual dummy dihapus
+prov_soal55_2017,gambar_dummy,Pembersihan referensi gambar dummy 'soal_55.png' yang tidak relevan dengan teks soal,Sudah Diperbaiki,Gambar lokal diubah menjadi null dan ketergantungan visual dummy dihapus
