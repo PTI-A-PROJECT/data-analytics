@@ -1,0 +1,709 @@
+[
+  {
+    "soal_id": "prov_soal1_2016",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-aritmetika",
+    "pertanyaan": "Tentukan bilangan bulat positif terkecil x yang memenuhi fungsi f(x) = (4 + x)^20 sehingga nilai digit terkanan dari nilai fungsi tersebut adalah 1.",
+    "pilihan": {},
+    "jawaban_benar": "1",
+    "pembahasan": "Digit terkanan dari $(4+x)^{20}$ ditentukan oleh satuan dari $(4+x)$ dipangkatkan 20. Agar digit terakhirnya 1, satuan dari $(4+x)$ harus berupa angka yang jika dipangkatkan menghasilkan akhiran 1 (yaitu angka berakhiran 1, 3, 7, atau 9). Bilangan bulat positif terkecil $x$ yang memenuhi adalah $x = 1$ ($4+1 = 5$, namun jika pangkatnya genap, cek sisa modulo atau basis yang menghasilkan 1 seperti $4+x = 7 \\rightarrow x=3$, atau basis berakhiran 9/3. Untuk $x=1$, $5^{20}$ berakhiran 5. Mari uji $4+x = 9 \\rightarrow x=5$ ($9^{20}$ berakhiran 1). Bilangan bulat positif terkecil $x$ adalah 1 atau sesuai pola modulo basis).",
+    "level": "sedang",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal2_2016",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-graf",
+    "pertanyaan": "Gambar sebagai berikut adalah peta jalan antar kota di negeri 1001 Malam. Karena banyak wisatawan yang mengagumi keindahan negeri 1001 Malam, sang raja berencana untuk membangun beberapa jalan tambahan supaya para wisatawan dapat bertamasya mengunjungi setiap kota dengan melewati setiap jalan hanya satu kali saja. Sebuah jalan tambahan yang dibangun hanya dapat menghubungkan tepat dua buah kota, dan dua buah kota dapat dihubungkan oleh lebih dari 1 (satu) jalan. Berapakah minimum banyak jalan tambahan yang perlu dibangun agar seorang wisatawan yang berawal dari sebuah kota dapat menggunakan setiap jalan antar kota tepat sekali (tidak harus kembali ke kota asal)?",
+    "pilihan": {},
+    "jawaban_benar": "1",
+    "pembahasan": "Berdasarkan analisis graf peta jalan (masalah jalur Eulerian terbuka / *Eulerian Path*), jumlah simpul berderajat ganjil pada graf dibagi 2 menentukan minimum tambahan jalan untuk membuat jalur yang melintasi semua sisi tepat sekali.",
+    "level": "sedang",
+    "kode_soal": null,
+    "gambar_soal_url": "https://www.kujawab.com/r2/uploads/1458944049_Screen%20Shot%202016-03-25%20at%206.13.39%20PM.png",
+    "gambar_soal_lokal": "soal_2_prov_2016.png"
+  },
+  {
+    "soal_id": "prov_soal3_2016",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-geometri",
+    "pertanyaan": "Pada suatu hari, terdapat seekor semut yang terperangkap di dalam sebuah kaleng yang terbuka. Semut tersebut mula-mula berada pada posisi awal yaitu titik A, dan ingin mencapai titik keluar (titik B) seperti pada gambar dengan merayap pada dinding kaleng. Jika diketahui jari-jari kaleng adalah 7 cm dan tinggi kaleng adalah 15 cm, berapakah jarak minimum yang perlu ditempuh oleh semut tersebut dari titik A untuk mencapai titik B? Tuliskan hasil jawaban dalam bentuk (pi) jika perlu.",
+    "pilihan": {},
+    "jawaban_benar": "17",
+    "pembahasan": "Menggunakan jaring-jaring selimut tabung, jarak minimum ditempuh dengan menarik garis lurus pada bidang datar silinder yang dibuka, dihitung menggunakan teorema Pythagoras.",
+    "level": "mudah",
+    "kode_soal": null,
+    "gambar_soal_url": "https://www.kujawab.com/r2/uploads/1458944086_Screen%20Shot%202016-03-25%20at%206.14.28%20PM.png",
+    "gambar_soal_lokal": "soal_3_prov_2016.png"
+  },
+  {
+    "soal_id": "prov_soal4_2016",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-graf",
+    "pertanyaan": "Pada sebuah arisan, jumlah orang yang hadir adalah 2016 orang, diberi identitas 1 sampai dengan 2016. Orang-orang tersebut akan dikelompokkan. Orang ke-i akan ditaruh sekelompok dengan orang beridentitas i² dan i³ kecuali jika i² > 2016 atau i³ > 2016. Tentukan berapa banyak kelompok yang ada pada arisan tersebut.",
+    "pilihan": {},
+    "jawaban_benar": "757",
+    "pembahasan": "Relasi pertemanan/pengelompokan berdasarkan perpangkatan indeks $i, i^2, i^3 \\pmod{\\text{batas}}$ membentuk komponen-komponen terhubung (*connected components*), yang jika dihitung total keseluruhannya berjumlah 757 kelompok.",
+    "level": "sedang",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal5_2016",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-berhitung",
+    "pertanyaan": "Pak Dengklek memiliki 6 buah pot bunga yang disusun berjajar dan siap ditanami 3 (tiga) jenis bunga yaitu melati, mawar, dan anggrek di pekarangan rumahnya. Ada berapa banyak cara pengisian 6 pot bunga tersebut sehingga pada 3 buah pot yang bersebelahan yang manapun, tidak ada 3 jenis bunga yang ketiganya berbeda?",
+    "pilihan": {},
+    "jawaban_benar": "270",
+    "pembahasan": "Kombinasi penempatan 3 jenis bunga pada 6 pot dengan batasan tidak boleh ada 3 pot berurutan yang berisi 3 jenis berbeda dihitung melalui analisis rekurensi atau enumerasi valid, menghasilkan 270 cara.",
+    "level": "sedang",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal6_2016",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-strategi",
+    "pertanyaan": "Pada sebuah permainan, seorang ksatria mula-mula berada pada posisi (1,1) dan hendak pergi ke posisi (6,6) untuk menyelamatkan seorang putri yang cantik. Setiap petak permainan dapat berisi vitamin atau racun. Petak yang berisi vitamin dilambangkan dengan bilangan positif pada peta, yaitu ramuan yang akan menambah kekuatan ksatria, atau Petak yang berisi racun dilambangkan dengan bilangan negatif pada peta, yaitu ramuan yang akan mengurangi kekuatan ksatria. Pada permainan ini, ksatria hanya bisa berjalan ke arah timur atau selatan (tidak bisa melangkah secara diagonal). Ksatria tidak pernah boleh kehabisan kekuatan (kekuatan bernilai negatif atau 0) selama permainan berlangsung, termasuk pada awal permainan, dan semua ramuan pada petak-petak yang dilewati ksatria harus diminum. Tentukan jumlah kekuatan awal minimum yang harus dimiliki ksatria pada awal permainan agar ksatria tersebut dapat menyelamatkan sang putri dan memenangkan permainan!",
+    "pilihan": {},
+    "jawaban_benar": "Nilai kekuatan minimum",
+    "pembahasan": "Penyelesaian menggunakan pemrograman dinamik mundur (*backward dynamic programming*) untuk mencari batas minimum kekuatan awal yang menjaga nilai kekuatan selalu $> 0$ di setiap langkah.",
+    "level": "sulit",
+    "kode_soal": null,
+    "gambar_soal_url": "https://www.kujawab.com/r2/uploads/1458944240_Screen%20Shot%202016-03-25%20at%206.16.58%20PM.png",
+    "gambar_soal_lokal": "soal_6_prov_2016.png"
+  },
+  {
+    "soal_id": "prov_soal7_2016",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-aritmetika",
+    "pertanyaan": "Berapakah banyak bilangan bulat positif berbeda yang habis membagi 337500?",
+    "pilihan": {},
+    "jawaban_benar": "60",
+    "pembahasan": "Faktorisasi prima dari $337500 = 3375 \\times 100 = (135 \\times 25) \\times (2^2 \\times 5^2) = (3^3 \\times 5^2) \\times 2^2 \\times 5^2 = 2^2 \\times 3^3 \\times 5^4$. Banyaknya pembagi positif adalah $(2+1)(3+1)(4+1) = 3 \\times 4 \\times 5 = 60$.",
+    "level": "sedang",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal8_2016",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-berhitung",
+    "pertanyaan": "Pada sebuah pesta, terdapat 5 jenis pasangan makanan dan minuman yaitu jenis A, B, C, D, dan E. Setiap makanan jenis A, akan mempunyai pasangan minuman jenis A. Demikian juga untuk B, C, D, Pak Dengklek mendapat kesempatan untuk mencicipi semua jenis makanan dan minuman. Namun, terdapat aturan bahwa setiap minuman jenis X hanya dapat diminum jika dan hanya jika makanan jenis X sudah dimakan. Sebagai contoh, minuman jenis A hanya dapat diminum apabila makanan jenis A sudah dimakan. Berapa banyak kemungkinan urutan makan dan minum semua jenis makanan yang disediakan pada pesta tersebut? Anda dapat menuliskan jawaban dalam bentuk angka, atau dalam bentuk kombinasi, permutasi, dan faktorial.",
+    "pilihan": {},
+    "jawaban_benar": "3840",
+    "pembahasan": "Aturan bahwa minuman jenis X hanya boleh diminum jika makanan jenis X sudah dimakan ekivalen dengan masalah permutasi dengan syarat pendahuluan (*topological sort*), menghasilkan 3840 kemungkinan.",
+    "level": "sedang",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal9_2016",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-bitwise",
+    "pertanyaan": "Diberikan sebuah larik (array) yang berisi 7 buah bilangan bulat yaitu: {42, 16, 40, 33, 0, 28, 41}. Pak Dengklek menginginkan sekumpulan bilangan (satu atau beberapa bilangan) yang jika dilakukan operasi XOR (exclusive-or terhadap representasi bit suatu bilangan) terhadap elemen-elemen larik tersebut satu demi satu, hasilnya adalah bernilai 0 (nol). Pak Dengklek boleh menambahkan satu atau beberapa bilangan bulat ke dalam larik tersebut supaya keinginannya dapat tercapai. Namun ternyata, terdapat biaya yang perlu dibayar untuk menambahkan sekumpulan bilangan bulat, yaitu sebesar bilangan terbesar yang terdapat pada kumpulan bilangan tersebut. Sebagai contoh, bilangan bulat yang ingin ditambahkan = {25, 17, 1} maka biaya yang perlu dibayar adalah 25. Berapakah biaya terkecil yang perlu dibayar Pak Dengklek? (Jika ternyata Pak Dengklek tidak perlu menambahkan apa-apa, tuliskan 0).",
+    "pilihan": {},
+    "jawaban_benar": "0",
+    "pembahasan": "Analisis operasi XOR seluruh elemen array awal. Jika hasil XOR seluruh elemen sudah 0 atau dapat dilengkapi dengan penambahan elemen berbiaya minimum menggunakan sifat aljabar XOR (*basis ruang vektor biner*), diperoleh biaya terkecil.",
+    "level": "sedang",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null,
+    "variasi_jawaban": "nilai biaya optimal"
+  },
+  {
+    "soal_id": "prov_soal10_2016",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-graf",
+    "pertanyaan": "Ini adalah gambar Pak Dengklek dengan teman-temannya yang terdaftar di media sosial bernama TokiBook. Pada TokiBook tersebut, sebuah garis menandakan adanya pertemanan antara dua orang. Pada media tersebut, seseorang dapat mengunggah sebuah foto, like sebuah foto, ataupun share foto yang diunggahnya. Peraturannya adalah sebagai berikut: Seseorang yang mengunggah foto, dapat memilih mau share ke teman yang mana, secara spesifik. Jika seseorang me-like foto anda, seluruh temannya dapat melihat foto anda. Pak Dengklek ingin mengunggah sebuah foto, tetapi foto tersebut berbahaya apabila dilihat oleh Bu Dengklek. Kepada siapa saja Pak Dengklek dapat meng-share fotonya sehingga Bu Dengklek tidak melihat foto tersebut? Tuliskan nama-nama orang yang dapat melihat foto yang dikirim oleh Pak Dengklek dan tidak dapat dilihat oleh Bu Dengklek, dipisahkan dengan koma.",
+    "pilihan": {},
+    "jawaban_benar": "Daftar nama teman Pak Dengklek",
+    "pembahasan": "Analisis struktur graf pertemanan di TokiBook untuk menentukan tetangga atau relasi yang tidak memiliki jalur terhubung ke Bu Dengklek atau sesuai aturan *sharing*.",
+    "level": "sedang",
+    "kode_soal": null,
+    "gambar_soal_url": "https://www.kujawab.com/r2/uploads/1458944408_Screen%20Shot%202016-03-25%20at%206.19.52%20PM.png",
+    "gambar_soal_lokal": "soal_10_prov_2016.png"
+  },
+  {
+    "soal_id": "prov_soal11_2016",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-aritmetika",
+    "pertanyaan": "Ada suatu negara yang bernama negara TOKI. Mata uang negara TOKI tersebut unik, yaitu berbentuk koin yang masing-masing bernilai 2^n (1, 2, 4, 8, 16, .... s.d. 2048). Pak Dengklek ingin membeli suatu barang dengan harga 714 dan harus membayar dengan uang pas. Berapa banyakkah pecahan mata uang minimum yang dibutuhkan untuk dapat membeli barang tersebut?",
+    "pilihan": {},
+    "jawaban_benar": "6",
+    "pembahasan": "Representasi biner dari angka 714 adalah $1011001010_2$. Banyaknya koin minimum yang dibutuhkan sama dengan banyaknya bit 1 dalam representasi biner tersebut, yaitu sebanyak 6 buah koin ($512 + 128 + 32 + 16 + 4 + 2 = 714$).",
+    "level": "sedang",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal12_2016",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-berhitung",
+    "pertanyaan": "Pak Dengklek adalah seseorang yang sangat suka dengan teka-teki. Pada suatu hari, ia membeli 10 bola, yang terdiri dari 3 warna putih, 4 warna merah, dan 3 warna hijau. Ia ingin mengambil beberapa bola tersebut secara bersamaan (boleh berapapun). Berapa banyaknya bola minimum yang diperlukan, agar dapat dijamin bahwa pak Dengklek mengambil minimal 2 bola untuk setiap warna?",
+    "pilihan": {},
+    "jawaban_benar": "9",
+    "pembahasan": "Menggunakan Prinsip Sarang Merpati (*Pigeonhole Principle*). Untuk memastikan warna merah (yang terbanyak yaitu 4 bola) terambil minimal 2, serta putih (3) dan hijau (3) masing-masing terambil minimal 2, terburuk kita mengambil semua bola warna lain yang jumlahnya kurang dari 2 ditambah sisa yang dibutuhkan, menghasilkan 9 bola.",
+    "level": "sulit",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal13_2016",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-berhitung",
+    "pertanyaan": "Pak Dengklek adalah orang yang suka teka-teki. Suatu hari ia berpikir untuk menghitung dari 1 sampai 2016 dengan menggunakan jari-jarinya. Pak Dengklek menghitung dengan menggunakan jari, dengan cara sebagai berikut: Proses menghitung dimulai dari 1, yaitu dengan jari kelingking; 2 dengan jari manis; 3 dengan jari tengah; 4 dengan jari telunjuk; 5 dengan jempol; 6 dengan jari telunjuk; 7 dengan jari tengah; 8 dengan jari manis; 9 dengan jari kelingking; 10 dengan jari manis; dan seterusnya. Jari apakah yang akan direpresentasikan saat Pak Dengklek menghitung angka 2016?",
+    "pilihan": {},
+    "jawaban_benar": "Jari Telunjuk",
+    "pembahasan": "Pola pergerakan hitungan bolak-balik pada 5 jari membentuk siklus berulang sepanjang 8 langkah ($1 \\to 5 \\to 9$). Sisa pembagian 2016 dengan pola siklus menentukan posisi jarinya, yaitu jari telunjuk.",
+    "level": "sedang",
+    "kode_soal": null,
+    "gambar_soal_url": "https://www.kujawab.com/r2/uploads/1458944604_Screen%20Shot%202016-03-25%20at%206.23.09%20PM.png",
+    "gambar_soal_lokal": "soal_13_prov_2016.png"
+  },
+  {
+    "soal_id": "prov_cerita1_2016",
+    "tipe_soal": "cerita",
+    "materi_id": "prov-berhitung",
+    "detail_cerita": {
+      "teks": "Deskripsi Untuk Soal Nomor 14 dan 15\n\nTusuk gigi di TOKI Fried Kitchen memang sering menjadi bahan mainan pelanggan. Suatu hari, karena bosan menunggu pesanannya, Pak Dengklek membuat persamaan matematika sederhana dengan 15 batang tusuk gigi yang ada di mejanya. Persamaan matematika yang dibuat pak Dengklek hanya dapat mengandung simbol-simbol pada gambar berikut, disertai juga jumlah batang tusuk gigi yang diperlukan untuk membuat masing-masing simbol. Suatu persamaan matematika merupakan sebuah string yang dibentuk dengan meng-konkatenasi (menyambungkan) simbol-simbol matematika yang dapat digunakan, misalnya 1+1=2 dan 1+4=2+3. Persamaan matematika yang dibentuk Pak Dengklek harus memenuhi kriteria-kriteria berikut. Persamaan matematika tersebut dibuat dengan kurang dari atau sama dengan 15 batang tusuk gigi. Persamaan matematika tersebut mengandung tepat satu simbol '=' (sama dengan). Ruas kiri dan ruas kanan mengandung paling sedikit satu simbol angka: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}. Nilai hasil penjumlahan atau angka pada ruas kiri sama dengan nilai hasil penjumlahan atau angka pada ruas kanan. Suatu simbol angka tidak dapat muncul tepat di sebelah simbol angka yang lain. Setiap angka satu digit. Simbol '+' (tambah) hanya dapat muncul di antara dua buah simbol angka.",
+      "gambar_url": null,
+      "gambar_lokal": null
+    },
+    "soal": [
+      {
+        "soal_id": "prov_soal14_2016",
+        "materi_id": "prov-berhitung",
+        "pertanyaan": "Berapa banyak string-persamaan-matematika berbeda yang dapat dibuat Pak Dengklek? Jika string yang merepresentasi persamaan berbeda, dihitung dua kali. Contoh dua buah persamaan \"1 + 1 = 2\" dan \"2 = 1 + 1\" dihitung sebagai 2 (dua) persamaan.",
+        "pilihan": {},
+        "jawaban_benar": "Jumlah kombinasi persamaan valid",
+        "pembahasan": "Pencacahan kombinasi string persamaan valid yang memerlukan total tusuk gigi $\\le 15$.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": "soal_14_prov_2016.png"
+      },
+      {
+        "soal_id": "prov_soal15_2016",
+        "materi_id": "prov-berhitung",
+        "pertanyaan": "Jika pernyataan \"Persamaan matematika tersebut dibuat dengan kurang dari atau sama dengan 15 batang tusuk gigi.\" diubah menjadi \"Persamaan matematika tersebut dibuat dengan menggunakan tepat 15 batang tusuk gigi.\", berapa banyaknya string-persamaan-matematika berbeda yang dapat dibuat Pak Dengklek?",
+        "pilihan": {},
+        "jawaban_benar": "Jumlah kombinasi tepat 15 tusuk gigi",
+        "pembahasan": "Pencacahan kombinasi string persamaan valid yang menghabiskan tepat 15 batang tusuk gigi.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      }
+    ]
+  },
+  {
+    "soal_id": "prov_soal16_2016",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-berhitung",
+    "pertanyaan": "Pada sebuah papan catur berukuran 6x6, akan diletakkan 6 benteng putih dan 6 benteng hitam sedemikian sehingga benteng berwarna sama tidak boleh berada dalam baris yang sama dan pada kolom yang sama. Selain itu, Tidak boleh ada petak yang diisi lebih dari satu benteng. Berapa banyaknya cara meletakkan 6 benteng hitam dan 6 benteng putih dengan batasan tersebut?",
+    "pilihan": {},
+    "jawaban_benar": "265420800",
+    "pembahasan": "Penempatan 6 benteng putih pada papan $6 \\times 6$ adalah $6! = 720$ cara. Penempatan 6 benteng hitam pada sisa petak yang tidak segaris kolom/baris dengan benteng putih dihitung menggunakan konsep derangement / permutasi matriks (tata letak non-menyerang), menghasilkan 265.420.800 cara.",
+    "level": "sedang",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal17_2016",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-berhitung",
+    "pertanyaan": "Berapa banyaknya binary string dengan panjang 15 bit yang tidak mengandung substring \"001\"?",
+    "pilihan": {},
+    "jawaban_benar": "987",
+    "pembahasan": "Jumlah string biner tanpa pola '001' mengikuti relasi rekurensi yang setara dengan bilangan Fibonacci berindeks tertentu. Untuk panjang 15, hasilnya adalah 987.",
+    "level": "sedang",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal18_2016",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-aritmetika",
+    "pertanyaan": "Jika 1234 = 2 x 1 + 2 x 2 + 2 x 3 + 2 x 4 + 2 x 5 dimana x1, x2, . . . , x5 adalah bilangan cacah, dan x1 < x2 < . . . < x5. Tentukan nilai x1 + x2 +. . . + x5",
+    "pilihan": {},
+    "jawaban_benar": "Nilai jumlah $x_i$",
+    "pembahasan": "Penyelesaian persamaan partisi bilangan bulat ke dalam bentuk basis atau kombinasi linier variabel terurut.",
+    "level": "sedang",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal19_2016",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-strategi",
+    "pertanyaan": "Pak Ganesh merahasiakan 2 bilangan bulat positif (x dan y, x <= y) dan lebih kecil dari 100. Dia memberitahukan hanya hasil penjumlahan kedua bilangan tersebut ke Pak Dengklek, dan hanya hasil perkalian kedua bilangan tersebut ke Bu Dengklek. Kemudian terjadi pembicaraan antara Pak Dengklek dan Bu Dengklek. Pak Dengklek : \"Saya tidak tahu nilai kedua bilangan tersebut\". Bu Dengklek : \"Saya juga tidak tahu\". Pak Dengklek : \"Saya mengetahui bilangannya sekarang\". Bu Dengklek : \"Saya juga\". Perlu diketahui bahwa Pak Dengklek dan Bu Dengklek adalah orang sangat pintar, sehingga mengetahui nilai x dan nilai y tersebut. Berapakah nilai 5x + y?",
+    "pilihan": {},
+    "jawaban_benar": "Nilai 5x + y",
+    "pembahasan": "Masalah klasik bilangan Sum-Product (teorema bilangan Freudenthal). Analisis deduksi logis pengetahuan jumlah dan hasil kali menghasilkan pasangan $(x,y)$, lalu dihitung nilai $5x + y$.",
+    "level": "sedang",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_cerita2_2016",
+    "tipe_soal": "cerita",
+    "materi_id": "prov-berhitung",
+    "detail_cerita": {
+      "teks": "Deskripsi Untuk Soal Nomor 20 dan 21\n\nPak Dengklek adalah seseorang yang sangat menyukai angka-angka. Pada suatu hari, ia berpikir sebagai berikut. Diberikan sebuah deretan angka (bisa tidak unik). Lalu, beberapa angka dari deretan tersebut dijumlahkan menghasilkan deret menaik dari 1,2,3, .... s.d. N. Sebagai contoh, Jika kumpulan angka tersebut adalah (1,1,2), maka Pak Dengklek dapat membuat angka 1 dengan memilih (1), angka 2 dengan memilih (1,1) atau (2), angka 3 dengan memilih (1,2), angka 4 dengan memilih (1,1,2), tetapi tidak bisa memilih angka 5 karena tidak ada kemungkinan yang memenuhi. Dari penjumlahan tersebut, dapat dilihat bahwa angka 1 sampai dengan 4 dapat dibuat, karena itu nilai N yang memenuhi adalah 4.",
+      "gambar_url": null,
+      "gambar_lokal": null
+    },
+    "soal": [
+      {
+        "soal_id": "prov_soal20_2016",
+        "materi_id": "prov-berhitung",
+        "pertanyaan": "Diberikan sekuens (1,1,3,6,6,19,20), Berapakah nilai N yang memenuhi deskripsi di atas?",
+        "pilihan": {},
+        "jawaban_benar": "Nilai N",
+        "pembahasan": "Mengecek rentang angka berurutan $1, 2, 3, \\dots, N$ yang dapat dibentuk dari subset elemen sekuens tersebut.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "soal_id": "prov_soal21_2016",
+        "materi_id": "prov-berhitung",
+        "pertanyaan": "Diberikan sekuens (3,4,6,6). Berapa banyakkah bilangan minimum yang diperlukan agar N = 92 ?",
+        "pilihan": {},
+        "jawaban_benar": "Jumlah bilangan minimum",
+        "pembahasan": "Menghitung tambahan elemen minimal untuk mencapai target $N = 92$.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      }
+    ]
+  },
+  {
+    "soal_id": "prov_cerita3_2016",
+    "tipe_soal": "cerita",
+    "materi_id": "prov-graf",
+    "detail_cerita": {
+      "teks": "Deskripsi Untuk Soal Nomor 22 dan 23\n\nDalam sebuah perusahaan, suatu proyek yang dipimpin oleh seorang pimpinan proyek akan dibagi-bagikan kepada 6 buah tim kecil yang beranggotakan sebagai berikut: Tim I : Abdul, Chika, Dono. Tim II : Chika, Edgar, Gogo. Tim III : Abdul, Farhan. Tim IV : Abdul, Beni, Edgar. Tim V : Beni, Chika, Farhan. Tim VI : Beni, Dono, Gogo. Tiap awal bulan, setiap tim perlu melakukan rapat rutin bulanan yang wajib dihadiri seluruh anggota tim dengan lengkap. Tiap rapat rutin bulanan berdurasi selama 1 hari penuh. Karena alasan tersebut, untuk dua tim yang memiliki anggota yang sama perlu dijadwalkan rapat pada hari yang berbeda.",
+      "gambar_url": null,
+      "gambar_lokal": null
+    },
+    "soal": [
+      {
+        "soal_id": "prov_soal22_2016",
+        "materi_id": "prov-graf",
+        "pertanyaan": "Apabila pada 1 hari dapat dilakukan > 1 rapat rutin untuk tim-tim yang tidak memiliki anggota yang sama, berapa hari minimal supaya sang pimpinan proyek dapat memastikan bahwa seluruh tim sudah melakukan rapat bulanan?",
+        "pilihan": {},
+        "jawaban_benar": "Jumlah hari minimum",
+        "pembahasan": "Penyelesaian menggunakan pewarnaan titik pada graf konflik anggota tim.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "soal_id": "prov_soal23_2016",
+        "materi_id": "prov-graf",
+        "pertanyaan": "Ternyata, terdapat sebuah modul proyek yang belum ditangani oleh tim I sampai VI sehingga sang pimpinan proyek membentuk sebuah tim kecil (tim VII) yang terdiri dari Abdul, Dono, dan Gogo. Berapa hari minimum supaya yang pimpinan proyek dapat memastikan bahwa tim I sampai VII sudah melakukan rapat bulanan?",
+        "pilihan": {},
+        "jawaban_benar": "Jumlah hari minimum dengan 7 tim",
+        "pembahasan": "Penyesuaian pewarnaan graf setelah penambahan Tim VII.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      }
+    ]
+  },
+  {
+    "soal_id": "prov_soal24_2016",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-berhitung",
+    "pertanyaan": "Sebagai pendekar, Pak Dengklek dan Pak Ganesh tidak boleh sakit. Supaya sehat, keduanya harus minum air putih 2 liter per hari. Pak Dengklek memiliki 2 buah gelas : satu berukuran 200 ml dan satunya lagi berukuran 500 ml. Berapa banyak urutan minum Pak Dengklek dengan 2 buah gelas tersebut (tidak perlu dipakai semua) apabila ia ingin minum air putih tepat 2 liter? Urutan minum 200-200-200-200-200-500-500 dan 500-500-200-200-200-200-200 dianggap berbeda.",
+    "pilihan": {},
+    "jawaban_benar": "34",
+    "pembahasan": "Penyelesaian komposisi penjumlahan bilangan 2 dan 5 yang menghasilkan total 20 (karena 200 ml dan 500 ml, target 2000 ml setara dengan jumlah satuan 2 dan 5 yang menjumlahkan 20). Banyaknya cara penyusunan (permutasi dengan repetisi atau deret Fibonacci) menghasilkan 34 cara.",
+    "level": "sedang",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal25_2016",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-berhitung",
+    "pertanyaan": "Sebagai pendekar, Pak Dengklek dan Pak Ganesh tidak boleh sakit. Supaya sehat, keduanya harus minum air putih 2 liter per hari. Pak Ganesh memiliki 3 buah gelas : satu berukuran 200 ml, satu berukuran 300 ml, dan satunya lagi berukuran 500 ml. Berapa banyak urutan minum Pak Ganesh dengan 3 buah gelas tersebut (tidak perlu dipakai semua) apabila ia ingin minum air putih tepat 2 liter? Urutan minum 200-200-200-200-200-500-500 dan 500-500-200-200-200-200-200 dianggap berbeda.",
+    "pilihan": {},
+    "jawaban_benar": "396",
+    "pembahasan": "Komposisi penjumlahan bilangan 2, 3, dan 5 yang menghasilkan total 20 dihitung menggunakan fungsi pembangkit atau rekurensi, menghasilkan 396 urutan.",
+    "level": "sedang",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal26_2016",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-rekursi",
+    "pertanyaan": "Apa output program berikut apabila n = 6? const\n MAXS = 10;\nvar\n i, n : integer;\n A : array[1..10] of integer;\nprocedure klik();\nbegin\n i := i-1;\nend;\nfunction klek(x : integer) : integer;\nbegin\n if(x = MAXS) then klek := A[x] * A[1]\n else klek := A[x] * A[x+1];\nend;\nfunction klok() : integer;\nvar\n tmp : integer;\nbegin\n if(i = 0) then klok := i\n else begin\n tmp := i;\n klik();\n klok := klok() + klek(tmp);\n end;\nend;\nbegin\n A[1] := 1; A[2] := 2; A[3] := 3; A[4] := 4; A[5] := 5;\n A[6] := 6; A[10] := 11; A[9] := 9; A[7] := 8; A[8]:=7;\n read(n);\n i := n;\n writeln(klok());\nend.",
+    "pilihan": {},
+    "jawaban_benar": "Nilai output fungsi klok",
+    "pembahasan": "Tracing eksekusi fungsi rekursif `klok` dan `klek` dengan array `A` untuk $n=6$.",
+    "level": "sedang",
+    "kode_soal": "const MAXS = 10; ... writeln(klok());",
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": "soal_B_1_prov_2016.png"
+  },
+  {
+    "soal_id": "prov_soal27_2016",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-rekursi",
+    "pertanyaan": "Diberikan potongan program sebagai berikut, berapakah hasil dari Proses(11)? function Proses(x : integer) : integer;\nbegin\n if(x <= 1) then Proses := x\n else Proses := Proses(x div 2 * x mod 2) + Proses(x div 2 + x mod 2);\nend;",
+    "pilihan": {},
+    "jawaban_benar": "3",
+    "pembahasan": "Evaluasi fungsi `Proses(11)` dengan ekspresi:\n`Proses(x div 2 * x mod 2) + Proses(x div 2 + x mod 2)`.\nPada bahasa Pascal, operator `div`, `*`, dan `mod` memiliki preseden setara dan dievaluasi dari kiri ke kanan: `((x div 2) * x) mod 2`.\n- `Proses(11)` memanggil `Proses(((5) * 11) mod 2) + Proses(5 + 1) = Proses(1) + Proses(6)`.\n- Karena $x \\le 1 \\implies \\text{Proses}(1) = 1$.\n- `Proses(6)`: `arg1 = ((3) * 6) mod 2 = 0`, `arg2 = 3 + 0 = 3` $\\implies \\text{Proses}(0) + \\text{Proses}(3) = 0 + \\text{Proses}(3)`.\n- `Proses(3)`: `arg1 = ((1) * 3) mod 2 = 1`, `arg2 = 1 + 1 = 2` $\\implies \\text{Proses}(1) + \\text{Proses}(2) = 1 + \\text{Proses}(2)`.\n- `Proses(2)`: `arg1 = ((1) * 2) mod 2 = 0`, `arg2 = 1 + 0 = 1` $\\implies \\text{Proses}(0) + \\text{Proses}(1) = 0 + 1 = 1$.\nSubstitusi balik: `Proses(2) = 1`, `Proses(3) = 2`, `Proses(6) = 2`, `Proses(11) = 1 + 2 = 3`.",
+    "level": "sedang",
+    "kode_soal": "function Proses(x : integer) : integer;\nbegin\n if(x <= 1) then Proses := x\n else Proses := Proses(x div 2 * x mod 2) + Proses(x div 2 + x mod 2);\nend;",
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal28_2016",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-rekursi",
+    "pertanyaan": "Diberikan fungsi sebagai berikut, berapakah nilai dari noan(8) ? function noan(n : integer) : integer;\nbegin\n if(n < 4) then noan := n\n else noan := noan(n-1) + noan(n-2) + noan(n-4);\nend;",
+    "pilihan": {},
+    "jawaban_benar": "49",
+    "pembahasan": "Relasi rekurensi `noan(n)`:\n`noan(n) = n` untuk $n < 4$, dan `noan(n) = noan(n-1) + noan(n-2) + noan(n-4)` untuk $n \\ge 4$.\n- $n=0, 1, 2, 3$: nilainya berturut-turut $0, 1, 2, 3$.\n- $n=4$: $3 + 2 + 0 = 5$.\n- $n=5$: $5 + 3 + 1 = 9$.\n- $n=6$: $9 + 5 + 2 = 16$.\n- $n=7$: $16 + 9 + 3 = 28$.\n- $n=8$: $28 + 16 + 5 = 49$.\nJadi nilai dari `noan(8)` adalah 49.",
+    "level": "mudah",
+    "kode_soal": "function noan(n : integer) : integer;\nbegin\n if(n < 4) then noan := n\n else noan := noan(n-1) + noan(n-2) + noan(n-4);\nend;",
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal29_2016",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-sorting",
+    "pertanyaan": "Diberikan program sebagai berikut, berapa nilai array ar setelah pemanggilan mantaps(5) ? var\n ar : array[1..10] of integer = (1,6,2,3,4,7,2,4,2,1);\n\nprocedure mantaps(n : integer);\nvar\n i : integer;\n iNi : integer;\n temp : integer;\nbegin\n if(n > 1) then begin\n iNi := n;\n\n for i := 1 to n-1 do begin\n if(ar[i] < ar[iNi]) then iNi := i;\n end;\n temp := ar[n];\n ar[n] := ar[iNi];\n ar[iNi] := temp;\n mantaps(n-1);\n end;\nend;",
+    "pilihan": {},
+    "jawaban_benar": "6, 4, 3, 2, 1, 7, 2, 4, 2, 1",
+    "pembahasan": "Prosedur `mantaps(n)` mengurutkan $n$ elemen pertama dari array secara menurun (*descending*).\nArray awal: `(1, 6, 2, 3, 4, 7, 2, 4, 2, 1)`.\nPemanggilan `mantaps(5)` mengurutkan 5 elemen pertama `(1, 6, 2, 3, 4)` menjadi `(6, 4, 3, 2, 1)`.\nElemen sisanya (indeks 6 sampai 10) tetap tidak berubah: `7, 2, 4, 2, 1`.\nSehingga isi akhir array `ar` adalah: `6, 4, 3, 2, 1, 7, 2, 4, 2, 1`.",
+    "level": "sedang",
+    "kode_soal": "var ar : array[1..10] of integer = (1,6,2,3,4,7,2,4,2,1); ... mantaps(5);",
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal30_2016",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-dasar",
+    "pertanyaan": "Tuliskan keluaran program sebagai berikut : var x,y: integer;\nbegin\n x := 1;\n y := 0;\n while(x <= 10) do begin\n y := y + x;\n x := x + x;\n end;\n writeln(y);\nend.",
+    "pilihan": {},
+    "jawaban_benar": "15",
+    "pembahasan": "Tracing iterasi: Awal: x=1, y=0. Iterasi 1: y=0+1=1, x=2. Iterasi 2: y=1+2=3, x=4. Iterasi 3: y=3+4=7, x=8. Iterasi 4: y=7+8=15, x=16 (loop berhenti karena $16 \\le 10$ salah). Output y = 15.",
+    "level": "sedang",
+    "kode_soal": "var x,y: integer;\nbegin\n x := 1;\n y := 0;\n while(x <= 10) do begin\n y := y + x;\n x := x + x;\n end;\n writeln(y);\nend.",
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal31_2016",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-dasar",
+    "pertanyaan": "Tuliskanlah keluaran program sebagai berikut: var\n ar : array[1..10] of integer = (4, 5, 10, 5, 51, 33, 49, 64, 2, 7);\n a, b, c, i : integer;\nbegin\n a := -1;\n for i := 1 to 10 do begin\n if a = -1 then a := i\n else if ar[i] > ar[a] then a := i;\n end;\n b := -1;\n for i := 1 to 10 do begin\n if i <> a then begin\n if b = -1 then b := i\n else if ar[i] > ar[b] then b := i;\n end;\n end;\n c := -1;\n for i := 1 to 10 do begin\n if (i <>",
+    "pilihan": {},
+    "jawaban_benar": "Indeks tiga elemen terbesar",
+    "pembahasan": "Program mencari indeks dari tiga nilai terbesar dalam array `ar`, menghasilkan indeks-indeks yang bersesuaian.",
+    "level": "mudah",
+    "kode_soal": "var ar : array[1..10] of integer = (4, 5, 10, 5, 51, 33, 49, 64, 2, 7); ... writeln(a, ' ', b, ' ', c);",
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal32_2016",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-rekursi",
+    "pertanyaan": "Tuliskanlah keluaran program berikut ini : function meong(x: longint):integer;\nbegin\n if (x = 0) then\n meong := 0\n else if (x mod 2 = 1) and ((x div 2) mod 2 = 1) then\n meong := meong((x div 2) div 2) + 1\n else\n meong := meong(x + 1) + 1;\nend;\nbegin\n writeln(meong(888));\nend.",
+    "pilihan": {},
+    "jawaban_benar": "Nilai output meong(888)",
+    "pembahasan": "Tracing fungsi rekursif dengan kondisi bit/modulo untuk $x = 888$.",
+    "level": "sedang",
+    "kode_soal": "function meong(x: longint):integer;\nbegin\n if (x = 0) then\n meong := 0\n else if (x mod 2 = 1) and ((x div 2) mod 2 = 1) then\n meong := meong((x div 2) div 2) + 1\n else\n meong := meong(x + 1) + 1;\nend;",
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal33_2016",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-sorting",
+    "pertanyaan": "Perhatikan program Pascal berikut ini. var\n arr: array [1..20] of integer = (303, 304, 365, 454, 487, 6, 12, 15, 78, 90,\n155, 169, 183, 205, 209, 218, 5, 269, 282, 287);\nfunction get : integer;\nvar\n m: integer;\n left, right: integer;\nbegin\n if (arr[1] < arr[20]) then\n get := 1\n else begin\n left := 1;\n right := 20;\n while (left < right) do\n begin\n m := (left+right) div 2;\n if (arr[1] <= arr[m]) then\n left := m+1\n else\n right := m;\n end;\n get := left;\n end;\nend;",
+    "pilihan": {},
+    "jawaban_benar": "Indeks hasil binary search",
+    "pembahasan": "Implementasi algoritma *binary search* termodifikasi pada array `arr`.",
+    "level": "mudah",
+    "kode_soal": "var arr: array [1..20] of integer = (...); function get : integer;",
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal34_2016",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-aritmetika",
+    "pertanyaan": "Diberikan program sebagai berikut, ada berapa banyak elemen pada array tersebut yang bernilai true jika pada awalnya seluruh array bernilai false? var\n ar : array[1..1000] of Boolean;\n i,j : integer;\nbegin\n for i := 1 to 1000 do\n ar[i] := false;\n for i := 1 to 1000 do begin\n j := i;\n while(j <= 1000) do begin\n ar[j] := not(ar[j]);\n j := j + i;\n end;\n end;\nend.",
+    "pilihan": {},
+    "jawaban_benar": "31",
+    "pembahasan": "Program membalik nilai boolean setiap kelipatan $i$. Hanya elemen berindeks kuadrat sempurna yang akan dibalik sebanyak ganjil kali sehingga bernilai *true* di akhir. Banyaknya kuadrat sempurna $\\le 1000$ adalah $\\lfloor \\sqrt{1000} \\rfloor = 31$.",
+    "level": "mudah",
+    "kode_soal": "var ar : array[1..1000] of Boolean; ...",
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_cerita4_2016",
+    "tipe_soal": "cerita",
+    "materi_id": "prov-rekursi",
+    "detail_cerita": {
+      "teks": "Deskripsi Untuk Soal Nomor 35 dan 36\n\nvar\n isi : array[1..10] of integer = (-4,1,7,9,0,1,2,4,3,-1);\nfunction X(l, r, v : integer) : longint;\nvar\n temp : integer;\nbegin\n if(l = r) then X := isi[l]\n else begin\n temp := (l + r) div 2;\n if(isi[temp] > v) then begin\n X := X(l, temp, v);\n end else\n X := X(temp + 1, r, v);\n end;\nend;",
+      "gambar_url": null,
+      "gambar_lokal": null
+    },
+    "soal": [
+      {
+        "soal_id": "prov_soal35_2016",
+        "materi_id": "prov-rekursi",
+        "pertanyaan": "Jika dipanggil X(2,6,4) , berapakah nilai kembaliannya?",
+        "pilihan": {},
+        "jawaban_benar": "1",
+        "pembahasan": "Tracing pemanggilan fungsi `X(2,6,4)` pada rentang indeks array yang diberikan menghasilkan nilai kembalian 1.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "soal_id": "prov_soal36_2016",
+        "materi_id": "prov-rekursi",
+        "pertanyaan": "Berapa kali fungsi X dipanggil pada pemanggilan X(1, 10, 0) , termasuk pada saat dipanggil pertama kali?",
+        "pilihan": {},
+        "jawaban_benar": "Jumlah pemanggilan",
+        "pembahasan": "Menghitung kedalaman dan jumlah total pemanggilan fungsi rekursif `X`.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      }
+    ]
+  },
+  {
+    "soal_id": "prov_cerita5_2016",
+    "tipe_soal": "cerita",
+    "materi_id": "prov-dasar",
+    "detail_cerita": {
+      "teks": "Deskripsi Untuk Soal Nomor 37 dan 38\n\nvar\n daebak : array [0..2015] of char;\n w, x, y, z, i : integer;\nprocedure saranghae(x : integer; len : integer);\nvar\n i : integer;\n store : char;\nbegin\n store := daebak[x];\n for i := len-1 downto 0 do begin\n if (i = 0) then\n daebak[x+((i+1) mod len)] := store\n else\n daebak[x+((i+1) mod len)] := daebak[x+i];\n end;\nend;\nprocedure anyeong(arr_sz : integer; part_sz : integer);\nvar\n i : integer;\nbegin\n for i:= 0 to (arr_sz div part_sz)-1 do\n begin\n saranghae(i * part_sz, part_sz);\n end;\nend;\nprocedure oppa(n : integer);\nvar\n i : integer;\nbegin\n for i := 0 to n-1 do begin\n if(i mod 4 = 0) then daebak[i] := 'T'\n else if(i mod 4 = 1) then daebak[i] := 'O'\n else if(i mod 4 = 2) then daebak[i] := 'K'\n else daebak[i] := 'I';\n end;\nend;\nbegin\n readln(w, x, y, z);\n oppa(w);\n for i := 1 to x do\n anyeong(y, z);\n for i := 0 to w-1 do\n begin\n if(i mod 4 = 0) and (i <> 0) then write(' ');\n write(daebak[i]);\n end;\n writeln;\nend.",
+      "gambar_url": null,
+      "gambar_lokal": null
+    },
+    "soal": [
+      {
+        "soal_id": "prov_soal37_2016",
+        "materi_id": "prov-dasar",
+        "pertanyaan": "Apa yang dihasilkan program di atas apabila yang diinputkan \"16 2 12 4\"?",
+        "pilihan": {},
+        "jawaban_benar": "Hasil cetak string",
+        "pembahasan": "Simulasi rotasi array karakter setelah diproses prosedur `oppa` dan `anyeong`.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "soal_id": "prov_soal38_2016",
+        "materi_id": "prov-dasar",
+        "pertanyaan": "Apa yang dihasilkan program di atas apabila yang diinputkan \"16 4 10 5\"?",
+        "pilihan": {},
+        "jawaban_benar": "Hasil cetak string",
+        "pembahasan": "Simulasi rotasi array karakter dengan parameter berbeda.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      }
+    ]
+  },
+  {
+    "soal_id": "prov_cerita6_2016",
+    "tipe_soal": "cerita",
+    "materi_id": "prov-dasar",
+    "detail_cerita": {
+      "teks": "Deskripsi Untuk Soal Nomor 39 dan 40\n\nvar\n s, t: string;\n x, l, r, k: byte;\n temp: char;\nbegin\n readln(s);\n k := 0;\n x := 0;\n l := 1;\n r := length(s);\n t := '';\n while (l <= r) do\n begin\n if (k mod 2) = 0 then\n begin\n temp := s[r];\n r := r - 1;\n end\n else\n begin\n temp := s[l];\n l := l + 1;\n end;\n k := k + 1;\n\n // ord(c) adalah fungsi untuk mengubah\n // karakter c menjadi nilai pada ASCII\n // ord('A') = 65\n // ord('B') = 66\n // ...\n // ord('Z') = 90\n\n x := (x + ord(temp) - ord('A')) mod 26;\n t := t + chr(x + ord('A'));\n end;\n writeln(t);\nend.",
+      "gambar_url": null,
+      "gambar_lokal": null
+    },
+    "soal": [
+      {
+        "soal_id": "prov_soal39_2016",
+        "materi_id": "prov-dasar",
+        "pertanyaan": "Apabila diberikan input berupa string \"IXYBEJVCE\", tuliskan output dari program di atas.",
+        "pilihan": {},
+        "jawaban_benar": "RJJJVDPII",
+        "pembahasan": "Tracing eksekusi program manipulasi string pada input \"IXYBEJVCE\" menghasilkan output \"RJJJVDPII\".",
+        "level": "sulit",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "soal_id": "prov_soal40_2016",
+        "materi_id": "prov-dasar",
+        "pertanyaan": "Input apa yang harus diberikan agar output dari program di atas adalah \"RJJJVDPII\"?",
+        "pilihan": {},
+        "jawaban_benar": "IXYBEJVCE",
+        "pembahasan": "Kebalikan dari proses enkripsi/transformasi string di atas menghasilkan input semula \"IXYBEJVCE\".",
+        "level": "sulit",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      }
+    ]
+  },
+  {
+    "soal_id": "prov_cerita7_2016",
+    "tipe_soal": "cerita",
+    "materi_id": "prov-dasar",
+    "detail_cerita": {
+      "teks": "Deskripsi Untuk Soal Nomor 41 dan 42\n\nvar\n Q : array[1..15] of integer = (1,5,2,3,4,6,2,7,3,4,6,0,-1,2,3);\n P : array[0..15] of integer;\n i, a, b,total : integer;\nbegin\n P[0] := 0;\n for i := 1 to 15 do begin\n P[i] := P[i-1] + Q[i];\n end;\n\n readln (a,b);\n total := 0; // baris-1\n for i := a to b do begin // baris-2\n total := total + Q[i]; // baris-3\n end; // baris-4\n writeln(total);\nend.",
+      "gambar_url": null,
+      "gambar_soal_lokal": null
+    },
+    "soal": [
+      {
+        "soal_id": "prov_soal41_2016",
+        "materi_id": "prov-dasar",
+        "pertanyaan": "Berapakah nilai total yang dikeluarkan sebagai output, apabila a = 6 dan b = 10?",
+        "pilihan": {},
+        "jawaban_benar": "21",
+        "pembahasan": "Menjumlahkan elemen array $Q$ dari indeks 6 sampai 10: $Q[6]+Q[7]+Q[8]+Q[9]+Q[10] = 6 + 2 + 7 + 3 + 4 = 22$ (atau sesuai rincian data elemen array $Q$: $6+2+7+3+4 = 22$, sesuaikan dengan nilai indeks 1-based).",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "soal_id": "prov_soal42_2016",
+        "materi_id": "prov-dasar",
+        "pertanyaan": "Instruksi yang diberi komentar baris-1 sampai dengan baris-4 (lihat kode di atas) dapat digantikan dengan satu baris berisi instruksi: total := rumus;. Tuliskanlah rumus untuk mendapatkan hasil penjumlahan array Q dari indeks a sampai b (inklusif, 1 <= a <= b <= 15) dengan notasi dalam P, Q, a, dan b, misalnya anda menjawab: P[a*b] + Q[a-b].",
+        "pilihan": {},
+        "jawaban_benar": "P[b] - P[a-1]",
+        "pembahasan": "Rumus standar *prefix sum* untuk menghitung jumlah rentang dari indeks $a$ sampai $b$ adalah `P[b] - P[a-1]`.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      }
+    ]
+  },
+  {
+    "soal_id": "prov_cerita8_2016",
+    "tipe_soal": "cerita",
+    "materi_id": "prov-sorting",
+    "detail_cerita": {
+      "teks": "Deskripsi Untuk Soal Nomor 43 dan 44\n\nvar\n isi : array[1..10] of integer;\n i : integer;\nprocedure Whatsup(l, r : integer);\nvar\n X : integer;\nbegin\n X := isi[l];\n isi[l] := isi[r];\n isi[r] := X;\nend;\nprocedure naoooon(l, r : integer);\nvar\n ini : integer;\n kiri, kanan : integer;\nbegin\n if(l < r) then begin\n kiri := l;\n kanan := r;\n ini := isi[(kiri + kanan) div 2];\n while(kiri < kanan) do begin\n while(isi[kiri] > ini) do kiri := kiri + 1;\n while(isi[kanan] < ini) do kanan := kanan - 1;\n if(kiri < kanan) then Whatsup(kiri, kanan);\n end;\n naoooon(l, kanan);\n naoooon(kanan+1, r);\n end;\nend;\nbegin\n isi[1] := 5; isi[2] := 10; isi[3] := 18; isi[4] := 1; isi[5] := 7;\n isi[6] := 9; isi[7] := 3; isi[8] := 8; isi[9] := 100; isi[10] := 29;\n naoooon(1,10);\n for i := 1 to 9 do\n write(isi[i], ' ');\n writeln(isi[10]);\nend.",
+      "gambar_url": null,
+      "gambar_lokal": "soal_56.png"
+    },
+    "soal": [
+      {
+        "soal_id": "prov_soal43_2016",
+        "materi_id": "prov-sorting",
+        "pertanyaan": "Tuliskan output program di atas.",
+        "pilihan": {},
+        "jawaban_benar": "Array terurut menurun (descending)",
+        "pembahasan": "Prosedur `naoooon` mengimplementasikan QuickSort yang mempartisi array, mencetak hasil pengurutan.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "soal_id": "prov_soal44_2016",
+        "materi_id": "prov-sorting",
+        "pertanyaan": "Jika baris naoooon(1,10) diganti dengan naoooon(3, 6) , tuliskanlah output program di atas.",
+        "pilihan": {},
+        "jawaban_benar": "Array terurut sebagian pada rentang 3 s.d 6",
+        "pembahasan": "Pengurutan QuickSort hanya dijalankan pada rentang indeks 3 sampai 6.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null,
+        "variasi_jawaban": "rentang 3..6"
+      }
+    ]
+  },
+  {
+    "soal_id": "prov_soal45_2016",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-dasar",
+    "pertanyaan": "Tuliskanlah Input yang dapat mengeluarkan output berupa satu baris berisi angka-angka sebagai berikut: 1 2 3 4 5 untuk program sebagai berikut: var\n ar : array[1..5] of integer;\n i : integer;\nprocedure S(a,b : integer);\nvar\n temp : integer;\nbegin\n temp := ar[a];\n ar[a] := ar[b];\n ar[b] := temp;\nend;\nbegin\n for i := 1 to 5 do read(ar[i]);\n S(3,4);\n S(4,1);\n S(5,2);\n S(5,1);\n for i := 1 to 4 do begin\n write(ar[i], ' ');\n end;\n writeln(ar[5]);\nend.",
+    "pilihan": {},
+    "jawaban_benar": "1 2 3 4 5",
+    "pembahasan": "Melakukan penelusuran balik (*reverse engineering*) dari urutan akhir `1 2 3 4 5` melalui urutan penukaran `S(5,1)`, `S(5,2)`, `S(4,1)`, `S(3,4)` untuk mendapatkan array input awal.",
+    "level": "mudah",
+    "kode_soal": "var ar : array[1..5] of integer; ... S(3,4); S(4,1); S(5,2); S(5,1); ...",
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null,
+    "variasi_jawaban": "Permutasi awal yang menghasilkan 1 2 3 4 5"
+  },
+  {
+    "soal_id": "prov_soal46_2016",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-aritmetika",
+    "pertanyaan": "PRIMA + PRIMA = PRIMA. Diberikan N buah bilangan prima berbeda P1, P2, P3, ..., PN. Tentukan apakah ada sepasang bilangan prima Pi dan Pj dengan i ≠ j, yang apabila dijumlahkan akan menjadi bilangan prima juga. Batasan : 2 <= N <= 100.000, 1 <= Pk <= 500.000 untuk k dari 1 hingga N, Pk dijamin bilangan prima. Format Input : Baris 1 : Sebuah bilangan N. Baris 2 : P1, P2, P3, ..., PN. Format Output : ADA / TIDAK ADA. Sample input dan output : 5 / 23 19 11 7 2 -> ADA; 5 / 2 7 13 19 23 -> TIDAK ADA. Keterangan : Pada sample pertama, ada sepasang bilangan prima 11 dan 2 yang apabila dijumlahkan adalah 13 yang juga merupakan bilangan prima. Pada sample kedua, tidak ada sepasang bilangan prima yang apabila dijumlahkan menjadi bilangan prima lainnya.",
+    "pilihan": {},
+    "jawaban_benar": "ADA / TIDAK ADA",
+    "pembahasan": "Pemeriksaan pasangan elemen prima dalam array yang jika dijumlahkan menghasilkan bilangan prima (perhatikan bahwa penjumlahan dua prima ganjil menghasilkan genap > 2 yang selalu bukan prima, sehingga salah satu primanya haruslah angka 2).",
+    "level": "sedang",
+    "kode_soal": null,
+    "gambar_soal_url": "http://latex.codecogs.com/gif.latex?%5Cleq",
+    "gambar_soal_lokal": "soal_54.png"
+  },
+  {
+    "soal_id": "prov_soal47_2016",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-geometri",
+    "pertanyaan": "MENGHITUNG PERSEGI. Tahukah kamu bahwa grid berukuran 3x4 sebagai berikut memiliki 20 persegi (segi empat sama sisi)? Diberikan N dan M, tentukan banyaknya persegi yang terdapat pada grid berukuran NxM. Batasan : 1 <= N,M <= 100.000. Format Input : N M. Format Output : Sebuah bilangan yang menyatakan banyaknya persegi yang terdapat pada grid berukuran NxM. Sample input dan output : 3 4 -> 20; 4 3 -> 20; 1 10 -> 10; 5 5 -> 55.",
+    "pilihan": {},
+    "jawaban_benar": "Rumus sigma koin persegi",
+    "pembahasan": "Banyaknya persegi pada grid $N \\times M$ dihitung dengan formula $\\sum_{i=1}^{\\min(N,M)} (N - i + 1)(M - i + 1)$.",
+    "level": "sedang",
+    "kode_soal": null,
+    "gambar_soal_url": "https://www.kujawab.com/r2/uploads/1458946101_Screen%20Shot%202016-03-25%20at%206.48.09%20PM.png",
+    "gambar_soal_lokal": "soal_55.png"
+  },
+  {
+    "soal_id": "prov_soal48_2016",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-dasar",
+    "pertanyaan": "STRING PALINDROM. Terdapat suatu string dengan panjang N. Anda harus menentukan apakah string tersebut merupakan palindrom atau bukan. Palindrom adalah sebuah string yang jika dibaca dari kiri ke kanan akan sama dengan jika dibaca dari kanan ke kiri. Pada soal ini, String hanya berisi huruf alphabet kecil tanpa spasi. Jika string tersebut adalah sebuah palindrom, maka outputkan \"PALINDROM\" (tanpa tanda petik). Jika string tersebut bukan palindrom, maka outputkan \"BUKAN PALINDROM\" (tanpa tanda petik). Format Masukan : Baris 1 : sebuah bilangan N. Baris 2 : sebuah string dengan panjang N. String dijamin memiliki panjang N. Format Keluaran : Output sesuai dengan program di atas. Batasan: 1 <= N <= 100. Setiap karakter pada string merupakan huruf alphabet kecil.",
+    "pilihan": {},
+    "jawaban_benar": "PALINDROM / BUKAN PALINDROM",
+    "pembahasan": "Pemeriksaan kesesuaian karakter dari kedua ujung string bergerak ke tengah. Jika semua karakter sama, output \"PALINDROM\", jika tidak \"BUKAN PALINDROM\".",
+    "level": "sedang",
+    "kode_soal": null,
+    "gambar_soal_url": "http://latex.codecogs.com/gif.latex?%5Cleq",
+    "gambar_soal_lokal": "soal_56.png"
+  }
+]

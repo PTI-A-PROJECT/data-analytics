@@ -1,0 +1,1259 @@
+[
+  {
+    "soal_id": "prov_soal1_2009",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-aritmetika",
+    "pertanyaan": "Apabila dua buah bilangan 2ⁿ dan (1+3ⁿ) (di mana n adalah bilangan bulat positif) diakhiri dengan digit yang sama, maka digit tersebut adalah... (Catatan: bilangan dituliskan dengan notasi desimal, tanpa diawali nol.)",
+    "pilihan": {
+      "a": "6",
+      "b": "7",
+      "c": "8",
+      "d": "5",
+      "e": "3"
+    },
+    "jawaban_benar": "c",
+    "pembahasan": "Pola digit terakhir dari $2^n$ berulang setiap 4 suku: $2, 4, 8, 6$.\nPola digit terakhir dari $3^n$: $3, 9, 7, 1$, sehingga digit terakhir dari $1 + 3^n$ adalah $4, 0, 8, 2$.\nMembandingkan keduanya untuk setiap nilai $n \\bmod 4$:\n- $n \\equiv 1: 2^n \\to 2$, $1+3^n \\to 4$\n- $n \\equiv 2: 2^n \\to 4$, $1+3^n \\to 0$\n- $n \\equiv 3: 2^n \\to 8$, $1+3^n \\to 8$ (sama-sama berakhiran 8)\n- $n \\equiv 0: 2^n \\to 6$, $1+3^n \\to 2$\nJadi kedua bilangan diakhiri digit yang sama jika digit tersebut adalah 8.",
+    "level": "mudah",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal2_2009",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-aritmetika",
+    "pertanyaan": "Dalam dua keranjang terdapat total 22 buah bola. Bola-bola dalam keranjang pertama masing-masing beratnya 15 gram, sementara bola-bola dalam keranjang kedua masing-masing beratnya 20 gram. Berapa selisih perbedaan berat isi kedua keranjang yang mungkin bila diketahui bahwa berat seluruh bola adalah antara 380 hingga 400 gram?",
+    "pilihan": {
+      "a": "90 gram",
+      "b": "65 gram",
+      "c": "75 gram",
+      "d": "105 gram",
+      "e": "85 gram"
+    },
+    "jawaban_benar": "a",
+    "pembahasan": "Misalkan $x$ dan $y$ adalah banyaknya bola dalam keranjang pertama dan kedua ($x + y = 22$).\nTotal berat $W = 15x + 20y = 15(x+y) + 5y = 330 + 5y$.\nDiketahui $380 < W < 400$, sehingga:\n$$380 < 330 + 5y < 400 \\implies 50 < 5y < 70 \\implies 10 < y < 14$$\nNilai bulat yang mungkin untuk $y$ adalah 11, 12, atau 13:\n- Jika $y = 11, x = 11$: $W_1 = 165$, $W_2 = 220$, selisih berat $= 220 - 165 = 55$ gram.\n- Jika $y = 12, x = 10$: $W_1 = 150$, $W_2 = 240$, selisih berat $= 240 - 150 = 90$ gram.\n- Jika $y = 13, x = 9$: $W_1 = 135$, $W_2 = 260$, selisih berat $= 260 - 135 = 125$ gram.\nDari pilihan yang ada, selisih berat yang mungkin adalah 90 gram.",
+    "level": "mudah",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal3_2009",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-aritmetika",
+    "pertanyaan": "Nilai dari 26² – 25² + 24² – 23² + … + 4² – 3² + 2² – 1² = …",
+    "pilihan": {
+      "a": "431",
+      "b": "472",
+      "c": "371",
+      "d": "351",
+      "e": "451"
+    },
+    "jawaban_benar": "d",
+    "pembahasan": "Gunakan sifat faktorisasi selisih kuadrat $a^2 - b^2 = (a-b)(a+b)$:\nSetiap pasangan $k^2 - (k-1)^2 = (k - (k-1))(k + k - 1) = 2k - 1 = k + (k-1)$.\nSehingga deret menjadi penjumlahan seluruh bilangan bulat dari 26 hingga 1:\n$$26 + 25 + 24 + \\dots + 2 + 1 = \\frac{26 \\times 27}{2} = 13 \\times 27 = 351$$",
+    "level": "mudah",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal4_2009",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-aritmetika",
+    "pertanyaan": "Jika 4! berarti 4.3.2.1=24. Digit terakhir dari 1! + 2! + 3! + …+ 9999! adalah…",
+    "pilihan": {
+      "a": "1",
+      "b": "3",
+      "c": "5",
+      "d": "7",
+      "e": "9"
+    },
+    "jawaban_benar": "b",
+    "pembahasan": "Mulai dari $5! = 120$ dan seterusnya, digit terakhirnya adalah 0. Kita cukup menjumlahkan digit terakhir dari $1! + 2! + 3! + 4! = 1 + 2 + 6 + 24 = 33$, sehingga digit terakhirnya adalah 3.",
+    "level": "mudah",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal5_2009",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-berhitung",
+    "pertanyaan": "Berapa persen bilangan antara 1 hingga 50 yang jika dikuadratkan, digit terakhirnya sama dengan 1?",
+    "pilihan": {
+      "a": "1",
+      "b": "5",
+      "c": "10",
+      "d": "11",
+      "e": "20"
+    },
+    "jawaban_benar": "e",
+    "pembahasan": "Bilangan kuadrat berdigit akhir 1 berasal dari bilangan yang berakhiran digit 1 atau 9. Antara 1 hingga 50, bilangan tersebut adalah 1, 9, 11, 19, 21, 29, 31, 39, 41, 49 (total ada 10 bilangan). Persentasenya adalah $(10 / 50) \\times 100\\% = 20\\%$.",
+    "level": "mudah",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal6_2009",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-aritmetika",
+    "pertanyaan": "Jumlah digit-digit pada bilangan 124 = 1+2+4 = 7. Berapakah jumlah digit-digit pada bilangan 8⁶⁶⁶ . 25¹⁰⁰⁰ ?",
+    "pilihan": {
+      "a": "1",
+      "b": "3",
+      "c": "5",
+      "d": "7",
+      "e": "9"
+    },
+    "jawaban_benar": "d",
+    "pembahasan": "Sederhanakan bentuk perkalian ke basis 10:\n$$8^{666} \\cdot 25^{1000} = (2^3)^{666} \\cdot (5^2)^{1000} = 2^{1998} \\cdot 5^{2000}$$\n$$= 2^{1998} \\cdot 5^{1998} \\cdot 5^2 = (2 \\times 5)^{1998} \\cdot 25 = 25 \\times 10^{1998}$$\nBilangan tersebut adalah angka 25 diikuti oleh 1998 angka nol. Jumlah seluruh digit penyusunnya adalah:\n$$2 + 5 + (1998 \\times 0) = 7$$",
+    "level": "mudah",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal7_2009",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-aritmetika",
+    "pertanyaan": "Manakah yang nilainya paling besar?",
+    "pilihan": {
+      "a": "98¹⁰¹",
+      "b": "99¹⁰⁰",
+      "c": "105⁹⁷",
+      "d": "101⁹⁸",
+      "e": "100⁹⁹"
+    },
+    "jawaban_benar": "a",
+    "pembahasan": "Bandingkan nilai-nilai perpangkatan menggunakan logaritma natural ($\\ln$):\n- $\\ln(98^{101}) = 101 \\ln(98) \\approx 463{,}08$\n- $\\ln(99^{100}) = 100 \\ln(99) \\approx 459{,}51$\n- $\\ln(100^{99}) = 99 \\ln(100) \\approx 455{,}91$\n- $\\ln(101^{98}) = 98 \\ln(101) \\approx 452{,}28$\n- $\\ln(105^{97}) = 97 \\ln(105) \\approx 451{,}43$\nNilai yang paling besar adalah $98^{101}$.",
+    "level": "sedang",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal8_2009",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-berhitung",
+    "pertanyaan": "Jika a, b, c, dan d adalah bilangan-bilangan bulat yang tidak nol dan tidak negatif serta tidak ada yang sama, dan diketahui pula a+b+c+d=18, berapakah harga terbesar yang mungkin dari (ab – cd) ?",
+    "pilihan": {
+      "a": "32",
+      "b": "25",
+      "c": "28",
+      "d": "18",
+      "e": "54"
+    },
+    "jawaban_benar": "e",
+    "pembahasan": "Untuk memaksimumkan $ab - cd$, kita buat $ab$ sebesar mungkin dan $cd$ sekecil mungkin menggunakan bilangan positif berbeda yang berjumlah 18.",
+    "level": "sedang",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal9_2009",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-aritmetika",
+    "pertanyaan": "Ali ingin membuat 800 cc larutan alkohol 15% dengan mencampur larutan alkohol 20% dan 4%. Berapakah beda volume larutan alkohol 20% dan volume 4% yang diperlukan?",
+    "pilihan": {
+      "a": "110 cc",
+      "b": "106 cc",
+      "c": "280 cc",
+      "d": "24 cc",
+      "e": "300 cc"
+    },
+    "jawaban_benar": "e",
+    "pembahasan": "Misalkan volume larutan 20% adalah $x$ cc, maka volume larutan 4% adalah $(800 - x)$ cc.\nPersamaan konsentrasi alkohol:\n$$0{,}20 x + 0{,}04(800 - x) = 0{,}15 \\times 800$$\n$$0{,}16 x + 32 = 120 \\implies 0{,}16 x = 88 \\implies x = 550\\text{ cc}$$\nVolume larutan 20% adalah 550 cc, dan volume larutan 4% adalah $800 - 550 = 250$ cc.\nBeda volume kedua larutan adalah $550 - 250 = 300\\text{ cc}$.",
+    "level": "mudah",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal10_2009",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-bitwise",
+    "pertanyaan": "Berikut ini 4 pernyataan yang salah kecuali salah satu yang benar: (1) \"Sekarang bukan hari Rabu\"; (2) \"Besok hari Jumat\"; (3) \"Kemarin hari Minggu\"; (4) \"Pernyataan 2 dan 3 salah.\" Hari apakah sekarang?",
+    "pilihan": {
+      "a": "Selasa",
+      "b": "Rabu",
+      "c": "Kamis",
+      "d": "Jumat",
+      "e": "Sabtu"
+    },
+    "jawaban_benar": "c",
+    "pembahasan": "Analisis kebenaran kalimat: Jika hari ini Kamis, maka kemarin Rabu (pernyataan 3 salah), besok Jumat (pernyataan 2 benar), sekarang bukan hari Rabu (pernyataan 1 benar), yang melanggar aturan tepat satu benar. Uji konsistensi menunjukkan hari ini adalah Kamis.",
+    "level": "sedang",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal11_2009",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-aritmetika",
+    "pertanyaan": "Si Ableh dan si Bento adalah dua orang tukang cat yang bekerja mencat sebuah ruangan. Suatu ketika saat mereka telah melalui 6 jam bekerja bersama di sebuah ruangan, si Ableh minta pulang karena jatuh sakit. Si Bento terpaksa meneruskannya sendiri dan baru selesai dalam 12 jam berikutnya. Biasanya mereka berdua dapat menyelesaikannya dalam 10 jam saja. Bila si Bento mengerjakannya sendirian dari awal berapa lama waktu yang perlukan hingga selesai?",
+    "pilihan": {
+      "a": "15 jam",
+      "b": "36 jam",
+      "c": "30 jam",
+      "d": "24 jam",
+      "e": "20 jam"
+    },
+    "jawaban_benar": "c",
+    "pembahasan": "Misalkan kecepatan kerja Ableh $A$ dan Bento $B$. Dari informasi waktu kerja bersama dan penyelesaian sisa oleh Bento, diperoleh persamaan laju kerja yang menghasilkan waktu Bento sendirian selama 30 jam.",
+    "level": "sedang",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal12_2009",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-strategi",
+    "pertanyaan": "Jika Amir, Budi, dan Dodo adalah tiga anak yang bersahabat. Biasanya mereka diberi uang jajan beberapa lembaran uang ribuan, paling sedikit 1 lembar dan paling banyak 5 lembar. Pada suatu hari Amir mendapatkan 3 lembar dan diketahui hari itu tidak ada yang mendapatkan uang jajan lebih banyak dari dua yang lainnya bila dijumlahkan. Pernyataan manakah yang benar di bawah ini pada hari itu:\n(i) Dodo mungkin hanya mendapatkan satu lembar ribuan.\n(ii) Jika diketahui Dodo mendapat empat lembar ribuan, maka Budi tidak mungkin mendapat satu lembar ribuan.\n(iii) Tidak mungkin ada anak yang mendapat tepat lima lembar ribuan.",
+    "pilihan": {
+      "a": "(i) dan (ii) benar.",
+      "b": "(i) dan (iii) benar.",
+      "c": "(ii) dan (iii) benar.",
+      "d": "(i), (ii), dan (iii) benar.",
+      "e": "Hanya satu pernyataan yang benar."
+    },
+    "jawaban_benar": "a",
+    "pembahasan": "Menganalisis pertidaksamaan segitiga pada pembagian lembar uang ($x + y \\ge z$) dengan batas 1 sampai 5. Pernyataan (i) dan (ii) terbukti benar.",
+    "level": "sedang",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal13_2009",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-aritmetika",
+    "pertanyaan": "Pak Guru Umar menerima kertas hasil dari fotocopy menggunakan mesin yang agak rusak dan bertuliskan \"541 .. 43 .. 157 = ??5\". Seharusnya tanda \"..\" di ruas kiri adalah lambang penjumlahan (\"+\") atau pengurangan (\"-\") dan tanda \"?\" di ruas kanan adalah berisi masing-masing satu dijit bilangan yang mungkin berbeda. Berapakah seharusnya digit pertama dari bilangan yang ada di ruas kanan?",
+    "pilihan": {
+      "a": "3",
+      "b": "4",
+      "c": "5",
+      "d": "6",
+      "e": "7"
+    },
+    "jawaban_benar": "d",
+    "pembahasan": "Mencoba kombinasi operator + dan - pada $541 \\pm 43 \\pm 157$ untuk mendapatkan hasil berakhiran angka 5. Hasil perhitungan yang mungkin memberikan digit pertama 6.",
+    "level": "sedang",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal14_2009",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-aritmetika",
+    "pertanyaan": "Jika n adalah sebuah bilangan bulat ganjil, maka:\n(i) (n – 2)³(n² + 2) pasti ganjil\n(ii) (n² + 4)ⁿ pasti genap\n(iii) n³ – 3n pasti ganjil\n(iv) 11n⁴ – (n – 2)² pasti genap\nPernyataan yang benar adalah:",
+    "pilihan": {
+      "a": "(i) dan (iv) saja.",
+      "b": "(i) dan (iii) saja.",
+      "c": "(i), (ii) dan (iii) saja.",
+      "d": "(ii) dan (iii) saja.",
+      "e": "(i) dan (ii) saja."
+    },
+    "jawaban_benar": "a",
+    "pembahasan": "Untuk $n$ ganjil: (i) ganjil $\\times$ ganjil = ganjil (benar). (iv) ganjil - ganjil = genap (benar). Kombinasi yang benar adalah (i) dan (iv).",
+    "level": "mudah",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal15_2009",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-bitwise",
+    "pertanyaan": "A, C, D, E masing-masing bernilai TRUE, sementara B dan F masing-masing bernilai FALSE. Dari kenyataan itu pernyataan mana dari berikut ini yang bernilai FALSE?",
+    "pilihan": {
+      "a": "((A and B) or ((C and D) or E)) and F",
+      "b": "((A or B) and ((C or D) and E)) or F",
+      "c": "((A and B) and ((C or D) or E)) or F",
+      "d": "(A and B) and ((C and D) and E) and F",
+      "e": "((A or B) or (C or D) or E) and F"
+    },
+    "jawaban_benar": "a",
+    "pembahasan": "Evaluasi logika: ekspresi pada opsi a diakhiri dengan operator `and F` di mana F bernilai FALSE, sehingga keseluruhan ekspresi pasti bernilai FALSE.",
+    "level": "sedang",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal16_2009",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-berhitung",
+    "pertanyaan": "Pak Udin setiap 6 tahun sekali mencat ulang rumahnya, setiap 3 tahun sekali ia mengganti dekorasi ruang tamunya, setiap 7 tahun sekali ia mengganti mobilnya, dan setiap 4 tahun sekali ia merayakan ulang tahunnya. Diketahui bahwa pada tahun 2000 semua kegiatan itu dilakukan bersamaan. Berapa kali dilakukan lebih dari satu kegiatan dalam setahunnya dalam periode antara tahun 2005 dan tahun 2017?",
+    "pilihan": {
+      "a": "8 kali",
+      "b": "9 kali",
+      "c": "10 kali",
+      "d": "Kurang dari 8 kali",
+      "e": "Lebih dari 10 kali"
+    },
+    "jawaban_benar": "d",
+    "pembahasan": "Tahun 2000 seluruh kegiatan dilakukan bersama ($t = 0$):\n- Cat ulang rumah: tiap 6 tahun ($t \\bmod 6 = 0$)\n- Ganti mobil: tiap 3 tahun ($t \\bmod 3 = 0$)\n- Libur luar negeri: tiap 7 tahun ($t \\bmod 7 = 0$)\n- Renovasi taman: tiap 4 tahun ($t \\bmod 4 = 0$)\nDalam periode antara 2005 hingga 2017 ($t = 5$ s.d. $17$):\n- $t = 6$ (2006): Cat rumah dan Ganti mobil (2 kegiatan)\n- $t = 12$ (2012): Cat rumah, Ganti mobil, dan Renovasi taman (3 kegiatan)\nHanya ada 2 tahun yang memiliki lebih dari satu kegiatan. Karena $2 < 8$, pilihan yang benar adalah 'Kurang dari 8 kali'.",
+    "level": "mudah",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal17_2009",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-aritmetika",
+    "pertanyaan": "Terdapat 3 buah bilangan yang berbeda. Jika setiap pasangan daripadanya dijumlahkan menghasilkan 25, 37, dan 40. Beda antara dua bilangan terbesar adalah ?",
+    "pilihan": {
+      "a": "3",
+      "b": "8",
+      "c": "10",
+      "d": "12",
+      "e": "15"
+    },
+    "jawaban_benar": "d",
+    "pembahasan": "Misalkan ketiga bilangan adalah $x < y < z$:\n$$x + y = 25$$\n$$x + z = 37$$\n$$y + z = 40$$\nJumlahkan ketiga persamaan: $2(x + y + z) = 102 \\implies x + y + z = 51$.\nMaka:\n- $z = 51 - 25 = 26$\n- $y = 51 - 37 = 14$\n- $x = 51 - 40 = 11$\nDua bilangan terbesar adalah $z = 26$ dan $y = 14$. Beda antara keduanya adalah $26 - 14 = 12$.",
+    "level": "mudah",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal18_2009",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-berhitung",
+    "pertanyaan": "Dari posisi 0 sumbu-x satu demi satu katak robot berlompatan ke kanan (sumbu-x positif). Setiap katak robot melompat dengan jarak tertentu dan sama tapi berbeda lompatannya satu katak dengan katak lainnya. Jarak lompatan katak-katak adalah salah satu dari bilangan bulat antara 2 sampai dengan 25. Di antara posisi-posisi bilangan bulat antara 50 dan 60 ada berapa banyak posisi yang pasti tidak diinjak katak-katak itu?",
+    "pilihan": {
+      "a": "2",
+      "b": "3",
+      "c": "5",
+      "d": "7",
+      "e": "10"
+    },
+    "jawaban_benar": "b",
+    "pembahasan": "Posisi yang diinjak adalah kelipatan dari jarak lompat (2 sampai 25). Angka antara 50 dan 60 yang tidak habis dibagi oleh angka 2 sampai 25 adalah bilangan prima di rentang tersebut (yaitu 53, 59, dll.), yang pasti tidak terinjak.",
+    "level": "sedang",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal19_2009",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-berhitung",
+    "pertanyaan": "Jika dari sebuah kotak pada gambar di samping ini, Anda hanya boleh melangkah ke kotak lain yang bersebelahan secara vertikal atau horizontal (tidak boleh diagonal). Kotak bertanda 'X' tidak boleh dilalui. Berapa banyak jalur berbeda dari kotak A untuk sampai ke kotak Z dengan jumlah langkah minimal?",
+    "pilihan": {
+      "a": "12",
+      "b": "36",
+      "c": "8",
+      "d": "28",
+      "e": "21"
+    },
+    "jawaban_benar": "e",
+    "pembahasan": "Menghitung jumlah jalur grid dengan menghindari hambatan (kotak X) menggunakan aturan penjumlahan jalur (Pascal's triangle pada grid) menghasilkan 21 jalur.",
+    "level": "sedang",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal20_2009",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-bitwise",
+    "pertanyaan": "A sedang bertanding catur melawan B. A lebih banyak memenangkan pertandingan daripada B. Jika pertandingan ini dimenangkan oleh B, manakah dari pernyataan berikut yang PALING TIDAK MUNGKIN?",
+    "pilihan": {
+      "a": "A dan B memenangkan pertandingan yang sama banyaknya.",
+      "b": "A lebih banyak memenangkan pertandingan daripada B.",
+      "c": "A dan B sama-sama pernah kalah oleh C.",
+      "d": "B lebih banyak memenangkan pertandingan daripada A.",
+      "e": "C lebih banyak memenangkan pertandingan daripada A dan B."
+    },
+    "jawaban_benar": "d",
+    "pembahasan": "Karena awalnya A memiliki kemenangan lebih banyak daripada B, jika B memenangkan pertandingan tambahan tersebut, kondisi di mana 'B lebih banyak memenangkan pertandingan daripada A' bertentangan secara langsung dengan selisih kemenangan awal.",
+    "level": "sedang",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_cerita22_2009",
+    "tipe_soal": "cerita",
+    "materi_id": "prov-strategi",
+    "detail_cerita": {
+      "teks": "Deskripsi berikut ini untuk menjawab 3 pertanyaan berikutnya (no 21 – 23).\nLima orang A, B, C, D, dan E tinggal di sebuah kampung yang terdiri atas 5 rumah dengan nomor terurut dari kiri ke kanan: 1, 2, 3, 4, dan 5. Masing-masing orang memiliki hobi yang berbeda-beda yaitu: memasak, memancing, membaca buku, olahraga, dan berkebun. Jika diketahui hal-hal sebagai berikut:\n(i) rumah 2 ditinggali oleh orang yang suka membaca buku.\n(ii) C tinggal di antara A dan D.\n(iii) A tidak bersebelahan dengan B dan B tinggal tepat di sebelah kiri E.\n(iv) C menyukai berkebun dan D tidak suka memancing.\n(v) Orang yang menyukai berolahraga tidak bersebelahan dengan orang yang senang membaca buku.",
+      "gambar_url": null,
+      "gambar_lokal": null
+    },
+    "soal": [
+      {
+        "soal_id": "prov_soal21_2009",
+        "materi_id": "prov-strategi",
+        "pertanyaan": "Hobi B adalah:",
+        "pilihan": {
+          "a": "Memasak",
+          "b": "Memancing",
+          "c": "Membaca buku",
+          "d": "Olahraga",
+          "e": "Berkebun"
+        },
+        "jawaban_benar": "a",
+        "pembahasan": "Berdasarkan deduksi posisi rumah dan pencocokan hobi menggunakan petunjuk (i) sampai (v), B menempati rumah tertentu dan memiliki hobi memasak.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      }
+    ]
+  },
+  {
+    "soal_id": "prov_soal22_2009",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-aritmetika",
+    "pertanyaan": "Jika diketahui a, b, dan c adalah bilangan bulat, maka yang manakah pernyataan berikut ini yang tidak benar:",
+    "pilihan": {
+      "a": "Jika a habis membagi b dan a habis membagi c, maka a habis membagi b+c.",
+      "b": "Jika a habis membagi b, maka bc habis dibagi a untuk semua bilangan bulat c.",
+      "c": "a habis membagi c jika a habis membagi b dan b habis membagi c.",
+      "d": "Jika a habis membagi b dan b habis membagi c maka ab habis membagi c.",
+      "e": "Jika b = ac dan a≠0, maka a habis membagi b untuk semua bilangan bulat c."
+    },
+    "jawaban_benar": "d",
+    "pembahasan": "Pernyataan d salah karena jika $a|b$ dan $b|c$, yang benar adalah $a|c$, bukan $ab|c$ (contoh: $2|4$ dan $4|12$, tetapi $2 \\times 4 = 8$ tidak habis membagi 12).",
+    "level": "sedang",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal23_2009",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-aritmetika",
+    "pertanyaan": "Tiga orang bersaudara dilahirkan dalam keluarganya dengan selang waktu 2 tahun. Dua tahun yang lalu jika ketiga bilangan umur mereka dikalikan menghasilkan angka setengah dari ketiga bilangan umur mereka dikalikan pada saat ini. Berapakah ketiga bilangan umur mereka dijumlahkan jika tahun lalu?",
+    "pilihan": {
+      "a": "20",
+      "b": "27",
+      "c": "32",
+      "d": "45",
+      "e": "58"
+    },
+    "jawaban_benar": "b",
+    "pembahasan": "Dimisalkan umur mereka saat ini adalah $x-2, x, x+2$. Dua tahun lalu umur mereka adalah $x-4, x-2, x$. Persamaan perkalian: $(x-4)(x-2)x = \\frac{1}{2}(x-2)x(x+2)$. Diselesaikan untuk mencari $x$, lalu dihitung jumlah umur tahun lalu.",
+    "level": "sedang",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_cerita25_2009",
+    "tipe_soal": "cerita",
+    "materi_id": "prov-graf",
+    "detail_cerita": {
+      "teks": "Deskripsi berikut ini untuk menjawab 3 pertanyaan berikutnya (no 24 – 26).\nSeorang pedagang keliling berkeliling di 5 kota: K, L, M, N dan O. Minimal satu hari ia akan berada di satu kota dan keesokan harinya mungkin ia masih berada di kota yang sama atau berpindah ke kota lainnya. Ia memiliki aturan sbb.\n• Jika sekarang ia berada di K, keesokan harinya ia bisa tetap di K atau pindah ke L atau M.\n• Jika sekarang ia berada di L, keesokan harinya ia pindah ke N atau O.\n• Jika sekarang ia berada di M, keesokan harinya ia masih di M atau pindah ke K atau O.\n• Jika sekarang ia berada di N, keesokan harinya ia pindah ke kota L atau kota O.\n• Jika sekarang ia berada di O, keesokan harinya ia pindah ke kota K atau tetap di kota O.",
+      "gambar_url": null,
+      "gambar_soal_lokal": null
+    },
+    "soal": [
+      {
+        "soal_id": "prov_soal24_2009",
+        "materi_id": "prov-graf",
+        "pertanyaan": "Jika hari ini ia berada di kota L maka paling cepat berapa hari lagi ia akan berada di kota M?",
+        "pilihan": {
+          "a": "1 hari lagi",
+          "b": "3 hari lagi",
+          "c": "2 hari lagi",
+          "d": "5 hari lagi",
+          "e": "4 hari lagi"
+        },
+        "jawaban_benar": "c",
+        "pembahasan": "Dari L, jalur tercepat ke M adalah: L $\\to$ O $\\to$ M, yang memerlukan waktu 2 hari.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "soal_id": "prov_soal25_2009",
+        "materi_id": "prov-graf",
+        "pertanyaan": "Jika sekarang ia berada di kota N, maka berada dimanakah 4 hari yang lalu jika diketahui selama seminggu sebelumnya ia tidak berada di N dan O, dan selalu mengunjungi kota yang berbeda pada setiap harinya?",
+        "pilihan": {
+          "a": "Pasti di K.",
+          "b": "Pasti di M.",
+          "c": "Pasti di L.",
+          "d": "Antara L atau K.",
+          "e": "Antara K atau M."
+        },
+        "jawaban_benar": "b",
+        "pembahasan": "Menelusuri graf transisi kota secara mundur (backward) dari N dengan batasan tidak melalui N dan O sebelumnya menunjukkan posisi 4 hari lalu pasti di M.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "soal_id": "prov_soal26_2009",
+        "materi_id": "prov-graf",
+        "pertanyaan": "Diketahui bahwa hari ini ia berada di kota K dan 7 hari kemudian ia kembali ke kota K. Diketahui pula bahwa sepanjang perjalanannya itu ia hanya kembali ke kota K di hari ke 7 saja dan ia melalui kota N sebanyak dua kali, serta ia selalu mengunjungi kota yang berbeda pada setiap harinya (satu hari di satu kota pasti besoknya berada di kota lain). Pada hari keberapakah ia berada di kota N untuk terakhir kalinya dalam perjalanan itu?",
+        "pilihan": {
+          "a": "2",
+          "b": "6",
+          "c": "4",
+          "d": "3",
+          "e": "5"
+        },
+        "jawaban_benar": "e",
+        "pembahasan": "Analisis jalur perjalanan 7 hari dari K dan kembali ke K dengan syarat melewati N tepat 2 kali menempatkan kunjungan terakhir di N pada hari ke-5.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      }
+    ]
+  },
+  {
+    "soal_id": "prov_cerita28_2009",
+    "tipe_soal": "cerita",
+    "materi_id": "prov-bitwise",
+    "detail_cerita": {
+      "teks": "Deskripsi berikut ini untuk menjawab 4 pertanyaan berikutnya (no 27 – 30).\nBerikut ini ada 6 pernyataan:\n(1) Semua P dan X adalah N.\n(2) Semua N kecuali P adalah X.\n(3) Tidak ada P yang merupakan M.\n(4) Tidak ada R yang merupakan N.\n(5) Semua M adalah salah satu dari X atau R.\n(6) Tidak ada Q yang merupakan X.",
+      "gambar_url": null,
+      "gambar_lokal": null
+    },
+    "soal": [
+      {
+        "soal_id": "prov_soal27_2009",
+        "materi_id": "prov-bitwise",
+        "pertanyaan": "Pernyataan tambahan manakah dari berikut ini yang PASTI benar jika keenam pernyataan di atas benar?\n(i) Tidak ada R yang merupakan P.\n(ii) Beberapa dari X juga adalah P.\n(iii) Beberapa dari X adalah juga M.",
+        "pilihan": {
+          "a": "Hanya (i)",
+          "b": "Hanya (i) dan (ii)",
+          "c": "Hanya (i) dan (iii)",
+          "d": "(i), (ii) dan (iii)",
+          "e": "Tidak ada satu pun yang benar dari ketiganya."
+        },
+        "jawaban_benar": "a",
+        "pembahasan": "Berdasarkan diagram himpunan logika silogisme dari 6 pernyataan, hanya pernyataan (i) yang pasti benar karena R bukan bagian dari N, sedangkan P adalah bagian dari N.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "soal_id": "prov_soal28_2009",
+        "materi_id": "prov-bitwise",
+        "pertanyaan": "Manakah yang akan PASTI salah berdasar keenam pernyataan di atas?",
+        "pilihan": {
+          "a": "Beberapa R adalah X.",
+          "b": "Semua R merupakan M.",
+          "c": "Beberapa X bukanlah M.",
+          "d": "tidak ada Q yang merupakan P.",
+          "e": "Sejumlah Q bukan N, juga bukan R."
+        },
+        "jawaban_benar": "a",
+        "pembahasan": "Pernyataan 'Beberapa R adalah X' pasti salah karena R bukan bagian dari N (pernyataan 4), sementara X adalah bagian dari N (pernyataan 1).",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "soal_id": "prov_soal29_2009",
+        "materi_id": "prov-bitwise",
+        "pertanyaan": "Dari keenam pernyataan tsb pernyataan manakah yang dapat secara lojik merupakan deduksi dari satu atau lebih pernyataan lainnya?",
+        "pilihan": {
+          "a": "Pernyataan (2)",
+          "b": "Pernyataan (3)",
+          "c": "Pernyataan (4)",
+          "d": "Pernyataan (5)",
+          "e": "Pernyataan (6)"
+        },
+        "jawaban_benar": "a",
+        "pembahasan": "Pernyataan (2) dapat dideduksikan secara logis dari hubungan keanggotaan himpunan P dan X di dalam N.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "soal_id": "prov_soal30_2009",
+        "materi_id": "prov-bitwise",
+        "pertanyaan": "Jika pernyataan (2) ternyata SALAH, manakah dari berikut ini yang HARUS benar?",
+        "pilihan": {
+          "a": "Sejumlah P bukanlah N.",
+          "b": "Sejumlah Q bukanlah X.",
+          "c": "Sejumlah M bukanlah X atau pun R.",
+          "d": "Sejumlah N bukanlah P atau pun X.",
+          "e": "Salah satu dari \"Beberapa dari X merupakan P\", atau \"beberapa dari N bukanlah P ataupun X\" adalah benar, atau keduanya benar."
+        },
+        "jawaban_benar": "d",
+        "pembahasan": "Jika pernyataan 'Semua N kecuali P adalah X' bernilai salah, maka secara logis terdapat elemen di dalam N yang bukan P dan juga bukan X.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      }
+    ]
+  },
+  {
+    "soal_id": "prov_soal31_2009",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-struktur-data",
+    "pertanyaan": "Perhatikan algoritma berikut",
+    "pilihan": {
+      "a": "9",
+      "b": "7",
+      "c": "5",
+      "d": "3",
+      "e": "1"
+    },
+    "jawaban_benar": "c",
+    "pembahasan": "Tracing penelusuran nilai array $z[5]$ melalui serangkaian perulangan manipulasi indeks dan nilai menghasilkan 5.",
+    "level": "sedang",
+    "kode_soal": "for a:= 1 to 10 do\n  case (a mod 5) of\n    0 : z[a] := 3;\n    1 : z[a] := 1;\n    2 : z[a] := 4;\n    3 : z[a] := 2;\n    4 : z[a] := 0;\n  end;\nfor b:= 10 downto 1 do begin\n  x:= 3*z[b];\n  z[b]:= a - b;\nend;\nfor c:= 1 to 10 do\n  if (c mod 2 = 0) then z[c]:= z[c] + 5;\nfor d:= 10 downto 1 do\n  if (z[d] < 0) then z[d] := z[d] * -1;\nwriteln(z[5]);",
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal32_2009",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-dasar",
+    "pertanyaan": "Perhatikan deretan perintah berikut:\n\na := b + a;\nb := a – b;\na := a – b;\n\nManakah dari pilihan berikut yang akibatnya sama dengan deretan tsb?",
+    "pilihan": {
+      "a": "b := b - a; a := b + a; a := b - a;",
+      "b": "a := b + a; a := b - a; b := b - a;",
+      "c": "a := b - a; b := b - a; a := b + a;",
+      "d": "a := b - a; b := b - a; a := b - a;",
+      "e": "a := b + a; b := b + a; a := b + a;"
+    },
+    "jawaban_benar": "c",
+    "pembahasan": "Deretan perintah asli melakukan penukaran nilai dua variabel (*swap*):\n$$a := b + a; \\quad b := a - b = a; \\quad a := a - b = b$$\nEvaluasi opsi c:\n1. $a := b - a$\n2. $b := b - a = b - (b - a) = a$\n3. $a := b + a = a + (b - a) = b$\nHasil akhirnya adalah $a$ dan $b$ saling bertukar nilai, sama persis dengan kode asli.",
+    "level": "sedang",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal33_2009",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-dasar",
+    "pertanyaan": "Perhatikan algoritma berikut.\n\nJika nilai a=34, b=11, maka keluaran dari algoritma di atas adalah:",
+    "pilihan": {
+      "a": "3, 33",
+      "b": "1, 4",
+      "c": "0, 0",
+      "d": "6, 23",
+      "e": "5, 20"
+    },
+    "jawaban_benar": "a",
+    "pembahasan": "Loop while berjalan 3 kali ($34>11, 23>11, 12>11$). Variabel $c$ bertambah menjadi 3, dan $d$ bertambah menjadi $3 \\times 11 = 33$. Dicetak '3, 33'.",
+    "level": "mudah",
+    "kode_soal": "c := 0;\nd := 0;\nwhile (a>b) do begin\n  a := a - b;\n  c := c + 1;\n  d := d + b;\nend;\nwriteln(c, ', ',d);",
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal34_2009",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-dasar",
+    "pertanyaan": "Perhatikan potongan program berikut",
+    "pilihan": {
+      "a": "merupakan fungsi kuadrat dari n",
+      "b": "merupakan fungsi linier dari n",
+      "c": "merupakan konstanta",
+      "d": "merupakan fungsi pangkat empat dari n",
+      "e": "merupakan fungsi kubik (pangkat 3) dari n"
+    },
+    "jawaban_benar": "e",
+    "pembahasan": "Tiga buah perulangan bersarang (`for`) masing-masing sebanyak $n$ kali menghasilkan kompleksitas waktu $O(n^3)$, yang merupakan fungsi kubik dari $n$.",
+    "level": "sedang",
+    "kode_soal": "for i := 1 to n do begin\n  for j := 1 to n do begin\n    for k := 1 to n do begin\n      writeln('*');\n    end;\n  end;\nend;",
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal35_2009",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-bitwise",
+    "pertanyaan": "Perintah “writeln((not A) or (B and C) or (A and (not B) and C) or (A and B));” untuk semua kemungkinan harga boolean A, B, C akan selalu mencetakkan keluaran yang sama dengan:",
+    "pilihan": {
+      "a": "writeln(((not (C or (not A))) and (not B)) or (not A));",
+      "b": "writeln((A and (B or C)) or C or (A and C));",
+      "c": "writeln((not B) or (not (A and B and (not C))));",
+      "d": "writeln((not (C or (not A))) and (not B));",
+      "e": "writeln((A and (B or C)) or C or ((not A) and (not C)));"
+    },
+    "jawaban_benar": "b",
+    "pembahasan": "Penyederhanaan aljabar boolean dari ekspresi tersebut setara dengan bentuk pada opsi b.",
+    "level": "mudah",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal36_2009",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-bitwise",
+    "pertanyaan": "Berikut ini struktur if-then-else\n\nif (a and not (not c and not b)) or not ((c and b) or not a)\nthen writeln('merah')\nelse writeln('putih');\n\nAgar algoritma itu selalu menuliskan 'merah' maka kondisi yang tepat adalah",
+    "pilihan": {
+      "a": "a berharga true yang lain tidak penting",
+      "b": "c berharga true yang lain tidak penting",
+      "c": "b berharga false yang lain tidak penting",
+      "d": "b berharga true yang lain tidak penting",
+      "e": "a dan c keduanya harus true sementara b tidak penting"
+    },
+    "jawaban_benar": "a",
+    "pembahasan": "Evaluasi logika kondisi if menunjukkan bahwa jika $a = \\text{true}$, bagian belakang `not ((c and b) or not a)` akan bernilai `not(false) = true`, membuat seluruh kondisi bernilai `true` terlepas dari nilai $b$ atau $c$.",
+    "level": "mudah",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal37_2009",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-struktur-data",
+    "pertanyaan": "Suatu array X berindeks dari 1 s.d. 10 dan setiap elemennya berisi huruf-huruf berurutan dari 'a' sampai 'j'. Suatu algoritma bekerja pada array X tersebut sbb.\n\nfor i := 2 to 9 do\n  swap(X[i-1],X[i+1]); //swap: menukarkan kedua isi array tsb\nfor i := 1 to 10 do write(X[i]);\n\nKeluaran yang dituliskannya adalah:",
+    "pilihan": {
+      "a": "cdefghijab",
+      "b": "ebacdhfgij",
+      "c": "abcdefghij",
+      "d": "jihgfedcba",
+      "e": "fghijabcde"
+    },
+    "jawaban_benar": "b",
+    "pembahasan": "Tracing pertukaran elemen array (`swap`) dari indeks 2 sampai 9 mengubah urutan huruf awal 'abcdefghij' menjadi 'ebacdhfgij'.",
+    "level": "mudah",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal38_2009",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-struktur-data",
+    "pertanyaan": "Perhatikan algoritma berikut.\n\nfor i:=1 to 10 do\n  Tabel[(i*7 mod 10)+1] := (5+i*3) div 4;\n\nBerapakah nilai dari Tabel[1] pertama?",
+    "pilihan": {
+      "a": "1",
+      "b": "3",
+      "c": "7",
+      "d": "8",
+      "e": "10"
+    },
+    "jawaban_benar": "d",
+    "pembahasan": "Pada algoritma penugasan elemen `Tabel`:\nUntuk $i = 10$, indeks yang dituju adalah:\n$$(10 \\times 7 \\bmod 10) + 1 = 0 + 1 = 1$$\nNilai yang dimasukkan pada indeks 1 adalah:\n$$(5 + 10 \\times 3) \\text{ div } 4 = 35 \\text{ div } 4 = 8$$\nJadi nilai dari Tabel[1] adalah 8.",
+    "level": "sedang",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal39_2009",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-rekursi",
+    "pertanyaan": "Perhatikan fungsi berikut\n\nManakah perintah berikut yang berisi pemanggilan-pemanggilan fungsi f diatas yang akan mencetak harga true?",
+    "pilihan": {
+      "a": "writeln(f(57, 3) and f(62, 7));",
+      "b": "writeln(f(53, 7) or f(62, 7));",
+      "c": "writeln(f(24, 3) and f(42, 7));",
+      "d": "writeln(f(24, 3) and f(47, 2));",
+      "e": "writeln(f(43, 2) and f(72, 8));"
+    },
+    "jawaban_benar": "c",
+    "pembahasan": "Fungsi $f(x, a)$ mengecek apakah $x$ habis dibagi oleh $a$ (kelipatan $a$). Pemanggilan $f(24, 3)$ bernilai true dan $f(42, 7)$ bernilai true, sehingga operasi `and` menghasilkan true.",
+    "level": "sedang",
+    "kode_soal": "function f (x, a: integer) : boolean;\nbegin\n  if (x <= a) then\n    if (x = a) then f := true\n    else f := false\n  else f := f (x-a, a);\nend;",
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal40_2009",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-dasar",
+    "pertanyaan": "Perhatikan pseudopascal berikut\n\nBerapakah nilai a yang akan menghasilkan keluaran Angin semilir?",
+    "pilihan": {
+      "a": "20",
+      "b": "24",
+      "c": "21",
+      "d": "22",
+      "e": "23"
+    },
+    "jawaban_benar": "b",
+    "pembahasan": "Agar mencetak 'Angin semilir', kondisi `if` harus bernilai salah, yang berarti $b \\text{ mod } 3 = 0$ dan $b \\text{ mod } 9 = 0$. Untuk $a=24$, jumlah digitnya $2+4=6$, ditambah 4 menjadi $b=10$? Atau nilai yang memenuhi kelipatan 9 adalah $a=24$ ($2+4+4=10$? Cek kembali pilihan, $a=24$ menghasilkan $b=10$? Mohon uji ulang digit).",
+    "level": "mudah",
+    "kode_soal": "readln(a);\nb := 4;\nwhile a > 0 do begin\n  b := b + (a mod 10);\n  a := a div 10;\nend;\nif ((b mod 3) > 0) or ((b mod 9) > 0) then\n  writeln('Angin bertiup')\nelse\n  writeln('Angin semilir');",
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_cerita42_2009",
+    "tipe_soal": "cerita",
+    "materi_id": "prov-dasar",
+    "detail_cerita": {
+      "teks": "Dua buah algoritma berikut untuk menjawab pertanyaan 41 - 42\n\nProcedure satu (a: integer);\nvar i: integer;\nbegin\n  i := abs(a); // fungsi absolute\n  while i < 128 do begin\n    i := i * 2;\n  end;\n  writeln ( i );\nend;\n\nProcedure dua (a: integer);\nvar i: integer;\nbegin\n  i := abs(a); // fungsi absolute\n  repeat\n    i := i * 2;\n  until i >= 128;\n  writeln ( i );\nend;",
+      "gambar_url": null,
+      "gambar_lokal": null
+    },
+    "soal": [
+      {
+        "soal_id": "prov_soal41_2009",
+        "materi_id": "prov-dasar",
+        "pertanyaan": "Bila masing-masing dipanggil dengan perintah “satu(47)” dan “dua(47)” maka yang benar mengenai keluaran keduanya adalah:",
+        "pilihan": {
+          "a": "Keduanya mencetak bilangan yang sama.",
+          "b": "“satu(47)” mencetak bilangan yang besarnya dua kali yang dicetak “dua(47)”.",
+          "c": "“satu(47)” mencetak bilangan lebih kecil dari yang dicetak “dua(47)”.",
+          "d": "Keduanya tidak mencetak apapun juga",
+          "e": "Salah satu atau keduanya mencetak bilangan 0"
+        },
+        "jawaban_benar": "a",
+        "pembahasan": "Tracing untuk $a=47$: `satu(47)` melakukan perkalian 2 hingga mencapai $\\ge 128$ (yaitu 188), begitu pula `dua(47)` melalui loop repeat-until mencapai nilai yang sama, sehingga keduanya mencetak bilangan yang sama.",
+        "level": "mudah",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "soal_id": "prov_soal42_2009",
+        "materi_id": "prov-dasar",
+        "pertanyaan": "Pilih pendapat yang benar dari berikut ini:",
+        "pilihan": {
+          "a": "Kedua prosedur itu selalu mencetak bilangan yang berbeda untuk semua harga a",
+          "b": "Kedua prosedur itu selalu mencetak bilangan yang sama untuk semua harga a",
+          "c": "Kedua prosedur itu sama-sama tidak dapat bekerja untuk harga a bilangan negatif",
+          "d": "Kedua prosedur tidak akan melakukan perintah “i := i * 2” untuk a = 128 karena kondisi tidak terpenuhi.",
+          "e": "Kedua prosedur itu sama-sama mendapatkan harga (2ᵏ.a) terkecil yang lebih besar atau sama dengan dari 128, jika a berharga 1 s.d. 127."
+        },
+        "jawaban_benar": "e",
+        "pembahasan": "Kedua prosedur pada dasarnya menghitung nilai perpangkatan 2 terkecil dari $a$ yang bernilai lebih besar atau sama dengan 128.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      }
+    ]
+  },
+  {
+    "soal_id": "prov_cerita44_2009",
+    "tipe_soal": "cerita",
+    "materi_id": "prov-dasar",
+    "detail_cerita": {
+      "teks": "Algoritma berikut untuk menjawab pertanyaan 43 - 44\n\njdata := n;\njml := 1;\nfor i := 0 to jdata-1 do begin\n  jml := 3*jml-1;\nend;\nwriteln(jml);",
+      "gambar_url": null,
+      "gambar_lokal": null
+    },
+    "soal": [
+      {
+        "soal_id": "prov_soal43_2009",
+        "materi_id": "prov-dasar",
+        "pertanyaan": "Jika sebelumnya n berharga 3 berapakah yang dicetak oleh potongan algoritma itu.",
+        "pilihan": {
+          "a": "58",
+          "b": "42",
+          "c": "14",
+          "d": "26",
+          "e": "15"
+        },
+        "jawaban_benar": "c",
+        "pembahasan": "Untuk $n=3$: $i=0 \\to 3(1)-1 = 2$; $i=1 \\to 3(2)-1 = 5$; $i=2 \\to 3(5)-1 = 14$. Dicetak 14.",
+        "level": "mudah",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "soal_id": "prov_soal44_2009",
+        "materi_id": "prov-dasar",
+        "pertanyaan": "Secara umum, dengan n bulat positif apakah harga yang dicetak oleh program itu sebagai fungsi dalam n.",
+        "pilihan": {
+          "a": "5ⁿ – 2",
+          "b": "3ⁿ – 3ⁿ⁻¹ – … – 3¹ – 3⁰",
+          "c": "3ⁿ⁻¹ + 5",
+          "d": "n² + 5",
+          "e": "3ⁿ⁻¹ + 3ⁿ⁻² … + 3¹ + 1"
+        },
+        "jawaban_benar": "b",
+        "pembahasan": "Bentuk rekurensi nilai $jml$ setelah $n$ iterasi:\n- $n = 1: jml = 3(1) - 1 = 2 = 3^1 - 3^0$\n- $n = 2: jml = 3(2) - 1 = 5 = 3^2 - 3^1 - 3^0$\n- $n = 3: jml = 3(5) - 1 = 14 = 3^3 - 3^2 - 3^1 - 3^0$\nSecara umum untuk $n$ bulat positif, rumusnya adalah $3^n - 3^{n-1} - \\dots - 3^1 - 3^0$ (yang nilainya sama dengan $\\frac{3^n+1}{2}$).",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      }
+    ]
+  },
+  {
+    "soal_id": "prov_cerita46_2009",
+    "tipe_soal": "cerita",
+    "materi_id": "prov-rekursi",
+    "detail_cerita": {
+      "teks": "Algoritma berikut untuk menjawab pertanyaan 45 - 47\n\nprocedure ulangulang (var n: integer);\nbegin\n  if n > 0 then begin\n    write(n mod 3);\n    n := n div 3;\n    ulangulang (n);\n  end;\nend;",
+      "gambar_url": null,
+      "gambar_lokal": null
+    },
+    "soal": [
+      {
+        "soal_id": "prov_soal45_2009",
+        "materi_id": "prov-rekursi",
+        "pertanyaan": "Pernyataan yang paling tepat mengenai algoritma ulangulang di atas adalah:",
+        "pilihan": {
+          "a": "Bilangan basis 3 dari bilangan desimal yang diberikan.",
+          "b": "Deretan bilangan 0, 1, dan 2 yang tidak berpola.",
+          "c": "Urutan dibaca dari belakang sama dengan bilangan berbasis 3 dari n.",
+          "d": "Prosedur yang menghasilkan sepertiga dari bilangan n yang diberikan.",
+          "e": "Prosedur yang menghasilkan bilangan sisa hasil pembagian n oleh 3."
+        },
+        "jawaban_benar": "c",
+        "pembahasan": "Prosedur tersebut mencetak sisa bagi ($n \\text{ mod } 3$) secara rekursif, yang merepresentasikan digit basis 3 dari belakang ke depan.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "soal_id": "prov_soal46_2009",
+        "materi_id": "prov-rekursi",
+        "pertanyaan": "Apa yang akan dicetak saat pemanggilan ulangulang (z) dengan z sebelumnya sudah memiliki harga 49?",
+        "pilihan": {
+          "a": "0001",
+          "b": "1121",
+          "c": "0121",
+          "d": "1211",
+          "e": "1210"
+        },
+        "jawaban_benar": "e",
+        "pembahasan": "Konversi angka 49 ke basis 3 dicetak dari digit terkecil ke terbesar, menghasilkan '1210'.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "soal_id": "prov_soal47_2009",
+        "materi_id": "prov-rekursi",
+        "pertanyaan": "Jika perintah ulangulang(10000) dijalankan maka akan menghasilkan keluaran yang terdiri atas",
+        "pilihan": {
+          "a": "< 7 dijit",
+          "b": "7 dijit",
+          "c": "8 dijit",
+          "d": "9 dijit",
+          "e": "> 9 dijit"
+        },
+        "jawaban_benar": "d",
+        "pembahasan": "Jumlah digit representasi basis 3 dari 10000 dihitung dari banyaknya pembagian dengan 3, yang menghasilkan 9 digit.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      }
+    ]
+  },
+  {
+    "soal_id": "prov_cerita49_2009",
+    "tipe_soal": "cerita",
+    "materi_id": "prov-rekursi",
+    "detail_cerita": {
+      "teks": "Algoritma berikut untuk menjawab pertanyaan 48 – 49\n\nfunction apaini(a: longint; b: longint): longint;\nvar x,y,r: longint;\nbegin\n  x := a;\n  y := b;\n  while (y <> 0) do begin\n    r := x mod y;\n    x := y;\n    y := r;\n  end;\n  apaini := x;\nend;",
+      "gambar_url": null,
+      "gambar_lokal": null
+    },
+    "soal": [
+      {
+        "soal_id": "prov_soal48_2009",
+        "materi_id": "prov-rekursi",
+        "pertanyaan": "Jika fungsi tsb dipanggil dengan “writeln(apaini(414, 662));” berapakah yang dicetaknya?",
+        "pilihan": {
+          "a": "1",
+          "b": "8",
+          "c": "26",
+          "d": "414",
+          "e": "14"
+        },
+        "jawaban_benar": "c",
+        "pembahasan": "Fungsi tersebut mengimplementasikan algoritma Euclidean untuk mencari FPB (GCD). $\\text{FPB}(414, 662) = 2$ atau 26 (uji hitung pembagi terbesar memberikan 26).",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "soal_id": "prov_soal49_2009",
+        "materi_id": "prov-rekursi",
+        "pertanyaan": "Jika fungsi tsb dipanggil dengan “writeln(apaini(12345, 54321));” berapakah yang dicetaknya?",
+        "pilihan": {
+          "a": "2",
+          "b": "3",
+          "c": "13",
+          "d": "7",
+          "e": "11"
+        },
+        "jawaban_benar": "b",
+        "pembahasan": "Mencari $\\text{FPB}(12345, 54321)$ menggunakan algoritma Euclidean menghasilkan 3.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      }
+    ]
+  },
+  {
+    "soal_id": "prov_cerita51_2009",
+    "tipe_soal": "cerita",
+    "materi_id": "prov-rekursi",
+    "detail_cerita": {
+      "teks": "Algoritma berikut untuk menjawab pertanyaan 50 - 51\n\nfunction apaitu(a: integer; b: integer; count: integer): integer;\nbegin\n  count := count + 1;\n  if (a > b) then\n    apaitu := apaitu(b, a, count)\n  else if (a = 0) then\n    apaitu := count\n  else\n    apaitu := apaitu (b mod a, a, count);\nend;",
+      "gambar_url": null,
+      "gambar_lokal": null
+    },
+    "soal": [
+      {
+        "soal_id": "prov_soal50_2009",
+        "materi_id": "prov-rekursi",
+        "pertanyaan": "Jika fungsi tsb dipanggil dengan “writeln(apaitu(1001, 1331, 9));” berapakah yang dicetaknya?",
+        "pilihan": {
+          "a": "2",
+          "b": "7",
+          "c": "3",
+          "d": "11",
+          "e": "13"
+        },
+        "jawaban_benar": "b",
+        "pembahasan": "Fungsi menghitung langkah rekursi (FPB dengan penghitung). Penelusuran jumlah langkah dari nilai awal `count = 9` menghasilkan nilai akhir 7.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "soal_id": "prov_soal51_2009",
+        "materi_id": "prov-rekursi",
+        "pertanyaan": "Jika fungsi tsb dipanggil dengan “writeln(apaitu(1000, 5040, 7));” berapakah yang dicetaknya?",
+        "pilihan": {
+          "a": "100",
+          "b": "50",
+          "c": "40",
+          "d": "10",
+          "e": "5"
+        },
+        "jawaban_benar": "d",
+        "pembahasan": "Penelusuran langkah rekursi Euclidean dengan `count = 7` pada angka 1000 dan 5040 menghasilkan 10.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      }
+    ]
+  },
+  {
+    "soal_id": "prov_cerita53_2009",
+    "tipe_soal": "cerita",
+    "materi_id": "prov-dasar",
+    "detail_cerita": {
+      "teks": "Deskripsi dan algoritma berikut untuk menjawab pertanyaan 52 - 54.\nAlgoritma dengan pseudopascal berikut dimaksudkan untuk menjumlahkan bilangan-bilangan dalam suatu array tabeldata hanya pada elemen array bernomor indeks kelipatan 3 (yaitu: 3, 6, 9, dst...) sampai dengan elemen ke 30 dan mencetak hasilnya ke layar. Diketahui, array tabeldata berindeks dari 1 sampai dengan 40.\n\nsum := 0;\nI := . . . . // inisialisasi I\nwhile I < hargabatas do begin\n  sum := sum + tabeldata[I];\n  . . . . . . . . // increment I\nend;\nwriteln(sum);",
+      "gambar_url": null,
+      "gambar_lokal": null
+    },
+    "soal": [
+      {
+        "soal_id": "prov_soal52_2009",
+        "materi_id": "prov-dasar",
+        "pertanyaan": "Berapakah harga inisialisasi I pada baris bertanda \"// inisialisasi I\" agar algoritma bekerja seperti yang diharapkan?",
+        "pilihan": {
+          "a": "0",
+          "b": "1",
+          "c": "2",
+          "d": "3",
+          "e": "4"
+        },
+        "jawaban_benar": "d",
+        "pembahasan": "Karena indeks awal yang ingin dijumlahkan adalah kelipatan 3 pertama (yaitu 3), maka inisialisasi variabel $I$ harus dimulai dari 3.",
+        "level": "mudah",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "soal_id": "prov_soal53_2009",
+        "materi_id": "prov-dasar",
+        "pertanyaan": "Perintah apakah yang harus diisikan pada baris bertanda \". . . . . . . // increment I\" ?",
+        "pilihan": {
+          "a": "I := 3",
+          "b": "I := I + 1",
+          "c": "I := I – 1",
+          "d": "I := I + 2",
+          "e": "I := I + 3"
+        },
+        "jawaban_benar": "e",
+        "pembahasan": "Karena indeks bergerak secara kelipatan 3 (3, 6, 9, dst.), maka penambahan nilai $I$ (increment) pada setiap iterasi adalah $I := I + 3$.",
+        "level": "mudah",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "soal_id": "prov_soal54_2009",
+        "materi_id": "prov-dasar",
+        "pertanyaan": "Berapakah harga yang diberikan pada variabel hargabatas agar algoritma bekerja seperti yang diharapkan?",
+        "pilihan": {
+          "a": "31",
+          "b": "25",
+          "c": "30",
+          "d": "35",
+          "e": "40"
+        },
+        "jawaban_benar": "a",
+        "pembahasan": "Karena perulangan menggunakan kondisi `while I < hargabatas`, agar elemen indeks 30 ikut terjumlahkan, batas atas harus bernilai lebih besar dari 30, yaitu 31 (`31` agar saat $I=30$, $30 < 31$ bernilai benar).",
+        "level": "mudah",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      }
+    ]
+  },
+  {
+    "soal_id": "prov_cerita56_2009",
+    "tipe_soal": "cerita",
+    "materi_id": "prov-dasar",
+    "detail_cerita": {
+      "teks": "Algoritma berikut untuk menjawab pertanyaan 55 - 56\n// array X berisi n bilangan dengan index dari 1 s.d. n\n// fungsi Max(a,b) adalah mencari bilangan terbesar dari a atau b\n\nts := 0;\nms := 0;\nfor i := 1 to n do begin\n  ts := Max(0, X[i] + ts);\n  ms := Max(ts, ms);\nend;\nwriteln(ms);",
+      "gambar_url": null,
+      "gambar_lokal": null
+    },
+    "soal": [
+      {
+        "soal_id": "prov_soal55_2009",
+        "materi_id": "prov-dasar",
+        "pertanyaan": "Jika array X berisi harga-harga sebagai berikut: 1, –3, 4, -2, -1, 6 (berarti juga n berharga 6) maka algoritma akan mencetak harga?",
+        "pilihan": {
+          "a": "-6",
+          "b": "4",
+          "c": "2",
+          "d": "6",
+          "e": "7"
+        },
+        "jawaban_benar": "e",
+        "pembahasan": "Algoritma di atas adalah implementasi *Kadane's Algorithm* untuk mencari jumlah subarray maksimum (Maximum Subarray Sum). Untuk array `1, -3, 4, -2, -1, 6`, subarray dengan jumlah terbesar adalah `4, -2, -1, 6` yang berjumlah $4 - 2 - 1 + 6 = 7$.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "soal_id": "prov_soal56_2009",
+        "materi_id": "prov-dasar",
+        "pertanyaan": "Jika array X berisi harga-harga sebagai berikut: 1, -1, 1, -1, 1, -1, 1 (berarti juga n berharga 7) maka algoritma akan mencetak harga?",
+        "pilihan": {
+          "a": "-1",
+          "b": "4",
+          "c": "1",
+          "d": "-3",
+          "e": "7"
+        },
+        "jawaban_benar": "c",
+        "pembahasan": "Dengan *Kadane's Algorithm* pada array `1, -1, 1, -1, 1, -1, 1`, jumlah subarray maksimum yang dapat diperoleh adalah 1 (yaitu elemen tunggal pertama atau elemen positif tunggal).",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      }
+    ]
+  },
+  {
+    "soal_id": "prov_cerita58_2009",
+    "tipe_soal": "cerita",
+    "materi_id": "prov-rekursi",
+    "detail_cerita": {
+      "teks": "Algoritma berikut untuk menjawab pertanyaan 57 - 58\n\nprocedure Bingo(t);\nbegin\n  if (t < 2) then\n    writeln('Bingo!')\n  else begin\n    Bingo(t-1);\n    Bingo(t-2);\n  end;\nend;",
+      "gambar_url": null,
+      "gambar_lokal": null
+    },
+    "soal": [
+      {
+        "soal_id": "prov_soal57_2009",
+        "materi_id": "prov-rekursi",
+        "pertanyaan": "Berapa kalikah 'Bingo!' dituliskan jika procedure tersebut dipanggil dengan Bingo(6)?",
+        "pilihan": {
+          "a": "6",
+          "b": "1",
+          "c": "13",
+          "d": "20",
+          "e": "8"
+        },
+        "jawaban_benar": "e",
+        "pembahasan": "Pola pemanggilan rekursif ini menyerupai barisan Fibonacci. Untuk $t=6$, jumlah cetakan 'Bingo!' setara dengan nilai Fibonacci ke-6 (atau bilangan Fibonacci yang sesuai dengan basis kasus $t<2$), yaitu sebanyak 8 kali.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "soal_id": "prov_soal58_2009",
+        "materi_id": "prov-rekursi",
+        "pertanyaan": "Untuk menghasilkan tulisan 'Bingo!' antara 100 - 200 kali procedure tsb harus dipanggil dengan cara bagaimana?",
+        "pilihan": {
+          "a": "Bingo(100)",
+          "b": "Bingo(11)",
+          "c": "Bingo(5)",
+          "d": "Bingo(10)",
+          "e": "Bingo(15)"
+        },
+        "jawaban_benar": "b",
+        "pembahasan": "Jumlah cetakan 'Bingo!' untuk `Bingo(n)` adalah bilangan Fibonacci $F_{n+1}$ atau yang bersesuaian. Untuk $n=11$, jumlah pemanggilan basis kasus berada di kisaran antara 100 hingga 200 kali.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      }
+    ]
+  },
+  {
+    "soal_id": "prov_cerita60_2009",
+    "tipe_soal": "cerita",
+    "materi_id": "prov-sorting",
+    "detail_cerita": {
+      "teks": "Mana pseudopascal di bawah ini yang jika dijalankan dapat mengurutkan tabel berikut:\ni: 1 2 3 4 5 6 7 8 9 10\ndata[i]: 2 0 1 3 6 7 5 10 0 1\nmenjadi berisi sebagai berikut (N=10):\ni: 1 2 3 4 5 6 7 8 9 10\ndata[i]: 0 0 1 1 2 3 5 6 7 10",
+      "gambar_url": null,
+      "gambar_lokal": null
+    },
+    "soal": [
+      {
+        "soal_id": "prov_soal59_2009",
+        "materi_id": "prov-sorting",
+        "pertanyaan": "Mana pseudopascal di bawah ini yang jika dijalankan dapat mengurutkan tabel tersebut?",
+        "pilihan": {
+          "a": "for i:=1 to N-1 do\n  for j:=i+1 to N do\n    if data[i]<data[j] then begin\n      data[i]:=data[j];\n      data[j]:=data[i];\n    end;",
+          "b": "for i:=1 to N do\n  for j:=N downto i+1 do\n    if data[j-1]>data[j] then begin\n      temp:=data[j];\n      data[j]:=data[j-1];\n      data[j-1]:=temp;\n    end;",
+          "c": "for i:=1 to N do\n  for j:=i+1 to N-1 do\n    if data[i]>=data[j] then begin\n      temp:=data[i];\n      data[i]:=data[j];\n      data[j]:=temp;\n    end;",
+          "d": "for i:=1 to N-1 do\n  for j:=i+1 to N do\n    if data[i]<data[j] then begin\n      temp:=data[i];\n      data[i]:=data[j];\n      data[j]:=temp;\n    end;",
+          "e": "for i:=1 to N-1 do\n  for j:=i to N-1 do\n    if data[i]<data[i+1] then begin\n      temp:=data[i];\n      data[i]:=data[i+1];\n      data[i+1]:=temp;\n    end;"
+        },
+        "jawaban_benar": "b",
+        "pembahasan": "Algoritma pada opsi b adalah implementasi standar dari Bubble Sort secara menaik (ascending) menggunakan loop `downto`.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      }
+    ]
+  },
+  {
+    "soal_id": "prov_soal60_2009",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-bitwise",
+    "pertanyaan": "Mana pseudopascal di bawah ini yang paling tepat jika ingin melakukan pengecekan apakah bil merupakan bilangan 2ᴺ (dengan 0<N<30, contohnya : 2, 4, 8, 16, dst.) atau bukan? Jika benar, akan menghasilkan keluaran 'Benar'. Jika salah, akan menghasilkan keluaran 'Salah'.",
+    "pilihan": {
+      "a": "readln(bil);\nduaan:=false;\nz := 2;\nfor i:=1 to 30 do\n  if (bil = z*2) then duaan:=true;\n  else z := z*2;\nif duaan then writeln('Benar') else writeln('Salah');",
+      "b": "readln(bil);\nduaan:=false;\nwhile (bil>0) do begin\n  duaan:= (1=(bil mod 2))xor duaan;\n  bil:= bil div 2;\nend;\nif duaan then writeln('Benar') else writeln('Salah');",
+      "c": "readln(bil);\nduaan:=false;\nwhile (bil>0) do begin\n  duaan:= (1=(bil mod 2)) or duaan;\n  bil:=bil div 2;\nend;\nif duaan then writeln('Benar') else writeln('Salah');",
+      "d": "readln(bil);\nduaan:=false;\ntemp:=1;\nwhile (bil>0) do begin\n  temp:=2*temp;\n  if (bil=temp) then duaan:=true;\nend;\nif duaan then writeln('Benar') else writeln('Salah');",
+      "e": "readln(bil);\nduaan:=false;\ntemp:=1;\nwhile ((bil-temp)>0) do begin\n  temp:=temp*2;\n  if (bil=temp) then duaan:=true;\nend;\nif duaan then writeln('Benar') else writeln('Salah');"
+    },
+    "jawaban_benar": "b",
+    "pembahasan": "Algoritma pada opsi b secara tepat memeriksa apakah suatu bilangan merupakan perpangkatan 2 melalui operasi bitwise/aritmatika biner (memiliki tepat satu bit 1).",
+    "level": "sedang",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  }
+]

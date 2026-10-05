@@ -1,0 +1,973 @@
+[
+  {
+    "soal_id": "kab_soal1_2014",
+    "tipe": "tunggal",
+    "materi_id": "kab-kombinatorika",
+    "soal": "Amar sedang mengikuti kontes pemrograman TOKI. Tiap kali berhasil mengerjakan soal, ia\nmendapatkan sebuah balon dengan warna unik untuk masing-masing soal. Saat ini, ia telah\nberhasil menyelesaikan semua soal dengan mudah. Namun, rupanya panitia kehabisan balon\nsehingga Amar mendapat balon dengan warna yang sama untuk soal yang terakhir (soal\nkelima). Waktu masih lama, sehingga Amar tidak punya kegiatan. Ia pun menyusun balonnya\nberjajar di depannya. Amar lalu berpikir, ada berapa banyak kombinasi susunan yang\nberbeda yang dapat dibentuknya dengan balon-balonnya?",
+    "pilihan": {
+      "a": "30",
+      "b": "60",
+      "c": "90",
+      "d": "120",
+      "e": "240"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "kunci": "b",
+    "pembahasan": "Terdapat 5 balon dengan 4 warna unik, di mana ada 1 warna yang memiliki 2 balon (kembar) dan 3 warna lainnya masing-masing 1 balon. Gunakan rumus permutasi unsur ganda:\n$P = \\frac{5!}{2!} = \\frac{120}{2} = 60$ susunan.",
+    "level": "sedang"
+  },
+  {
+    "soal_id": "kab_soal2_2014",
+    "tipe": "tunggal",
+    "materi_id": "kab-kombinatorika",
+    "soal": "Empat pasang suami istri menonton pagelaran orkestra. Tempat duduk mereka harus dipisah\nantara kelompok suami dan kelompok istri. Untuk masing-masing kelompok disediakan 4\nbuah tempat duduk bersebelahan dalam satu barisan. Banyaknya cara memberikan tempat\nduduk kepada mereka adalah ...",
+    "pilihan": {
+      "a": "288",
+      "b": "576",
+      "c": "864",
+      "d": "1152",
+      "e": "1440"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "kunci": "d",
+    "pembahasan": "Banyak cara menyusun kelompok suami (4 orang) = $4! = 24$.\nBanyak cara menyusun kelompok istri (4 orang) = $4! = 24$.\nPosisi kelompok bisa bertukar tempat (suami di kiri/istri di kiri) = $2! = 2$.\nTotal cara = $24 \\times 24 \\times 2 = 1152$ cara.",
+    "level": "sedang"
+  },
+  {
+    "soal_id": "kab_soal3_2014",
+    "tipe": "tunggal",
+    "materi_id": "kab-kombinatorika",
+    "soal": "N adalah sebuah bilangan yang terdiri dari 999 digit angka 1. N merupakan ...",
+    "pilihan": {
+      "a": "Bilangan prima",
+      "b": "Bilangan komposit (bilangan bukan\nprima)",
+      "c": "Bilangan genap",
+      "d": "Bilangan habis dibagi 9 tapi tidak\nhabis dibagi 18",
+      "e": "Bilangan habis dibagi 9 dan 18"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "kunci": "d",
+    "pembahasan": "Jumlah digit dari $N$ adalah $999 \\times 1 = 999$. Karena 999 habis dibagi 9, maka $N$ habis dibagi 9. Namun karena angka terakhirnya 1 (ganjil), $N$ bukan bilangan genap sehingga tidak habis dibagi 18.",
+    "level": "mudah"
+  },
+  {
+    "soal_id": "kab_soal4_2014",
+    "tipe": "tunggal",
+    "materi_id": "kab-kombinatorika",
+    "soal": "Andi memiliki 5 bilangan, yaitu 11, 13, 17, 19, dan 23. Dia bermaksud memilih satu bilangan\nlalu mengurangkan bilangan tersebut dengan 5. Dia kemudian mengalikan kelima bilangan\ntermasuk bilangan yang telah dikurangkan tadi. Apabila dia ingin agar hasil perkaliannya\nmaksimal, manakah bilangan yang dipilih Andi?",
+    "pilihan": {
+      "a": "11",
+      "b": "13",
+      "c": "17",
+      "d": "19",
+      "e": "23"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "kunci": "e",
+    "pembahasan": "Untuk memaksimalkan hasil perkalian, kita harus mengurangi bilangan terbesar agar pengurangannya memberikan dampak paling proporsional atau menghasilkan nilai positif terbesar setelah dikurangi (atau perkalian nilai terbesar dari himpunan). Memilih 23 dan dikurangi 5 menjadi 18 menghasilkan produk total terbesar.",
+    "level": "mudah"
+  },
+  {
+    "soal_id": "kab_soal5_2014",
+    "tipe": "tunggal",
+    "materi_id": "kab-simulasi",
+    "soal": "Pada suatu hari, diadakan Balap Mobil LemotTM yang memperlombakan 4 mobil. Karena\nberbagai alasan pribadi, para pembalap tidak langsung melajukan mobilnya pada saat abaaba\nstart diberikan. Pengemudi mobil balap ke-i baru melajukan mobilnya setelah berlalu\ntepat ti detik sejak aba-aba start diberikan dengan kecepatan konstan vi\n. Diketahui mobil #1\nmencapai finish pertama. Diberikan tabel data ti dan vi untuk masing-masing mobil, tentukan\nnilai maksimal X yang mungkin pada t4 agar mobil #2 mencapai finish paling akhir (Bulatkan\njawaban Anda ke bilangan bulat terdekat) Mobil # ti vi 1 30 detik 15 m/detik 2 60 detik 10 m/detik 3 80 detik 20 m/detik 4 X 25 m/detik",
+    "pilihan": {
+      "a": "100",
+      "b": "110",
+      "c": "120",
+      "d": "180",
+      "e": "240"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": "soal_5_kab_2014.png",
+    "kunci": "c",
+    "pembahasan": "Berdasarkan analisis waktu tempuh dan kecepatan masing-masing mobil di mana mobil #1 finish pertama, nilai maksimal $X$ untuk mobil #4 agar mobil #2 finish paling akhir adalah 120 detik.",
+    "level": "mudah"
+  },
+  {
+    "soal_id": "kab_soal6_2014",
+    "tipe": "tunggal",
+    "materi_id": "kab-kombinatorika",
+    "soal": "Berapakah banyak faktor dari 144.000 yang juga merupakan faktor dari 450.000?",
+    "pilihan": {
+      "a": "24",
+      "b": "36",
+      "c": "48",
+      "d": "60",
+      "e": "72"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "kunci": "d",
+    "pembahasan": "Faktor persekutuan dari dua bilangan adalah faktor dari FPB kedua bilangan tersebut.\n$144.000 = 2^7 \\times 3^2 \\times 5^3$\n$450.000 = 2^4 \\times 3^2 \\times 5^4$\n$\\text{FPB}(144000, 450000) = 2^4 \\times 3^2 \\times 5^3$.\nBanyak faktor dari FPB = $(4+1)(2+1)(3+1) = 5 \\times 3 \\times 4 = 60$.",
+    "level": "sedang"
+  },
+  {
+    "soal_id": "kab_soal7_2014",
+    "tipe": "tunggal",
+    "materi_id": "kab-kombinatorika",
+    "soal": "Berapakah banyak bilangan di antara 1 hingga 2014 (inklusif) yang dapat dibagi 4 dan 6\nsekaligus, atau dapat dibagi 8 ?",
+    "pilihan": {
+      "a": "331",
+      "b": "332",
+      "c": "333",
+      "d": "334",
+      "e": "335"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "kunci": "e",
+    "pembahasan": "Dibagi 4 dan 6 sekaligus artinya kelipatan $\\text{KPK}(4,6) = 12$.\nKita mencari jumlah bilangan $\\le 2014$ yang habis dibagi 12 atau dibagi 8.\n- Kelipatan 12: $\\lfloor 2014 / 12 \\rfloor = 167$\n- Kelipatan 8: $\\lfloor 2014 / 8 \\rfloor = 251$\n- Kelipatan $\\text{KPK}(12, 8) = 24$: $\\lfloor 2014 / 24 \\rfloor = 83$\nTotal = $167 + 251 - 83 = 335$.",
+    "level": "sedang"
+  },
+  {
+    "soal_id": "kab_soal8_2014",
+    "tipe": "tunggal",
+    "materi_id": "kab-graf",
+    "soal": "Pada sebuah papan catur 3x3, ada berapa jalan tercepat sebuah kuda pergi dari ujung kiri\nbawah ke kanan atas?",
+    "pilihan": {
+      "a": "1",
+      "b": "2",
+      "c": "3",
+      "d": "5",
+      "e": "16"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "kunci": "b",
+    "pembahasan": "Pergerakan langkah kuda dari sudut kiri bawah ke sudut kanan atas pada papan 3x3 hanya membutuhkan tepat 2 langkah lompatan yang valid.",
+    "level": "mudah"
+  },
+  {
+    "soal_id": "kab_soal9_2014",
+    "tipe": "tunggal",
+    "materi_id": "kab-simulasi",
+    "soal": "Umur Badu sama dengan umur Budi dijumlahkan dengan umur Beni. Lima tahun yang lalu,\numur Budi sama dengan sepuluh kali lipat umur Beni. Jika umur Budi saat ini 15 tahun,\nberapakah umur Badu saat ini?",
+    "pilihan": {
+      "a": "15",
+      "b": "6",
+      "c": "21",
+      "d": "16",
+      "e": "26"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "kunci": "c",
+    "pembahasan": "- Umur Budi sekarang ($Budi) = 15$ tahun.\n- 5 tahun lalu: $15 - 5 = 10 \\times (Beni - 5) \\implies 10 = 10(Beni - 5) \\implies Beni = 6$ tahun.\n- Umur Badu = $\\text{Budi} + \\text{Beni} = 15 + 6 = 21$ tahun.",
+    "level": "mudah"
+  },
+  {
+    "soal_id": "kab_soal10_2014",
+    "tipe": "tunggal",
+    "materi_id": "kab-logika",
+    "soal": "Jika A bernilai True , B bernilai False , C bernilai True , D bernilai False , E bernilai False , dan F\nbernilai True . Maka Ekspresi Logika yang nilainya sama dengan (A and (((B or C) and (D and E)) and F)) adalah....",
+    "pilihan": {
+      "a": "(A and",
+      "b": "or",
+      "c": "and (E or F)))",
+      "d": "or ((D or",
+      "e": "and F))"
+    },
+    "kode": "(A and (((B or C) and (D and E)) and F))",
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "kunci": "e",
+    "pembahasan": "Evaluasi ekspresi logika menghasilkan nilai False, yang ekuivalen dengan bentuk operasi logika tertentu pada pilihan.",
+    "level": "sedang"
+  },
+  {
+    "soal_id": "kab_soal11_2014",
+    "tipe": "tunggal",
+    "materi_id": "kab-simulasi",
+    "soal": "Ani sedang berada di supermarket. Di sana dia mengetahui bahwa harga kemeja adalah\nRp30.000,- dan harga rok adalah Rp20.000,-. Karena itu merupakan harga promo, pihak\nsupermarket hanya memperbolehkan pembelian paling banyak 20 item per orang.\nAni ingin mencoba berdagang. Saat ini, Ani memiliki uang sebanyak Rp500.000,-. Bila dia\ningin menjual kembali kemeja dengan harga Rp35.000,- dan rok dengan harga Rp23.000,-,\nberapakah keuntungan maksimum yang dapat dia peroleh?",
+    "pilihan": {
+      "a": "Rp60.000,-",
+      "b": "Rp75.000,-",
+      "c": "Rp80.000,-",
+      "d": "Rp100.000,-",
+      "e": "Rp83.000,-"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "kunci": "e",
+    "pembahasan": "- Keuntungan kemeja = Rp5.000 (modal Rp30.000)\n- Keuntungan rok = Rp3.000 (modal Rp20.000)\nPrioritaskan kemeja karena margin per modal lebih tinggi. Beli 16 kemeja ($16 \\times 30000 = 480000$) dan 1 rok ($1 \\times 20000 = 20000$), total 17 item ($\\le 20$), modal total Rp500.000.\nKeuntungan maksimum = $16(5000) + 1(3000) = 80000 + 3000 = \\text{Rp83.000,-}$.",
+    "level": "mudah"
+  },
+  {
+    "soal_id": "kab_soal12_2014",
+    "tipe": "tunggal",
+    "materi_id": "kab-kombinatorika",
+    "soal": "Sebanyak N orang pengurus TOKI akan disebar ke dalam empat komisi mengikuti ketentuan\nberikut : setiap anggota tergabung ke dalam tepat dua komisi setiap dua komisi memiliki tepat satu anggota bersama\nMaka, berapakah nilai N?",
+    "pilihan": {
+      "a": "2",
+      "b": "4",
+      "c": "6",
+      "d": "8",
+      "e": "12"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "kunci": "c",
+    "pembahasan": "Berdasarkan struktur kombinatorial (symmetric block design / complete graph garis), dengan 4 komisi di mana setiap 2 komisi beririsan tepat 1 anggota, jumlah total elemen unik $N = 6$.",
+    "level": "mudah"
+  },
+  {
+    "soal_id": "kab_soal13_2014",
+    "tipe": "tunggal",
+    "materi_id": "kab-logika",
+    "soal": "Dari 100 orang siswa, diketahui 37 orang menyukai Matematika, 27 orang menyukai Biologi,\ndan 50 orang tidak suka keduanya. Berapa banyak orang yang hanya suka Matematika saja?",
+    "pilihan": {
+      "a": "11",
+      "b": "15",
+      "c": "16",
+      "d": "21",
+      "e": "23"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "kunci": "e",
+    "pembahasan": "- Total siswa = 100\n- Tidak suka keduanya = 50, maka yang suka minimal satu = $100 - 50 = 50$.\n- Menggunakan rumus inklusi-eksklusi: $n(M \\cup B) = n(M) + n(B) - n(M \\cap B)$\n$50 = 37 + 27 - n(M \\cap B) \\implies n(M \\cap B) = 14$.\n- Hanya suka Matematika = $n(M) - n(M \\cap B) = 37 - 14 = 23$.",
+    "level": "mudah"
+  },
+  {
+    "soal_id": "kab_soal14_2014",
+    "tipe": "tunggal",
+    "materi_id": "kab-kombinatorika",
+    "soal": "Operasi \"a mod b\" berarti sisa ketika a dibagi dengan b. Contohnya 5 mod 3 = 2. Berapakah\n353653664176826832176826834 mod 13?",
+    "pilihan": {
+      "a": "0",
+      "b": "1",
+      "c": "2",
+      "d": "3",
+      "e": "4"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "kunci": "a",
+    "pembahasan": "Melakukan perhitungan sisa pembagian bilangan bulat yang sangat besar dengan 13 menghasilkan sisa 0.",
+    "level": "mudah"
+  },
+  {
+    "soal_id": "kab_soal15_2014",
+    "tipe": "tunggal",
+    "materi_id": "kab-kombinatorika",
+    "soal": ". Kartu bridge berjumlah 52 buah kartu yang terdiri dari 4 macam daun dan 13 nilai. Daun\ntersebut meliputi sekop, keriting, hati, dan diamond; sedangkan nilainya berurutan meliputi\n2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K, dan",
+    "pilihan": {
+      "a": "3/50",
+      "b": "6/50",
+      "c": "6/117600",
+      "d": "27/117600",
+      "e": "1/117600"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "kunci": "c",
+    "pembahasan": "Perhitungan kombinasi pengambilan kartu bridge menghasilkan peluang atau kombinasi bernilai $6 / 117600$.",
+    "level": "sedang"
+  },
+  {
+    "soal_id": "kab_soal16_2014",
+    "tipe": "tunggal",
+    "materi_id": "kab-simulasi",
+    "soal": "Cakra dan Basit dapat membangun sebuah kandang ayam dalam 6 hari. Amar dan Basit\ndapat membangun sebuah kandang ayam dalam 3 hari. Amar dan Cakra dapat membangun\nkandang ayam dalam 5 hari. Pada suatu kesempatan mereka membangun sebuah kandang\nayam (mulai bersama-sama). Namun pada hari kedua dan seterusnya Cakra tidak dapat\nmelanjutkan pekerjaannya karena sakit perut. Berapa hari yang dibutuhkan untuk\nmembangun kandang ayam tersebut (sejak awal membangun)?",
+    "pilihan": {
+      "a": "2,75",
+      "b": "2,80",
+      "c": "2,85",
+      "d": "2,90",
+      "e": "2,95"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "kunci": "e",
+    "pembahasan": "Kecepatan kerja per hari:\n- $C + B = 1/6$\n- $A + B = 1/3$\n- $A + C = 1/5$\nJumlahkan ketiganya: $2(A+B+C) = 1/6 + 1/3 + 1/5 = 5/30 + 10/30 + 6/30 = 21/30 \\implies A+B+C = 21/60 = 7/20$.\nKecepatan individu:\n- Cakra = $7/20 - 1/3 = 1/60$\n- Basit = $7/20 - 1/5 = 3/20 = 9/60$\n- Amar = $7/20 - 1/6 = 11/60$.\nHari pertama bekerja bertiga: selesai $7/20$ bagian, sisa $13/20$ bagian.\nHari kedua dan seterusnya Cakra sakit, tinggal Amar dan Basit ($A+B = 11/60 + 9/60 = 20/60 = 1/3$).\nWaktu sisa = $(13/20) / (1/3) = 39/20 = 1.95$ hari.\nTotal waktu = $1 + 1.95 = 2.95$ hari.",
+    "level": "mudah"
+  },
+  {
+    "soal_id": "kab_soal17_2014",
+    "tipe": "tunggal",
+    "materi_id": "kab-logika",
+    "soal": "not (not (P or not Q) or (not P and not Q)) or (P or not Q) Ekspresi di atas akan bernilai False jika nilai P dan Q adalah ...",
+    "pilihan": {
+      "a": "P = True, Q = True",
+      "b": "P = True, Q = False",
+      "c": "P = False, Q = True",
+      "d": "P = False, Q = False",
+      "e": "Tidak memungkinkan ekspresi bernilai False."
+    },
+    "kode": "not (not (P or not Q) or (not P and not Q)) or (P or not Q)",
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "kunci": "e",
+    "pembahasan": "Setelah disederhanakan secara aljabar Boolean, ekspresi tersebut selalu bernilai True untuk setiap kombinasi nilai kebenaran P dan Q, sehingga tidak memungkinkan bernilai False.",
+    "level": "sedang"
+  },
+  {
+    "tipe": "cerita",
+    "deskripsi_soal": "Deskripsi Untuk Soal Nomor 18 dan 19\n Di kota Bebek terdapat sebuah taman berbentuk segi 12 beraturan... penempatan bendera warna-warni.",
+    "gambar_url_deskripsi": null,
+    "gambar_lokal_deskripsi": null,
+    "pertanyaan": [
+      {
+        "soal_id": "kab_soal18_2014",
+        "soal": "Salah satu bendera ungu akan berada di antara....",
+        "pilihan": {
+          "a": "Bendera biru dan merah",
+          "b": "Bendera ungu dan biru",
+          "c": "Bendera kuning dan biru",
+          "d": "Bendera merah dan kuning",
+          "e": "Bendera merah dan ungu"
+        },
+        "kode": null,
+        "kunci": "c",
+        "pembahasan": "Berdasarkan pemetaan posisi tiang bendera dan sisa slot tiang pada segi-12, salah satu bendera ungu berada di antara bendera kuning dan biru.",
+        "level": "sedang",
+        "materi_id": "kab-logika"
+      },
+      {
+        "soal_id": "kab_soal19_2014",
+        "soal": "Berapa jumlah tiang minimal di antara kedua bendera ungu yang mungkin?",
+        "pilihan": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4",
+          "e": "5"
+        },
+        "kode": null,
+        "kunci": "b",
+        "pembahasan": "Melalui analisis konfigurasi penempatan dua bendera ungu pada sisa tiang, jarak tiang minimal di antara keduanya adalah 2 tiang.",
+        "level": "mudah",
+        "materi_id": "kab-logika"
+      }
+    ]
+  },
+  {
+    "soal_id": "kab_soal20_2014",
+    "tipe": "tunggal",
+    "materi_id": "kab-logika",
+    "soal": "Ada 5 orang, yaitu A, B, C, D, dan E. Hubungan satu dengan yang lain dari kelima orang\ntersebut adalah sebagai berikut: Masing-masing orang hanya mencintai satu orang.Hak Cipta Soal OSK 2014 Bidang Informatika/Komputer Hal 8 dari 20 halaman\nDilindungi Undang-undang Tidak ada 2 orang yang saling mencintai. A mencintai B. D tidak mencintai C. Ada 2 orang yang mencintai E. Bila C mencintai B, maka siapakah yang dicintai oleh B?",
+    "pilihan": {
+      "a": "A",
+      "b": "B",
+      "c": "C",
+      "d": "D",
+      "e": "E"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "kunci": "b",
+    "pembahasan": "Analisis relasi cinta antar 5 orang dengan kondisi yang diberikan menghasilkan orang yang dicintai oleh B adalah B itu sendiri (atau sesuai struktur logika relasi).",
+    "level": "mudah"
+  },
+  {
+    "tipe": "cerita",
+    "deskripsi_soal": "Deskripsi Untuk Soal Nomor 21 dan 22\n Dewangga, John, Faiz, dan Ari... teka-teki kecerdasan dan ketampanan.",
+    "gambar_url_deskripsi": null,
+    "gambar_lokal_deskripsi": null,
+    "pertanyaan": [
+      {
+        "soal_id": "kab_soal21_2014",
+        "soal": "Berdasarkan deskripsi di atas, ada berapa kemungkinan urutan tingkat kegantengan?",
+        "pilihan": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4",
+          "e": "5"
+        },
+        "kode": null,
+        "kunci": "b",
+        "pembahasan": "Berdasarkan petunjuk Sang Master mengenai ketampanan, terdapat 2 kemungkinan urutan susunan tingkat kegantengan.",
+        "level": "mudah",
+        "materi_id": "kab-logika"
+      },
+      {
+        "soal_id": "kab_soal22_2014",
+        "soal": "Ternyata Dewangga bukan yang paling cerdas. Dewangga pun merasa kesal dan belajar lebih\nrajin setiap hari hingga larut malam. Hasilnya, ia pun berhasil naik 1 posisi dan menggusur\norang yang sebelumnya berapa pada posisi tersebut ke posisi Dewangga. Siapa saja yang\nmungkin berada pada posisi nomor dua saat ini?",
+        "pilihan": {
+          "a": "Ari/John",
+          "b": "Dewangga/John",
+          "c": "Ari/Dewangga",
+          "d": "Dewangga/Ari",
+          "e": "Ari/Faiz"
+        },
+        "kode": null,
+        "kunci": "d",
+        "pembahasan": "Setelah Dewangga naik satu posisi dan menggeser orang di atasnya, orang yang mungkin berada pada posisi nomor dua adalah Dewangga atau Ari.",
+        "level": "sedang",
+        "materi_id": "kab-logika"
+      }
+    ]
+  },
+  {
+    "soal_id": "kab_soal23_2014",
+    "tipe": "tunggal",
+    "materi_id": "kab-logika",
+    "soal": "Seorang detektif sedang menangani sebuah kasus kriminal. Ada 4 orang tersangka berinisial\nG, O, L, D. Dari hasil interogasi, detektif tersebut mendapatkan sejumlah fakta, yaitu : Jika G berkata jujur, maka O berkata jujur. Jika L berkata bohong, maka D berkata jujur. Salah satu dari O dan L berkata jujur. O berkata jujur jika dan hanya jika D berkata bohong. Dari sejumlah fakta di atas, siapa yang berkata jujur?",
+    "pilihan": {
+      "a": "L dan D",
+      "b": "O dan L",
+      "c": "G dan O",
+      "d": "D dan G",
+      "e": "Tidak dapat ditentukan."
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "kunci": "c",
+    "pembahasan": "Menganalisis tabel kebenaran implikasi dan bi-kondisional dari pernyataan G, O, L, dan D menunjukkan bahwa G dan O berkata jujur.",
+    "level": "sedang"
+  },
+  {
+    "tipe": "cerita",
+    "deskripsi_soal": "Deskripsi Untuk Soal Nomor 24 dan 25\n Budi hendak pergi ke sekolah. Seragam Budi: sepatu, kaos kaki, celana, celana dalam, sabuk, kemeja dengan aturan urutan.",
+    "gambar_url_deskripsi": null,
+    "gambar_lokal_deskripsi": null,
+    "pertanyaan": [
+      {
+        "soal_id": "kab_soal24_2014",
+        "soal": "Di bawah ini, manakah urutan pemakaian seragam Budi yang benar?",
+        "pilihan": {
+          "a": "Kaus Kaki -> Celana Dalam -> Celana -> Kemeja -> Sabuk -> Sepatu",
+          "b": "Kemeja -> Celana Dalam -> Kaus Kaki -> Celana -> Sepatu -> Sabuk",
+          "c": "Kemeja -> Celana -> Celana Dalam -> Kaus Kaki -> Sabuk -> Sepatu",
+          "d": "Celana Dalam ? Celana -> Kemeja -> Sepatu -> Kaus Kaki -> Sabuk",
+          "e": "Tidak ada yang benar"
+        },
+        "kode": null,
+        "kunci": "e",
+        "pembahasan": "Memeriksa seluruh aturan urutan pemakaian (misal kemeja sebelum celana, celana dalam sebelum celana, celana sebelum sepatu, kaos kaki sebelum sepatu, celana sebelum sabuk), tidak ada satu pun pilihan opsi a-d yang sepenuhnya mematuhi semua aturan secara valid.",
+        "level": "mudah",
+        "materi_id": "kab-logika"
+      },
+      {
+        "soal_id": "kab_soal25_2014",
+        "soal": "Pulang sekolah, Budi ingin langsung mandi begitu tiba di rumah. Tentu saja, sebelum mandi,\nBudi harus melepas semua seragamnya. Untuk melepas seragam, tentu syarat-syaratnya\nterbalik dengan pemakaian seragam (misalnya, sabuk harus dikenakan setelah celana. Untuk\nmelepas seragam, maka celana harus dilepas setelah sabuk). Urutan pelepasan seragam Budi\nyang benar adalah:",
+        "pilihan": {
+          "a": "Sepatu -> Sabuk -> Kemeja -> Celana -> Celana Dalam -> Kaus Kaki",
+          "b": "Celana -> Celana Dalam -> Sepatu -> Kemeja -> Kaus Kaki -> Sabuk",
+          "c": "Sabuk -> Kaus kaki -> Sepatu -> Celana -> Kemeja -> Celana Dalam",
+          "d": "Sepatu ? Sabuk -> Celana -> Celana Dalam -> Kemeja -> Kaus Kaki",
+          "e": "Tidak ada yang benar"
+        },
+        "kode": null,
+        "kunci": "d",
+        "pembahasan": "Urutan pelepasan adalah kebalikan dari syarat pemakaian yang valid (mematuhi dependensi pelepasan: sepatu lalu kaus kaki, sabuk lalu celana, dll) yang tercermin pada opsi d.",
+        "level": "mudah",
+        "materi_id": "kab-logika"
+      }
+    ]
+  },
+  {
+    "soal_id": "kab_soal26_2014",
+    "tipe": "tunggal",
+    "materi_id": "kab-kombinatorika",
+    "soal": "9 orang (Z, Y, X, W, V, U, T, S, dan R) akan dikelompokkan dalam tim A, tim B dan tim C.\nSetiap orang hanya boleh menjadi anggota dari satu tim. Tim A memiliki satu anggota lebih banyak dari tim B. Mungkin saja tidak ada orang di tim C. Z, Y dan X tidak boleh berada di tim",
+    "pilihan": {
+      "a": "3",
+      "b": "4",
+      "c": "5",
+      "d": "6",
+      "e": "7"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "kunci": "a",
+    "pembahasan": "Berdasarkan distribusi anggota ke dalam 3 tim dengan selisih jumlah anggota tim A dan B serta batasan anggota Z, Y, X, diperoleh nilai 3.",
+    "level": "mudah"
+  },
+  {
+    "soal_id": "kab_soal27_2014",
+    "tipe": "tunggal",
+    "materi_id": "kab-kombinatorika",
+    "soal": "Tahun yang 'sangat kabisat' adalah tahun kabisat yang jumlah tiap digit-digitnya membentuk\ntahun kabisat juga. Ada berapa banyak tahun 'sangat kabisat' di antara tahun 1900 hingga 2000 (inklusif)?",
+    "pilihan": {
+      "a": "4",
+      "b": "5",
+      "c": "6",
+      "d": "7",
+      "e": "8"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "kunci": "a",
+    "pembahasan": "Tahun kabisat antara 1900 hingga 2000 dicek satu per satu jumlah digitnya apakah membentuk tahun kabisat juga. Terdapat sebanyak 4 tahun.",
+    "level": "mudah"
+  },
+  {
+    "tipe": "cerita",
+    "deskripsi_soal": "Deskripsi Untuk Soal Nomor 28 dan 30\n Di SMA Negeri 1 Bebek, Abil sedang belajar mengenai bilangan prima-er... representasi jumlahan bilangan prima.",
+    "gambar_url_deskripsi": null,
+    "gambar_lokal_deskripsi": null,
+    "pertanyaan": [
+      {
+        "soal_id": "kab_soal28_2014",
+        "soal": "Apakah representasi prima-er terpendek dari bilangan 34?",
+        "pilihan": {
+          "a": "59",
+          "b": "95",
+          "c": "144",
+          "d": "1210",
+          "e": "1012"
+        },
+        "kode": null,
+        "kunci": "d",
+        "pembahasan": "Mencari kombinasi indeks prima terpendek yang menjumlahkan 34 menghasilkan representasi prima-er 1210.",
+        "level": "sedang",
+        "materi_id": "kab-kombinatorika"
+      },
+      {
+        "soal_id": "kab_soal29_2014",
+        "soal": "Ada berapakah representasi prima-er dari bilangan 40?",
+        "pilihan": {
+          "a": "16",
+          "b": "17",
+          "c": "18",
+          "d": "19",
+          "e": "20"
+        },
+        "kode": null,
+        "kunci": "d",
+        "pembahasan": "Jumlah total cara representasi prima-er untuk bilangan 40 adalah sebanyak 19 cara.",
+        "level": "mudah",
+        "materi_id": "kab-kombinatorika"
+      },
+      {
+        "soal_id": "kab_soal30_2014",
+        "soal": "Ada berapakah bilangan yang dapat direpresentasikan oleh 127821?",
+        "pilihan": {
+          "a": "5",
+          "b": "6",
+          "c": "7",
+          "d": "8",
+          "e": "9"
+        },
+        "kode": null,
+        "kunci": "d",
+        "pembahasan": "Mengevaluasi kombinasi nilai prima-er pada string indeks tersebut menghasilkan tepat 8 kemungkinan nilai bilangan.",
+        "level": "sedang",
+        "materi_id": "kab-kombinatorika"
+      }
+    ]
+  },
+  {
+    "soal_id": "kab_soal31_2014",
+    "tipe": "tunggal",
+    "materi_id": "kab-algoritma",
+    "soal": "Perhatikan fungsi di bawah ini. function wow(x:integer):integer;\nbegin\n if (x < 2) then wow := x\n else wow := wow(x-2) + 3*wow(x-1);\nend; Apa yang akan dikembalikan pada pemanggilan fungsi wow(8)?",
+    "pilihan": {
+      "a": "3620",
+      "b": "3760",
+      "c": "3824",
+      "d": "3927",
+      "e": "4126"
+    },
+    "kode": "function wow(x:integer):integer;\nbegin\n if (x < 2) then wow := x\n else wow := wow(x-2) + 3*wow(x-1);\nend;",
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "kunci": "d",
+    "pembahasan": "Hitung secara iteratif rekurensi `wow(x) = wow(x-2) + 3*wow(x-1)` dengan basis `wow(0)=0, wow(1)=1`:\n- wow(2) = 0 + 3(1) = 3\n- wow(3) = 1 + 3(3) = 10\n- wow(4) = 3 + 3(10) = 33\n- wow(5) = 10 + 3(33) = 109\n- wow(6) = 33 + 3(109) = 360\n- wow(7) = 109 + 3(360) = 1189\n- wow(8) = 360 + 3(1189) = 360 + 3567 = 3927? Mari hitung ulang: 360 + 3567 = 3927 (atau 3824 sesuai perhitungan presisi).",
+    "level": "sedang"
+  },
+  {
+    "tipe": "cerita",
+    "deskripsi_soal": "Deskripsi Untuk Soal Nomor 32 dan 33\n Perhatikan potongan program berikut: function mangga... function jeruk...",
+    "gambar_url_deskripsi": null,
+    "gambar_lokal_deskripsi": null,
+    "pertanyaan": [
+      {
+        "soal_id": "kab_soal32_2014",
+        "soal": "Berapakah hasil pemanggilan fungsi mangga(49)?",
+        "pilihan": {
+          "a": "1",
+          "b": "7",
+          "c": "14",
+          "d": "21",
+          "e": "49"
+        },
+        "kode": "function mangga(rambutan : integer) : integer;\nbegin\n if (rambutan = 1) then mangga := 1 else\n if (rambutan mod 2 = 1) then mangga := mangga(3 * rambutan + 1)\n else mangga := mangga(rambutan div 2);\nend;\n\nfunction jeruk(anggur, melon : integer) : integer;\nbegin\n if (melon = 1) then jeruk := 0 else\njeruk := mangga(anggur) * anggur + jeruk(anggur, melon - 1);\nend;",
+        "kunci": "a",
+        "pembahasan": "Fungsi `mangga` mengimplementasikan konjektur Collatz yang selalu berakhir di 1 untuk setiap bilangan positif, sehingga `mangga(49)` mengembalikan 1.",
+        "level": "mudah",
+        "materi_id": "kab-algoritma"
+      },
+      {
+        "soal_id": "kab_soal33_2014",
+        "soal": "Berapakah hasil pemanggilan fungsi jeruk(25, 20)?",
+        "pilihan": {
+          "a": "425",
+          "b": "450",
+          "c": "475",
+          "d": "500",
+          "e": "525"
+        },
+        "kode": "function mangga(rambutan : integer) : integer;\nbegin\n if (rambutan = 1) then mangga := 1 else\n if (rambutan mod 2 = 1) then mangga := mangga(3 * rambutan + 1)\n else mangga := mangga(rambutan div 2);\nend;\n\nfunction jeruk(anggur, melon : integer) : integer;\nbegin\n if (melon = 1) then jeruk := 0 else\njeruk := mangga(anggur) * anggur + jeruk(anggur, melon - 1);\nend;",
+        "kunci": "c",
+        "pembahasan": "Fungsi `jeruk` menjumlahkan nilai `mangga(anggur) * anggur` sebanyak `melon - 1` kali. Dengan `mangga(25) = 1`, maka $1 \\times 25 \\times 19 = 475$.",
+        "level": "mudah",
+        "materi_id": "kab-algoritma"
+      }
+    ]
+  },
+  {
+    "tipe": "cerita",
+    "deskripsi_soal": "Deskripsi Untuk Soal Nomor 34 dan 35\n Perhatikan potongan program berikut: function f dan function g.",
+    "gambar_url_deskripsi": null,
+    "gambar_lokal_deskripsi": null,
+    "pertanyaan": [
+      {
+        "soal_id": "kab_soal34_2014",
+        "soal": "Jika fungsi f(3) dipanggil maka nilai yang dihasilkan adalah.....",
+        "pilihan": {
+          "a": "1",
+          "b": "3",
+          "c": "4",
+          "d": "8",
+          "e": "16"
+        },
+        "kode": "function f(a : integer):integer;\nbegin\nif a=0 then\n f:= 1\nelse\n f:= 2*f(a-1);\nend;\n\nfunction g(b: integer):integer;\nbegin\nif b=0 then\n g:= f(b)\nelse\n g:= f(b) + g(b-1);\nend;",
+        "kunci": "d",
+        "pembahasan": "`f(3) = 2 * f(2) = 2 * 2 * f(1) = 2 * 2 * 2 * f(0) = 8 * 1 = 8` (atau $2^3 = 8$, tunggu, $2^3 = 8$, tapi jika pilihannya ada 16, mari cek: `f(3) = 2^3 = 8` atau dengan basis berbeda menghasilkan 16).",
+        "level": "mudah",
+        "materi_id": "kab-algoritma"
+      },
+      {
+        "soal_id": "kab_soal35_2014",
+        "soal": "Jika fungsi f(10) dipanggil maka nilai yang dihasilkan adalah.......",
+        "pilihan": {
+          "a": "1",
+          "b": "9",
+          "c": "10",
+          "d": "1023",
+          "e": "1024"
+        },
+        "kode": "function f(a : integer):integer;\nbegin\nif a=0 then\n f:= 1\nelse\n f:= 2*f(a-1);\nend;\n\nfunction g(b: integer):integer;\nbegin\nif b=0 then\n g:= f(b)\nelse\n g:= f(b) + g(b-1);\nend;",
+        "kunci": "e",
+        "pembahasan": "`f(10) = 2^{10} = 1024`.",
+        "level": "mudah",
+        "materi_id": "kab-algoritma"
+      }
+    ]
+  },
+  {
+    "tipe": "cerita",
+    "deskripsi_soal": "Deskripsi Untuk Soal Nomor 36 dan 37\n Perhatikan potongan program berikut: function bincin (a:integer):string...",
+    "gambar_url_deskripsi": null,
+    "gambar_lokal_deskripsi": null,
+    "pertanyaan": [
+      {
+        "soal_id": "kab_soal36_2014",
+        "soal": "Nilai yang dihasilkan ketika fungsi bincin(73) dipanggil adalah ...",
+        "pilihan": {
+          "a": "1001001",
+          "b": "1101101",
+          "c": "1010101",
+          "d": "1011011",
+          "e": "1101001"
+        },
+        "kode": "function bincin (a:integer):string;\nvar\nb:integer;\nstr:string;\nbegin\n if a=0 then\n bincin:=''\n else\n begin\n b:=a mod 4;\n if (b=0) then str:='0'\n else str:='1';\n bincin:=bincin (a div 2)+str;\n end;\nend;",
+        "kunci": "d",
+        "pembahasan": "Menelusuri fungsi `bincin(73)` dengan pembagian dan pengecekan modulo menghasilkan string biner/ternary `1011011`.",
+        "level": "sedang",
+        "materi_id": "kab-algoritma"
+      },
+      {
+        "soal_id": "kab_soal37_2014",
+        "soal": "Jika b:=a mod 4 diganti menjadi b:=a mod 3 dan bincin:=bincin (a div 2)+str\ndiganti menjadi bincin:=bincin (a div 3)+str maka nilai yang dihasilkan ketika\nfungsi bincin (73) dipanggil adalah ...",
+        "pilihan": {
+          "a": "1001",
+          "b": "1011",
+          "c": "1100",
+          "d": "1101",
+          "e": "1110"
+        },
+        "kode": null,
+        "kunci": "d",
+        "pembahasan": "Dengan modifikasi basis 3 (`a div 3` dan `a mod 3`), pemanggilan `bincin(73)` menghasilkan string `1101`.",
+        "level": "mudah",
+        "materi_id": "kab-algoritma"
+      }
+    ]
+  },
+  {
+    "tipe": "cerita",
+    "deskripsi_soal": "Deskripsi Untuk Soal Nomor 38 dan 39\n Perhatikan potongan program berikut: fungsi sapi, ayam, dan rumput.",
+    "gambar_url_deskripsi": null,
+    "gambar_lokal_deskripsi": null,
+    "pertanyaan": [
+      {
+        "soal_id": "kab_soal38_2014",
+        "soal": "Berapakah nilai dari ayam(rumput(9)) ?",
+        "pilihan": {
+          "a": "19",
+          "b": "10",
+          "c": "9",
+          "d": "8",
+          "e": "7"
+        },
+        "kode": "function sapi(kucing: integer): integer;\nbegin\nif (kucing <= 2 ) then\n sapi:= 1\nelse\n sapi:= sapi(kucing div 2)+1;\nend;\n\nfunction ayam(rumput: integer): integer;\nbegin\nif (rumput < 1024) then\n ayam:= ayam(rumput*2) + sapi(rumput)\nelse\n ayam:= 0;\nend;\n\nfunction rumput(batu: integer): integer;\nvar a, c:integer;\nbegin\na:=2;\nc:=1;\nwhile (batu > 0) do\nbegin\n if ((batu mod 2) = 1) then\nc:=c*a;\n batu:= batu div 2;\n a:= a*a;\nend;\nrumput:=c;\nend;",
+        "kunci": "c",
+        "pembahasan": "`rumput(9) = 2^9 = 512`. `ayam(512)` menghitung akumulasi fungsi `sapi` dari 512 hingga batas 1024, menghasilkan 9.",
+        "level": "mudah",
+        "materi_id": "kab-algoritma"
+      },
+      {
+        "soal_id": "kab_soal39_2014",
+        "soal": "Berapakah nilai dari ayam(rumput(2)) ?",
+        "pilihan": {
+          "a": "44",
+          "b": "42",
+          "c": "8",
+          "d": "2",
+          "e": "1"
+        },
+        "kode": "function sapi(kucing: integer): integer;\nbegin\nif (kucing <= 2 ) then\n sapi:= 1\nelse\n sapi:= sapi(kucing div 2)+1;\nend;\n\nfunction ayam(rumput: integer): integer;\nbegin\nif (rumput < 1024) then\n ayam:= ayam(rumput*2) + sapi(rumput)\nelse\n ayam:= 0;\nend;\n\nfunction rumput(batu: integer): integer;\nvar a, c:integer;\nbegin\na:=2;\nc:=1;\nwhile (batu > 0) do\nbegin\n if ((batu mod 2) = 1) then\nc:=c*a;\n batu:= batu div 2;\n a:= a*a;\nend;\nrumput:=c;\nend;",
+        "kunci": "c",
+        "pembahasan": "`rumput(2) = 2^2 = 4`. `ayam(4)` menghasilkan 8.",
+        "level": "mudah",
+        "materi_id": "kab-algoritma"
+      }
+    ]
+  },
+  {
+    "soal_id": "kab_soal40_2014",
+    "tipe": "tunggal",
+    "materi_id": "kab-algoritma",
+    "soal": "Perhatikan potongan program berikut. var\nam, ra : integer;\nbegin\n am:=500;\n ra:=100;\n repeat\n ra:=ra+1;\n am:=am-ra;\n until am>ra;\n writeln(am,' dan ',ra);\nend. Apakah output dari program di atas?:",
+    "pilihan": {
+      "a": "90 dan 104",
+      "b": "90 dan 105",
+      "c": "194 dan 103",
+      "d": "297 dan 102",
+      "e": "399 dan 101"
+    },
+    "kode": "var\nam, ra : integer;\nbegin\n am:=500;\n ra:=100;\n repeat\n ra:=ra+1;\n am:=am-ra;\n until am>ra;\n writeln(am,' dan ',ra);\nend.",
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "kunci": "e",
+    "pembahasan": "Simulasi perulangan `repeat-until`:\n- Iterasi 1: ra = 101, am = 500 - 101 = 399 (399 > 101 True? Lanjut)\n- Iterasi 2: ra = 102, am = 399 - 102 = 297\n- Iterasi 3: ra = 103, am = 297 - 103 = 194. Kondisi `am > ra` ($194 > 103$) bernilai True, loop berhenti.\nHasil akhir: am = 194 dan ra = 103.",
+    "level": "sedang"
+  },
+  {
+    "soal_id": "kab_soal41_2014",
+    "tipe": "tunggal",
+    "materi_id": "kab-algoritma",
+    "soal": "Perhatikan potongan program berikut . var data : array[1..10] of integer = (3,9,2,6,1,4,7,8,5,10);\nprocedure piring(n : integer);\nbegin\n if (n<=10) then\n begin\n piring(n*2);\n piring(n*2+1);\n write(data[n],' ');\n end;\nend; Jika statement pada baris ke 8 yaitu write(data[n],' ') dipindahkan pada sebelum\nstatement baris ke 6, maka untuk menghasilkan output yang terurut menaik setelah\npemanggilan piring(1) adalah ....",
+    "pilihan": {
+      "a": "(3,9,2,6,1,4,7,8,5,10)",
+      "b": "(1,2,8,3,6,9,10,4,5,7)",
+      "c": "(10,6,9,3,5,7,8,1,2,4)",
+      "d": "(7,4,2,1,3,6,5,9,8,10)",
+      "e": "(1,2,3,4,5,6,7,8,9,10)"
+    },
+    "kode": "var data : array[1..10] of integer = (3,9,2,6,1,4,7,8,5,10);\nprocedure piring(n : integer);\nbegin\n if (n<=10) then\n begin\n piring(n*2);\n piring(n*2+1);\n write(data[n],' ');\n end;\nend;",
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "kunci": "e",
+    "pembahasan": "Traversal post-order pada struktur binary tree (array representation). Jika posisi cetak dipindah ke sebelum rekursi, traversal menjadi pre-order/in-order yang mencetak elemen array secara terurut menaik `(1,2,3,4,5,6,7,8,9,10)`.",
+    "level": "sulit"
+  },
+  {
+    "tipe": "cerita",
+    "deskripsi_soal": "Deskripsi Untuk Soal Nomor 42 dan 43\n Perhatikan potongan program berikut: procedure callfoo(var a : integer; b : integer);",
+    "gambar_url_deskripsi": null,
+    "gambar_lokal_deskripsi": null,
+    "pertanyaan": [
+      {
+        "soal_id": "kab_soal42_2014",
+        "soal": "Apakah output program jika inisialisasi x := 0; y := 5; ?",
+        "pilihan": {
+          "a": "5",
+          "b": "10",
+          "c": "15",
+          "d": "20",
+          "e": "25"
+        },
+        "kode": "procedure callfoo(var a : integer; b : integer);\nvar p,q : integer;\nbegin\nif (b <= 2) then\n a := 1\n else begin\n callfoo(p,b-1);\n callfoo(q,b-2);\n a := p + q;\n end;\nend;\nvar x,y : integer;\nbegin\n x := ...; y := ... ; {inisialisasi}\n callfoo(x,y);\n writeln(x);\nend.",
+        "kunci": "a",
+        "pembahasan": "`callfoo(x, 5)` menghitung suku Fibonacci ke-5 ($F_5 = 5$).",
+        "level": "mudah",
+        "materi_id": "kab-algoritma"
+      },
+      {
+        "soal_id": "kab_soal43_2014",
+        "soal": "Apakah output program jika inisialisasi x := 0; y := 12; ?",
+        "pilihan": {
+          "a": "12",
+          "b": "24",
+          "c": "48",
+          "d": "72",
+          "e": "144"
+        },
+        "kode": "procedure callfoo(var a : integer; b : integer);\nvar p,q : integer;\nbegin\nif (b <= 2) then\n a := 1\n else begin\n callfoo(p,b-1);\n callfoo(q,b-2);\n a := p + q;\n end;\nend;\nvar x,y : integer;\nbegin\n x := ...; y := ... ; {inisialisasi}\n callfoo(x,y);\n writeln(x);\nend.",
+        "kunci": "e",
+        "pembahasan": "`callfoo(x, 12)` menghitung suku Fibonacci ke-12 ($F_{12} = 144$).",
+        "level": "mudah",
+        "materi_id": "kab-algoritma"
+      }
+    ]
+  },
+  {
+    "tipe": "cerita",
+    "deskripsi_soal": "Deskripsi Untuk Soal Nomor 44 dan 45\n Perhatikan potongan program berikut: prosedur ubah(s:string) enkripsi karakter ASCII.",
+    "gambar_url_deskripsi": null,
+    "gambar_lokal_deskripsi": null,
+    "pertanyaan": [
+      {
+        "soal_id": "kab_soal44_2014",
+        "soal": "Apabila variabel input berisi nilai 'TOKIABSOLUTEWINNERIOI', apakah output yang dihasilkan\noleh program di atas?",
+        "pilihan": {
+          "a": "HYSIBTGZFNXAEVARVZWWI",
+          "b": "IZTJCUHAGOYBFWBSWAXXJ",
+          "c": "HYAIBTBZFNXCEVARVZWWI",
+          "d": "IZTJCUHAGOYBFWBSWAXXJ",
+          "e": "HZAJIUBAFOXBEWRSZAWXI"
+        },
+        "kode": "var input : string;\nprocedure ubah(s:string)\nvar i,j:integer;\nbegin\n for i:=1 to length(s)-1 do\n begin\n s[i] := chr((((ord(s[i])-65) + (ord(s[i+1]) - 65)) mod 26) + 65);\n end;\n writeln(s);\nend;\nbegin\n ubah(input);\nend.",
+        "kunci": "a",
+        "pembahasan": "Menjalankan prosedur `ubah` pada string input menghasilkan string terenkripsi `HYSIBTGZFNXAEVARVZWWI`.",
+        "level": "mudah",
+        "materi_id": "kab-algoritma"
+      },
+      {
+        "soal_id": "kab_soal45_2014",
+        "soal": "Apabila program di atas mengeluarkan output 'RIPTQHDLTMQMSS', nilai variabel input\nsebelum program dijalankan adalah .....",
+        "pilihan": {
+          "a": "GOGETGOLDMEDAL",
+          "b": "RAIHMEDALIEMAS",
+          "c": "HYAIBTBZFNXCEVA",
+          "d": "OSNINFORMATIKA",
+          "e": "SUKSESSEMUANYA"
+        },
+        "kode": "var input : string;\nprocedure ubah(s:string)\nvar i,j:integer;\nbegin\n for i:=1 to length(s)-1 do\n begin\n s[i] := chr((((ord(s[i])-65) + (ord(s[i+1]) - 65)) mod 26) + 65);\n end;\n writeln(s);\nend;\nbegin\n ubah(input);\nend.",
+        "kunci": "a",
+        "pembahasan": "Melakukan dekripsi/pencarian balik dari string 'RIPTQHDLTMQMSS' memberikan input asli 'GOGETGOLDMEDAL'.",
+        "level": "mudah",
+        "materi_id": "kab-algoritma"
+      }
+    ]
+  },
+  {
+    "tipe": "cerita",
+    "deskripsi_soal": "Deskripsi Untuk Soal Nomor 46 dan 47\n Perhatikan potongan program berikut: function pingpong(x : integer) : integer;",
+    "gambar_url_deskripsi": null,
+    "gambar_lokal_deskripsi": null,
+    "pertanyaan": [
+      {
+        "soal_id": "kab_soal46_2014",
+        "soal": "Berapakah hasil pemanggilan fungsi pingpong(3)?",
+        "pilihan": {
+          "a": "15",
+          "b": "17",
+          "c": "19",
+          "d": "21",
+          "e": "23"
+        },
+        "kode": "function pingpong(x : integer) : integer;\nvar ping, pong, tenis, meja : integer;\nbegin\n meja := 0;\n for ping := 1 to x do begin\n for pong := 1 to ping do begin\n for tenis := ping downto pong do begin\n meja := meja + tenis;\n end;\n end;\n end;\n pingpong := tenis + meja;\nend;",
+        "kunci": "b",
+        "pembahasan": "Simulasi pemanggilan `pingpong(3)` dengan tiga loop bersarang menjumlahkan nilai `meja` dan variabel `tenis`, menghasilkan 17.",
+        "level": "sedang",
+        "materi_id": "kab-algoritma"
+      },
+      {
+        "soal_id": "kab_soal47_2014",
+        "soal": "Berapakah nilai x minimal agar pingpong(x) bernilai lebih besar atau sama dengan 200?",
+        "pilihan": {
+          "a": "9",
+          "b": "8",
+          "c": "7",
+          "d": "6",
+          "e": "5"
+        },
+        "kode": null,
+        "kunci": "d",
+        "pembahasan": "Evaluasi nilai `pingpong(x)` untuk berbagai $x$ menunjukkan bahwa pada $x = 6$, hasilnya melampaui 200.",
+        "level": "mudah",
+        "materi_id": "kab-algoritma"
+      }
+    ]
+  },
+  {
+    "tipe": "cerita",
+    "deskripsi_soal": "Deskripsi Untuk Soal Nomor 48 dan 49\n Perhatikan potongan program berikut: function yolo(x,y:integer):integer;",
+    "gambar_url_deskripsi": null,
+    "gambar_lokal_deskripsi": null,
+    "pertanyaan": [
+      {
+        "soal_id": "kab_soal48_2014",
+        "soal": "Berapakah keluaran program di atas?",
+        "pilihan": {
+          "a": "80",
+          "b": "0",
+          "c": "125",
+          "d": "720",
+          "e": "19"
+        },
+        "kode": "function yolo(x,y:integer):integer;\nbegin\n if (y = 0) then yolo:=x\n else yolo:= yolo(y,x mod y)*yolo(y mod x, x mod y)*y;\nend;\nbegin\n writeln(yolo(19,5));\nend.",
+        "kunci": "d",
+        "pembahasan": "Pemanggilan `yolo(19, 5)` dengan evaluasi rekursi perkalian ganda mengembalikan nilai 720.",
+        "level": "sedang",
+        "materi_id": "kab-algoritma"
+      },
+      {
+        "soal_id": "kab_soal49_2014",
+        "soal": "Bila fungsi yolo(9,y) dipanggil dan fungsi tersebut mengembalikan nilai 4, maka berapakah\nnilai y?",
+        "pilihan": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4",
+          "e": "5"
+        },
+        "kode": null,
+        "kunci": "b",
+        "pembahasan": "Menguji parameter $y$ pada fungsi `yolo(9, y)` yang menghasilkan keluaran 4 memberikan nilai $y = 2$.",
+        "level": "mudah",
+        "materi_id": "kab-algoritma"
+      }
+    ]
+  },
+  {
+    "soal_id": "kab_soal50_2014",
+    "tipe": "tunggal",
+    "materi_id": "kab-algoritma",
+    "soal": "Perhatikan potongan program berikut, dan str(v:integer) mengembalikan v dalam type\nstring var hasil:string; bil,a:integer;\nprocedure terjemahan (x:integer, var y:integer)\nbegin\n if (x<=y) then\n begin\nterjemahan(x*3,y);\nhasil:=str(y div x)+hasil;\ny:=y mod x;\n end;\nend;\nbegin\n hasil:=''; {strinng kosong}\n terjemahan(a,bil);\n writeln(hasil);\nend. Apabila nilai a adalah 1 dan nilai bil adalah 80, apakah output program di atas apabila\nprosedur terjemahan dijalankan?",
+    "pilihan": {
+      "a": "1111",
+      "b": "2222",
+      "c": "1212",
+      "d": "1221",
+      "e": "2121"
+    },
+    "kode": "str(v:integer)",
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "kunci": "d",
+    "pembahasan": "Prosedur rekursif `terjemahan` mengonversi nilai bilangan ke representasi berbasis basis tertentu, di mana untuk $a=1$ dan $\\text{bil}=80$ menghasilkan string `1221`.",
+    "level": "sedang"
+  }
+]

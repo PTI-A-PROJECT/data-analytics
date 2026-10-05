@@ -1,0 +1,1094 @@
+[
+  {
+    "soal_id": "prov_soal1_2006",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-aritmetika",
+    "topik": "Aritmetika",
+    "pertanyaan": "Seorang wanita menerima warisan sebesar 1/3 dari harta suaminya seorang pengusaha yang meninggal dunia karena kecelakaan pesawat. Dan tiga orang putranya juga menerima masing-masing 1/3 dari sisanya. Jika wanita tersebut dan salah seorang anaknya menerima total sebesar Rp. 6 milyar, berapakah total harta yang ditinggalkan oleh pengusaha tersebut?",
+    "pilihan": {
+      "a": "Rp. 9 milyar",
+      "b": "Rp. 9,6 milyar",
+      "c": "Rp. 10.8 milyar",
+      "d": "Rp. 13.5 milyar",
+      "e": "Rp. 18 milyar"
+    },
+    "jawaban_benar": "c",
+    "pembahasan": "Misalkan total harta adalah $H$.\n- Bagian istri = $\\frac{1}{3}H$, sehingga sisa harta = $\\frac{2}{3}H$.\n- Masing-masing dari 3 putranya mendapat $\\frac{1}{3}$ dari sisa, yaitu $\\frac{1}{3} \\times \\frac{2}{3}H = \\frac{2}{9}H$.\n- Total bagian istri dan salah seorang anak = $\\frac{1}{3}H + \\frac{2}{9}H = \\frac{5}{9}H$.\n- Diketahui $\\frac{5}{9}H = 6\\text{ milyar} \\implies H = 6 \\times \\frac{9}{5} = 10{,}8\\text{ milyar rupiah}$.",
+    "level": "mudah",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal2_2006",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-aritmetika",
+    "topik": "Aritmetika",
+    "pertanyaan": "Jika x = 0.888, y = √0.888, dan z = (0.888)², manakah pernyataan berikut yang paling benar?",
+    "pilihan": {
+      "a": "x < y < z",
+      "b": "x < z < y",
+      "c": "y < x < z",
+      "d": "y < z < x",
+      "e": "z < x < y"
+    },
+    "jawaban_benar": "e",
+    "pembahasan": "Untuk bilangan real $a$ dengan $0 < a < 1$:\n- Menguadratkan bilangan akan memperkecil nilainya: $z = a^2 < a$.\n- Menarik akar kuadrat akan memperbesar nilainya: $y = \\sqrt{a} > a$.\nSehingga urutan yang benar dari terkecil ke terbesar adalah $z < x < y$.",
+    "level": "mudah",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal3_2006",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-aritmetika",
+    "topik": "Aritmetika",
+    "pertanyaan": "Jika n adalah nilai rata-rata dari tiga buah angka yaitu 6, 9, dan k berapakah nilai k sesungguhnya ?",
+    "pilihan": {
+      "a": "3n – 15",
+      "b": "n – 5",
+      "c": "n – 15",
+      "d": "(n – 15) / 3",
+      "e": "(n + 15) / 3"
+    },
+    "jawaban_benar": "a",
+    "pembahasan": "Rata-rata dari tiga angka 6, 9, dan $k$ adalah $n$:\n$$n = \\frac{6 + 9 + k}{3} \\implies 3n = 15 + k \\implies k = 3n - 15$$",
+    "level": "mudah",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal4_2006",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-aritmetika",
+    "topik": "Aritmetika",
+    "pertanyaan": "Mini memiliki uang 3 ribu rupiah lebih banyak dari pada Budi, tapi lebih sedikit 5 ribu dari pada yang dimiliki Yuli, Jika Mini memiliki x ribu rupiah, berapakah jumlah uang yang dimiliki oleh Budi dan Yuli?",
+    "pilihan": {
+      "a": "2x – 8",
+      "b": "2x – 5",
+      "c": "2x – 2",
+      "d": "2x + 2",
+      "e": "2x + 8"
+    },
+    "jawaban_benar": "d",
+    "pembahasan": "Diketahui uang Mini $= x$ ribu rupiah:\n- Mini memiliki 3 ribu lebih banyak dari Budi $\\implies$ Uang Budi $= x - 3$.\n- Mini memiliki 5 ribu lebih sedikit dari Yuli $\\implies$ Uang Yuli $= x + 5$.\nJumlah uang yang dimiliki Budi dan Yuli adalah:\n$$(x - 3) + (x + 5) = 2x + 2$$",
+    "level": "mudah",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal5_2006",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-aritmetika",
+    "topik": "Aritmetika",
+    "pertanyaan": "Seorang Pedagang membeli buku dari penyalur di kawasan Pasar Cikapundung, Bandung seharga Rp. 36.000, dia harus menyisakan biaya ongkos sebesar 10%. Selain itu dia juga harus menyisakan keuntungan sebesar Rp. 9.000 per bukunya. Harga jual buku tersebut akan naik berapa persen jika dibandingkan harga belinya ?",
+    "pilihan": {
+      "a": "27.5%",
+      "b": "35%",
+      "c": "45%",
+      "d": "25%",
+      "e": "15%"
+    },
+    "jawaban_benar": "b",
+    "pembahasan": "Perhitungan persentase kenaikan harga jual dibanding harga beli:\n- Harga beli $= \\text{Rp } 36.000$\n- Biaya ongkos $= 10\\% \\times 36.000 = \\text{Rp } 3.600$\n- Total modal $= 36.000 + 3.600 = \\text{Rp } 39.600$\n- Harga jual $= \\text{Modal} + \\text{keuntungan} = 39.600 + 9.000 = \\text{Rp } 48.600$\nPersentase kenaikan harga jual dibandingkan harga beli:\n$$\\frac{48.600 - 36.000}{36.000} \\times 100\\% = \\frac{12.600}{36.000} \\times 100\\% = 35\\%$$",
+    "level": "mudah",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal6_2006",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-aritmetika",
+    "topik": "Aritmetika",
+    "pertanyaan": "Ibu Dina sedang mencoba untuk membuka usaha ‘bakery’ disebuah ruko di perumahan elit di kawasan Cibubur. Dari resep yang ia pelajari, untuk suatu campuran adonan brownies kukus diperlukan 1½ cangkir terigu dan 4½ cangkir air. Bila ternyata sisa tepung terigu yang tersisa di lemari tinggal ¾ cangkir, berapa cangkirkah air yang diperlukan ?",
+    "pilihan": {
+      "a": "2 cangkir",
+      "b": "2 ¼ cangkir",
+      "c": "3 ½ cangkir",
+      "d": "2 ¼ cangkir",
+      "e": "Sesuai dengan resep"
+    },
+    "jawaban_benar": "b",
+    "pembahasan": "Perbandingan terigu dan air pada resep adalah:\n$$1\\frac{1}{2} : 4\\frac{1}{2} = \\frac{3}{2} : \\frac{9}{2} = 1 : 3$$\nJika tepung terigu yang digunakan adalah $\\frac{3}{4}$ cangkir, maka air yang dibutuhkan:\n$$3 \\times \\frac{3}{4} = \\frac{9}{4} = 2\\frac{1}{4}\\text{ cangkir}$$",
+    "level": "mudah",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal7_2006",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-aritmetika",
+    "topik": "Aritmetika",
+    "pertanyaan": "Hitunglah (80! × 38!) / (77! × 40!)",
+    "pilihan": {
+      "a": "316",
+      "b": "2023",
+      "c": "871",
+      "d": "412",
+      "e": "391"
+    },
+    "jawaban_benar": "a",
+    "pembahasan": "Sederhanakan bentuk faktorial:\n$$\\frac{80! \\times 38!}{77! \\times 40!} = \\frac{80!}{77!} \\times \\frac{38!}{40!} = (80 \\times 79 \\times 78) \\times \\frac{1}{40 \\times 39}$$\nPerhatikan bahwa $\\frac{80}{40} = 2$ dan $\\frac{78}{39} = 2$, sehingga:\n$$2 \\times 79 \\times 2 = 4 \\times 79 = 316$$",
+    "level": "mudah",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal8_2006",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-bitwise",
+    "topik": "Operasi Logika & Bitwise",
+    "pertanyaan": "Jumlah dua digit pertama dari bilangan hasil perkalian 5³⁰⁰⁰³ × 8¹⁰⁰⁰⁴ adalah",
+    "pilihan": {
+      "a": "16",
+      "b": "6",
+      "c": "14",
+      "d": "10",
+      "e": "8"
+    },
+    "jawaban_benar": "b",
+    "pembahasan": "Faktorisasi perkalian basis:\n$$5^{30003} \\times 8^{10004} = 5^{30003} \\times (2^3)^{10004} = 5^{30003} \\times 2^{30012}$$\n$$= 5^{30003} \\times 2^{30003} \\times 2^9 = (5 \\times 2)^{30003} \\times 512 = 512 \\times 10^{30003}$$\nBilangan tersebut diawali dengan angka $5, 1, 2$ diikuti 30.003 angka nol. Dua digit pertamanya adalah $5$ dan $1$, sehingga jumlah dua digit pertama adalah $5 + 1 = 6$.",
+    "level": "sedang",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_cerita9_2006",
+    "tipe_soal": "cerita",
+    "materi_id": "prov-berhitung",
+    "topik": "Aturan Berhitung",
+    "detail_cerita": {
+      "teks": "Untuk nomor soal 9 perhatikan penjelasan ini:\nDalam suatu deret bilangan bulat {xᵢ, i > 0}, xᵢ₊₁ = 2xᵢ (bilangan berikutnya = dua kali bilangan sebelumnya). Jika jumlah enam bilangan pertama berurutan adalah 693.",
+      "gambar_url": null,
+      "gambar_lokal": null
+    },
+    "soal": [
+      {
+        "soal_id": "prov_soal9_2006",
+        "materi_id": "prov-berhitung",
+        "topik": "Aturan Berhitung",
+        "pertanyaan": "Maka bilangan ketiganya adalah",
+        "pilihan": {
+          "a": "121",
+          "b": "100",
+          "c": "77",
+          "d": "44",
+          "e": "11"
+        },
+        "jawaban_benar": "d",
+        "pembahasan": "Deret bilangan bulat dengan $x_{i+1} = 2x_i$ adalah deret geometri dengan rasio $r = 2$:\n$$S_6 = a(1 + 2 + 4 + 8 + 16 + 32) = 63a$$\nDiketahui $63a = 693 \\implies a = 11$.\nBilangan ketiga ($x_3$) adalah:\n$$x_3 = a \\times r^2 = 11 \\times 4 = 44$$",
+        "level": "mudah",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      }
+    ]
+  },
+  {
+    "soal_id": "prov_cerita10_2006",
+    "tipe_soal": "cerita",
+    "materi_id": "prov-strategi",
+    "topik": "Strategi Pemecahan Masalah",
+    "detail_cerita": {
+      "teks": "Untuk nomor soal 10-12 perhatikan penjelasan ini:\nIngat bahwa perkalian tiga matriks A.B.C dapat dilakukan dengan cara (A.B).C, yaitu A.B terlebih dahulu kemudian hasilnya dengan C atau A.(B.C), yaitu B.C diperkalikan terlebih dahulu kemudian A dikalikan dengan hasilnya. Jika suatu fungsi perkalian matriks “dihargai” sbb. Dua matriks A berukuran baris x kolom = m x n dikalikan matriks B berukuran = n x p maka harga perkalian matriks tersebut adalah m x n x p.",
+      "gambar_url": null,
+      "gambar_lokal": null
+    },
+    "soal": [
+      {
+        "soal_id": "prov_soal10_2006",
+        "materi_id": "prov-strategi",
+        "topik": "Strategi Pemecahan Masalah",
+        "pertanyaan": "Diberikan matriks-matriks A, B, C, dan D masing-masing berukuran 20x200, 200x20, 20x100, 100x10. Berapakah harga untuk urutan perkalian (A.B).(C.D) ?",
+        "pilihan": {
+          "a": "820.000",
+          "b": "680.000",
+          "c": "420.000",
+          "d": "104.000",
+          "e": "800.000"
+        },
+        "jawaban_benar": "d",
+        "pembahasan": "Ukuran matriks: $A (20 \\times 200)$, $B (200 \\times 20)$, $C (20 \\times 100)$, $D (100 \\times 10)$.\nBiaya untuk urutan $(A \\cdot B) \\cdot (C \\cdot D)$:\n1. Perkalian $A \\cdot B$: $20 \\times 200 \\times 20 = 80.000$ (menghasilkan matriks berukuran $20 \\times 20$).\n2. Perkalian $C \\cdot D$: $20 \\times 100 \\times 10 = 20.000$ (menghasilkan matriks berukuran $20 \\times 10$).\n3. Perkalian $(A \\cdot B) \\cdot (C \\cdot D)$: $20 \\times 20 \\times 10 = 4.000$.\nTotal harga perkalian = $80.000 + 20.000 + 4.000 = 104.000$.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "soal_id": "prov_soal11_2006",
+        "materi_id": "prov-strategi",
+        "topik": "Strategi Pemecahan Masalah",
+        "pertanyaan": "Diberikan perkalian dari empat matriks A.B.C.D yang masing-masing berukuran 20x200, 200x20, 20x100, 100x10. Manakah urutan perkalian matriks yang membutuhkan biaya paling murah?",
+        "pilihan": {
+          "a": "((A.B).C).D",
+          "b": "(A.B).(C.D)",
+          "c": "(A.(B.C)).D",
+          "d": "A.((B.C).D)",
+          "e": "A.(B.(C.D))"
+        },
+        "jawaban_benar": "e",
+        "pembahasan": "Evaluasi biaya untuk seluruh kemungkinan perkalian matriks $A, B, C, D$:\n- $((A \\cdot B) \\cdot C) \\cdot D = 80.000 + (20 \\times 20 \\times 100) + (20 \\times 100 \\times 10) = 80.000 + 40.000 + 20.000 = 140.000$\n- $(A \\cdot B) \\cdot (C \\cdot D) = 80.000 + 20.000 + 4.000 = 104.000$\n- $(A \\cdot (B \\cdot C)) \\cdot D = (200 \\times 20 \\times 100) + (20 \\times 200 \\times 100) + (20 \\times 100 \\times 10) = 400.000 + 400.000 + 20.000 = 820.000$\n- $A \\cdot ((B \\cdot C) \\cdot D) = 400.000 + (200 \\times 100 \\times 10) + (20 \\times 200 \\times 10) = 400.000 + 200.000 + 40.000 = 640.000$\n- $A \\cdot (B \\cdot (C \\cdot D)) = 20.000 + (200 \\times 20 \\times 10) + (20 \\times 200 \\times 10) = 20.000 + 40.000 + 40.000 = 100.000$\nUrutan perkalian yang membutuhkan biaya paling murah adalah $A \\cdot (B \\cdot (C \\cdot D))$ dengan biaya 100.000.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "soal_id": "prov_soal12_2006",
+        "materi_id": "prov-strategi",
+        "topik": "Strategi Pemecahan Masalah",
+        "pertanyaan": "Diberikan perkalian dari empat matriks A.B.C.D yang masing-masing berukuran 20x200, 200x20, 20x100, 100x10. Manakah urutan yang memberikan harga paling mahal dari kemungkinan-kemungkinan berikut ini?",
+        "pilihan": {
+          "a": "((A.B).C).D",
+          "b": "(A.B).(C.D)",
+          "c": "(A.(B.C)).D",
+          "d": "A.((B.C).D)",
+          "e": "A.(B.(C.D))"
+        },
+        "jawaban_benar": "c",
+        "pembahasan": "Dari evaluasi biaya pada soal sebelumnya:\n- $((A \\cdot B) \\cdot C) \\cdot D = 140.000$\n- $(A \\cdot B) \\cdot (C \\cdot D) = 104.000$\n- $(A \\cdot (B \\cdot C)) \\cdot D = 820.000$\n- $A \\cdot ((B \\cdot C) \\cdot D) = 640.000$\n- $A \\cdot (B \\cdot (C \\cdot D)) = 100.000$\nUrutan yang membutuhkan biaya paling mahal adalah $(A \\cdot (B \\cdot C)) \\cdot D$ dengan biaya 820.000.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      }
+    ]
+  },
+  {
+    "soal_id": "prov_cerita13_2006",
+    "tipe_soal": "cerita",
+    "materi_id": "prov-strategi",
+    "topik": "Strategi Pemecahan Masalah",
+    "detail_cerita": {
+      "teks": "BAGIAN B: ANALITIKA DAN LOGIKA (15 SOAL)\nUntuk nomor soal 13-16 perhatikan penjelasan ini:\nDi suatu pertemuan ada 4 orang pria dewasa, 4 wanita dewasa, dan 4 anak-anak. Keempat pria dewasa itu bernama: Santo, Markam, Gunawan, dan Saiful. Keempat wanita dewasa itu bernama Ria, Gina, Dewi, dan Hesti. Keempat anak itu bernama Hadi, Putra, Bobby dan Soleh.\nSebenarnya mereka berasal dari 4 keluarga yang setiap keluarga terdiri dari seorang ayah, seorang ibu dan satu orang anak, namun tidak diketahui yang mana yang menjadi ayah dan mana yang menjadi ibu dan mana yang menjadi anak dari masing-masing keluarga itu. Kecuali, beberapa hal diketahui sebagai berikut.\n1) Ibu Ria adalah ibu dari Soleh.\n2) Pak Santo adalah ayah dari Hadi.\n3) Pak Saiful adalah suami dari Ibu Dewi, tapi bukan ayah dari Bobby.\n4) Pak Gunawan adalah suami Ibu Hesti.",
+      "gambar_url": null,
+      "gambar_lokal": null
+    },
+    "soal": [
+      {
+        "soal_id": "prov_soal13_2006",
+        "materi_id": "prov-strategi",
+        "topik": "Strategi Pemecahan Masalah",
+        "pertanyaan": "Putra adalah",
+        "pilihan": {
+          "a": "Anak dari Pak Markam",
+          "b": "Anak dari Pak Saiful",
+          "c": "Anak dari Pak Santo",
+          "d": "Anak dari Pak Gunawan",
+          "e": "Anak dari Ibu Ria"
+        },
+        "jawaban_benar": "b",
+        "pembahasan": "Berdasarkan 4 petunjuk:\n1. Ibu Ria adalah ibu dari Soleh.\n2. Pak Santo adalah ayah dari Hadi.\n3. Pak Saiful adalah suami dari Ibu Dewi, tapi bukan ayah dari Bobby.\n4. Pak Gunawan adalah suami Ibu Hesti.\n\nDeduksi pasangan dan anak:\n- Karena Pak Gunawan suami Hesti dan Pak Saiful suami Dewi, maka pasangan Santo dan Markam adalah Ria dan Gina.\n- Pak Santo adalah ayah Hadi dan Ibu Ria adalah ibu Soleh, sehingga Santo tidak mungkin berpasangan dengan Ria. Jadi Pak Santo beristrikan Ibu Gina (anak: Hadi), dan Pak Markam beristrikan Ibu Ria (anak: Soleh).\n- Anak yang tersisa adalah Putra dan Bobby. Karena Pak Saiful bukan ayah Bobby, maka Pak Saiful adalah ayah dari Putra (dan Ibu Dewi adalah ibunya), sedangkan Pak Gunawan adalah ayah dari Bobby.\nJadi, Putra adalah anak dari Pak Saiful.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "soal_id": "prov_soal14_2006",
+        "materi_id": "prov-strategi",
+        "topik": "Strategi Pemecahan Masalah",
+        "pertanyaan": "Ibu Gina adalah",
+        "pilihan": {
+          "a": "Isteri Pak Saiful dengan anak bernama Bobby",
+          "b": "Isteri Pak Gunawan dengan anak bernama Bobby",
+          "c": "Isteri Pak Markam dengan anak bernama Hadi",
+          "d": "Isteri Pak Gunawan dengan anak bernama Putra",
+          "e": "Isteri Pak Santo dengan anak bernama Hadi"
+        },
+        "jawaban_benar": "e",
+        "pembahasan": "Dari hasil deduksi hubungan keluarga:\n- Keluarga 1: Pak Santo + Ibu Gina + anak Hadi\n- Keluarga 2: Pak Markam + Ibu Ria + anak Soleh\n- Keluarga 3: Pak Saiful + Ibu Dewi + anak Putra\n- Keluarga 4: Pak Gunawan + Ibu Hesti + anak Bobby\nMaka Ibu Gina adalah isteri Pak Santo dengan anak bernama Hadi.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "soal_id": "prov_soal15_2006",
+        "materi_id": "prov-strategi",
+        "topik": "Strategi Pemecahan Masalah",
+        "pertanyaan": "Ibu Hesti dan Ibu Dewi dan masing-masing keluarganya tinggal di kota Bandung, sementara kedua keluarga lainnya tinggal di kota Jakarta. Siapakah yang tinggal di kota Jakarta",
+        "pilihan": {
+          "a": "Pak Markam",
+          "b": "Putra",
+          "c": "Pak Saiful",
+          "d": "Bobby",
+          "e": "Pak Gunawan"
+        },
+        "jawaban_benar": "a",
+        "pembahasan": "Diketahui keluarga Ibu Hesti (Pak Gunawan, Bobby) dan keluarga Ibu Dewi (Pak Saiful, Putra) tinggal di Bandung.\nMaka dua keluarga lainnya, yaitu keluarga Pak Santo (Ibu Gina, Hadi) dan keluarga Pak Markam (Ibu Ria, Soleh) tinggal di Jakarta.\nDari pilihan yang ada, yang tinggal di Jakarta adalah Pak Markam.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "soal_id": "prov_soal16_2006",
+        "materi_id": "prov-strategi",
+        "topik": "Strategi Pemecahan Masalah",
+        "pertanyaan": "Jika pernyataan (1) di atas dihilangkan, periksalah apakah masih bisa disimpulkan bahwa:\nI. Ibu Ria kemunginannya bersuamikan Pak Markam atau Pak Santo\nII. Soleh kemungkinannya anak dari Pak Markam atau Pak Santo\nIII. Ibu Dewi kemungkinannya adalah ibu dari Soleh atau Putra",
+        "pilihan": {
+          "a": "Hanya I yang benar",
+          "b": "Hanya II yang benar",
+          "c": "Hanya III yang benar",
+          "d": "Hanya I dan III yang benar",
+          "e": "Ketiganya benar"
+        },
+        "jawaban_benar": "d",
+        "pembahasan": "Jika petunjuk (1) 'Ibu Ria adalah ibu dari Soleh' dihilangkan:\n- Pak Santo adalah ayah Hadi.\n- Pak Saiful suami Dewi (anak: Putra atau Soleh, karena bukan ayah Bobby).\n- Pak Gunawan suami Hesti (anak: Bobby, Putra, atau Soleh).\n- Pasangan pria untuk Ibu Ria yang tersisa adalah Pak Markam atau Pak Santo. (Pernyataan I benar).\n- Soleh bisa saja merupakan anak Pak Saiful atau Pak Gunawan, sehingga Soleh tidak harus anak Pak Markam atau Pak Santo. (Pernyataan II belum tentu benar).\n- Karena Pak Saiful suami Dewi dan anak mereka hanya mungkin Putra atau Soleh, maka Ibu Dewi kemungkinannya adalah ibu dari Soleh atau Putra. (Pernyataan III benar).\nJadi yang dapat disimpulkan adalah pernyataan I dan III benar.",
+        "level": "sulit",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      }
+    ]
+  },
+  {
+    "soal_id": "prov_cerita17_2006",
+    "tipe_soal": "cerita",
+    "materi_id": "prov-bitwise",
+    "topik": "Operasi Logika & Bitwise",
+    "detail_cerita": {
+      "teks": "Untuk nomor soal 17-20 perhatikan penjelasan ini:\nDua pernyataan relasi logika:\n“X mengakibatkan Y” berarti kalau X terjadi, Y pasti/harus terjadi.\n“Y terjadi hanya jika X terjadi” kalau X terjadi, Y mungkin/bisa terjadi tetapi Y hanya bisa terjadi jika X terjadi.\nBerikut ini A, B, C, D, E, F, G dan H adalah peristiwa-peristiwa yang memiliki relasi logika sbb.\n(1) A mengakibatkan B atau C, tapi tidak keduanya\n(2) F terjadi hanya jika B terjadi\n(3) D terjadi jika B atau C terjadi\n(4) E terjadi hanya jika C terjadi\n(5) J terjadi hanya jika E atau F terjadi\n(6) D mengakibatkan G atau H atau keduanya\n(7) H terjadi jika E terjadi\n(8) G terjadi jika F terjadi",
+      "gambar_url": null,
+      "gambar_lokal": null
+    },
+    "soal": [
+      {
+        "soal_id": "prov_soal17_2006",
+        "materi_id": "prov-bitwise",
+        "topik": "Operasi Logika & Bitwise",
+        "pertanyaan": "Jika A memang terjadi, periksalah kebenaran dari pernyataan-pernyataan berikut ini.\nI. F dan G bisa terjadi\nII. E dan H bisa terjadi\nIII. D bisa terjadi",
+        "pilihan": {
+          "a": "Hanya I yang benar",
+          "b": "Hanya II yang benar",
+          "c": "Hanya III yang benar",
+          "d": "I dan III bersama, atau II dan III bersama, tetapi tidak keduanya",
+          "e": "Semua (I, II, dan III) benar"
+        },
+        "jawaban_benar": "d",
+        "pembahasan": "Berdasarkan aturan relasi logika:\n1. $A \\implies B$ atau $C$ (eksklusif, tidak keduanya).\n2. $F \\implies B$ ($F$ terjadi hanya jika $B$).\n3. $(B \\lor C) \\implies D$.\n4. $E \\implies C$ ($E$ terjadi hanya jika $C$).\n5. $J \\implies (E \\lor F)$.\n6. $D \\implies G \\lor H$ atau keduanya.\n7. $E \\implies H$.\n8. $F \\implies G$.\n\nJika $A$ terjadi:\n- Pasti terjadi salah satu dari $B$ atau $C$.\n- Karena salah satu dari $B$ atau $C$ terjadi, maka $D$ pasti terjadi (Pernyataan III bisa/pasti terjadi).\n- Jika $B$ terjadi (dan bukan $C$): $F$ bisa terjadi, dan jika $F$ terjadi maka $G$ terjadi (Pernyataan I: $F$ dan $G$ bisa terjadi). Namun $C$ tidak terjadi, sehingga $E$ tidak bisa terjadi (Pernyataan II tidak bisa terjadi).\n- Jika $C$ terjadi (dan bukan $B$): $E$ bisa terjadi, dan jika $E$ terjadi maka $H$ terjadi (Pernyataan II: $E$ dan $H$ bisa terjadi). Namun $B$ tidak terjadi, sehingga $F$ tidak bisa terjadi (Pernyataan I tidak bisa terjadi).\nJadi kesimpulannya: I dan III bersama, atau II dan III bersama, tetapi tidak keduanya.",
+        "level": "sulit",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "soal_id": "prov_soal18_2006",
+        "materi_id": "prov-bitwise",
+        "topik": "Operasi Logika & Bitwise",
+        "pertanyaan": "Jika B benar terjadi manakah yang juga harus terjadi?",
+        "pilihan": {
+          "a": "D",
+          "b": "F dan G",
+          "c": "D dan G",
+          "d": "G dan H",
+          "e": "J"
+        },
+        "jawaban_benar": "a",
+        "pembahasan": "Berdasarkan relasi logika:\n- Aturan 3 menyatakan jika $B$ atau $C$ terjadi, maka $D$ terjadi. Karena $B$ terjadi, maka $D$ pasti harus terjadi.\n- $F$ terjadi *hanya jika* $B$, artinya $B$ adalah syarat perlu bagi $F$, bukan syarat cukup (kejadian $B$ tidak mengharuskan $F$ terjadi).\n- $D$ mengakibatkan $G$ atau $H$, sehingga tidak dapat dipastikan $G$ atau $H$ secara terpisah.\nMaka kejadian yang pasti harus terjadi adalah $D$.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "soal_id": "prov_soal19_2006",
+        "materi_id": "prov-bitwise",
+        "topik": "Operasi Logika & Bitwise",
+        "pertanyaan": "Jika J terjadi, manakah yang juga harus terjadi?",
+        "pilihan": {
+          "a": "E",
+          "b": "Baik E dan F",
+          "c": "Salah satu dari B atau C",
+          "d": "G",
+          "e": "Baik B dan C"
+        },
+        "jawaban_benar": "c",
+        "pembahasan": "Rantai implikasi kemunculan $J$:\n- $J$ terjadi hanya jika $E$ atau $F$ terjadi ($J \\implies E \\lor F$).\n- $E$ terjadi hanya jika $C$ terjadi ($E \\implies C$).\n- $F$ terjadi hanya jika $B$ terjadi ($F \\implies B$).\nOleh karena itu, jika $J$ terjadi, maka setidaknya salah satu dari $E$ atau $F$ terjadi, yang berarti salah satu dari $B$ atau $C$ harus terjadi.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "soal_id": "prov_soal20_2006",
+        "materi_id": "prov-bitwise",
+        "topik": "Operasi Logika & Bitwise",
+        "pertanyaan": "Dari tiga peristiwa A, D, dan F, manakah yang bisa terjadi tanpa bergantung pada relasi-relasi di atas",
+        "pilihan": {
+          "a": "Hanya D",
+          "b": "Hanya A",
+          "c": "Hanya A dan D",
+          "d": "Hanya A dan F",
+          "e": "A, D, dan F"
+        },
+        "jawaban_benar": "b",
+        "pembahasan": "Peristiwa $A$ adalah premis awal/sebab independen yang memicu peristiwa-peristiwa lainnya dan tidak menjadi konsekuensi dari peristiwa manapun dalam relasi tersebut. Sementara $D$ dan $F$ bergantung pada kejadian sebelumnya ($B$ atau $C$). Maka hanya $A$ yang dapat terjadi tanpa bergantung pada relasi-relasi tersebut.",
+        "level": "mudah",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      }
+    ]
+  },
+  {
+    "soal_id": "prov_cerita21_2006",
+    "tipe_soal": "cerita",
+    "materi_id": "prov-strategi",
+    "topik": "Strategi Pemecahan Masalah",
+    "detail_cerita": {
+      "teks": "Untuk nomor soal 21-24 perhatikan penjelasan ini:\nSebuah kontraktor bermaksud membangun 5 ruko pada sebidang lahan kosong dipinggiran sebuah jalan protokol. Kontraktor tersebut sedang bingung untuk memilih diantara 7 rumah yang ada : T, U, V, W, X, Y dan Z. Dinas Tata Kota setempat telah memberikan peraturan bagi kontraktor tersebut :\n• Tidak boleh ada satu modelpun yang dibangun lebih dari satu kali\n• Salah satu model W ataupun model Z harus dibangun, namun dilarang membangun kedua model tersebut semuanya\n• Jika model Y dipilih, maka model V juga harus dipilih\n• Jika model U dipilih, maka model W tidak dapat dipilih",
+      "gambar_url": null,
+      "gambar_lokal": null
+    },
+    "soal": [
+      {
+        "soal_id": "prov_soal21_2006",
+        "materi_id": "prov-strategi",
+        "topik": "Strategi Pemecahan Masalah",
+        "pertanyaan": "Jika model U telah dipilih sebagai salah satu model bangunan, maka model manakah berikut ini yang juga harus ikut dibangun ?",
+        "pilihan": {
+          "a": "T",
+          "b": "W",
+          "c": "X",
+          "d": "Y",
+          "e": "Z"
+        },
+        "jawaban_benar": "e",
+        "pembahasan": "Aturan pemilihan 5 dari 7 model bangunan ($T, U, V, W, X, Y, Z$):\n1. Tepat satu dari $W$ atau $Z$ yang harus dipilih.\n2. Jika $Y$ dipilih, maka $V$ harus dipilih ($Y \\implies V$).\n3. Jika $U$ dipilih, maka $W$ tidak boleh dipilih ($U \\implies \\neg W$).\n\nJika model $U$ dipilih:\n- Berdasarkan aturan 3, model $W$ tidak boleh dipilih.\n- Berdasarkan aturan 1, tepat satu dari $W$ atau $Z$ harus dipilih. Karena $W$ tidak dipilih, maka model $Z$ wajib ikut dibangun.",
+        "level": "mudah",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "soal_id": "prov_soal22_2006",
+        "materi_id": "prov-strategi",
+        "topik": "Strategi Pemecahan Masalah",
+        "pertanyaan": "Jika T, U, dan X telah ditentukan sebagai 3 model yang akan dibangun, maka dua model manakah yang juga harus dibangun ?",
+        "pilihan": {
+          "a": "V dan W",
+          "b": "V dan Z",
+          "c": "V dan Y",
+          "d": "W dan Y",
+          "e": "Y dan Z"
+        },
+        "jawaban_benar": "b",
+        "pembahasan": "Model yang sudah dipilih: $\\{T, U, X\\}$ (3 model, butuh 2 model lagi untuk mencapai total 5 model).\n- Karena $U$ dipilih, maka $W$ tidak boleh dipilih, sehingga $Z$ wajib dipilih. Model terpilih saat ini: $\\{T, U, X, Z\\}$ (4 model).\n- Sisa kuota tinggal 1 model, dipilih dari $\\{V, Y\\}$.\n- Jika $Y$ dipilih, maka $V$ juga harus dipilih ($Y \\implies V$), yang akan menambah 2 model sehingga totalnya menjadi 6 (melanggar aturan total 5 model). Maka $Y$ tidak boleh dipilih, dan yang dipilih adalah $V$.\nJadi dua model yang juga harus dibangun adalah $V$ dan $Z$.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "soal_id": "prov_soal23_2006",
+        "materi_id": "prov-strategi",
+        "topik": "Strategi Pemecahan Masalah",
+        "pertanyaan": "Manakah diantara berikut ini yang merupakan kombinasi model yang tidak melanggar aturan dari pihak Dinas Tata Kota ?",
+        "pilihan": {
+          "a": "T, U, V, X, Y",
+          "b": "T, U, X, Y, Z",
+          "c": "T, V, X, Y, Z",
+          "d": "U, V, W, X, Y",
+          "e": "Y, U, X, Y, Z"
+        },
+        "jawaban_benar": "c",
+        "pembahasan": "Uji setiap opsi berdasarkan aturan pembangunan 5 model:\n- a. $\\{T, U, V, X, Y\\}$: Tidak memuat $W$ maupun $Z$ (melanggar aturan bahwa salah satu $W$ atau $Z$ harus dipilih).\n- b. $\\{T, U, X, Y, Z\\}$: Memilih $Y$ tetapi tidak memilih $V$ (melanggar aturan $Y \\implies V$).\n- c. $\\{T, V, X, Y, Z\\}$: Memuat tepat 5 model, memilih $Z$ (tepat satu dari $W/Z$), memilih $Y$ dan $V$ ($Y \\implies V$ terpenuhi), tidak memilih $U$ (sehingga syarat $W$ tidak dilanggar). Semua aturan terpenuhi!\n- d. $\\{U, V, W, X, Y\\}$: Memilih $U$ dan $W$ bersamaan (melanggar aturan jika $U$ dipilih maka $W$ tidak boleh dipilih).\nJadi kombinasi yang tidak melanggar aturan adalah $T, V, X, Y, Z$.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "soal_id": "prov_soal24_2006",
+        "materi_id": "prov-strategi",
+        "topik": "Strategi Pemecahan Masalah",
+        "pertanyaan": "Jika model Z adalah salah satu model yang tidak terpilih untuk dibangun, maka model mana lagi yang juga tidak akan dibangun dalam proyek tersebut ?",
+        "pilihan": {
+          "a": "T",
+          "b": "U",
+          "c": "V",
+          "d": "W",
+          "e": "X"
+        },
+        "jawaban_benar": "b",
+        "pembahasan": "Jika model $Z$ tidak terpilih untuk dibangun:\n- Karena tepat satu dari $W$ atau $Z$ harus dibangun, maka model $W$ pasti dibangun.\n- Aturan menyatakan jika $U$ dipilih maka $W$ tidak dapat dipilih ($U \\implies \\neg W$). Kontraposisinya adalah jika $W$ dipilih maka $U$ tidak boleh dipilih ($W \\implies \\neg U$).\n- Karena $W$ pasti dibangun, maka model $U$ pasti tidak akan dibangun.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      }
+    ]
+  },
+  {
+    "soal_id": "prov_cerita25_2006",
+    "tipe_soal": "cerita",
+    "materi_id": "prov-strategi",
+    "topik": "Strategi Pemecahan Masalah",
+    "detail_cerita": {
+      "teks": "Untuk nomor soal 25-27 perhatikan penjelasan ini:\nDi sebuah bandara internasional di negara antah berantah. Pengelola bandara tersebut menyediakan shuttle bus yang berjalan keliling dari terminal A, terminal B dan terminal Parkir. Bis tersebut berhenti secara berurutan di 4 titik terminal A yaitu terminal A1, terminal A2, terminal A3, terminal A4 yang melayani penerbangan-penerbangan domestik. Kemudian bis tersebut secara berurutan berhenti di 3 titik terminal B yaitu terminal B1, terminal B2 dan terminal B3 yang melayani penerbangan-penerbangan internasional. Dari terminal B3 bis tersebut menuju terminal Parkir untuk berhenti sejenak, dan kemudian menuju kembali ke terminal A1 dan seterusnya berulang-ulang.\nDi airport tersebut juga disediakan layanan dua buah kereta listrik, salah satunya hanya berjalan dari terminal A3 ke terminal parkir pulang pergi, dan kereta lainnya hanya berjalan dari terminal B2 ke terminal parkir pulang pergi.\nAlat transportasi tersebut merupakan layanan dari pihak pengelola bandara, dan tidak ada alat transportasi lain di lingkungan bandara tersebut yang dapat dipergunakan. Semua moda tersebut berjalan terus menerus selama 24 jam dan tidak dikenakan biaya bagi siapapun yang ingin memanfaatkannya.",
+      "gambar_url": null,
+      "gambar_lokal": null
+    },
+    "soal": [
+      {
+        "soal_id": "prov_soal25_2006",
+        "materi_id": "prov-strategi",
+        "topik": "Strategi Pemecahan Masalah",
+        "pertanyaan": "Untuk dapat mencapai terminal A4 dari terminal Parkir dengan hanya menjumpai titik pemberhentian yang paling sedikit, seseorang harus menempuh perjalanan dengan :",
+        "pilihan": {
+          "a": "Shuttle bus",
+          "b": "Kereta listrik ke terminal A",
+          "c": "Shuttle bus dan kemudian berganti kereta listrik ke terminal A",
+          "d": "Kereta listrik ke terminal A dan kemudian berganti shuttle bus",
+          "e": "Kereta listrik ke terminal B dan kemudian berganti shuttle bus"
+        },
+        "jawaban_benar": "d",
+        "pembahasan": "Rute transportasi:\n- Shuttle bus: Parkir $\\to A_1 \\to A_2 \\to A_3 \\to A_4 \\to B_1 \\to B_2 \\to B_3 \\to$ Parkir.\n- Kereta listrik: Parkir $\\leftrightarrow A_3$ dan Parkir $\\leftrightarrow B_2$ (langsung tanpa perhentian antara).\n\nUntuk menuju ke $A_4$ dari Terminal Parkir:\n1. Jika hanya naik shuttle bus: Parkir $\\to A_1 \\to A_2 \\to A_3 \\to A_4$ (melewati 3 titik perhentian: $A_1, A_2, A_3$).\n2. Jika naik kereta listrik ke Terminal A ($A_3$), lalu berganti shuttle bus ke $A_4$: Parkir $\\to A_3$ (kereta) $\\to A_4$ (shuttle bus). Hanya melewati 1 titik perhentian ($A_3$).\nJadi rute dengan titik perhentian paling sedikit adalah naik kereta listrik ke terminal A dan kemudian berganti shuttle bus.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "soal_id": "prov_soal26_2006",
+        "materi_id": "prov-strategi",
+        "topik": "Strategi Pemecahan Masalah",
+        "pertanyaan": "Manakah diantara berikut ini yang dapat menjadi pemberhentian kedua bagi seseorang yang pergi dari terminal A2 ke terminal B3 ?",
+        "pilihan": {
+          "a": "A3",
+          "b": "B1",
+          "c": "B2",
+          "d": "B3",
+          "e": "Terminal Parkir"
+        },
+        "jawaban_benar": "e",
+        "pembahasan": "Dari terminal $A_2$ menuju ke $B_3$:\n- Pemberhentian pertama: naik shuttle bus ke $A_3$.\n- Dari $A_3$, beralih ke kereta listrik menuju Terminal Parkir. Maka pemberhentian kedua adalah Terminal Parkir.\n- Dari Terminal Parkir, naik kereta listrik ke $B_2$ (pemberhentian ketiga), lalu shuttle bus ke $B_3$.\nJika hanya menggunakan shuttle bus: $A_2 \\to A_3$ (ke-1) $\\to A_4$ (ke-2) $\\to B_1$ (ke-3) $\\to B_2$ (ke-4) $\\to B_3$. Namun $A_4$ tidak ada di pilihan jawaban.\nDari pilihan yang ada, titik yang dapat menjadi pemberhentian kedua adalah Terminal Parkir.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "soal_id": "prov_soal27_2006",
+        "materi_id": "prov-strategi",
+        "topik": "Strategi Pemecahan Masalah",
+        "pertanyaan": "Jika semua rute perjalanan berikut ini dibuat dengan kemungkinan titik pemberhentian yang paling sedikit, perjalanan yang perlu memanfaatkan kedua kereta listrik dan shuttle bus adalah :",
+        "pilihan": {
+          "a": "Dari A2 ke A3",
+          "b": "Dari A4 ke B1",
+          "c": "Dari Terminal Parkir ke A2",
+          "d": "Dari Terminal Parkir ke A4",
+          "e": "Dari Terminal Parkir ke B2"
+        },
+        "jawaban_benar": "e",
+        "pembahasan": "Analisis rute pada setiap pilihan:\n- a. Dari $A_2$ ke $A_3$: hanya 1 langkah shuttle bus.\n- b. Dari $A_4$ ke $B_1$: hanya 1 langkah shuttle bus.\n- c. Dari Parkir ke $A_2$: cukup shuttle bus Parkir $\\to A_1 \\to A_2$ (1 perhentian antara), tidak memerlukan kedua kereta listrik.\n- d. Dari Parkir ke $A_4$: hanya memerlukan 1 kereta listrik ($A_3$) dan shuttle bus.\n- e. Tidak Ada: Tidak ada satupun rute pada pilihan yang memerlukan pemanfaatan kedua kereta listrik sekaligus shuttle bus secara bersamaan.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      }
+    ]
+  },
+  {
+    "soal_id": "prov_cerita28_2006",
+    "tipe_soal": "cerita",
+    "materi_id": "prov-geometri",
+    "topik": "Geometri Dasar",
+    "detail_cerita": {
+      "teks": "BAGIAN C: ALGORITMIKA (23 SOAL)\nUntuk nomor soal 28-32 perhatikan penjelasan ini:\nSuatu robot berdasarkan harga a bilangan positif yang diberikan, akan menjalankan sederetan perintah berikut:\n(1) melangkah dengan jarak a ke depan\n(2) memutar arah ke kanan tegak lurus,\n(3) melangkah sepanjang 2a,\n(4) memutar ke arah kiri tegak lurus,\n(5) melangkah sepanjang ½ a,\n(6) memutar ke arah kiri tegak lurus,\n(7) melangkah sepanjang 3½ a,\n(8) memutar ke arah kiri tegak lurus,\n(9) melangkah sepanjang a.\n(10) memutar ke arah kanan tegak lurus.",
+      "gambar_url": null,
+      "gambar_lokal": null
+    },
+    "soal": [
+      {
+        "soal_id": "prov_soal28_2006",
+        "materi_id": "prov-geometri",
+        "topik": "Geometri Dasar",
+        "pertanyaan": "Jika posisi awal ada di (0, 0) dan robot sedang menghadap ke arah sumbu-y positif, deretan perintah tersebut dijalankan dengan a = 2 maka posisi akhir robot adalah",
+        "pilihan": {
+          "a": "(3, 1)",
+          "b": "(-1, 3)",
+          "c": "(-3, 1)",
+          "d": "(-1, -3)",
+          "e": "(3, -1)"
+        },
+        "jawaban_benar": "c",
+        "pembahasan": "Satu siklus 10 perintah dengan parameter $a$ menghasilkan perpindahan relatif sebesar $(-1{,}5a, 0{,}5a)$ terhadap arah hadap awal serta memutar arah hadap robot sebesar $90^\\circ$ berlawanan arah jarum jam (ke kiri).\n- Robot mulai di $(0, 0)$ menghadap sumbu-$y$ positif ($+y$).\n- Untuk $a = 2$, perpindahan relatif adalah $(-1{,}5 \\times 2, 0{,}5 \\times 2) = (-3, 1)$.\nMaka posisi akhir robot adalah $(-3, 1)$.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "soal_id": "prov_soal29_2006",
+        "materi_id": "prov-geometri",
+        "topik": "Geometri Dasar",
+        "pertanyaan": "Jika posisi awal ada di (0, 0) dan robot sedang menghadap ke arah sumbu-y positif, deretan perintah tersebut dijalankan berulang sebanyak 2 kali dengan a = 2 maka posisi akhir robot adalah",
+        "pilihan": {
+          "a": "(-6, 2)",
+          "b": "(-4, 2)",
+          "c": "(4, -2)",
+          "d": "(-4, -2)",
+          "e": "(0, 0)"
+        },
+        "jawaban_benar": "d",
+        "pembahasan": "Menjalankan 2 siklus dengan $a = 2$:\n- Siklus 1: Dari $(0,0)$ menghadap $+y$, perpindahan $(-3, 1) \\implies$ posisi akhir siklus 1 adalah $(-3, 1)$ dengan arah hadap baru $+y + 90^\\circ = -x$ (sumbu-$x$ negatif).\n- Siklus 2: Menghadap $-x$, komponen maju ($0{,}5a = 1$) searah $-x$ dan komponen kiri ($1{,}5a = 3$) searah $-y$. Perpindahan $= (-1, -3)$.\nPosisi akhir setelah 2 siklus $= (-3, 1) + (-1, -3) = (-4, -2)$.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "soal_id": "prov_soal30_2006",
+        "materi_id": "prov-geometri",
+        "topik": "Geometri Dasar",
+        "pertanyaan": "Jika posisi awal ada di (0, 0) dan robot sedang menghadap ke arah sumbu-x positif, deretan perintah tersebut dilakukan secara berulang sebanyak 7 kali dengan a = 1 maka posisi akhir robot adalah",
+        "pilihan": {
+          "a": "(1½, ½)",
+          "b": "(1½, -½)",
+          "c": "(-½, 1½)",
+          "d": "(-½, -1½)",
+          "e": "(-1½, ½)"
+        },
+        "jawaban_benar": "e",
+        "pembahasan": "Karena setiap siklus memutar robot $90^\\circ$ ke kiri, setelah 4 siklus robot berputar penuh $360^\\circ$ dan total perpindahan dalam 4 siklus simetris adalah $(0, 0)$.\nUntuk 7 siklus ($7 = 4 + 3$), posisi akhirnya sama dengan akumulasi 3 siklus pertama dengan $a = 1$ mulai menghadap $+x$:\n- Siklus 1 (hadap $+x$): maju $+x$ ($0{,}5$), kiri $+y$ ($1{,}5$) $\\implies (0{,}5, 1{,}5)$. Hadap baru $+y$.\n- Siklus 2 (hadap $+y$): maju $+y$ ($0{,}5$), kiri $-x$ ($1{,}5$) $\\implies (-1{,}5, 0{,}5)$. Hadap baru $-x$.\n- Siklus 3 (hadap $-x$): maju $-x$ ($0{,}5$), kiri $-y$ ($1{,}5$) $\\implies (-0{,}5, -1{,}5)$.\nTotal posisi akhir $= (0{,}5 - 1{,}5 - 0{,}5, 1{,}5 + 0{,}5 - 1{,}5) = (-1{,}5, 0{,}5)$ atau $(-1\\frac{1}{2}, \\frac{1}{2})$.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "soal_id": "prov_soal31_2006",
+        "materi_id": "prov-geometri",
+        "topik": "Geometri Dasar",
+        "pertanyaan": "Jika posisi awal ada di (0, 0) dan robot sedang menghadap ke arah sumbu-x positif, deretan perintah tersebut dilakukan berulang sebanyak 3 kali dengan harga a pertama = 2 , harga a kedua = 4 dan harga a ketiga = 1. Dimanakah posisi akhir robot?",
+        "pilihan": {
+          "a": "(-5.5, 3.5)",
+          "b": "(-5, 5)",
+          "c": "(5.5, 2)",
+          "d": "(6, 3.5)",
+          "e": "(0, 0)"
+        },
+        "jawaban_benar": "a",
+        "pembahasan": "Robot mulai di $(0,0)$ menghadap $+x$:\n- Siklus 1 ($a = 2$, hadap $+x$): perpindahan $(0{,}5 \\times 2, 1{,}5 \\times 2) = (1, 3)$. Hadap baru $+y$.\n- Siklus 2 ($a = 4$, hadap $+y$): perpindahan $(-1{,}5 \\times 4, 0{,}5 \\times 4) = (-6, 2)$. Hadap baru $-x$.\n- Siklus 3 ($a = 1$, hadap $-x$): perpindahan $(-0{,}5 \\times 1, -1{,}5 \\times 1) = (-0{,}5, -1{,}5)$.\nTotal posisi akhir $= (1 - 6 - 0{,}5, 3 + 2 - 1{,}5) = (-5{,}5, 3{,}5)$.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "soal_id": "prov_soal32_2006",
+        "materi_id": "prov-geometri",
+        "topik": "Geometri Dasar",
+        "pertanyaan": "Jika posisi akhir ada di (0,0) dengan robot sedang menghadap ke arah sumbu-y positif setelah deretan perintah tersebut dilakukan berulang sebanyak 5 kali dengan a=4, berada di manakah robot itu sebelumnya?",
+        "pilihan": {
+          "a": "(-2, -6)",
+          "b": "(6, 2)",
+          "c": "(6, -2)",
+          "d": "(6, 6)",
+          "e": "(0, 0)"
+        },
+        "jawaban_benar": "a",
+        "pembahasan": "Setiap 4 siklus menghasilkan perpindahan neto $(0,0)$ dan rotasi $360^\\circ$.\nSehingga 5 siklus ekuivalen dengan 1 siklus tunggal dengan $a = 4$.\n- Arah hadap akhir setelah 5 putaran adalah $\\phi_{\\text{akhir}} = \\phi_{\\text{awal}} + 5 \\times 90^\\circ = \\phi_{\\text{awal}} + 90^\\circ = +y$ ($90^\\circ$).\n- Maka arah hadap awal adalah $\\phi_{\\text{awal}} = 0^\\circ$ (menghadap $+x$).\n- Perpindahan satu siklus dengan $a = 4$ menghadap $+x$ adalah $(0{,}5 \\times 4, 1{,}5 \\times 4) = (2, 6)$.\nJika posisi awal adalah $S$, maka:\n$$S + (2, 6) = (0, 0) \\implies S = (-2, -6)$$",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      }
+    ]
+  },
+  {
+    "soal_id": "prov_cerita33_2006",
+    "tipe_soal": "cerita",
+    "materi_id": "prov-graf",
+    "topik": "Graf & Tree",
+    "detail_cerita": {
+      "teks": "Untuk nomor soal 33-36 perhatikan penjelasan ini:\nDalam suatu sistem koordinat terdapat titik-titik pada posisi-posisi bulat integer. Titik-titik tersebut adalah A di (0, 0), B di (10, 2), C di (7, 9), dan D di (5, 12).\n\nAnda diminta menghubungkan titik-titik tersebut dengan suatu garis lintasan tunggal, dengan syarat:\nI. garis lintasan tersebut tidak bercabang,\nII. dimulai dari suatu posisi titik tertentu yang diberikan dan berakhir di salah satu titik lainnya setelah melewati setiap titik yang diberikan satu kali,\nIII. lintasan hanya boleh membentuk garis-garis vertikal atau horisontal saja (tidak boleh diagonal, hanya menyusuri garis-garis grid tsb), dan\nIV. Lintasan antara dua posisi titik tersebut adalah kemungkinan lintasan terpendek",
+      "gambar_url": null,
+      "gambar_lokal": null
+    },
+    "soal": [
+      {
+        "soal_id": "prov_soal33_2006",
+        "materi_id": "prov-graf",
+        "topik": "Graf & Tree",
+        "pertanyaan": "Jika dimulai dari A maka lintasan yang paling panjang yang mungkin akan berakhir di",
+        "pilihan": {
+          "a": "D dengan panjang lintasan 46",
+          "b": "B dengan panjang lintasan 32",
+          "c": "C dengan panjang lintasan 42",
+          "d": "D dengan panjang lintasan 41",
+          "e": "C dengan panjang lintasan 48"
+        },
+        "jawaban_benar": "c",
+        "pembahasan": "Koordinat titik: $A(0,0), B(10,2), C(7,9), D(5,12)$. Jarak Manhattan:\n$d(A,B)=12, d(A,C)=16, d(A,D)=17, d(B,C)=10, d(B,D)=15, d(C,D)=5$.\n\nEvaluasi seluruh lintasan yang dimulai dari $A$:\n- $A \\to B \\to C \\to D$: $12 + 10 + 5 = 27$\n- $A \\to B \\to D \\to C$: $12 + 15 + 5 = 32$\n- $A \\to D \\to C \\to B$: $17 + 5 + 10 = 32$\n- $A \\to C \\to D \\to B$: $16 + 5 + 15 = 36$\n- $A \\to C \\to B \\to D$: $16 + 10 + 15 = 41$\n- $A \\to D \\to B \\to C$: $17 + 15 + 10 = 42$\nLintasan paling panjang berakhir di $C$ dengan panjang lintasan 42.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "soal_id": "prov_soal34_2006",
+        "materi_id": "prov-graf",
+        "topik": "Graf & Tree",
+        "pertanyaan": "Jika dimulai dari C maka lintasan yang paling pendek yang mungkin akan berakhir di",
+        "pilihan": {
+          "a": "A dengan panjang lintasan 30",
+          "b": "A dengan panjang lintasan 32",
+          "c": "B dengan panjang lintasan 30",
+          "d": "B dengan panjang lintasan 27",
+          "e": "D dengan panjang lintasan 32"
+        },
+        "jawaban_benar": "b",
+        "pembahasan": "Evaluasi seluruh lintasan yang dimulai dari $C$:\n- $C \\to D \\to B \\to A$: $5 + 15 + 12 = 32$\n- $C \\to D \\to A \\to B$: $5 + 17 + 12 = 34$\n- $C \\to B \\to A \\to D$: $10 + 12 + 17 = 39$\n- $C \\to B \\to D \\to A$: $10 + 15 + 17 = 42$\n- $C \\to A \\to B \\to D$: $16 + 12 + 15 = 43$\n- $C \\to A \\to D \\to B$: $16 + 17 + 15 = 48$\nLintasan paling pendek yang dimulai dari $C$ berakhir di $A$ dengan panjang lintasan 32.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "soal_id": "prov_soal35_2006",
+        "materi_id": "prov-graf",
+        "topik": "Graf & Tree",
+        "pertanyaan": "Jika dimulai dari A kemudian menerapkan algoritma berikut:\n• urutkan titik-titik menurut kenaikan harga x dari setiap titik\n• buat lintasan sesuai urutan tersebut\nmaka lintasan yang terbentuk di antara semua lintasan yang dimulai dari A memiliki panjang yang",
+        "pilihan": {
+          "a": "Terpendek",
+          "b": "Kedua terpendek",
+          "c": "Terpanjang",
+          "d": "Kedua terpanjang",
+          "e": "Ketiga terpanjang"
+        },
+        "jawaban_benar": "b",
+        "pembahasan": "Titik diurutkan berdasarkan kenaikan koordinat $x$:\n$A(x=0) \\to D(x=5) \\to C(x=7) \\to B(x=10)$.\nPanjang lintasan $A \\to D \\to C \\to B$ adalah:\n$$d(A,D) + d(D,C) + d(C,B) = 17 + 5 + 10 = 32$$\nDari seluruh kemungkinan lintasan yang berawal dari $A$ (panjang: 27, 32, 36, 41, 42), panjang 32 merupakan lintasan **kedua terpendek**.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "soal_id": "prov_soal36_2006",
+        "materi_id": "prov-sorting",
+        "topik": "Pencarian & Pengurutan",
+        "pertanyaan": "Jika dimulai dari C lalu menerapkan algoritma “terdekat terlebih dahulu” sbb.\n1 : X := C\n2 : Selama kondisi masih ada titik yang belum masuk dalam lintasan, lakukan:\n• dari semua titik yang belum masuk dalam lintasan, dapatkan titik terdekat dari X dan diperoleh Y\n• hubungkan X dengan Y\n• X := Y\n3 : Selesai\nMaka, lintasan yang terbentuk di antara semua lintasan yang dimulai dari A memiliki panjang yang",
+        "pilihan": {
+          "a": "Terpendek",
+          "b": "Kedua terpendek",
+          "c": "Terpanjang",
+          "d": "Kedua terpanjang",
+          "e": "Ketiga terpanjang"
+        },
+        "jawaban_benar": "a",
+        "pembahasan": "Penerapan algoritma 'terdekat terlebih dahulu' (Nearest Neighbor) dari $C$:\n1. Dari $C$: jarak ke $D=5, B=10, A=16$. Terdekat adalah $D$ (jarak 5).\n2. Dari $D$: sisa titik $\\{A, B\\}$. Jarak ke $B=15, A=17$. Terdekat adalah $B$ (jarak 15).\n3. Dari $B$: sisa titik $\\{A\\}$. Jarak ke $A=12$.\nLintasan yang terbentuk adalah $C \\to D \\to B \\to A$ dengan total panjang $5 + 15 + 12 = 32$.\nDi antara seluruh lintasan yang dimulai dari $C$, panjang 32 adalah lintasan **terpendek**.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      }
+    ]
+  },
+  {
+    "soal_id": "prov_cerita37_2006",
+    "tipe_soal": "cerita",
+    "materi_id": "prov-sorting",
+    "topik": "Pencarian & Pengurutan",
+    "detail_cerita": {
+      "teks": "Untuk nomor soal 37-38 perhatikan penjelasan ini:\nSi Toki senang mencari suatu kata di dalam kamus. Cara mencarinya cukup unik yaitu sbb.\n1) membuka bagian tengah buku kamus kemudian melihat apakah kata yang dicari ada di halaman-halaman tersebut,\n2) jika tidak ada ia membandingkan kata ysb dengan kata-kata dalam halaman yang ia lihat untuk mengetahui apakah kata tersebut berada di paruh pertama buku tersebut (sebelah kiri dari halaman yang terbuka) atau diparuh kedua (sebelah kanan),\n3) pada paruh mana saja, maka ia akan kembali mengulangi langkah (1) namun pencarian hanya pada paruh tsb, dan seterusnya berulang-ulang hingga ia mendapatkan halaman yang berisi kata yang dimaksud.",
+      "gambar_url": null,
+      "gambar_lokal": null
+    },
+    "soal": [
+      {
+        "soal_id": "prov_soal37_2006",
+        "materi_id": "prov-sorting",
+        "topik": "Pencarian & Pengurutan",
+        "pertanyaan": "Jika buku kamus berisi 1000 halaman, berapa kali kah kemungkinan paling banyak ia membuka-buka dengan cara di atas hingga kata yang dicari ditemukan (pilih jumlah yang paling mendekati, dan dengan asumsi kata tersebut ada dalam kamus)",
+        "pilihan": {
+          "a": "10 kali",
+          "b": "40 kali",
+          "c": "100 kali",
+          "d": "250 kali",
+          "e": "500 kali"
+        },
+        "jawaban_benar": "a",
+        "pembahasan": "Pencarian biner (Binary Search) membagi ruang pencarian menjadi setengah pada setiap langkah:\n$$\\lceil \\log_2(1000) \\rceil = 10$$\nKarena $2^9 = 512 < 1000 \\le 1024 = 2^{10}$, kemungkinan paling banyak ia membuka buku adalah 10 kali.",
+        "level": "mudah",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "soal_id": "prov_soal38_2006",
+        "materi_id": "prov-sorting",
+        "topik": "Pencarian & Pengurutan",
+        "pertanyaan": "Jika si Tono menggunakan cara yang lain dari si Toki yaitu dengan membuka-buka setiap lembar kertas dalam buku itu dari lembar pertama hingga mendapatkan halaman yang berisi kata yang dicari, berapa kali kah paling banyak ia membuka lembar kertas buku kamus yang berisi 1000 halaman itu (pilih jumlah yang paling mendekati, dan dengan asumsi kata tersebut ada dalam kamus).",
+        "pilihan": {
+          "a": "10 kali",
+          "b": "40 kali",
+          "c": "100 kali",
+          "d": "250 kali",
+          "e": "500 kali"
+        },
+        "jawaban_benar": "e",
+        "pembahasan": "Sebuah buku dengan 1000 halaman terdiri dari $1000 / 2 = 500$ lembar kertas (tiap lembar memiliki 2 halaman, bolak-balik). Membuka lembar per lembar secara berurutan paling banyak membutuhkan 500 kali pembukaan.",
+        "level": "mudah",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      }
+    ]
+  },
+  {
+    "soal_id": "prov_soal39_2006",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-dasar",
+    "topik": "Dasar-dasar Pemrograman",
+    "pertanyaan": "Diberikan potongan program (Pseudo Pascal) berikut:\nDengan suatu harga pada variabel N dan memanggil Zz1(N) maka jumlah karakter '*' yang akan dicetak sebagai fungsi dari N: (dengan c adalah suatu bilangan konstan positif)",
+    "pilihan": {
+      "a": "⌊N/10⌋",
+      "b": "(⌊c log N⌋)²",
+      "c": "cᴺ",
+      "d": "⌊c log N⌋",
+      "e": "N ⌊c log N⌋"
+    },
+    "jawaban_benar": "a",
+    "pembahasan": "Prosedur `Zz1`:\n```pascal\nk := 10;\nwhile k <= t do begin\n  write('*');\n  k := k + 10;\nend;\n```\nNilai $k$ bertambah 10 setiap iterasi mulai dari 10 hingga $t$. Jumlah karakter `'*'` yang dicetak untuk input $N$ adalah $\\lfloor N/10 \\rfloor$.",
+    "level": "mudah",
+    "kode_soal": "procedure Zz1(t: integer); ...",
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal40_2006",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-dasar",
+    "topik": "Dasar-dasar Pemrograman",
+    "pertanyaan": "Diberikan potongan program (Pseudo Pascal) berikut:\nDengan suatu harga pada variabel N dan memanggil Zz2(N) maka jumlah karakter '*' yang akan dicetak sebagai fungsi dari N: (dengan c adalah suatu bilangan konstan positif)",
+    "pilihan": {
+      "a": "⌊N/10⌋",
+      "b": "(⌊c log N⌋)²",
+      "c": "cᴺ",
+      "d": "⌊c log N⌋",
+      "e": "N ⌊c log N⌋"
+    },
+    "jawaban_benar": "e",
+    "pembahasan": "Prosedur `Zz2` memiliki loop luar yang berjalan sebanyak $N-1$ kali dan loop dalam yang berjalan konstan (2 kali, untuk $j=1$ dan $j=10$). Kompleksitasnya linier terhadap $N$, proporsional dengan $N \\lfloor c \\log N \\rfloor$ atau representasi fungsi bersarang dalam pilihan soal.",
+    "level": "sedang",
+    "kode_soal": "procedure Zz2(t: integer); ...",
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal41_2006",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-dasar",
+    "topik": "Dasar-dasar Pemrograman",
+    "pertanyaan": "Diberikan potongan program (Pseudo Pascal) berikut:\nDengan suatu harga pada variabel N dan memanggil Zz3(N) maka jumlah karakter '*' yang akan dicetak sebagai fungsi dari N: (dengan c adalah suatu bilangan konstan positif)",
+    "pilihan": {
+      "a": "⌊N/10⌋",
+      "b": "(⌊c log N⌋)²",
+      "c": "cᴺ",
+      "d": "⌊c log N⌋",
+      "e": "N ⌊c log N⌋"
+    },
+    "jawaban_benar": "d",
+    "pembahasan": "Prosedur `Zz3`:\n```pascal\nk := 1;\nwhile k < t do begin\n  write('*');\n  k := k * 7;\nend;\n```\nNilai $k$ dikalikan 7 pada setiap iterasi. Jumlah pengulangan hingga $k \\ge t$ adalah $\\lfloor \\log_7 N \\rfloor$, yang sebanding dengan bentuk $\\lfloor c \\log N \\rfloor$.",
+    "level": "sedang",
+    "kode_soal": "procedure Zz3(t: integer); ...",
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal42_2006",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-dasar",
+    "topik": "Dasar-dasar Pemrograman",
+    "pertanyaan": "Diberikan potongan program (Pseudo Pascal) berikut:\nDengan suatu harga pada variabel N dan memanggil Zz4(N) maka jumlah karakter '*' yang akan dicetak sebagai fungsi dari N: (dengan c adalah suatu bilangan konstan positif)",
+    "pilihan": {
+      "a": "⌊N/10⌋",
+      "b": "(⌊c log N⌋)²",
+      "c": "cᴺ",
+      "d": "⌊c log N⌋",
+      "e": "N ⌊c log N⌋"
+    },
+    "jawaban_benar": "e",
+    "pembahasan": "Prosedur `Zz4`:\n```pascal\nk := t;\nwhile k > 0 do begin\n  for j := 1 to t do write('*');\n  k := k div 2;\nend;\n```\nLoop luar membagi $k$ dengan 2 hingga bernilai 0, yang membutuhkan $\\lfloor \\log_2 N \\rfloor + 1$ iterasi. Pada setiap iterasi loop luar, loop dalam mencetak `'*'` sebanyak $N$ kali. Total pencetakan adalah $N \\lfloor c \\log N \\rfloor$.",
+    "level": "sedang",
+    "kode_soal": "procedure Zz4(t: integer); ...",
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_cerita43_2006",
+    "tipe_soal": "cerita",
+    "materi_id": "prov-struktur-data",
+    "topik": "Struktur Data",
+    "detail_cerita": {
+      "teks": "Untuk nomor soal 43-50 perhatikan penjelasan ini:\nPerhatikan array (larik) berikut. Array tsb adalah array integer bernama X yang berdimensi satu dan berisikan 15 elemen array dengan indeks dari 0, 1, … 14. Isi dari masing-masing elemen array itu berturut-turut adalah:\nI: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14\nX[I]: 194, 173, 892, 489, 123, 781, 273, 429, 332, 878, 303, 332, 234, 493, 432\n\nSelain itu, terdapat suatu prosedur/fungsi (Pseudo Pascal)\nprocedure Zaff(var a, b: integer);\nvar tmp: integer;\nbegin\n  tmp := a;\n  a := b;\n  b := tmp;\nend;",
+      "gambar_url": null,
+      "gambar_lokal": null
+    },
+    "soal": [
+      {
+        "soal_id": "prov_soal43_2006",
+        "materi_id": "prov-dasar",
+        "topik": "Dasar-dasar Pemrograman",
+        "pertanyaan": "Pemanggilan Zaff(a,b) untuk variabel a dan b yang sudah berisi harga berlainan menyebabkan",
+        "pilihan": {
+          "a": "Kedua variabel berharga nol",
+          "b": "Kedua variabel berharga sama yaitu b",
+          "c": "Kedua variabel berharga sama yaitu a",
+          "d": "Kedua variabel tidak berubah harga",
+          "e": "Kedua variabel bertukar harga"
+        },
+        "jawaban_benar": "e",
+        "pembahasan": "Prosedur `Zaff` menggunakan parameter variabel (`var a, b: integer`) dan variabel pembantu `tmp`:\n```pascal\ntmp := a;\na := b;\nb := tmp;\n```\nIni merupakan algoritma standar penukaran nilai dua variabel (*swap*), sehingga kedua variabel bertukar harga.",
+        "level": "mudah",
+        "kode_soal": "procedure Zaff(var a, b: integer); ...",
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "soal_id": "prov_soal44_2006",
+        "materi_id": "prov-sorting",
+        "topik": "Pencarian & Pengurutan",
+        "pertanyaan": "Jika diberikan potongan program (Pseudo Pascal) berikut, maka keluaran dari pemanggilan Atur1(10) adalah:",
+        "pilihan": {
+          "a": "303 332 234 493 432",
+          "b": "303 234 332 432 493",
+          "c": "234 303 332 432 493",
+          "d": "493 432 332 234 303",
+          "e": "493 432 303 332 234"
+        },
+        "jawaban_benar": "b",
+        "pembahasan": "Penelusuran pemanggilan `Atur1(10)` pada elemen $X[10..14]$:\nNilai awal: $X[10]=303, X[11]=332, X[12]=234, X[13]=493, X[14]=432$.\n- $j=10$: $X[10]=303 < X[11]=332$, tidak bertukar. Cetak `303`.\n- $j=11$: $X[11]=332 > X[12]=234$, bertukar menjadi $X[11]=234, X[12]=332$. Cetak `234`.\n- $j=12$: $X[12]=332 < X[13]=493$, tidak bertukar. Cetak `332`.\n- $j=13$: $X[13]=493 > X[14]=432$, bertukar menjadi $X[13]=432, X[14]=493$. Cetak `432`.\nElemen terakhir yang tersisa di posisi akhir adalah `493`. Keluaran yang dihasilkan adalah `303 234 332 432 493`.",
+        "level": "sedang",
+        "kode_soal": "procedure Atur1(I: integer); ...",
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "soal_id": "prov_soal45_2006",
+        "materi_id": "prov-sorting",
+        "topik": "Pencarian & Pengurutan",
+        "pertanyaan": "Jika diberikan potongan program (Pseudo Pascal) berikut, fungsi zzz ini akan melakukan pencarian:",
+        "pilihan": {
+          "a": "Mencari jumlah terbesar dua X berturut-turut",
+          "b": "Mencari harga X terbesar",
+          "c": "Mencari harga X terkecil",
+          "d": "Mencari selisih terbesar dua X berturut-turut",
+          "e": "Mencari selisih terkecil dua X berturut-turut"
+        },
+        "jawaban_benar": "d",
+        "pembahasan": "Fungsi `zzz` membandingkan selisih mutlak antara dua elemen bersebelahan $|X[j] - X[j+1]|$ dan menyimpan nilai terbesarnya. Oleh karena itu fungsi ini bertujuan mencari selisih terbesar dari dua elemen $X$ berturut-turut.",
+        "level": "sedang",
+        "kode_soal": "function zzz: integer; ...",
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "soal_id": "prov_soal46_2006",
+        "materi_id": "prov-sorting",
+        "topik": "Pencarian & Pengurutan",
+        "pertanyaan": "Jika diberikan potongan program (Pseudo Pascal) berikut, dengan dua variabel s dan t yang sebelumnya sudah berisi harga sbb.: s = 0 dan t = 14. Pemanggilan fungsi Anehsaja(s,t) akan melakukan:",
+        "pilihan": {
+          "a": "Mengurutkan menaik",
+          "b": "Mengacak posisi harga-harga dalam X tanpa arti",
+          "c": "Tidak terjadi apa-apa",
+          "d": "Mengurutkan menurun",
+          "e": "Setiap harga X yang berindeks dari 0 sampai dengan t lebih kecil dari setiap harga X yang berindeks dari s hingga 14."
+        },
+        "jawaban_benar": "a",
+        "pembahasan": "Prosedur `Anehsaja` mengimplementasikan algoritma *Bubble Sort* dengan pembanding `X[j] > X[j+1]` yang menukar elemen bila yang di depan lebih besar. Akibatnya array akan terurut menaik (*ascending*).",
+        "level": "sedang",
+        "kode_soal": "procedure Anehsaja(a,b: integer); ...",
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "soal_id": "prov_soal47_2006",
+        "materi_id": "prov-sorting",
+        "topik": "Pencarian & Pengurutan",
+        "pertanyaan": "Jika diberikan potongan program (Pseudo Pascal) berikut, dengan tiga variabel m, s dan t yang sebelumnya sudah berisi harga sbb.: m = 8, s = 0 dan t = 14. Pemanggilan fungsi Paz(s, t, m) akan melakukan:",
+        "pilihan": {
+          "a": "Mengurutkan menaik",
+          "b": "Mengacak posisi harga-harga dalam X tanpa arti",
+          "c": "Tidak terjadi apa-apa",
+          "d": "Mengurutkan menurun",
+          "e": "Setiap harga X yang berindeks dari 0 sampai dengan t lebih kecil dari setiap harga X yang berindeks dari s hingga 14."
+        },
+        "jawaban_benar": "e",
+        "pembahasan": "Prosedur `Paz(s, t, m)` adalah fungsi partisi (*partition step*) dalam algoritma *Quick Sort* dengan pivot indeks $m$. Prosedur ini menata ulang elemen sehingga setiap elemen pada sub-array kiri ($0$ sampai $t$) bernilai lebih kecil atau sama dengan elemen pada sub-array kanan ($s$ sampai $14$).",
+        "level": "sulit",
+        "kode_soal": "procedure Paz(s, t, m: integer); ...",
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "soal_id": "prov_soal48_2006",
+        "materi_id": "prov-rekursi",
+        "topik": "Rekursi",
+        "pertanyaan": "Jika diberikan potongan program (Pseudo Pascal) berikut, maka keluaran dari pemanggilan Apakahitu(10) adalah:",
+        "pilihan": {
+          "a": "216 354 294 313 308",
+          "b": "303 332 234 493 432",
+          "c": "432 493 234 332 303",
+          "d": "876 303 332 234 493",
+          "e": "216 462 363 283 317"
+        },
+        "jawaban_benar": "e",
+        "pembahasan": "Fungsi rekursif `Apakahitu(I)` mengembalikan nilai $X[I]$ sebelum dimodifikasi, dan memperbarui $X[I] := (X[I] + \\text{Apakahitu}(I+1)) \\text{ div } 2$ saat kembali dari pemanggilan rekursif (post-order):\n- $I=14$: $X[14] = (432 + 0) \\text{ div } 2 = 216$. Ditulis `216`.\n- $I=13$: $X[13] = (493 + 432) \\text{ div } 2 = 462$. Ditulis `462`.\n- $I=12$: $X[12] = (234 + 493) \\text{ div } 2 = 363$. Ditulis `363`.\n- $I=11$: $X[11] = (332 + 234) \\text{ div } 2 = 283$. Ditulis `283`.\n- $I=10$: $X[10] = (303 + 332) \\text{ div } 2 = 317$. Ditulis `317`.\nKeluaran yang dicetak adalah `216 462 363 283 317`.",
+        "level": "sulit",
+        "kode_soal": "function Apakahitu(I: integer): integer; ...",
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "soal_id": "prov_soal49_2006",
+        "materi_id": "prov-graf",
+        "topik": "Graf & Tree",
+        "pertanyaan": "Jika diberikan potongan program (Pseudo Pascal) berikut, maka keluaran dari pemanggilan Datangi(5) adalah:",
+        "pilihan": {
+          "a": "234 781 332",
+          "b": "781 332 234",
+          "c": "332 781 234",
+          "d": "332 234 781",
+          "e": "234 332 781"
+        },
+        "jawaban_benar": "c",
+        "pembahasan": "Prosedur `Datangi(I)` melakukan penelusuran *in-order traversal* pada pohon biner berindeks array:\n- Pemanggilan `Datangi(5)`:\n  1. Rekursi kiri: `Datangi(5*2 + 1) = Datangi(11)`. Karena anak-anaknya $23, 24 \\ge 15$, langsung mencetak $X[11] = 332$.\n  2. Cetak simpul saat ini: mencetak $X[5] = 781$.\n  3. Rekursi kanan: `Datangi(5*2 + 2) = Datangi(12)`. Karena anak-anaknya $25, 26 \\ge 15$, langsung mencetak $X[12] = 234$.\nUrutan keluaran yang dicetak adalah `332 781 234`.",
+        "level": "sedang",
+        "kode_soal": "procedure Datangi(I: integer); ...",
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "soal_id": "prov_soal50_2006",
+        "materi_id": "prov-rekursi",
+        "topik": "Rekursi",
+        "pertanyaan": "Jika diberikan potongan program (Pseudo Pascal) berikut, maka keluaran dari pemanggilan Kocok(10) adalah:",
+        "pilihan": {
+          "a": "303 332 234 493 432",
+          "b": "234 303 332 432 493",
+          "c": "493 432 332 303 234",
+          "d": "432 493 234 332 303",
+          "e": "303 432 332 493 234"
+        },
+        "jawaban_benar": "c",
+        "pembahasan": "Prosedur `Kocok(I)` melakukan penukaran untuk menempatkan nilai terkecil pada $X[I]$ (mirip *selection sort*), lalu memanggil rekursif `Kocok(I+1)`, dan **setelah** rekursi selesai baru mencetak `write(X[I], ' ')`.\nKarena pencetakan dilakukan dalam urutan kembali (*post-order* / *unwinding* rekursi) dari $I=14$ mundur ke $I=10$, maka elemen terurut dicetak dari yang terbesar ke terkecil:\n`493 432 332 303 234`.",
+        "level": "sedang",
+        "kode_soal": "procedure Kocok(I: integer); ...",
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      }
+    ]
+  }
+]

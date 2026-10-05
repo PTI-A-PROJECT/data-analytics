@@ -1,0 +1,364 @@
+[
+  {
+    "soal_id": "prov_cerita1_2026",
+    "tipe_soal": "cerita",
+    "materi_id": "prov-berhitung",
+    "detail_cerita": {
+      "teks": "A. Kotak Telur\n\nPak Dengklek berkunjung ke sebuah toko telur. Telur-telur yang dijual diletakkan berjejer pada sebuah rak, dinyatakan dalam sebuah string S, yang hanya terdiri atas karakter 'A' atau 'B'. Setiap karakter dari S menyatakan sebutir telur yang dijual:\n• karakter 'A' menyatakan telur ayam, dan\n• karakter 'B' menyatakan telur bebek.\n\nToko ini hanya menjual telur dalam satuan kotak, yang harus terdiri atas tepat empat butir telur. Untuk setiap kotak, Pak Dengklek dapat memilih dan mengambil empat telur mana pun dari rak.\n\nKarena Pak Dengklek penyuka bebek, ia ingin agar setiap kotaknya berisi setidaknya tiga butir telur bebek. Berapakah banyaknya kotak telur maksimum yang dapat Pak Dengklek beli?\n\nSebagai contoh, apabila telur-telur yang dijual adalah S = \"ABBBAABBBBBBB\", Pak Dengklek dapat membeli 3 kotak telur, misalnya sebagai berikut:\n1. satu kotak berisi BBBB (yakni, 4 telur bebek),\n2. satu kotak berisi BABB (yakni, 3 telur bebek dan 1 telur ayam), dan\n3. satu kotak berisi BBBA (yakni, 3 telur bebek dan 1 telur ayam).\n\nPerhatikan bahwa urutan karakter pada string S tidaklah berpengaruh, dan urutan telur pada setiap kotak juga tidaklah berpengaruh. Perhatikan pula bahwa pada contoh ini, terdapat sisa sebutir telur yang tidak dibeli.",
+      "gambar_url": null,
+      "gambar_lokal": "soal_A_1_prov_2026.png"
+    },
+    "soal": [
+      {
+        "soal_id": "prov_soal1_2026",
+        "materi_id": "prov-berhitung",
+        "pertanyaan": "Apabila telur-telur yang dijual adalah S = \"BABABABABABA\", berapakah maksimum banyaknya kotak yang dapat Pak Dengklek beli?",
+        "pilihan": {},
+        "jawaban_benar": "Jumlah kotak maksimum",
+        "pembahasan": "Menghitung kombinasi pengambilan 4 butir telur per kotak dengan syarat minimal 3 butir merupakan telur bebek dari string S.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": "soal_A_1_prov_2026.png"
+      },
+      {
+        "soal_id": "prov_soal2_2026",
+        "materi_id": "prov-berhitung",
+        "pertanyaan": "Apabila telur-telur yang dijual adalah S = \"BABABABABABA\", berapakah maksimum banyaknya kotak yang dapat Pak Dengklek beli, apabila terdapat syarat tambahan bahwa harus ada setidaknya satu kotak yang terdiri atas empat telur bebek?",
+        "pilihan": {},
+        "jawaban_benar": "Jumlah kotak maksimum dengan syarat",
+        "pembahasan": "Analisis pembatasan alokasi telur bebek untuk memastikan terdapat satu kotak berisi penuh 4 telur bebek.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": "soal_A_1_prov_2026.png"
+      },
+      {
+        "soal_id": "prov_soal3_2026",
+        "materi_id": "prov-berhitung",
+        "pertanyaan": "Diketahui bahwa toko telur menjual 3 telur ayam dan x telur bebek. Apabila ternyata maksimum banyaknya kotak yang dapat Pak Dengklek beli adalah 7 kotak, maka berapakah nilai x paling kecil yang mungkin?",
+        "pilihan": {},
+        "jawaban_benar": "Nilai x terkecil",
+        "pembahasan": "Pemodelan matematis jumlah minimum telur bebek x agar tercapai kapasitas pembelian 7 kotak.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": "soal_A_1_prov_2026.png"
+      },
+      {
+        "soal_id": "prov_soal4_2026",
+        "materi_id": "prov-strategi",
+        "pertanyaan": "Tulislah sebuah program dengan bahasa C++ sesuai deskripsi dengan format dan batasan sebagai berikut. Perhatikan bahwa untuk setiap kasus uji berlaku batasan waktu selama 2 detik dan batasan memori sebanyak 256 MB.\n\nFormat Masukan:\nMasukan diberikan dalam format berikut:\nS\n\nFormat Keluaran:\nKeluarkan sebuah baris berisi banyaknya maksimum kotak telur yang dapat dibeli.\n\nContoh Masukan 1:\nABBBAABBBBBBB\nContoh Keluaran 1:\n3\n\nContoh Masukan 2:\nBBBBBBBBBBB\nContoh Keluaran 2:\n2\n\nContoh Masukan 3:\nABABAAAA\nContoh Keluaran 3:\n0\n\nContoh Masukan 4:\nAAAABBBBBBBBBBBB\nContoh Keluaran 4:\n4\n\nPenjelasan Contoh:\nContoh pertama merupakan contoh yang terdapat pada deskripsi.\nPada contoh kedua, Pak Dengklek dapat membeli 2 kotak telur yang masing-masing berisi BBBB.\nPada contoh ketiga, Pak Dengklek tidak dapat membeli satu pun kotak telur.\nPada contoh keempat, Pak Dengklek dapat membeli 4 kotak telur, misalnya sebagai berikut:\n1. satu kotak berisi BBBA,\n2. satu kotak berisi ABBB,\n3. satu kotak berisi ABBB, dan\n4. satu kotak berisi ABBB.\n\nBatasan:\nUntuk seluruh kasus uji berlaku:\n• 1 ≤ |S| ≤ 200.000, dengan |S| menyatakan panjang dari string S.\n• S hanya terdiri dari karakter 'A' dan 'B'.\n\nSubsoal 1:\nPada subsoal ini, untuk seluruh kasus uji berlaku:\n• S hanya terdiri dari karakter 'B'.\n\nSubsoal 2:\nTidak ada batasan tambahan pada subsoal ini.",
+        "pilihan": {},
+        "jawaban_benar": "Program / Solusi Algoritma",
+        "pembahasan": "Implementasi algoritma *greedy* atau pemrograman dinamis untuk penghitungan maksimal kotak valid dari string S.",
+        "level": "sulit",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": "soal_A_1_prov_2026.png"
+      }
+    ],
+    "gambar_soal_lokal": "soal_A_1_prov_2026.png"
+  },
+  {
+    "soal_id": "prov_cerita5_2026",
+    "tipe_soal": "cerita",
+    "materi_id": "prov-aritmetika",
+    "detail_cerita": {
+      "teks": "B. Lagi-Lagi Berbagi Candil\n\nPak Dengklek sedang berada di toko candil. Terdapat N merek candil, dinomori dari 1 hingga N. Candil merek i dijual dalam satuan kotak yang setiap kotaknya berisi Aᵢ butir candil. Untuk masing-masing merek, toko candil memiliki stok kotak yang tidak terbatas.\n\nPak Dengklek memiliki M ekor bebek. Ia ingin membelikan candil untuk bebek-bebeknya, dengan aturan berikut:\n• Pak Dengklek akan membeli tepat dua kotak candil (boleh dari merek yang sama), dan\n• total butir candil yang dibeli harus habis dibagi M, agar dapat dibagi rata ke seluruh bebeknya.\n\nPak Dengklek juga ingin mendapatkan sebanyak mungkin butir candil dari dua kotak yang akan dibeli. Berapakah total butir candil maksimum yang mungkin Pak Dengklek beli dan tetap memenuhi aturan? Atau laporkan apabila ia tidak mungkin melakukan hal tersebut.",
+      "gambar_url": null,
+      "gambar_lokal": null
+    },
+    "soal": [
+      {
+        "soal_id": "prov_soal5_2026",
+        "materi_id": "prov-aritmetika",
+        "pertanyaan": "Misalkan terdapat N = 3 merek candil di toko candil. Kotak untuk merek i berisi 2 × i butir candil, atau dengan kata lain: A = [2, 4, 6]. Apabila Pak Dengklek memiliki M = 4 ekor bebek, maka berapa total butir candil maksimum yang mungkin Pak Dengklek beli dan tetap memenuhi aturan? Apabila jawabannya adalah TIDAK MUNGKIN DILAKUKAN, maka jawablah dengan menuliskan -1.",
+        "pilihan": {},
+        "jawaban_benar": "Total butir candil maksimum",
+        "pembahasan": "Mencari kombinasi dua kotak candil yang jumlah butirnya habis dibagi M dan bernilai maksimum.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "soal_id": "prov_soal6_2026",
+        "materi_id": "prov-aritmetika",
+        "pertanyaan": "Misalkan terdapat N = 14 merek candil di toko candil. Kotak untuk merek i berisi i² + 8 butir candil, atau dengan kata lain:\nA = [9, 12, 17, 24, 33, 44, 57, 72, 89, 108, 129, 152, 177, 204]\nApabila Pak Dengklek memiliki M = 10 ekor bebek, maka berapa total butir candil maksimum yang mungkin Pak Dengklek beli dan tetap memenuhi aturan? Apabila jawabannya adalah TIDAK MUNGKIN DILAKUKAN, maka jawablah dengan menuliskan -1.",
+        "pilihan": {},
+        "jawaban_benar": "Total butir candil maksimum",
+        "pembahasan": "Pemeriksaan sisa pembagian (*modulo*) terhadap M dari semua kemungkinan pasangan dua kotak candil.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "soal_id": "prov_soal7_2026",
+        "materi_id": "prov-aritmetika",
+        "pertanyaan": "BENAR atau SALAH: Apabila Pak Dengklek memiliki M = 2 ekor bebek, maka berapa pun nilai dari N dan Aᵢ, untuk membeli dua kotak candil sehingga total butir candilnya maksimum dan tetap memenuhi aturan, Pak Dengklek selalu dapat membeli dua kotak candil dengan merek yang sama.",
+        "pilihan": {},
+        "jawaban_benar": "Benar / Salah",
+        "pembahasan": "Analisis paritas jumlah butir candil (*ganjil/genap*) untuk pembagian dengan M = 2.",
+        "level": "mudah",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "soal_id": "prov_soal8_2026",
+        "materi_id": "prov-aritmetika",
+        "pertanyaan": "Tulislah sebuah program dengan bahasa C++ sesuai deskripsi dengan format dan batasan sebagai berikut. Perhatikan bahwa untuk setiap kasus uji berlaku batasan waktu selama 2 detik dan batasan memori sebanyak 256 MB.\n\nFormat Masukan:\nMasukan diberikan dalam format berikut:\nN M\nA₁ A₂ ... Aₙ\n\nFormat Keluaran:\nKeluarkan sebuah baris berisi total banyaknya butir candil terbanyak yang mungkin Pak Dengklek beli. Apabila Pak Dengklek tidak mungkin melakukan hal tersebut, keluarkan sebuah baris berisi -1.\n\nContoh Masukan 1:\n5 4\n2 4 1 3 11\nContoh Keluaran 1:\n12\n\nContoh Masukan 2:\n5 4\n2 4 1 3 10\nContoh Keluaran 2:\n20\n\nContoh Masukan 3:\n5 4\n3 7 7 11 3\nContoh Keluaran 3:\n-1\n\nPenjelasan Contoh:\nPada contoh pertama, Pak Dengklek dapat membeli satu kotak candil merek 3 dan satu kotak candil merek 5, sehingga Pak Dengklek mendapatkan 1 + 11 = 12 butir candil, yang habis dibagi 4.\nPada contoh kedua, Pak Dengklek dapat membeli dua kotak candil merek 5, sehingga Pak Dengklek mendapatkan 10 + 10 = 20 butir candil, yang habis dibagi 4.\nPada contoh ketiga, Pak Dengklek tidak mungkin membeli dua kotak candil yang jumlah butir candilnya habis dibagi 4.\n\nBatasan:\nUntuk seluruh kasus uji berlaku:\n• 1 ≤ N ≤ 200.000\n• 1 ≤ M ≤ 200.000\n• 1 ≤ Aᵢ ≤ 10⁹\n\nSubsoal 1:\nPada subsoal ini, untuk seluruh kasus uji berlaku:\n• N ≤ 1000\n\nSubsoal 2:\nTidak ada batasan tambahan pada subsoal ini.",
+        "pilihan": {},
+        "jawaban_benar": "Program / Solusi Algoritma",
+        "pembahasan": "Implementasi pengelolaan sisa modulo untuk menemukan pasangan elemen larik dengan jumlah maksimum yang habis dibagi M.",
+        "level": "sulit",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      }
+    ]
+  },
+  {
+    "soal_id": "prov_cerita9_2026",
+    "tipe_soal": "cerita",
+    "materi_id": "prov-aritmetika",
+    "detail_cerita": {
+      "teks": "C. Kali Pembagi\n\nPak Dengklek merancang sebuah permainan baru bernama Kali Pembagi. Pada mulanya, ia menuliskan sebuah bilangan bulat positif awal N pada secarik kertas. Tujuan permainan ini adalah agar bilangan pada kertas tersebut berubah menjadi sebuah bilangan bulat positif M, dengan melakukan satu atau lebih operasi berikut:\n1. Misalkan bilangan yang tertulis sekarang pada kertas adalah p.\n2. Pilih sebuah bilangan bulat positif q yang memenuhi q > 1 dan q habis membagi p.\n3. Ganti bilangan pada kertas dengan hasil perkalian p × q.\n\nSebagai contoh, apabila bilangan awal N = 12, Pak Dengklek dapat meraih M = 288 dengan 3 operasi sebagai berikut:\n1. Nilai p = 12, pilih q = 2, bilangan pada kertas diganti menjadi 12 × 2 = 24.\n2. Nilai p = 24, pilih q = 6, bilangan pada kertas diganti menjadi 24 × 6 = 144.\n3. Nilai p = 144, pilih q = 2, bilangan pada kertas diganti menjadi 144 × 2 = 288.\n\nPak Dengklek bisa juga melakukan hal yang sama dengan 2 operasi saja, misalnya:\n1. Nilai p = 12, pilih q = 6, bilangan pada kertas diganti menjadi 12 × 6 = 72.\n2. Nilai p = 72, pilih q = 4, bilangan pada kertas diganti menjadi 72 × 4 = 288.\n\nPak Dengklek penasaran, berapakah banyaknya operasi minimum yang mungkin untuk meraih bilangan M dari bilangan awal N? Atau laporkan apabila hal tersebut tidaklah mungkin.",
+      "gambar_url": null,
+      "gambar_lokal": null
+    },
+    "soal": [
+      {
+        "soal_id": "prov_soal9_2026",
+        "materi_id": "prov-aritmetika",
+        "pertanyaan": "Apabila bilangan awal N = 18, manakah dari 5 pilihan nilai M berikut yang dapat diraih dari bilangan awal N dan membutuhkan banyak operasi paling sedikit?\n(Jika terdapat lebih dari satu pilihan yang membutuhkan banyak operasi sama-sama paling sedikit, pilihlah pilihan dengan nilai M yang paling kecil.)\nA. M = 24\nB. M = 48\nC. M = 72\nD. M = 90\nE. M = 162",
+        "pilihan": {},
+        "jawaban_benar": "Pilihan nilai M",
+        "pembahasan": "Simulasi pencarian jalur transformasi perkalian faktor pembagi (*q*) dari N ke M dalam operasi minimum.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "soal_id": "prov_soal10_2026",
+        "materi_id": "prov-aritmetika",
+        "pertanyaan": "Apabila bilangan awal N = 4, berapakah banyaknya kemungkinan bilangan M berbeda yang dapat diraih apabila dilakukan setidaknya satu dan paling banyak tiga operasi? Perhatikan bahwa nilai M pasti lebih besar dari N.",
+        "pilihan": {},
+        "jawaban_benar": "Jumlah kemungkinan M",
+        "pembahasan": "Penyusunan pohon pencarian nilai bilangan melalui operasi penambahan faktor pembagi bertahap.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "soal_id": "prov_soal11_2026",
+        "materi_id": "prov-aritmetika",
+        "pertanyaan": "Apabila bilangan awal N = 24, berapakah banyaknya kemungkinan bilangan M berbeda yang dapat diraih apabila dilakukan setidaknya satu dan paling banyak tiga operasi? Perhatikan bahwa nilai M pasti lebih besar dari N.",
+        "pilihan": {},
+        "jawaban_benar": "Jumlah kemungkinan M",
+        "pembahasan": "Eksplorasi kombinasi faktor pengali bertingkat hingga tiga langkah operasi dari N = 24.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "soal_id": "prov_soal12_2026",
+        "materi_id": "prov-aritmetika",
+        "pertanyaan": "Tulislah sebuah program dengan bahasa C++ sesuai deskripsi dengan format dan batasan sebagai berikut. Perhatikan bahwa untuk setiap kasus uji berlaku batasan waktu selama 2 detik dan batasan memori sebanyak 256 MB.\n\nFormat Masukan:\nMasukan diberikan dalam format berikut:\nN M\n\nFormat Keluaran:\nKeluarkan sebuah baris berisi banyaknya operasi minimum yang mungkin untuk meraih bilangan M dari bilangan awal N. Apabila tidak mungkin untuk meraih bilangan M dari bilangan awal N, keluarkan sebuah baris berisi -1.\n\nContoh Masukan 1:\n12 288\nContoh Keluaran 1:\n2\n\nContoh Masukan 2:\n4 1024\nContoh Keluaran 2:\n3\n\nContoh Masukan 3:\n12 18\nContoh Keluaran 3:\n-1\n\nPenjelasan Contoh:\nContoh pertama merupakan contoh yang terdapat pada deskripsi.\nPada contoh kedua, Pak Dengklek dapat meraih M = 1024 dengan 3 operasi sebagai berikut:\n1. Nilai p = 4, pilih q = 4, bilangan pada kertas diganti menjadi 4 × 4 = 16.\n2. Nilai p = 16, pilih q = 8, bilangan pada kertas diganti menjadi 16 × 8 = 128.\n3. Nilai p = 128, pilih q = 8, bilangan pada kertas diganti menjadi 128 × 8 = 1024.\nPada contoh ketiga, tidak mungkin untuk meraih 18 dari bilangan awal 12.\n\nBatasan:\nUntuk seluruh kasus uji berlaku:\n• 2 ≤ N < M ≤ 10¹²\n\nSubsoal 1:\nPada subsoal ini, untuk seluruh kasus uji berlaku:\n• N dan M merupakan bilangan dua pangkat; dengan kata lain: N = 2ᵃ untuk suatu bilangan bulat positif a, dan M = 2ᵇ untuk suatu bilangan bulat positif b.\n\nSubsoal 2:\nTidak ada batasan tambahan pada subsoal ini.\n\nPeringatan:\nUntuk dapat menjawab pertanyaan ini dengan benar, Anda mungkin perlu menggunakan tipe data long long untuk dapat menyimpan data dengan nilai yang besar. Tipe data int saja mungkin tidak cukup!",
+        "pilihan": {},
+        "jawaban_benar": "Program / Solusi Algoritma",
+        "pembahasan": "Implementasi algoritma pencarian jalur terpendek (*BFS* atau *DFS*) pada graf faktor bilangan.",
+        "level": "sulit",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      }
+    ]
+  },
+  {
+    "soal_id": "prov_cerita13_2026",
+    "tipe_soal": "cerita",
+    "materi_id": "prov-strategi",
+    "detail_cerita": {
+      "teks": "D. Makan Bebek Gratis\n\nPak Dengklek ditunjuk pemerintah negara Toki untuk uji coba program Makan Bebek Gratis. Program ini akan diuji coba di N sekolah, dinomori dari 1 hingga N. Sekolah i memiliki Kᵢ ruang kelas, dinomori dari 1 hingga Kᵢ. Ruang kelas j dari sekolah i berisi Mᵢ[j] murid.\n\nPak Dengklek hanya memiliki anggaran untuk memproduksi paling banyak P porsi pada pelaksanaan uji coba. Oleh karena itu, untuk setiap sekolah, ia akan memilih tepat dua ruang kelas saja. Setiap murid yang terdapat pada ruang-ruang kelas terpilih akan dibagikan satu porsi Makan Bebek Gratis.\n\nPak Dengklek ingin agar uji coba ini semerata mungkin. Secara formal, definisikan larik S, dengan elemen ke-i pada S adalah total banyaknya murid dari kedua ruang kelas terpilih dari sekolah i. Lalu, definisikan S min sebagai nilai terkecil dari larik S. Pak Dengklek ingin agar nilai S min ini sebesar mungkin.\n\nBantulah Pak Dengklek memilih ruang-ruang kelas sedemikian sehingga:\n• total banyaknya murid yang menerima Makan Bebek Gratis tidak lebih dari P, dan\n• nilai S min sebesar mungkin.\n\nAtau beri tahu Pak Dengklek apabila hal ini tidak mungkin.",
+      "gambar_url": null,
+      "gambar_lokal": null
+    },
+    "soal": [
+      {
+        "soal_id": "prov_soal13_2026",
+        "materi_id": "prov-strategi",
+        "pertanyaan": "Misalkan terdapat N = 3 sekolah dengan data sebagai berikut:\n• Di sekolah 1, terdapat K₁ = 4 ruang kelas, dengan banyaknya murid M₁ = [2, 5, 5, 3].\n• Di sekolah 2, terdapat K₂ = 5 ruang kelas, dengan banyaknya murid M₂ = [6, 3, 4, 1, 8].\n• Di sekolah 3, terdapat K₃ = 3 ruang kelas, dengan banyaknya murid M₃ = [5, 1, 7].\nApabila untuk setiap sekolah, Pak Dengklek akan memilih dua ruang kelas sedemikian sehingga total banyaknya murid (yakni Sᵢ) paling sedikit, berapakah nilai S min sesuai definisi di atas?",
+        "pilihan": {},
+        "jawaban_benar": "Nilai S min",
+        "pembahasan": "Penentuan pemilihan dua kelas dengan jumlah murid terkecil di setiap sekolah untuk mencari batas minimum S min.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "soal_id": "prov_soal14_2026",
+        "materi_id": "prov-strategi",
+        "pertanyaan": "Misalkan terdapat N = 3 sekolah dengan data sebagai berikut:\n• Di sekolah 1, terdapat K₁ = 4 ruang kelas, dengan banyaknya murid M₁ = [2, 5, 5, 3].\n• Di sekolah 2, terdapat K₂ = 5 ruang kelas, dengan banyaknya murid M₂ = [6, 3, 4, 1, 8].\n• Di sekolah 3, terdapat K₃ = 3 ruang kelas, dengan banyaknya murid M₃ = [5, 1, 7].\nDiketahui pula bahwa anggaran cukup untuk memproduksi berapa pun porsi (yakni, P dapat dianggap tak terhingga).\n\nMisalkan Pak Dengklek melakukan uji coba sedemikian sehingga didapatkan nilai S min setidaknya 6. Berapakah sebetulnya banyaknya porsi yang telah Pak Dengklek produksi? Jika terdapat lebih dari satu kemungkinan, pilih yang paling sedikit.",
+        "pilihan": {},
+        "jawaban_benar": "Jumlah porsi minimum",
+        "pembahasan": "Optimasi pemilihan pasangan kelas per sekolah yang memenuhi batasan S min dengan total porsi sesedikit mungkin.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "soal_id": "prov_soal15_2026",
+        "materi_id": "prov-strategi",
+        "pertanyaan": "Misalkan terdapat N = 3 sekolah dengan data sebagai berikut:\n• Di sekolah 1, terdapat K₁ = 4 ruang kelas, dengan banyaknya murid M₁ = [2, 5, 5, 3].\n• Di sekolah 2, terdapat K₂ = 5 ruang kelas, dengan banyaknya murid M₂ = [6, 3, 4, 1, 8].\n• Di sekolah 3, terdapat K₃ = 3 ruang kelas, dengan banyaknya murid M₃ = [5, 1, 7].\nApabila diketahui bahwa anggaran cukup untuk memproduksi paling banyak P = 30 porsi, maka berapakah nilai S min terbesar yang mungkin? Apabila jawabannya adalah TIDAK MUNGKIN DILAKUKAN, maka jawablah dengan menuliskan -1.",
+        "pilihan": {},
+        "jawaban_benar": "Nilai S min terbesar",
+        "pembahasan": "Pencarian biner (*binary search*) pada nilai S min dengan batasan total anggaran porsi P.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "soal_id": "prov_soal16_2026",
+        "materi_id": "prov-strategi",
+        "pertanyaan": "Tulislah sebuah program dengan bahasa C++ sesuai deskripsi dengan format dan batasan sebagai berikut. Perhatikan bahwa untuk setiap kasus uji berlaku batasan waktu selama 3 detik dan batasan memori sebanyak 256 MB.\n\nFormat Masukan:\nMasukan diberikan dalam format berikut:\nN P\nK₁ M₁[1] M₁[2] ... M₁[K₁]\nK₂ M₂[1] M₂[2] ... M₂[K₂]\n⋮\nKₙ Mₙ[1] Mₙ[2] ... Mₙ[Kₙ]\n\nFormat Keluaran:\nKeluarkan sebuah baris berisi nilai S min terbesar yang mungkin. Apabila tidak mungkin melaksanakan uji coba Makan Bebek Gratis dengan total porsi tidak melebihi P, keluarkan sebuah baris berisi -1.\n\nContoh Masukan 1:\n3 150\n4 40 20 10 40\n5 20 30 40 20 10\n3 40 10 20\nContoh Keluaran 1:\n40\n\nContoh Masukan 2:\n3 150\n2 40 20\n2 30 10\n2 10 20\nContoh Keluaran 2:\n30\n\nContoh Masukan 3:\n3 100\n4 40 20 10 40\n5 20 30 40 20 10\n3 40 10 20\nContoh Keluaran 3:\n-1\n\nPenjelasan Contoh:\nPada contoh pertama, Pak Dengklek dapat memilih peserta uji coba sebagai berikut:\n• Untuk sekolah 1, pilih ruang kelas 1 (berisi 40 murid) dan 2 (berisi 20 murid).\n• Untuk sekolah 2, pilih ruang kelas 1 (berisi 10 murid) dan 3 (berisi 30 murid).\n• Untuk sekolah 3, pilih ruang kelas 2 (berisi 40 murid) dan 3 (berisi 10 murid).\nDengan cara ini, total banyaknya murid yang menerima Makan Bebek Gratis adalah 40 + 20 + 10 + 30 + 40 + 10 = 150. Sekolah dengan banyaknya murid paling sedikit adalah sekolah 2, dengan S min = S₂ = 10 + 30 = 40. Tidak ada cara lain yang menghasilkan nilai S min lebih besar.\n\nPada contoh kedua, karena setiap sekolah hanya memiliki dua ruang kelas, maka hanya terdapat satu cara, yakni memilih kedua kelas dari setiap sekolah. Total banyaknya murid yang menerima Makan Bebek Gratis adalah 40 + 20 + 30 + 10 + 10 + 20 = 130. Sekolah dengan banyaknya murid paling sedikit adalah sekolah 3, dengan S min = S₃ = 10 + 20 = 30.\n\nPada contoh ketiga, tidak ada cara yang memungkinkan Pak Dengklek untuk mengadakan uji coba Makan Bebek Gratis dengan anggaran untuk 100 murid saja.\n\nBatasan:\nUntuk seluruh kasus uji berlaku:\n• 1 ≤ N ≤ 100.000\n• 1 ≤ P ≤ 10⁹\n• 2 ≤ Kᵢ ≤ 100.000\n• Jumlah seluruh Kᵢ tidak melebihi 200.000.\n• 1 ≤ Mᵢ[j] ≤ 10.000\n\nSubsoal 1:\nPada subsoal ini, untuk seluruh kasus uji berlaku:\n• Kᵢ ≤ 10\n\nSubsoal 2:\nTidak ada batasan tambahan pada subsoal ini.",
+        "pilihan": {},
+        "jawaban_benar": "Program / Solusi Algoritma",
+        "pembahasan": "Implementasi kombinasi pencarian biner pada jawaban (*binary search on answer*) dan pemrograman dinamis.",
+        "level": "sulit",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      }
+    ]
+  },
+  {
+    "soal_id": "prov_cerita17_2026",
+    "tipe_soal": "cerita",
+    "materi_id": "prov-strategi",
+    "detail_cerita": {
+      "teks": "E. Pagar Bambu\n\nPak Dengklek memiliki sebuah pagar bambu bekas. Pagar bekas ini terbuat dari N bilah bambu, dinomori dari 1 hingga N, yang tersusun berjajar dari kiri ke kanan. Bambu i memiliki tinggi Hᵢ.\n\nPak Dengklek ingin membagi pagar bekas tersebut menjadi satu atau lebih pagar baru untuk memagari kandang-kandang bebeknya, dengan cara memotong-motong pagar bekas tersebut pada nol atau lebih tempat di antara dua bambu bersebelahan. Perhatikan bahwa setiap pagar baru akan terdiri atas bambu-bambu yang bersebelahan, dan setiap bambu pasti termasuk dalam tepat satu pagar baru.\n\nNantinya, semua pagar baru yang dihasilkan harus estetik, yakni, terdiri atas tepat dua nilai ketinggian bambu yang berbeda. Sebagai contoh, pagar baru dengan bambu-bambu setinggi [3, 4, 4, 3, 4] estetik, sedangkan pagar-pagar baru [3, 3, 3, 3, 3] dan [3, 4, 5, 3, 4] tidak estetik.\n\nPerhatikan bahwa apabila pagar bekas sudah estetik, Pak Dengklek boleh menjadikannya satu pagar baru saja tanpa dipotong.\n\nSebagai ilustrasi, misalkan pagar bekas terdiri atas N = 7 bilah bambu setinggi H = [4, 7, 7, 4, 7, 7, 8]. Pak Dengklek dapat membaginya menjadi pagar-pagar baru yang estetik sebagai berikut: [4, 7, 7, 4] dan [7, 7, 8]. Salah satu cara lainnya adalah: [4, 7], [7, 4, 7], [7, 8].\n\nPak Dengklek sekarang penasaran, ada berapa cara pembagian pagar bekas, sehingga seluruh pagar baru yang dihasilkan estetik? Dua cara dianggap berbeda apabila terdapat bambu yang termasuk pada pagar yang berbeda di antara kedua cara tersebut. Karena banyaknya cara bisa sangat besar, Pak Dengklek hanya membutuhkan nilainya dalam modulo 1.000.000.007.",
+      "gambar_url": null,
+      "gambar_lokal": null
+    },
+    "soal": [
+      {
+        "soal_id": "prov_soal17_2026",
+        "materi_id": "prov-strategi",
+        "pertanyaan": "Misalkan sebuah pagar bekas telah dibagi menjadi 7 pagar baru sebagai berikut:\n[1, 3], [2, 4, 4, 2], [5, 5, 6, 1, 5], [6, 6, 6], [7], [9, 8, 9, 8], [9, 9, 9]\nPerhatikan bahwa pembagian ini tidak valid karena tidak seluruhnya pagar baru yang dihasilkan estetik. Dari 7 pagar baru tersebut, berapakah sebetulnya banyaknya pagar baru yang estetik?",
+        "pilihan": {},
+        "jawaban_benar": "Jumlah pagar estetik",
+        "pembahasan": "Pemeriksaan syarat estetik (terdiri dari tepat dua nilai ketinggian bambu yang berbeda) pada setiap segmen pagar.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "soal_id": "prov_soal18_2026",
+        "materi_id": "prov-strategi",
+        "pertanyaan": "Misalkan pagar bekas terdiri atas N = 20 bilah bambu dengan ketinggian berikut:\nH = [1, 2, 3, 3, 3, 3, 3, 3, 4, 5, 6, 6, 6, 6, 6, 5, 7, 8, 7, 8]\nBerapakah cara pembagian pagar bekas, sehingga seluruh pagar baru yang dihasilkan estetik?",
+        "pilihan": {},
+        "jawaban_benar": "Jumlah cara pembagian",
+        "pembahasan": "Perhitungan kombinasi partisi sekuens menggunakan pemrograman dinamis berdasarkan validitas segmen estetik.",
+        "level": "sulit",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "soal_id": "prov_soal19_2026",
+        "materi_id": "prov-strategi",
+        "pertanyaan": "Misalkan pagar bekas terdiri atas N bilah bambu dengan nilai Hᵢ = 1 apabila i ganjil dan Hᵢ = 2 apabila i genap. Dengan kata lain, H = [1, 2, 1, 2, 1, 2, 1, ...]. Berapakah nilai N paling kecil agar terdapat setidaknya 100 cara pembagian pagar bekas, sehingga seluruh pagar baru yang dihasilkan estetik?",
+        "pilihan": {},
+        "jawaban_benar": "Nilai N terkecil",
+        "pembahasan": "Analisis pola pertumbuhan bilangan Fibonacci atau relasi rekurensi dari barisan berselang-seling.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "soal_id": "prov_soal20_2026",
+        "materi_id": "prov-strategi",
+        "pertanyaan": "Tulislah sebuah program dengan bahasa C++ sesuai deskripsi dengan format dan batasan sebagai berikut. Perhatikan bahwa untuk setiap kasus uji berlaku batasan waktu selama 3 detik dan batasan memori sebanyak 256 MB.\n\nFormat Masukan:\nMasukan diberikan dalam format berikut:\nN\nH₁ H₂ ... Hₙ\n\nFormat Keluaran:\nKeluarkan sebuah baris berisi banyaknya cara pembagian sehingga seluruh pagar yang dihasilkan estetik, modulo 1.000.000.007.\n\nContoh Masukan 1:\n7\n4 7 7 4 7 7 8\nContoh Keluaran 1:\n5\n\nContoh Masukan 2:\n5\n4 7 7 4 7\nContoh Keluaran 2:\n3\n\nContoh Masukan 3:\n9\n1 2 3 4 5 6 7 8 9\nContoh Keluaran 3:\n0\n\nContoh Masukan 4:\n18\n1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2\nContoh Keluaran 4:\n1597\n\nPenjelasan Contoh:\nPada contoh pertama, terdapat 5 cara pembagian Pak Dengklek sehingga seluruh pagar baru yang dihasilkan estetik:\n1. [4, 7], [7, 4], [7, 7, 8],\n2. [4, 7], [7, 4, 7], [7, 8],\n3. [4, 7, 7], [4, 7], [7, 8],\n4. [4, 7, 7, 4], [7, 7, 8], dan\n5. [4, 7, 7, 4, 7], [7, 8].\n\nPada contoh kedua, terdapat 3 cara pembagian Pak Dengklek sehingga seluruh pagar baru yang dihasilkan estetik:\n1. [4, 7], [7, 4, 7],\n2. [4, 7, 7], [4, 7], dan\n3. [4, 7, 7, 4, 7] (pagar bekas tetap utuh).\n\nPada contoh ketiga, tidak ada cara pembagian Pak Dengklek sehingga seluruh pagar baru yang dihasilkan estetik.\n\nPada contoh keempat, perhatikan bahwa banyaknya cara bisa sangat besar meskipun nilai N kecil. Jangan lupa untuk melakukan modulo dengan 1.000.000.007, dan hati-hati dengan overflow!\n\nBatasan:\nUntuk seluruh kasus uji berlaku:\n• 1 ≤ N ≤ 200.000\n• 1 ≤ Hᵢ ≤ 200.000\n\nSubsoal 1:\nPada subsoal ini, untuk seluruh kasus uji berlaku:\n• N ≤ 1000\n\nSubsoal 2:\nTidak ada batasan tambahan pada subsoal ini.",
+        "pilihan": {},
+        "jawaban_benar": "Program / Solusi Algoritma",
+        "pembahasan": "Implementasi pemrograman dinamis (*DP*) efisien untuk menghitung jumlah cara partisi array dengan batasan kondisi estetik.",
+        "level": "sulit",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      }
+    ]
+  },
+  {
+    "soal_id": "prov_cerita21_2026",
+    "tipe_soal": "cerita",
+    "materi_id": "prov-graf",
+    "detail_cerita": {
+      "teks": "F. Juru Masak\n\nPak Dengklek merupakan pemilik restoran bebek goreng yang terdiri atas N juru masak, dinomori dari 1 hingga N. Setiap juru masak dilabeli senior atau junior. Informasi ini diberikan dalam sebuah string L dengan panjang N karakter:\n• Jika karakter ke-i pada L adalah 'S', maka juru masak i senior.\n• Jika karakter ke-i pada L adalah 'J', maka juru masak i junior.\n\nStruktur organisasi juru masak diberikan dalam larik P yang terdiri atas P₂, P₃, ..., Pₙ sebagai berikut:\n• Juru masak 1 bukanlah asisten dari juru masak mana pun.\n• Untuk setiap i > 1, juru masak i adalah asisten dari juru masak Pᵢ, dengan Pᵢ < i.\n\nPerhatikan bahwa hubungan asisten tidak transitif: asisten dari seorang asisten juru masak i, bukanlah asisten dari juru masak i.\n\nSelain itu, setiap juru masak bisa memasak bebek goreng. Diketahui juru masak i dapat memasak Wᵢ porsi bebek goreng per hari.\n\nRestoran Pak Dengklek akhirnya membuka cabang baru. Pak Dengklek ingin meminjamkan juru masaknya untuk memasak di cabang barunya selama satu hari. Tentu saja, ia juga ingin agar cabang utamanya tetap dapat beroperasi. Oleh karena itu, untuk setiap juru masak i yang dipinjamkan, ia memiliki aturan berikut:\n• Jika juru masak i senior, maka seluruh asisten dari juru masak i harus tidak dipinjamkan.\n• Jika juru masak i junior, maka:\n  o ia harus memiliki setidaknya dua asisten,\n  o harus ada setidaknya satu asisten dari juru masak i yang dipinjamkan, dan\n  o harus ada setidaknya satu asisten dari juru masak i yang tidak dipinjamkan.\n\nPak Dengklek ingin meminjamkan nol atau lebih juru masaknya sedemikian sehingga total porsi per hari yang dapat dimasak di cabang baru sebanyak mungkin. Berapakah porsi maksimum per hari tersebut?\n\nSebagai contoh, misalkan terdapat N = 9 juru masak dengan informasi sebagai berikut:\nJuru Masak (i): 1, 2, 3, 4, 5, 6, 7, 8, 9\nLabel (Lᵢ): S, S, J, J, S, S, S, J, S\nAsisten dari (Pᵢ): -, 1, 1, 2, 3, 3, 3, 4, 4\nPorsi harian (Wᵢ): 30, 90, 80, 60, 10, 40, 20, 70, 50\n\nTerdapat beberapa cara untuk meminjamkan juru masak. Salah satu caranya adalah dengan meminjamkan juru masak 1, 4, 5, 7, dan 9 yang akan menghasilkan total 30 + 60 + 10 + 20 + 50 = 170 porsi per hari. Cara lainnya adalah dengan meminjamkan juru masak 2, 3, 6, 7, dan 9 yang akan menghasilkan total 90 + 80 + 40 + 20 + 50 = 280 porsi per hari. Dapat dibuktikan bahwa cara ini menghasilkan porsi terbanyak yang mungkin per harinya.",
+      "gambar_url": null,
+      "gambar_lokal": ["soal_F_1_prov_2026.png", "soal_F_2_prov_2026.png", "soal_F_3_prov_2026.png", "soal_F_4_prov_2026.png", "soal_F_5_prov_2026.png"]
+    },
+    "soal": [
+      {
+        "soal_id": "prov_soal21_2026",
+        "materi_id": "prov-graf",
+        "pertanyaan": "Apabila terdapat N = 4 juru masak dengan informasi sebagai berikut:\nJuru Masak (i): 1, 2, 3, 4\nLabel (Lᵢ): J, S, J, S\nAsisten dari (Pᵢ): -, 1, 1, 2\nPorsi harian (Wᵢ): 20, 30, 60, 40\n\nBerapakah banyaknya porsi maksimum per hari yang mungkin dimasak di cabang baru?",
+        "pilihan": {},
+        "jawaban_benar": "Porsi maksimum",
+        "pembahasan": "Evaluasi aturan pemilihan peminjaman juru masak senior dan junior pada struktur pohon hierarki kecil.",
+        "level": "mudah",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": ["soal_F_1_prov_2026.png", "soal_F_2_prov_2026.png", "soal_F_3_prov_2026.png", "soal_F_4_prov_2026.png", "soal_F_5_prov_2026.png"]
+      },
+      {
+        "soal_id": "prov_soal22_2026",
+        "materi_id": "prov-graf",
+        "pertanyaan": "Misalkan terdapat N juru masak yang mana seluruhnya adalah senior. Untuk i > 1, juru masak i merupakan asisten dari juru masak i - 1, dengan kata lain Pᵢ = i - 1.\nBENAR atau SALAH: Untuk nilai Wᵢ berapa pun, untuk mendapatkan porsi maksimum per harinya, Pak Dengklek pasti meminjamkan setidaknya ⌊N / 2⌋ juru masak.\nPerhatikan bahwa notasi ⌊x⌋ menyatakan pembulatan bilangan riil x ke bawah.",
+        "pilihan": {},
+        "jawaban_benar": "Benar / Salah",
+        "pembahasan": "Analisis struktur pohon rantai (*path graph*) untuk aturan senior yang melarang peminjaman asisten langsung.",
+        "level": "mudah",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": ["soal_F_1_prov_2026.png", "soal_F_2_prov_2026.png", "soal_F_3_prov_2026.png", "soal_F_4_prov_2026.png", "soal_F_5_prov_2026.png"]
+      },
+      {
+        "soal_id": "prov_soal23_2026",
+        "materi_id": "prov-graf",
+        "pertanyaan": "Apabila terdapat N = 9 juru masak dengan informasi sebagai berikut:\nJuru Masak (i): 1, 2, 3, 4, 5, 6, 7, 8, 9\nLabel (Lᵢ): J, S, S, S, S, S, S, S, S\nAsisten dari (Pᵢ): -, 1, 2, 1, 4, 1, 6, 1, 8\nPorsi harian (Wᵢ): 100, 14, 8, 13, 9, 12, 5, 11, 6\n\nBerapakah banyaknya porsi maksimum per hari yang mungkin dimasak di cabang baru?",
+        "pilihan": {},
+        "jawaban_benar": "Porsi maksimum",
+        "pembahasan": "Penerapan aturan relasi asisten senior-junior pada struktur pohon besar untuk memaksimalkan jumlah porsi W_i.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": ["soal_F_1_prov_2026.png", "soal_F_2_prov_2026.png", "soal_F_3_prov_2026.png", "soal_F_4_prov_2026.png", "soal_F_5_prov_2026.png"]
+      },
+      {
+        "soal_id": "prov_soal24_2026",
+        "materi_id": "prov-graf",
+        "pertanyaan": "Tulislah sebuah program dengan bahasa C++ sesuai deskripsi dengan format dan batasan sebagai berikut. Perhatikan bahwa untuk setiap kasus uji berlaku batasan waktu selama 3 detik dan batasan memori sebanyak 256 MB.\n\nFormat Masukan:\nMasukan diberikan dalam format berikut:\nN\nL\nP₂ P₃ ... Pₙ\nW₁ W₂ ... Wₙ\n\nFormat Keluaran:\nKeluarkan sebuah baris berisi banyaknya porsi maksimum per hari yang mungkin.\n\nContoh Masukan 1:\n9\nSSJJSSSJS\n1 1 2 3 3 3 4 4\n30 90 80 60 10 40 20 70 50\nContoh Keluaran 1:\n280\n\nContoh Masukan 2:\n9\nSSSSSSSSS\n1 1 2 3 3 3 4 4\n30 90 80 60 10 40 20 70 50\nContoh Keluaran 2:\n290\n\nContoh Masukan 3:\n9\nJSSJSSJSS\n1 1 1 2 2 3 3 4\n10 5 5 5 10 10 10 10 10\nContoh Keluaran 3:\n45\n\nContoh Masukan 4:\n9\nJJJJJJJJJ\n1 1 1 2 2 3 3 4\n10 5 5 5 10 10 10 10 10\nContoh Keluaran 4:\n0\n\nPenjelasan Contoh:\nContoh pertama merupakan contoh yang terdapat pada deskripsi.\nPada contoh kedua, cara untuk meminjamkan juru masak yang menghasilkan porsi maksimum yakni dengan meminjamkan juru masak 2, 3, 8, dan 9.\nPada contoh ketiga, cara untuk meminjamkan juru masak yang menghasilkan porsi maksimum yakni dengan meminjamkan juru masak 1, 3, 5, 6, dan 9.\nPada contoh keempat, Pak Dengklek tidak dapat meminjamkan satu pun juru masak sesuai aturan.\n\nBatasan:\nUntuk seluruh kasus uji berlaku:\n• 2 ≤ N ≤ 200.000\n• L memiliki panjang N dan hanya terdiri dari karakter 'S' dan 'J'.\n• Pᵢ < i\n• 1 ≤ Wᵢ ≤ 10.000\n\nSubsoal 1:\nPada subsoal ini, untuk seluruh kasus uji berlaku:\n• L hanya terdiri dari karakter 'S'.\n\nSubsoal 2:\nTidak ada batasan tambahan pada subsoal ini.",
+        "pilihan": {},
+        "jawaban_benar": "Program / Solusi Algoritma",
+        "pembahasan": "Implementasi pemrograman dinamis pada pohon (*Tree DP*) dengan status pemilihan node berdasarkan batasan senior dan junior.",
+        "level": "sulit",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": ["soal_F_1_prov_2026.png", "soal_F_2_prov_2026.png", "soal_F_3_prov_2026.png", "soal_F_4_prov_2026.png", "soal_F_5_prov_2026.png"]
+      }
+    ],
+    "gambar_soal_lokal": ["soal_F_1_prov_2026.png", "soal_F_2_prov_2026.png", "soal_F_3_prov_2026.png", "soal_F_4_prov_2026.png", "soal_F_5_prov_2026.png"]
+  }
+]

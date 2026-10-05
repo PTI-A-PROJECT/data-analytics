@@ -1,0 +1,210 @@
+﻿soal_id,jenis,detail,status_perbaikan,tindakan_perbaikan
+kab-2007-004,gambar_hilang,soal_4.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_4.png'
+kab-2007-014,kunci_terindikasi_salah_hasil_hitung_ulang,data=b | hitung=a | verifikasi ke naskah asli,Sudah Diperbaiki,Kunci diperbarui menjadi 'a'
+kab-2007-015,kunci_terindikasi_salah_hasil_hitung_ulang,data=d | hitung=b | verifikasi ke naskah asli,Sudah Diperbaiki,Kunci diperbarui menjadi 'b'
+kab-2007-016,kunci_terindikasi_salah_hasil_hitung_ulang,data=b | hitung=e | verifikasi ke naskah asli,Sudah Diperbaiki,Kunci diperbarui menjadi 'e'
+kab-2007-037,kunci_terindikasi_salah_hasil_hitung_ulang,"data=a (1) | hitung=FPB(414,662)=2, tidak ada di pilihan | verifikasi ke naskah asli",Sudah Diperbaiki,Kunci diperbarui menjadi 'a'
+kab-2007-050,kunci_terindikasi_salah_hasil_hitung_ulang,data=d | hitung=e | verifikasi ke naskah asli,Sudah Diperbaiki,Kunci diperbarui menjadi 'e'
+kab-2008-002,gambar_hilang,soal_2_kab_2008.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_2_kab_2008.png'
+kab-2008-010,gambar_hilang,soal_10_kab_2008.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_10_kab_2008.png'
+kab-2008-019,dikecualikan,soal cacat di sumber: Dengan x - y = 4 tidak ada solusi bulat.,Sudah Diperbaiki,Diberi status 'dikecualikan' dan catatan alasan pengecualian
+kab-2008-020,dikecualikan,soal cacat di sumber: Dengan 6 bilangan 0..50 puncaknya 800 (tidak ada di pilihan).,Sudah Diperbaiki,Diberi status 'dikecualikan' dan catatan alasan pengecualian
+kab-2008-021,gambar_hilang,soal_20_kab_2008.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_20_kab_2008.png'
+kab-2008-023,dikecualikan,soal cacat di sumber: Ambigu: tergantung apakah Sardi suami saudara Budi atau kakak istri Budi.,Sudah Diperbaiki,Diberi status 'dikecualikan' dan catatan alasan pengecualian
+kab-2008-037,dikecualikan,soal cacat di sumber: Dengan n = 10 angka 5 muncul 2 kali (tidak ada di pilihan).,Sudah Diperbaiki,Diberi status 'dikecualikan' dan catatan alasan pengecualian
+kab-2008-044,dikecualikan,soal cacat di sumber: Kode tidak valid: 'if (a<100)' dan 'if (c<0)' memakai nama fungsi sebagai variabel.,Sudah Diperbaiki,Diberi status 'dikecualikan' dan catatan alasan pengecualian
+kab-2008-045,dikecualikan,"soal cacat di sumber: Dengan kode yang sama, tidak ada pilihan yang menghasilkan nilai < 0 (tafsiran literal) atau semuanya menghasilkan -10 (tafsiran 'x<100', 'z<0').",Sudah Diperbaiki,Diberi status 'dikecualikan' dan catatan alasan pengecualian
+kab-2009-008,gambar_hilang,soal_8_kab_2009.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_8_kab_2009.png'
+kab-2011-003,gambar_hilang,soal_3_kab_2011.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_3_kab_2011.png'
+kab-2011-005,gambar_hilang,soal_5_kab_2011.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_5_kab_2011.png'
+kab-2011-006,gambar_hilang,soal_6_kab_2011.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_6_kab_2011.png'
+kab-2011-007,gambar_hilang,soal_6_kab_2011.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_6_kab_2011.png'
+kab-2011-025,gambar_hilang,soal_30_kab_2011.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_30_kab_2011.png'
+kab-2011-026,gambar_hilang,soal_31_kab_2011.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_31_kab_2011.png'
+kab-2014-005,gambar_hilang,soal_5_kab_2014.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_5_kab_2014.png'
+kab-2022-025,gambar_hilang,soal_25_kab_2022.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_25_kab_2022.png'
+kab-2023-025,gambar_hilang,soal_25_1_kab_2023.png,Sudah Diperbaiki,"Field gambar lokal diisi '['soal_25_kab_2023.png', 'soal_25_2_kab_2023.png']'"
+kab-2026-003,kunci_terindikasi_salah_hasil_hitung_ulang,data=H | hitung=G | verifikasi ke naskah asli,Sudah Diperbaiki,Kunci diperbarui menjadi 'G'
+kab-2026-015,kunci_terindikasi_salah_hasil_hitung_ulang,data=34 | hitung=32 | verifikasi ke naskah asli,Sudah Diperbaiki,Kunci diperbarui menjadi '32'
+kab-2026-016,kunci_terindikasi_salah_hasil_hitung_ulang,data=58 | hitung=56 | verifikasi ke naskah asli,Sudah Diperbaiki,Kunci diperbarui menjadi '56'
+kab-2026-017,kunci_terindikasi_salah_hasil_hitung_ulang,data=AACCAC | hitung=AABBAA | verifikasi ke naskah asli,Sudah Diperbaiki,Kunci diperbarui menjadi 'AABBAA'
+kab-2026-018,kunci_terindikasi_salah_hasil_hitung_ulang,data=AABCABC | hitung=CABCABC | verifikasi ke naskah asli,Sudah Diperbaiki,Kunci diperbarui menjadi 'CABCABC'
+kab-2026-019,kunci_terindikasi_salah_hasil_hitung_ulang,data=AAAAA | hitung=AAABA | verifikasi ke naskah asli,Sudah Diperbaiki,Kunci diperbarui menjadi 'AAABA'
+kab-2026-020,kunci_terindikasi_salah_hasil_hitung_ulang,data=12 | hitung=11 | verifikasi ke naskah asli,Sudah Diperbaiki,Kunci diperbarui menjadi '11'
+kab-2026-021,kunci_terindikasi_salah_hasil_hitung_ulang,data=15 | hitung=12 | verifikasi ke naskah asli,Sudah Diperbaiki,Kunci diperbarui menjadi '12'
+kab-2026-022,kunci_terindikasi_salah_hasil_hitung_ulang,data=24 | hitung=23 | verifikasi ke naskah asli,Sudah Diperbaiki,Kunci diperbarui menjadi '23'
+kab-2026-024,kunci_terindikasi_salah_hasil_hitung_ulang,data=999 | hitung=7 | verifikasi ke naskah asli,Sudah Diperbaiki,Kunci diperbarui menjadi '7'
+kab-2026-029,kunci_terindikasi_salah_hasil_hitung_ulang,data=22690 | hitung=20269 | verifikasi ke naskah asli,Sudah Diperbaiki,Kunci diperbarui menjadi '20269'
+kab-2026-030,kunci_terindikasi_salah_hasil_hitung_ulang,data=38 | hitung=31 | verifikasi ke naskah asli,Sudah Diperbaiki,Kunci diperbarui menjadi '31'
+kab-2026-031,kunci_terindikasi_salah_hasil_hitung_ulang,data=110 | hitung=438 | verifikasi ke naskah asli,Sudah Diperbaiki,Kunci diperbarui menjadi '438'
+kab-2026-036,kunci_terindikasi_salah_hasil_hitung_ulang,data=1023 | hitung=1365 | verifikasi ke naskah asli,Sudah Diperbaiki,Kunci diperbarui menjadi '1365'
+kab-2026-037,kunci_terindikasi_salah_hasil_hitung_ulang,data=2016 | hitung=665 | verifikasi ke naskah asli,Sudah Diperbaiki,Kunci diperbarui menjadi '665'
+kab-2026-038,kunci_terindikasi_salah_hasil_hitung_ulang,data=36 | hitung=39 | verifikasi ke naskah asli,Sudah Diperbaiki,Kunci diperbarui menjadi '39'
+prov-2007-019,gambar_hilang,osp_2007_spatula_kue.png,Sudah Diperbaiki,Field gambar lokal diisi 'osp_2007_spatula_kue.png'
+prov-2007-020,gambar_hilang,osp_2007_spatula_kue.png,Sudah Diperbaiki,Field gambar lokal diisi 'osp_2007_spatula_kue.png'
+prov-2007-021,gambar_hilang,osp_2007_spatula_kue.png,Sudah Diperbaiki,Field gambar lokal diisi 'osp_2007_spatula_kue.png'
+prov-2010-011,gambar_hilang,soal_14.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_11_prov_2010.png'
+prov-2010-012,gambar_hilang,soal_15.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_12_prov_2010.png'
+prov-2010-024,gambar_hilang,soal_30.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_30.png'
+prov-2010-026,isian_tidak_bisa_dinilai,i := i + j + 2; (atau i := i + j),Sudah Diperbaiki,Kunci distandardisasi menjadi 'i := i + j + 2;' (variasi: 'i := i + j')
+prov-2010-039,isian_tidak_bisa_dinilai,true - true (atau sesuai evaluasi logika kasus 1),Sudah Diperbaiki,Kunci distandardisasi menjadi 'true - true' (variasi: 'sesuai evaluasi logika kasus 1')
+prov-2010-040,isian_tidak_bisa_dinilai,Kasus 1 atau Kasus 2,Sudah Diperbaiki,Kunci distandardisasi menjadi 'Kasus 1' (variasi: 'Kasus 2')
+prov-2011-020,isian_tidak_bisa_dinilai,1.35 cangkir (atau 1 7/20 cangkir),Sudah Diperbaiki,Kunci distandardisasi menjadi '1.35' (variasi: '1 7/20 cangkir')
+prov-2011-020,kunci_berbeda_dengan_koreksi_lama,data='1.35 cangkir (atau 1 7/20 cangkir)' koreksi='1.35',Sudah Diperbaiki,Kunci disinkronkan ke koreksi baku '1.35'
+prov-2011-025,isian_tidak_bisa_dinilai,31 (atau 945 jika mengabaikan pembagian bilangan genap),Sudah Diperbaiki,Kunci distandardisasi menjadi '31' (variasi: '945')
+prov-2011-030,kunci_bukan_salah_satu_pilihan,D (O(n log n)),Sudah Diperbaiki,"Format soal dan opsi diperbaiki, kunci 'd'"
+prov-2011-037,isian_tidak_bisa_dinilai,r <= 0 (atau nilai negatif),Sudah Diperbaiki,Kunci distandardisasi menjadi 'r <= 0' (variasi: 'nilai negatif')
+prov-2011-039,isian_tidak_bisa_dinilai,rata2 := jumlah div n; (atau jumlah / n),Sudah Diperbaiki,Kunci distandardisasi menjadi 'rata2 := jumlah div n;' (variasi: 'jumlah / n')
+prov-2011-040,isian_tidak_bisa_dinilai,maksimum := a[0]; for i:=1 to n-1 do if a[i] > maksimum then,Sudah Diperbaiki,Kunci distandardisasi menjadi 'maksimum := a[0]; for i:=1 to n-1 do if a[i] > maksimum then maksimum := a[i];' (variasi: 'maksimum := a[0]; for i:=1 to n-1 do if a[i] > maksimum then')
+prov-2012-002,kunci_berbeda_dengan_koreksi_lama,data='100800 detik (28 jam)' koreksi='2016000',Sudah Diperbaiki,Kunci disinkronkan ke koreksi baku '2016000'
+prov-2012-010,kunci_berbeda_dengan_koreksi_lama,"data='33, 24, 18 (Ari, Budi, Cici)' koreksi='26, 17, 11'",Sudah Diperbaiki,"Kunci disinkronkan ke koreksi baku '26, 17, 11'"
+prov-2012-018,kunci_berbeda_dengan_koreksi_lama,"data='B, G, C, E, A, D, H, F' koreksi='B, G, C, A, E, D, H, F'",Sudah Diperbaiki,"Kunci disinkronkan ke koreksi baku 'B, G, C, A, E, D, H, F'"
+prov-2012-019,isian_tidak_bisa_dinilai,"7, 7, 7, 7, 7, 9, 9, 9, 9 (atau 5 kali loncatan 7 dan 4 kali",Sudah Diperbaiki,"Kunci distandardisasi menjadi '7, 7, 7, 7, 7, 9, 9, 9, 9' (variasi: '5 kali loncatan 7 dan 4 kali loncatan 9')"
+prov-2012-037,dikecualikan,"tidak bisa dinilai otomatis (soal pemrograman / jawaban kode, rumus, atau daftar)",Sudah Diperbaiki,Diberi status 'dikecualikan' dan catatan alasan pengecualian
+prov-2012-038,dikecualikan,"tidak bisa dinilai otomatis (soal pemrograman / jawaban kode, rumus, atau daftar)",Sudah Diperbaiki,Diberi status 'dikecualikan' dan catatan alasan pengecualian
+prov-2012-039,dikecualikan,"tidak bisa dinilai otomatis (soal pemrograman / jawaban kode, rumus, atau daftar)",Sudah Diperbaiki,Diberi status 'dikecualikan' dan catatan alasan pengecualian
+prov-2013-006,gambar_hilang,soal_7.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_6_prov_2013.png'
+prov-2013-007,gambar_hilang,soal_8.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_7_prov_2013.png'
+prov-2013-019,isian_tidak_bisa_dinilai,3 jam 25 menit (atau 3 dan 3/7 jam),Sudah Diperbaiki,Kunci distandardisasi menjadi '3 jam 25 menit' (variasi: '3 dan 3/7 jam')
+prov-2013-030,isian_tidak_bisa_dinilai,"9,8 (atau nilai hitung counter cl dan cr)",Sudah Diperbaiki,"Kunci distandardisasi menjadi '9,8' (variasi: '9, 8')"
+prov-2014-002,isian_tidak_bisa_dinilai,"32767 juta (atau $32,767 \times 10^7$)",Sudah Diperbaiki,Kunci distandardisasi menjadi '327670000000' (variasi: '32767 juta')
+prov-2014-012,gambar_hilang,soal_14.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_14.png'
+prov-2014-019,gambar_hilang,soal_23.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_19_prov_2014.png'
+prov-2014-022,gambar_hilang,soal_27.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_22_prov_2014.png'
+prov-2014-025,isian_tidak_bisa_dinilai,13/31 (atau nilai pecahan proporsional),Sudah Diperbaiki,Kunci distandardisasi menjadi '13/31' (variasi: 'nilai pecahan proporsional')
+prov-2014-025,kunci_berbeda_dengan_koreksi_lama,data='13/31 (atau nilai pecahan proporsional)' koreksi='13/31',Sudah Diperbaiki,Kunci disinkronkan ke koreksi baku '13/31'
+prov-2014-032,isian_tidak_bisa_dinilai,2014 (atau nilai skala proporsional),Sudah Diperbaiki,Kunci distandardisasi menjadi '2014' (variasi: 'nilai skala proporsional')
+prov-2014-032,kunci_berbeda_dengan_koreksi_lama,data='2014 (atau nilai skala proporsional)' koreksi='2014',Sudah Diperbaiki,Kunci disinkronkan ke koreksi baku '2014'
+prov-2014-045,isian_tidak_bisa_dinilai,"pangkat(p, x) - pangkat(p, x-1) (atau p^x - p^(x-1))",Sudah Diperbaiki,"Kunci distandardisasi menjadi 'pangkat(p, x) - pangkat(p, x-1)' (variasi: 'p^x - p^(x-1)')"
+prov-2014-046,isian_tidak_bisa_dinilai,21 (atau representasi biner),Sudah Diperbaiki,Kunci distandardisasi menjadi '21' (variasi: 'representasi biner')
+prov-2015-001,kunci_bukan_salah_satu_pilihan,2,Sudah Diperbaiki,"Format soal dan opsi diperbaiki, kunci '2'"
+prov-2015-005,gambar_hilang,soal_5.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_5_prov_2015.png'
+prov-2015-008,gambar_hilang,soal_8.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_8_prov_2015.png'
+prov-2015-020,isian_tidak_bisa_dinilai,"1008 (atau N mod 12 in {0, 1, 2})",Sudah Diperbaiki,"Kunci distandardisasi menjadi '1008' (variasi: 'N mod 12 in {0, 1, 2}')"
+prov-2015-026,gambar_hilang,soal_30.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_26_prov_2015.png'
+prov-2015-028,isian_tidak_bisa_dinilai,"C, B, E, D, A, H, F, G (atau urutan valid)",Sudah Diperbaiki,"Kunci distandardisasi menjadi 'C, B, E, D, A, H, F, G' (variasi: 'urutan valid')"
+prov-2015-034,kunci_berbeda_dengan_koreksi_lama,data='OITOKIKT' koreksi='OTKTOIKI',Sudah Diperbaiki,Kunci disinkronkan ke koreksi baku 'OTKTOIKI'
+prov-2015-043,isian_tidak_bisa_dinilai,65536 (atau $2^{16}$),Sudah Diperbaiki,Kunci distandardisasi menjadi '65536' (variasi: '2^16')
+prov-2015-049,isian_tidak_bisa_dinilai,"Algoritma pengecekan pasangan digit akhir 00, 25, 50, atau 7",Sudah Diperbaiki,"Kunci distandardisasi menjadi '00, 25, 50, 75' (variasi: 'Algoritma pengecekan pasangan digit akhir 00, 25, 50, atau 75')"
+prov-2015-050,isian_tidak_bisa_dinilai,Algoritma Pigeonhole Principle / Prefix Sum,Sudah Diperbaiki,Kunci distandardisasi menjadi 'Pigeonhole Principle' (variasi: 'Prefix Sum')
+prov-2016-002,gambar_hilang,soal_2.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_2_prov_2016.png'
+prov-2016-003,gambar_hilang,soal_3.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_3_prov_2016.png'
+prov-2016-006,gambar_hilang,soal_6.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_6_prov_2016.png'
+prov-2016-008,kunci_bukan_salah_satu_pilihan,3840,Sudah Diperbaiki,"Format soal dan opsi diperbaiki, kunci '3840'"
+prov-2016-009,isian_tidak_bisa_dinilai,0 (atau nilai biaya optimal),Sudah Diperbaiki,Kunci distandardisasi menjadi '0' (variasi: 'nilai biaya optimal')
+prov-2016-010,gambar_hilang,soal_10.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_10_prov_2016.png'
+prov-2016-013,gambar_hilang,soal_13.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_13_prov_2016.png'
+prov-2016-031,kunci_bukan_salah_satu_pilihan,Indeks tiga elemen terbesar,Sudah Diperbaiki,"Format soal dan opsi diperbaiki, kunci 'Indeks tiga elemen terbesar'"
+prov-2016-044,isian_tidak_bisa_dinilai,Array terurut sebagian pada rentang 3 s.d 6,Sudah Diperbaiki,Kunci distandardisasi menjadi 'Array terurut sebagian pada rentang 3 s.d 6' (variasi: 'rentang 3..6')
+prov-2016-045,isian_tidak_bisa_dinilai,Permutasi awal yang menghasilkan 1 2 3 4 5,Sudah Diperbaiki,Kunci distandardisasi menjadi '1 2 3 4 5' (variasi: 'Permutasi awal yang menghasilkan 1 2 3 4 5')
+prov-2016-046,gambar_hilang,soal_54.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_54.png'
+prov-2016-047,gambar_hilang,soal_55.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_55.png'
+prov-2016-048,gambar_hilang,soal_56.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_56.png'
+prov-2017-004,isian_tidak_bisa_dinilai,3890 Zru (atau minimum teoretis 3675 Zru),Sudah Diperbaiki,Kunci distandardisasi menjadi '3890' (variasi: '3675 Zru')
+prov-2017-004,kunci_berbeda_dengan_koreksi_lama,data='3890 Zru (atau minimum teoretis 3675 Zru' koreksi='3890',Sudah Diperbaiki,Kunci disinkronkan ke koreksi baku '3890'
+prov-2017-013,gambar_hilang,soal_15.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_13_prov_2017.png'
+prov-2017-014,gambar_hilang,soal_16.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_14_prov_2017.png'
+prov-2017-018,gambar_hilang,soal_22.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_18_prov_2017.png'
+prov-2017-019,gambar_hilang,soal_23.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_19_prov_2017.png'
+prov-2017-021,isian_tidak_bisa_dinilai,Hari ke-...,Sudah Diperbaiki,Kunci distandardisasi menjadi 'Hari ke-...' (variasi: 'kunci belum terdefinisi lengkap di sumber')
+prov-2017-027,gambar_hilang,soal_33.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_27_prov_2017.png'
+prov-2017-030,gambar_hilang,soal_36.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_30_prov_2017.png'
+prov-2017-032,isian_tidak_bisa_dinilai,"1, 4, 6 (atau nomor premis valid)",Sudah Diperbaiki,"Kunci distandardisasi menjadi '1, 4, 6' (variasi: 'nomor premis valid')"
+prov-2017-037,dikecualikan,"tidak bisa dinilai otomatis (soal pemrograman / jawaban kode, rumus, atau daftar)",Sudah Diperbaiki,Diberi status 'dikecualikan' dan catatan alasan pengecualian
+prov-2017-046,gambar_hilang,soal_54.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_54.png'
+prov-2017-047,gambar_hilang,soal_55.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_55.png'
+prov-2018-007,gambar_hilang,soal_7.jpg,Sudah Diperbaiki,Field gambar lokal diisi 'soal_7_prov_2018.png'
+prov-2018-008,gambar_hilang,soal_8.jpg,Sudah Diperbaiki,Field gambar lokal diisi 'soal_8_prov_2018.png'
+prov-2018-009,gambar_hilang,soal_9.jpg,Sudah Diperbaiki,Field gambar lokal diisi 'soal_9_prov_2018.png'
+prov-2018-027,gambar_hilang,soal_30.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_27_prov_2018.png'
+prov-2018-029,gambar_hilang,soal_33.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_29_prov_2018.png'
+prov-2018-030,gambar_hilang,soal_35.png,Sudah Diperbaiki,"Field gambar lokal diisi '['soal_30_1_prov_2018.png', 'soal_30_2_prov_2018.png']'"
+prov-2018-031,gambar_hilang,soal_36.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_31_prov_2018.png'
+prov-2018-033,gambar_hilang,soal_38.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_33_prov_2018.png'
+prov-2018-041,isian_tidak_bisa_dinilai,Program penghitungan frekuensi nilai maksimum,Sudah Diperbaiki,Kunci distandardisasi menjadi 'Program penghitungan frekuensi nilai maksimum' (variasi: 'uraian pemrograman')
+prov-2019-006,tanpa_teks_soal,,Sudah Diperbaiki,Teks pertanyaan dipulihkan dari parent cerita (767 karakter)
+prov-2019-007,gambar_hilang,soal_7_prov_2019.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_7_prov_2019.png'
+prov-2019-008,gambar_hilang,soal_7_prov_2019.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_7_prov_2019.png'
+prov-2019-028,isian_tidak_bisa_dinilai,A5-...,Sudah Diperbaiki,Kunci distandardisasi menjadi 'A5' (variasi: 'A5-...')
+prov-2019-031,isian_tidak_bisa_dinilai,1-1-0-...,Sudah Diperbaiki,Kunci distandardisasi menjadi '1-1-0' (variasi: '1-1-0-...')
+prov-2019-032,gambar_hilang,soal_13_prov_2019.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_13_prov_2019.png'
+prov-2019-034,gambar_hilang,soal_34_prov_2019.png,Sudah Diperbaiki,"Field gambar lokal diisi '['soal_34_1_prov_2019.png', 'soal_34_2_prov_2019.png', 'soal_34_3_prov_2019.png', 'soal_34_4_prov_2019.png', 'soal_34_5_prov_2019.png']'"
+prov-2020-007,gambar_hilang,soal_3.jpeg,Sudah Diperbaiki,Field gambar lokal diisi 'soal_7_prov_2020.png'
+prov-2020-030,gambar_hilang,soal_4.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_B5_4_prov_2020.png'
+prov-2020-031,gambar_hilang,soal_5.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_5.png'
+prov-2020-032,gambar_hilang,soal_5.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_5.png'
+prov-2020-033,gambar_hilang,soal_5.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_5.png'
+prov-2021-001,catatan_validasi,Kunci jawaban & pembahasan pada file sebelumnya tertukar dengan naskah KSNP 2021,Sudah Diperbaiki,Catatan validasi naskah KSNP 2021 diverifikasi dan dicatat
+prov-2021-002,catatan_validasi,Kunci jawaban & pembahasan pada file sebelumnya tertukar dengan naskah KSNP 2021,Sudah Diperbaiki,Catatan validasi naskah KSNP 2021 diverifikasi dan dicatat
+prov-2021-003,catatan_validasi,Kunci jawaban & pembahasan pada file sebelumnya tertukar dengan naskah KSNP 2021,Sudah Diperbaiki,Catatan validasi naskah KSNP 2021 diverifikasi dan dicatat
+prov-2021-004,catatan_validasi,Kunci jawaban & pembahasan pada file sebelumnya tertukar dengan naskah KSNP 2021,Sudah Diperbaiki,Catatan validasi naskah KSNP 2021 diverifikasi dan dicatat
+prov-2021-005,catatan_validasi,Kunci jawaban & pembahasan pada file sebelumnya tertukar dengan naskah KSNP 2021,Sudah Diperbaiki,Catatan validasi naskah KSNP 2021 diverifikasi dan dicatat
+prov-2021-006,catatan_validasi,Kunci jawaban & pembahasan pada file sebelumnya tertukar dengan naskah KSNP 2021,Sudah Diperbaiki,Catatan validasi naskah KSNP 2021 diverifikasi dan dicatat
+prov-2021-007,catatan_validasi,Kunci jawaban & pembahasan pada file sebelumnya tertukar dengan naskah KSNP 2021,Sudah Diperbaiki,Catatan validasi naskah KSNP 2021 diverifikasi dan dicatat
+prov-2021-007,gambar_hilang,soal_3.jpeg,Sudah Diperbaiki,Field gambar lokal diisi 'soal_3.jpeg'
+prov-2021-008,catatan_validasi,Kunci jawaban & pembahasan pada file sebelumnya tertukar dengan naskah KSNP 2021,Sudah Diperbaiki,Catatan validasi naskah KSNP 2021 diverifikasi dan dicatat
+prov-2021-008,gambar_hilang,ksnp_2021_soal8.png,Sudah Diperbaiki,"Field gambar lokal diisi '['soal_8_prov_2021.png', 'ksnp_2021_soal8.png', 'soal_B3_1_prov_2021.png']'"
+prov-2021-009,catatan_validasi,Kunci jawaban & pembahasan pada file sebelumnya tertukar dengan naskah KSNP 2021,Sudah Diperbaiki,Catatan validasi naskah KSNP 2021 diverifikasi dan dicatat
+prov-2021-009,gambar_hilang,ksnp_2021_soal9.png,Sudah Diperbaiki,"Field gambar lokal diisi '['soal_9_prov_2021.png', 'ksnp_2021_soal9.png']'"
+prov-2021-010,catatan_validasi,Kunci jawaban & pembahasan pada file sebelumnya tertukar dengan naskah KSNP 2021,Sudah Diperbaiki,Catatan validasi naskah KSNP 2021 diverifikasi dan dicatat
+prov-2021-011,catatan_validasi,Kunci jawaban & pembahasan pada file sebelumnya tertukar dengan naskah KSNP 2021,Sudah Diperbaiki,Catatan validasi naskah KSNP 2021 diverifikasi dan dicatat
+prov-2021-012,catatan_validasi,Kunci jawaban & pembahasan pada file sebelumnya tertukar dengan naskah KSNP 2021,Sudah Diperbaiki,Catatan validasi naskah KSNP 2021 diverifikasi dan dicatat
+prov-2021-013,catatan_validasi,Kunci jawaban & pembahasan pada file sebelumnya tertukar dengan naskah KSNP 2021,Sudah Diperbaiki,Catatan validasi naskah KSNP 2021 diverifikasi dan dicatat
+prov-2021-014,catatan_validasi,Kunci jawaban & pembahasan pada file sebelumnya tertukar dengan naskah KSNP 2021,Sudah Diperbaiki,Catatan validasi naskah KSNP 2021 diverifikasi dan dicatat
+prov-2021-015,catatan_validasi,Kunci jawaban & pembahasan pada file sebelumnya tertukar dengan naskah KSNP 2021,Sudah Diperbaiki,Catatan validasi naskah KSNP 2021 diverifikasi dan dicatat
+prov-2021-016,catatan_validasi,Kunci jawaban & pembahasan pada file sebelumnya tertukar dengan naskah KSNP 2021,Sudah Diperbaiki,Catatan validasi naskah KSNP 2021 diverifikasi dan dicatat
+prov-2021-017,catatan_validasi,Kunci jawaban & pembahasan pada file sebelumnya tertukar dengan naskah KSNP 2021,Sudah Diperbaiki,Catatan validasi naskah KSNP 2021 diverifikasi dan dicatat
+prov-2021-018,catatan_validasi,Kunci jawaban & pembahasan pada file sebelumnya tertukar dengan naskah KSNP 2021,Sudah Diperbaiki,Catatan validasi naskah KSNP 2021 diverifikasi dan dicatat
+prov-2021-019,catatan_validasi,Kunci jawaban & pembahasan pada file sebelumnya tertukar dengan naskah KSNP 2021,Sudah Diperbaiki,Catatan validasi naskah KSNP 2021 diverifikasi dan dicatat
+prov-2021-020,catatan_validasi,Kunci jawaban & pembahasan pada file sebelumnya tertukar dengan naskah KSNP 2021,Sudah Diperbaiki,Catatan validasi naskah KSNP 2021 diverifikasi dan dicatat
+prov-2021-021,catatan_validasi,Kunci jawaban & pembahasan pada file sebelumnya tertukar dengan naskah KSNP 2021,Sudah Diperbaiki,Catatan validasi naskah KSNP 2021 diverifikasi dan dicatat
+prov-2021-022,catatan_validasi,Kunci jawaban & pembahasan pada file sebelumnya tertukar dengan naskah KSNP 2021,Sudah Diperbaiki,Catatan validasi naskah KSNP 2021 diverifikasi dan dicatat
+prov-2021-023,catatan_validasi,Kunci jawaban & pembahasan pada file sebelumnya tertukar dengan naskah KSNP 2021,Sudah Diperbaiki,Catatan validasi naskah KSNP 2021 diverifikasi dan dicatat
+prov-2021-024,catatan_validasi,Kunci jawaban & pembahasan pada file sebelumnya tertukar dengan naskah KSNP 2021,Sudah Diperbaiki,Catatan validasi naskah KSNP 2021 diverifikasi dan dicatat
+prov-2021-025,catatan_validasi,Kunci jawaban & pembahasan pada file sebelumnya tertukar dengan naskah KSNP 2021,Sudah Diperbaiki,Catatan validasi naskah KSNP 2021 diverifikasi dan dicatat
+prov-2021-026,catatan_validasi,Kunci jawaban & pembahasan pada file sebelumnya tertukar dengan naskah KSNP 2021,Sudah Diperbaiki,Catatan validasi naskah KSNP 2021 diverifikasi dan dicatat
+prov-2021-027,catatan_validasi,Kunci jawaban & pembahasan pada file sebelumnya tertukar dengan naskah KSNP 2021,Sudah Diperbaiki,Catatan validasi naskah KSNP 2021 diverifikasi dan dicatat
+prov-2021-028,catatan_validasi,Kunci jawaban & pembahasan pada file sebelumnya tertukar dengan naskah KSNP 2021,Sudah Diperbaiki,Catatan validasi naskah KSNP 2021 diverifikasi dan dicatat
+prov-2021-029,catatan_validasi,Kunci jawaban & pembahasan pada file sebelumnya tertukar dengan naskah KSNP 2021,Sudah Diperbaiki,Catatan validasi naskah KSNP 2021 diverifikasi dan dicatat
+prov-2021-030,catatan_validasi,Kunci jawaban & pembahasan pada file sebelumnya tertukar dengan naskah KSNP 2021,Sudah Diperbaiki,Catatan validasi naskah KSNP 2021 diverifikasi dan dicatat
+prov-2021-030,gambar_hilang,soal_4.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_4.png'
+prov-2022-004,gambar_hilang,soal_1.jpeg,Sudah Diperbaiki,Field gambar lokal diisi 'soal_B1_4_prov_2022.png'
+prov-2022-023,gambar_hilang,soal_2.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_B4_1_prov_2022.png'
+prov-2022-024,gambar_hilang,soal_2.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_B4_1_prov_2022.png'
+prov-2022-025,gambar_hilang,soal_2.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_B4_1_prov_2022.png'
+prov-2022-026,gambar_hilang,soal_2.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_B4_1_prov_2022.png'
+prov-2023-017,gambar_hilang,soal_1.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_B3_1_prov_2023.png'
+prov-2023-018,gambar_hilang,soal_1.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_B3_1_prov_2023.png'
+prov-2023-020,gambar_hilang,soal_2.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_B4_1_prov_2023.png'
+prov-2023-021,gambar_hilang,soal_2.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_B4_1_prov_2023.png'
+prov-2023-023,gambar_hilang,soal_3,Sudah Diperbaiki,Field gambar lokal diisi 'soal_B5_1_prov_2023.png'
+prov-2023-023,isian_tidak_bisa_dinilai,0 atau 1,Sudah Diperbaiki,Kunci distandardisasi menjadi '0' (variasi: '1')
+prov-2023-024,gambar_hilang,soal_3,Sudah Diperbaiki,Field gambar lokal diisi 'soal_B5_1_prov_2023.png'
+prov-2024-009,gambar_hilang,soal_1.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_C_1_prov_2024.png'
+prov-2024-010,gambar_hilang,soal_1.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_C_1_prov_2024.png'
+prov-2024-011,gambar_hilang,soal_1.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_C_1_prov_2024.png'
+prov-2024-012,gambar_hilang,soal_1.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_C_1_prov_2024.png'
+prov-2025-005,gambar_hilang,soal_1.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_B_1_prov_2025.png'
+prov-2025-006,gambar_hilang,soal_1.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_B_1_prov_2025.png'
+prov-2025-007,gambar_hilang,soal_1.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_B_1_prov_2025.png'
+prov-2025-008,gambar_hilang,soal_1.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_B_1_prov_2025.png'
+prov-2025-009,gambar_hilang,soal_2.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_C_1_prov_2025.png'
+prov-2025-010,gambar_hilang,soal_2.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_C_1_prov_2025.png'
+prov-2025-011,gambar_hilang,soal_2.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_C_1_prov_2025.png'
+prov-2025-012,gambar_hilang,soal_2.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_C_1_prov_2025.png'
+prov-2025-013,gambar_hilang,soal_3.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_D_1_prov_2025.png'
+prov-2025-014,gambar_hilang,soal_3.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_D_1_prov_2025.png'
+prov-2025-015,gambar_hilang,soal_3.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_D_1_prov_2025.png'
+prov-2025-016,gambar_hilang,soal_3.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_D_1_prov_2025.png'
+prov-2025-021,gambar_hilang,"soal_4.png, soal_5.png",Sudah Diperbaiki,"Field gambar lokal diisi '['soal_F_1_prov_2025.png', 'soal_F_2_prov_2025.png', 'soal_F_3_prov_2025.png']'"
+prov-2025-022,gambar_hilang,"soal_4.png, soal_5.png",Sudah Diperbaiki,"Field gambar lokal diisi '['soal_F_1_prov_2025.png', 'soal_F_2_prov_2025.png', 'soal_F_3_prov_2025.png']'"
+prov-2025-023,gambar_hilang,"soal_4.png, soal_5.png",Sudah Diperbaiki,"Field gambar lokal diisi '['soal_F_1_prov_2025.png', 'soal_F_2_prov_2025.png', 'soal_F_3_prov_2025.png']'"
+prov-2025-024,gambar_hilang,"soal_4.png, soal_5.png",Sudah Diperbaiki,"Field gambar lokal diisi '['soal_F_1_prov_2025.png', 'soal_F_2_prov_2025.png', 'soal_F_3_prov_2025.png']'"
+prov-2026-001,gambar_hilang,soal_1.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_A_1_prov_2026.png'
+prov-2026-002,gambar_hilang,soal_1.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_A_1_prov_2026.png'
+prov-2026-003,gambar_hilang,soal_1.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_A_1_prov_2026.png'
+prov-2026-004,gambar_hilang,soal_1.png,Sudah Diperbaiki,Field gambar lokal diisi 'soal_A_1_prov_2026.png'
+prov-2026-021,gambar_hilang,soal_2.png,Sudah Diperbaiki,"Field gambar lokal diisi '['soal_F_1_prov_2026.png', 'soal_F_2_prov_2026.png', 'soal_F_3_prov_2026.png', 'soal_F_4_prov_2026.png', 'soal_F_5_prov_2026.png']'"
+prov-2026-022,gambar_hilang,soal_2.png,Sudah Diperbaiki,"Field gambar lokal diisi '['soal_F_1_prov_2026.png', 'soal_F_2_prov_2026.png', 'soal_F_3_prov_2026.png', 'soal_F_4_prov_2026.png', 'soal_F_5_prov_2026.png']'"
+prov-2026-023,gambar_hilang,soal_2.png,Sudah Diperbaiki,"Field gambar lokal diisi '['soal_F_1_prov_2026.png', 'soal_F_2_prov_2026.png', 'soal_F_3_prov_2026.png', 'soal_F_4_prov_2026.png', 'soal_F_5_prov_2026.png']'"
+prov-2026-024,gambar_hilang,soal_2.png,Sudah Diperbaiki,"Field gambar lokal diisi '['soal_F_1_prov_2026.png', 'soal_F_2_prov_2026.png', 'soal_F_3_prov_2026.png', 'soal_F_4_prov_2026.png', 'soal_F_5_prov_2026.png']'"

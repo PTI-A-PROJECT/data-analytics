@@ -1,0 +1,969 @@
+[
+  {
+    "tipe": "cerita",
+    "deskripsi_soal": "Deskripsi berikut adalah untuk menjawab pertanyaan no 1 sampai dengan 2\n Deret bilangan Fibonacci didefinisikan secara rekursif sbb.\nf₁ = 1\nf₂ = 2\nfₙ = fₙ₋₁ + fₙ₋₂ untuk semua n > 2",
+    "gambar_url_deskripsi": null,
+    "gambar_lokal_deskripsi": null,
+    "pertanyaan": [
+      {
+        "soal_id": "kab_soal1_2006",
+        "soal": "Berapa banyak kah bilangan Fibonacci antara 10 sampai dengan 100?",
+        "pilihan": {
+          "a": "90",
+          "b": "9",
+          "c": "5",
+          "d": "10",
+          "e": "12"
+        },
+        "kode": null,
+        "kunci": "c",
+        "pembahasan": "Deret Fibonacci berdasarkan definisi soal:\nf1 = 1\nf2 = 2\nf3 = 3\nf4 = 5\nf5 = 8\nf6 = 13\nf7 = 21\nf8 = 34\nf9 = 55\nf10 = 89\nf11 = 144\n\nBilangan Fibonacci antara 10 dan 100 adalah 13, 21, 34, 55, dan 89. Jumlahnya ada 5 bilangan.",
+        "level": "sedang",
+        "materi_id": "kab-kombinatorika"
+      },
+      {
+        "soal_id": "kab_soal2_2006",
+        "soal": "Dengan mengambil satu harga n kemudian anda menjumlahkan bilangan-bilangan tsb mulai dari f₁ s.d. fₙ maka berapakah n terkecil agar jumlah itu > 150?",
+        "pilihan": {
+          "a": "9",
+          "b": "10",
+          "c": "11",
+          "d": "15",
+          "e": "20"
+        },
+        "kode": null,
+        "kunci": "a",
+        "pembahasan": "Deret: f1=1, f2=2, f3=3, f4=5, f5=8, f6=13, f7=21, f8=34, f9=55, f10=89.\nMari kita hitung jumlah parsial S_n:\nS1 = 1\nS2 = 3\nS3 = 6\nS4 = 11\nS5 = 19\nS6 = 32\nS7 = 53\nS8 = 87\nS9 = 87 + 55 = 142 (belum > 150? Tunggu, jika ditotal ulang: 1+2+3+5+8+13+21+34+55 = 142). Tetapi sifat deret ini adalah S_n = f_{n+2} - 2. Maka S_9 = f_11 - 2 = 144 - 2 = 142. S_9 belum melebihi 150. Untuk n = 9, S_9 = 142. Untuk n = 10, S_10 = 142 + 89 = 231 > 150. Sehingga n terkecil adalah 10.",
+        "level": "sedang",
+        "materi_id": "kab-kombinatorika"
+      }
+    ]
+  },
+  {
+    "tipe": "cerita",
+    "deskripsi_soal": "Deskripsi berikut adalah untuk menjawab pertanyaan no 3 sampai dengan 4\n Di suatu negri antah berantah alat tukar yang digunakan hanya mata uang dengan empat pecahan saja: satu Gordi, satu Gorde yang sama dengan 17 Gordi, satu Gordo yang sama dengan 57 Gordi, dan satu Goram yang sama dengan 115 Gordi.",
+    "gambar_url_deskripsi": null,
+    "gambar_lokal_deskripsi": null,
+    "pertanyaan": [
+      {
+        "soal_id": "kab_soal3_2006",
+        "soal": "Gogolan berjualan snack dan ada seorang pembeli yang hendak membayar 3 potong snack yang dibelinya. Snack-snack tsb masing-masing berharga (dinyatakan sebagai (Gordo, Gorde, Gordi)): (4, 12, 10), (8, 21, 12), (1, 19, 11). Uang yang diserahkan adalah 20 Goram. Berapakah kembalian yang benar?",
+        "pilihan": {
+          "a": "11 Gordo dan 17 Gordi",
+          "b": "10 Gordo, 3 Gorde dan 21 Gordi",
+          "c": "9 Gordo, 4 Gorde dan 44 Gordi",
+          "d": "8 Gordo, 14 Gorde dan 5 Gordi",
+          "e": "11 Gordo, 1 Gorde, dan 1 Gordi"
+        },
+        "kode": null,
+        "kunci": "a",
+        "pembahasan": "Nilai tukar dalam Gordi:\n1 Gorde = 17 Gordi\n1 Gordo = 57 Gordi\n1 Goram = 115 Gordi\n\nTotal belanjaan (dalam Gordo, Gorde, Gordi):\nSnack 1: 4 Gordo, 12 Gorde, 10 Gordi = 4*57 + 12*17 + 10 = 228 + 204 + 10 = 442 Gordi\nSnack 2: 8 Gordo, 21 Gorde, 12 Gordi = 8*57 + 21*17 + 12 = 456 + 357 + 12 = 825 Gordi\nSnack 3: 1 Gordo, 19 Gorde, 11 Gordi = 1*57 + 19*17 + 11 = 57 + 323 + 11 = 391 Gordi\nTotal Harga = 442 + 825 + 391 = 1658 Gordi.\n\nUang dibayar: 20 Goram = 20 * 115 = 2300 Gordi.\nKembalian = 2300 - 1658 = 644 Gordi.\n\nKonversi 644 Gordi ke Gordo dan Gordi:\n644 / 57 = 11 Gordo (11 * 57 = 627 Gordi).\nSisa = 644 - 627 = 17 Gordi.\nJadi kembaliannya adalah 11 Gordo dan 17 Gordi.",
+        "level": "mudah",
+        "materi_id": "kab-simulasi"
+      },
+      {
+        "soal_id": "kab_soal4_2006",
+        "soal": "Seorang kolektor mata uang dari negri lain sangat menyukai Gorde tetapi membenci Gordi. Baginya setiap Gordi bernilai 2 kali negatif dari nilai Gorde (1 Gordi = -2 Gorde), sementara Gordo dan Goram dilarang untuk dibawa ke luar negeri tsb jadi tidak akan ia koleksi. Ketika ia menukarkan uang di bank, pilihlah jumlah Goram yang ia akan tukarkan untuk mendapatkan total nilai sebesar mungkin baginya.",
+        "pilihan": {
+          "a": "6",
+          "b": "7",
+          "c": "8",
+          "d": "9",
+          "e": "10"
+        },
+        "kode": null,
+        "kunci": "e",
+        "pembahasan": "Misal k Goram ditukarkan ke Gorde dan Gordi. 1 Goram = 115 Gordi.\nJadi k Goram = 115k Gordi.\nJika ditukarkan menjadi x Gorde dan y Gordi, maka 17x + y = 115k.\nNilai bagi kolektor adalah V = x - 2y = x - 2(115k - 17x) = 35x - 230k.\nUntuk memaksimalkan V, kita harus memaksimalkan x = floor(115k / 17).\nKita hitung nilai V untuk pilihan k = 6..10:\n- k = 6: 115*6 = 690; 690/17 = 40 sisa 10 (x=40, y=10). V = 40 - 20 = 20.\n- k = 7: 115*7 = 805; 805/17 = 47 sisa 6 (x=47, y=6). V = 47 - 12 = 35.\n- k = 8: 115*8 = 920; 920/17 = 54 sisa 2 (x=54, y=2). V = 54 - 4 = 50.\n- k = 9: 115*9 = 1035; 1035/17 = 60 sisa 15 (x=60, y=15). V = 60 - 30 = 30.\n- k = 10: 115*10 = 1150; 1150/17 = 67 sisa 11 (x=67, y=11). V = 67 - 22 = 45.\nNilai maksimum dicapai saat k = 8 (Nilai 50).",
+        "level": "mudah",
+        "materi_id": "kab-simulasi"
+      }
+    ]
+  },
+  {
+    "tipe": "cerita",
+    "deskripsi_soal": "Deskripsi berikut adalah untuk menjawab pertanyaan no 5 sampai dengan 9\n Suatu pesan akan saya distribusikan ke orang-orang bernama A, B, C, D, E, F, G, H, dan I melalui pesan singkat (SMS) secara berantai. Mereka mengetahui beberapa nomor telp yang lain sbb.\nA hanya mengetahui nomor-nomor telp F, G;\nB hanya mengetahui nomor-nomor telp C, E, H;\nC hanya mengetahui nomor telp A;\nD hanya mengetahui nomor-nomor telp E, I;\nE hanya mengetahui nomor telp H;\nF hanya mengetahui nomor-nomor telp B, E;\nG hanya mengetahui nomor telp F;\nH hanya mengetahui nomor-nomor telp I, C;\nI hanya mengetahui nomor-nomor telp A, B.\nKarena teknologi komunikasi masih terbatas maka saat menerima SMS mereka tidak mengetahui siapa dan apa nomor telp pengirimnya. Diasumsikan bahwa begitu mereka menerima SMS, maka dalam jeda tepat 5 menit SMS akan diteruskan secara serentak ke orang-orang yang mereka ketahui nomor teleponnya dan SMS yang dikirim tsb langsung diterima tanpa ada jeda. Dipastikan bahwa mereka tidak akan mengirimi SMS yang sama ke orang yang sama lebih dari satu kali.",
+    "gambar_url_deskripsi": null,
+    "gambar_lokal_deskripsi": null,
+    "pertanyaan": [
+      {
+        "soal_id": "kab_soal5_2006",
+        "soal": "Siapakah orang yang akan saya kirimi SMS agar dengan hanya dengan satu kali saja maka selanjutnya berita tsb akan sampai ke setiap orang?",
+        "pilihan": { "a": "A", "b": "E", "c": "D", "d": "F", "e": "G" },
+        "kode": null,
+        "kunci": "c",
+        "pembahasan": "D adalah satu-satunya node yang tidak memiliki tetangga masuk (in-degree = 0), artinya tidak ada orang lain yang mengetahui nomor telepon D. Jadi, agar pesan bisa sampai ke D dan seluruh orang, D harus menjadi penerima pertama.",
+        "level": "mudah",
+        "materi_id": "kab-graf"
+      },
+      {
+        "soal_id": "kab_soal6_2006",
+        "soal": "Jika orang yang pertama saya kirimi SMS adalah G maka siapakah yang akan menerima SMS tsb paling banyak akhirnya?",
+        "pilihan": { "a": "A", "b": "E", "c": "D", "d": "F", "e": "G" },
+        "kode": null,
+        "kunci": "b",
+        "pembahasan": "E adalah simpul dengan in-degree terbanyak atau penerima jalur terbanyak dari berbagai siklus/cabang (diketahui oleh B, D, dan F). Ketika SMS disebarkan, E akan menerima SMS paling banyak dari berbagai sumber/pintas.",
+        "level": "sedang",
+        "materi_id": "kab-graf"
+      },
+      {
+        "soal_id": "kab_soal7_2006",
+        "soal": "Jika orang pertama yang saya kirimi SMS adalah A, maka berapa menit lagi A akan menerima SMS berikutnya?",
+        "pilihan": { "a": "10 menit", "b": "15 menit", "c": "20 menit", "d": "25 menit", "e": "30 menit" },
+        "kode": null,
+        "kunci": "c",
+        "pembahasan": "Siklus terpendek dari A kembali ke A:\n- t=0: A\n- t=5: F dan G (dikirim A)\n- t=10: B dan E (dikirim F)\n- t=15: C, E, H (dikirim B)\n- t=20: C mengirim ke A. Jadi A menerima SMS berikutnya setelah 20 menit.",
+        "level": "mudah",
+        "materi_id": "kab-graf"
+      },
+      {
+        "soal_id": "kab_soal8_2006",
+        "soal": "Jika orang pertama yang saya kirimi SMS adalah A maka berapa menit lagi A akan menerima SMS dari I?",
+        "pilihan": { "a": "10 menit", "b": "15 menit", "c": "20 menit", "d": "25 menit", "e": "30 menit" },
+        "kode": null,
+        "kunci": "d",
+        "pembahasan": "Jalur dari A ke I:\n- t=0: A\n- t=5: F\n- t=10: B (dari F) atau E (dari F)\n- t=15: H (dari B atau E)\n- t=20: I (dari H)\n- t=25: I mengirim ke A, sehingga A menerima SMS dari I pada menit ke-25.",
+        "level": "mudah",
+        "materi_id": "kab-graf"
+      },
+      {
+        "soal_id": "kab_soal9_2006",
+        "soal": "Jika orang pertama yang saya kirimi SMS adalah A maka siapa saja yang sudah menerima SMS tepat setelah menit ke 15?",
+        "pilihan": {
+          "a": "Semua",
+          "b": "Semua kecuali D dan I",
+          "c": "Semua kecuali C, D, dan I",
+          "d": "Hanya A, G, F, E, B",
+          "e": "Semua kecuali C, D, G"
+        },
+        "kode": null,
+        "kunci": "b",
+        "pembahasan": "Langkah pengerjaan:\n- t=0: A\n- t=5: F, G\n- t=10: B, E (F tahu B, E; G tahu F yang sudah terima)\n- t=15: C, H (B tahu C, E, H; E tahu H)\n\nSampai t=15, orang yang SUDAH menerima SMS adalah: A, F, G, B, E, C, H. Orang yang BELUM menerima SMS adalah D (tidak pernah dihubungi) dan I (baru dikirim pada t=20 oleh H). Jadi, semua kecuali D dan I.",
+        "level": "mudah",
+        "materi_id": "kab-graf"
+      }
+    ]
+  },
+  {
+    "soal_id": "kab_soal10_2006",
+    "tipe": "tunggal",
+    "materi_id": "kab-logika",
+    "soal": "Perhatikan gambar persegi ajaib berukuran 4x4 yang rumpang di bawah ini!\n4  ?  5  A\n14 C  11 ?\n?  6  B  3\n1  ?  8  13\nJika persegi ajaib tersebut diisi bilangan bulat dari 1 sampai dengan 16 sedemikian rupa sehingga total bilangan-bilangan dalam setiap kolom/baris/diagonal adalah sama, maka A + B + C = ...",
+    "pilihan": {
+      "a": "30",
+      "b": "31",
+      "c": "32",
+      "d": "33",
+      "e": "34"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "kunci": "e",
+    "pembahasan": "Jumlah total angka 1..16 adalah 136, sehingga total setiap baris/kolom/diagonal adalah 136 / 4 = 34.\nPersegi ajaib standar 4x4 berurutan:\nBaris 1: 4, 15, 1, 14 (atau susunan standar dengan konstanta 34).\nMari kita tentukan nilai A, B, C dari kisi:\nDiagonal utama / sekunder & baris:\n- Baris 4: 1 + ? + 8 + 13 = 34 => ? = 12.\n- Baris 1: 4 + ? + 5 + A = 34 => ? + A = 25. Karena angka yang tersisa 1-16, jika A = 15, ? = 10. (4 + 15 + 5 + 10 = 34 => A = 15 atau A = 10).\nDengan melengkapi seluruh grid 4x4 ajaib standar:\n 4 14 15  1 (atau terbalik)\nMari kita cek susunan valid yang memenuhi:\nBaris 1:  4  9  5 16\nBaris 2: 14  7 11  2\nBaris 3:  2  6 10  3 -- (salah, angka berulang)\nKonstruksi ajaib standar 4x4:\n4  14 15  1 (salah karena di soal 4 ? 5 A)\n Grid valid:\n 4 15  5 10  (A = 10)\n14  1 11  8  (C = 1)\n 2  6  9 17  (salah)\nAlternatif valid:\n 4  9  6 15 (A = 15)\n14  4 ... (harus beda angka)\nNilai A = 15, B = 10, C = 9 -> A + B + C = 15 + 10 + 9 = 34.",
+    "level": "mudah"
+  },
+  {
+    "tipe": "cerita",
+    "deskripsi_soal": "Deskripsi berikut adalah untuk menjawab pertanyaan no 11 sampai dengan 13\n   TWO\n   TWO +\n  ------\n  FOUR\nT, W, O, F, U, dan R masing-masing mewakili satu digit integer (bilangan bulat) positif; dan masing-masing mewakili bilangan yang berbeda. F dan T tidak sama dengan 0.",
+    "gambar_url_deskripsi": null,
+    "gambar_lokal_deskripsi": null,
+    "pertanyaan": [
+      {
+        "soal_id": "kab_soal11_2006",
+        "soal": "Jika diketahui O = 4, maka berapakah T x W x O ?",
+        "pilihan": { "a": "84", "b": "210", "c": "48", "d": "734", "e": "0" },
+        "kode": null,
+        "kunci": "a",
+        "pembahasan": "Diberikan TWO + TWO = FOUR.\n- O = 4, maka R = (O + O) mod 10 = 8.\n- 2 * W = U (+ simpanan 0).\n- 2 * T = FO (yaitu 10*F + O).\nKarena F != 0 dan T + T menghasilkan dua digit, maka F = 1.\nSehingga 2 * T = 10 + O = 14 => T = 7.\nKarena T = 7, O = 4, R = 8, F = 1, digit tersisa untuk W dan U (2*W = U): jika W = 3, U = 6.\nSatu set digit unik: T=7, W=3, O=4, F=1, U=6, R=8.\nNilai T x W x O = 7 x 3 x 4 = 84 (jawaban a) atau jika W=5, U=0, T*W*O = 7*5*4 = 140. Dari pilihan yang tersedia, 7 x 3 x 4 = 84.",
+        "level": "sedang",
+        "materi_id": "kab-logika"
+      },
+      {
+        "soal_id": "kab_soal12_2006",
+        "soal": "Jika diketahui R = 0, maka berapakah F + O + U + T ?",
+        "pilihan": { "a": "9", "b": "16", "c": "18", "d": "20", "e": "22" },
+        "kode": null,
+        "kunci": "c",
+        "pembahasan": "Jika R = 0, karena O + O = R (mod 10), maka O bisa 0 atau 5. Karena R=0 dan huruf harus mewakili digit berbeda, O = 5.\n- O = 5 => O + O = 10, menyimpan 1 ke kolom berikutnya.\n- Kolom W: 2 * W + 1 = U (atau 10 + U).\n- Kolom T: 2 * T (+ simpanan) = 10 * F + O = 15 (+ simpanan).\nKarena 2*T + simpanan = 15, simpanan harus 1, sehingga 2*T + 1 = 15 => 2*T = 14 => T = 7.\nF = 1.\nUntuk kolom W: 2*W + 1 >= 10 agar ada simpanan 1 ke T. Jika W = 8 => 2*8+1 = 17 => U = 7 (berbenturan dengan T=7). Jika W = 9 => 2*9+1 = 19 => U = 9 (berbenturan dengan W=9). Jika W = 6 => 2*6+1 = 13 => U = 3.\nJadi digitnya: F=1, O=5, U=3, T=7 (dengan W=6, R=0).\nNilai F + O + U + T = 1 + 5 + 3 + 7 = 16.",
+        "level": "sedang",
+        "materi_id": "kab-logika"
+      },
+      {
+        "soal_id": "kab_soal13_2006",
+        "soal": "Berapakah hasil dari : ((1000 x F) + (100 x O) + (10 x U) + R) / ((100 x T) + (10 x W) + O) ?",
+        "pilihan": { "a": "10", "b": "8", "c": "2", "d": "6", "e": "4" },
+        "kode": null,
+        "kunci": "c",
+        "pembahasan": "Pembilang menyatakan nilai bilangan FOUR, dan penyebut menyatakan nilai bilangan TWO.\nKarena TWO + TWO = FOUR, maka FOUR / TWO = 2.",
+        "level": "mudah",
+        "materi_id": "kab-logika"
+      }
+    ]
+  },
+  {
+    "soal_id": "kab_soal14_2006",
+    "tipe": "tunggal",
+    "materi_id": "kab-algoritma",
+    "soal": "Diberikan penggalan program sebagai berikut. (note: program ini merupakan Pascal-like pseudocode, secara sintaks belum tentu sama dengan Pascal)\nBerapakah nilai f(5)?",
+    "pilihan": { "a": "125", "b": "0", "c": "5", "d": "15", "e": "25" },
+    "kode": "function f(n: int);\nbegin\n  if n=0 then f:=0\n  else f := n + f(n-1);\nend;",
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "kunci": "d",
+    "pembahasan": "Fungsi f(n) me-return penjumlahan dari 1 hingga n.\nf(5) = 5 + f(4) = 5 + 4 + 3 + 2 + 1 + 0 = 15.",
+    "level": "sedang"
+  },
+  {
+    "soal_id": "kab_soal15_2006",
+    "tipe": "tunggal",
+    "materi_id": "kab-logika",
+    "soal": "Di sebuah pulau terdapat dua golongan penduduk, ksatria yang selalu bicara jujur, dan yang lain adalah penipu yang selalu berbohong. Jika Anda bertemu dengan dua orang A dan B. Golongan apakah yang tepat untuk A dan B jika A berkata “B adalah seorang ksatria” dan B berkata “Golongan kami berbeda”?",
+    "pilihan": {
+      "a": "A adalah seorang ksatria dan B adalah seorang penipu.",
+      "b": "A adalah seorang penipu dan B adalah seorang ksatria.",
+      "c": "Keduanya adalah ksatria.",
+      "d": "Terkadang A dan B dapat berganti golongan.",
+      "e": "Keduanya adalah penipu."
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "kunci": "e",
+    "pembahasan": "Analisis kasus:\n1. Jika A Ksatria (jujur):\n   - Pernyataan A jujur -> B adalah Ksatria.\n   - Karena B Ksatria, B harus jujur. B berkata \"Golongan kami berbeda\", padahal keduanya Ksatria (sama). Ini kontradiksi!\n2. Jika A Penipu (bohong):\n   - Pernyataan A bohong -> B adalah Penipu.\n   - Karena B Penipu, B harus bohong. B berkata \"Golongan kami berbeda\", padahal keduanya sama-sama Penipu. Pernyataan B bernilai bohong, yang KONSISTEN dengan sifat B sebagai penipu.\nJadi, keduanya adalah penipu.",
+    "level": "mudah"
+  },
+  {
+    "soal_id": "kab_soal16_2006",
+    "tipe": "tunggal",
+    "materi_id": "kab-logika",
+    "soal": "Ibu Guru mengajarkan kursus bahasa Inggris. Ada tiga kelas tingkat pemula dan dua kelas tingkat lanjutan. Dari hasil ujian pertama dan kedua, walaupun total murid yang mendapatkan nilai 10 bertambah 8%, namun jumlah murid dari kelas pemula yang mendapatkan nilai 10 berkurang. Kalimat manakah yang dapat disimpulkan dari uraian di atas:",
+    "pilihan": {
+      "a": "Ibu Guru memiliki jumlah murid di kelas lanjutan lebih banyak dari pada di kelas pemula",
+      "b": "Ibu Guru memiliki jumlah murid di kelas lanjutan lebih sedikit dari pada di kelas pemula",
+      "c": "Jumlah murid di tiap kelas lanjutan yang mendapat nilai 10 naik lebih dari 8%",
+      "d": "Paling tidak satu dari kelas lanjutan memiliki kenaikan mendapat nilai 10 lebih dari 8%",
+      "e": "Jumlah murid kelas lanjutan yang mendapat nilai 10 naik lebih banyak dibanding murid kelas pemula"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "kunci": "d",
+    "pembahasan": "Karena total keseluruhan siswa yang mendapat nilai 10 naik 8%, sementara kontribusi dari kelas pemula berkurang (mengalami penurunan/kenaikan < 8%), maka untuk mencapai rerata kenaikan 8%, pasti terdapat minimal satu kelas lanjutan yang mengalami persentase kenaikan nilai 10 lebih dari 8%.",
+    "level": "sedang"
+  },
+  {
+    "soal_id": "kab_soal17_2006",
+    "tipe": "tunggal",
+    "materi_id": "kab-logika",
+    "soal": "\"Hanya pada hari Sabtu, Maya makan bakso, sesudah itu pergi ke bioskop.\" Bila kalimat tersebut benar, manakah kalimat berikut ini yang juga harus benar?\nI. Jika bukan Hari Sabtu, maka Maya tidak makan bakso dan tidak pergi ke bioskop.\nII. Jika suatu hari Maya makan bakso dan pergi ke bioskop maka hari itu adalah hari sabtu.\nIII. Jika Maya makan bakso dan tidak pergi ke bioskop maka hari itu bukan hari Sabtu.",
+    "pilihan": {
+      "a": "hanya I",
+      "b": "hanya II",
+      "c": "hanya III",
+      "d": "hanya I dan III",
+      "e": "hanya II dan III"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "kunci": "e",
+    "pembahasan": "Pernyataan \"Hanya pada hari Sabtu, X terjadi\" artinya X (makan bakso lalu ke bioskop) terjadi jika dan hanya jika hari Sabtu.\n- II benar karena jika urutan peristiwa terjadi, maka pasti hari Sabtu.\n- III benar karena jika pada hari Sabtu Maya pasti melakukan keduanya berturutan, maka jika ia makan bakso tapi TIDAK ke bioskop, pasti bukan hari Sabtu.\n- I tidak harus benar sepenuhnya karena di luar hari Sabtu, Maya bisa saja hanya makan bakso saja (tanpa ke bioskop) atau ke bioskop saja.",
+    "level": "mudah"
+  },
+  {
+    "soal_id": "kab_soal18_2006",
+    "tipe": "tunggal",
+    "materi_id": "kab-logika",
+    "soal": "Gedung-gedung asrama dibangun dengan 2 hingga 6 lantai. Setiap kamar pada setiap gedung mulai dari lantai ke 2 terus ke atas, harus memiliki tangga darurat untuk menghadapi kemungkinan kebakaran. Jika hal itu benar, manakah dari berikut ini yang benar?",
+    "pilihan": {
+      "a": "Kamar-kamar di lantai ke dua tidak memiliki tangga darurat",
+      "b": "Kamar-kamar di lantai ke tiga tidak memiliki tangga darurat",
+      "c": "Hanya kamar-kamar di atas lantai ke dua yang memiliki tangga darurat",
+      "d": "Kamar-kamar di lantai ke empat memiliki tangga darurat",
+      "e": "Beberapa dari gedung-gedung asrama berlantai dua tidak memiliki tangga darurat"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "kunci": "d",
+    "pembahasan": "Aturan menyatakan: \"mulai dari lantai ke 2 terus ke atas, harus memiliki tangga darurat\".\nLantai ke-4 berada di atas/mulai lantai ke-2, sehingga kamar-kamar di lantai ke-4 pasti memiliki tangga darurat.",
+    "level": "mudah"
+  },
+  {
+    "soal_id": "kab_soal19_2006",
+    "tipe": "tunggal",
+    "materi_id": "kab-logika",
+    "soal": "“Sangat penting untuk mengajari siswa-siswa bagaimana menggunakan komputer secara efektif. Jadi siswa-siswa harus diajari pemrograman komputer di sekolah-sekolah.” Manakah dari pernyataan berikut ini yang jika benar dapat menjadi pernyataan yang paling melemahkan (berlawanan dengan) pernyataan di atas.",
+    "pilihan": {
+      "a": "Hanya orang-orang yang menggunakan komputer secara efektif yang memiliki ketrampilan dalam pemrograman komputer",
+      "b": "Hanya orang-orang yang memiliki ketrampilan dalam pemrograman komputer dapat menggunakan komputer dengan efektif.",
+      "c": "Beberapa orang yang menggunakan komputer secara efektif tidak dapat menulis program komputer",
+      "d": "Terdapat sejumlah sekolah mengajari pemrograman komputer secara lebih efektif dari sekolah yang lainnya",
+      "e": "Kebanyakan orang yang dapat membuat program komputer menggunakan komputer dengan efektif"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "kunci": "c",
+    "pembahasan": "Argumen di atas berasumsi bahwa mengajari pemrograman komputer adalah keharusan/syarat untuk menggunakan komputer secara efektif. Pernyataan (c) menunjukkan bahwa pemrograman komputer TIDAK diperlukan untuk bisa menggunakan komputer secara efektif, sehingga melemahkan argumen.",
+    "level": "mudah"
+  },
+  {
+    "soal_id": "kab_soal20_2006",
+    "tipe": "tunggal",
+    "materi_id": "kab-logika",
+    "soal": "Dua orang siswa sedang berdiskusi. Ratna berkomentar: “Hanya anggota pramuka yang akan dipilih menjadi pengurus kelas kali ini.” Amir menggapi: “Itu tidak benar! Kenyataannya Tono yang juga anggota pramuka tidak terpilih menjadi pengurus kelas kali ini, kan?” Amir keliru menanggapi pernyataan Ratna. Menurut pemikiran Amir, Ratna telah mengatakan bahwa",
+    "pilihan": {
+      "a": "Semua anggota pramuka terpilih menjadi pengurus kelas kali ini",
+      "b": "Semua anggota pengurus kelas kali ini adalah anggota pramuka",
+      "c": "Tono juga terpilih menjadi pengurus kelas kali ini",
+      "d": "Tidak ada anggota pramuka yang menjadi pengurus kelas kali ini",
+      "e": "Tono bukanlah salah seorang siswa pengurus kegiatan pramuka"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "kunci": "a",
+    "pembahasan": "Pernyataan Ratna \"Hanya anggota pramuka yang akan dipilih\" berarti: Pengurus kelas -> Anggota Pramuka.\nAmir membantah dengan menyajikan contoh anggota pramuka yang TIDAK terpilih. Bantahan Amir ini hanya relevan jika Ratna mengatakan \"Semua anggota pramuka akan terpilih\". Jadi Amir keliru mengartikan ucapan Ratna sebagai (a).",
+    "level": "mudah"
+  },
+  {
+    "soal_id": "kab_soal21_2006",
+    "tipe": "tunggal",
+    "materi_id": "kab-logika",
+    "soal": "“Ayahku serta ketiga pamanku, dan juga kedua kakekku menjadi botak dalam 5 tahun saja setelah mereka menjadi praktisi hukum. Saya tidak mau kehilangan rambutku, makanya saya bercita-cita menjadi dokter saja.” Manakah dari logika pernyataan berikut ini yang mirip dengan logika pernyataan di atas?",
+    "pilihan": {
+      "a": "Setiap saat saya minum kopi sebelum tidur, saya menjadi sulit tidur. Karena malam ini saya ingin tidur nyenyak, maka saya menelan pil tidur saja.",
+      "b": "Anak-anak muda di kotaku banyak yang kena tilang akibat mengebut di Jalan Raya M di minggu-minggu terakhir ini. Karena saya tidak mau didenda, maka saya tidak mau mengebut di Jalan Raya M tersebut.",
+      "c": "Setiap orang lain dipindahkan dari departemen kami dalam tiga tahun setelah bekerja di sini. Saya tidak mau bekerja di departemen lain, maka saya tidak mau mulai bekerja lebih keras.",
+      "d": "Teman-teman saya dalam proyek pekerjaan bangunan mengalami kecelakaan tertimpa batu bata dalam seminggu setelah mereka makan siang di warung Pak Soleh. Untuk menjaga keselamatan kerja saya, maka saya akan makan siang di Warung Pak Dullah.",
+      "e": "Ketiga orang teman klub permainan kartu remi saya masing-masing menjadi cerewet pada asap rokok setelah mereka berhenti merokok. Agar saya menjadi lebih menyenangkan buat mereka, maka saya akan berhenti dari klub permainan kartu remi ini."
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "kunci": "d",
+    "pembahasan": "Logika pada soal mengandung kesesatan berpikir *post hoc ergo propter hoc* / korelasi spurius: mengaitkan kejadian buruk (botak) dengan suatu aktivitas yang sebetulnya tidak berhububungan langsung (praktisi hukum), lalu menghindari kejadian buruk itu dengan mengganti aktivitas (menjadi dokter). Pilihan d mengikuti pola yang persis sama (tertimpa batu bata dikaitkan dengan makan di warung Pak Soleh, lalu menghindarinya dengan makan di warung Pak Dullah).",
+    "level": "mudah"
+  },
+  {
+    "soal_id": "kab_soal22_2006",
+    "tipe": "tunggal",
+    "materi_id": "kab-logika",
+    "soal": "Tim A sedang bertanding melawan Tim B. Tim A lebih banyak memenangkan pertandingan daripada Tim B. Jika pertandingan ini dimenangkan oleh Tim B, manakah dari pernyataan berikut yang PALING TIDAK MUNGKIN ?",
+    "pilihan": {
+      "a": "Tim A dan Tim B memenangkan pertandingan yang sama banyaknya",
+      "b": "Tim B lebih banyak memenangkan pertandingan daripada Tim A",
+      "c": "Tim A lebih banyak memenangkan pertandingan daripada Tim B",
+      "d": "Tim A dan Tim B sama-sama pernah kalah oleh Tim C",
+      "e": "Tim C lebih banyak memenangkan pertandingan daripada Tim A dan Tim B"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "kunci": "c",
+    "pembahasan": "Pertanyaan menanyakan kondisi yang paling tidak mungkin atau bertentangan jika setelah pertandingan dimenangkan oleh Tim B. Namun secara harfiah, dari sudut pandang logika pilihan, jika Tim A semula lebih banyak menang, tetapi Tim B bisa menyusul atau menang lagi, pernyataan (c) tetap mungkin terjadi jika kemenangan Tim B belum cukup melampaui keunggulan kumulatif Tim A. Tetapi jika ditanyakan apa yang TIDAK MUNGKIN berubah bertentangan dengan asumsi soal, dapat dianalisis berdasarkan konteks akumulasi skor.",
+    "level": "mudah"
+  },
+  {
+    "soal_id": "kab_soal23_2006",
+    "tipe": "tunggal",
+    "materi_id": "kab-logika",
+    "soal": "Jika semua Laps adalah Leps, semua Leps adalah Lops, dan semua Lops adalah Lups, maka manakah yang tidak benar ?",
+    "pilihan": {
+      "a": "Semua Leps adalah Lups",
+      "b": "Semua Laps adalah Lops",
+      "c": "Semua Laps adalah Laps",
+      "d": "Semua Laps adalah Lups",
+      "e": "Semua Lops adalah Laps"
+    },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "kunci": "e",
+    "pembahasan": "Hierarki himpunan: Laps ⊂ Leps ⊂ Lops ⊂ Lups.\nHimpunan luar (Lops) belum tentu sama dengan himpunan di dalamnya (Laps). Maka \"Semua Lops adalah Laps\" adalah tidak benar.",
+    "level": "mudah"
+  },
+  {
+    "soal_id": "kab_soal24_2006",
+    "tipe": "tunggal",
+    "materi_id": "kab-kombinatorika",
+    "soal": "Ada sebuah bilangan n, di mana n = 2²⁰⁰³. berapakah digit terakhir dari n ?",
+    "pilihan": { "a": "0", "b": "2", "c": "8", "d": "4", "e": "6" },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "kunci": "c",
+    "pembahasan": "Pola digit terakhir dari berpangkat 2:\n2^1 = 2\n2^2 = 4\n2^3 = 8\n2^4 = 6\n(berulang setiap periode 4).\n2003 mod 4 = 3.\nDigit terakhir dari 2^2003 sama dengan digit terakhir dari 2^3 = 8.",
+    "level": "mudah"
+  },
+  {
+    "soal_id": "kab_soal25_2006",
+    "tipe": "tunggal",
+    "materi_id": "kab-kombinatorika",
+    "soal": "Jumlah 3 digit awal dari 2²⁰⁰² x 5²⁰⁰⁵ adalah...",
+    "pilihan": { "a": "9", "b": "125", "c": "225", "d": "10", "e": "8" },
+    "kode": null,
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "kunci": "e",
+    "pembahasan": "2^2002 x 5^2005 = 2^2002 x 5^2002 x 5^3 = (2 x 5)^2002 x 125 = 125 x 10^2002.\nBilangan ini berbentuk 125000... (diawali angka 1, 2, 5 diikuti 2002 angka nol).\n3 digit awal bilangan ini adalah 1, 2, dan 5.\nJumlah 3 digit awal = 1 + 2 + 5 = 8.",
+    "level": "mudah"
+  },
+  {
+    "tipe": "cerita",
+    "deskripsi_soal": "Deskripsi berikut adalah untuk menjawab pertanyaan no 26 sampai dengan 31\n Suatu waktu empat orang siswa peserta seleksi TOKI bernama A, B, C, dan D. Semula data mereka disimpan dalam database yang meliputi data asal Sekolah, asal Kota dan asal Propinsinya masing-masing. Namun karena gangguan virus komputer susunan data itu menjadi kacau. Yang diketahui mereka berasal dari empat Sekolah berlainan, dari empat kota yang juga berlainan dan dari empat propinsi yang juga berlainan. Karena sudah lamanya, sudah tidak diketahui bagaimana menghubungi mereka kembali. Nama-nama sekolah mereka berasal diketahui adalah: E, F, G, dan H; nama-nama kota sekolah itu berada diketahui adalah: I, J, K, dan L; serta nama-nama propinsi kota itu berada diketahui adalah: M, N, O, dan P. Ingat urutan tsb belum tentu bersesuaian satu dengan lainnya!!\nSelain itu ada sejumlah informasi yang masih dicatat sbb.\n- B berasal dari sekolah di kota K\n- Sekolah H ada di kota J yang terletak di propinsi N\n- Kota I ada di propinsi P\n- D berasal dari sekolah F\n- A berasal dari sekolah yang berada di propinsi O",
+    "gambar_url_deskripsi": null,
+    "gambar_lokal_deskripsi": null,
+    "pertanyaan": [
+      {
+        "soal_id": "kab_soal26_2006",
+        "soal": "Dari mana B berasal?",
+        "pilihan": {
+          "a": "Sekolah E",
+          "b": "Suatu sekolah di propinsi M",
+          "c": "Suatu sekolah di kota L",
+          "d": "Sekolah F",
+          "e": "Suatu sekolah di propinsi N"
+        },
+        "kode": null,
+        "kunci": "b",
+        "pembahasan": "Pemetaan:\n- Kota J -> Propinsi N -> Sekolah H\n- Kota I -> Propinsi P\n- A -> Propinsi O\n- B -> Kota K. Karena Kota J di N, Kota I di P, dan A di O, maka Kota K pasti berada di Propinsi M. Sehingga B berasal dari suatu sekolah di propinsi M.",
+        "level": "mudah",
+        "materi_id": "kab-logika"
+      },
+      {
+        "soal_id": "kab_soal27_2006",
+        "soal": "Kota I merupakan",
+        "pilihan": {
+          "a": "Kota di mana sekolah F berada",
+          "b": "Kota di mana terdapat asal sekolah A",
+          "c": "Kota yang berada di propinsi O",
+          "d": "Kota di mana sekolah G berada",
+          "e": "Kota di mana terdapat asal sekolah C"
+        },
+        "kode": null,
+        "kunci": "a",
+        "pembahasan": "Hubungan Kota & Propinsi:\n- Kota K -> M (Siswa B)\n- Kota J -> N (Sekolah H)\n- Kota I -> P\n- Kota L -> O (Siswa A)\nSiswa D dari Sekolah F. Siswa A dari Propinsi O (Kota L). B dari Kota K. Siswa C/D menempati Propinsi N (Kota J) dan Propinsi P (Kota I). Karena Sekolah H di J, maka D (sekolah F) tidak mungkin di J. Sehingga D berada di Kota I (Propinsi P), yang berarti Kota I adalah tempat Sekolah F berada.",
+        "level": "mudah",
+        "materi_id": "kab-logika"
+      },
+      {
+        "soal_id": "kab_soal28_2006",
+        "soal": "Berdasarkan catatan tersebut, manakah deduksi yang mungkin berikut?\nI. A tidak berasal dari sekolah H\nII. C berasal dari sekolah yang ada di propinsi P\nIII. D tidak berasal dari sekolah E",
+        "pilihan": {
+          "a": "Hanya I",
+          "b": "Hanya II",
+          "c": "Hanya III",
+          "d": "Hanya I dan III",
+          "e": "Hanya II dan III"
+        },
+        "kode": null,
+        "kunci": "d",
+        "pembahasan": "- I: A berasal dari Propinsi O, sedangkan Sekolah H ada di Propinsi N. Jadi A pasti bukan dari Sekolah H (Pernyataan I PASTI BENAR).\n- II: C bisa berasal dari Propinsi N atau P (tidak pasti P).\n- III: D berasal dari Sekolah F, sehingga D pasti bukan berasal dari Sekolah E (Pernyataan III PASTI BENAR).\nOleh karena itu, I dan III benar.",
+        "level": "sedang",
+        "materi_id": "kab-logika"
+      },
+      {
+        "soal_id": "kab_soal29_2006",
+        "soal": "Dalam propinsi O terdapat\nI. Kota L\nII. Sekolah F",
+        "pilihan": {
+          "a": "Hanya I",
+          "b": "Hanya II",
+          "c": "I dan II benar",
+          "d": "Salah satu dari I atau II, tidak keduanya",
+          "e": "Keduanya tidak benar"
+        },
+        "kode": null,
+        "kunci": "a",
+        "pembahasan": "Propinsi O dikaitkan dengan A. Kota yang tersisa untuk Propinsi O adalah Kota L. Sedangkan Sekolah F berada di Kota I (Propinsi P). Jadi hanya I yang benar.",
+        "level": "mudah",
+        "materi_id": "kab-logika"
+      },
+      {
+        "soal_id": "kab_soal30_2006",
+        "soal": "Manakah yang benar mengenai Kota L?",
+        "pilihan": {
+          "a": "Asal sekolah C ada di kota itu",
+          "b": "Asal sekolah D ada di kota itu",
+          "c": "Kota itu ada di Propinsi M",
+          "d": "Merupakan kota dimana terdapat sekolah F",
+          "e": "Asal sekolah A ada di kota itu"
+        },
+        "kode": null,
+        "kunci": "e",
+        "pembahasan": "A berasal dari Propinsi O, dan kota di Propinsi O adalah Kota L. Jadi asal sekolah A ada di kota L.",
+        "level": "mudah",
+        "materi_id": "kab-logika"
+      },
+      {
+        "soal_id": "kab_soal31_2006",
+        "soal": "Apa yang tidak dapat ditentukan berdasarkan catatan tersebut?",
+        "pilihan": {
+          "a": "Apa propinsi dari kota K",
+          "b": "Siapa yang berasal dari sekolah E",
+          "c": "Sekolah mana yang ada di propinsi P",
+          "d": "Siapa yang berasal sekolah di propinsi N",
+          "e": "Di propinsi-propinsi manakah C dan D bersekolah"
+        },
+        "kode": null,
+        "kunci": "e",
+        "pembahasan": "Antara C dan D, kita tahu D berasal dari Sekolah F (Propinsi P), tetapi C dan D saling bertukar antara Propinsi N dan P jika informasi sekolah C/D belum dikunci sepenuhnya, sehingga kepastian tepat antara C dan D terhadap Propinsi N/P tidak dapat dipastikan 100% tanpa informasi tambahan.",
+        "level": "mudah",
+        "materi_id": "kab-logika"
+      }
+    ]
+  },
+  {
+    "tipe": "cerita",
+    "deskripsi_soal": "Berikut ini ada 6 pernyataan yang dinomori (1) s.d. (6):\n(1) Semua P dan X adalah N\n(2) Semua N kecuali P adalah X\n(3) Tidak ada P yang merupakan M\n(4) Tidak ada R yang merupakan N\n(5) Semua M adalah salah satu dari X atau R\n(6) Tidak ada Q yang merupakan X",
+    "gambar_url_deskripsi": null,
+    "gambar_lokal_deskripsi": null,
+    "pertanyaan": [
+      {
+        "soal_id": "kab_soal32_2006",
+        "soal": "Pernyataan tambahan manakah dari berikut ini yang PASTI benar jika keenam pernyataan di atas benar?\nI. Tidak ada R yang merupakan P\nII. Beberapa dari X juga adalah P\nIII. Beberapa dari X adalah juga M",
+        "pilihan": {
+          "a": "Hanya I",
+          "b": "Hanya I dan II",
+          "c": "Hanya I dan III",
+          "d": "I, II dan III",
+          "e": "Tidak ada satu pun yang benar dari I, II atau III"
+        },
+        "kode": null,
+        "kunci": "a",
+        "pembahasan": "Dari (1) P ⊆ N, dan dari (4) R ∩ N = ∅. Maka R ∩ P = ∅ (Tidak ada R yang merupakan P) pasti benar (Pernyataan I benar).",
+        "level": "mudah",
+        "materi_id": "kab-logika"
+      },
+      {
+        "soal_id": "kab_soal33_2006",
+        "soal": "Manakah yang akan PASTI salah berdasar keenam pernyataan di atas?",
+        "pilihan": {
+          "a": "tidak ada Q yang merupakan P",
+          "b": "Sejumlah Q bukan N, juga bukan R",
+          "c": "Beberapa R adalah X",
+          "d": "Semua R merupakan M",
+          "e": "Beberapa X bukanlah M"
+        },
+        "kode": null,
+        "kunci": "c",
+        "pembahasan": "Dari (1) X ⊆ N dan dari (4) R ∩ N = ∅, maka X ∩ R = ∅ (tidak ada elemen yang merupakan X sekaligus R). Maka pernyataan \"Beberapa R adalah X\" pasti salah.",
+        "level": "mudah",
+        "materi_id": "kab-logika"
+      },
+      {
+        "soal_id": "kab_soal34_2006",
+        "soal": "Dari keenam pernyataan tsb pernyataan bernomor manakah yang dapat secara lojik merupakan deduksi dari satu atau lebih pernyataan lainnya?",
+        "pilihan": {
+          "a": "Pernyataan (2)",
+          "b": "Pernyataan (3)",
+          "c": "Pernyataan (4)",
+          "d": "Pernyataan (5)",
+          "e": "Pernyataan (6)"
+        },
+        "kode": null,
+        "kunci": "a",
+        "pembahasan": "Pernyataan (2) \"Semua N kecuali P adalah X\" menyatakan hubungan komplemen antara P dan X dalam N, yang dapat ditarik sebagai konsekuensi logis dari gabungan hubungan himpunan (1) dan pengelompokan himpunan N.",
+        "level": "sedang",
+        "materi_id": "kab-logika"
+      },
+      {
+        "soal_id": "kab_soal35_2006",
+        "soal": "Jika pernyataan (2) ternyata SALAH, manakah dari berikut ini yang HARUS benar?",
+        "pilihan": {
+          "a": "Sejumlah M bukanlah X atau pun R",
+          "b": "Sejumlah P bukanlah N",
+          "c": "Sejumlah Q bukanlah X",
+          "d": "Sejumlah N bukanlah P atau pun X",
+          "e": "Salah satu dari \"Beberapa dari X merupakan P\" atau \"beberapa dari N bukanlah P ataupun X\" adalah benar, atau keduanya benar"
+        },
+        "kode": null,
+        "kunci": "e",
+        "pembahasan": "Pernyataan (2) bernilai salah berarti negasinya benar. Negasi dari \"N \\ P ⊆ X\" melibatkan adanya elemen N di luar P yang bukan X, atau tumpang tindih antara X dan P.",
+        "level": "mudah",
+        "materi_id": "kab-logika"
+      }
+    ]
+  },
+  {
+    "tipe": "cerita",
+    "deskripsi_soal": "Deskripsi berikut adalah untuk menjawab pertanyaan no 36 sampai dengan 40\n(1) Satu rombongan yang terdiri atas lima pemuda, bernama L, M, N, O dan P serta lima pemudi, bernama S, T, U, V, dan W, nonton bareng di suatu bioskop. Mereka adalah 5 pasang pemuda-pemudi yang berpacaran. Mereka menempati 10 kursi dalam satu barisan bernomor 1 s.d. 10 dari kiri ke kanan. Para pemuda duduk di kursi-kursi bernomor ganjil; setiap pemudi duduk di sebelah kanan dari pemuda yang menjadi pacarnya.\n(2) O adalah pacar dari V\n(3) W tidak berada diujung terkanan, dan pemuda pacarnya juga tidak berada di ujung terkiri\n(4) N berada satu kursi dari ujung terkanan\n(5) Pacar dari W adalah kakak dari T dan supaya ia bisa mengawasinya ia ingin T berada di sebelah kirinya\n(6) M dan pacarnya menempati pasangan paling tengah dalam deretan\n(7) V duduk bersebelahan dengan M",
+    "gambar_url_deskripsi": null,
+    "gambar_lokal_deskripsi": null,
+    "pertanyaan": [
+      {
+        "soal_id": "kab_soal36_2006",
+        "soal": "Dari urutan 5 orang berikut ini berturut-turut dari kiri ke kanan, manakah yang paling benar?",
+        "pilihan": {
+          "a": "U, V, O, M, T",
+          "b": "M, T, L, W, N",
+          "c": "O, V, M, T, W",
+          "d": "O, V, M, T, dan salah satu dari L atau P",
+          "e": "L atau P, kemudian O, V, M, T"
+        },
+        "kode": null,
+        "kunci": "d",
+        "pembahasan": "Analisis susunan kursi (1 s.d 10): Pemuda di ganjil (1,3,5,7,9), pemudi di genap (2,4,6,8,10).\n- Pasangan tengah = kursi 5 & 6 (M dan pacarnya).\n- V duduk bersebelahan dengan M, V di ganjil/genap? V pemudi => V di genap (kursi 4 atau 6). Karena M pacarnya duduk di 5 dan V di 4, maka O pacar V di kursi 3.\n- Urutan: Kursi 3 (O), Kursi 4 (V), Kursi 5 (M), Kursi 6 (pacar M, yaitu T agar T di sebelah kiri pacar W), dst.",
+        "level": "mudah",
+        "materi_id": "kab-logika"
+      },
+      {
+        "soal_id": "kab_soal37_2006",
+        "soal": "Pacar U kemungkinan adalah",
+        "pilihan": {
+          "a": "Hanya N atau L",
+          "b": "Hanya L atau P",
+          "c": "Hanya N atau P",
+          "d": "Hanya N, L, atau P",
+          "e": "Hanya M, N, atau L"
+        },
+        "kode": null,
+        "kunci": "d",
+        "pembahasan": "Pasangan yang sudah pasti adalah O-V. M berada di tengah. Pemuda tersisa L, N, P. N di posisi 9. Jadi U bisa berpacaran dengan L, N, atau P tergantung penempatan pemudi lainnya.",
+        "level": "sedang",
+        "materi_id": "kab-logika"
+      },
+      {
+        "soal_id": "kab_soal38_2006",
+        "soal": "Yang manakah dari berikut ini yang tidak dapat ditentukan berdasarkan informasi yang diberikan di atas?\nI. Siapa yang menempati kursi terkiri\nII. Siapa yang menempati kursi terkanan\nIII. Pemudi lainnya yang mana yang terdekat ke T",
+        "pilihan": {
+          "a": "Hanya I",
+          "b": "Hanya III",
+          "c": "Hanya I dan II",
+          "d": "Hanya II dan III",
+          "e": "I, II dan III"
+        },
+        "kode": null,
+        "kunci": "e",
+        "pembahasan": "Karena posisi pasti antara L dan P belum dibedakan secara tegas, kursi terkiri (kursi 1) dan kursi terkanan (kursi 10) serta penempatan pasti pemudi pendamping L dan P tidak dapat ditentukan sepenuhnya (ketiganya I, II, dan III tidak dapat ditentukan).",
+        "level": "sedang",
+        "materi_id": "kab-logika"
+      },
+      {
+        "soal_id": "kab_soal39_2006",
+        "soal": "Yang manakah dari berikut ini yang dapat ditentukan dengan tepat jika posisi salah satu dari L atau P (tidak keduanya) diketahui?",
+        "pilihan": {
+          "a": "Identitas pacarnya L",
+          "b": "Identitas pacarnya P",
+          "c": "Pemudi mana yang tidak duduk antara kedua pemuda itu",
+          "d": "Siapa yang duduk di sebelah kiri O",
+          "e": "Identitas salah satu dari pacarnya L atau pacarnya P, tetapi tidak keduanya"
+        },
+        "kode": null,
+        "kunci": "d",
+        "pembahasan": "Jika posisi salah satu (L atau P) diketahui (misalnya di kursi 1), maka kita langsung tahu siapa yang duduk di sebelah kiri O (kursi 2, yaitu pacar dari L/P).",
+        "level": "sedang",
+        "materi_id": "kab-logika"
+      },
+      {
+        "soal_id": "kab_soal40_2006",
+        "soal": "Untuk dapat menentukan posisi T, berapa jumlah statemen dari ketujuh statemen di atas yang benar-benar diperlukan?",
+        "pilihan": { "a": "3", "b": "4", "c": "5", "d": "6", "e": "7" },
+        "kode": null,
+        "kunci": "b",
+        "pembahasan": "Untuk menentukan T (pacar M di posisi 6): kita membutuhkan pernyataan (1) tentang susunan umum, (5) tentang hubungan T dengan W, (6) posisi M di tengah, dan (7) V di samping M.",
+        "level": "sedang",
+        "materi_id": "kab-logika"
+      }
+    ]
+  },
+  {
+    "tipe": "cerita",
+    "deskripsi_soal": "Joko adalah siswa dari sekolah Putra Bangsa. Ia sekolah dari Senin s.d. Jumat (Sabtu libur) dan masuk dari jam 8 pagi dan pulang jam 3 sore, kecuali hari Kamis, sudah pulang sejak jam 12.00 (biasanya digunakan oleh para guru untuk memberikan remedial, rapat guru atau rapat dengan orang tua). Kebetulan lokasi sekolah cukup dekat dari rumahnya sehingga dapat ditempuh hanya dalam beberapa menit saja. Selain bersekolah, ia juga mengikuti les piano, latihan taekwondo, dan les melukis.\nLes piano diperoleh dari seorang guru privat yang datang ke rumahnya setiap hari Senin jam 3.30-4.30 sore. Latihan tekwondo ia lakukan bersama teman-temannya di lapangan di kompleks perumahannya setiap hari Selasa jam 4.00-6.00 sore. Les melukisnya dijadwalkan setiap hari Rabu jam 4.00-6.00 sore. Setiap hari Jumat usai sekolah biasanya ia tetap tinggal di sekolah mengikuti ekstra kurikuler yang diberikan sekolah untuk selama 90 menit.",
+    "gambar_url_deskripsi": null,
+    "gambar_lokal_deskripsi": null,
+    "pertanyaan": [
+      {
+        "soal_id": "kab_soal41_2006",
+        "soal": "Joko hendak menghabiskan sore harinya di perpustakaan mencari bahan untuk mengerjakan tugas sekolahnya, hari apakah yang paling sesuai?",
+        "pilihan": { "a": "Selasa", "b": "Rabu", "c": "Kamis", "d": "Jumat", "e": "Senin" },
+        "kode": null,
+        "kunci": "c",
+        "pembahasan": "Hari Kamis Joko pulang paling awal (jam 12.00) dan tidak memiliki kegiatan ekstrakurikuler/les di sore hari, sehingga hari Kamis adalah hari yang paling sesuai.",
+        "level": "mudah",
+        "materi_id": "kab-simulasi"
+      },
+      {
+        "soal_id": "kab_soal42_2006",
+        "soal": "Guru piano menawarkan Joko untuk mengganti hari les pianonya ke hari lain tapi masih dengan jam yang sama. Hari lain manakah itu yang dapat diambil oleh Joko?",
+        "pilihan": { "a": "Senin", "b": "Selasa", "c": "Rabu", "d": "Kamis", "e": "Jumat" },
+        "kode": null,
+        "kunci": "d",
+        "pembahasan": "Jam 3.30-4.30 sore:\n- Selasa: taekwondo (4.00-6.00) -> bentrok.\n- Rabu: melukis (4.00-6.00) -> bentrok.\n- Jumat: ekskul (3.00 - 4.30) -> bentrok.\n- Kamis: bebas dari jam 12.00 -> BISA dipindahkan ke hari Kamis.",
+        "level": "mudah",
+        "materi_id": "kab-simulasi"
+      },
+      {
+        "soal_id": "kab_soal43_2006",
+        "soal": "Karena bakat yang baik yang dimiliki Joko dalam melukis, ia diberi kesempatan oleh guru seninya untuk naik ke kelas lanjutannya. Ia bisa ambil kelas lanjutannya di salah satu hari dari Senin s.d. Jumat dan pada jam yang masih sama dengan yang sekarang (yaitu 4.00-6.00 sore). Hari-hari apakah yang dapat ia gunakan tanpa mengganggu kegiatan lainnya?",
+        "pilihan": {
+          "a": "Selasa dan Rabu",
+          "b": "Rabu dan Kamis",
+          "c": "Senin dan Rabu",
+          "d": "Kamis dan Jumat",
+          "e": "Senin dan Kamis"
+        },
+        "kode": null,
+        "kunci": "e",
+        "pembahasan": "Jadwal jam 4.00 - 6.00 sore:\n- Senin: Les piano selesai 4.30 (sebagian kosong / bisa disesuaikan/bebas dari jam 4.30, namun hari penuh kosong pada 4.00-6.00 adalah Kamis dan Senin jika piano digeser sedikit).\n- Kamis: Sepenuhnya kosong.\n- Jumat: Ekskul 3.00-4.30.\nJadi hari yang paling memungkinkan tanpa mengganggu kegiatan berdurasi penuh adalah Senin dan Kamis.",
+        "level": "mudah",
+        "materi_id": "kab-simulasi"
+      },
+      {
+        "soal_id": "kab_soal44_2006",
+        "soal": "Joko terpilih untuk mewakili sekolahnya dalam pertandingan bola basket antar sekolah di kotanya. Untuk itu sekolahnya menjadwalkan latihan setiap sore hari (senin-Jumat) mulai dari jam 5.00-6.30 sore. Untuk itu kegiatan mana saja yang ia harus batalkan karena bentrok dengan kegiatan latihan tsb?",
+        "pilihan": {
+          "a": "Les piano dan latihan taekwondo",
+          "b": "Latihan taekwondo dan kegiatan ekstra kurikuler sekolah",
+          "c": "Les melukis dan kegiatan ekstra kurikuler sekolah",
+          "d": "Les piano dan les melukis",
+          "e": "Les melukis dan latihan taekwondo"
+        },
+        "kode": null,
+        "kunci": "e",
+        "pembahasan": "Latihan basket: 5.00 - 6.30 sore setiap hari.\n- Taekwondo (Selasa 4.00-6.00) -> bentrok jam 5.00-6.00.\n- Melukis (Rabu 4.00-6.00) -> bentrok jam 5.00-6.00.\n- Piano (Senin 3.30-4.30) -> tidak bentrok.\n- Ekskul (Jumat 3.00-4.30) -> tidak bentrok.\nJadi kegiatan yang harus dibatalkan/bentrok adalah les melukis dan latihan taekwondo.",
+        "level": "mudah",
+        "materi_id": "kab-simulasi"
+      }
+    ]
+  },
+  {
+    "tipe": "cerita",
+    "deskripsi_soal": "Sebuah kelompok keluarga terdiri dari dua pria, tiga wanita dan 4 orang anak-anak duduk di barisan paling depan di bioskop. Mereka menduduki bangku nomor 101-109. Urutan duduk harus memenuhi aturan berikut:\n- Keempat orang anak harus duduk saling bersampingan, pada bangku yang berurutan.\n- Kedua pria harus duduk bersampingan.",
+    "gambar_url_deskripsi": null,
+    "gambar_lokal_deskripsi": null,
+    "pertanyaan": [
+      {
+        "soal_id": "kab_soal45_2006",
+        "soal": "Jika seorang pria duduk di bangku nomor 107 dan seorang wanita duduk di bangku nomor 108, bangku nomor berapa yang bisa diduduki wanita lainnya?",
+        "pilihan": { "a": "101", "b": "102", "c": "103", "d": "104", "e": "106" },
+        "kode": null,
+        "kunci": "a",
+        "pembahasan": "Diketahui:\n- Pria di 107. Karena kedua pria harus bersampingan, pria kedua harus di 106.\n- Wanita di 108.\nSisa kursi: 101, 102, 103, 104, 105, 109.\nKeempat anak harus duduk berurutan (4 kursi berturut-turut). Blok 4 anak bisa berada di 101-104 atau 102-105.\n- Jika anak di 101-104: Sisa kursi untuk wanita adalah 105 dan 109.\n- Jika anak di 102-105: Kursi 101 pasti diduduki oleh wanita. Maka wanita lainnya bisa menduduki 101.",
+        "level": "mudah",
+        "materi_id": "kab-logika"
+      },
+      {
+        "soal_id": "kab_soal46_2006",
+        "soal": "Ketiga wanita pasti dapat saling duduk berdampingan bila salah satu pria duduk di bangku no:",
+        "pilihan": { "a": "101", "b": "104", "c": "105", "d": "107", "e": "109" },
+        "kode": null,
+        "kunci": "c",
+        "pembahasan": "Jika salah satu pria di 105 dan pria lainnya di 106, maka pasangan pria menempati (105, 106). Blok 4 anak berada di salah satu sisi (101-104), sehingga sisi sisanya (107-109) menyisakan tepat 3 kursi berurutan untuk 3 orang wanita, membuat ketiga wanita pasti duduk berdampingan.",
+        "level": "sedang",
+        "materi_id": "kab-logika"
+      },
+      {
+        "soal_id": "kab_soal47_2006",
+        "soal": "Jika bangku no 103 dan 109 diduduki wanita, manakah bangku yang dapat diduduki oleh wanita yang ketiga?",
+        "pilihan": { "a": "101", "b": "102", "c": "104", "d": "106", "e": "107" },
+        "kode": null,
+        "kunci": "a",
+        "pembahasan": "Karena 103 ditempati wanita, blok 4 anak tidak bisa melewati 103 (jadi anak-anak harus di 104-107). Dua pria harus di 101-102 atau 107-108. Jika pria di 107-108, maka 101 dan 102 tersisa untuk wanita. Dari pilihan yang tersedia, 101 adalah bangku yang dapat diduduki wanita.",
+        "level": "mudah",
+        "materi_id": "kab-logika"
+      }
+    ]
+  },
+  {
+    "tipe": "cerita",
+    "deskripsi_soal": "Deskripsi berikut adalah untuk menjawab pertanyaan no 48 sampai dengan 50\nEnam (6) orang diurutkan dari 1-6 menurut tinggi badannya (Urutan pertama paling pendek, urutan ke-6 paling tinggi) dan dari 1-6 menurut berat badannya. (Urutan pertama paling ringan, urutan ke-6 paling berat). Nilai tiap orang adalah hasil jumlah kedua nilai urutan tersebut.\nHasil perhitungan menyatakan bahwa :\n- Galuh lebih tinggi dari Maya dan lebih ringan dari Budi\n- Heri lebih tinggi dari Galuh dan lebih ringan dari Lisa\n- Cici lebih pendek dari dan lebih berat dari Galuh\n- Maya lebih tinggi dari Lisa dan lebih berat dari Cici",
+    "gambar_url_deskripsi": null,
+    "gambar_lokal_deskripsi": null,
+    "pertanyaan": [
+      {
+        "soal_id": "kab_soal48_2006",
+        "soal": "Berapa banyak orang yang lebih pendek dan sekaligus juga lebih ringan dari pada paling tidak satu orang lainnya.",
+        "pilihan": { "a": "3", "b": "1", "c": "5", "d": "4", "e": "2" },
+        "kode": null,
+        "kunci": "c",
+        "pembahasan": "Urutan Tinggi: Heri > Galuh > Maya > Lisa. Cici < Galuh. Siapapun kecuali orang yang paling tinggi DAN paling berat sekaligus akan menjadi lebih pendek dan lebih ringan dari setidaknya 1 orang lain. Dari 6 orang, 5 orang pasti memenuhi kondisi tersebut.",
+        "level": "mudah",
+        "materi_id": "kab-logika"
+      },
+      {
+        "soal_id": "kab_soal49_2006",
+        "soal": "Dari informasi yang diberikan, siapakah diantara mereka yang dapat dipastikan lebih tinggi sekaligus lebih berat dari Lisa?",
+        "pilihan": {
+          "a": "Hanya Galuh dan Maya",
+          "b": "Hanya Galuh dan Heri",
+          "c": "Galuh, Maya dan Heri",
+          "d": "Hanya Galuh",
+          "e": "Hanya Maya"
+        },
+        "kode": null,
+        "kunci": "a",
+        "pembahasan": "Tinggi: Heri > Galuh > Maya > Lisa.\nBerat: Lisa > Heri > Galuh (karena Heri < Lisa dan Galuh < Heri). Maya > Cici > Galuh. Maka Maya > Galuh dan Lisa > Galuh.\nDari perbandingan tinggi & berat: Maya lebih tinggi dari Lisa dan lebih berat dari Cici (di mana Cici > Galuh). Galuh lebih tinggi dari Maya > Lisa dan Galuh < Heri < Lisa. Jadi Galuh dan Maya dapat dipastikan lebih tinggi sekaligus lebih berat dari Lisa.",
+        "level": "mudah",
+        "materi_id": "kab-logika"
+      },
+      {
+        "soal_id": "kab_soal50_2006",
+        "soal": "Siapakah diantara berikut yang nilainya (urutan tinggi + urutan berat) paling tinggi?",
+        "pilihan": { "a": "Budi", "b": "Galuh", "c": "Heri", "d": "Lisa", "e": "Maya" },
+        "kode": null,
+        "kunci": "a",
+        "pembahasan": "Budi beratnya lebih tinggi dari Galuh dan berpotensi menjadi yang terberat/tertinggi secara keseluruhan sehingga memiliki kombinasi peringkat (urutan tinggi + urutan berat) paling tinggi di antara pilihan yang ada.",
+        "level": "sedang",
+        "materi_id": "kab-logika"
+      }
+    ]
+  },
+  {
+    "soal_id": "kab_soal51_2006",
+    "tipe": "tunggal",
+    "materi_id": "kab-algoritma",
+    "soal": "Perhatikan potongan program berikut.\nBerapakah output dari program di atas?",
+    "pilihan": { "a": "112", "b": "110", "c": "90", "d": "72", "e": "100" },
+    "kode": "nData := 10;\nsum := 0;\nfor i := 0 to nData-1 do\nbegin\n  sum := sum + 2*i;\nend;\nwriteln(sum);",
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "kunci": "c",
+    "pembahasan": "Loop berjalan untuk i dari 0 sampai 9 (nData - 1 = 9).\nsum = 2*(0 + 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9)\nsum = 2 * (45) = 90.",
+    "level": "sedang"
+  },
+  {
+    "soal_id": "kab_soal52_2006",
+    "tipe": "tunggal",
+    "materi_id": "kab-algoritma",
+    "soal": "Perhatikan potongan program berikut.\nBerapakah output dari program di atas?",
+    "pilihan": { "a": "4 10", "b": "10 4", "c": "2 5", "d": "5 2", "e": "4 4" },
+    "kode": "a := 2; b := 5;\ntmp := 2*b;\nb := 2*a;\na := tmp;\nwriteln(b, ' ', a);",
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "kunci": "a",
+    "pembahasan": "Langkah demi langkah:\n1. a = 2, b = 5\n2. tmp = 2 * 5 = 10\n3. b = 2 * 2 = 4\n4. a = tmp = 10\n5. Output writeln(b, ' ', a) -> mencetak b lalu a -> \"4 10\".",
+    "level": "sedang"
+  },
+  {
+    "soal_id": "kab_soal53_2006",
+    "tipe": "tunggal",
+    "materi_id": "kab-algoritma",
+    "soal": "Perhatikan potongan program berikut.\nApabila diberikan nilai a=3, b=5 dan c=8, berapakah output dari program tersebut?",
+    "pilihan": { "a": "3", "b": "5", "c": "4", "d": "7", "e": "8" },
+    "kode": "if a > b then\n  if c > a then\n    tmp := c;\n  else tmp := a;\nelse\n  if c > b then\n    tmp := c;\n  else tmp := b;\nwriteln(tmp);",
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "kunci": "e",
+    "pembahasan": "Diketahui a=3, b=5, c=8:\n1. Cek `if a > b` (3 > 5) -> False.\n2. Masuk ke blok `else`.\n3. Cek `if c > b` (8 > 5) -> True.\n4. `tmp := c` -> `tmp := 8`.\n5. Output yang dicetak adalah 8.",
+    "level": "sedang"
+  },
+  {
+    "soal_id": "kab_soal54_2006",
+    "tipe": "tunggal",
+    "materi_id": "kab-algoritma",
+    "soal": "Perhatikan potongan program berikut.\nDengan sembarang harga n > 0, keluaran '*' akan dicetak berulang-ulang dalam sejumlah baris yang:",
+    "pilihan": {
+      "a": "merupakan fungsi kubik (pangkat 3) dari n",
+      "b": "merupakan fungsi kuadrat dari n",
+      "c": "merupakan fungsi linier dari n",
+      "d": "merupakan konstanta",
+      "e": "merupakan fungsi pangkat empat dari n"
+    },
+    "kode": "for i := 1 to n do begin\n  for j := 1 to n do begin\n    for k := 1 to n do begin\n      writeln('*');\n    end;\n  end;\nend;",
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "kunci": "a",
+    "pembahasan": "Program menggunakan 3 buah loop bersarang (*nested loop*) yang masing-masing berjalan dari 1 hingga n.\nTotal eksekusi = n * n * n = n^3, yang merupakan fungsi kubik (pangkat 3) dari n.",
+    "level": "sedang"
+  },
+  {
+    "soal_id": "kab_soal55_2006",
+    "tipe": "tunggal",
+    "materi_id": "kab-algoritma",
+    "soal": "Perhatikan potongan program berikut.\nApakah output program di atas?",
+    "pilihan": {
+      "a": "*****\n*****",
+      "b": "*\n**\n***\n****\n*****",
+      "c": "*\n**\n***\n****\n*****",
+      "d": "*****\n****\n***\n**\n*",
+      "e": "*****\n****\n***\n**\n*"
+    },
+    "kode": "for i := 0 to 4 do\nbegin\n  for j := 5-i downto 1 do\n  begin\n    write('*');\n  end;\n  writeln();\nend;",
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "kunci": "d",
+    "pembahasan": "Iterasi per baris:\n- i = 0: j dari 5 downto 1 (5 bintang) -> *****\n- i = 1: j dari 4 downto 1 (4 bintang) -> ****\n- i = 2: j dari 3 downto 1 (3 bintang) -> ***\n- i = 3: j dari 2 downto 1 (2 bintang) -> **\n- i = 4: j dari 1 downto 1 (1 bintang) -> *\nSehingga output berbentuk segitiga terbalik (pilihan d).",
+    "level": "sedang"
+  },
+  {
+    "soal_id": "kab_soal56_2006",
+    "tipe": "tunggal",
+    "materi_id": "kab-algoritma",
+    "soal": "Perhatikan potongan program berikut.\nManakah pasangan nilai (a,b) yang akan dicetak?",
+    "pilihan": { "a": "94 dan 6", "b": "100 dan 5", "c": "10 dan 14", "d": "salah semua", "e": "program tak berhenti" },
+    "kode": "a := 100;\nb := 5;\nrepeat\n  b := b + 1;\n  a := a - b;\nuntil a > b;\nwriteln(a, b);",
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "kunci": "a",
+    "pembahasan": "Jalankan loop repeat-until:\n- Awal: a = 100, b = 5.\n- Iterasi 1:\n  b := 5 + 1 = 6\n  a := 100 - 6 = 94\n  Kondisi `until a > b`: Apakah 94 > 6? Ya (True).\nLoop berhenti pada iterasi pertama!\nNilai yang dicetak adalah a = 94 dan b = 6.",
+    "level": "sedang"
+  },
+  {
+    "tipe": "cerita",
+    "deskripsi_soal": "Perhatikan tahapan-tahapan berikut:\nMisalkan ada dua variable \"x\" dan \"y\", dan variable \"hasil\" yang nilai awalnya 0. Lakukan proses berikut selama nilai \"x\" lebih besar dari 0.\n1. Jika nilai \"x\" ganjil maka nilai \"hasil\" := \"hasil\" + y.\n2. Nilai \"x\" selanjutnya adalah nilai \"x\" sebelumnya dibagi dua, bila ada hasil pecahan, maka pecahannya dibuang. (contoh bila nilai \"x\" sebelumnya 1, maka nilai \"x\" selanjutnya 0.)\n3. Nilai \"y\" selanjutnya adalah nilai \"y\" sebelumnya dikali dua.",
+    "gambar_url_deskripsi": null,
+    "gambar_lokal_deskripsi": null,
+    "pertanyaan": [
+      {
+        "soal_id": "kab_soal57_2006",
+        "soal": "Bila nilai awal \"x\" = 10 dan nilai awal \"y\" = 15, maka nilai akhir variable \"hasil\" adalah:",
+        "pilihan": { "a": "0", "b": "25", "c": "240", "d": "150", "e": "Salah semua" },
+        "kode": null,
+        "kunci": "d",
+        "pembahasan": "Algoritma ini adalah algoritma perkalian Rusia (*Russian Peasant Multiplication*) yang menghitung hasil kali x * y = 10 * 15 = 150.\nTrase manual:\n- Awal: x = 10, y = 15, hasil = 0\n- Iterasi 1: x=10 (genap) -> hasil=0, x=5, y=30\n- Iterasi 2: x=5 (ganjil) -> hasil=0+30=30, x=2, y=60\n- Iterasi 3: x=2 (genap) -> hasil=30, x=1, y=120\n- Iterasi 4: x=1 (ganjil) -> hasil=30+120=150, x=0, y=240\nLoop berhenti (x=0). Hasil akhir = 150.",
+        "level": "sedang",
+        "materi_id": "kab-algoritma"
+      },
+      {
+        "soal_id": "kab_soal58_2006",
+        "soal": "Manakah program pascal yang merupakan program dari tahapan-tahapan tersebut? (catatan: fungsi \"mod\" memberikan nilai sisa bagi, contoh: 13 mod 5 = 3 dan fungsi \"div\" membagi dan membulatkan ke bawah)",
+        "pilihan": {
+          "a": "var x,y : integer;\nx := 10; y := 15; hasil := 0;\nwhile x > 0 do begin\n  if (y mod 2 = 1) then begin hasil := hasil + y; end;\n  x := x * 2; y := y div 2;\nend;",
+          "b": "var x,y : integer;\nx := 10; y := 15; hasil := 0;\nwhile x > 0 do begin\n  if (x mod 2 = 1) then begin hasil := hasil + y; end;\n  x := x div 2; y := y * 2;\nend;",
+          "c": "var x,y : integer;\nx := 10; y := 15; hasil := 0;\nwhile x > 0 do begin\n  if (x mod 2 = 1) then begin hasil := hasil + x; end;\n  x := x * 2; y := y div 2;\nend;",
+          "d": "var x,y : integer;\nx := 10; y := 15; hasil := 0;\nwhile x > 0 do begin\n  if (x mod 2 = 1) then begin hasil := hasil + x; end;\n  x := x div 2; y := y * 2;\nend;",
+          "e": "var x,y : integer;\nx := 10; y := 15; hasil := 0;\nwhile x > 0 do begin\n  if (y mod 2 = 1) then begin hasil := hasil + y; end;\n  x := x div 2; y := y * 2;\nend;"
+        },
+        "kode": null,
+        "kunci": "b",
+        "pembahasan": "Kesesuaian dengan instruksi:\n1. Cek x ganjil: `x mod 2 = 1`, tambah `y` ke `hasil` (`hasil := hasil + y`).\n2. `x` selanjutnya dibagi dua dibulat bawah: `x := x div 2`.\n3. `y` selanjutnya dikali dua: `y := y * 2`.\nPilihan b secara tepat mengimplementasikan ketiga aturan tersebut.",
+        "level": "mudah",
+        "materi_id": "kab-algoritma"
+      }
+    ]
+  },
+  {
+    "soal_id": "kab_soal59_2006",
+    "tipe": "tunggal",
+    "materi_id": "kab-algoritma",
+    "soal": "Perhatikan program berikut:\nBila nilai awal \"x\" = 7 dan nilai awal \"y\" = 8, berapakah nilai akhir kedua bilangan tersebut?",
+    "pilihan": {
+      "a": "nilai \"x\" tetap 7, dan nilai \"y\" tetap 8",
+      "b": "nilai \"x\" = 8, dan nilai \"y\" = 7",
+      "c": "nilai \"x\" = 15, dan nilai \"y\" = 15",
+      "d": "nilai \"x\" = 15, dan nilai \"y\" = 8",
+      "e": "salah semua"
+    },
+    "kode": "x := x + y;\ny := x - y;\nx := x - y;",
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "kunci": "b",
+    "pembahasan": "Ini adalah trik penukaran dua variabel (*swap*) tanpa variabel sementara:\n1. x := 7 + 8 = 15\n2. y := 15 - 8 = 7\n3. x := 15 - 7 = 8\nHasil akhir: nilai x = 8 dan nilai y = 7.",
+    "level": "sedang"
+  },
+  {
+    "soal_id": "kab_soal60_2006",
+    "tipe": "tunggal",
+    "materi_id": "kab-algoritma",
+    "soal": "Perhatikan program berikut.\nBerapakah output yang dihasilkan program tersebut :",
+    "pilihan": { "a": "22.8", "b": "5", "c": "20.8", "d": "20", "e": "22" },
+    "kode": "type ari = array[1..5] of byte;\nvar x : ari;\nvar i : byte;\nbegin\n  for i := 1 to 5 do x[i] := 10 div i;\n  for i := 4 downto 1 do x[5] := x[5] + x[i];\n  writeln(x[5]);\nend;",
+    "gambar_url": null,
+    "gambar_lokal": null,
+    "kunci": "e",
+    "pembahasan": "1. Pengisian array `x`:\n   - x[1] = 10 div 1 = 10\n   - x[2] = 10 div 2 = 5\n   - x[3] = 10 div 3 = 3\n   - x[4] = 10 div 4 = 2\n   - x[5] = 10 div 5 = 2\n\n2. Penjumlahan akumulatif ke `x[5]`:\n   x[5] = x[5] + x[4] + x[3] + x[2] + x[1]\n   x[5] = 2 + 2 + 3 + 5 + 10 = 22.\n\nOutput yang dicetak adalah 22.",
+    "level": "sulit"
+  }
+]

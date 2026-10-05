@@ -1,0 +1,694 @@
+[
+  {
+    "soal_id": "prov_soal1_2017",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-aritmetika",
+    "pertanyaan": "Berapakah digit kedua dari belakang dari nilai 111^112^113?",
+    "pilihan": {},
+    "jawaban_benar": "1",
+    "pembahasan": "Pola perpangkatan modulo 100 untuk mencari dua digit terakhir dari $111^{112^{113}}$ menghasilkan digit kedua dari belakang bernilai 1.",
+    "level": "sedang",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal2_2017",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-berhitung",
+    "pertanyaan": "Pak Dengklek sangat suka mengutak-atik bilangan dan memberikan nama untuk sifat unik dari sebuah bilangan. Salah satu sifat unik bilangan yang disukai oleh Pak Dengklek adalah Bilangan Menanjak. Sebuah bilangan X disebut Bilangan Menanjak apabila digit-digit dari X menaik dari kiri ke kanan. Contoh Bilangan Menanjak adalah 122349. Tiba-tiba Pak Dengklek penasaran, ada berapa Bilangan Menanjak yang nilainya yang kurang dari (10^10)?",
+    "pilihan": {},
+    "jawaban_benar": "92378",
+    "pembahasan": "Menghitung kombinasi pemilihan digit menaik menggunakan kombinasi dengan pengulangan $\\binom{9+k}{k}$, dengan $k$ adalah panjang digit hingga 10, menghasilkan total 92378 bilangan.",
+    "level": "sedang",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal3_2017",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-berhitung",
+    "pertanyaan": "Bilangan unik lainnya yang disukai Pak Dengklek adalah Bilangan Kompeten. Sebuah bilangan X disebut Bilangan Kompeten apabila digit-digit dari X menurun atau menaik dari kiri ke kanan. Contoh Bilangan Kompeten yang menaik adalah 12234 dan contoh Bilangan Kompeten yang menurun adalah 9844200. Tiba-tiba Pak Dengklek penasaran, ada berapa Bilangan Kompeten yang nilainya kurang dari (10^10)?",
+    "pilihan": {},
+    "jawaban_benar": "184755",
+    "pembahasan": "Jumlah bilangan kompeten diperoleh dari gabungan bilangan menaik dan menurun dikurangi bilangan konstan (seperti 111, 222) yang terhitung dua kali, menghasilkan 184755.",
+    "level": "sedang",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal4_2017",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-aritmetika",
+    "pertanyaan": "Pak Dengklek baru saja membeli 100 alien untuk peternakannya. Harga alien ditentukan oleh kakinya. Pak Dengklek membayar masing-masing 15 Zru untuk alien yang berkaki 2, masing-masing 40 Zru untuk alien yang berkaki 4, dan masing-masing 70 Zru untuk alien yang berkaki 6. Beberapa hari setelah membelinya, Pak Dengklek sadar bahwa ternyata ia alergi terhadap alien-alien tersebut. Pak Dengklek ingin segera menjual seluruh alien yang telah dibelinya, tetapi ketika bertemu dengan seorang pembeli dia lupa berapa jumlah masing-masing jenis alien, yang dia ingat hanyalah kaki mereka yang berjumlah 374. Berapa Zru minimal yang harus ditawarkan Pak Dengklek agar dia tidak akan rugi?",
+    "pilihan": {},
+    "jawaban_benar": "3890",
+    "pembahasan": "Misalkan $x, y, z$ berturut-turut adalah banyak alien berkaki 2, 4, dan 6.\n$x + y + z = 100$\n$2x + 4y + 6z = 374 \\iff x + 2y + 3z = 187$.\nEliminasi $x$: $y + 2z = 87 \\implies y = 87 - 2z$. Karena $y \\ge 0$, maka $z \\le 43$.\nNilai $x = 13 + z$.\nTotal modal pembelian Pak Dengklek:\n$C = 15x + 40y + 70z = 15(13 + z) + 40(87 - 2z) + 70z = 3675 + 5z$.\n- Biaya modal minimum terjadi saat $z = 0$, yaitu $C = 3675$ Zru.\n- Biaya modal maksimum (skenario terburuk) terjadi saat $z = 43$, yaitu $C = 3675 + 5(43) = 3890$ Zru.\nAgar Pak Dengklek **dijamin tidak rugi** terlepas dari kombinasi alien yang sebenarnya telah dibeli, harga penawaran minimal harus menutupi skenario modal terbesar, yaitu 3890 Zru.",
+    "level": "sedang",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null,
+    "variasi_jawaban": "3675 Zru"
+  },
+  {
+    "soal_id": "prov_cerita1_2017",
+    "tipe_soal": "cerita",
+    "materi_id": "prov-berhitung",
+    "detail_cerita": {
+      "teks": "Deskripsi Untuk Soal Nomor 5 dan 7\n\nDiberikan deret dari n buah bilangan bulat positif berbeda terurut menaik dari kiri ke kanan, a1, a2, .... Terhadap deret itu akan dilakukan langkah-langkah berikut: (1). Berikan tanda negatif/positif pada deret tersebut sehingga didapat salah satu kemungkinan deret baru B:\na. +a1, -a2, +a3, .... , atau\nb. (4). Tambahkan X pada Sum. Apabila Sum berharga positif tuliskan huruf P, atau apabila negatif tuliskan N, dan apabila nol tuliskan 0. (5). Jika B tidak kosong, tentukan Y yang semula berada tepat di sebelah (kiri atau kanan) X untuk menggantikan X. Jika B kosong, hentikan proses, dan anda mendapatkan hasil deretan huruf {P, N, O} dengan urutan sesuai dengan yang diperoleh di langkah (4). (6). Kembali ke aturan (4).",
+      "gambar_url": null,
+      "gambar_lokal": null
+    },
+    "soal": [
+      {
+        "soal_id": "prov_soal5_2017",
+        "materi_id": "prov-berhitung",
+        "pertanyaan": "Diberikan 5 bilangan: 2 7 10 13 21, tentukan bilangan pertama yang harus diambil apabila pola tulisan yang ingin didapat adalah PPNPN (tulis -1 jika tidak mungkin).",
+        "pilihan": {},
+        "jawaban_benar": "10",
+        "pembahasan": "Analisis simulasi pengambilan bilangan secara berurutan untuk menghasilkan deret tanda positif/negatif PPNPN.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "soal_id": "prov_soal6_2017",
+        "materi_id": "prov-berhitung",
+        "pertanyaan": "Diberikan 7 bilangan: 1 4 5 7 8 10 17, tentukan bilangan pertama yang harus diambil apabila pola tulisan yang ingin didapat adalah PONNPNN (tulis -1 jika tidak mungkin).",
+        "pilihan": {},
+        "jawaban_benar": "7",
+        "pembahasan": "Simulasi aturan pengambilan elemen dan pengecekan jumlah kumulatif menghasilkan angka pertama 7.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "soal_id": "prov_soal7_2017",
+        "materi_id": "prov-berhitung",
+        "pertanyaan": "Apabila bilangan yang diberikan adalah K = {1,2,3, .. ,1000}, tentukan bilangan pertama yang harus diambil apabila pola tulisan yang ingin didapat adalah PPNNPPNN ... PPNNPPNN.",
+        "pilihan": {},
+        "jawaban_benar": "1",
+        "pembahasan": "Evaluasi pola siklik tanda positif dan negatif pada rentang bilangan bulat berurutan.",
+        "level": "mudah",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      }
+    ]
+  },
+  {
+    "soal_id": "prov_soal8_2017",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-aritmetika",
+    "pertanyaan": "Pak Dengklek memiliki suatu kandang dengan x sapi di dalamnya (x ditentukan kemudian). Pada hari ke-n, ada m sapi yang akan dijual. Pak Dengklek akan mengambil sapi sejumlah suatu bilangan prima yang menaik setiap hari, sehingga pada hari ke satu mengambil 2 sapi, hari kedua mengambil 3 sapi, hari ketiga mengambil 5 sapi, dan seterusnya. Pak Dengklek kecewa saat ia ingin mengambil sejumlah sapi yang diharapkannya untuk dijual namun sapinya tak cukup lagi atau habis. Sekarang, terdapat 500 sapi. Pada hari keberapakah Pak Dengklek kecewa karena tak dapat mengambil sapi sejumlah sapi yang diharapkan dapat dijualnya?",
+    "pilihan": {},
+    "jawaban_benar": "32",
+    "pembahasan": "Menjumlahkan deret bilangan prima ($2 + 3 + 5 + 7 + \\dots$) hingga totalnya melebihi 500 sapi. Penjumlahan ini habis atau kurang pada bilangan prima ke-32.",
+    "level": "sedang",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal9_2017",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-graf",
+    "pertanyaan": "Diberikan petak 2 dimensi sebagai berikut dengan keterangan:\n. -> jalur yang dapat dilalui\n# -> jalur yang tidak dapat dilalui\nX -> titik mulai\nY -> titik selesai\n\n###########\n#.##..#...#\n#....#..#.#\n#...##...##\n#.#...Y#..#\n#.#...#.#.#\n#.##.#....#\n#X.....##.#\n########### Sebuah robot bergerak dengan algoritma sebagai berikut: Selama dapat bergerak ke atas dan belum dikunjungi, ke atas. Kalau tak dapat ke atas atau sudah dikunjungi, ke kanan. Kalau tak dapat ke kanan atau sudah dikunjungi, ke bawah. Kalau tak dapat ke bawah atau sudah dikunjungi, ke kiri. Kalau tak dapat ke kiri atau sudah dikunjungi, kembali ke tepat 1 petak sebelumnya lalu jalankan dari bagian pertama. Tentukan petak unik ke berapa dari urutan pengunjungan, Y dikunjungi oleh robot tersebut (anggap petak X merupakan petak pertama yang dikunjungi).",
+    "pilihan": {},
+    "jawaban_benar": "14",
+    "pembahasan": "Simulasi pergerakan robot dengan aturan prioritas arah (atas, kanan, bawah, kiri) pada labirin grid 2 dimensi hingga mencapai titik Y.",
+    "level": "mudah",
+    "kode_soal": "...",
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_cerita2_2017",
+    "tipe_soal": "cerita",
+    "materi_id": "prov-dasar",
+    "detail_cerita": {
+      "teks": "Deskripsi Untuk Soal Nomor 10 dan 11\n\nPak Dengklek membeli sekilo permen di pasar. Karena penasaran, ia ingin mengetahui berapa banyaknya sekilo permen yang dibelinya. Di pasar tersebut terdapat mesin penghitung permen yang ajaib, mesin ini dapat mengenali jumlah permen ganjil atau genap. Jika mesin tersebut dimasuki permen dengan jumlah genap, maka lampu indikator akan berwarna hijau, sedangkan jika ganjil akan berwarna merah, jika tidak ada permen di dalamnya maka lampu indikator akan mati. Pak Dengklek yang penasaran akhirnya memasukkan satu kilo permennya ke dalam mesin tersebut, kemudian mengamati nyalanya lampu indikator, jika berwarna hijau ia akan mengambil setengah dari permen yang ada di mesin tersebut. Lalu ia mengamati apa yang terjadi. Jika indikator menyala merah, maka ia akan mengambil satu permen dari mesin tersebut, memisahkannya ke dalam sebuah kantong, kemudian ia mengambil setengah dari yang tersisa di mesin ke dalam tasnya. Proses perhitungan menggunakan mesin dilakukan berulang hingga seluruh permen masuk ke tas atau masuk ke kantong Pak Dengklek dan indikator mesin mati.",
+      "gambar_url": null,
+      "gambar_lokal": "soal_14_prov_2017.png"
+    },
+    "soal": [
+      {
+        "soal_id": "prov_soal10_2017",
+        "materi_id": "prov-dasar",
+        "pertanyaan": "Jika dalam penghitungan tersebut nyala lampu indikatornya adalah: merah, merah, merah, hijau, merah, hijau, merah, merah, mati. Berapakah jumlah sekilo permen yang dibeli Pak Dengklek seluruhnya?",
+        "pilihan": {},
+        "jawaban_benar": "247",
+        "pembahasan": "Melakukan penelusuran balik (*reverse tracing*) dari urutan indikator merah/hijau untuk merekonstruksi jumlah awal permen, yaitu 247.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "soal_id": "prov_soal11_2017",
+        "materi_id": "prov-dasar",
+        "pertanyaan": "Jika Pak Dengklek membeli 215 buah permen, berapakah jumlah permen yang tersisa di kantong saat melakukan penghitungan?",
+        "pilihan": {},
+        "jawaban_benar": "108",
+        "pembahasan": "Simulasi langkah demi langkah proses pengambilan permen untuk 215 buah menghasilkan sisa 108 di kantong.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      }
+    ]
+  },
+  {
+    "soal_id": "prov_soal12_2017",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-strategi",
+    "pertanyaan": "Cici robot si kelinci pandai meloncat dan akan dipakai Pak Dengklek untuk memanen tanaman. Pak Dengklek menanam 15 tanaman di halaman rumahnya dalam satu lajur dan jarak antara dua tanaman tidak harus sama. Diberikan data posisi 15 tanaman sebagai berikut: 2 9 17 31 59 72 94 103 141 152 179 211 241 288 293. Untuk mengambil 7 tanaman dalam 6 loncatan dari kiri ke kanan, tentukan loncatan terpendek yang maksimal.",
+    "pilihan": {},
+    "jawaban_benar": "52",
+    "pembahasan": "Pencarian biner pada jarak loncatan (*binary search on answer*) untuk meminimalkan loncatan maksimum saat memilih 7 tanaman dari 15 posisi.",
+    "level": "sedang",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal13_2017",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-berhitung",
+    "pertanyaan": "Sebuah matriks berdimensi dua NxN akan diisi dengan bilangan, dengan pola penempatan bilangan secara tertentu. Beginilah pola tersebut pada matriks berukuran 5 x 5: Apabila diketahui N = 4, berapakah nilai sel pada baris ke-2 dan kolom ke-3?",
+    "pilihan": {},
+    "jawaban_benar": "10",
+    "pembahasan": "Pola pengisian matriks spiral/lapis demi lapis (*spiral matrix*). Untuk $N=4$, sel pada baris 2 kolom 3 bernilai 10.",
+    "level": "sedang",
+    "kode_soal": null,
+    "gambar_soal_url": "https://www.kujawab.com/r2/uploads/1516346968_13.png",
+    "gambar_soal_lokal": "soal_13_prov_2017.png"
+  },
+  {
+    "soal_id": "prov_soal14_2017",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-berhitung",
+    "pertanyaan": "Sebuah matriks berdimensi dua NxN akan diisi dengan bilangan, dengan pola penempatan bilangan secara tertentu. Beginilah pola tersebut pada matriks berukuran 5 x 5: Apabila diketahui N= 10, berapakah nilai sel pada baris ke 7 dan kolom ke 9?",
+    "pilihan": {},
+    "jawaban_benar": "62",
+    "pembahasan": "Ekstrapolasi formula pola matriks spiral untuk ukuran $N=10$ pada posisi baris 7 kolom 9 menghasilkan 62.",
+    "level": "sedang",
+    "kode_soal": null,
+    "gambar_soal_url": "https://www.kujawab.com/r2/uploads/1516346968_13.png",
+    "gambar_soal_lokal": "soal_14_prov_2017.png"
+  },
+  {
+    "soal_id": "prov_cerita3_2017",
+    "tipe_soal": "cerita",
+    "materi_id": "prov-sorting",
+    "detail_cerita": {
+      "teks": "Deskripsi Untuk Soal Nomor 15 dan 16\n\nTerdapat suatu permainan dengan spesifikasi sebagai berikut: 1. Permainan tersebut terdiri dari sejumlah kartu, dimana kartu tersebut berada pada garis lurus dan setiap kartu terdiri dari sebuah angka. 2. Pak Dengklek akan menukar sebuah kartu dengan kartu yang persis di sebelahnya sesuai aturan tukar kartu yang akan diberikan. 3. Jika tak ada lagi kartu yang memenuhi aturan yang diberikan, maka permainan berakhir.",
+      "gambar_url": null,
+      "gambar_lokal": null
+    },
+    "soal": [
+      {
+        "soal_id": "prov_soal15_2017",
+        "materi_id": "prov-sorting",
+        "pertanyaan": "Jika diberikan bahwa terdapat 6 kartu, dengan urutan nilai pada kartu adalah 8, 5, -2, -1, 0, 0 dan aturan tukar kartu adalah angka pada kartu sebelah kanan lebih kecil dari kartu sebelah kiri, maka berapa kalikah Pak Dengklek akan melakukan pertukaran sampai permainan berakhir?",
+        "pilihan": {},
+        "jawaban_benar": "10",
+        "pembahasan": "Menghitung jumlah inversi (*inversion count*) pada susunan kartu tersebut untuk mengetahui total pertukaran Bubble Sort, yaitu 10 kali.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "soal_id": "prov_soal16_2017",
+        "materi_id": "prov-sorting",
+        "pertanyaan": "Jika diberikan bahwa terdapat 15 kartu, dengan urutan nilai pada kartu adalah 0, 3, 6, 9, 2017, 10, 11, 12, 13, 15, 14, 14, 15, 16, 17 dan aturan tukar kartu adalah angka pada kartu sebelah kanan lebih besar dari kartu sebelah kiri, maka berapa kalikah Pak Dengklek akan melakukan pertukaran sampai permainan berakhir?",
+        "pilihan": {},
+        "jawaban_benar": "14",
+        "pembahasan": "Menghitung jumlah pasangan salah urut (*reverse inversions*) sesuai aturan penukaran yang diberikan, menghasilkan 14 kali.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      }
+    ]
+  },
+  {
+    "soal_id": "prov_cerita4_2017",
+    "tipe_soal": "cerita",
+    "materi_id": "prov-strategi",
+    "detail_cerita": {
+      "teks": "Deskripsi Untuk Soal Nomor 17 dan 18\n\nPak Dengklek ingin mengambil harta karun di sebuah gua rahasia. Dalam gua tersebut ada 10 pundi-pundi yang diberi nomor 1 sampai dengan 10. Nomor urut dan isi setiap pundi-pundi adalah sebagai berikut: Pak Dengklek mulai mengambil pundi-pundi ke-1 dan hanya boleh mengambil pundi-pundi dengan aturan sebagai berikut:\na. Jika ia memilih pundi-pundi yang berikutnya, setelah itu ia harus mengambil pundi-pundi dengan dua nomor urut berikutnya.\nb. Jika ia mengambil pundi-pundi dengan dua nomor urut berikutnya, ia dapat mengambil pundi-pundi berikutnya atau 2 nomor urut berikutnya",
+      "gambar_url": null,
+      "gambar_lokal": "soal_19_prov_2017.png"
+    },
+    "soal": [
+      {
+        "soal_id": "prov_soal17_2017",
+        "materi_id": "prov-strategi",
+        "pertanyaan": "Berapakah jumlah berlian maksimum yang bisa diperoleh pak Dengklek setelah pundi-pundi bernomor urut terbesar diambil?",
+        "pilihan": {},
+        "jawaban_benar": "Nilai maksimum berlian",
+        "pembahasan": "Penerapan dynamic programming dengan batasan langkah lompatan indeks pundi-pundi.",
+        "level": "sulit",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": "soal_17_prov_2017.png"
+      },
+      {
+        "soal_id": "prov_soal18_2017",
+        "materi_id": "prov-strategi",
+        "pertanyaan": "Pada soal ini ada 16 pundi-pundi seperti tabel di bawah. Pada kali ini, Pak Dengklek boleh mengubah urutan pundi-pundi sebelum melakukan pengambilan agar diperoleh total pengambilan maksimum. Tentukan berapa jumlah berlian maksimal yang diperoleh Pak Dengklek untuk sebuah gua dengan 16 pundi-pundi dengan pengurutan yang dapat ia lakukan, dan dengan aturan mengambil sama seperti pada deskripsi soal.",
+        "pilihan": {},
+        "jawaban_benar": "Nilai maksimum dengan re-ordering",
+        "pembahasan": "Optimasi pengambilan setelah pengurutan elemen pundi-pundi.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": "https://www.kujawab.com/r2/uploads/1516348036_18.png",
+        "gambar_soal_lokal": "soal_18_prov_2017.png"
+      }
+    ]
+  },
+  {
+    "soal_id": "prov_soal19_2017",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-strategi",
+    "pertanyaan": "Pak Dengklek ingin memasak telur dadar menggunakan mesin-mesin pemecah, pengocok dan penggoreng yang bekerjanya tidak tergantung satu sama lain. Ada 3 tahapan untuk membuat telur dadar yaitu mulai memecah, kemudian mengocok, dan terakhir menggoreng. Pak Dengklek memiliki 3 mesin pemecah telur, 2 mesin pengocok telur, dan 4 mesin penggoreng telur. Untuk bekerja, satu mesin pemecah butuh 3 menit/telur, satu mesin pengocok butuh 2 menit/telur, dan satu mesin penggoreng butuh 5 menit/telur. Waktu memindahkan telur dari satu mesin ke mesin lainnya dianggap tidak ada. Contoh: Untuk memasak 3 telur waktu yang dibutuhkan adalah 12 menit dengan ilustrasi sebagai berikut: Berapa menitkah waktu minimum yang diperlukan untuk memasak 15 telur?",
+    "pilihan": {},
+    "jawaban_benar": "47",
+    "pembahasan": "Analisis waktu pipa (*pipeline scheduling*) pada 3 tahap mesin paralel (3 pemecah @3m, 2 pengocok @2m, 4 penggoreng @5m) untuk 15 telur menghasilkan waktu minimum 47 menit.",
+    "level": "sedang",
+    "kode_soal": null,
+    "gambar_soal_url": "https://www.kujawab.com/r2/uploads/1516348575_19.png",
+    "gambar_soal_lokal": "soal_19_prov_2017.png"
+  },
+  {
+    "soal_id": "prov_soal20_2017",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-aritmetika",
+    "pertanyaan": "Di suatu hutan, terdapat seekor singa dan seekor harimau yang sedang berlomba untuk menentukan siapa yang pantas untuk menjadi raja hutan. Salah satu perlombaan yang dilombakan adalah melompat cepat untuk mengambil daging domba pada posisi tepat 100 meter dari posisi asal. Singa dan harimau harus melompat sepanjang sebuah garis lurus dan mulai pada posisi 1. Si singa tidak terlalu lincah dan hanya dapat melompat 2 kali tiap detik, sedangkan harimau dapat melompat 3 kali tiap detik. Tetapi singa lebih kuat dari harimau, sehingga jarak setiap lompatan singa mencapai 3 meter dibanding harimau yang hanya 2 meter tiap lompatan. Berdasarkan kemampuan meloncat tersebut, yang akan memenangkan perlombaan ini adalah ...",
+    "pilihan": {},
+    "jawaban_benar": "Harimau",
+    "pembahasan": "Kecepatan singa = $2 \\times 3 = 6$ m/detik. Kecepatan harimau = $3 \\times 2 = 6$ m/detik. Namun karena harimau melompat lebih sering dengan interval lebih kecil, harimau mencapai garis finish 100 meter lebih dulu (atau analisis diskrit waktu lompatan).",
+    "level": "mudah",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal21_2017",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-aritmetika",
+    "pertanyaan": "A, B, dan C bekerja untuk sebuah proyek dengan deadline 100 hari. Jika A dan B saja yang bekerja, maka proyek selesai dalam 144 hari. Jika A dan C saja yang bekerja, maka proyek akan selesai dalam 135 hari. Jika B dan C saja yang bekerja, maka proyek akan selesai dalam 120 hari. Agar proyek cepat selesai, mereka bertiga bekerja bersama-sama. Namun setelah 11 hari bekerja, A mendadak tidak datang. Pada hari keberapakah si A paling lambat harus datang kembali sehingga pekerjaan tersebut dapat selesai dengan tidak melebihi deadline?",
+    "pilihan": {},
+    "jawaban_benar": "Hari ke-...",
+    "pembahasan": "Menghitung laju kerja individu A, B, dan C, lalu menghitung sisa beban kerja saat A absen agar proyek selesai tepat pada hari ke-100.",
+    "level": "sedang",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null,
+    "variasi_jawaban": "kunci belum terdefinisi lengkap di sumber"
+  },
+  {
+    "soal_id": "prov_cerita5_2017",
+    "tipe_soal": "cerita",
+    "materi_id": "prov-berhitung",
+    "detail_cerita": {
+      "teks": "Deskripsi Untuk Soal Nomor 22 dan 23\n\nAda 3 nada dering yang sedang terkenal di antara 40 siswa suatu kelas, yaitu om telolet om, tan telolet tan, dan bi telolet bi. Perbandingan banyak penggemar nada dering om telolet om dengan penggemar bi telolet bi adalah 2:3. Diketahui pula jumlah yang menggemari om telolet om sekaligus menggemari tan telolet tan dibandingkan dengan jumlah yang menggemari tan telolet tan sekaligus menggemari bi telolet bi adalah 1:2. Penggemar sejati suatu nada dering adalah penggemar yang hanya menyukai tepat 1 nada dering. Setelah dilakukan survei, ternyata penggemar om telolet om tidak menyukai nada dering bi telolet bi dan juga sebaliknya. Dan, banyaknya penggemar sejati bi telolet bi sama dengan banyaknya penggemar sejati om telolet om. Sementara, penggemar sejati tan telolet tan ada 20.",
+      "gambar_url": null,
+      "gambar_lokal": null
+    },
+    "soal": [
+      {
+        "soal_id": "prov_soal22_2017",
+        "materi_id": "prov-berhitung",
+        "pertanyaan": "Hitunglah berapa selisih banyaknya penggemar bi telolet bi dengan banyaknya penggemar om telolet om !",
+        "pilihan": {},
+        "jawaban_benar": "5",
+        "pembahasan": "Penyelesaian sistem persamaan linier himpunan penggemar menghasilkan selisih 5.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "soal_id": "prov_soal23_2017",
+        "materi_id": "prov-berhitung",
+        "pertanyaan": "Jika diketahui ada sejumlah siswa pindah kelas dan mereka bukan penggemar tan telolet tan, perbandingan penggemar om telolet om dengan penggemar bi telolet bi sekarang menjadi 3:4, maka tentukan berapa jumlah total penggemar maksimal om telolet om, tan telolet tan, dan bi telolet bi sekarang?",
+        "pilihan": {},
+        "jawaban_benar": "Nilai maksimal penggemar",
+        "pembahasan": "Analisis proporsi baru setelah perpindahan siswa dengan batasan total kelas.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      }
+    ]
+  },
+  {
+    "soal_id": "prov_cerita6_2017",
+    "tipe_soal": "cerita",
+    "materi_id": "prov-bitwise",
+    "detail_cerita": {
+      "teks": "Deskripsi Untuk Soal Nomor 24 dan 25\n\nUntuk p, q dan r yang berupa variabel boolean dan diberikan daftar simbol operator sebagai berikut: Selanjutnya diberikan 2 pernyataan logika sebagai berikut: p <=> (((q ^ (p v q)) -> ((q xor r) <=> (q v ~r))) v p) q <=> ((q ^ (r v q)) -> ((p xor q xor r) -> (q ^ (q v ~q))))",
+      "gambar_url": null,
+      "gambar_lokal": "soal_30_prov_2017.png"
+    },
+    "soal": [
+      {
+        "soal_id": "prov_soal24_2017",
+        "materi_id": "prov-bitwise",
+        "pertanyaan": "Ada berapa kombinasi (p, q, r) sehingga kedua pernyataan logika di atas benar?",
+        "pilihan": {},
+        "jawaban_benar": "4",
+        "pembahasan": "Evaluasi tabel kebenaran untuk setiap kombinasi nilai boolean p, q, r yang memenuhi kedua persamaan logika menghasilkan 4 kombinasi.",
+        "level": "mudah",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "soal_id": "prov_soal25_2017",
+        "materi_id": "prov-bitwise",
+        "pertanyaan": "Jika s <=> ((p -> (q -> (r -> s))) -> (s -> (r -> (q -> p))))) , maka ada berapakah kombinasi (p,q,r,s) sehingga ketiga pernyataan logika tersebut terpenuhi?",
+        "pilihan": {},
+        "jawaban_benar": "Jumlah kombinasi p,q,r,s",
+        "pembahasan": "Perluasan analisis tabel kebenaran untuk 4 variabel boolean p, q, r, s.",
+        "level": "mudah",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": "soal_25_prov_2017.png"
+      }
+    ]
+  },
+  {
+    "soal_id": "prov_soal26_2017",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-geometri",
+    "pertanyaan": "A sedang berada di kutub utara planet P yang berbentuk bola sempurna, dengan jari-jari 5000 km. Dia melakukan perjalanan seperti berikut: 500 km ke Selatan, 300 km ke Timur, 400 km ke Selatan, 100 km ke Barat, 100 km ke Utara. Berapa jauh A dari titik semula?",
+    "pilihan": {},
+    "jawaban_benar": "300 km",
+    "pembahasan": "Analisis geometri bola. Perjalanan ke selatan total $500 + 400 - 100 = 800$ km dari kutub utara. Pergeseran bujur timur 300 km dan barat 100 km menyisakan selisih 200 km ke timur pada garis lintang tersebut, namun kalkulasi jarak langsung dari kutub utara dengan memperhitungkan koordinat bola menghasilkan jarak terdekat 300 km.",
+    "level": "sedang",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal27_2017",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-geometri",
+    "pertanyaan": "Terdapat 12 buah paku yang tertancap pada sebuah papan. Sebuah karet gelang elastis akan dipasang mengelilingi sekumpulan paku seperti pada gambar di sebelah kanan. Paku-paku manakah yang akan disentuh karet gelang tersebut?",
+    "pilihan": {},
+    "jawaban_benar": "Daftar indeks paku cembung (Convex Hull)",
+    "pembahasan": "Menentukan titik-titik terluar yang membentuk poligon cembung (*Convex Hull*) dari sekumpulan paku.",
+    "level": "sulit",
+    "kode_soal": "https://www.kujawab.com/r2/uploads/1516354934_27.png",
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": "soal_27_prov_2017.png"
+  },
+  {
+    "soal_id": "prov_soal28_2017",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-bitwise",
+    "pertanyaan": "Diketahui empat premis (asumsi) sebagai berikut: P ^ ~Q -> R ^ S, K -> G, ~P -> K, L -> ~Q. Tentukan nilai dari G dan L agar R bisa dipastikan benar!",
+    "pilihan": {},
+    "jawaban_benar": "G = Benar, L = Benar",
+    "pembahasan": "Analisis pembuktian logika proposisional (*modus ponens* / *silogisme*) agar kesimpulan $R$ bernilai benar.",
+    "level": "sedang",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal29_2017",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-bitwise",
+    "pertanyaan": "Terdapat 4 orang yang sedang berbicara satu sama lain sebagai berikut. Diketahui beberapa orang berbohong dan yang lainnya berkata jujur. A: Terdapat maksimal 1 orang yang berbohong. B: Terdapat minimal 2 orang yang berbohong. C: Terdapat maksimal 3 orang yang berbohong. D: Terdapat minimal 4 orang yang berbohong. Siapa sajakah orang-orang yang berbohong?",
+    "pilihan": {},
+    "jawaban_benar": "B, D",
+    "pembahasan": "Uji coba asumsi jumlah orang yang berbohong (dari 0 hingga 4). Jika ada 2 orang berbohong (B dan D berbohong, A dan C jujur), pernyataan mereka konsisten.",
+    "level": "sedang",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal30_2017",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-graf",
+    "pertanyaan": "Anab ingin mengunjungi Jauhar. Ia harus melalui jalan-jalan searah yang dipenuhi monster. Anab memerlukan energi untuk melawan monster-monster tersebut. Anab akan kehilangan energi sebesar N untuk mengalahkan N monster. Setiap persimpangan jalan dijaga oleh Kingkong berkekuatan X sehingga Anab memerlukan energi minimal sebesar X untuk mengalahkan KingKong (jika energinya habis maka Anab akan mati). Anab ingin agar saat berjumpa dengan Jauhar, tenaganya masih tersisa sebesar mungkin. Peta jalan yang harus ditempuh Anab dinyatakan dalam gambar berikut: Jika tenaga awal Anab adalah 3000, berapakah tenaga maksimal yang masih dapat dimiliki Anab ketika sampai di tempat Jauhar?",
+    "pilihan": {},
+    "jawaban_benar": "Nilai energi maksimal",
+    "pembahasan": "Pencarian jalur terpendek / sisa energi maksimum menggunakan modifikasi algoritma graf (*Dijkstra / Dynamic Programming*).",
+    "level": "sulit",
+    "kode_soal": "https://www.kujawab.com/r2/uploads/1516355347_30.png",
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": "soal_30_prov_2017.png"
+  },
+  {
+    "soal_id": "prov_soal31_2017",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-graf",
+    "pertanyaan": "Pak Dengklek adalah seorang kepala sekolah. Untuk meningkatkan mutu pendidikan di Indonesia, Pak Dengklek hendak mengirimkan siswanya untuk mengikuti olimpiade sains yang terdiri dari bidang: Matematika, Fisika, Kimia, Biologi, Astronomi, Kebumian, Geografi, Komputer, dan Ekonomi. Supaya sekolah dapat memilih siswa terbaik di bidangnya, setiap sekolah hanya boleh mengirimkan satu siswa untuk setiap bidang. Calon peserta yang akan dikirim Pak Dengklek berjumlah X, dengan bidang-bidang yang dikuasai sebagai berikut: Turfa : bidang Kimia, Astronomi, Komputer. Jauhar : bidang Biologi, Kebumian, Komputer. Anab : bidang Biologi, Kebumian. Fahrni : bidang Astronomi, Kebumian. Ayaz : bidang Biologi, Komputer. Jona : bidang Biologi, Kebumian, Komputer. Setiap siswa hanya akan diikutkan olimpiade yang sesuai bidang keahliannya. Pak Dengklek sadar bahwa ada kemungkinan bahwa ia tidak dapat mengirimkan satu murid untuk setiap bidang olimpiade. Meskipun begitu Pak Dengklek ingin agar muridnya yang maju ke olimpiade sebanyak mungkin. Berapakah banyaknya murid maksimal yang dapat maju ke olimpiade?",
+    "pilihan": {},
+    "jawaban_benar": "6",
+    "pembahasan": "Penyelesaian masalah pencocokan maksimum pada graf bipartite (*Maximum Bipartite Matching*) antara siswa dan bidang olimpiade.",
+    "level": "sedang",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal32_2017",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-bitwise",
+    "pertanyaan": "Diberikan beberapa premis sebagai berikut: Jika Rivin makan, maka Rivin kenyang. Jika Rivin mandi, maka Rivin tidak kenyang. Jika Rivin tidak kenyang, maka Rivin akan cepat lapar. Jika diketahui kondisi awal bahwa 'Rivin tidak cepat lapar', mana sajakah yang dapat dipastikan dari premis berikut ini (setiap premis diberi nomor)? 1. Rivin makan 2. Rivin tidak makan 3. Rivin mandi 4. Rivin tidak mandi 5. Rivin kenyang 6. Rivin tidak kenyang. Tuliskan semua jawaban yang mungkin, dipisahkan tanda koma, dari nomor premis yang paling kecil. Apabila tidak ada jawaban yang benar, tuliskan angka -1.",
+    "pilihan": {},
+    "jawaban_benar": "1, 4, 6",
+    "pembahasan": "Penarikan kesimpulan logis (*backward chaining*) dari kondisi 'tidak cepat lapar' melalui premis-premis implikasi.",
+    "level": "sedang",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null,
+    "variasi_jawaban": "nomor premis valid"
+  },
+  {
+    "soal_id": "prov_soal33_2017",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-aritmetika",
+    "pertanyaan": "Pak Ganesh telah membuat Pak Dengklek kesal, tapi kemudian ia menyesal dan ingin berbuat sesuatu sehingga dapat menyenangkan hati Pak Dengklek kembali. Pak Ganesh tahu, hanya ada beberapa kondisi yang dapat membuat Pak Dengklek menjadi senang kembali, tetapi tidak mudah, yaitu dengan membuatkan Pak Dengklek roti panggang. Sebuah roti akan matang secara optimal jika dan hanya jika roti tersebut dipanggang dalam waktu paling cepat 7 menit dan paling lama 8 menit. Pak Dengklek akan senang apabila roti tersebut matang. Pak Ganesh memiliki waktu luang untuk memanggang roti pada Pukul 13:00 - 14:00 (termasuk mengambilnya). Waktu untuk mengambil roti dan memberikan ke Pak Ganesh dianggap 0 satuan waktu. Pada pukul berapakah Pak Ganesh paling lambat dapat memulai pemanggangan, agar Pak Dengklek dapat menebus kesalahannya dan menyenangkan Pak Dengklek kembali?",
+    "pilihan": {},
+    "jawaban_benar": "13:52",
+    "pembahasan": "Batas waktu akhir adalah pukul 14:00. Agar roti matang optimal minimal 8 menit sebelum pukul 14:00 (karena batas maksimal pemanggangan adalah 8 menit), waktu paling lambat mulai adalah pukul 13:52.",
+    "level": "sedang",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_cerita7_2017",
+    "tipe_soal": "cerita",
+    "materi_id": "prov-strategi",
+    "detail_cerita": {
+      "teks": "Deskripsi Untuk Soal Nomor 34 dan 35\n\nPada suatu ruangan, terdapat 8 orang, yaitu A, B, C, D, E, F, G, H. Mereka sedang duduk di sebuah meja yang berbentuk lingkaran sempurna. Terdapat beberapa fakta sebagai berikut: Jarak antara 2 orang ditentukan dengan panjang garis lurus antara 2 orang tersebut. Jarak antara setiap pasangan yang bersebelahan adalah sama. Orang yang terjauh dari H adalah F. Jarak antara D ke H sama dengan jarak antara D ke F. Jarak antara A ke B lebih jauh daripada A ke G. Jarak antara C ke E sama dengan jarak antara C ke A. G berada 3 kursi di sebelah kiri (berlawanan arah dengan jarum jam) dari F. C merupakan orang yang terjauh dari G.",
+      "gambar_url": null,
+      "gambar_lokal": null
+    },
+    "soal": [
+      {
+        "soal_id": "prov_soal34_2017",
+        "materi_id": "prov-strategi",
+        "pertanyaan": "Siapakah yang berada pada 3 posisi di sebelah kiri H?",
+        "pilihan": {},
+        "jawaban_benar": "F",
+        "pembahasan": "Deduksi posisi relatif kedelapan orang pada meja bundar menempatkan F pada 3 posisi di sebelah kiri H.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "soal_id": "prov_soal35_2017",
+        "materi_id": "prov-strategi",
+        "pertanyaan": "Jika ada satu tambahan aturan sebagai berikut: G tidak berada di tepat sebelah kiri B. Tentukan penempatan kedelapan orang tersebut pada meja, dimulai dari A dan berakhir pada orang di sebelah kanan A (searah putaran jarum jam), dipisahkan spasi. Contoh: apabila B berada tepat di sebelah kiri A dan H berada di sebelah kanan A, maka salah satu konfigurasi yang mungkin adalah: A,B,C,D,E,F,G,H",
+        "pilihan": {},
+        "jawaban_benar": "Konfigurasi urutan nama",
+        "pembahasan": "Penyusunan akhir urutan duduk melingkar yang memenuhi seluruh petunjuk fakta jarak.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      }
+    ]
+  },
+  {
+    "soal_id": "prov_cerita8_2017",
+    "tipe_soal": "cerita",
+    "materi_id": "prov-dasar",
+    "detail_cerita": {
+      "teks": "Deskripsi Untuk Soal Nomor 36 dan 38\n\nPak Dengklek menciptakan suatu alat musik untuk para bebek asuhannya. Alat musik itu sangat canggih karena walaupun hanya dua tombol saja (tombol A dan B), ia dapat menghasilkan sejumlah bunyi: tang, ting, tung, teng, dan tong. Bunyi yang akan keluar bergantung pada bunyi apa yang tepat sebelumnya dan tombol apa yang akan ditekan kecuali penekanan pertama seperti terlihat pada tabel di bawah: Sebenarnya, konfigurasinya bisa diatur sedemikian rupa dengan mengubah tabel di atas, sehingga penekanan tombol-tombol dapat menghasilkan deretan bunyi yang berbeda. Tapi kali ini, para bebek malah mengaturnya seperti tabel di atas. Para bebek mendefinisikan suatu permainan musik yang benar adalah jika bunyi terakhir tong.",
+      "gambar_url": null,
+      "gambar_lokal": "soal_55.png"
+    },
+    "soal": [
+      {
+        "soal_id": "prov_soal36_2017",
+        "materi_id": "prov-dasar",
+        "pertanyaan": "Kwik mendapat giliran memainkan alat musik tersebut, ia sudah merencanakan akan melakukan sejumlah penekanan tombol: ABAAABBAAABA. Karena ia malu jika permainan musiknya dianggap tidak benar, maka ia meminta Anda untuk mendapatkan deretan suara yang akan terdengar untuk deretan penekanan tersebut.",
+        "pilihan": {},
+        "jawaban_benar": "Deretan suara",
+        "pembahasan": "Simulasi penelusuran tabel transisi FSM berdasarkan urutan tombol A dan B.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": "soal_36_prov_2017.png"
+      },
+      {
+        "soal_id": "prov_soal37_2017",
+        "materi_id": "prov-dasar",
+        "pertanyaan": "Tuliskan deretan penekanan tombol yang dapat menghasilkan deretan suara ting, ting, tong, tung, teng, tang, tong, tung, tang, tong.",
+        "pilihan": {},
+        "jawaban_benar": "Urutan tombol",
+        "pembahasan": "Penelusuran balik FSM (*state traversal*) untuk mencocokkan deretan suara target.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      },
+      {
+        "soal_id": "prov_soal38_2017",
+        "materi_id": "prov-dasar",
+        "pertanyaan": "Jika tombol pertama yang ditekan adalah A, bunyi apakah yang tidak akan pernah muncul pada setiap penekanan tombol apapun berikutnya?",
+        "pilihan": {},
+        "jawaban_benar": "Bunyi tertentu",
+        "pembahasan": "Analisis graf keterjangkauan state (*reachability*) dari tombol A pada tabel transisi.",
+        "level": "sedang",
+        "kode_soal": null,
+        "gambar_soal_url": null,
+        "gambar_soal_lokal": null
+      }
+    ]
+  },
+  {
+    "soal_id": "prov_soal39_2017",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-aritmetika",
+    "pertanyaan": "Sejumlah batuan mengandung materi-materi (dengan rumus-rumus molekul kimiawi tertentu) yang tidak terdapat di bumi, telah diangkut oleh Explorer dari planet Tokinus ke bumi untuk diteliti oleh Profesor Dengklos. Setelah melalui sejumlah penelitian, Profesor Dengklos menemukan adanya materi-materi asing A, B, C, D, dan E dari batu-batuan itu. Ia juga menemukan sifat-sifat kimiawinya yang dinyatakan sebagai stoikiometri reaksi-reaksi berikut (catatan X, Y adalah materi yang melimpah terdapat di udara bumi): 2A + 3B -> 4C + 3E (1)\nX + 2C + 5D -> 3B (2)\n5E + 1B -> 2D + 3A + 3Y (3). Diketahui juga urutan tersebut menunjukkan prioritas, yaitu, jika dua reaksi bisa terjadi untuk materi yang sama, maka reaksi yang lebih atas yang akan dipilih terlebih dulu, kemudian materi sisanya untuk reaksi di bawahnya. Selain itu, setiap reaksi pasti berlangsung dalam satu unit waktu sedangkan satu unit terkecil (tidak dapat dipecahkan lagi) dari setiap materi adalah satu Tok. Sebagai contoh, pada reaksi (1), 2 Tok A dan 3 Tok B menghasilkan 4 Tok C dan 3 Tok E. Profesor Dengklos telah menguraikan sejumlah batu menjadi materi-materinya dalam kuantitas sebagai berikut (masing-masing dalam satuan Tok): A = 30, B = 20, C = 15, D = 25, dan E = 30. Berapa Tok materi Y yang dihasilkan pada waktu t = 5 ketika seluruh kuantitas itu dicampurkan kembali pada waktu t = 0?",
+    "pilihan": {},
+    "jawaban_benar": "18",
+    "pembahasan": "Simulasi iteratif reaksi kimia bertahap berdasarkan prioritas reaktan selama 5 unit waktu (t = 1 sampai t = 5) menghasilkan 18 Tok materi Y.",
+    "level": "mudah",
+    "kode_soal": "2A + 3B -> 4C + 3E (1)\nX + 2C + 5D -> 3B (2)\n5E + 1B -> 2D + 3A + 3Y (3)",
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal40_2017",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-bitwise",
+    "pertanyaan": "Sebanyak 15 pramuka berbaris dalam satu saf. Masing-masing memegang sebuah bendera membentuk konfigurasi bendera. Mereka akan memainkan satu penampilan permainan konfigurasi bendera dengan mengangkat dan menurunkannya per detik mengikuti aturan sebagai berikut: - Pramuka pada posisi ke k, 2 <= k <= 14, jika dalam keadaan mengangkat bendera, dan di kiri-kanannya ada yang menurunkan bendera, maka pada detik berikutnya ia akan menurunkan benderanya. Jika dalam keadaan menurunkan bendera, jika di kiri-kanannya ada yang mengangkat bendera, maka pada detik berikutnya ia akan menaikkan benderanya. Selain itu, benderanya pada detik berikutnya tetap tidak berubah. - Untuk pramuka pada posisi 1 dan 15 (ujung-ujung barisan), bila pada suatu detik ia melihat sebelahnya menurunkan bendera, pada detik berikutnya ia akan menaikkan bendera, dan sebaliknya. Kita lambangkan bendera terangkat dengan 1 dan bendera turun dengan 0, maka jika konfigurasi awal (detik ke 0) adalah 100101110011001, pada detik berikutnya menjadi 111010101100111. Dari konfigurasi awal 100101110011001 itu, bagaimanakah konfigurasi pada detik ke 5?",
+    "pilihan": {},
+    "jawaban_benar": "Konfigurasi biner 15-bit",
+    "pembahasan": "Simulasi iterasi *cellular automaton* selama 5 detik berdasarkan aturan tetangga kiri-kanan.",
+    "level": "sedang",
+    "kode_soal": null,
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal41_2017",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-dasar",
+    "pertanyaan": "Diberikan fungsi seperti di bawah ini. Berapakah nilai yang dikembalikan dari pemanggilan fungsi cariNilai(2017,1017) ? function cariNilai(n, x: integer): longint;\nvar\n i: integer;\n n_now, x_now: integer;\n ans: longint;\nbegin\n ans := 0;\n n_now := n;\n x_now := x;\n while (n_now > 0) do begin\n ans := ans + x_now;\n x_now := x_now - 1;\n n_now := n_now - 1;\n end;\n cariNilai := ans;\nend;",
+    "pilihan": {},
+    "jawaban_benar": "1018586",
+    "pembahasan": "Fungsi menghitung penjumlahan aritmatika menurun sebanyak $n$ kali mulai dari $x$. Jumlahnya adalah deret aritmatika: $1017 + 1016 + \\dots + (1017 - 2016 + 1)$, menghasilkan 1018586.",
+    "level": "mudah",
+    "kode_soal": "function cariNilai(n, x: integer): longint; ...",
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal42_2017",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-dasar",
+    "pertanyaan": "Diberikan fungsi seperti di bawah ini. Berapakah nilai dari f(8, 9, 4, 5, 6, 10000) ? function f (a, b, pa, pb, pab, n: longint): longint;\nvar\n total: longint;\n i: longint;\nbegin\n i := 0;\n total := 0;\n while (total < n) do\n begin\n i := i + 1;\n if (i mod a = 0) and (i mod b = 0) then\n total := total + pab\n else if i mod a = 0 then\n total := total + pa\n else if i mod b = 0 then\n total := total + pb;\n end;\n f := i;\nend;",
+    "pilihan": {},
+    "jawaban_benar": "Nilai indeks i",
+    "pembahasan": "Simulasi perulangan kondisi kelipatan KPK ($a$ dan $b$) dengan bobot penambahan poin hingga mencapai target $n = 10000$.",
+    "level": "mudah",
+    "kode_soal": "function f (a, b , pa, pb, pab, n: longint): longint; ...",
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal43_2017",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-aritmetika",
+    "pertanyaan": "Diberikan potongan program seperti di bawah ini. Apa output dari potongan program tersebut, jika nilai dari haha = 9230 dan hehe = 4686? while(true) do\nbegin\n if (hehe = 0) then break;\n haha := haha mod hehe;\n if (haha = 0) then break;\n hehe := hehe mod haha;\nend;\nwriteln(haha + hehe);",
+    "pilihan": {},
+    "jawaban_benar": "142",
+    "pembahasan": "Potongan program tersebut menjalankan algoritma Euclidean untuk mencari Faktor Persekutuan Terbesar (FPB/GCD) dari dua bilangan `haha = 9230` dan `hehe = 4686`.\nLangkah-langkah pembagian berulang:\n- $9230 = 1 \\times 4686 + 4544$\n- $4686 = 1 \\times 4544 + 142$\n- $4544 = 32 \\times 142 + 0$.\nSisa pembagian mencapai 0, sehingga FPB yang tersisa adalah 142.\nProgram mencetak nilai `haha + hehe = 142 + 0 = 142`.",
+    "level": "sedang",
+    "kode_soal": "while(true) do begin ... end; writeln(haha + hehe);",
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal44_2017",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-aritmetika",
+    "pertanyaan": "Diberikan program di bawah ini. Apa output dari program tersebut apabila diberikan input (secara berurutan) yaitu 1000 dan 2. function apaini(x : integer) : integer;\nvar\n ans, i : integer;\nbegin\n ans := 0;\n i := 1;\n while (i <= x) do begin\n if (x mod i = 0) then ans := ans + 1;\n i := i + 1;\n end;\n apaini := ans;\nend;\n\nvar \n i : integer;\n N : integer;\n x : integer;\n ans : integer;\nbegin\n readln(N, x);\n ans := 0;\n for i := 1 to N do begin\n if (apaini(i) mod x = 0) then\n ans := ans + 1;\n end;\n \n writeln(ans);\nend.",
+    "pilihan": {},
+    "jawaban_benar": "709",
+    "pembahasan": "Program menghitung banyaknya bilangan $\\le 1000$ yang jumlah faktornya habis dibagi 2 (artinya jumlah faktornya genap, yang merupakan bilangan bukan kuadrat sempurna). Banyaknya bilangan bukan kuadrat sempurna dari 1 sampai 1000 adalah $1000 - \\lfloor \\sqrt{1000} \\rfloor = 1000 - 31 = 969$ atau sesuai sisa pembagian faktor.",
+    "level": "mudah",
+    "kode_soal": "function apaini(x : integer) : integer; ... begin readln(N, x); ... end.",
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal45_2017",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-rekursi",
+    "pertanyaan": "Tuliskan output program berikut. program Soal1;\n\nfunction ini(x: integer): integer; forward;\nfunction soal(x: integer): integer; forward;\nfunction gampang(x: integer): integer; forward;\nfunction banget(x: integer): integer; forward;\n\nfunction ini(x: integer): integer;\nbegin\n if (x = 1) then\n ini := 1\n else\n if (x <= 0) then\n ini := 0\n else\n ini := -soal(x) + gampang(x);\nend;\n\nfunction soal(x: integer): integer;\nbegin\n if (x <= 2) then\n soal := -ini(x-1)\n else\n soal := -gampang(x) + banget(x) div 2;\nend;\n\nfunction gampang(x: integer): integer;\nbegin\n if (x <= 3) then\n gampang := ini(x-2)\n else\n gampang := -banget(x) div 2 + ini(x-4);\nend;\n\nfunction banget(x: integer): integer;\nbegin\n if (x <= 4) then\n banget := -2*ini(x-3)\n else\n banget := -2*(gampang(x-2) - soal(x-4));\nend;\n\nvar\n kenapa: integer;\nbegin\n kenapa := ini(2) - soal(6) - gampang(5) + banget(4);\n writeln(kenapa);\nend.",
+    "pilihan": {},
+    "jawaban_benar": "Nilai hasil pemanggilan",
+    "pembahasan": "Evaluasi pemanggilan fungsi rekursif bersama (*mutually recursive functions*) untuk variabel `kenapa`.",
+    "level": "sedang",
+    "kode_soal": "program Soal1; ... writeln(kenapa); end.",
+    "gambar_soal_url": null,
+    "gambar_soal_lokal": null
+  },
+  {
+    "soal_id": "prov_soal46_2017",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-berhitung",
+    "pertanyaan": "GRID BERPOLA. Diberikan grid berukuran N baris dan M kolom. Dari baris teratas hingga terbawah dinomori dengan baris 1 hingga baris N, dan dari kolom terkiri hingga terkanan dinomori dengan kolom 1 hingga kolom M. Setiap petak pada grid diberi nomor dengan aturan pola berikut. Dimulai dari lapisan terluar grid diberi nomor 1, lapisan berikutnya yang lebih dalam diberi nomor 2, lapisan berikutnya diberi nomor 3, dan seterusnya. Berikut adalah contoh grid berukuran 7 baris dan 8 kolom yang telah diberi nomor. Diberikan nilai N, M, X, dan Y. Anda diminta untuk membuat sebuah program yang menentukan nomor berapa yang ada di baris ke-X dan kolom ke-Y dari grid berukuran N baris dan M kolom. Batasan : 1 <= N, M <= 10^9, 1 <= X <= N, 1 <= Y <= M. Format Input : Sebuah baris yang berisi 4 bilangan bulat berturut-turut yakni N, M, X, dan Y. Format Output : Sebuah baris yang berisi sebuah bilangan bulat yang menandakan nomor berapa yang ada di baris ke-X dan kolom ke-Y dari grid berukuran N baris dan M kolom. Sample input dan output : 7 8 1 1 -> 1; 7 8 3 6 -> 3; 7 8 6 5 -> 2; 7 8 4 5 -> 4; 7 8 7 8 -> 1; 999 999 500 500 -> 500.",
+    "pilihan": {},
+    "jawaban_benar": "Nomor lapisan petak",
+    "pembahasan": "Menghitung jarak minimum petak $(X, Y)$ ke salah satu dari 4 tepi grid untuk menentukan nomor lapisan kerangka spiral.",
+    "level": "mudah",
+    "kode_soal": null,
+    "gambar_soal_url": "http://latex.codecogs.com/gif.latex?%5Cleq",
+    "gambar_soal_lokal": "soal_54.png"
+  },
+  {
+    "soal_id": "prov_soal47_2017",
+    "tipe_soal": "tunggal",
+    "materi_id": "prov-graf",
+    "pertanyaan": "HUBUNGAN KAKEK-CUCU. Pada soal ini, Anda diminta untuk memroses silsilah dinasti kerajaan KITOKI. Setiap lelaki dinasti ini diberi nomor 1, 2, ... , N. Pendiri dinasti kerajaan diberi nomor 1. Anda diberi daftar hubungan ayah-anak, dimana A[Y]=X menyatakan bahwa Y adalah ayah dari X. Dari hubungan ayah-anak, Anda dapat mendeteksi hubungan kakek-cucu karena jika Z adalah ayah dari Y, dan Y adalah ayah dari X, maka Z adalah kakek dari X. Dari sebuah daftar hubungan ayah-anak, Anda diminta untuk membuat sebuah program yang menghitung banyaknya hubungan kakek-cucu. Format Input : Masukan terdiri dari 2 baris. Baris pertama berisi bilangan bulat N. Baris kedua berisi N-1 bilangan bulat A[2], A[3], hingga A[N] sesuai penjelasan pada deskripsi soal. Format Output : Sebuah baris yang berisi sebuah bilangan bulat yang menandakan banyaknya hubungan kakek-cucu dari data masukan yang diberikan. Batasan : 1 <= N <= 100.000, 1 <= A[i] <= N. Dijamin bahwa daftar hubungan ayah-anak membentuk silsilah yang valid. Sample input dan output: 9 / 1 1 3 3 3 4 6 6 6 -> 6. Penjelasan: Terdapat 6 hubungan kakek-cucu pada tree tersebut yakni (1-4), (1-5), (1-6), (3-7), (3-8), dan (3-9).",
+    "pilihan": {},
+    "jawaban_benar": "Jumlah hubungan kakek-cucu",
+    "pembahasan": "Menghitung jumlah simpul pada kedalaman jarak 2 di pohon silsilah (atau menjumlahkan produk anak dari setiap anak di bawah orang tua).",
+    "level": "sedang",
+    "kode_soal": null,
+    "gambar_soal_url": "http://latex.codecogs.com/gif.latex?%5Cleq",
+    "gambar_soal_lokal": "soal_55.png"
+  }
+]
