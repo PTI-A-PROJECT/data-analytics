@@ -13,3 +13,5 @@ __pycache__/
 
 # Knowledge graph lokal graphify — artefak alat bantu, bukan bagian codebase.
 graphify-out/
+.DS_Store
+Archive.zip
