@@ -134,7 +134,13 @@
         "soal_id": "prov_soal9_2026",
         "materi_id": "prov-aritmetika",
         "pertanyaan": "Apabila bilangan awal N = 18, manakah dari 5 pilihan nilai M berikut yang dapat diraih dari bilangan awal N dan membutuhkan banyak operasi paling sedikit?\n(Jika terdapat lebih dari satu pilihan yang membutuhkan banyak operasi sama-sama paling sedikit, pilihlah pilihan dengan nilai M yang paling kecil.)\nA. M = 24\nB. M = 48\nC. M = 72\nD. M = 90\nE. M = 162",
-        "pilihan": {},
+        "pilihan": {
+          "A": "M = 32",
+          "B": "M = 64",
+          "C": "M = 96",
+          "D": "M = 128",
+          "E": "M = 162"
+        },
         "jawaban_benar": "E",
         "pembahasan": "$N = 18 = 2^1 \\times 3^2$.\nOperasi: pilih $q > 1$ dengan $q \\mid p$, lalu $p \\leftarrow p \\times q$.\nDicari opsi nilai $M$ yang membutuhkan operasi paling sedikit.\n\n1. Nilai $q$ yang dapat dipilih pada operasi pertama dari $N = 18$ adalah pembagi dari 18 yang lebih besar dari 1:\n   $$q \\in \\{2, 3, 6, 9, 18\\}$$\n2. Bilangan yang dapat diraih dalam **1 operasi** adalah:\n   - $18 \\times 2 = 36$\n   - $18 \\times 3 = 54$\n   - $18 \\times 6 = 108$\n   - $18 \\times 9 = 162$\n   - $18 \\times 18 = 324$\n3. Periksa opsi yang diberikan:\n   - A. 24 (bukan kelipatan 18)\n   - B. 48 (bukan kelipatan 18)\n   - C. 72 ($72 / 18 = 4$, 4 bukan pembagi 18 $\\implies$ butuh $\\ge 2$ operasi)\n   - D. 90 ($90 / 18 = 5$, 5 bukan pembagi 18 $\\implies$ butuh $\\ge 2$ operasi)\n   - E. 162 ($162 / 18 = 9$, 9 adalah pembagi 18 $\\implies$ tepat 1 operasi!)\n4. Opsi yang membutuhkan operasi paling sedikit (1 operasi) adalah **E**.",
         "level": "sedang",

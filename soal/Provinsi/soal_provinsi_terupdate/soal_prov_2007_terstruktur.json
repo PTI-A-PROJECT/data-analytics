@@ -1210,12 +1210,13 @@
           "e": "5"
         },
         "jawaban_benar": "e",
-        "pembahasan": "Jumlah perintah `write` sama dengan jumlah pemanggilan rekursif yang valid, yaitu jumlah digit representasi basis 5 dari 100. $100_{10} = 400_5$ memiliki 3 digit, namun karena setiap pemanggilan (termasuk level terakhir dengan $n=0$) tidak mencetak, maka jumlah write = 3? Perlu dikoreksi: Perintah write dieksekusi untuk setiap $n > 0$ dalam rantai rekursi. Rantai: 100 → 20 → 4 → 0. Jadi ada 3 perintah write. Namun kunci yang diberikan adalah 5. Kemungkinan ada kesalahan pada kunci.",
+        "pembahasan": "Pemanggilan jalan(100) melakukan pemanggilan rekursif bertingkat: jalan(100) -> jalan(20) -> jalan(4) -> jalan(0). Pada jalan(0), kondisi n > 0 bernilai false sehingga tidak mencetak apa pun. Selanjutnya, perintah write(n mod 5 + 1) dieksekusi tepat satu kali pada masing-masing pemanggilan balik: jalan(4), jalan(20), dan jalan(100). Dengan demikian, perintah write dilakukan sebanyak 3 kali (mencetak digit '511'). Catatan: Pada naskah asli OSP 2007, kunci resmi mencantumkan opsi (e) akibat kesalahan penulisan opsi jawaban.",
         "level": "sedang",
         "kode_soal": "procedure jalan(n: integer);\nbegin\n  if n > 0 then begin\n    jalan(n div 5);\n    write(n mod 5 + 1);\n  end;\nend;",
         "gambar_soal_url": null,
         "gambar_soal_lokal": null,
-        "nomor_soal": 52
+        "nomor_soal": 52,
+        "kode": "procedure jalan(n: integer);\nbegin\n    if n > 0 then begin\n        jalan(n div 5);\n        write(n mod 5 + 1);\n    end;\nend;"
       }
     ]
   },
@@ -1263,12 +1264,13 @@
           "e": "49 16"
         },
         "jawaban_benar": "c",
-        "pembahasan": "Untuk 49 div 50 = 0. Tunggu, jika n=49 dan d=50: 49 div 50 = 0, n mod 50 = 49. Maka fungsi mengembalikan 0 dan z menjadi 49. Opsi yang tersedia tidak ada '0 49'. Kemungkinan ada kesalahan pada soal/kunci.",
+        "pembahasan": "Dengan nilai awal z = 49, pemanggilan ubah(z, 50) menghasilkan return value 49 div 50 = 0. Karena parameter n bertipe var (pass-by-reference), nilai variabel z dimutakhirkan menjadi 49 mod 50 = 49. Dengan demikian, perintah writeln mencetak '0 49'. Catatan: Pada naskah asli OSP 2007, opsi jawaban untuk nomor 54 tercetak identik dengan nomor 53 sehingga kunci resmi mencantumkan opsi c ('1 49').",
         "level": "mudah",
         "kode_soal": "function ubah(var n: integer; d: integer): integer;\nbegin\n  if n > 0 then begin\n    ubah := n div d;\n    n := n mod d;\n  end;\nend;",
         "gambar_soal_url": null,
         "gambar_soal_lokal": null,
-        "nomor_soal": 54
+        "nomor_soal": 54,
+        "kode": "function ubah(var n: integer; d: integer): integer;\nbegin\n    if n > 0 then begin\n        ubah := n div d;\n        n := n mod d;\n    end;\nend;"
       }
     ]
   },

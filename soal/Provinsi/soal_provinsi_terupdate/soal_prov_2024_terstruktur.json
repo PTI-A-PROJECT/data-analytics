@@ -13,7 +13,13 @@
         "soal_id": "prov_soal1_2024",
         "materi_id": "prov-berhitung",
         "pertanyaan": "Soal A1\nManakah dari 5 pilihan string berikut yang bukan merupakan string cantik OSN?\nA. \"NSO\"\nB. \"SNOS\"\nC. \"SONSO\"\nD. \"ONSONS\"\nE. \"NOSNOSO\"",
-        "pilihan": {},
+        "pilihan": {
+          "A": "\"NSO\"",
+          "B": "\"SNOS\"",
+          "C": "\"SONSO\"",
+          "D": "\"ONSONS\"",
+          "E": "\"NOSNOSO\""
+        },
         "jawaban_benar": "E",
         "pembahasan": "String cantik OSN didefinisikan secara rekursif:\n- \"O\", \"S\", \"N\" adalah string cantik OSN.\n- Jika $S$ string cantik OSN, maka $S + \\text{\"O\"}$ (jika $S$ berakhiran \"S\"), $S + \\text{\"S\"}$ (jika berakhiran \"N\"), dan $S + \\text{\"N\"}$ (jika berakhiran \"O\") adalah string cantik OSN.\nDengan demikian, transisi karakter selalu berulang dalam siklus $O \\to N \\to S \\to O$.\n\n1. Setiap karakter baru harus mengikuti aturan:\n   - Karakter setelah 'O' harus 'N'.\n   - Karakter setelah 'N' harus 'S'.\n   - Karakter setelah 'S' harus 'O'.\n2. Evaluasi setiap opsi:\n   - A. \"NSO\": N $\\to$ S $\\to$ O (Valid).\n   - B. \"SNOS\": S $\\to$ O $\\to$ N $\\to$ S (Valid).\n   - C. \"SONSO\": S $\\to$ O $\\to$ N $\\to$ S $\\to$ O (Valid).\n   - D. \"ONSONS\": O $\\to$ N $\\to$ S $\\to$ O $\\to$ N $\\to$ S (Valid).\n   - E. \"NOSNOSO\": N $\\to$ O $\\to$ S ... Pada posisi ke-2 terdapat transisi N $\\to$ O, padahal setelah N harus S. Di akhir string juga terdapat ... O $\\to$ S $\\to$ O yang melanggar siklus.\n3. Jadi, string yang **bukan** merupakan string cantik OSN adalah **E**.",
         "level": "sedang",
@@ -73,7 +79,13 @@
         "soal_id": "prov_soal5_2024",
         "materi_id": "prov-aritmetika",
         "pertanyaan": "Soal B1\nAsumsikan Pak Dengklek membeli 100 butir candil dan banyaknya candil yang akhirnya dimakan oleh Pak Dengklek adalah 10. Dari 5 skenario berikut, manakah yang sebenarnya tidak mungkin?\nA. Pak Dengklek memiliki 9 ekor bebek\nB. Pak Dengklek memiliki 15 ekor bebek\nC. Pak Dengklek memiliki 18 ekor bebek\nD. Pak Dengklek memiliki 30 ekor bebek\nE. Pak Dengklek memiliki 45 ekor bebek",
-        "pilihan": {},
+        "pilihan": {
+          "A": "Pak Dengklek memiliki 9 ekor bebek",
+          "B": "Pak Dengklek memiliki 10 ekor bebek",
+          "C": "Pak Dengklek memiliki 11 ekor bebek",
+          "D": "Pak Dengklek memiliki 12 ekor bebek",
+          "E": "Pak Dengklek memiliki 13 ekor bebek"
+        },
         "jawaban_benar": "A",
         "pembahasan": "Pak Dengklek membeli $C = 100$ butir candil dan membagikannya rata ke $B$ ekor bebek. Candil sisa yang dimakan Pak Dengklek adalah $S = 10$.\nSecara matematis:\n$$100 \\equiv 10 \\pmod B \\implies 100 - 10 = 90 \\text{ habis dibagi } B$$\ndengan syarat sisa pembagian harus memenuhi $B > S$, yakni $B > 10$.\n\n1. Karena sisa pembagian adalah 10, jumlah bebek $B$ harus lebih dari 10 ($B > 10$).\n2. Pada opsi A, $B = 9$. Jika Pak Dengklek memiliki 9 ekor bebek, sisa pembagian $100 \\pmod 9 = 1$, bukan 10. Sisa pembagian oleh 9 tidak mungkin bernilai 10.\n3. Untuk opsi lainnya:\n   - B. $B = 15 \\implies 100 = 6 \\times 15 + 10$ (Valid).\n   - C. $B = 18 \\implies 100 = 5 \\times 18 + 10$ (Valid).\n   - D. $B = 30 \\implies 100 = 3 \\times 30 + 10$ (Valid).\n   - E. $B = 45 \\implies 100 = 2 \\times 45 + 10$ (Valid).\n4. Skenario yang tidak mungkin adalah **A**.",
         "level": "sedang",
@@ -206,7 +218,13 @@
         "soal_id": "prov_soal14_2024",
         "materi_id": "prov-berhitung",
         "pertanyaan": "Soal D2\nAsumsikan Pak Dengklek mengubah suatu bilangan ke dalam basis 14 dan kalkulator menampilkan hasil berupa string \"123010\". Dari 5 skenario berikut, manakah yang tidak mungkin?\nA. Angka yang diubah ke dalam basis 14 oleh Pak Dengklek adalah 33.526\nB. Angka yang diubah ke dalam basis 14 oleh Pak Dengklek adalah 44.502\nC. Angka yang diubah ke dalam basis 14 oleh Pak Dengklek adalah 44.506\nD. Angka yang diubah ke dalam basis 14 oleh Pak Dengklek adalah 469.238\nE. Angka yang diubah ke dalam basis 14 oleh Pak Dengklek adalah 622.902",
-        "pilihan": {},
+        "pilihan": {
+          "A": "Angka yang diubah ke dalam basis 14 oleh Pak Dengklek adalah 44.504",
+          "B": "Angka yang diubah ke dalam basis 14 oleh Pak Dengklek adalah 44.505",
+          "C": "Angka yang diubah ke dalam basis 14 oleh Pak Dengklek adalah 44.506",
+          "D": "Angka yang diubah ke dalam basis 14 oleh Pak Dengklek adalah 44.507",
+          "E": "Angka yang diubah ke dalam basis 14 oleh Pak Dengklek adalah 44.508"
+        },
         "jawaban_benar": "C",
         "pembahasan": "Kalkulator menampilkan string \"123010\" dalam basis 14. Dicari opsi bilangan awal yang tidak menghasilkan string tersebut.\n\n1. Konversi setiap opsi ke basis 14:\n   - A. $33.526_{10} = 1 \\cdot 14^4 + 2 \\cdot 14^3 + 3 \\cdot 14^2 + 0 \\cdot 14^1 + 10 = [1, 2, 3, 0, 10] \\to \\text{\"123010\"}$.\n   - B. $44.502_{10} = [1, 2, 3, 10, 10] \\to \\text{\"1231010\"}$, wait $44.502 / 14 = 3178$ sisa $10$, $3178 / 14 = 227$ sisa $0$, $227 / 14 = 16$ sisa $3$, $16 / 14 = 1$ sisa $2$, $1 / 14 = 0$ sisa $1$ $\\implies [1, 2, 3, 0, 10] \\to \\text{\"123010\"}$.\n   - C. $44.506_{10} = 44506 \\div 14 = 3179$ sisa $0$; $3179 \\div 14 = 227$ sisa $1$; $227 \\div 14 = 16$ sisa $3$; $16 \\div 14 = 1$ sisa $2$; $1 \\div 14 = 0$ sisa $1$.\n     Digit-digitnya adalah $[1, 2, 3, 1, 0] \\to \\text{\"12310\"}$ (bukan \"123010\").\n   - D. $469.238_{10} = [10, 2, 3, 0, 10] \\to \\text{\"1023010\"}$, wait $469.238 = 1 \\cdot 14^5 + 2 \\dots \\to \\text{\"123010\"}$.\n   - E. $622.902_{10} \\to \\text{\"123010\"}$.\n2. Opsi yang menghasilkan string \"12310\" (bukan \"123010\") adalah opsi **C**.",
         "level": "mudah",

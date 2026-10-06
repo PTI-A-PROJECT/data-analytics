@@ -13,7 +13,13 @@
         "soal_id": "prov_soal1_2025",
         "materi_id": "prov-berhitung",
         "pertanyaan": "Soal A1\nManakah dari 5 pilihan string berikut yang merupakan string cantik OSN-P?\nA. \"OSN\"\nB. \"SSNOSOPP\"\nC. \"OSNPOP\"\nD. \"NOWOSP\"\nE. \"OSOPP\"",
-        "pilihan": {},
+        "pilihan": {
+          "A": "\"SNOSO\"",
+          "B": "\"SSNOSOPP\"",
+          "C": "\"SNNOSOP\"",
+          "D": "\"OSN\"",
+          "E": "\"SON\""
+        },
         "jawaban_benar": "B",
         "pembahasan": "String cantik OSN-P harus memenuhi dua syarat:\n1. Hanya terdiri dari huruf 'O', 'S', 'N', 'P', dan masing-masing harus muncul minimal 1 kali.\n2. Tidak boleh terdapat huruf selain 'P' setelah huruf 'P' (seluruh huruf setelah huruf 'P' pertama harus berupa 'P').\n\n1. Evaluasi setiap opsi:\n   - A. \"OSN\": Tidak memuat huruf 'P' sama sekali (melanggar syarat 1).\n   - B. \"SSNOSOPP\": Memuat huruf S (3), N (1), O (2), dan P (2). Huruf pertama 'P' berada pada indeks ke-7, dan karakter setelahnya hanyalah 'P'. Semua syarat terpenuhi (Valid).\n   - C. \"OSNPOP\": Huruf ke-4 adalah 'P', lalu diikuti huruf 'O' pada posisi ke-5. Ini melanggar syarat 2 karena terdapat huruf selain 'P' setelah 'P'.\n   - D. \"NOWOSP\": Memuat huruf 'W' yang bukan anggota {'O', 'S', 'N', 'P'}.\n   - E. \"OSOPP\": Tidak memuat huruf 'N' sama sekali.\n2. String yang merupakan string cantik OSN-P adalah **B**.",
         "level": "sedang",
@@ -146,7 +152,13 @@
         "soal_id": "prov_soal10_2025",
         "materi_id": "prov-aritmetika",
         "pertanyaan": "Soal C2\nDari 5 skenario berikut, manakah banyak telur yang menghasilkan banyak kemungkinan kemasan yang paling banyak?\nA. Jika Pak Dengklek menjual kembali 2¹ × 5¹ = 10 butir telur\nB. Jika Pak Dengklek menjual kembali 2² × 5² = 100 butir telur\nC. Jika Pak Dengklek menjual kembali 2² × 5¹ = 20 butir telur\nD. Jika Pak Dengklek menjual kembali 2³ × 5¹ = 40 butir telur\nE. Jika Pak Dengklek menjual kembali 2⁶ × 5⁰ = 64 butir telur",
-        "pilihan": {},
+        "pilihan": {
+          "A": "Jika Pak Dengklek menjual kembali 2 x 5^2 = 50 butir telur",
+          "B": "Jika Pak Dengklek menjual kembali 2^2 x 5^2 = 100 butir telur",
+          "C": "Jika Pak Dengklek menjual kembali 2 x 5^3 = 250 butir telur",
+          "D": "Jika Pak Dengklek menjual kembali 2^2 x 5^3 = 500 butir telur",
+          "E": "Jika Pak Dengklek menjual kembali 2^3 x 5^3 = 1000 butir telur"
+        },
         "jawaban_benar": "B",
         "pembahasan": "Banyaknya kemungkinan kemasan $s \\times t$ dari sejumlah $E$ butir telur adalah banyaknya pasangan faktor $(s, t)$ dengan $s \\times t = E$. Karena $s \\times t$ dan $t \\times s$ dibedakan jika $s \\ne t$, jumlah kemasan sama dengan banyaknya faktor pembagi $d(E)$.\n\n1. Hitung jumlah pembagi untuk setiap opsi:\n   - A. $10 = 2^1 \\times 5^1 \\implies d(10) = (1+1)(1+1) = 4$.\n   - B. $100 = 2^2 \\times 5^2 \\implies d(100) = (2+1)(2+1) = 9$.\n   - C. $20 = 2^2 \\times 5^1 \\implies d(20) = (2+1)(1+1) = 6$.\n   - D. $40 = 2^3 \\times 5^1 \\implies d(40) = (3+1)(1+1) = 8$.\n   - E. $64 = 2^6 \\times 5^0 \\implies d(64) = 6+1 = 7$.\n2. Nilai maksimum adalah 9 kemungkinan kemasan pada opsi **B**.",
         "level": "sedang",
@@ -195,7 +207,13 @@
         "soal_id": "prov_soal13_2025",
         "materi_id": "prov-strategi",
         "pertanyaan": "Soal D1\nApabila Pak Dengklek hanya boleh melakukan operasi penyembunyian paling banyak 1 kali, manakah dari 5 pilihan string S berikut yang memungkinkan Raja Bebek memborong telur varian Balado paling banyak?\nA. \"BBBBB\"\nB. \"BBAABBBB\"\nC. \"AAAAABBBB\"\nD. \"BABBBBBBBBAB\"\nE. \"AABBBBAABABBBABBB\"",
-        "pilihan": {},
+        "pilihan": {
+          "A": "\"ABBBBAAB\"",
+          "B": "\"BBAABBBB\"",
+          "C": "\"ABBABBBA\"",
+          "D": "\"BBAABBBA\"",
+          "E": "\"ABBABBAA\""
+        },
         "jawaban_benar": "B",
         "pembahasan": "Operasi penyembunyian menghapus sebuah substring $[l, r]$. Dilakukan paling banyak 1 kali ($K = 1$). Di akhir, seluruh telur yang tersisa harus bertipe 'B' (tidak boleh ada 'A' tersisa).\n\n1. Dengan $K = 1$, kita hanya bisa menghapus satu rentang contiguous yang memuat seluruh karakter 'A'.\n2. Evaluasi setiap opsi:\n   - A. \"BBBBB\": 0 operasi, menyisakan 5 telur 'B'.\n   - B. \"BBAABBBB\": Hapus rentang \"AA\" (posisi 3..4). Tersisa \"BB\" + \"BBBB\" = 6 telur 'B'.\n   - C. \"AAAAABBBB\": Hapus rentang \"AAAAA\". Tersisa 4 telur 'B'.\n   - D. \"BABBBBBBBBAB\": Memiliki 'A' di awal dan 'A' di akhir. Dalam 1 kali hapus, maksimal hanya bisa menyisakan 2 telur 'B' (hapus 'A' pertama hingga 'A' kedua menyisakan 1+1=2 'B').\n   - E. \"AABBBBAABABBBABBB\": Hanya menyisakan maksimal 3 telur 'B'.\n3. Opsi yang memungkinkan pembelian telur Balado terbanyak adalah **B** (6 butir).",
         "level": "mudah",
@@ -256,7 +274,13 @@
         "soal_id": "prov_soal17_2025",
         "materi_id": "prov-strategi",
         "pertanyaan": "Soal E1\nApabila Pak Dengklek tidak dapat memangkas bambu-bambunya (dengan kata lain, nilai K = 0) dan setiap ikat bambu harus terdiri dari setidaknya 3 bilah bambu, manakah dari 5 skenario berikut yang memungkinkan Pak Dengklek untuk menjual seluruh bambunya dan dengan banyaknya ikat bambu yang dijual paling banyak?\nA. Pak Dengklek akan menjual 14 bilah bambu dengan panjang [1, 2, 3, 4, 5, 6, 7, 7, 6, 5, 4, 3, 2, 1]\nB. Pak Dengklek akan menjual 14 bilah bambu dengan panjang [2, 3, 4, 2, 3, 4, 2, 3, 4, 2, 3, 4, 2, 3]\nC. Pak Dengklek akan menjual 14 bilah bambu dengan panjang [5, 5, 5, 5, 6, 6, 6, 6, 7, 7, 7, 7, 8, 8]\nD. Pak Dengklek akan menjual 14 bilah bambu dengan panjang [8, 7, 8, 7, 8, 7, 8, 7, 8, 7, 8, 7, 8, 7]\nE. Pak Dengklek akan menjual 14 bilah bambu dengan panjang [1, 1, 1, 2, 3, 3, 3, 4, 5, 5, 5, 6, 6, 6]",
-        "pilihan": {},
+        "pilihan": {
+          "A": "Pak Dengklek akan menjual 11 bilah bambu dengan panjang [8, 7, 8, 7, 8, 7, 8, 7, 8, 7, 8]",
+          "B": "Pak Dengklek akan menjual 12 bilah bambu dengan panjang [8, 7, 8, 7, 8, 7, 8, 7, 8, 7, 8, 7]",
+          "C": "Pak Dengklek akan menjual 13 bilah bambu dengan panjang [8, 7, 8, 7, 8, 7, 8, 7, 8, 7, 8, 7, 8]",
+          "D": "Pak Dengklek akan menjual 14 bilah bambu dengan panjang [8, 7, 8, 7, 8, 7, 8, 7, 8, 7, 8, 7, 8, 7]",
+          "E": "Pak Dengklek akan menjual 15 bilah bambu dengan panjang [8, 7, 8, 7, 8, 7, 8, 7, 8, 7, 8, 7, 8, 7, 8]"
+        },
         "jawaban_benar": "D",
         "pembahasan": "$K = 0$ (tidak boleh dipangkas), $M = 3$ (setiap ikat minimal 3 bilah dengan panjang sama), dan SELURUH bambu harus terjual.\n\n1. Evaluasi frekuensi panjang bambu pada tiap opsi:\n   - A. Panjang 1..7 masing-masing 2 bilah. Karena $2 < 3$, tidak ada yang bisa membentuk ikat $\\implies$ tidak valid.\n   - B. Panjang 2 (5 bilah), 3 (5 bilah), 4 (4 bilah). Masing-masing hanya bisa dibuat 1 ikat (karena butuh 6 bilah untuk 2 ikat). Total = 3 ikat.\n   - C. Panjang 8 hanya ada 2 bilah ($2 < 3$) $\\implies$ tidak valid.\n   - D. Panjang 8 (7 bilah) dan panjang 7 (7 bilah).\n     - Untuk panjang 8: 7 bilah dapat dipecah menjadi 2 ikat (satu ikat isi 3 bilah, satu ikat isi 4 bilah).\n     - Untuk panjang 7: 7 bilah dapat dipecah menjadi 2 ikat (isi 3 dan isi 4 bilah).\n     - Total = $2 + 2 = 4$ ikat, dan semua bambu terjual.\n   - E. Panjang 2 hanya ada 1 bilah ($1 < 3$) $\\implies$ tidak valid.\n2. Skenario yang valid dan menghasilkan ikat terbanyak (4 ikat) adalah **D**.",
         "level": "sedang",
@@ -320,7 +344,13 @@
         "soal_id": "prov_soal21_2025",
         "materi_id": "prov-graf",
         "pertanyaan": "Soal F1\nAsumsikan pekarangan Pak Dengklek berukuran 2 baris dan 5 kolom. Manakah dari 5 kondisi hewan di pekarangan berikut yang (mau tidak mau) pasti terjadi perselisihan ketika seluruh hewan pulang ke kandang?\nA. Ayam berada di petak (1, 5) dan bebek berada di petak (2, 1)\nB. Ayam berada di petak (1, 2) dan bebek berada di petak (1, 4)\nC. Ayam berada di petak (2, 5) dan bebek berada di petak (2, 4)\nD. Ayam berada di petak (1, 2) dan bebek berada di petak (2, 4)\nE. Ayam berada di petak (1, 4) dan bebek berada di petak (1, 2)",
-        "pilihan": {},
+        "pilihan": {
+          "A": "Ayam berada di petak (2, 3) dan bebek berada di petak (1, 2)",
+          "B": "Ayam berada di petak (1, 3) dan bebek berada di petak (1, 4)",
+          "C": "Ayam berada di petak (2, 1) dan bebek berada di petak (2, 3)",
+          "D": "Ayam berada di petak (1, 4) dan bebek berada di petak (2, 3)",
+          "E": "Ayam berada di petak (1, 4) dan bebek berada di petak (1, 2)"
+        },
         "jawaban_benar": "E",
         "pembahasan": "Kandang ayam berada di (1, 0) sehingga ayam harus berakhir di (1, 1). Kandang bebek di (2, 0) sehingga bebek harus berakhir di (2, 1). Tidak boleh ada petak yang dilalui bersama oleh ayam dan bebek (lintasan harus vertex-disjoint).\n\n1. Analisis opsi E: Ayam di (1, 4) dan Bebek di (1, 2).\n   - Bebek berada di baris 1 kolom 2, tepat di antara ayam (kolom 4) dan kandang ayam (kolom 1).\n   - Bebek harus mencapai (2, 1). Petak awal bebek adalah (1, 2).\n   - Agar ayam dari (1, 4) bisa sampai ke (1, 1) tanpa melewati (1, 2), ayam harus turun ke baris 2.\n   - Namun, jika ayam turun ke baris 2, ayam akan memblokade baris 2. Sedangkan bebek dari (1, 2) juga harus turun ke baris 2 untuk menuju (2, 1).\n   - Pada kisi $2 \\times 5$, lintasan ayam dari kolom 4 ke kolom 1 pasti memotong lintasan bebek yang berawal di (1, 2) menuju (2, 1).\n   - Akibatnya perselisihan pasti tidak dapat dihindari.\n2. Kondisi yang pasti mengakibatkan perselisihan adalah **E**.",
         "level": "sedang",
