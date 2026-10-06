@@ -1,7 +1,8 @@
 [
   {
-    "id_asli": "kab_soal1_2007",
+    "soal_id": "kab_soal1_2007",
     "tipe": "tunggal",
+    "materi_id": "kab-kombinatorika",
     "soal": "Jika n! = n x (n-1) x (n-2) x ... x 1 untuk setiap bilangan bulat positif n, dan C(a, b) = a!/(b!(a-b)!), untuk a > b, keduanya bilangan bulat positif. Berapakah C(7, 3) x C(4, 2) x C(2,1) x C(1,1) ?",
     "pilihan": {
       "a": "1240",
@@ -13,13 +14,14 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "b",
+    "kunci": "b",
     "pembahasan": "Kita hitung masing-masing kombinasi:\n- C(7, 3) = 7! / (3! * 4!) = (7 x 6 x 5) / (3 x 2 x 1) = 35\n- C(4, 2) = 4! / (2! * 2!) = (4 x 3) / (2 x 1) = 6\n- C(2, 1) = 2! / (1! * 1!) = 2\n- C(1, 1) = 1! / (1! * 0!) = 1\n\nHasil perkalian = 35 x 6 x 2 x 1 = 420.",
-    "tingkat_kesulitan": "sedang"
+    "level": "sedang"
   },
   {
-    "id_asli": "kab_soal2_2007",
+    "soal_id": "kab_soal2_2007",
     "tipe": "tunggal",
+    "materi_id": "kab-kombinatorika",
     "soal": "Berapa banyak kemungkinan solusi untuk x + y + z = 11, jika x, y, z adalah bilanganbilangan bulat positif dan tidak ada yang sama harganya?",
     "pilihan": {
       "a": "5",
@@ -31,13 +33,14 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "c",
+    "kunci": "c",
     "pembahasan": "Cari kombinasi 3 bilangan positif unik (terurut x < y < z) yang jumlahnya 11:\n1. (1, 2, 8)\n2. (1, 3, 7)\n3. (1, 4, 6)\n4. (2, 3, 6)\n5. (2, 4, 5)\nAda 5 kombinasi unik terurut.\nKarena nilai x, y, dan z boleh ditukar-tukar posisinya (permutasi), setiap kombinasi memiliki 3! = 6 cara penyusunan.\nTotal solusi = 5 x 6 = 30.",
-    "tingkat_kesulitan": "sedang"
+    "level": "sedang"
   },
   {
-    "id_asli": "kab_soal3_2007",
+    "soal_id": "kab_soal3_2007",
     "tipe": "tunggal",
+    "materi_id": "kab-kombinatorika",
     "soal": "Berapa banyak kemungkinan solusi untuk x + y + z = 11, jika x, y, z adalah bilangan-bilangan bulat positif dan memenuhi hubungan x < y < z ?",
     "pilihan": {
       "a": "5",
@@ -49,13 +52,14 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "a",
+    "kunci": "a",
     "pembahasan": "Karena disyaratkan x < y < z (terurut pasti), kita hanya menghitung kombinasi bilangan bulat positif yang memenuhi:\n1. 1 + 2 + 8 = 11\n2. 1 + 3 + 7 = 11\n3. 1 + 4 + 6 = 11\n4. 2 + 3 + 6 = 11\n5. 2 + 4 + 5 = 11\nTotalnya ada 5 solusi.",
-    "tingkat_kesulitan": "sedang"
+    "level": "sedang"
   },
   {
-    "id_asli": "kab_soal4_2007",
+    "soal_id": "kab_soal4_2007",
     "tipe": "tunggal",
+    "materi_id": "kab-kombinatorika",
     "soal": "Berapa banyak kemungkinan solusi untuk x + y + z = 11, jika x, y, z adalah bilangan-bilangan bulat positif dan memenuhi hubungan x y z ?",
     "pilihan": {
       "a": "5",
@@ -67,13 +71,14 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": "soal_4.png",
-    "jawaban_benar": "b",
+    "kunci": "b",
     "pembahasan": "Hubungan yang dimaksud adalah x <= y <= z. Selain 5 kombinasi unik di mana ketiganya berbeda (1,2,8; 1,3,7; 1,4,6; 2,3,6; 2,4,5), kita sertakan kombinasi yang memiliki elemen sama:\n6. 1 + 1 + 9 = 11 (1 <= 1 <= 9)\n7. 1 + 5 + 5 = 11 (1 <= 5 <= 5)\n8. 2 + 2 + 7 = 11 (2 <= 2 <= 7)\n9. 3 + 3 + 5 = 11 (3 <= 3 <= 5)\n10. 3 + 4 + 4 = 11 (3 <= 4 <= 4)\nTotal kemungkinan solusi ada 10.",
-    "tingkat_kesulitan": "sedang"
+    "level": "sedang"
   },
   {
-    "id_asli": "kab_soal5_2007",
+    "soal_id": "kab_soal5_2007",
     "tipe": "tunggal",
+    "materi_id": "kab-kombinatorika",
     "soal": "Berapa banyak kemungkinan solusi untuk x + y + z = 11, jika x, y, z adalah bilangan-bilangan bulat positif dan memenuhi hubungan x+z < 2y ?",
     "pilihan": {
       "a": "5",
@@ -85,13 +90,14 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "e",
+    "kunci": "e",
     "pembahasan": "Diketahui x + y + z = 11, maka x + z = 11 - y.\nSubstitusi ke pertidaksamaan x + z < 2y:\n11 - y < 2y => 3y > 11 => y > 3,66.\nKarena y bilangan bulat positif, nilai y yang mungkin adalah y = 4, 5, 6, 7, ...\n\n- Untuk y = 4: x + z = 7. Karena x, z >= 1, nilai x yang mungkin: 1, 2, 3, 4, 5, 6 (ada 6 pasangan).\n- Untuk y = 5: x + z = 6. Nilai x yang mungkin: 1, 2, 3, 4, 5 (ada 5 pasangan).\n- Untuk y = 6: x + z = 5. Nilai x yang mungkin: 1, 2, 3, 4 (ada 4 pasangan).\n- Untuk y = 7: x + z = 4. Nilai x yang mungkin: 1, 2, 3 (ada 3 pasangan).\n- Untuk y = 8: x + z = 3. Nilai x yang mungkin: 1, 2 (ada 2 pasangan).\n- Untuk y = 9: x + z = 2. Nilai x yang mungkin: 1 (ada 1 pasangan).\n\nTotal kemungkinan solusi = 6 + 5 + 4 + 3 + 2 + 1 = 21.",
-    "tingkat_kesulitan": "mudah"
+    "level": "mudah"
   },
   {
-    "id_asli": "kab_soal6_2007",
+    "soal_id": "kab_soal6_2007",
     "tipe": "tunggal",
+    "materi_id": "kab-kombinatorika",
     "soal": "Enam ekor ayam masuk ke dalam 3 buah kandang yang semula kosong. Berapa jumlah maksimum yang mungkin ayam-ayam dalam satu kandang?",
     "pilihan": {
       "a": "0",
@@ -103,13 +109,14 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "e",
+    "kunci": "e",
     "pembahasan": "Karena tidak ada syarat bahwa setiap kandang harus terisi, seluruh 6 ekor ayam bisa saja masuk ke dalam 1 kandang yang sama, sehingga 2 kandang lainnya kosong. Maksimum ayam dalam satu kandang adalah 6.",
-    "tingkat_kesulitan": "mudah"
+    "level": "mudah"
   },
   {
-    "id_asli": "kab_soal7_2007",
+    "soal_id": "kab_soal7_2007",
     "tipe": "tunggal",
+    "materi_id": "kab-kombinatorika",
     "soal": "Enam ekor ayam masuk ke dalam 3 buah kandang yang semula kosong. Berapa jumlah maksimum yang mungkin ayam-ayam dalam satu kandang jika setiap kandang pasti ada ayam di dalamnya?",
     "pilihan": {
       "a": "0",
@@ -121,13 +128,14 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "d",
+    "kunci": "d",
     "pembahasan": "Agar 1 kandang memiliki jumlah ayam semaksimal mungkin, 2 kandang sisanya diisi dengan jumlah ayam seminimal mungkin, yaitu masing-masing 1 ekor ayam.\nMaka kandang pertama dapat berisi: 6 - 1 - 1 = 4 ekor ayam.",
-    "tingkat_kesulitan": "mudah"
+    "level": "mudah"
   },
   {
-    "id_asli": "kab_soal8_2007",
+    "soal_id": "kab_soal8_2007",
     "tipe": "tunggal",
+    "materi_id": "kab-simulasi",
     "soal": "Satu lembar kertas berukuran 19 cm x 30 cm akan ditempeli prangko-prangko yang berbentuk sama. Ukuran masing-masing dari perangko-perangko tersebut adalah 3 cm x 3 cm. Jarak antar perangko di kertas tidak boleh kurang dari 1 cm. Dari pinggiran kertas selebar minimal 2 cm harus dikosongkan. Berapa banyak perangko (utuh!) yang bisa ditempelkan paling banyak?",
     "pilihan": {
       "a": "36",
@@ -139,13 +147,14 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "c",
+    "kunci": "c",
     "pembahasan": "Area efektif penempelan prangko setelah dikurangi marjin pinggir minimal 2 cm di setiap sisi:\n- Lebar efektif = 19 - 2(2) = 15 cm\n- Panjang efektif = 30 - 2(2) = 26 cm\n\nSetiap prangko butuh 3 cm plus jarak antar prangko 1 cm (efektif per prangko butuh slot 4 cm, kecuali prangko terakhir di ujung hanya butuh 3 cm):\n- Jumlah prangko pada arah lebar (15 cm): 4 x k - 1 <= 15 => 4k <= 16 => k = 4 prangko.\n- Jumlah prangko pada arah panjang (26 cm): 4 x m - 1 <= 26 => 4m <= 27 => m = 6 prangko.\n\nTotal prangko maksimal = 4 x 6 = 24 buah.",
-    "tingkat_kesulitan": "sedang"
+    "level": "sedang"
   },
   {
-    "id_asli": "kab_soal9_2007",
+    "soal_id": "kab_soal9_2007",
     "tipe": "tunggal",
+    "materi_id": "kab-graf",
     "soal": "Sebuah roda menggelinding (tanpa slip) dilintasan no 1 yang berbentuk lingkaran sempurna. Jika roda memiliki jari-jari 30cm, dan untuk kembali keposisi semula roda berputar sebanyak tepat 10 kali. Sebuah lintasan lain yaitu lintasan no 2 sejajar lintasan no 1 tetapi berdiameter 1 meter lebih pendek dari no 1 (Catatan: berarti keduanya berbentuk lingkaran yang bertitik pusat sama). Jika roda tsb digelindingkan pada lintasan no 2 berapa banyakkah putaran yang dialami roda tersebut sekarang untuk kembali ke posisi semula?",
     "pilihan": {
       "a": "Antara 5 - 6 kali",
@@ -157,13 +166,14 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "d",
+    "kunci": "d",
     "pembahasan": "Keliling roda = 2 x pi x 30 = 60pi cm = 0.6pi meter.\nPanjang lintasan 1 = 10 x keliling roda = 10 x 0.6pi = 6pi meter.\nKeliling lintasan 1 = pi x D1 = 6pi meter => Diameter lintasan 1 (D1) = 6 meter.\n\nLintasan 2 berdiameter 1 meter lebih pendek, maka D2 = 6 - 1 = 5 meter.\nPanjang lintasan 2 = pi x D2 = 5pi meter.\n\nBanyaknya putaran pada lintasan 2 = Panjang lintasan 2 / Keliling roda\n= 5pi / 0.6pi = 5 / 0.6 = 8.33 kali.\nNilai 8.33 berada di antara 8 - 9 kali (jawaban d, atau sesuai rentang antara 8 - 9 kali).",
-    "tingkat_kesulitan": "sedang"
+    "level": "sedang"
   },
   {
-    "id_asli": "kab_soal10_2007",
+    "soal_id": "kab_soal10_2007",
     "tipe": "tunggal",
+    "materi_id": "kab-kombinatorika",
     "soal": "Seutas benang yang semula memiliki panjang 1 meter dilipat dua dengan mempertemukan kedua ujungnya, dari hasilnya lalu dilipatdua lagi beberapa kali hingga terlipat-lipat dengan panjang lipatan terakhir adalah yang paling panjang tetapi kurang dari 1 cm. Berapa kali pelipatan yang telah dilakukan hingga ukuran tersebut?",
     "pilihan": {
       "a": "6",
@@ -175,13 +185,14 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "b",
+    "kunci": "b",
     "pembahasan": "Panjang awal = 1 meter = 100 cm.\nSetiap pelipatan membagi panjang menjadi setengahnya (100 / 2^n cm).\nKita mencari n terkecil sehingga 100 / 2^n < 1 cm:\n- n = 6: 100 / 64 = 1.5625 cm (masih > 1 cm)\n- n = 7: 100 / 128 = 0.78125 cm (sudah < 1 cm)\n\nJadi pelipatan dilakukan sebanyak 7 kali.",
-    "tingkat_kesulitan": "mudah"
+    "level": "mudah"
   },
   {
-    "id_asli": "kab_soal11_2007",
+    "soal_id": "kab_soal11_2007",
     "tipe": "tunggal",
+    "materi_id": "kab-kombinatorika",
     "soal": "Berapakah 7 450 mod 100 ? (Catatan: n mod m adalah sisa pembagian n oleh m, misalnya 41 mod 7 = 6 karena 41 - (7 x 5) = 6).",
     "pilihan": {
       "a": "1",
@@ -193,13 +204,14 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "c",
+    "kunci": "c",
     "pembahasan": "Menghitung 7^450 mod 100:\n- 7^1 mod 100 = 7\n- 7^2 mod 100 = 49\n- 7^3 mod 100 = 43\n- 7^4 mod 100 = 01\nPola berulang setiap periode 4.\n\n450 mod 4 = 2.\nMaka 7^450 mod 100 ≡ 7^2 mod 100 = 49.",
-    "tingkat_kesulitan": "sedang"
+    "level": "sedang"
   },
   {
-    "id_asli": "kab_soal12_2007",
+    "soal_id": "kab_soal12_2007",
     "tipe": "tunggal",
+    "materi_id": "kab-kombinatorika",
     "soal": "Jika a dan b adalah bilangan prima terbesar yang dapat membagi 7007, berapakah a+b?",
     "pilihan": {
       "a": "24",
@@ -211,18 +223,18 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "a",
+    "kunci": "a",
     "pembahasan": "Faktorisasi prima dari 7007:\n7007 = 7 x 1001\n1001 = 7 x 11 x 13\nJadi 7007 = 7^2 x 11 x 13.\n\nFaktor-faktor prima dari 7007 adalah 7, 11, dan 13.\n2 bilangan prima terbesar adalah a = 13 dan b = 11.\nMaka a + b = 13 + 11 = 24.",
-    "tingkat_kesulitan": "mudah"
+    "level": "mudah"
   },
   {
     "tipe": "cerita",
-    "deskripsi_soal": "Deskripsi Untuk Soal Nomor 13 dan 17\n Si Ani adalah seorang anak yang suka berubah-ubah suasana hatinya yang ternyata dipengaruhi cuaca pada malam harinya. Jika hari ini hatinya berseri-seri, dan di malam hari nanti terjadi hujan maka besok ia pasti akan pemurung. Kalau tidak, besoknya menjadi biasa-biasa saja. Jika hari ini biasa-biasa saja, kemudian malam hari tidak hujan maka besoknya berseri-seri kembali. Kalau turun hujan, besoknya menjadi apatis. Jika hari ini pemurung, lalu malamnya tidak hujan, besoknya menjadi biasa-biasa saja. Kalau turun hujan, besoknya menjadi pemarah. Jika hari ini pemarah, lalu malamnya turun hujan ia menjadi apatis keesokan harinya. Kalau tidak, ia menjadi biasa-biasa saja. Jika hari ini apatis, lalu malamnya turun hujan besoknya ia menjadi pemurung. Kalau tidak, ia menjadi berseri-seri kembali.",
+    "deskripsi_soal": "Deskripsi Untuk Nomor 13 sampai dengan 17\n Si Ani adalah seorang anak yang suka berubah-ubah suasana hatinya yang ternyata dipengaruhi cuaca pada malam harinya. Jika hari ini hatinya berseri-seri, dan di malam hari nanti terjadi hujan maka besok ia pasti akan pemurung. Kalau tidak, besoknya menjadi biasa-biasa saja. Jika hari ini biasa-biasa saja, kemudian malam hari tidak hujan maka besoknya berseri-seri kembali. Kalau turun hujan, besoknya menjadi apatis. Jika hari ini pemurung, lalu malamnya tidak hujan, besoknya menjadi biasa-biasa saja. Kalau turun hujan, besoknya menjadi pemarah. Jika hari ini pemarah, lalu malamnya turun hujan ia menjadi apatis keesokan harinya. Kalau tidak, ia menjadi biasa-biasa saja. Jika hari ini apatis, lalu malamnya turun hujan besoknya ia menjadi pemurung. Kalau tidak, ia menjadi berseri-seri kembali.",
     "gambar_url_deskripsi": null,
     "gambar_lokal_deskripsi": null,
     "pertanyaan": [
       {
-        "id_asli": "kab_soal13_2007",
+        "soal_id": "kab_soal13_2007",
         "soal": "Jika hari ini biasa-biasa saja lalu 4 malam berturut turun hujan kecuali malam ke 3 tidak turun hujan, bagaimanakah suasana hatinya pada hari berikutnya setelah 4 malam tersebut?",
         "pilihan": {
           "a": "Pemurung",
@@ -232,12 +244,13 @@
           "e": "Apatis"
         },
         "kode": null,
-        "jawaban_benar": "e",
+        "kunci": "e",
         "pembahasan": "Aturan transisi saat Hujan (H) dan Tidak Hujan (T):\n- Berseri (B) -> H: Pemurung (M), T: Biasa (S)\n- Biasa (S) -> H: Apatis (A), T: B\n- Pemurung (M) -> H: Pemarah (R), T: S\n- Pemarah (R) -> H: A, T: S\n- Apatis (A) -> H: M, T: B\n\nKondisi: Awal = Biasa (S), Urutan malam = [Hujan, Hujan, Tidak Hujan, Hujan]\n- Hari 0: Biasa (S)\n- Malam 1 (Hujan): S -> Apatis (A)\n- Malam 2 (Hujan): A -> Pemurung (M)\n- Malam 3 (Tidak Hujan): M -> Biasa (S)\n- Malam 4 (Hujan): S -> Apatis (A) / Pemurung (M jika dari jalur B/A)\nMari cek ulang transisi:\n- Hari 0: Biasa (S)\n- M1 (H): S -> A\n- M2 (H): A -> M\n- M3 (T): M -> S\n- M4 (H): S -> A. (Jika opsi Apatis e, jawaban e. Namun jika M3 adalah M -> S lalu M4 -> A, kondisi akhir adalah Apatis/Pemurung).",
-        "tingkat_kesulitan": "sedang"
+        "level": "sedang",
+        "materi_id": "kab-simulasi"
       },
       {
-        "id_asli": "kab_soal14_2007",
+        "soal_id": "kab_soal14_2007",
         "soal": "Jika hari ini berseri-seri kemudian 7 malam berturut-turut hujan, maka bagaimanakah hari berikutnya?",
         "pilihan": {
           "a": "Pemurung",
@@ -247,12 +260,13 @@
           "e": "Apatis"
         },
         "kode": null,
-        "jawaban_benar": "a",
+        "kunci": "a",
         "pembahasan": "Malam selalu Hujan (H):\n- Hari 0: Berseri (B)\n- Hari 1 (H1): B -> Pemurung (M)\n- Hari 2 (H2): M -> Pemarah (R)\n- Hari 3 (H3): R -> Apatis (A)\n- Hari 4 (H4): A -> Pemurung (M)\n\nTerlihat siklus berulang setiap 3 hari untuk Hujan terus-menerus: M -> R -> A -> M...\n- Hari 1: M\n- Hari 2: R\n- Hari 3: A\n- Hari 4: M\n- Hari 5: R\n- Hari 6: A\n- Hari 7: M\nJika dihitung transisi 7 malam: 1(M), 2(R), 3(A), 4(M), 5(R), 6(A), 7(M/R). Untuk 7 malam berturut-turut hujan, hari ke-7 setelah berseri adalah Pemarah/Pemurung sesuai hitungan siklus (7 mod 3 = 1 -> Pemurung/Pemarah).",
-        "tingkat_kesulitan": "sedang"
+        "level": "sedang",
+        "materi_id": "kab-simulasi"
       },
       {
-        "id_asli": "kab_soal15_2007",
+        "soal_id": "kab_soal15_2007",
         "soal": "Jika hari ini pemurung dan diketahui 4 malam terakhir hujan terus, maka bagaimanakah suasana harinya pada hari 4 hari yang lalu?",
         "pilihan": {
           "a": "Pasti pemurung",
@@ -262,12 +276,13 @@
           "e": "Selain biasa-biasa, mungkin juga pemarah"
         },
         "kode": null,
-        "jawaban_benar": "b",
+        "kunci": "b",
         "pembahasan": "Jika malam selalu hujan, transisi ke depan adalah: ... -> M -> R -> A -> M -> R -> A -> ...\nMundur 1 hari dari Pemurung (M) pada kondisi hujan terus-menerus haruslah Apatis (A), mundur 2 hari R, mundur 3 hari M, mundur 4 hari A. Namun, perhatikan bahwa kondisi tertentu tidak dapat dicapai atau kontradiktif jika siklus berulang penuh tidak memiliki pendahulu yang sah tanpa keadaan khusus, sehingga kondisi ini dinyatakan tidak mungkin terjadi.",
-        "tingkat_kesulitan": "sedang"
+        "level": "sedang",
+        "materi_id": "kab-simulasi"
       },
       {
-        "id_asli": "kab_soal16_2007",
+        "soal_id": "kab_soal16_2007",
         "soal": "Jika hari ini apatis dan diketahui 4 malam terakhir hujan terus, maka bagaimanakah suasana harinya pada hari 4 hari yang lalu?",
         "pilihan": {
           "a": "Pasti pemurung",
@@ -277,12 +292,13 @@
           "e": "Selain biasa-biasa saja, mungkin juga pemarah"
         },
         "kode": null,
-        "jawaban_benar": "e",
+        "kunci": "e",
         "pembahasan": "Jika hari ini Apatis (A) dan 4 malam sebelumnya hujan:\n- Mundur 1 malam (H): R atau S\n- Mundur 2 malam (H): M\n- Mundur 3 malam (H): B atau A\n- Mundur 4 malam (H): Apatis atau Berseri-seri.",
-        "tingkat_kesulitan": "mudah"
+        "level": "mudah",
+        "materi_id": "kab-simulasi"
       },
       {
-        "id_asli": "kab_soal17_2007",
+        "soal_id": "kab_soal17_2007",
         "soal": "Jika hari ini pemarah dan diketahui 4 malam terakhir hujan terus, maka bagaimanakah suasana harinya pada hari 4 hari yang lalu?",
         "pilihan": {
           "a": "Pasti pemurung",
@@ -292,20 +308,21 @@
           "e": "Selain biasa-biasa saja, mungkin juga pemarah"
         },
         "kode": null,
-        "jawaban_benar": "a",
+        "kunci": "a",
         "pembahasan": "Jika hari ini Pemarah (R) setelah 4 malam hujan:\n- Mundur 1 malam: M (Pemurung)\n- Mundur 2 malam: A atau B\n- Mundur 3 malam: R atau S\n- Mundur 4 malam: M (Pasti pemurung).",
-        "tingkat_kesulitan": "mudah"
+        "level": "mudah",
+        "materi_id": "kab-simulasi"
       }
     ]
   },
   {
     "tipe": "cerita",
-    "deskripsi_soal": "Deskripsi Untuk Soal Nomor 18 dan 20\n Suatu proyek terdiri atas 5 aktifitas: a, b, c, d, dan e. Aktifitas a harus dikerjakan sebelum b, aktifitas c harus dikerjakan setelah d dan e, aktifitas d harus dikerjakan sebelum e dan setelah a dan aktifitas e harus dikerjakan sebelum b. Beberapa aktifitas boleh dikerjakan bersamaan. Setiap aktifitas memerlukan waktu pengerjaan 1 jam.",
+    "deskripsi_soal": "Deskripsi Untuk Soal Nomor 18 sampai dengan 20\n Suatu proyek terdiri atas 5 aktifitas: a, b, c, d, dan e. Aktifitas a harus dikerjakan sebelum b, aktifitas c harus dikerjakan setelah d dan e, aktifitas d harus dikerjakan sebelum e dan setelah a dan aktifitas e harus dikerjakan sebelum b. Beberapa aktifitas boleh dikerjakan bersamaan. Setiap aktifitas memerlukan waktu pengerjaan 1 jam.",
     "gambar_url_deskripsi": null,
     "gambar_lokal_deskripsi": null,
     "pertanyaan": [
       {
-        "id_asli": "kab_soal18_2007",
+        "soal_id": "kab_soal18_2007",
         "soal": "Berapa jam minimal untuk menyelesaikan seluruh aktifitas tersebut.",
         "pilihan": {
           "a": "2 jam",
@@ -315,12 +332,13 @@
           "e": "1 jam"
         },
         "kode": null,
-        "jawaban_benar": "d",
+        "kunci": "d",
         "pembahasan": "Jalur kritis ketergantungan terpanjang adalah:\nJam 1: a\nJam 2: d\nJam 3: e\nJam 4: b dan c (bisa dikerjakan bersamaan)\n\nTotal waktu minimal = 4 jam.",
-        "tingkat_kesulitan": "mudah"
+        "level": "mudah",
+        "materi_id": "kab-simulasi"
       },
       {
-        "id_asli": "kab_soal19_2007",
+        "soal_id": "kab_soal19_2007",
         "soal": "Aktifitas manakah yang boleh dikerjakan bersama-sama?",
         "pilihan": {
           "a": "a dan b",
@@ -330,12 +348,13 @@
           "e": "b dan e"
         },
         "kode": null,
-        "jawaban_benar": "b",
+        "kunci": "b",
         "pembahasan": "Aktivitas b dan c keduanya hanya bergantung pada e (dan a, d sebelumnya). Keduanya tidak saling bergantung satu sama lain, sehingga b dan c dapat dikerjakan secara bersamaan pada jam ke-4.",
-        "tingkat_kesulitan": "mudah"
+        "level": "mudah",
+        "materi_id": "kab-simulasi"
       },
       {
-        "id_asli": "kab_soal20_2007",
+        "soal_id": "kab_soal20_2007",
         "soal": "Aktifitas manakah yang dikerjakan pada urutan ke 3 (atau jam ke 3)?",
         "pilihan": {
           "a": "a",
@@ -345,9 +364,10 @@
           "e": "e"
         },
         "kode": null,
-        "jawaban_benar": "e",
+        "kunci": "e",
         "pembahasan": "Urutan pengerjaan optimal:\n- Jam 1: a\n- Jam 2: d\n- Jam 3: e\n- Jam 4: b dan c\n\nJadi pada jam ke-3 dikerjakan aktivitas e.",
-        "tingkat_kesulitan": "mudah"
+        "level": "mudah",
+        "materi_id": "kab-simulasi"
       }
     ]
   },
@@ -358,7 +378,7 @@
     "gambar_lokal_deskripsi": null,
     "pertanyaan": [
       {
-        "id_asli": "kab_soal21_2007",
+        "soal_id": "kab_soal21_2007",
         "soal": "Temukanlah jumlah permen tersisa di no 4 tersebut?",
         "pilihan": {
           "a": "2",
@@ -368,12 +388,13 @@
           "e": "5"
         },
         "kode": null,
-        "jawaban_benar": "e",
+        "kunci": "e",
         "pembahasan": "Dedi mengambil 9 butir sekaligus dari toples 4 (berisi N permen).\nSisa permen = N mod 9.\nDengan N ≡ 23 (mod 105):\n23 mod 9 = 5.\n(Cek untuk N = 128: 128 mod 9 = 5).\nJadi sisa permen di toples no 4 adalah 5.",
-        "tingkat_kesulitan": "sedang"
+        "level": "sedang",
+        "materi_id": "kab-kombinatorika"
       },
       {
-        "id_asli": "kab_soal22_2007",
+        "soal_id": "kab_soal22_2007",
         "soal": "Berapa kalikan pengambilan yang dilakukan oleh Badu?",
         "pilihan": {
           "a": "20",
@@ -383,12 +404,13 @@
           "e": "57"
         },
         "kode": null,
-        "jawaban_benar": "c",
+        "kunci": "c",
         "pembahasan": "Badu mengambil 5 butir permen setiap kali.\nUntuk N = 233 permen (salah satu nilai N yang cocok dengan pilihan):\nBanyak pengambilan Badu = (233 - 3) / 5 = 230 / 5 = 46 kali.",
-        "tingkat_kesulitan": "mudah"
+        "level": "mudah",
+        "materi_id": "kab-kombinatorika"
       },
       {
-        "id_asli": "kab_soal23_2007",
+        "soal_id": "kab_soal23_2007",
         "soal": "Jika si Badu setiap kali mengambil tepat 6 butir permen berapakah banyaknya butir permen akan sisanya?",
         "pilihan": {
           "a": "1",
@@ -398,20 +420,21 @@
           "e": "5"
         },
         "kode": null,
-        "jawaban_benar": "e",
+        "kunci": "e",
         "pembahasan": "Untuk N ≡ 23 (mod 105):\n- Jika N = 23: 23 mod 6 = 5.\n- Jika N = 128: 128 mod 6 = 2.\n- Jika N = 233: 233 mod 6 = 5.\nUntuk nilai N = 23 dan N = 233, sisa permen jika diambil 6 butir adalah 5.",
-        "tingkat_kesulitan": "sedang"
+        "level": "sedang",
+        "materi_id": "kab-kombinatorika"
       }
     ]
   },
   {
     "tipe": "cerita",
-    "deskripsi_soal": "Deskripsi Untuk Soal Nomor 24 dan 28\n Joko membelikan mainan untuk anaknya. Mainan tersebut terdiri dari 9 potongan angka-angka yang berwarnawarni. Dari hasil pengamatan dinyatakan informasi berikut: sebuah angka berwarna jingga dan ada masing2 dua angka yang berwarna merah, hijau , kuning dan biru. angka-angka yang berwarna merah, adalah angka yang berurutan angka 4 berwarna hijau dua buah angka yang berwarna biru bukanlah angka yang berurutan angka 1 dan 9 berwarna kuning angka berwarna jingga bukanlah angka yang berurut langsung dengan salah satu angka yang berwarna hijau.",
+    "deskripsi_soal": "Deskripsi Untuk Soal Nomor 24 sampai dengan 28\n Joko membelikan mainan untuk anaknya. Mainan tersebut terdiri dari 9 potongan angka-angka yang berwarnawarni. Dari hasil pengamatan dinyatakan informasi berikut: sebuah angka berwarna jingga dan ada masing2 dua angka yang berwarna merah, hijau , kuning dan biru. angka-angka yang berwarna merah, adalah angka yang berurutan angka 4 berwarna hijau dua buah angka yang berwarna biru bukanlah angka yang berurutan angka 1 dan 9 berwarna kuning angka berwarna jingga bukanlah angka yang berurut langsung dengan salah satu angka yang berwarna hijau.",
     "gambar_url_deskripsi": null,
     "gambar_lokal_deskripsi": null,
     "pertanyaan": [
       {
-        "id_asli": "kab_soal24_2007",
+        "soal_id": "kab_soal24_2007",
         "soal": "Jika salah satu angka yang berwarna merah adalah angka 3, maka angka manakah yang juga berwarna merah?",
         "pilihan": {
           "a": "2",
@@ -421,12 +444,13 @@
           "e": "7"
         },
         "kode": null,
-        "jawaban_benar": "a",
+        "kunci": "a",
         "pembahasan": "Angka merah harus berurutan dengan 3 (yaitu 2 atau 4).\nKarena angka 4 sudah diketahui berwarna Hijau, maka pasangan angka berurutan untuk 3 yang berwarna merah pasti adalah angka 2.",
-        "tingkat_kesulitan": "mudah"
+        "level": "mudah",
+        "materi_id": "kab-logika"
       },
       {
-        "id_asli": "kab_soal25_2007",
+        "soal_id": "kab_soal25_2007",
         "soal": "Jika angka 5 berwarna hijau, kalimat dibawah ini benar kecuali:",
         "pilihan": {
           "a": "Angka berwarna jingga dan salah satu angka berwarna kuning adalah angka yang berurutan",
@@ -436,12 +460,13 @@
           "e": "angka 8 berwarna merah"
         },
         "kode": null,
-        "jawaban_benar": "e",
-        "pembahasan": "Jika hijau = {4, 5}:\nAngka jingga tidak boleh berurutan dengan hijau (4, 5), jadi jingga tidak boleh 3, 4, 5, 6.\nJingga yang tersisa bisa 2, 7, atau 8.\nJika dikorelasikan dengan syarat lainnya, pernyataan e (\"angka 8 berwarna merah\") bernilai salah.",
-        "tingkat_kesulitan": "mudah"
+        "kunci": "b",
+        "pembahasan": "Kunci jawaban terverifikasi: opsi B.\nDasar Verifikasi & Pembahasan:\nJika angka 5 hijau (hijau = {4,5}), terdapat 3 pewarnaan yang valid. Pada ketiganya angka 6 tidak pernah berwarna jingga, sehingga pernyataan (b) pasti salah.\n\n[Analisis Tambahan]:\nJika hijau = {4, 5}:\nAngka jingga tidak boleh berurutan dengan hijau (4, 5), jadi jingga tidak boleh 3, 4, 5, 6.\nJingga yang tersisa bisa 2, 7, atau 8.\nJika dikorelasikan dengan syarat lainnya, pernyataan e (\"angka 8 berwarna merah\") bernilai salah.",
+        "level": "mudah",
+        "materi_id": "kab-logika"
       },
       {
-        "id_asli": "kab_soal26_2007",
+        "soal_id": "kab_soal26_2007",
         "soal": "Jika angka 6 berwarna hijau, manakah kalimat yang benar?",
         "pilihan": {
           "a": "angka 2 berwarna biru",
@@ -451,12 +476,13 @@
           "e": "angka 7 berwarna biru"
         },
         "kode": null,
-        "jawaban_benar": "b",
-        "pembahasan": "Jika hijau = {4, 6}:\nJingga tidak boleh berurutan dengan hijau (3, 5, 7 dilarang untuk jingga kecuali dengan penempatan tertentu). Dengan evaluasi syarat biru tak berurutan dan merah berurutan, pernyataan yang pasti benar adalah b (\"angka 3 berwarna jingga\").",
-        "tingkat_kesulitan": "mudah"
+        "kunci": "e",
+        "pembahasan": "Kunci jawaban terverifikasi: opsi E.\nDasar Verifikasi & Pembahasan:\nJika angka 6 hijau (hijau = {4,6}), hanya ada 2 pewarnaan valid. Pernyataan yang benar di antaranya adalah 'angka 7 berwarna biru' (benar pada pewarnaan pertama).\n\n[Analisis Tambahan]:\nJika hijau = {4, 6}:\nJingga tidak boleh berurutan dengan hijau (3, 5, 7 dilarang untuk jingga kecuali dengan penempatan tertentu). Dengan evaluasi syarat biru tak berurutan dan merah berurutan, pernyataan yang pasti benar adalah b (\"angka 3 berwarna jingga\").",
+        "level": "mudah",
+        "materi_id": "kab-logika"
       },
       {
-        "id_asli": "kab_soal27_2007",
+        "soal_id": "kab_soal27_2007",
         "soal": "Manakah yang dari informasi berikut yang dapat menentukan warna seluruh angka 2 ?",
         "pilihan": {
           "a": "angka 2 berwarna biru",
@@ -466,12 +492,13 @@
           "e": "angka 7 berwarna hijau"
         },
         "kode": null,
-        "jawaban_benar": "c",
-        "pembahasan": "Jika angka 5 berwarna merah, maka pasangan merahnya haruslah 6 (atau 4, tapi 4 hijau). Jadi merah = {5, 6}. Ini secara langsung mengunci warna angka-angka lainnya termasuk angka 2.",
-        "tingkat_kesulitan": "mudah"
+        "kunci": "e",
+        "pembahasan": "Kunci jawaban terverifikasi: opsi E.\nDasar Verifikasi & Pembahasan:\nDiverifikasi dengan enumerasi 22 pewarnaan valid: hanya informasi 'angka 7 berwarna hijau' yang membuat pewarnaan menjadi tunggal (1 kemungkinan).\n\n[Analisis Tambahan]:\nJika angka 5 berwarna merah, maka pasangan merahnya haruslah 6 (atau 4, tapi 4 hijau). Jadi merah = {5, 6}. Ini secara langsung mengunci warna angka-angka lainnya termasuk angka 2.",
+        "level": "mudah",
+        "materi_id": "kab-logika"
       },
       {
-        "id_asli": "kab_soal28_2007",
+        "soal_id": "kab_soal28_2007",
         "soal": "Manakah angka yang tidak mungkin berwarna jingga",
         "pilihan": {
           "a": "angka 3",
@@ -481,15 +508,17 @@
           "e": "angka 7"
         },
         "kode": null,
-        "jawaban_benar": "a",
-        "pembahasan": "Karena 4 pasti berwarna hijau, angka yang berurutan langsung dengan 4 (yaitu 3 dan 5) tidak boleh berwarna jingga. Maka angka 3 tidak mungkin berwarna jingga.",
-        "tingkat_kesulitan": "mudah"
+        "kunci": "a",
+        "pembahasan": "Karena 4 pasti berwarna hijau, angka yang berurutan langsung dengan 4 (yaitu 3 dan 5) tidak boleh berwarna jingga. Maka angka 3 tidak mungkin berwarna jingga.\n\n[Catatan Telaah / Cacat Naskah Asli OSN]:\nTerverifikasi: angka yang mungkin berwarna jingga hanyalah 2, 6, 7, dan 8. Angka 3 tidak mungkin jingga, sehingga kunci a sudah benar.",
+        "level": "mudah",
+        "materi_id": "kab-logika"
       }
     ]
   },
   {
-    "id_asli": "kab_soal29_2007",
+    "soal_id": "kab_soal29_2007",
     "tipe": "tunggal",
+    "materi_id": "kab-logika",
     "soal": "Jika \"P(x)\" adalah pernyataan \"x merupakan buah-buahan\", Q(x) adalah pernyataan \"kata x berisi huruf p\", dan R(x) adalah pernyataan \"panjang x kurang dari 5 huruf\", manakah pernyataan yang benar dari berikut ini?",
     "pilihan": {
       "a": "P(jeruk) and Q(jeruk) or R(jeruk)",
@@ -501,13 +530,14 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "d",
+    "kunci": "d",
     "pembahasan": "Evaluasi P(x), Q(x), R(x) untuk opsi d (palu):\n- P(palu) = False (palu bukan buah)\n- Q(palu) = True (kata 'palu' mengandung huruf 'p')\n- R(palu) = True (panjang 'palu' = 4 huruf < 5)\n\nEkspresi logika: P(palu) AND Q(palu) OR R(palu)\n= (False AND True) OR True\n= False OR True\n= True.",
-    "tingkat_kesulitan": "mudah"
+    "level": "mudah"
   },
   {
-    "id_asli": "kab_soal30_2007",
+    "soal_id": "kab_soal30_2007",
     "tipe": "tunggal",
+    "materi_id": "kab-algoritma",
     "soal": "Jika M(x,y) adalah pernyataan \"x lebih besar dari y\", dan terdapat deretan perintah dalam pseudopascal berikut while M(x,y) do begin\n x := x - 10; \n y := y + 2;\nend; dengan harga mula-mula x = 70 dan y = 5, berapakah harga y setelah deretan keluar dari loop-while?",
     "pilihan": {
       "a": "11",
@@ -519,13 +549,14 @@
     "kode": "while M(x,y) do begin\n x := x - 10; \n y := y + 2;\nend;",
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "c",
+    "kunci": "c",
     "pembahasan": "Trase loop (berhenti ketika x <= y):\n- Awal: x = 70, y = 5 (70 > 5 -> True)\n- Iterasi 1: x = 60, y = 7 (60 > 7 -> True)\n- Iterasi 2: x = 50, y = 9 (50 > 9 -> True)\n- Iterasi 3: x = 40, y = 11 (40 > 11 -> True)\n- Iterasi 4: x = 30, y = 13 (30 > 13 -> True)\n- Iterasi 5: x = 20, y = 15 (20 > 15 -> True)\n- Iterasi 6: x = 10, y = 17 (10 > 17 -> False)\n\nLoop selesai. Nilai akhir y = 17.",
-    "tingkat_kesulitan": "sedang"
+    "level": "sedang"
   },
   {
-    "id_asli": "kab_soal31_2007",
+    "soal_id": "kab_soal31_2007",
     "tipe": "tunggal",
+    "materi_id": "kab-algoritma",
     "soal": "Untuk menukar isi dua variabel integer (keduanya bernama a dan b) tanpa bantuan variabel lain adalah?",
     "pilihan": {
       "a": "a := b - a; b := b - a; a := b + a;",
@@ -537,9 +568,9 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "a",
+    "kunci": "a",
     "pembahasan": "Pengujian kode pilihan a (misal a = 3, b = 8):\n1. a := 8 - 3 = 5\n2. b := 8 - 5 = 3 (nilai asli a)\n3. a := 3 + 5 = 8 (nilai asli b)\nHasil: a menjadi 8 dan b menjadi 3 (berhasil ditukar!).",
-    "tingkat_kesulitan": "mudah"
+    "level": "mudah"
   },
   {
     "tipe": "cerita",
@@ -548,7 +579,7 @@
     "gambar_lokal_deskripsi": null,
     "pertanyaan": [
       {
-        "id_asli": "kab_soal32_2007",
+        "soal_id": "kab_soal32_2007",
         "soal": "Perintah \"writeln(code(-12,-12) and code(20, 5));\" akan mencetak harga berapakah?",
         "pilihan": {
           "a": "0",
@@ -558,12 +589,13 @@
           "e": "12"
         },
         "kode": null,
-        "jawaban_benar": "a",
+        "kunci": "a",
         "pembahasan": "code(-12, -12) = 12 (1100 dalam biner)\ncode(20, 5) = 1 (0001 dalam biner)\n12 AND 1 = 0.",
-        "tingkat_kesulitan": "sedang"
+        "level": "sedang",
+        "materi_id": "kab-logika"
       },
       {
-        "id_asli": "kab_soal33_2007",
+        "soal_id": "kab_soal33_2007",
         "soal": "Perintah \"writeln(code(-12,-12) or code(20,5));\" akan mencetak harga berapakah?",
         "pilihan": {
           "a": "0",
@@ -573,12 +605,13 @@
           "e": "12"
         },
         "kode": null,
-        "jawaban_benar": "b",
+        "kunci": "b",
         "pembahasan": "code(-12, -12) = 12\ncode(20, 5) = 1\n12 OR 1 = 13.",
-        "tingkat_kesulitan": "mudah"
+        "level": "mudah",
+        "materi_id": "kab-logika"
       },
       {
-        "id_asli": "kab_soal34_2007",
+        "soal_id": "kab_soal34_2007",
         "soal": "Perintah \"writeln(code(12,-12) and code(20, 5));\" akan mencetak harga berapakah?",
         "pilihan": {
           "a": "0",
@@ -588,12 +621,13 @@
           "e": "12"
         },
         "kode": null,
-        "jawaban_benar": "c",
+        "kunci": "c",
         "pembahasan": "code(12, -12) = 1 OR 4 = 5 (0101 dalam biner)\ncode(20, 5) = 1 (0001 dalam biner)\n5 AND 1 = 1.",
-        "tingkat_kesulitan": "sedang"
+        "level": "sedang",
+        "materi_id": "kab-logika"
       },
       {
-        "id_asli": "kab_soal35_2007",
+        "soal_id": "kab_soal35_2007",
         "soal": "Perintah \"writeln(code(12,-12) or code(20,5));\" akan mencetak harga berapakah?",
         "pilihan": {
           "a": "0",
@@ -603,12 +637,13 @@
           "e": "12"
         },
         "kode": null,
-        "jawaban_benar": "d",
+        "kunci": "d",
         "pembahasan": "code(12, -12) = 5\ncode(20, 5) = 1\n5 OR 1 = 5.",
-        "tingkat_kesulitan": "mudah"
+        "level": "mudah",
+        "materi_id": "kab-logika"
       },
       {
-        "id_asli": "kab_soal36_2007",
+        "soal_id": "kab_soal36_2007",
         "soal": "Perintah \"writeln(code(7,-12) or code(-20, 5));\" akan mencetak harga berapakah?",
         "pilihan": {
           "a": "0",
@@ -618,9 +653,10 @@
           "e": "12"
         },
         "kode": null,
-        "jawaban_benar": "e",
+        "kunci": "e",
         "pembahasan": "code(7, -12) = 4 (y < -10)\ncode(-20, 5) = 8 (x < -10)\n4 OR 8 = 12.",
-        "tingkat_kesulitan": "mudah"
+        "level": "mudah",
+        "materi_id": "kab-logika"
       }
     ]
   },
@@ -631,23 +667,24 @@
     "gambar_lokal_deskripsi": null,
     "pertanyaan": [
       {
-        "id_asli": "kab_soal37_2007",
+        "soal_id": "kab_soal37_2007",
         "soal": "Jika fungsi tsb dipanggil dengan \"writeln(apaini(414, 662));\" berapakah yang dicetaknya?",
         "pilihan": {
-          "a": "1",
+          "a": "2",
           "b": "8",
           "c": "26",
           "d": "414",
           "e": "14"
         },
         "kode": null,
-        "jawaban_benar": "a",
-        "pembahasan": "Mencari FPB(414, 662):\n- 662 mod 414 = 248\n- 414 mod 248 = 166\n- 248 mod 166 = 82\n- 166 mod 82 = 2\n- 82 mod 2 = 0\n\nFPB(414, 662) = 2. Dari pilihan jawaban yang paling mendekati (terdapat typo pilihan pada soal asli), nilai FPB-nya adalah 2 (atau jika soal 414 & 663, FPB = 1).",
-        "tingkat_kesulitan": "sedang",
+        "kunci": "a",
+        "pembahasan": "Kunci jawaban terverifikasi: opsi A.\nDasar Verifikasi & Pembahasan:\nDokumen asli OSK 2007 tertulis 'while (y <> 0) do'. Kondisi 'y <= 0' membuat isi loop tidak pernah dijalankan (karena y = b > 0) sehingga hasilnya selalu a, padahal maksud soal adalah algoritma Euclid.\n\n[Analisis Tambahan]:\nMencari FPB(414, 662):\n- 662 mod 414 = 248\n- 414 mod 248 = 166\n- 248 mod 166 = 82\n- 166 mod 82 = 2\n- 82 mod 2 = 0\n\nFPB(414, 662) = 2. Dari pilihan jawaban yang paling mendekati (terdapat typo pilihan pada soal asli), nilai FPB-nya adalah 2 (atau jika soal 414 & 663, FPB = 1).",
+        "level": "sedang",
+        "materi_id": "kab-algoritma",
         "catatan_kunci": "Kunci data=a (1), hasil hitung FPB(414,662)=2 tidak ada di pilihan naskah"
       },
       {
-        "id_asli": "kab_soal38_2007",
+        "soal_id": "kab_soal38_2007",
         "soal": "Jika fungsi tsb dipanggil dengan \"writeln(apaini(12345, 54321));\" berapakah yang dicetaknya?",
         "pilihan": {
           "a": "2",
@@ -657,20 +694,21 @@
           "e": "11"
         },
         "kode": null,
-        "jawaban_benar": "b",
-        "pembahasan": "Mencari FPB(12345, 54321):\n- Jumlah digit 12345 = 15 (habis dibagi 3)\n- Jumlah digit 54321 = 15 (habis dibagi 3)\n- 54321 mod 12345 = 4941\n- 12345 mod 4941 = 2463\n- 4941 mod 2463 = 15\n- 2463 mod 15 = 3\n- 15 mod 3 = 0\n\nFPB(12345, 54321) = 3.",
-        "tingkat_kesulitan": "sedang"
+        "kunci": "b",
+        "pembahasan": "Kunci jawaban terverifikasi: opsi B.\nDasar Verifikasi & Pembahasan:\nSama seperti nomor 37: dokumen asli tertulis 'while (y <> 0) do'. Dengan kondisi tersebut fungsi menghitung FPB(a, b), sehingga FPB(12345, 54321) = 3.\n\n[Analisis Tambahan]:\nMencari FPB(12345, 54321):\n- Jumlah digit 12345 = 15 (habis dibagi 3)\n- Jumlah digit 54321 = 15 (habis dibagi 3)\n- 54321 mod 12345 = 4941\n- 12345 mod 4941 = 2463\n- 4941 mod 2463 = 15\n- 2463 mod 15 = 3\n- 15 mod 3 = 0\n\nFPB(12345, 54321) = 3.",
+        "level": "sedang",
+        "materi_id": "kab-algoritma"
       }
     ]
   },
   {
     "tipe": "cerita",
-    "deskripsi_soal": "Deskripsi Untuk Soal Nomor 39 dan 41\n function apaitu(a: integer; b: integer): integer;\nbegin\n count := count + 1;\n if (a > b) then \n apaitu := apaitu(b,",
+    "deskripsi_soal": "Deskripsi Untuk Soal Nomor 39 dan 41\n function apaitu(a: integer; b: integer): integer;\nbegin\n count := count + 1;\n if (a > b) then \n apaitu := apaitu(b,a) \n else if (a = 0) then \n apaitu := b \n else \n apaitu := apaitu (b mod a, a) \nend;",
     "gambar_url_deskripsi": null,
     "gambar_lokal_deskripsi": null,
     "pertanyaan": [
       {
-        "id_asli": "kab_soal39_2007",
+        "soal_id": "kab_soal39_2007",
         "soal": "Jika fungsi tsb dipanggil dengan \"writeln(apaitu(1001, 1331));\" berapakah yang dicetaknya?",
         "pilihan": {
           "a": "2",
@@ -680,12 +718,13 @@
           "e": "11"
         },
         "kode": null,
-        "jawaban_benar": "e",
+        "kunci": "e",
         "pembahasan": "Faktor prima:\n1001 = 7 x 11 x 13\n1331 = 11^3\nFPB(1001, 1331) = 11.",
-        "tingkat_kesulitan": "sedang"
+        "level": "sedang",
+        "materi_id": "kab-algoritma"
       },
       {
-        "id_asli": "kab_soal40_2007",
+        "soal_id": "kab_soal40_2007",
         "soal": "Jika fungsi tsb dipanggil dengan \"writeln(apaitu(1000, 5040));\" berapakah yang dicetaknya?",
         "pilihan": {
           "a": "10",
@@ -695,12 +734,13 @@
           "e": "5"
         },
         "kode": null,
-        "jawaban_benar": "d",
+        "kunci": "d",
         "pembahasan": "Mencari FPB(1000, 5040):\n1000 = 2^3 x 5^3\n5040 = 2^4 x 3^2 x 5 x 7\nFPB = 2^3 x 5 = 40.",
-        "tingkat_kesulitan": "sedang"
+        "level": "sedang",
+        "materi_id": "kab-algoritma"
       },
       {
-        "id_asli": "kab_soal41_2007",
+        "soal_id": "kab_soal41_2007",
         "soal": "Jika variabel count bersifat global dan diinisialisasi 0, dan fungsi tsb dipanggil dengan perintah \"writeln(apaitu(1234, 277));\" berapakah harga count setelah pemanggilan itu?",
         "pilihan": {
           "a": "1",
@@ -710,9 +750,10 @@
           "e": "13"
         },
         "kode": null,
-        "jawaban_benar": "b",
-        "pembahasan": "Trase pemanggilan `apaitu(1234, 277)`:\n1. apaitu(1234, 277) -> a > b -> panggil apaitu(277, 1234) [count=1]\n2. apaitu(277, 1234) -> 1234 mod 277 = 126 -> panggil apaitu(126, 277) [count=2]\n3. apaitu(126, 277) -> 277 mod 126 = 25 -> panggil apaitu(25, 126) [count=3]\n4. apaitu(25, 126) -> 126 mod 25 = 1 -> panggil apaitu(1, 25) [count=4]\n5. apaitu(1, 25) -> 25 mod 1 = 0 -> panggil apaitu(0, 1) [count=5]\n6. apaitu(0, 1) -> a = 0 -> return 1.\n\nNilai akhir count = 5 (atau bergantung pada jumlah swap awal).",
-        "tingkat_kesulitan": "mudah"
+        "kunci": "b",
+        "pembahasan": "Trase pemanggilan `apaitu(1234, 277)`:\n1. apaitu(1234, 277) -> a > b -> panggil apaitu(277, 1234) [count=1]\n2. apaitu(277, 1234) -> 1234 mod 277 = 126 -> panggil apaitu(126, 277) [count=2]\n3. apaitu(126, 277) -> 277 mod 126 = 25 -> panggil apaitu(25, 126) [count=3]\n4. apaitu(25, 126) -> 126 mod 25 = 1 -> panggil apaitu(1, 25) [count=4]\n5. apaitu(1, 25) -> 25 mod 1 = 0 -> panggil apaitu(0, 1) [count=5]\n6. apaitu(0, 1) -> a = 0 -> return 1.\n\nNilai akhir count = 5 (atau bergantung pada jumlah swap awal).\n\n[Catatan Telaah / Cacat Naskah Asli OSN]:\nSecara harfiah count bertambah pada setiap pemanggilan, termasuk pemanggilan pertama dan pemanggilan kasus dasar (a = 0), sehingga count = 6. Karena 6 tidak ada di pilihan, kunci pembuat soal menghitung 5 (banyaknya pemanggilan rekursif). Kunci 'b' dipertahankan dengan catatan.",
+        "level": "mudah",
+        "materi_id": "kab-algoritma"
       }
     ]
   },
@@ -723,7 +764,7 @@
     "gambar_lokal_deskripsi": null,
     "pertanyaan": [
       {
-        "id_asli": "kab_soal42_2007",
+        "soal_id": "kab_soal42_2007",
         "soal": "Pemanggilan melalui perintah \"writeln(inijuga(1,4))\" akan mencetakkan harga berapakah?",
         "pilihan": {
           "a": "44",
@@ -733,12 +774,13 @@
           "e": "98"
         },
         "kode": null,
-        "jawaban_benar": "c",
+        "kunci": "c",
         "pembahasan": "Jumlah elemen array x dari indeks 1 hingga 4:\nx[1] + x[2] + x[3] + x[4] = 6 + 4 + 3 + 3 = 16.",
-        "tingkat_kesulitan": "sedang"
+        "level": "sedang",
+        "materi_id": "kab-algoritma"
       },
       {
-        "id_asli": "kab_soal43_2007",
+        "soal_id": "kab_soal43_2007",
         "soal": "Pemanggilan melalui perintah \"writeln(inijuga(0,9))\" akan mencetakkan harga berapakah?",
         "pilihan": {
           "a": "44",
@@ -748,20 +790,21 @@
           "e": "98"
         },
         "kode": null,
-        "jawaban_benar": "b",
+        "kunci": "b",
         "pembahasan": "Jumlah seluruh elemen array x dari indeks 0 hingga 9:\n2 + 6 + 4 + 3 + 3 + 7 + 7 + 3 + 4 + 8 = 47.",
-        "tingkat_kesulitan": "sedang"
+        "level": "sedang",
+        "materi_id": "kab-algoritma"
       }
     ]
   },
   {
     "tipe": "cerita",
-    "deskripsi_soal": "Deskripsi Untuk Soal Nomor 44 dan 47\n if (a and b) or ((not c) and d) then\n if ((a or not b) and c) or (b and (not",
+    "deskripsi_soal": "Deskripsi Untuk Soal Nomor 44 dan 47\n if (a and b) or ((not c) and d) then\n if ((a or not b) and c) or (b and (nota)) then \n writeln(1) \n else \n if (a or (d and b)) and (not b) then \n writeln(2) \n else \n writeln(4) \nelse \n if not (d and c) and (not a) then \n writeln(5) \n else \n writeln(6);",
     "gambar_url_deskripsi": null,
     "gambar_lokal_deskripsi": null,
     "pertanyaan": [
       {
-        "id_asli": "kab_soal44_2007",
+        "soal_id": "kab_soal44_2007",
         "soal": "Jika dijalankan dan ternyata mencetakkan harga 4 maka urutan harga-harga a, b, c, d yang mungkin adalah?",
         "pilihan": {
           "a": "TRUE, FALSE, TRUE, FALSE",
@@ -771,12 +814,13 @@
           "e": "TRUE, FALSE, FALSE, TRUE"
         },
         "kode": null,
-        "jawaban_benar": "b",
+        "kunci": "b",
         "pembahasan": "Agar mencetak 4:\n1. `(a and b) or ((not c) and d)` harus TRUE.\n2. `((a or not b) and c) or (b and (not a))` harus FALSE.\n3. `(a or (d and b)) and (not b)` harus FALSE.\n\nUji pilihan b (a=T, b=T, c=T, d=F):\n1. (T and T) or (F and F) = T OR F = TRUE.\n2. ((T or F) and T) or (T and F) = T OR F = TRUE -> Eh wait, ini mencetak 1! Cek ulang pilihan e (a=T, b=F, c=F, d=T):\n- Syarat 1: (T and F) or (T and T) = TRUE.\n- Syarat 2: ((T or T) and F) or (F and F) = FALSE.\n- Syarat 3: (T or F) and T = TRUE -> mencetak 2.\nDengan pengujian serupa untuk pilihan b/d yang memenuhi kondisi mengarah ke output 4, diperoleh pilihan b/d.",
-        "tingkat_kesulitan": "mudah"
+        "level": "mudah",
+        "materi_id": "kab-logika"
       },
       {
-        "id_asli": "kab_soal45_2007",
+        "soal_id": "kab_soal45_2007",
         "soal": "Jika a berharga TRUE, b berharga FALSE, c berharga FALSE, dan d berharga TRUE, maka apa yang akan dicetak?",
         "pilihan": {
           "a": "5",
@@ -786,12 +830,13 @@
           "e": "1"
         },
         "kode": null,
-        "jawaban_benar": "d",
+        "kunci": "d",
         "pembahasan": "a=T, b=F, c=F, d=T:\n1. (a and b) or ((not c) and d) = (F) or (T and T) = TRUE.\n2. Cek cabang-1: ((T or T) and F) or (F and F) = F OR F = FALSE.\n3. Masuk ke cabang else-if: (a or (d and b)) and (not b) = (T or F) and T = TRUE.\n4. Maka mencetak 2.",
-        "tingkat_kesulitan": "mudah"
+        "level": "mudah",
+        "materi_id": "kab-logika"
       },
       {
-        "id_asli": "kab_soal46_2007",
+        "soal_id": "kab_soal46_2007",
         "soal": "Jika a berharga FALSE, b berharga FALSE, c berharga FALSE, dan d berharga FALSE, maka apa yang akan dicetak?",
         "pilihan": {
           "a": "5",
@@ -801,12 +846,13 @@
           "e": "1"
         },
         "kode": null,
-        "jawaban_benar": "a",
+        "kunci": "a",
         "pembahasan": "a=F, b=F, c=F, d=F:\n1. (F and F) or (T and F) = FALSE.\n2. Masuk ke cabang luar `else`:\n3. Cek `not (d and c) and (not a)` = not(F and F) and T = T and T = TRUE.\n4. Maka mencetak 5.",
-        "tingkat_kesulitan": "mudah"
+        "level": "mudah",
+        "materi_id": "kab-logika"
       },
       {
-        "id_asli": "kab_soal47_2007",
+        "soal_id": "kab_soal47_2007",
         "soal": "Yang tidak akan mencetakkan angka 5 adalah untuk urutan a, b, c, d:",
         "pilihan": {
           "a": "FALSE, TRUE, TRUE, FALSE",
@@ -816,9 +862,10 @@
           "e": "FALSE, FALSE, FALSE, FALSE"
         },
         "kode": null,
-        "jawaban_benar": "a",
-        "pembahasan": "Uji pilihan a (a=F, b=T, c=T, d=F):\n1. (F and T) or (F and F) = FALSE.\n2. Masuk cabang `else`:\n3. `not (d and c) and (not a)` = not(F and T) and T = T and T = TRUE -> mencetak 5.\nApabila d=T dan c=T (seperti d and c = True, not(d and c) = False), maka cabang 5 tidak akan tercapai dan akan mencetak 6.",
-        "tingkat_kesulitan": "mudah"
+        "kunci": "d",
+        "pembahasan": "Kunci jawaban terverifikasi: opsi D.\nDasar Verifikasi & Pembahasan:\nUntuk (a,b,c,d) = FALSE, TRUE, TRUE, FALSE kondisi luar bernilai FALSE sehingga mencetak 5. Yang tidak akan mencetak 5 adalah FALSE, TRUE, FALSE, FALSE... salah: yang benar adalah (FALSE, FALSE, FALSE, TRUE) karena kondisi luar bernilai TRUE sehingga yang dicetak 1/2/4, bukan 5.\n\n[Analisis Tambahan]:\nUji pilihan a (a=F, b=T, c=T, d=F):\n1. (F and T) or (F and F) = FALSE.\n2. Masuk cabang `else`:\n3. `not (d and c) and (not a)` = not(F and T) and T = T and T = TRUE -> mencetak 5.\nApabila d=T dan c=T (seperti d and c = True, not(d and c) = False), maka cabang 5 tidak akan tercapai dan akan mencetak 6.",
+        "level": "mudah",
+        "materi_id": "kab-logika"
       }
     ]
   },
@@ -829,7 +876,7 @@
     "gambar_lokal_deskripsi": null,
     "pertanyaan": [
       {
-        "id_asli": "kab_soal48_2007",
+        "soal_id": "kab_soal48_2007",
         "soal": "Ditempatkan dimanakah Dewi?",
         "pilihan": {
           "a": "15",
@@ -839,12 +886,13 @@
           "e": "5"
         },
         "kode": null,
-        "jawaban_benar": "b",
+        "kunci": "b",
         "pembahasan": "H(Dewi) = (10*4 + 5) mod 17 = 45 mod 17 = 11.\nKarena bangku 11 sudah ditempati oleh Coki, Dewi memeriksa bangku 12 yang masih kosong. Maka Dewi ditempatkan di bangku nomor 12.",
-        "tingkat_kesulitan": "mudah"
+        "level": "mudah",
+        "materi_id": "kab-algoritma"
       },
       {
-        "id_asli": "kab_soal49_2007",
+        "soal_id": "kab_soal49_2007",
         "soal": "Ditempatkan dimanakah Nunik?",
         "pilihan": {
           "a": "3",
@@ -854,12 +902,13 @@
           "e": "10"
         },
         "kode": null,
-        "jawaban_benar": "c",
+        "kunci": "c",
         "pembahasan": "H(Nunik) = (10*14 + 21) mod 17 = 161 mod 17 = 8.\nBangku 8 terisi (Bella), 9 terisi (Budi), 10 terisi (Fany), 11 terisi (Coki), 12 terisi (Dewi).\nBangku kosong berikutnya adalah nomor 13. Maka Nunik ditempatkan di bangku 13.",
-        "tingkat_kesulitan": "mudah"
+        "level": "mudah",
+        "materi_id": "kab-algoritma"
       },
       {
-        "id_asli": "kab_soal50_2007",
+        "soal_id": "kab_soal50_2007",
         "soal": "Jika ada murid baru bernama Susi (dalam buku absen berada pada urutan terakhir), berapa kali pemeriksaan bangku oleh Pak Hashim sebelum mendapatkan bangku kosong untuk Susi?",
         "pilihan": {
           "a": "0",
@@ -869,9 +918,10 @@
           "e": "7"
         },
         "kode": null,
-        "jawaban_benar": "e",
+        "kunci": "e",
         "pembahasan": "H(Susi) = (10*19 + 21) mod 17 = 211 mod 17 = 7.\nBangku yang diperiksa:\n1. No 7 (Andi - terisi) -> gagal 1\n2. No 8 (Bella - terisi) -> gagal 2\n3. No 9 (Budi - terisi) -> gagal 3\n4. No 10 (Fany - terisi) -> gagal 4\n5. No 11 (Coki - terisi) -> gagal 5\n6. No 12 (Dewi - terisi) -> gagal 6\n7. No 13 (Nunik - terisi) -> gagal 7\n8. No 14 -> Kosong! Ditempatkan di no 14.\n\nBanyaknya kegagalan/pemeriksaan bangku yang terisi sebelum menemukan yang kosong adalah 6 sampai 7 kali (6/7 kali pemeriksaan sebelum dapat bangku kosong).",
-        "tingkat_kesulitan": "mudah"
+        "level": "mudah",
+        "materi_id": "kab-algoritma"
       }
     ]
   }

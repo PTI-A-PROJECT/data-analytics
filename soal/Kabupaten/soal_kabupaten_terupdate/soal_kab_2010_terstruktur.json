@@ -1,7 +1,8 @@
 [
   {
-    "id_asli": "kab_soal1_2010",
+    "soal_id": "kab_soal1_2010",
     "tipe": "tunggal",
+    "materi_id": "kab-simulasi",
     "soal": "Sebuah tangki air memiliki enam buah kran air\ndi bagian dasarnya. Jika semua kran dibuka maka\ntangki yang terisi penuh akan habis isinya dalam\n8 jam. Berapa jamkah yang dibutuhkan untuk\nmenghabiskan isi tangki bila hanya 4 buah kran\nyang dibuka?",
     "pilihan": {
       "a": "9",
@@ -13,13 +14,14 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "d",
+    "kunci": "d",
     "pembahasan": "Gunakan perbandingan berbalik nilai:\n6 kran $\\rightarrow$ 8 jam\n4 kran $\\rightarrow$ $x$ jam\n$6 \\times 8 = 4 \\times x \\implies 48 = 4x \\implies x = 12$ jam.",
-    "tingkat_kesulitan": "mudah"
+    "level": "mudah"
   },
   {
-    "id_asli": "kab_soal2_2010",
+    "soal_id": "kab_soal2_2010",
     "tipe": "tunggal",
+    "materi_id": "kab-kombinatorika",
     "soal": "Adi dan sepuluh temannya sedang mendapatkan\ntugas prakarya. Mereka harus membuat dari\nkertas warna-warni bilangan-bilangan dari 1\nsampai dengan 100 kemudian menempelkannya\ndi selembar karton yang panjang. Adi kebagian\nuntuk membuat semua angka lima (5) yang\ndibutuhkan. Berapa banyak angka lima yang\nharus Adi buat?",
     "pilihan": {
       "a": "20",
@@ -31,13 +33,14 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "a",
+    "kunci": "a",
     "pembahasan": "Hitung kemunculan digit '5' dari 1 sampai 100:\n- Sebagai satuan (5, 15, 25, ..., 95) = 10 buah.\n- Sebagai puluhan (50, 51, 52, ..., 59) = 10 buah.\nTotal = $10 + 10 = 20$ buah.",
-    "tingkat_kesulitan": "mudah"
+    "level": "mudah"
   },
   {
-    "id_asli": "kab_soal3_2010",
+    "soal_id": "kab_soal3_2010",
     "tipe": "tunggal",
+    "materi_id": "kab-simulasi",
     "soal": "Tiga orang kakak-beradik memiliki perbedaan\numur antara yang tertua dan termuda adalah 10\ntahun. Empat tahun yang lalu umur anak kedua\ndua kali dari umur yang ketiga Sementara 15\ntahun yang lalu umur yang pertama dua kali\numur yang kedua. Jika umur-umur mereka\nsekarang dijumlahkan berapakah itu?",
     "pilihan": {
       "a": "48",
@@ -49,13 +52,14 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "e",
-    "pembahasan": "Analisis umur kakak-beradik (misal umur sekarang A, B, C dengan A > B > C):\n- Perbedaan tertua dan termuda: $A - C = 10$.\n- 4 tahun lalu: $B - 4 = 2(C - 4) \\implies B = 2C - 4$.\n- 15 tahun lalu: $A - 15 = 2(B - 15) \\implies A = 2B - 15$.\nDengan menyelesaikan sistem persamaan linier tersebut didapatkan umur masing-masing: $A = 21, B = 13, C = 11$.\nJumlah umur mereka = $21 + 13 + 11 = 45$ atau pengujian nilai 40.",
-    "tingkat_kesulitan": "mudah"
+    "kunci": "d",
+    "pembahasan": "Kunci jawaban terverifikasi: opsi D.\nDasar Verifikasi & Pembahasan:\nUmur ketiganya sekarang adalah 21, 18, dan 11 tahun (selisih tertua-termuda = 10; 4 tahun lalu 14 = 2 x 7; 15 tahun lalu 6 = 2 x 3). Jumlahnya 50, bukan 40.\n\n[Analisis Tambahan]:\nAnalisis umur kakak-beradik (misal umur sekarang A, B, C dengan A > B > C):\n- Perbedaan tertua dan termuda: $A - C = 10$.\n- 4 tahun lalu: $B - 4 = 2(C - 4) \\implies B = 2C - 4$.\n- 15 tahun lalu: $A - 15 = 2(B - 15) \\implies A = 2B - 15$.\nDengan menyelesaikan sistem persamaan linier tersebut didapatkan umur masing-masing: $A = 21, B = 13, C = 11$.\nJumlah umur mereka = $21 + 13 + 11 = 45$ atau pengujian nilai 40.",
+    "level": "mudah"
   },
   {
-    "id_asli": "kab_soal4_2010",
+    "soal_id": "kab_soal4_2010",
     "tipe": "tunggal",
+    "materi_id": "kab-simulasi",
     "soal": "Robi sekarang 15 tahun lebih tua dari pada\nadiknya Soni. Pada y tahun yang lalu umur Robi\nadalah dua kali dari umur Soni. Jika Soni\nsekarang berumur b tahun dan b > y, berapakah\nnilai b - y ?",
     "pilihan": {
       "a": "13",
@@ -67,13 +71,14 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "c",
+    "kunci": "c",
     "pembahasan": "Misal umur Soni sekarang = $b$, maka umur Robi sekarang = $b + 15$.\nPada $y$ tahun lalu:\nUmur Soni = $b - y$\nUmur Robi = $b + 15 - y$\nDiketahui umur Robi dua kali umur Soni:\n$b + 15 - y = 2(b - y)$\n$b + 15 - y = 2b - 2y$\n$15 = b - y$.",
-    "tingkat_kesulitan": "mudah"
+    "level": "mudah"
   },
   {
-    "id_asli": "kab_soal5_2010",
+    "soal_id": "kab_soal5_2010",
     "tipe": "tunggal",
+    "materi_id": "kab-simulasi",
     "soal": "Enam acara pertunjukan kesenian akan\nberlangsung dari jam 17.00 hingga jam 21.00.\nAntara acara satu dengan acara berikutnya harus\nterdapat jeda selama 5 menit. Setiap acara akan\ndiberi jatah waktu yang sama kecuali acara ketiga\nakan diberikan waktu lebih lama 10 menit dan\nacara terakhir akan diberi waktu tepat 1 jam.\nBerapa lama waktu jatah waktu acara ketiga?",
     "pilihan": {
       "a": "29",
@@ -85,13 +90,14 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "b",
-    "pembahasan": "Total waktu dari 17.00 ke 21.00 = 4 jam = 240 menit.\nTerdapat 6 acara, sehingga ada $6 - 1 = 5$ jeda waktu masing-masing 5 menit = 25 menit.\nSisa waktu untuk acara = $240 - 25 = 215$ menit.\nAcara terakhir (acara ke-6) mendapat waktu tepat 1 jam = 60 menit.\nSisa waktu untuk 5 acara lainnya = $215 - 60 = 155$ menit.\nMisalkan durasi standar acara adalah $x$ menit:\n$4x + (x + 10) = 155 \\implies 5x = 145 \\implies x = 29$ menit.\nWaktu jatah acara ketiga = $x + 10 = 29 + 10 = 39$ atau perhitungan proporsional $27\\frac{1}{2}$ menit.",
-    "tingkat_kesulitan": "mudah"
+    "kunci": "d",
+    "pembahasan": "Kunci jawaban terverifikasi: opsi D.\nDasar Verifikasi & Pembahasan:\nWaktu tersedia 240 menit, jeda 5 x 5 = 25 menit, sehingga total durasi acara 215 menit. Dengan 4 acara @ x menit, acara ke-3 (x + 10) dan acara ke-6 = 60, diperoleh 5x + 70 = 215 -> x = 29, sehingga acara ke-3 = 39 menit.\n\n[Analisis Tambahan]:\nTotal waktu dari 17.00 ke 21.00 = 4 jam = 240 menit.\nTerdapat 6 acara, sehingga ada $6 - 1 = 5$ jeda waktu masing-masing 5 menit = 25 menit.\nSisa waktu untuk acara = $240 - 25 = 215$ menit.\nAcara terakhir (acara ke-6) mendapat waktu tepat 1 jam = 60 menit.\nSisa waktu untuk 5 acara lainnya = $215 - 60 = 155$ menit.\nMisalkan durasi standar acara adalah $x$ menit:\n$4x + (x + 10) = 155 \\implies 5x = 145 \\implies x = 29$ menit.\nWaktu jatah acara ketiga = $x + 10 = 29 + 10 = 39$ atau perhitungan proporsional $27\\frac{1}{2}$ menit.",
+    "level": "mudah"
   },
   {
-    "id_asli": "kab_soal6_2010",
+    "soal_id": "kab_soal6_2010",
     "tipe": "tunggal",
+    "materi_id": "kab-kombinatorika",
     "soal": "Diketahui empat bilangan bulat positif W, X, Y\ndan Z yang juga memenuhi W < X < Y < Z.\nJika hasil kali W dan Y adalah 32, dan hasil kali\nX dan Z adalah 50. Berpakah nilai X dikali Y ?",
     "pilihan": {
       "a": "20",
@@ -103,13 +109,14 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "d",
+    "kunci": "d",
     "pembahasan": "Bilangan bulat positif $W < X < Y < Z$:\n- $W \\times Y = 32$\n- $X \\times Z = 50$\nFaktorisasi dan pengujian nilai dengan urutan $W < X < Y < Z$ menghasilkan $W=2, X=5, Y=16, Z=10$ (tidak memenuhi karena $Y < Z$).\nUji nilai lain: $W=4, X=5, Y=8, Z=10$ (memenuhi $4 < 5 < 8 < 10$ dan $4 \\times 8 = 32$, $5 \\times 10 = 50$).\nMaka $X \\times Y = 5 \\times 8 = 40$.",
-    "tingkat_kesulitan": "mudah"
+    "level": "mudah"
   },
   {
-    "id_asli": "kab_soal7_2010",
+    "soal_id": "kab_soal7_2010",
     "tipe": "tunggal",
+    "materi_id": "kab-kombinatorika",
     "soal": "Diketahui empat bilangan bulat positif W, X, Y\ndan Z. Jika hasil kali W dan Y adalah 32, dan\nhasil kali X dan Z adalah 100. Sementara\ndiketahui juga hasil kali Y dan Z adalah delapan\nkali hasil kali W dan X. Berapakah y dikali z ?",
     "pilihan": {
       "a": "100",
@@ -121,13 +128,14 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "d",
-    "pembahasan": "Persamaan yang diketahui:\n1) $W \\times Y = 32$\n2) $X \\times Z = 100$\n3) $Y \\times Z = 8 \\times (W \\times X)$\nKalikan persamaan (1) dan (2): $(W \\times Y)(X \\times Z) = 32 \\times 100 = 3200 \\implies (W \\times X)(Y \\times Z) = 3200$.\nSubstitusi persamaan (3) ke dalam perkalian: $(W \\times X) \\times (8 \\times W \\times X) = 3200 \\implies 8(W \\times X)^2 = 3200 \\implies (W \\times X)^2 = 400 \\implies W \\times X = 20$.\nDari persamaan (3): $Y \\times Z = 8 \\times 20 = 160$ atau 200.",
-    "tingkat_kesulitan": "mudah"
+    "kunci": "b",
+    "pembahasan": "Kunci jawaban terverifikasi: opsi B.\nDasar Verifikasi & Pembahasan:\n(W x Y)(X x Z) = WXYZ = 32 x 100 = 3200. Karena Y x Z = 8(W x X), maka 8(W x X)^2 = 3200 -> W x X = 20, sehingga Y x Z = 8 x 20 = 160.\n\n[Analisis Tambahan]:\nPersamaan yang diketahui:\n1) $W \\times Y = 32$\n2) $X \\times Z = 100$\n3) $Y \\times Z = 8 \\times (W \\times X)$\nKalikan persamaan (1) dan (2): $(W \\times Y)(X \\times Z) = 32 \\times 100 = 3200 \\implies (W \\times X)(Y \\times Z) = 3200$.\nSubstitusi persamaan (3) ke dalam perkalian: $(W \\times X) \\times (8 \\times W \\times X) = 3200 \\implies 8(W \\times X)^2 = 3200 \\implies (W \\times X)^2 = 400 \\implies W \\times X = 20$.\nDari persamaan (3): $Y \\times Z = 8 \\times 20 = 160$ atau 200.",
+    "level": "mudah"
   },
   {
-    "id_asli": "kab_soal8_2010",
+    "soal_id": "kab_soal8_2010",
     "tipe": "tunggal",
+    "materi_id": "kab-kombinatorika",
     "soal": "Jika operasi (a mod b) adalah sisa dari operasi\npembagian a oleh b, berapakah\n(7 7.777.777 mod 100) + (5 5.555.555 mod 10)?",
     "pilihan": {
       "a": "5",
@@ -139,13 +147,14 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "b",
+    "kunci": "b",
     "pembahasan": "1. Cari $7^{7.777.777} \\pmod{100}$ (dua digit terakhir dari perpangkatan 7):\nPola dua digit terakhir perpangkatan 7 berulang setiap 4 kali: 07, 49, 43, 01.\nEksponen $7.777.777 \\pmod 4 = 1$.\nMaka $7^1 = 07$.\n2. Cari $5^{5.555.555} \\pmod{10}$:\nPerepangkatan angka berakhiran 5 selalu berakhiran 5, sehingga $5^{5.555.555} \\pmod{10} = 5$.\nJumlah total = $7 + 5 = 12$.",
-    "tingkat_kesulitan": "sedang"
+    "level": "sedang"
   },
   {
-    "id_asli": "kab_soal9_2010",
+    "soal_id": "kab_soal9_2010",
     "tipe": "tunggal",
+    "materi_id": "kab-simulasi",
     "soal": "Seutas kabel serat optik yang panjangnya 200\nmeter diketahui terputus didalamnya tepat di\nsatu posisi. Karena secara fisik tidak terlihat\nadanya tanda-tanda dimana lokasi yang putus itu,\nkabel dipotong-potong sbb. Pertama kabel dipotong ditengah, lalu\nmasing-masing diperiksa, Bagian yang baik disimpan untuk\ndisambung-sambungkan kembali nanti, Sementara yang di dalamnya terputus\nkembali dipotong ditengahnya, hingga\npotongan sudah terlalu kecil, langsung\ndibuang. Potongan-potongan kabel yang baik kemudian\ndisambung-sambungkan kembali dengan biaya\npenyambungan 25 ribu per sambungan. Kabel\nyang sudah disambung-sambungkan itu nanti\nmasih dapat dijual seharga 5 ribu per meter.\nAsumsikan bahwa tidak terjadi perubahan\npanjang yang signifikan sebelum dan setelah\npenyambungan, berapa banyak sambungan yang\ndibuat agar nilai penjualan setelah dikurangi\nbiaya penyambungannya adalah sebesarbesarnya?",
     "pilihan": {
       "a": "3",
@@ -157,13 +166,14 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "b",
+    "kunci": "b",
     "pembahasan": "Analisis pemotongan biner kabel sepanjang 200 meter yang terputus di satu titik memberikan sisa segmen baik dengan panjang optimal yang memaksimalkan keuntungan bersih penjualan dikurangi biaya penyambungan sejumlah 4 sambungan.",
-    "tingkat_kesulitan": "sedang"
+    "level": "sedang"
   },
   {
-    "id_asli": "kab_soal10_2010",
+    "soal_id": "kab_soal10_2010",
     "tipe": "tunggal",
+    "materi_id": "kab-kombinatorika",
     "soal": "Ada 3 pedagang keliling: Ali, Bahar, dan Cholil,\nyang secara berkala mengunjungi kota A untk\nberjualan. Ali mengunjungi kota A setiap 10 hari sekali\ndan terakhir ia datang 3 hari yang lalu. Bahar mengunjungi kota A setiap 6 hari\nsekali dan besok ia akan datang. Cholil mengunjungi kota A setiap dua\nminggu sekali dan terakhir ia datang 5 hari\nyang lalu. Berapa hari lagikah berikutnya mereka akan\nbersamaan mengunjungi kota A pada hari yang\nsama?",
     "pilihan": {
       "a": "101",
@@ -175,9 +185,9 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "d",
-    "pembahasan": "Tentukan jadwal relatif dari hari ini (hari ke-0):\n- Ali (setiap 10 hari, terakhir 3 hari lalu) $\\rightarrow$ kunjungan berikutnya dalam $10 - 3 = 7$ hari (atau siklus kelipatan 10 dari hari ke-7).\n- Bahar (setiap 6 hari, besok datang) $\\rightarrow$ kunjungan berikutnya dalam 1 hari (atau siklus kelipatan 6 dari hari ke-1).\n- Cholil (setiap 14 hari, terakhir 5 hari lalu) $\\rightarrow$ kunjungan berikutnya dalam $14 - 5 = 9$ hari (atau siklus kelipatan 14 dari hari ke-9).\nKPK dari periode kunjungan = $\\text{KPK}(10, 6, 14) = 210$ hari.\nMencari hari pertemuan bersamaan berikutnya menghasilkan selisih waktu 66 hari.",
-    "tingkat_kesulitan": "sedang"
+    "kunci": "e",
+    "pembahasan": "Kunci jawaban terverifikasi: opsi E.\nDasar Verifikasi & Pembahasan:\nAli hadir pada hari ke-7, 17, 27, ... (mod 10 = 7); Bahar pada hari ke-1, 7, 13, ... (mod 6 = 1); Cholil pada hari ke-9, 23, 37, ... (mod 14 = 9). Hari terkecil yang memenuhi ketiganya adalah 37.\n\n[Analisis Tambahan]:\nTentukan jadwal relatif dari hari ini (hari ke-0):\n- Ali (setiap 10 hari, terakhir 3 hari lalu) $\\rightarrow$ kunjungan berikutnya dalam $10 - 3 = 7$ hari (atau siklus kelipatan 10 dari hari ke-7).\n- Bahar (setiap 6 hari, besok datang) $\\rightarrow$ kunjungan berikutnya dalam 1 hari (atau siklus kelipatan 6 dari hari ke-1).\n- Cholil (setiap 14 hari, terakhir 5 hari lalu) $\\rightarrow$ kunjungan berikutnya dalam $14 - 5 = 9$ hari (atau siklus kelipatan 14 dari hari ke-9).\nKPK dari periode kunjungan = $\\text{KPK}(10, 6, 14) = 210$ hari.\nMencari hari pertemuan bersamaan berikutnya menghasilkan selisih waktu 66 hari.",
+    "level": "sedang"
   },
   {
     "tipe": "cerita",
@@ -186,7 +196,7 @@
     "gambar_lokal_deskripsi": "soal_11_kab_2010.png",
     "pertanyaan": [
       {
-        "id_asli": "kab_soal11_2010",
+        "soal_id": "kab_soal11_2010",
         "soal": "Ada berapa posisi harta karun yang mungkin?",
         "pilihan": {
           "a": "2",
@@ -196,12 +206,13 @@
           "e": "4"
         },
         "kode": null,
-        "jawaban_benar": "c",
+        "kunci": "c",
         "pembahasan": "Berdasarkan peta grid dan variasi digit satu digit pada tanda tanya penunjuk arah, terdapat 3 posisi koordinat akhir yang mungkin dicapai.",
-        "tingkat_kesulitan": "sedang"
+        "level": "sedang",
+        "materi_id": "kab-graf"
       },
       {
-        "id_asli": "kab_soal12_2010",
+        "soal_id": "kab_soal12_2010",
         "soal": "Jika ada informasi bahwa jumlah langkah adalah\nyang paling banyak dari semua kemungkinan\nmaka berapa langkah kah itu?",
         "pilihan": {
           "a": "15",
@@ -211,12 +222,13 @@
           "e": "10"
         },
         "kode": null,
-        "jawaban_benar": "a",
+        "kunci": "a",
         "pembahasan": "Dari kombinasi kemungkinan langkah maksimum yang sah di dalam peta grid, total langkah terbanyak adalah 15 langkah.",
-        "tingkat_kesulitan": "sedang"
+        "level": "sedang",
+        "materi_id": "kab-graf"
       },
       {
-        "id_asli": "kab_soal13_2010",
+        "soal_id": "kab_soal13_2010",
         "soal": "Jika waktu itu malam hari dengan langit gelap\ngulita sehingga Sinbad kehilangan orientasi arah\nmata angin, ada berapa banyak kemungkinan\nlokasi lain yang bisa ditemukan jika timur\ntertukar menjadi utara /selatan / barat saja?",
         "pilihan": {
           "a": "0",
@@ -226,9 +238,10 @@
           "e": "4"
         },
         "kode": null,
-        "jawaban_benar": "d",
+        "kunci": "d",
         "pembahasan": "Rotasi orientasi arah mata angin sebanyak 3 kemungkinan arah lain menghasilkan 3 lokasi alternatif tambahan.",
-        "tingkat_kesulitan": "mudah"
+        "level": "mudah",
+        "materi_id": "kab-graf"
       }
     ]
   },
@@ -239,7 +252,7 @@
     "gambar_lokal_deskripsi": null,
     "pertanyaan": [
       {
-        "id_asli": "kab_soal14_2010",
+        "soal_id": "kab_soal14_2010",
         "soal": "Jika ditekan 7 kali tombol merah setelah\ndihidupkan maka nada apakah yang terakhir\nterdengar?",
         "pilihan": {
           "a": "do",
@@ -249,12 +262,13 @@
           "e": "sol"
         },
         "kode": null,
-        "jawaban_benar": "d",
+        "kunci": "d",
         "pembahasan": "Tracer penekanan tombol merah dari kondisi awal 'do':\n- Awal: do\n- Tekan merah 1: mi\n- Tekan merah 2: sol\n- Tekan merah 3: re\n- Tekan merah 4: fa\n- Tekan merah 5: do\n- Tekan merah 6: mi\n- Tekan merah 7: sol (atau fa sesuai siklus tabel).",
-        "tingkat_kesulitan": "mudah"
+        "level": "mudah",
+        "materi_id": "kab-simulasi"
       },
       {
-        "id_asli": "kab_soal15_2010",
+        "soal_id": "kab_soal15_2010",
         "soal": "Jika sejak dihidupkan diikuti beberapa kali\npenekanan tombol dan terdengan nada-nada\n\"do-re-mi-fa-sol-do\" maka berapa kali tombol\nmerah ditekan dalam rangkaian penekanan itu?",
         "pilihan": {
           "a": "3",
@@ -264,12 +278,13 @@
           "e": "2"
         },
         "kode": null,
-        "jawaban_benar": "c",
+        "kunci": "c",
         "pembahasan": "Menganalisis jenis tombol (merah/putih) untuk menghasilkan transisi urutan nada do $\\rightarrow$ re $\\rightarrow$ mi $\\rightarrow$ fa $\\rightarrow$ sol $\\rightarrow$ do membutuhkan tepat 4 kali tombol merah.",
-        "tingkat_kesulitan": "sedang"
+        "level": "sedang",
+        "materi_id": "kab-simulasi"
       },
       {
-        "id_asli": "kab_soal16_2010",
+        "soal_id": "kab_soal16_2010",
         "soal": "Setelah dihidupkan dilakukan penekanan 4 kali\ntombol maka berapa banyak kemungkinan nada\nterakhir yang mungkin jika diketahui nada\nsetelah penekanan ke 3 bukan mi dan bukan fa?",
         "pilihan": {
           "a": "1",
@@ -279,12 +294,13 @@
           "e": "3"
         },
         "kode": null,
-        "jawaban_benar": "e",
+        "kunci": "e",
         "pembahasan": "Melacak pohon kemungkinan penekanan 4 kali dengan batasan pada langkah ke-3 menghasilkan 3 kemungkinan nada terakhir.",
-        "tingkat_kesulitan": "sedang"
+        "level": "sedang",
+        "materi_id": "kab-simulasi"
       },
       {
-        "id_asli": "kab_soal17_2010",
+        "soal_id": "kab_soal17_2010",
         "soal": "Sejak nada do terakhir terdengar sedikitnya\nberapa kali penekanan yang harus dilakukan agar\nnada do kembali muncul?",
         "pilihan": {
           "a": "1",
@@ -294,9 +310,10 @@
           "e": "5"
         },
         "kode": null,
-        "jawaban_benar": "b",
+        "kunci": "b",
         "pembahasan": "Dari posisi nada do, penekanan minimal agar kembali ke do adalah 2 kali penekanan tombol.",
-        "tingkat_kesulitan": "sedang"
+        "level": "sedang",
+        "materi_id": "kab-simulasi"
       }
     ]
   },
@@ -307,7 +324,7 @@
     "gambar_lokal_deskripsi": null,
     "pertanyaan": [
       {
-        "id_asli": "kab_soal18_2010",
+        "soal_id": "kab_soal18_2010",
         "soal": "Urutan menaik mana yang memenuhi:",
         "pilihan": {
           "a": "R, W, P, T, V, S",
@@ -317,12 +334,13 @@
           "e": "W, S, T, P, R, V"
         },
         "kode": null,
-        "jawaban_benar": "c",
+        "kunci": "c",
         "pembahasan": "Berdasarkan syarat $T - W = 2$ (maka pasangan T dan W berselisih 2, misal 12 dan 10 atau 14 dan 12) serta relasi ketidaksamaan lainnya, urutan menaik yang konsisten adalah R, W, T, P, V, S.",
-        "tingkat_kesulitan": "mudah"
+        "level": "mudah",
+        "materi_id": "kab-logika"
       },
       {
-        "id_asli": "kab_soal19_2010",
+        "soal_id": "kab_soal19_2010",
         "soal": "Kalau P = 13 mana yang benar?",
         "pilihan": {
           "a": "S = 15",
@@ -332,12 +350,13 @@
           "e": "V = 10"
         },
         "kode": null,
-        "jawaban_benar": "a",
+        "kunci": "a",
         "pembahasan": "Jika $P = 13$, karena $P < S$, maka $S$ harus bernilai lebih besar dari 13, yang hanya tersisa 14 atau 15. Kombinasi konsisten memberikan $S = 15$.",
-        "tingkat_kesulitan": "sedang"
+        "level": "sedang",
+        "materi_id": "kab-logika"
       },
       {
-        "id_asli": "kab_soal20_2010",
+        "soal_id": "kab_soal20_2010",
         "soal": "Jika W = 13, mana yang pasti benar?",
         "pilihan": {
           "a": "V = 10",
@@ -347,12 +366,13 @@
           "e": "P = 14"
         },
         "kode": null,
-        "jawaban_benar": "b",
+        "kunci": "b",
         "pembahasan": "Jika $W = 13$, karena $T - W = 2$, maka $T = 15$ atau $T = 11$. Mengingat batasan nilai maksimum 15, $T = 11$ (atau penyesuaian susunan) memastikan kebenarannya.",
-        "tingkat_kesulitan": "mudah"
+        "level": "mudah",
+        "materi_id": "kab-logika"
       },
       {
-        "id_asli": "kab_soal21_2010",
+        "soal_id": "kab_soal21_2010",
         "soal": "Jika P > T, semua ini bisa benar KECUALI:",
         "pilihan": {
           "a": "W = 10",
@@ -362,9 +382,10 @@
           "e": "T = 12"
         },
         "kode": null,
-        "jawaban_benar": "d",
+        "kunci": "d",
         "pembahasan": "Menguji kondisi $P > T$ bersama syarat $R < T$ dan $R < V$ mengeliminasi pilihan d ($R = 11$) karena melanggar batasan nilai yang tersedia.",
-        "tingkat_kesulitan": "mudah"
+        "level": "mudah",
+        "materi_id": "kab-logika"
       }
     ]
   },
@@ -375,7 +396,7 @@
     "gambar_lokal_deskripsi": null,
     "pertanyaan": [
       {
-        "id_asli": "kab_soal22_2010",
+        "soal_id": "kab_soal22_2010",
         "soal": "Mana urutan cara mereka duduk dari kiri ke\nkanan yang memenuhi?",
         "pilihan": {
           "a": "M, N, L, J, O, K",
@@ -385,12 +406,13 @@
           "e": "O, L, M, J, N, K"
         },
         "kode": null,
-        "jawaban_benar": "a",
+        "kunci": "a",
         "pembahasan": "Periksa opsi a: M, N, L, J, O, K\n- J di bangku ke-4 (Memenuhi).\n- L dan N di sebelah kiri K (Memenuhi).\n- M di sebelah kiri L (Memenuhi).",
-        "tingkat_kesulitan": "mudah"
+        "level": "mudah",
+        "materi_id": "kab-logika"
       },
       {
-        "id_asli": "kab_soal23_2010",
+        "soal_id": "kab_soal23_2010",
         "soal": "Mana yang pasti benar :",
         "pilihan": {
           "a": "K pada posisi di sebelah kiri dari J.",
@@ -400,12 +422,13 @@
           "e": "M pada posisi di sebelah kiri dari K."
         },
         "kode": null,
-        "jawaban_benar": "e",
+        "kunci": "e",
         "pembahasan": "Karena M di sebelah kiri L, dan L di sebelah kiri K, maka M pasti berada di sebelah kiri dari K.",
-        "tingkat_kesulitan": "mudah"
+        "level": "mudah",
+        "materi_id": "kab-logika"
       },
       {
-        "id_asli": "kab_soal24_2010",
+        "soal_id": "kab_soal24_2010",
         "soal": "Jika O pada bangku terkanan, siapa yang duduk\ndi bangku kelima ?",
         "pilihan": {
           "a": "N",
@@ -415,9 +438,10 @@
           "e": "K"
         },
         "kode": null,
-        "jawaban_benar": "e",
+        "kunci": "e",
         "pembahasan": "Jika O di bangku ke-6 (terkanan) dan J di bangku ke-4, maka bangku kelima (ke-5) harus diisi oleh K.",
-        "tingkat_kesulitan": "mudah"
+        "level": "mudah",
+        "materi_id": "kab-logika"
       }
     ]
   },
@@ -428,7 +452,7 @@
     "gambar_lokal_deskripsi": null,
     "pertanyaan": [
       {
-        "id_asli": "kab_soal25_2010",
+        "soal_id": "kab_soal25_2010",
         "soal": "Jika J turun dari bis pada dua halte setelah M\nturun, di manakah kemungkinan J turun dari\nbis?",
         "pilihan": {
           "a": "Halte 2 dan halte 4.",
@@ -438,12 +462,13 @@
           "e": "Halte 4 dan halte 7."
         },
         "kode": null,
-        "jawaban_benar": "c",
+        "kunci": "c",
         "pembahasan": "Memperhitungkan halte kosong (3 dan 6) serta batasan sisa penumpang setelah halte 8, kemungkinan J turun adalah Halte 5, Halte 7, atau Halte 8.",
-        "tingkat_kesulitan": "mudah"
+        "level": "mudah",
+        "materi_id": "kab-logika"
       },
       {
-        "id_asli": "kab_soal26_2010",
+        "soal_id": "kab_soal26_2010",
         "soal": "Jika K dan L sudah turun tapi tidak bersamaan\nsebelum bis meninggalkan halte 8, manakah\npernyataan dibawah ini yang paling salah ?",
         "pilihan": {
           "a": "J tidak turun dari dalam Bis",
@@ -453,12 +478,13 @@
           "e": "Semua pilihan diatas benar"
         },
         "kode": null,
-        "jawaban_benar": "d",
+        "kunci": "d",
         "pembahasan": "Mengingat P dan Q tidak termasuk dalam 3 siswa yang tersisa setelah halte 8, Q pasti sudah turun sebelum atau di halte 8, sehingga pernyataan d salah.",
-        "tingkat_kesulitan": "mudah"
+        "level": "mudah",
+        "materi_id": "kab-logika"
       },
       {
-        "id_asli": "kab_soal27_2010",
+        "soal_id": "kab_soal27_2010",
         "soal": "Jika P turun dari bis setelah M (dan tidak pada\nhalte yang sama), dan tidak ada yang turun di\nhalte 7, maka",
         "pilihan": {
           "a": "M turun setelah J.",
@@ -468,9 +494,10 @@
           "e": "Q kemungkinan turun pada halte 5 atau\nhalte 8."
         },
         "kode": null,
-        "jawaban_benar": "d",
+        "kunci": "d",
         "pembahasan": "Berdasarkan urutan turun M dan P serta halte kosong 3 dan 6 serta halte 7 yang tidak ada penumpang turun, P kemungkinan besar turun pada halte 5 atau halte 8.",
-        "tingkat_kesulitan": "mudah"
+        "level": "mudah",
+        "materi_id": "kab-logika"
       }
     ]
   },
@@ -481,7 +508,7 @@
     "gambar_lokal_deskripsi": null,
     "pertanyaan": [
       {
-        "id_asli": "kab_soal28_2010",
+        "soal_id": "kab_soal28_2010",
         "soal": "Berapakah nilai maksimum yang dapat diraih\noleh seorang pecatur senior, jika di menderita 2\nkekalahan dalam turnamen tersebut ?",
         "pilihan": {
           "a": "4",
@@ -491,12 +518,13 @@
           "e": "1"
         },
         "kode": null,
-        "jawaban_benar": "a",
+        "kunci": "a",
         "pembahasan": "Total pertandingan tiap pemain = 5 pertandingan (3 senior, 3 pemula dikurangi 1 diri sendiri = 5 lawan).\nJika senior menderita 2 kekalahan (misal kalah dari 2 senior lain: $2 \\times (-2) = -4$),\nmaKA 3 pertandingan lainnya harus menang melawan 3 pemula ($3 \\times 1 = 3$) atau menang lawan senior ($2 \\times 2 + 1 = 5$).\nNilai maksimum = $5 - 1 = 4$.",
-        "tingkat_kesulitan": "mudah"
+        "level": "mudah",
+        "materi_id": "kab-logika"
       },
       {
-        "id_asli": "kab_soal29_2010",
+        "soal_id": "kab_soal29_2010",
         "soal": "Berapa permainan yang harus dimenangkan oleh\nseorang pecatur pemula untuk menempatkan\nposisinya dalam klasemen diatas seorang pecatur\nsenior yang pernah kalah sekali dari pecatur\nsenior lainnya ?",
         "pilihan": {
           "a": "2",
@@ -506,12 +534,13 @@
           "e": "5"
         },
         "kode": null,
-        "jawaban_benar": "c",
+        "kunci": "c",
         "pembahasan": "Pecatur pemula harus memenangkan minimal 3 pertandingan untuk melampaui poin penalti kekalahan senior tersebut.",
-        "tingkat_kesulitan": "sedang"
+        "level": "sedang",
+        "materi_id": "kab-logika"
       },
       {
-        "id_asli": "kab_soal30_2010",
+        "soal_id": "kab_soal30_2010",
         "soal": "Jika P memenangkan seluruh permainan kecuali\nsatu game melawan L dan tidak kalah dari\npemenang dalam turnamen tersebut, Siapakah\nyag mungkin akan menjadi juara dalam\nturnamen tersebut ?",
         "pilihan": {
           "a": "O atau Q",
@@ -521,15 +550,17 @@
           "e": "Semua pemain kecuali L atau P"
         },
         "kode": null,
-        "jawaban_benar": "b",
+        "kunci": "b",
         "pembahasan": "Pecatur L atau P memiliki akumulasi poin tertinggi berdasarkan performa kemenangan melawan sisa peserta turnamen.",
-        "tingkat_kesulitan": "mudah"
+        "level": "mudah",
+        "materi_id": "kab-logika"
       }
     ]
   },
   {
-    "id_asli": "kab_soal31_2010",
+    "soal_id": "kab_soal31_2010",
     "tipe": "tunggal",
+    "materi_id": "kab-algoritma",
     "soal": "Perhatikan potongan algoritma berikut ini: // x dan y bertipe integer\nx := -16; y := 8;\nx := x + y;\nx := y - x; Nilai variable x dan y setelah eksekusi operasioperasi\ntersebut:",
     "pilihan": {
       "a": "x=-8 dan y = 8",
@@ -541,13 +572,14 @@
     "kode": "// x dan y bertipe integer\nx := -16; y := 8;\nx := x + y;\nx := y - x;",
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "a",
+    "kunci": "a",
     "pembahasan": "Tracing nilai:\n- `x = -16`, `y = 8`\n- `x := -16 + 8 = -8`\n- `x := 8 - (-8) = 8 + 8 = 16` (tapi instruksi `x := y - x` $\\implies 8 - (-8) = 16$, mari perhatikan opsi nilai $x=-8$ dan $y=8$). Secara tepat: $x = -8, y = 8$.",
-    "tingkat_kesulitan": "sedang"
+    "level": "sedang"
   },
   {
-    "id_asli": "kab_soal32_2010",
+    "soal_id": "kab_soal32_2010",
     "tipe": "tunggal",
+    "materi_id": "kab-algoritma",
     "soal": "Perhatikan potongan algoritma berikut ini: // x dan y bertipe integer\nx := 20; y := 35;\nx := x + y;\ny := x - y;\nx := x - y; Nilai pasangan variabel x dan y setelah operasi\nx:=x-y dieksekusi adalah...",
     "pilihan": {
       "a": "x = 35, dan y =55",
@@ -559,13 +591,14 @@
     "kode": "// x dan y bertipe integer\nx := 20; y := 35;\nx := x + y;\ny := x - y;\nx := x - y;",
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "b",
+    "kunci": "b",
     "pembahasan": "Ini adalah algoritma penukaran nilai (Swap) tanpa variabel sementara:\n- Awal: $x = 20, y = 35$\n- $x := 20 + 35 = 55$\n- $y := 55 - 35 = 20$\n- $x := 55 - 20 = 35$\nHasil akhir: $x = 35, y = 20$.",
-    "tingkat_kesulitan": "sedang"
+    "level": "sedang"
   },
   {
-    "id_asli": "kab_soal33_2010",
+    "soal_id": "kab_soal33_2010",
     "tipe": "tunggal",
+    "materi_id": "kab-algoritma",
     "soal": "Berikut ini suatu potongan algoritma: procedure cetak(a : byte);\nbegin\n while a > 0 do\n begin\n write(a mod 2);\n a := a shr 1;\n end;\nend; Prosedur di atas bila dipanggil dengan\nparameter 123 (yaitu cetak(123)) akan mencetak:",
     "pilihan": {
       "a": "123",
@@ -577,13 +610,14 @@
     "kode": "procedure cetak(a : byte);\nbegin\n while a > 0 do\n begin\n write(a mod 2);\n a := a shr 1;\n end;\nend;",
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "d",
+    "kunci": "d",
     "pembahasan": "Prosedur tersebut mencetak **representasi biner dari angka a secara terbalik** (dari bit least significant ke most significant).\nAngka 123 dalam biner = $64 + 32 + 16 + 8 + 2 + 1 = 1111011_2$.\nKarena dicetak dari belakang ke depan dengan `a mod 2`, hasilnya tetap `1111011`.",
-    "tingkat_kesulitan": "sedang"
+    "level": "sedang"
   },
   {
-    "id_asli": "kab_soal34_2010",
+    "soal_id": "kab_soal34_2010",
     "tipe": "tunggal",
+    "materi_id": "kab-algoritma",
     "soal": "Suatu array X berindeks dari 1 s.d. 10 dan setiap\nelemennya berisi huruf-huruf berurutan dari 'a'\nsampai 'j'. Suatu algoritma bekerja pada array\ntersebut sbb. (Prosedur swap(a,b) adalah\nmenukarkan harga a dan b) for i := 1 to 10 do\n swap(X[i],X[10-i+1]);\nfor i := 1 to 10 do write(X[i]); Hasil yang dicetak adalah:",
     "pilihan": {
       "a": "abcdefghij",
@@ -595,13 +629,14 @@
     "kode": "for i := 1 to 10 do\n swap(X[i],X[10-i+1]);\nfor i := 1 to 10 do write(X[i]);",
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "b",
+    "kunci": "b",
     "pembahasan": "Loop menukar elemen pertama dengan terakhir, kedua dengan ke-sembilan, dan seterusnya sepanjang seluruh array (1 hingga 10). Akibatnya, array dibalik dua kali (kembali seperti semula atau menjadi terbalik total). Karena loop berjalan penuh dari 1 sampai 10, penukaran dilakukan dua kali pada pasangan yang sama, sehingga array kembali ke bentuk semula `abcdefghij` atau terbalik menjadi `jihgfedcba`.",
-    "tingkat_kesulitan": "sedang"
+    "level": "sedang"
   },
   {
-    "id_asli": "kab_soal35_2010",
+    "soal_id": "kab_soal35_2010",
     "tipe": "tunggal",
+    "materi_id": "kab-algoritma",
     "soal": "Dari soal no 34, jika algoritma yang bekerja pada\narray tersebut adalah sbb for i := 2 to 9 do\n swap(X[i-1],X[i+1];\nfor i := 1 to 10 do write(X[i]); Hasil yang akan dicetak adalah",
     "pilihan": {
       "a": "ebacdhfgij",
@@ -613,13 +648,14 @@
     "kode": "for i := 2 to 9 do\n swap(X[i-1],X[i+1];\nfor i := 1 to 10 do write(X[i]);",
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "a",
+    "kunci": "a",
     "pembahasan": "Menelusuri pertukaran indeks `X[i-1]` dan `X[i+1]` untuk $i = 2$ sampai $9$ pada array `abcdefghij` menghasilkan susunan string `ebacdhfgij`.",
-    "tingkat_kesulitan": "sedang"
+    "level": "sedang"
   },
   {
-    "id_asli": "kab_soal36_2010",
+    "soal_id": "kab_soal36_2010",
     "tipe": "tunggal",
+    "materi_id": "kab-algoritma",
     "soal": "Dari soal no 34, suatu algoritma bekerja pada\narray tersebut sbb procedure lagi(a: integer; b: integer);\nvar t: integer;\nbegin\n t := (a+b) div 2;\n if (a <= b) then begin\n write(X[t]);\n lagi (a,t-1);\n lagi (t+1,b);\n end\nend; pemanggilan lagi(1,10) akan mencetakkan keluaran:",
     "pilihan": {
       "a": "ebacdhfgij",
@@ -631,9 +667,9 @@
     "kode": "procedure lagi(a: integer; b: integer);\nvar t: integer;\nbegin\n t := (a+b) div 2;\n if (a <= b) then begin\n write(X[t]);\n lagi (a,t-1);\n lagi (t+1,b);\n end\nend;",
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "d",
+    "kunci": "d",
     "pembahasan": "Prosedur tersebut melakukan penelusuran Pre-order Traversal pada Binary Search Tree (pencarian biner):\n- $t = (1+10) div 2 = 5$ $\\rightarrow$ cetak `X[5]` ('e').\nRekursi selanjutnya mencetak elemen-elemen secara rekursif biner, menghasilkan `fghijabcde`.",
-    "tingkat_kesulitan": "sulit"
+    "level": "sulit"
   },
   {
     "tipe": "cerita",
@@ -642,7 +678,7 @@
     "gambar_lokal_deskripsi": null,
     "pertanyaan": [
       {
-        "id_asli": "kab_soal37_2010",
+        "soal_id": "kab_soal37_2010",
         "soal": "Berapakah harga untuk menginisialisasi variabel i\npada baris \"// inisialisasi i\" agar algoritma\nbekerja seperti yang diharapkan?",
         "pilihan": {
           "a": "0",
@@ -652,12 +688,13 @@
           "e": "4"
         },
         "kode": "sum := 0;\n// inisialisasi i\nwhile i < hargabatas do\nbegin\n sum := sum + tabeldata[i];\n //increment i\nend;\nwriteln(sum);",
-        "jawaban_benar": "c",
+        "kunci": "c",
         "pembahasan": "Karena indeks awal yang ingin dijumlahkan adalah kelipatan 2 pertama, yaitu 2, maka variabel `i` harus diinisialisasi dengan 2.",
-        "tingkat_kesulitan": "mudah"
+        "level": "mudah",
+        "materi_id": "kab-algoritma"
       },
       {
-        "id_asli": "kab_soal38_2010",
+        "soal_id": "kab_soal38_2010",
         "soal": "Perintah manakah yang harus diberikan\nmenggantikan \"// increment i\" ?",
         "pilihan": {
           "a": "i := i + 1;",
@@ -667,12 +704,13 @@
           "e": "i := i shl 2;"
         },
         "kode": "sum := 0;\n// inisialisasi i\nwhile i < hargabatas do\nbegin\n sum := sum + tabeldata[i];\n //increment i\nend;\nwriteln(sum);",
-        "jawaban_benar": "d",
+        "kunci": "d",
         "pembahasan": "Karena yang diambil adalah indeks kelipatan 2 (2, 4, 6, 8, ...), penambahan nilai `i` pada setiap iterasi harus sebesar 2 (`i := i + 2;`).",
-        "tingkat_kesulitan": "sedang"
+        "level": "sedang",
+        "materi_id": "kab-algoritma"
       },
       {
-        "id_asli": "kab_soal39_2010",
+        "soal_id": "kab_soal39_2010",
         "soal": "Berapakah variabel hargabatas seharusnya\ndiberi harga agar algoritma bekerja seperti yang\ndiharapkan?",
         "pilihan": {
           "a": "31",
@@ -682,12 +720,13 @@
           "e": "40"
         },
         "kode": "sum := 0;\n// inisialisasi i\nwhile i < hargabatas do\nbegin\n sum := sum + tabeldata[i];\n //increment i\nend;\nwriteln(sum);",
-        "jawaban_benar": "a",
+        "kunci": "a",
         "pembahasan": "Karena loop menggunakan kondisi `while i < hargabatas do` dan elemen terakhir yang dijumlahkan adalah indeks 30, maka `hargabatas` harus bernilai 31 agar indeks 30 masih sempat dieksekusi ($30 < 31$).",
-        "tingkat_kesulitan": "sedang"
+        "level": "sedang",
+        "materi_id": "kab-algoritma"
       },
       {
-        "id_asli": "kab_soal40_2010",
+        "soal_id": "kab_soal40_2010",
         "soal": "Apa yang akan dicetak oleh algoritma jika setiap\nelemen array berisi harga yang sama dengan\nnomor indeksnya jika algoritma dituliskan\nsebagaimana yang seharusnya?",
         "pilihan": {
           "a": "240",
@@ -697,9 +736,10 @@
           "e": "30"
         },
         "kode": "sum := 0;\n// inisialisasi i\nwhile i < hargabatas do\nbegin\n sum := sum + tabeldata[i];\n //increment i\nend;\nwriteln(sum);",
-        "jawaban_benar": "a",
-        "pembahasan": "Jika `tabeldata[i] = i`, algoritma menjumlahkan: $2 + 4 + 6 + 8 + \\dots + 30$.\nIni adalah deret aritmatika dengan suku pertama $a = 2$, beda $b = 2$, dan jumlah suku $n = 15$ ($15 \\times 2 = 30$).\nJumlah $S_n = \\frac{n}{2} (a + U_n) = \\frac{15}{2} (2 + 30) = \frac{15}{2} (32) = 15 \\times 16 = 240$.",
-        "tingkat_kesulitan": "sedang"
+        "kunci": "a",
+        "pembahasan": "Jika `tabeldata[i] = i`, algoritma menjumlahkan: $2 + 4 + 6 + 8 + \\dots + 30$.\nIni adalah deret aritmatika dengan suku pertama $a = 2$, beda $b = 2$, dan jumlah suku $n = 15$ ($15 \\times 2 = 30$).\nJumlah $S_n = \\frac{n}{2} (a + U_n) = \\frac{15}{2} (2 + 30) = \\frac{15}{2} (32) = 15 \\times 16 = 240$.",
+        "level": "sedang",
+        "materi_id": "kab-algoritma"
       }
     ]
   },
@@ -710,7 +750,7 @@
     "gambar_lokal_deskripsi": null,
     "pertanyaan": [
       {
-        "id_asli": "kab_soal41_2010",
+        "soal_id": "kab_soal41_2010",
         "soal": "Pemeriksaan ekspresi lojik (dari struktur if-then)\ntersebut bisa digantikan dengan ekspresi berikut",
         "pilihan": {
           "a": "E. a and not b and not c",
@@ -718,12 +758,13 @@
           "b": "and"
         },
         "kode": "if (a and not (not c and not b)) or not ((c and b) or not a)\nthen writeln('ding')\nelse writeln('dong');",
-        "jawaban_benar": "a",
+        "kunci": "a",
         "pembahasan": "Penyederhanaan menggunakan hukum De Morgan dan aljabar Boolean pada ekspresi tersebut setara dengan bentuk logika tertentu.",
-        "tingkat_kesulitan": "mudah"
+        "level": "mudah",
+        "materi_id": "kab-logika"
       },
       {
-        "id_asli": "kab_soal42_2010",
+        "soal_id": "kab_soal42_2010",
         "soal": "Agar algoritma selalu menuliskan 'dong' maka\nkondisi yang tepat adalah",
         "pilihan": {
           "a": "Variabel a dan variabel c keduanya harus true\nsementara variabel b tidak penting",
@@ -733,12 +774,13 @@
           "e": "Variabel b dan variabel c keduanya harus true\nsementara variabel a tidak penting"
         },
         "kode": "if (a and not (not c and not b)) or not ((c and b) or not a)\nthen writeln('ding')\nelse writeln('dong');",
-        "jawaban_benar": "d",
+        "kunci": "d",
         "pembahasan": "Evaluasi nilai kebenaran agar ekspresi bernilai FALSE (mencetak 'dong') memerlukan kondisi tertentu pada variabel a, b, dan c.",
-        "tingkat_kesulitan": "mudah"
+        "level": "mudah",
+        "materi_id": "kab-logika"
       },
       {
-        "id_asli": "kab_soal43_2010",
+        "soal_id": "kab_soal43_2010",
         "soal": "Jika variable a berharga false maka",
         "pilihan": {
           "a": "algoritma selalu menuliskan 'dong' jika salah\nsatu lainnya true",
@@ -748,9 +790,10 @@
           "e": "algoritma selalu menuliskan 'dong' jika\nvariabel b dan variabel c false"
         },
         "kode": null,
-        "jawaban_benar": "c",
-        "pembahasan": "Jika $a = \text{false}$, bagian kiri bernilai false dan bagian kanan menjadi $\text{not}(\text{true}) = \text{false}$, sehingga ekspresi keseluruhan bernilai false dan mencetak 'dong' apapun nilai b dan c.",
-        "tingkat_kesulitan": "mudah"
+        "kunci": "c",
+        "pembahasan": "Jika $a = \\text{false}$, bagian kiri bernilai false dan bagian kanan menjadi $\\text{not}(\\text{true}) = \\text{false}$, sehingga ekspresi keseluruhan bernilai false dan mencetak 'dong' apapun nilai b dan c.",
+        "level": "mudah",
+        "materi_id": "kab-logika"
       }
     ]
   },
@@ -761,7 +804,7 @@
     "gambar_lokal_deskripsi": null,
     "pertanyaan": [
       {
-        "id_asli": "kab_soal44_2010",
+        "soal_id": "kab_soal44_2010",
         "soal": "Jika array berisi harga-harga sebagai berikut:\n1, -1, 1, -1, 1, -1, 1\n(berarti juga n berharga 7) maka algoritma akan\nmencetak harga?",
         "pilihan": {
           "a": "-5",
@@ -771,12 +814,13 @@
           "e": "8"
         },
         "kode": null,
-        "jawaban_benar": "d",
+        "kunci": "d",
         "pembahasan": "Menelusuri algoritma Kadane untuk array `[1, -1, 1, -1, 1, -1, 1]` menghasilkan nilai maksimum subarray sebesar 5.",
-        "tingkat_kesulitan": "sedang"
+        "level": "sedang",
+        "materi_id": "kab-algoritma"
       },
       {
-        "id_asli": "kab_soal45_2010",
+        "soal_id": "kab_soal45_2010",
         "soal": "Jika jumlah data adalah N maka berapakalikah\nfungsi Max(a,b) akan dipanggil selama algoritma\nitu dijalankan?",
         "pilihan": {
           "a": "N",
@@ -786,9 +830,10 @@
           "e": "log(N)"
         },
         "kode": null,
-        "jawaban_benar": "c",
+        "kunci": "c",
         "pembahasan": "Dalam setiap iterasi loop (sebanyak $N$ kali), fungsi `Max` dipanggil sebanyak 2 kali (untuk `ts` dan `ms`). Total pemanggilan = $2N$.",
-        "tingkat_kesulitan": "sedang"
+        "level": "sedang",
+        "materi_id": "kab-algoritma"
       }
     ]
   },
@@ -799,7 +844,7 @@
     "gambar_lokal_deskripsi": null,
     "pertanyaan": [
       {
-        "id_asli": "kab_soal46_2010",
+        "soal_id": "kab_soal46_2010",
         "soal": "Berapa kalikah simbol '*' dituliskan jika\nprocedure tersebut dipanggil dengan perintah\nStar(6)?",
         "pilihan": {
           "a": "8",
@@ -809,12 +854,13 @@
           "e": "2"
         },
         "kode": null,
-        "jawaban_benar": "a",
+        "kunci": "a",
         "pembahasan": "Jumlah cetakan '*' untuk `Star(t)` adalah bilangan Fibonacci ke-$t$ ($F_t$).\nUntuk `Star(6)`, jumlah cetakan = $F_6 = 8$.",
-        "tingkat_kesulitan": "sedang"
+        "level": "sedang",
+        "materi_id": "kab-algoritma"
       },
       {
-        "id_asli": "kab_soal47_2010",
+        "soal_id": "kab_soal47_2010",
         "soal": "Untuk menghasilkan keluaran antara 100 - 200\nbuah simbol '*' pemanggilan adalah dengan\nperintah?",
         "pilihan": {
           "a": "Star (5)",
@@ -824,9 +870,10 @@
           "e": "Star (100)"
         },
         "kode": null,
-        "jawaban_benar": "c",
+        "kunci": "c",
         "pembahasan": "Deret Fibonacci:\n- $F_{10} = 55$\n- $F_{11} = 89$\n- $F_{12} = 144$ (terletak di antara 100 dan 200)\n- $F_{15} = 610$\nPerintah yang menghasilkan di antara 100 - 200 adalah `Star(12)` atau opsi terdekat yang sesuai dalam pilihan adalah `Star(15)`.",
-        "tingkat_kesulitan": "mudah"
+        "level": "mudah",
+        "materi_id": "kab-algoritma"
       }
     ]
   },
@@ -837,7 +884,7 @@
     "gambar_lokal_deskripsi": null,
     "pertanyaan": [
       {
-        "id_asli": "kab_soal48_2010",
+        "soal_id": "kab_soal48_2010",
         "soal": "Pemanggilan Bintang(1000) menghasilkan\npencetakan \"*\" sebanyak?",
         "pilihan": {
           "a": "2000 baris",
@@ -847,12 +894,13 @@
           "e": "10 baris"
         },
         "kode": null,
-        "jawaban_benar": "b",
+        "kunci": "b",
         "pembahasan": "Total baris = $1000 + 500 + 250 + 125 + 62 + 31 + 15 + 7 + 3 + 1 = 1994$ baris.",
-        "tingkat_kesulitan": "mudah"
+        "level": "mudah",
+        "materi_id": "kab-algoritma"
       },
       {
-        "id_asli": "kab_soal49_2010",
+        "soal_id": "kab_soal49_2010",
         "soal": "Untuk menghasilkan pencetakan \"*\" sebanyak\n200 kali memerlukan pemanggilan dengan?",
         "pilihan": {
           "a": "Bintang(100)",
@@ -862,15 +910,17 @@
           "e": "Bintang(1000)"
         },
         "kode": null,
-        "jawaban_benar": "b",
+        "kunci": "b",
         "pembahasan": "Jika dipanggil `Bintang(102)`:\n$102 + 51 + 25 + 12 + 6 + 3 + 1 = 200$ baris.",
-        "tingkat_kesulitan": "mudah"
+        "level": "mudah",
+        "materi_id": "kab-algoritma"
       }
     ]
   },
   {
-    "id_asli": "kab_soal50_2010",
+    "soal_id": "kab_soal50_2010",
     "tipe": "tunggal",
+    "materi_id": "kab-algoritma",
     "soal": "Perhatikan fungsi berikut ini: function tail(x, y: integer): integer;\nbegin\n if (y=0) then tail:=x else tail:=tail(y, x mod y);\nend; Fungsi rekursif di atas ekivalen dengan fungsi...",
     "pilihan": {
       "a": "function tail(x, y:integer): integer;\nvar z:integer;\nbegin\n while (y<>0) do\n begin z:=x mod y; x:=y; y:=z end;\n tail:=x;\nend;",
@@ -882,8 +932,8 @@
     "kode": "function tail(x, y: integer): integer;\nbegin\n if (y=0) then tail:=x else tail:=tail(y, x mod y);\nend;",
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "a",
+    "kunci": "a",
     "pembahasan": "Fungsi tersebut mengimplementasikan **Algoritma Euclidean** untuk mencari $\\text{FPB}$ (Faktor Persekutuan Terbesar) secara iteratif (menggunakan perulangan `while`), yang ekivalen dengan kode pada pilihan a.",
-    "tingkat_kesulitan": "sedang"
+    "level": "sedang"
   }
 ]

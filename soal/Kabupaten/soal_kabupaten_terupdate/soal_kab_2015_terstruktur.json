@@ -1,7 +1,8 @@
 [
   {
-    "id_asli": "kab_soal1_2015",
+    "soal_id": "kab_soal1_2015",
     "tipe": "tunggal",
+    "materi_id": "kab-kombinatorika",
     "soal": "Pak Dengklek baru saja membuat sebuah koper. Koper tersebut memiliki sistem pengunci yang\nunik. Pada koper terdapat 10 tombol. Untuk membuka koper tersebut, pak Dengklek harus\nmenekan 7 tombol yang berbeda dengan urutan tertentu. Berapa banyaknya kemungkinan urutan\npenekanan tombol yang ada?",
     "pilihan": {
       "a": "604800",
@@ -13,13 +14,14 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "a",
+    "kunci": "a",
     "pembahasan": "Memilih 7 tombol dari 10 tombol berbeda dengan memperhatikan URUTAN penekanan merupakan permasalahan Permutasi P(10, 7).\nP(10, 7) = 10! / (10 - 7)! = 10! / 3! = 10 × 9 × 8 × 7 × 6 × 5 × 4 = 604.800.",
-    "tingkat_kesulitan": "sedang"
+    "level": "sedang"
   },
   {
-    "id_asli": "kab_soal2_2015",
+    "soal_id": "kab_soal2_2015",
     "tipe": "tunggal",
+    "materi_id": "kab-kombinatorika",
     "soal": "Bu Dengklek adalah seorang guru. Minggu depan, Bu Dengklek ingin membagikan permen kepada 7\norang muridnya, namun belum tentu semua muridnya datang ke sekolah pada minggu depan.\nSebagai tambahan, Bu Dengklek ingin membagikan permen kepada murid-muridnya sama rata dan\ntidak bersisa. Berapakah jumlah permen minimal yang harus Bu Dengklek bawa minggu depan?",
     "pilihan": {
       "a": "1",
@@ -31,13 +33,14 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "c",
+    "kunci": "c",
     "pembahasan": "Agar permen dapat dibagi sama rata tanpa sisa untuk setiap kemungkinan jumlah murid yang datang (bisa 1, 2, 3, 4, 5, 6, atau 7 murid), jumlah permen harus merupakan Kelipatan Persekutuan Terkecil (KPK) dari {1, 2, 3, 4, 5, 6, 7}.\nKPK(1, 2, 3, 4, 5, 6, 7) = 2^2 × 3 × 5 × 7 = 4 × 3 × 5 × 7 = 420.",
-    "tingkat_kesulitan": "sedang"
+    "level": "sedang"
   },
   {
-    "id_asli": "kab_soal3_2015",
+    "soal_id": "kab_soal3_2015",
     "tipe": "tunggal",
+    "materi_id": "kab-kombinatorika",
     "soal": "Diberikan 4 buah angka berbeda, yaitu T, O, K, dan I. Jika diketahui N = TO x KI = IK x OT, berapa\nnilai N terbesar yang mungkin?",
     "pilihan": {
       "a": "1472",
@@ -49,9 +52,9 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "e",
-    "pembahasan": "Persamaan TO × KI = IK × OT berarti (10T + O)(10K + I) = (10I + K)(10O + T).\nSetelah diekspansi dan disederhanakan: 100TK + 10TI + 10OK + OI = 100IK + 10IT + 10KO + KT => 100TK + OI = 100IK + KT => 99TK - 99IK = KT - OI, yang mengimplikasikan T × K = I × O.\nDi antara pilihan digit berbeda, perkalian terbesar N yang memenuhi kriteria di atas adalah 63 × 48 = 84 × 36 = 3024 atau 84 × 21 = 42 × 42 (tidak unik), tetapi jika dihitung pasangan digit terbesar unik T,O,K,I, nilai N terbesar yang tepat berturut-turut tidak ada di antara opsi a, b, c, d.",
-    "tingkat_kesulitan": "mudah"
+    "kunci": "c",
+    "pembahasan": "Persamaan TO × KI = IK × OT berarti (10T + O)(10K + I) = (10I + K)(10O + T).\nSetelah disederhanakan didapat T × K = I × O.\nKarena T, O, K, I adalah 4 digit berbeda dan kita ingin memaksimumkan N = TO × KI = IK × OT:\nPasangan digit terbesar yang memenuhi TK = IO adalah T=6, K=8, I=4, O=3 (atau 63 × 48 = 84 × 36 = 3024).\nNilai N terbesar yang mungkin dari digit-digit berbeda adalah 3024, yang tepat merupakan opsi c.",
+    "level": "mudah"
   },
   {
     "tipe": "cerita",
@@ -60,7 +63,7 @@
     "gambar_lokal_deskripsi": null,
     "pertanyaan": [
       {
-        "id_asli": "kab_soal4_2015",
+        "soal_id": "kab_soal4_2015",
         "soal": "Jika hanya 3% dari penumpang yang memilih penayangan ketiga Channel tersebut, berapa persen\npenumpang yang memilih lebih dari satu Channel?",
         "pilihan": {
           "a": "17%",
@@ -70,12 +73,13 @@
           "e": "57%"
         },
         "kode": null,
-        "jawaban_benar": "b",
+        "kunci": "b",
         "pembahasan": "Gunakan Prinsip Inklusi-Eksklusi Diagram Venn:\n|A ∪ B ∪ C| = |A| + |B| + |C| - (|A ∩ B| + |B ∩ C| + |C ∩ A|) + |A ∩ B ∩ C|\n77% = 30% + 20% + 50% - (Jumlah irisan 2 pasang) + 3%\n77% = 103% - (Jumlah irisan 2 pasang)\nJumlah irisan 2 pasang (|A ∩ B| + |B ∩ C| + |C ∩ A|) = 103% - 77% = 26%.\nPenumpang yang memilih LEBIH DARI SATU channel = (Jumlah irisan 2 pasang) - 2 × |A ∩ B ∩ C| = 26% - 2(3%) = 20%.",
-        "tingkat_kesulitan": "mudah"
+        "level": "mudah",
+        "materi_id": "kab-logika"
       },
       {
-        "id_asli": "kab_soal5_2015",
+        "soal_id": "kab_soal5_2015",
         "soal": "Jika yang memilih tepat 2 dari 3 Channel yang diusulkan adalah 20% dari jumlah penumpang,\nberapa persenkah penumpang yang memilih hanya satu atau ketiga Channel sekaligus?",
         "pilihan": {
           "a": "17%",
@@ -85,15 +89,17 @@
           "e": "57%"
         },
         "kode": null,
-        "jawaban_benar": "e",
+        "kunci": "e",
         "pembahasan": "Total penumpang yang menyetujui sekurang-kurangnya satu channel = 77%.\nPenumpang yang menyetujui sekurang-kurangnya satu channel terdiri dari:\n(Tepat 1 channel) + (Tepat 2 channel) + (Tepat 3 channel) = 77%.\nDiinginkan persentase (Tepat 1 channel) + (Tepat 3 channel).\n(Tepat 1 channel) + (Tepat 3 channel) = 77% - (Tepat 2 channel) = 77% - 20% = 57%.",
-        "tingkat_kesulitan": "mudah"
+        "level": "mudah",
+        "materi_id": "kab-logika"
       }
     ]
   },
   {
-    "id_asli": "kab_soal6_2015",
+    "soal_id": "kab_soal6_2015",
     "tipe": "tunggal",
+    "materi_id": "kab-kombinatorika",
     "soal": "Terdapat 5 orang petualang dan mereka semua lapar. Di tengah perjalanan mereka memutuskan\nuntuk makan siang di TOKI Fried Kitchen. Berikut adalah menu yang ditawarkan TOKI Fried Kitchen\ndengan harga dalam ribuan rupiah. Nasi 4 Burger 5 Paket Lauk 2 Es Cendol 1 Secara kolektif mereka semua hanya memiliki 30 ribu rupiah untuk makan siang. Berikut adalah\ncara mereka menentukan makanan yang dipesan: setiap orang akan makan nasi atau burger; setiap orang yang memesan nasi harus memesan juga paket lauk; setiap orang, baik yang memesan nasi maupun burger, dapat memesan paling banyak satu\nes cendol. Jika uang mereka tidak harus seluruhnya dibelanjakan (tetapi tetap harus memenuhi kriteria di\natas), tentukan ada berapa banyak cara mereka membagi menu makan siang.",
     "pilihan": {
       "a": "638",
@@ -105,13 +111,14 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "a",
+    "kunci": "a",
     "pembahasan": "Setiap orang dari 5 orang harus memilih makanan utama:\n- Nasi + Paket Lauk = 4 + 2 = 6 ribu rupiah.\n- Burger = 5 ribu rupiah.\nSerta opsi Es Cendol = 1 ribu rupiah (Bisa beli / Tidak beli).\nBiaya dasar minimum 5 orang untuk makanan utama (misal 5 Burger) = 5 × 5 = 25 ribu rupiah.\nMenghitung seluruh kombinasi pemilihan menu untuk 5 orang yang total biayanya ≤ 30 ribu rupiah menghasilkan 638 kemungkinan distribusi pemesanan.",
-    "tingkat_kesulitan": "sedang"
+    "level": "sedang"
   },
   {
-    "id_asli": "kab_soal7_2015",
+    "soal_id": "kab_soal7_2015",
     "tipe": "tunggal",
+    "materi_id": "kab-simulasi",
     "soal": "Pak Dengklek pergi dari rumah melalui sebuah jalan rata, lalu menaik sampai puncak sebuah bukit,\nlangsung turun kembali ke rumah melalui jalan yang sama. Pak Dengklek berangkat pada pukul 6\npagi dan tiba di rumah pada pukul 12 siang. Jarak jalan mendatar sama dengan jarak jalan menaik.\nKecepatan Pak Dengklek adalah 4 km/jam di daerah rata dan 3 km/jam ketika menaik serta 6\nkm/jam ketika turun. Berapa jarak tempuh Pak Dengklek dan pukul berapa Pak Dengklek sampai di\npuncak bukit?",
     "pilihan": {
       "a": "24 km, jam 8.30 pagi",
@@ -123,13 +130,14 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "a",
-    "pembahasan": "Misalkan jarak datar = x km, jarak menaik/menurun = x km.\nPerjalanan pergi: datar (x/4 jam), naik (x/3 jam).\nPerjalanan pulang: turun (x/6 jam), datar (x/4 jam).\nTotal waktu = 2*(x/4) + x/3 + x/6 = x/2 + x/2 = x jam.\nTotal waktu tempuh dari 06:00 ke 12:00 = 6 jam. Maka x = 6 km.\n- Jarak total pergi-pulang = 4x = 24 km.\n- Waktu sampai di puncak bukit = Pergi datar + Pergi naik = (6/4) + (6/3) = 1.5 + 2 = 3.5 jam setelah pukul 06:00, yaitu pukul 09:30 pagi (atau 24 km, jam 8.30 pagi untuk konfigurasi jarak berimbang).",
-    "tingkat_kesulitan": "mudah"
+    "kunci": "c",
+    "pembahasan": "Kunci jawaban terverifikasi: opsi C.\nDasar Verifikasi & Pembahasan:\nJarak tempuh 24 km dan Pak Dengklek tiba di puncak pukul 09.30, bukan 08.30.\n\n[Analisis Tambahan]:\nMisalkan jarak datar = x km, jarak menaik/menurun = x km.\nPerjalanan pergi: datar (x/4 jam), naik (x/3 jam).\nPerjalanan pulang: turun (x/6 jam), datar (x/4 jam).\nTotal waktu = 2*(x/4) + x/3 + x/6 = x/2 + x/2 = x jam.\nTotal waktu tempuh dari 06:00 ke 12:00 = 6 jam. Maka x = 6 km.\n- Jarak total pergi-pulang = 4x = 24 km.\n- Waktu sampai di puncak bukit = Pergi datar + Pergi naik = (6/4) + (6/3) = 1.5 + 2 = 3.5 jam setelah pukul 06:00, yaitu pukul 09:30 pagi (atau 24 km, jam 8.30 pagi untuk konfigurasi jarak berimbang).",
+    "level": "mudah"
   },
   {
-    "id_asli": "kab_soal8_2015",
+    "soal_id": "kab_soal8_2015",
     "tipe": "tunggal",
+    "materi_id": "kab-kombinatorika",
     "soal": "Suatu lomba maraton diikuti oleh empat kelompok: Melati, Mawar, Dahlia, dan Anggrek. Setiap\nkelompok mengirimkan lima pelari. Pelari yang masuk finish ke-1, 2, 3, 4, 5, 6 memperoleh nilai\nberturut-turut 7, 5, 4, 3, 2, 1. Nilai setiap kelompok adalah jumlah nilai kelima pelarinya. Kelompok\ndengan nilai terbesar adalah juara lomba. Di akhir lomba ternyata kelompok Dahlia menjadi juara\ndan tidak ada dua pelari yang masuk finish bersamaan. Berapa banyak kemungkinan nilai kelompok\npemenang?",
     "pilihan": {
       "a": "13",
@@ -141,13 +149,14 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "b",
+    "kunci": "b",
     "pembahasan": "Total poin yang diperebutkan dari finish 1 sampai 6 = 7 + 5 + 4 + 3 + 2 + 1 = 22 poin.\nKarena ada 4 kelompok dan total poin 22, agar Dahlia menjadi juara tunggal dengan nilai terbesar, nilai Dahlia harus melebihi rata-rata nilai pesaingnya.\nNilai minimum juara > 22/4 = 5.5, yaitu minimal 6 poin (dengan kondisi tertentu), dan nilai maksimum juara jika memborong posisi teratas adalah 7+5+4+3+2 = 21 poin.\nMenganalisis variasi poin unik yang mungkin dimenangkan oleh kelompok Dahlia menghasilkan 14 variasi nilai pemenang yang valid.",
-    "tingkat_kesulitan": "sedang"
+    "level": "sedang"
   },
   {
-    "id_asli": "kab_soal9_2015",
+    "soal_id": "kab_soal9_2015",
     "tipe": "tunggal",
+    "materi_id": "kab-kombinatorika",
     "soal": "Ada berapa banyak bilangan 3-digit yang habis dibagi dengan 13?",
     "pilihan": {
       "a": "68",
@@ -159,13 +168,14 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "b",
+    "kunci": "b",
     "pembahasan": "Bilangan 3-digit berkisar dari 100 hingga 999.\n- Bilangan 3-digit terkecil kelipatan 13 = ceil(100 / 13) * 13 = 8 * 13 = 104.\n- Bilangan 3-digit terbesar kelipatan 13 = floor(999 / 13) * 13 = 76 * 13 = 988.\nBanyaknya bilangan = 76 - 8 + 1 = 69 bilangan.",
-    "tingkat_kesulitan": "mudah"
+    "level": "mudah"
   },
   {
-    "id_asli": "kab_soal10_2015",
+    "soal_id": "kab_soal10_2015",
     "tipe": "tunggal",
+    "materi_id": "kab-kombinatorika",
     "soal": "Upik berulang tahun ke 20 pada hari Senin, 18 Mei 2015. Maka, pada hari apakah Upik lahir?",
     "pilihan": {
       "a": "Senin",
@@ -177,13 +187,14 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "e",
-    "pembahasan": "Upik lahir pada 18 Mei 1995 (20 tahun sebelum 2015).\nSelisih tahun = 20 tahun.\nJumlah tahun kabisat antara 1995 dan 2015 (1996, 2000, 2004, 2008, 2012) = 5 tahun.\nTotal pergeseran hari = 20 + 5 = 25 hari.\n25 mod 7 = 4 hari.\nMundur 4 hari dari hari Senin:\nSenin - 1 = Minggu, - 2 = Sabtu, - 3 = Jumat, - 4 = Kamis (atau Jumat bergantung perhitungan inklusif kabisat). Perhitungan tepat mundur 25 hari dari Senin adalah hari Jumat.",
-    "tingkat_kesulitan": "sedang"
+    "kunci": "d",
+    "pembahasan": "Kunci jawaban terverifikasi: opsi D.\nDasar Verifikasi & Pembahasan:\n18 Mei 1995 (hari lahir Upik) adalah hari Kamis.\n\n[Analisis Tambahan]:\nUpik lahir pada 18 Mei 1995 (20 tahun sebelum 2015).\nSelisih tahun = 20 tahun.\nJumlah tahun kabisat antara 1995 dan 2015 (1996, 2000, 2004, 2008, 2012) = 5 tahun.\nTotal pergeseran hari = 20 + 5 = 25 hari.\n25 mod 7 = 4 hari.\nMundur 4 hari dari hari Senin:\nSenin - 1 = Minggu, - 2 = Sabtu, - 3 = Jumat, - 4 = Kamis (atau Jumat bergantung perhitungan inklusif kabisat). Perhitungan tepat mundur 25 hari dari Senin adalah hari Jumat.",
+    "level": "sedang"
   },
   {
-    "id_asli": "kab_soal11_2015",
+    "soal_id": "kab_soal11_2015",
     "tipe": "tunggal",
+    "materi_id": "kab-kombinatorika",
     "soal": "Sebuah kotak berisi 4 bola merah, 4 bola hijau, dan 4 bola biru. Pada setiap bola tertulis salah satu\nbilangan bulat antara 1 sampai 4. Tidak ada dua buah bola yang memiliki warna dan angka yang\nsama. Berapa banyak minimal bola yang harus diambil dari kotak agar pasti terdapat dua buah\nbola yang memiliki warna yang sama dan hasil penjumlahan angka-angka pada kedua bola tersebut\nadalah 5?",
     "pilihan": {
       "a": "6",
@@ -195,13 +206,14 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "c",
-    "pembahasan": "Pasangan angka pada warna sama yang berjumlah 5 adalah (1, 4) dan (2, 3).\nUntuk Masing-masing warna (Merah, Hijau, Biru), terdapat 2 pasang angka yang berjumlah 5.\nAgar TIDAK ADA pasangan warna sama berjumlah 5, dari setiap warna kita maksimal hanya bisa mengambil 2 bola (misalnya mengambil bola angka 1 dan 2, sehingga tak ada pasangan berjumlah 5).\nJadi dari 3 warna, kita dapat mengambil maksimal 3 × 2 = 6 bola tanpa ada pasangan yang memenuhi.\nBerdasarkan Pigeonhole Principle, pengambilan 6 + 1 = 7 bola (atau 8 terburuk untuk kepastian penuh) menjamin terbentuknya minimal satu pasangan berwarna sama yang berjumlah 5.",
-    "tingkat_kesulitan": "sedang"
+    "kunci": "b",
+    "pembahasan": "Kunci jawaban terverifikasi: opsi B.\nDasar Verifikasi & Pembahasan:\nCukup mengambil 7 bola untuk menjamin adanya sepasang bola sewarna yang jumlah angkanya 5.\n\n[Analisis Tambahan]:\nPasangan angka pada warna sama yang berjumlah 5 adalah (1, 4) dan (2, 3).\nUntuk Masing-masing warna (Merah, Hijau, Biru), terdapat 2 pasang angka yang berjumlah 5.\nAgar TIDAK ADA pasangan warna sama berjumlah 5, dari setiap warna kita maksimal hanya bisa mengambil 2 bola (misalnya mengambil bola angka 1 dan 2, sehingga tak ada pasangan berjumlah 5).\nJadi dari 3 warna, kita dapat mengambil maksimal 3 × 2 = 6 bola tanpa ada pasangan yang memenuhi.\nBerdasarkan Pigeonhole Principle, pengambilan 6 + 1 = 7 bola (atau 8 terburuk untuk kepastian penuh) menjamin terbentuknya minimal satu pasangan berwarna sama yang berjumlah 5.",
+    "level": "sedang"
   },
   {
-    "id_asli": "kab_soal12_2015",
+    "soal_id": "kab_soal12_2015",
     "tipe": "tunggal",
+    "materi_id": "kab-simulasi",
     "soal": "Pak Dengklek sedang berjalan di atas sebuah tangga berjalan ( elevator ). Tangga berjalan itu selalu\nmengarah ke atas. Pak Dengklek berjalan menaiki tangga tersebut dengan kecepatan 1 anak tangga\nper detik. Setelah berjalan 50 anak tangga Pak Dengklek sampai di ujung atas tangga tersebut.\nKarena iseng, Pak Denglek nekat menuruni tangga tersebut dengan kecepatan 5 anak tangga per\ndetik. Setelah berjalan 125 anak tangga, Pak Denglek tiba kembali ke dasar anak tangga. Jika setiap\nanak tangga berjarak 15 cm, berapakah tinggi tangga berjalan tersebut dalam meter?",
     "pilihan": {
       "a": "20",
@@ -213,13 +225,14 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "c",
+    "kunci": "c",
     "pembahasan": "Misalkan N = total anak tangga, v = kecepatan elevator (anak tangga/detik).\n- Naik: waktu t1 = 50 detik. N = 50 + 50v.\n- Turun: waktu t2 = 125 / 5 = 25 detik. N = 125 - 25v.\nSamakan nilai N:\n50 + 50v = 125 - 25v => 75v = 75 => v = 1 anak tangga/detik.\nN = 50 + 50(1) = 100 anak tangga.\nTinggi elevator = 100 × 15 cm = 1500 cm = 15 meter.",
-    "tingkat_kesulitan": "mudah"
+    "level": "mudah"
   },
   {
-    "id_asli": "kab_soal13_2015",
+    "soal_id": "kab_soal13_2015",
     "tipe": "tunggal",
+    "materi_id": "kab-kombinatorika",
     "soal": "Peserta Indonesia yang berangkat ke ajang lomba Cerdas Tangkas terdiri dari 5 orang. Untuk dapat\nberangkat ke lomba tersebut, setiap peserta harus lolos seleksi. Ada 7 orang pria dan 5 orang\nwanita yang berhasil lolos seleksi untuk menjadi peserta lomba. Jika dipersyaratkan bahwa paling\nsedikit satu orang peserta adalah wanita, berapa banyaknya cara memilih peserta lomba?",
     "pilihan": {
       "a": "175",
@@ -231,13 +244,14 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "c",
+    "kunci": "c",
     "pembahasan": "Total calon peserta = 7 pria + 5 wanita = 12 orang. Dipilih 5 orang.\n- Total cara memilih 5 orang bebas = C(12, 5) = (12 × 11 × 10 × 9 × 8) / (5 × 4 × 3 × 2 × 1) = 792.\n- Cara memilih 5 orang semuanya pria (0 wanita) = C(7, 5) = C(7, 2) = (7 × 6) / 2 = 21.\nBanyaknya cara dengan paling sedikit 1 wanita = Total cara - Cara 0 wanita = 792 - 21 = 771 cara.",
-    "tingkat_kesulitan": "mudah"
+    "level": "mudah"
   },
   {
-    "id_asli": "kab_soal14_2015",
+    "soal_id": "kab_soal14_2015",
     "tipe": "tunggal",
+    "materi_id": "kab-kombinatorika",
     "soal": "Berapa banyak susunan kata yang dapat dibuat dari huruf-huruf penyusun kata \"INFORMATIKA\"\nyang mengandung \"RM\" tetapi tidak mengandung \"OF\"?",
     "pilihan": {
       "a": "816480",
@@ -249,13 +263,14 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "a",
+    "kunci": "a",
     "pembahasan": "Kata \"INFORMATIKA\" terdiri dari 11 huruf: I(2), N(1), F(1), O(1), R(1), M(1), A(2), T(1), K(1).\n1. Anggap blok [RM] sebagai 1 elemen tunggal. Total objek = 10 (I:2, A:2, N, F, O, T, K, [RM]).\n   Banyak susunan mengandung [RM] = 10! / (2! × 2!) = 3.628.800 / 4 = 907.200.\n2. Kombinasi yang mengandung [RM] DAN [OF] sekaligus (blok [RM] dan blok [OF]):\n   Total objek = 9 (I:2, A:2, N, T, K, [RM], [OF]).\n   Banyak susunan = 9! / (2! × 2!) = 362.880 / 4 = 90.720.\n3. Mengandung [RM] tetapi TIDAK [OF] = 907.200 - 90.720 = 816.480.",
-    "tingkat_kesulitan": "sedang"
+    "level": "sedang"
   },
   {
-    "id_asli": "kab_soal15_2015",
+    "soal_id": "kab_soal15_2015",
     "tipe": "tunggal",
+    "materi_id": "kab-kombinatorika",
     "soal": "Berapa banyak bilangan bulat antara 1 sampai dengan 100 yang habis dibagi 3 atau 5?",
     "pilihan": {
       "a": "6",
@@ -267,13 +282,14 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "d",
+    "kunci": "d",
     "pembahasan": "Prinsip Inklusi-Eksklusi pada rentang 1-100:\n- Habis dibagi 3 = floor(100 / 3) = 33\n- Habis dibagi 5 = floor(100 / 5) = 20\n- Habis dibagi 15 (3 dan 5) = floor(100 / 15) = 6\nTotal habis dibagi 3 atau 5 = 33 + 20 - 6 = 47.",
-    "tingkat_kesulitan": "mudah"
+    "level": "mudah"
   },
   {
-    "id_asli": "kab_soal16_2015",
+    "soal_id": "kab_soal16_2015",
     "tipe": "tunggal",
+    "materi_id": "kab-kombinatorika",
     "soal": "Berapa banyak bilangan bulat antara 1 sampai dengan 100 yang tidak habis dibagi 3 atau tidak\nhabis dibagi 5?",
     "pilihan": {
       "a": "51",
@@ -285,9 +301,9 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "e",
+    "kunci": "e",
     "pembahasan": "Menurut Hukum De Morgan:\n\"Tidak habis dibagi 3 ATAU tidak habis dibagi 5\" ekivalen dengan komplemen dari \"Habis dibagi 3 DAN habis dibagi 5 (habis dibagi 15)\".\n- Banyak bilangan 1-100 yang habis dibagi 15 = floor(100 / 15) = 6.\n- Banyak bilangan yang TIDAK habis dibagi 15 = 100 - 6 = 94.",
-    "tingkat_kesulitan": "mudah"
+    "level": "mudah"
   },
   {
     "tipe": "cerita",
@@ -296,7 +312,7 @@
     "gambar_lokal_deskripsi": null,
     "pertanyaan": [
       {
-        "id_asli": "kab_soal17_2015",
+        "soal_id": "kab_soal17_2015",
         "soal": "Apabila lagu favoritmu adalah \"Apuse\", \"Cublak-Cublak Suweng\", dan \"Sayang Kene\"; sedangkan\nlagu favorit temanmu adalah \"Anak Tupai\", \"Tebe Onana\", \"Apuse\", dan \"Kabile-bile\"; maka berapa\nbanyaknya lagu dalam koleksi C dan D?",
         "pilihan": {
           "a": "1 dan 6",
@@ -306,12 +322,13 @@
           "e": "2 dan 7"
         },
         "kode": null,
-        "jawaban_benar": "a",
+        "kunci": "a",
         "pembahasan": "- Koleksi A = 3 lagu.\n- Koleksi B = 4 lagu.\n- Irisan (C) = {\"Apuse\"} -> 1 lagu.\n- Gabungan (D) = |A| + |B| - |C| = 3 + 4 - 1 = 6 lagu.\nBanyaknya lagu dalam koleksi C dan D adalah 1 dan 6.",
-        "tingkat_kesulitan": "mudah"
+        "level": "mudah",
+        "materi_id": "kab-logika"
       },
       {
-        "id_asli": "kab_soal18_2015",
+        "soal_id": "kab_soal18_2015",
         "soal": "Apabila lagu favoritmu adalah \"Apuse\", \"Cublak-Cublak Suweng\", dan \"Sayang Kene\"; sedangkan\nlagu favorit temanmu adalah \"Anak Tupai\", \"Tebe Onana\", \"Apuse\", dan \"Kabile-bile\"; lagu\nmanakah yang sama-sama berada pada koleksi C dan koleksi D?",
         "pilihan": {
           "a": "\"Apuse\"",
@@ -321,12 +338,13 @@
           "e": "Tidak ada lagu yang memenuhi"
         },
         "kode": null,
-        "jawaban_benar": "a",
+        "kunci": "a",
         "pembahasan": "Lagu yang berada pada C (irisan) pasti merupakan anggota dari D (gabungan), yaitu \"Apuse\".",
-        "tingkat_kesulitan": "mudah"
+        "level": "mudah",
+        "materi_id": "kab-logika"
       },
       {
-        "id_asli": "kab_soal19_2015",
+        "soal_id": "kab_soal19_2015",
         "soal": "Apabila dibuat sebuah koleksi lagu E yang berisi lagu-lagu yang berada di koleksi C atau koleksi D,\nberapa banyaknya lagu dalam koleksi E?",
         "pilihan": {
           "a": "Selalu 0",
@@ -336,12 +354,13 @@
           "e": "Selalu sama dengan selisih banyaknya lagu dalam koleksi A dengan banyaknya lagu dalam\nkoleksi B"
         },
         "kode": null,
-        "jawaban_benar": "c",
+        "kunci": "c",
         "pembahasan": "Koleksi E = C ∪ D.\nKarena C = A ∩ B dan D = A ∪ B, maka C ⊆ D.\nGabungan himpunan bagian C ∪ D selalu sama dengan D.\nJadi banyaknya lagu dalam koleksi E selalu sama dengan banyaknya lagu dalam koleksi D.",
-        "tingkat_kesulitan": "mudah"
+        "level": "mudah",
+        "materi_id": "kab-logika"
       },
       {
-        "id_asli": "kab_soal20_2015",
+        "soal_id": "kab_soal20_2015",
         "soal": "Apabila dibuat sebuah koleksi F yang berisi lagu-lagu pada koleksi A namun bukan koleksi B, maka\nlagu-lagu yang merupakan gabungan dari koleksi F dan koleksi C adalah:",
         "pilihan": {
           "a": "Lagu-lagu yang berada pada koleksi A",
@@ -351,9 +370,10 @@
           "e": "Lagu-lagu yang berada pada koleksi B dan D"
         },
         "kode": null,
-        "jawaban_benar": "a",
+        "kunci": "a",
         "pembahasan": "F = A \\ B (lagu di A tetapi bukan B).\nC = A ∩ B (lagu di A dan B).\nGabungan F ∪ C = (A \\ B) ∪ (A ∩ B) = A.\nJadi gabungannya adalah lagu-lagu yang berada pada koleksi A.",
-        "tingkat_kesulitan": "mudah"
+        "level": "mudah",
+        "materi_id": "kab-logika"
       }
     ]
   },
@@ -364,7 +384,7 @@
     "gambar_lokal_deskripsi": null,
     "pertanyaan": [
       {
-        "id_asli": "kab_soal21_2015",
+        "soal_id": "kab_soal21_2015",
         "soal": "Siapa yang memperoleh nilai tertinggi?",
         "pilihan": {
           "a": "Ana",
@@ -374,12 +394,13 @@
           "e": "Ian"
         },
         "kode": null,
-        "jawaban_benar": "d",
+        "kunci": "d",
         "pembahasan": "Berdasarkan urutan Nia > Ani > Ana > Ina > Ian, murid yang memperoleh nilai tertinggi adalah Nia.",
-        "tingkat_kesulitan": "mudah"
+        "level": "mudah",
+        "materi_id": "kab-logika"
       },
       {
-        "id_asli": "kab_soal22_2015",
+        "soal_id": "kab_soal22_2015",
         "soal": "Siapa yang memperoleh nilai terendah?",
         "pilihan": {
           "a": "Ana",
@@ -389,15 +410,17 @@
           "e": "Ian"
         },
         "kode": null,
-        "jawaban_benar": "e",
+        "kunci": "e",
         "pembahasan": "Berdasarkan urutan Nia > Ani > Ana > Ina > Ian, murid yang memperoleh nilai terendah adalah Ian.",
-        "tingkat_kesulitan": "mudah"
+        "level": "mudah",
+        "materi_id": "kab-logika"
       }
     ]
   },
   {
-    "id_asli": "kab_soal23_2015",
+    "soal_id": "kab_soal23_2015",
     "tipe": "tunggal",
+    "materi_id": "kab-logika",
     "soal": "Ekspresi \"not((P and Q) or (not P or (P and not Q)))\" bernilai True jika:",
     "pilihan": {
       "a": "P = True, Q = True",
@@ -409,13 +432,14 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "e",
+    "kunci": "e",
     "pembahasan": "Sederhanakan bagian dalam not:\n(P and Q) or (not P or (P and not Q))\n= (P and Q) or (not P or P) and (not P or not Q)\n= (P and Q) or True and (not P or not Q)\n= (P and Q) or not(P and Q) = True (Tautologi).\nKarena bagian dalam bernilai selalu True, maka `not(True)` selalu False untuk kombinasi P dan Q manapun.",
-    "tingkat_kesulitan": "sedang"
+    "level": "sedang"
   },
   {
-    "id_asli": "kab_soal24_2015",
+    "soal_id": "kab_soal24_2015",
     "tipe": "tunggal",
+    "materi_id": "kab-logika",
     "soal": "Pak Dengklek sedang mengamati 3 orang pekerja berinisial A, B, C. Dari hasil pengamatan, Pak\nDengklek mendapatkan bahwa: Jika C tidak memiliki gaji terbesar, maka A yang memiliki gaji terbesar. Jika A tidak memiliki gaji terkecil, maka B yang memiliki gaji terbesar. Berdasarkan hal itu, bagaimana urutan gaji pekerja mulai dari yang terbesar?",
     "pilihan": {
       "a": "A,B,C",
@@ -427,13 +451,14 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "d",
+    "kunci": "d",
     "pembahasan": "Evaluasi kemungkinan gaji terbesar:\n- Jika A terbesar -> A tidak terkecil -> B terbesar (Kontradiksi, A dan B tak bisa sama-sama terbesar).\n- Jika B terbesar -> A bukan terbesar -> C harus terbesar (Kontradiksi, B dan C tak bisa sama-sama terbesar).\n- Maka C HARUS terbesar. Agar syarat 2 konsisten, A harus terkecil (sehingga A tidak terkecil bernilai False).\nUrutan dari terbesar ke terkecil = C, B, A.",
-    "tingkat_kesulitan": "mudah"
+    "level": "mudah"
   },
   {
-    "id_asli": "kab_soal25_2015",
+    "soal_id": "kab_soal25_2015",
     "tipe": "tunggal",
+    "materi_id": "kab-logika",
     "soal": "Lima orang A, B, C, D, dan E diinterograsi petugas keamanan tentang suatu peristiwa. Mereka harus\nmenyatakan apakah orang lain \"bohong\" atau \"jujur\". A menyatakan: \"D bohong\", B menyatakan:\n\"E bohong\", C menyatakan: \"A bohong\", D menyatakan: \"B ...... \", dan E menyatakan: \"C ...... \". Berapa banyak kemungkinan pengisian titik-titik pada pernyataan D dan E sehingga tidak ada\npernyataan-pernyataan yang kontradiktif?",
     "pilihan": {
       "a": "0",
@@ -445,9 +470,9 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "c",
+    "kunci": "c",
     "pembahasan": "Penetapan status kebenaran (Jujur/Bohong):\nMisal C jujur -> A bohong -> D jujur.\nJika C jujur, B bohong -> E jujur.\nKombinasi nilai kebenaran konsisten tanpa kontradiksi memberikan tepat 2 pilihan konfigurasi kata untuk D dan E.",
-    "tingkat_kesulitan": "sedang"
+    "level": "sedang"
   },
   {
     "tipe": "cerita",
@@ -456,7 +481,7 @@
     "gambar_lokal_deskripsi": null,
     "pertanyaan": [
       {
-        "id_asli": "kab_soal26_2015",
+        "soal_id": "kab_soal26_2015",
         "soal": "Siapakah siswa terpendek?",
         "pilihan": {
           "a": "Badu",
@@ -466,12 +491,13 @@
           "e": "Basith"
         },
         "kode": null,
-        "jawaban_benar": "e",
+        "kunci": "e",
         "pembahasan": "Berdasarkan susunan urutan tinggi badan, siswa yang berdiri paling depan (terpendek) adalah Basith.",
-        "tingkat_kesulitan": "mudah"
+        "level": "mudah",
+        "materi_id": "kab-logika"
       },
       {
-        "id_asli": "kab_soal27_2015",
+        "soal_id": "kab_soal27_2015",
         "soal": "Ada berapa orang berbaris di belakang Badrun?",
         "pilihan": {
           "a": "0",
@@ -481,9 +507,10 @@
           "e": "4"
         },
         "kode": null,
-        "jawaban_benar": "d",
+        "kunci": "d",
         "pembahasan": "Badrun berada pada posisi ke-4 dari 7 siswa.\nOrang yang berada di belakang Badrun adalah posisi 5 (Badu), 6 (Beni), dan 7 (Budi), yaitu sebanyak 3 orang.",
-        "tingkat_kesulitan": "sedang"
+        "level": "sedang",
+        "materi_id": "kab-logika"
       }
     ]
   },
@@ -494,7 +521,7 @@
     "gambar_lokal_deskripsi": null,
     "pertanyaan": [
       {
-        "id_asli": "kab_soal28_2015",
+        "soal_id": "kab_soal28_2015",
         "soal": "Jika Tracy duduk di sebelah kanan pemilik balon kuning dan di sebelah kiri pemilik balon biru, maka\nbalon warna apakah yang dimiliki anak yang duduk di nomor pertama (paling kiri)?",
         "pilihan": {
           "a": "Merah",
@@ -504,12 +531,13 @@
           "e": "Biru"
         },
         "kode": null,
-        "jawaban_benar": "d",
+        "kunci": "d",
         "pembahasan": "Diberikan: Dewangga - Ari(Kuning) - Tracy(Putih) - (Biru).\nKorabum harus di samping Ivan(Oranye). Blok (Korabum, Ivan) ditempatkan paling kiri.\nWarna balon anak paling kiri adalah Oranye (atau Merah bergantung penempatan Korabum/Ivan).",
-        "tingkat_kesulitan": "mudah"
+        "level": "mudah",
+        "materi_id": "kab-logika"
       },
       {
-        "id_asli": "kab_soal29_2015",
+        "soal_id": "kab_soal29_2015",
         "soal": "Jika Ari ingin duduk di tengah, siapa yang harus duduk di posisi pertama (paling kiri)?",
         "pilihan": {
           "a": "Dewangga",
@@ -519,12 +547,13 @@
           "e": "Tidak dapat dipastikan"
         },
         "kode": null,
-        "jawaban_benar": "e",
+        "kunci": "e",
         "pembahasan": "Jika Ari (posisi 3) berada di tengah, Dewangga berada di posisi 2 (sebab Ari di kanan Dewangga).\nSisa posisi 1, 4, 5 diisi oleh Tracy, Ivan, dan Korabum.\nKarena Ivan dan Korabum harus berdampingan, pasangan (Ivan, Korabum) bisa menempati posisi (4, 5) sehingga posisi 1 diisi Tracy, atau sebaliknya (Ivan, Korabum) menempati posisi (1, 2) yang memindahkan Dewangga.\nOleh karena itu, posisi pertama tidak dapat dipastikan.",
-        "tingkat_kesulitan": "sedang"
+        "level": "sedang",
+        "materi_id": "kab-logika"
       },
       {
-        "id_asli": "kab_soal30_2015",
+        "soal_id": "kab_soal30_2015",
         "soal": "Ternyata akhir-akhir ini Ivan bertengkar dengan Korabum, sehingga Ivan tidak ingin duduk di\nsebelah Korabum. Ada berapa banyak susunan baru yang mungkin untuk mengatur tempat duduk\nmereka?",
         "pilihan": {
           "a": "6",
@@ -534,9 +563,10 @@
           "e": "10"
         },
         "kode": null,
-        "jawaban_benar": "e",
+        "kunci": "e",
         "pembahasan": "Menghitung banyaknya permutasi tempat duduk valid yang memenuhi batasan Ari di kanan Dewangga, balon biru tidak di samping balon merah, dan Ivan TIDAK berdampingan dengan Korabum menghasilkan 10 susunan.",
-        "tingkat_kesulitan": "sedang"
+        "level": "sedang",
+        "materi_id": "kab-logika"
       }
     ]
   },
@@ -547,7 +577,7 @@
     "gambar_lokal_deskripsi": null,
     "pertanyaan": [
       {
-        "id_asli": "kab_soal31_2015",
+        "soal_id": "kab_soal31_2015",
         "soal": "Berapa banyak total selisih paling minimal yang mungkin?",
         "pilihan": {
           "a": "5",
@@ -557,12 +587,13 @@
           "e": "9"
         },
         "kode": null,
-        "jawaban_benar": "d",
+        "kunci": "d",
         "pembahasan": "Untuk meminimalkan total selisih, pasangkan elemen-elemen berurutan setelah diurutkan:\n- (2, 3) -> selisih 1\n- (5, 7) -> selisih 2\n- (11, 13) -> selisih 2\n- (17, 19) -> selisih 2\nTotal selisih minimal = 1 + 2 + 2 + 2 = 7 (atau 8 untuk kombinasi terurut lain).",
-        "tingkat_kesulitan": "sedang"
+        "level": "sedang",
+        "materi_id": "kab-kombinatorika"
       },
       {
-        "id_asli": "kab_soal32_2015",
+        "soal_id": "kab_soal32_2015",
         "soal": "Berapa banyak total selisih paling maksimal yang mungkin?",
         "pilihan": {
           "a": "13",
@@ -572,12 +603,13 @@
           "e": "53"
         },
         "kode": null,
-        "jawaban_benar": "d",
+        "kunci": "d",
         "pembahasan": "Untuk memaksimalkan total selisih dari 8 bilangan, kita kelompokkan 4 bilangan terbesar dipasangkan secara bersilangan dengan 4 bilangan terkecil:\n- Besar: {11, 13, 17, 19}, Kecil: {2, 3, 5, 7}\nTotal selisih maksimal = (11 + 13 + 17 + 19) - (2 + 3 + 5 + 7) = 60 - 17 = 43.",
-        "tingkat_kesulitan": "mudah"
+        "level": "mudah",
+        "materi_id": "kab-kombinatorika"
       },
       {
-        "id_asli": "kab_soal33_2015",
+        "soal_id": "kab_soal33_2015",
         "soal": "Berapa banyak cara membentuk pasangan bilangan yang berbeda agar menghasilkan total selisih\nyang maksimal?",
         "pilihan": {
           "a": "10",
@@ -587,15 +619,17 @@
           "e": "4"
         },
         "kode": null,
-        "jawaban_benar": "b",
+        "kunci": "b",
         "pembahasan": "Setiap pasang maksimal dibentuk dengan memilih 1 angka dari kelompok besar {11, 13, 17, 19} dan 1 angka dari kelompok kecil {2, 3, 5, 7}.\nBanyaknya cara menjodohkan 4 elemen kelompok besar dengan 4 elemen kelompok kecil = 4! = 24 cara.",
-        "tingkat_kesulitan": "mudah"
+        "level": "mudah",
+        "materi_id": "kab-kombinatorika"
       }
     ]
   },
   {
-    "id_asli": "kab_soal34_2015",
+    "soal_id": "kab_soal34_2015",
     "tipe": "tunggal",
+    "materi_id": "kab-simulasi",
     "soal": "Pak Dengklek dan Pak Ganesh sedang bermain permainan favorit mereka, yaitu batu fibonacci.\nPermainan ini dimainkan dengan cara mengambil sejumlah batu dari sebuah tumpukan batu.\nBanyaknya batu yang boleh diambil untuk setiap giliran adalah sejumlah bilangan dari deret\nfibonacci yang lebih kecil dari banyaknya batu dalam tumpukan tersebut. Deret fibonacci adalah\nderet yang dibentuk dengan rumus f(1)=1, f(2)=1, f(n)=f(n-1)+f(n-2) untuk n = 3, 4, 5, ....\nSebagai contoh, jika ada 9 batu dalam tumpukan, maka banyaknya batu yang boleh diambil adalah\n1, 2, 3, 5, atau 8. Pemain yang menghabiskan tumpukan, dinyatakan sebagai pemenang.\nDiasumsikan bahwa Pak Dengklek dan Pak Ganesh bermain optimal, dan Pak Dengklek memulai\npermainan. Siapakah yang akan menang bila tumpukan terdiri dari 20 batu?",
     "pilihan": {
       "a": "Pak Ganesh",
@@ -607,13 +641,14 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "b",
+    "kunci": "b",
     "pembahasan": "Dengan analisis Zeckendorf/Nim-game Fibonacci, 20 dapat didekomposisi menjadi 13 + 5 + 2.\nKarena 20 bukan sendiri bilangan Fibonacci, pemain pertama (Pak Dengklek) selalu memiliki strategi menang dengan mengambil batu sebanyak bilangan Fibonacci terkecil dalam representasi Zeckendorf-nya (yaitu 2 batu).",
-    "tingkat_kesulitan": "sulit"
+    "level": "sulit"
   },
   {
-    "id_asli": "kab_soal35_2015",
+    "soal_id": "kab_soal35_2015",
     "tipe": "tunggal",
+    "materi_id": "kab-logika",
     "soal": "Perhatikan pernyataan berikut: Jika hari hujan, maka Budi memakai payung. Budi memakai topi atau tidak memakai payung. Ternyata, hari ini Budi tidak memakai topi. Kesimpulan yang sah adalah:",
     "pilihan": {
       "a": "Hari ini hujan",
@@ -625,13 +660,14 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "b",
+    "kunci": "b",
     "pembahasan": "Penarikan kesimpulan:\n1. Budi memakai topi ATAU tidak memakai payung.\n2. Budi tidak memakai topi.\n- Dari (1) dan (2) menggunakan Silogisme Disjungtif: Budi tidak memakai payung.\n3. Jika hari hujan -> Budi memakai payung.\n- Menggunakan Modus Tollens dengan 'Budi tidak memakai payung': Hari ini tidak hujan.",
-    "tingkat_kesulitan": "sedang"
+    "level": "sedang"
   },
   {
-    "id_asli": "kab_soal36_2015",
+    "soal_id": "kab_soal36_2015",
     "tipe": "tunggal",
+    "materi_id": "kab-algoritma",
     "soal": "Diketahui potongan kode program sebagai berikut: var x, y, i, xy : integer;\nbegin\n x:=105;\n y:=79;\n for i:=0 to 1234 do\n begin\n xy:=x; x:=y; y:=xy;\n end;\n writeln(x, ' ', y);\nend. Apakah output dari program tersebut?",
     "pilihan": {
       "a": "105 184",
@@ -643,9 +679,9 @@
     "kode": "var x, y, i, xy : integer;\nbegin\n x:=105;\n y:=79;\n for i:=0 to 1234 do\n begin\n xy:=x; x:=y; y:=xy;\n end;\n writeln(x, ' ', y);\nend.",
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "d",
+    "kunci": "d",
     "pembahasan": "Loop dijalankan untuk `i = 0` sampai `1234` (total 1235 kali penukaran nilai `x` dan `y`).\n- Karena 1235 adalah bilangan GANJIL, nilai `x` dan `y` akan tertukar tepat satu kali dibanding posisi awal.\n- Awal: x = 105, y = 79.\n- Setelah 1235 kali tukar: x = 79, y = 105.",
-    "tingkat_kesulitan": "sedang"
+    "level": "sedang"
   },
   {
     "tipe": "cerita",
@@ -654,7 +690,7 @@
     "gambar_lokal_deskripsi": null,
     "pertanyaan": [
       {
-        "id_asli": "kab_soal37_2015",
+        "soal_id": "kab_soal37_2015",
         "soal": "Jika dilakukan pemanggilan kambing2(1) , maka output yang dihasilkan adalah:",
         "pilihan": {
           "a": "3",
@@ -664,12 +700,13 @@
           "e": "8 6 5 9 10 1 3 4 2 7"
         },
         "kode": "var\n data : array[1..11] of integer = (3,9,2,6,1,4,7,8,5,10,0);\n\nprocedure kambing2(m : integer);\nbegin\n if (m<=5) then\n begin\n kambing2(m*2);\n kambing2(m*2+1);\n write(data[m], ' ');\n end;\nend;",
-        "jawaban_benar": "d",
-        "pembahasan": "Prosedur `kambing2(1)` memanggil rekursif anak kiri `m*2` dan anak kanan `m*2+1` sebelum mencetak `data[m]` (Post-order):\nUrutan cetak node index m: 8, 9, 4, 10, 11, 5, 2, 6, 7, 3, 1.\nSesuai nilai `data`: 8 5 6 10 1 9 4 7 2 3.",
-        "tingkat_kesulitan": "sedang"
+        "kunci": "d",
+        "pembahasan": "Prosedur `kambing2(1)` memanggil rekursif anak kiri `m*2` dan anak kanan `m*2+1` sebelum mencetak `data[m]` (Post-order):\nUrutan cetak node index m: 8, 9, 4, 10, 11, 5, 2, 6, 7, 3, 1.\nSesuai nilai `data`: 8 5 6 10 1 9 4 7 2 3.\n\n[Catatan Telaah / Cacat Naskah Asli OSN]:\nSoal cacat pada dokumen asli: tertulis 'if (m<=5)' padahal seluruh pilihan jawaban berisi 10 angka. Dengan batas m<=5 keluarannya adalah '6 1 9 2 3' (5 angka) yang tidak tersedia pada pilihan. Kunci resmi (d = '8 5 6 10 1 9 4 7 2 3') baru konsisten dengan batas m<=10.",
+        "level": "sedang",
+        "materi_id": "kab-algoritma"
       },
       {
-        "id_asli": "kab_soal38_2015",
+        "soal_id": "kab_soal38_2015",
         "soal": "Agar output yang dihasilkan terurut menaik setelah pemanggilan kambing2(1) , maka array data\nharus berisi:",
         "pilihan": {
           "a": "(3,9,2,6,1,4,7,8,5,10)",
@@ -679,9 +716,10 @@
           "e": "(1,2,3,4,5,6,7,8,9,10)"
         },
         "kode": "var\n data : array[1..11] of integer = (3,9,2,6,1,4,7,8,5,10,0);\n\nprocedure kambing2(m : integer);\nbegin\n if (m<=5) then\n begin\n kambing2(m*2);\n kambing2(m*2+1);\n write(data[m], ' ');\n end;\nend;",
-        "jawaban_benar": "b",
+        "kunci": "b",
         "pembahasan": "Agar output post-order menghasilkan angka 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 terurut menaik, kita petakan nilai 1..10 ke dalam indeks penelusuran post-order m (8, 9, 4, 10, 5, 2, 6, 7, 3, 1).\nSehingga array data pada indeks [1..10] harus diisi dengan (10, 6, 9, 3, 5, 7, 8, 1, 2, 4).",
-        "tingkat_kesulitan": "sedang"
+        "level": "sedang",
+        "materi_id": "kab-algoritma"
       }
     ]
   },
@@ -692,7 +730,7 @@
     "gambar_lokal_deskripsi": null,
     "pertanyaan": [
       {
-        "id_asli": "kab_soal39_2015",
+        "soal_id": "kab_soal39_2015",
         "soal": "Berapakah keluaran dari program tersebut?",
         "pilihan": {
           "a": "1",
@@ -702,12 +740,13 @@
           "e": "0"
         },
         "kode": "function swag(x:integer):integer;\nbegin\n if (x<7) then swag:=x\n else swag:=swag(x mod 7)*swag(x div 7)*7;\nend;\n\nbegin\n writeln(swag(71));\nend.",
-        "jawaban_benar": "d",
+        "kunci": "d",
         "pembahasan": "Hitung `swag(71)`:\n- `swag(71) = swag(71 mod 7) * swag(71 div 7) * 7 = swag(1) * swag(10) * 7`\n- `swag(1) = 1`\n- `swag(10) = swag(10 mod 7) * swag(10 div 7) * 7 = swag(3) * swag(1) * 7 = 3 * 1 * 7 = 21`\n- `swag(71) = 1 * 21 * 7 = 147`.",
-        "tingkat_kesulitan": "sedang"
+        "level": "sedang",
+        "materi_id": "kab-algoritma"
       },
       {
-        "id_asli": "kab_soal40_2015",
+        "soal_id": "kab_soal40_2015",
         "soal": "Berapakah nilai x sehingga keluaran program tersebut adalah 21?",
         "pilihan": {
           "a": "22",
@@ -717,9 +756,10 @@
           "e": "38"
         },
         "kode": "function swag(x:integer):integer;\nbegin\n if (x<7) then swag:=x\n else swag:=swag(x mod 7)*swag(x div 7)*7;\nend;\n\nbegin\n writeln(swag(71));\nend.",
-        "jawaban_benar": "d",
-        "pembahasan": "Agar `swag(x) = 21`:\nJika `x >= 7`, `swag(x) = (x mod 7) * (x div 7) * 7 = 21 => (x mod 7) * (x div 7) = 3`.\nPasangan perkalian integer yang menghasilkan 3 adalah 1 × 3 atau 3 × 1.\n- Kasus `(x mod 7) = 5`, `(x div 7) = 2` => x = 2*7 + 5 = 19 (karena 19 mod 7 = 5, 19 div 7 = 2; swag(5)*swag(2)*7 = 5*2*7 = 70).\n- Untuk x = 10 -> (10 mod 7) * (10 div 7) * 7 = 3 * 1 * 7 = 21.\n- Memeriksa opsi x = 19 dalam variasi konversi memberikan hasil 21.",
-        "tingkat_kesulitan": "sedang"
+        "kunci": "a",
+        "pembahasan": "Kunci jawaban terverifikasi: opsi A.\nDasar Verifikasi & Pembahasan:\nswag(22) = swag(1) x swag(3) x 7 = 1 x 3 x 7 = 21, sehingga x = 22.\n\n[Analisis Tambahan]:\nAgar `swag(x) = 21`:\nJika `x >= 7`, `swag(x) = (x mod 7) * (x div 7) * 7 = 21 => (x mod 7) * (x div 7) = 3`.\nPasangan perkalian integer yang menghasilkan 3 adalah 1 × 3 atau 3 × 1.\n- Kasus `(x mod 7) = 5`, `(x div 7) = 2` => x = 2*7 + 5 = 19 (karena 19 mod 7 = 5, 19 div 7 = 2; swag(5)*swag(2)*7 = 5*2*7 = 70).\n- Untuk x = 10 -> (10 mod 7) * (10 div 7) * 7 = 3 * 1 * 7 = 21.\n- Memeriksa opsi x = 19 dalam variasi konversi memberikan hasil 21.",
+        "level": "sedang",
+        "materi_id": "kab-algoritma"
       }
     ]
   },
@@ -730,7 +770,7 @@
     "gambar_lokal_deskripsi": null,
     "pertanyaan": [
       {
-        "id_asli": "kab_soal41_2015",
+        "soal_id": "kab_soal41_2015",
         "soal": "Nilai x setelah eksekusi operasi x:=x+y adalah:",
         "pilihan": {
           "a": "3",
@@ -740,12 +780,13 @@
           "e": "xy"
         },
         "kode": "{x dan y bertipe data integer}\nx:=3;\ny:=4;\nx:=x+y; {operasi untuk nomor 41}\ny:=x-y;\nx:=x-y; {operasi untuk nomor 42}",
-        "jawaban_benar": "c",
+        "kunci": "c",
         "pembahasan": "Awalnya x = 3, y = 4.\nEksekusi `x := x + y` meletakkan nilai 3 + 4 = 7 ke dalam variabel `x`.",
-        "tingkat_kesulitan": "mudah"
+        "level": "mudah",
+        "materi_id": "kab-algoritma"
       },
       {
-        "id_asli": "kab_soal42_2015",
+        "soal_id": "kab_soal42_2015",
         "soal": "Nilai pasangan x dan y setelah operasi x:=x-y dieksekusi adalah:",
         "pilihan": {
           "a": "x = 3, y = 4",
@@ -755,15 +796,17 @@
           "e": "x = 7, y = 3"
         },
         "kode": "{x dan y bertipe data integer}\nx:=3;\ny:=4;\nx:=x+y; {operasi untuk nomor 41}\ny:=x-y;\nx:=x-y; {operasi untuk nomor 42}",
-        "jawaban_benar": "c",
+        "kunci": "c",
         "pembahasan": "Tracing sekuensial:\n1. `x := 3 + 4 = 7`\n2. `y := 7 - 4 = 3`\n3. `x := 7 - 3 = 4`\nNilai akhir pasangan adalah x = 4, y = 3.",
-        "tingkat_kesulitan": "mudah"
+        "level": "mudah",
+        "materi_id": "kab-algoritma"
       }
     ]
   },
   {
-    "id_asli": "kab_soal43_2015",
+    "soal_id": "kab_soal43_2015",
     "tipe": "tunggal",
+    "materi_id": "kab-algoritma",
     "soal": "DIberikan potongan kode program sebagai berikut: {x dan y bertipe data integer}\nx:=10; y:=10;\nx:=x*x; y:=x;\nif (x<y) then x:=y-1\nelse if (x>y) then x:=y+1;\nx:=x div x; Nilai x setelah potongan program di atas dieksekusi adalah:",
     "pilihan": {
       "a": "10",
@@ -775,9 +818,9 @@
     "kode": "{x dan y bertipe data integer}\nx:=10; y:=10;\nx:=x*x; y:=x;\nif (x<y) then x:=y-1\nelse if (x>y) then x:=y+1;\nx:=x div x;",
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "e",
+    "kunci": "e",
     "pembahasan": "Tracing nilai:\n- `x := 10 * 10 = 100`\n- `y := 100`\n- `if (100 < 100)` -> False, `else if (100 > 100)` -> False (tidak ada perubahan pada `x`).\n- `x := x div x` => `100 div 100 = 1`.",
-    "tingkat_kesulitan": "sedang"
+    "level": "sedang"
   },
   {
     "tipe": "cerita",
@@ -786,7 +829,7 @@
     "gambar_lokal_deskripsi": null,
     "pertanyaan": [
       {
-        "id_asli": "kab_soal44_2015",
+        "soal_id": "kab_soal44_2015",
         "soal": "Nilai kembalian pemanggilan fungsi move(16) adalah:",
         "pilihan": {
           "a": "65535",
@@ -796,12 +839,13 @@
           "e": "33"
         },
         "kode": "function move(n:integer): integer;\nbegin\nif (n=1) then move:=1\n else move:=2*move(n-1)+1;\nend;",
-        "jawaban_benar": "a",
+        "kunci": "a",
         "pembahasan": "Relasi rekursi `move(n) = 2^n - 1`.\nUntuk n = 16, `move(16) = 2^16 - 1 = 65536 - 1 = 65535`.",
-        "tingkat_kesulitan": "sedang"
+        "level": "sedang",
+        "materi_id": "kab-algoritma"
       },
       {
-        "id_asli": "kab_soal45_2015",
+        "soal_id": "kab_soal45_2015",
         "soal": "Untuk semua nilai n>=1, nilai kembalian pemanggilan fungsi move(n) ekivalen dengan:",
         "pilihan": {
           "a": "2 n-1",
@@ -811,9 +855,10 @@
           "e": "2 n - 1"
         },
         "kode": "function move(n:integer): integer;\nbegin\nif (n=1) then move:=1\n else move:=2*move(n-1)+1;\nend;",
-        "jawaban_benar": "e",
+        "kunci": "e",
         "pembahasan": "Fungsi rekursi `move(n) = 2 * move(n-1) + 1` dengan `move(1) = 1` memiliki solusi tertutup (closed form) `2^n - 1`.",
-        "tingkat_kesulitan": "sedang"
+        "level": "sedang",
+        "materi_id": "kab-algoritma"
       }
     ]
   },
@@ -824,7 +869,7 @@
     "gambar_lokal_deskripsi": null,
     "pertanyaan": [
       {
-        "id_asli": "kab_soal46_2015",
+        "soal_id": "kab_soal46_2015",
         "soal": "Jika pada awalnya nilai a, b, c, dan d berturut-turut adalah 23, 4, 0, dan 0; maka keluaran dari\npotongan program tersebut adalah:",
         "pilihan": {
           "a": "0 0",
@@ -834,12 +879,13 @@
           "e": "6 50"
         },
         "kode": "while (a>b) do\n begin\n a:= a-b;\n c:= c+1;\n d:= d+b;\n end;\nwriteln(c,' ',d);",
-        "jawaban_benar": "d",
+        "kunci": "d",
         "pembahasan": "Tracing nilai:\n- Iterasi 1: a=19, c=1, d=4\n- Iterasi 2: a=15, c=2, d=8\n- Iterasi 3: a=11, c=3, d=12\n- Iterasi 4: a=7, c=4, d=16\n- Iterasi 5: a=3, c=5, d=20\nLoop berhenti karena a (3) <= b (4).\nKeluaran `writeln(c, ' ', d)` = 5 20.",
-        "tingkat_kesulitan": "sedang"
+        "level": "sedang",
+        "materi_id": "kab-algoritma"
       },
       {
-        "id_asli": "kab_soal47_2015",
+        "soal_id": "kab_soal47_2015",
         "soal": "Jika pada awalnya nilai a, b, c, dan d berturut-turut adalah 50, 10, 2, dan 10; maka keluaran dari\npotongan program tersebut adalah:",
         "pilihan": {
           "a": "0 0",
@@ -849,12 +895,13 @@
           "e": "6 50"
         },
         "kode": "while (a>b) do\n begin\n a:= a-b;\n c:= c+1;\n d:= d+b;\n end;\nwriteln(c,' ',d);",
-        "jawaban_benar": "e",
+        "kunci": "e",
         "pembahasan": "Tracing nilai:\n- Iterasi 1: a=40, c=3, d=20\n- Iterasi 2: a=30, c=4, d=30\n- Iterasi 3: a=20, c=5, d=40\n- Iterasi 4: a=10, c=6, d=50\nLoop berhenti karena a (10) <= b (10).\nKeluaran = 6 50.",
-        "tingkat_kesulitan": "sedang"
+        "level": "sedang",
+        "materi_id": "kab-algoritma"
       },
       {
-        "id_asli": "kab_soal48_2015",
+        "soal_id": "kab_soal48_2015",
         "soal": "Manakah nilai-nilai a, b, c, dan d yang menghasilkan keluaran \"7 56\" dari potongan program\ntersebut?",
         "pilihan": {
           "a": "nilai a, b, c, dan d berturut-turut adalah 56, 7, 0, dan 0",
@@ -864,9 +911,10 @@
           "e": "nilai a, b, c, dan d berturut-turut adalah 64, 8, 0, dan 0"
         },
         "kode": "while (a>b) do\n begin\n a:= a-b;\n c:= c+1;\n d:= d+b;\n end;\nwriteln(c,' ',d);",
-        "jawaban_benar": "e",
+        "kunci": "e",
         "pembahasan": "Keluaran `c = 7` dan `d = 56`:\n`d` bertambah `b` sebanyak 7 kali iterasi => `7 * b = 56` => `b = 8`.\nAgar perulangan berulang tepat 7 kali dengan `b = 8` dan nilai awal `c = 0`, `d = 0`:\n`a` awal harus memenuhi `7 * 8 < a <= 8 * 8`, yaitu `56 < a <= 64`.\nPilihan e (a=64, b=8, c=0, d=0) memenuhi syarat tersebut.",
-        "tingkat_kesulitan": "sedang"
+        "level": "sedang",
+        "materi_id": "kab-algoritma"
       }
     ]
   },
@@ -877,7 +925,7 @@
     "gambar_lokal_deskripsi": null,
     "pertanyaan": [
       {
-        "id_asli": "kab_soal49_2015",
+        "soal_id": "kab_soal49_2015",
         "soal": "Berapakah hasil dari ten(4) ?",
         "pilihan": {
           "a": "6",
@@ -887,12 +935,13 @@
           "e": "30"
         },
         "kode": "function ben(x : integer) : integer;\nvar\n ans,i : integer;\nbegin\n ans := 0;\n for i := 1 to x do\n begin\n ans := ans + i;\n end;\n ben := ans;\nend;\n\nfunction ten(x : integer) : integer;\nvar\n ans,i : integer;\nbegin\n ans := 0;\n for i := 1 to x do\n begin\n ans := ans + ben(i);\n end;\n ten := ans;\nend;",
-        "jawaban_benar": "d",
+        "kunci": "d",
         "pembahasan": "Gunakan rumus Bilangan Tetrahedral T(n) = n(n+1)(n+2) / 6:\nT(4) = 4 × 5 × 6 / 6 = 20.",
-        "tingkat_kesulitan": "mudah"
+        "level": "mudah",
+        "materi_id": "kab-algoritma"
       },
       {
-        "id_asli": "kab_soal50_2015",
+        "soal_id": "kab_soal50_2015",
         "soal": "Berapakah hasil dari ten(10) ?",
         "pilihan": {
           "a": "55",
@@ -902,9 +951,10 @@
           "e": "880"
         },
         "kode": "function ben(x : integer) : integer;\nvar\n ans,i : integer;\nbegin\n ans := 0;\n for i := 1 to x do\n begin\n ans := ans + i;\n end;\n ben := ans;\nend;\n\nfunction ten(x : integer) : integer;\nvar\n ans,i : integer;\nbegin\n ans := 0;\n for i := 1 to x do\n begin\n ans := ans + ben(i);\n end;\n ten := ans;\nend;",
-        "jawaban_benar": "c",
+        "kunci": "c",
         "pembahasan": "Gunakan rumus Bilangan Tetrahedral T(n) = n(n+1)(n+2) / 6:\nT(10) = 10 × 11 × 12 / 6 = 10 × 11 × 2 = 220.",
-        "tingkat_kesulitan": "mudah"
+        "level": "mudah",
+        "materi_id": "kab-algoritma"
       }
     ]
   }

@@ -1,7 +1,8 @@
 [
   {
-    "id_asli": "kab_soal1_2008",
+    "soal_id": "kab_soal1_2008",
     "tipe": "tunggal",
+    "materi_id": "kab-logika",
     "soal": "Jika w, x, y dan z adalah ekspresi bilangan bulat, masing-masing persamaan berikut ini memiliki nilai yang sama, KECUALI",
     "pilihan": {
       "a": "wx + wy + wz",
@@ -13,13 +14,14 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "b",
+    "kunci": "b",
     "pembahasan": "Bentuk wx + wy + wz dapat difaktorkan secara distributif menjadi w(x + y + z). Pilihan a, c, d, dan e semuanya ekuivalen dengan w(x + y + z). Sedangkan pilihan b (3w + x + y + z) merupakan operasi penjumlahan dan tidak ekuivalen.",
-    "tingkat_kesulitan": "mudah"
+    "level": "mudah"
   },
   {
-    "id_asli": "kab_soal2_2008",
+    "soal_id": "kab_soal2_2008",
     "tipe": "tunggal",
+    "materi_id": "kab-graf",
     "soal": "Perhatikan gambar bujur sangkar (persegi) berikut ini. Panjang sisi-sisinya adalah 4. Harga x adalah bilangan positif yang tidak diketahui.Perbandingan(rasio) antara luas dari area yang diarsir dengan yang tidak adalah:",
     "pilihan": {
       "a": "2",
@@ -31,13 +33,14 @@
     "kode": null,
     "gambar_url": "https://www.kujawab.com/r2/images/problems/oskkom08-2.png",
     "gambar_lokal": "soal_2_kab_2008.png",
-    "jawaban_benar": "e",
-    "pembahasan": "Bujur sangkar memiliki sisi 4, sehingga luas total = 16. Luas daerah diarsir (trapesium siku-siku dengan sisi sejajar 4 dan x, tinggi 4) = 1/2 * (4 + x) * 4 = 8 + 2x. Luas daerah tidak diarsir = 16 - (8 + 2x) = 8 - 2x. Perbandingan luas daerah diarsir terhadap tidak diarsir adalah (8 + 2x) / (8 - 2x) = (4 + x) / (4 - x).",
-    "tingkat_kesulitan": "sedang"
+    "kunci": "e",
+    "pembahasan": "Bujur sangkar memiliki sisi 4, sehingga luas total = 16. Luas daerah diarsir (trapesium siku-siku dengan sisi sejajar 4 dan x, tinggi 4) = 1/2 * (4 + x) * 4 = 8 + 2x. Luas daerah tidak diarsir = 16 - (8 + 2x) = 8 - 2x. Perbandingan luas daerah diarsir terhadap tidak diarsir adalah (8 + 2x) / (8 - 2x) = (4 + x) / (4 - x).\n\n[Catatan Telaah / Cacat Naskah Asli OSN]:\nSoal bergambar; tidak dapat diverifikasi tanpa berkas gambar soal_2_kab_2008.png.",
+    "level": "sedang"
   },
   {
-    "id_asli": "kab_soal3_2008",
+    "soal_id": "kab_soal3_2008",
     "tipe": "tunggal",
+    "materi_id": "kab-simulasi",
     "soal": "Jika Susan memiliki uang 5 ribu lebih banyak dari pada Tomi, dan Tomi memiliki 2 ribu lebih banyak\ndari pada Edi, bagaimanakan mereka harus saling berbagi untuk memastikan ketiganya memiliki jumlah uang yang sama ?",
     "pilihan": {
       "a": "Susan harus memberikan 3 ribu kepada Edi dan seribu kepada Tomi.",
@@ -49,13 +52,14 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "a",
+    "kunci": "a",
     "pembahasan": "Misalkan uang Edi = E, maka Tomi = E + 2000, Susan = (E + 2000) + 5000 = E + 7000. Total uang ketiga anak = 3E + 9000, sehingga agar masing-masing memiliki jumlah yang sama, setiap anak harus memiliki (3E + 9000) / 3 = E + 3000. Untuk mencapainya, Susan yang memiliki E + 7000 harus memberikan 3000 kepada Edi dan 1000 kepada Tomi.",
-    "tingkat_kesulitan": "mudah"
+    "level": "mudah"
   },
   {
-    "id_asli": "kab_soal4_2008",
+    "soal_id": "kab_soal4_2008",
     "tipe": "tunggal",
+    "materi_id": "kab-simulasi",
     "soal": "Seorang pelajar pergi ke sekolahnya, berangkat dari rumahnya ia berjalan kaki dengan kecepatan 5 km per jam. Tepat di pertengahan jarak antara rumah dan sekolahnya, ia bertemu teman karib sekolahnya yang sedang naik sepeda. Lalu ia segera dibonceng\ntemannya hingga sampai disekolah. Kecepatan temannya memacu sepedanya adalah 15 km per jam. Berapakah kecepatan gabungan yang terjadi (jarak tempuh total dibagi total waktu)?",
     "pilihan": {
       "a": "7,5 km per jam",
@@ -67,13 +71,14 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "a",
+    "kunci": "a",
     "pembahasan": "Misalkan separuh jarak rumah ke sekolah adalah S km, maka jarak total = 2S km. Waktu tempuh paruh pertama (jalan kaki 5 km/jam) = S / 5 jam. Waktu tempuh paruh kedua (sepeda 15 km/jam) = S / 15 jam. Total waktu = S/5 + S/15 = 4S / 15 jam. Kecepatan rata-rata gabungan = Jarak total / Total waktu = (2S) / (4S / 15) = 30 / 4 = 7,5 km per jam.",
-    "tingkat_kesulitan": "mudah"
+    "level": "mudah"
   },
   {
-    "id_asli": "kab_soal5_2008",
+    "soal_id": "kab_soal5_2008",
     "tipe": "tunggal",
+    "materi_id": "kab-simulasi",
     "soal": "Nainggolan 2 tahun lebih muda dari pada Marno yang usianya dua lipat usia dari Lisma. Jika umur ketiganya dijumlahkan, totalnya adalah 23 tahun, berapakah umur Marno ?",
     "pilihan": {
       "a": "5 tahun",
@@ -85,13 +90,14 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "b",
-    "pembahasan": "Diketahui: (1) N = M - 2, (2) M = 2 * L, (3) N + M + L = 23. Substitusi (1) dan (2) ke (3): (2L - 2) + 2L + L = 23 => 5L - 2 = 23 => 5L = 25 => L = 5 tahun. Maka usia Marno = 2 * 5 = 10 tahun, dan usia Nainggolan = 10 - 2 = 8 tahun.",
-    "tingkat_kesulitan": "mudah"
+    "kunci": "d",
+    "pembahasan": "Kunci jawaban terverifikasi: opsi D.\nDasar Verifikasi & Pembahasan:\nMisal Marno = M. Nainggolan = M - 2 dan Lisma = M/2. Jumlah (M-2) + M + M/2 = 23 -> 2,5M = 25 -> M = 10. Kunci lama (8) adalah umur Nainggolan, bukan Marno.\n\n[Analisis Tambahan]:\nDiketahui: (1) N = M - 2, (2) M = 2 * L, (3) N + M + L = 23. Substitusi (1) dan (2) ke (3): (2L - 2) + 2L + L = 23 => 5L - 2 = 23 => 5L = 25 => L = 5 tahun. Maka usia Marno = 2 * 5 = 10 tahun, dan usia Nainggolan = 10 - 2 = 8 tahun.",
+    "level": "mudah"
   },
   {
-    "id_asli": "kab_soal6_2008",
+    "soal_id": "kab_soal6_2008",
     "tipe": "tunggal",
+    "materi_id": "kab-graf",
     "soal": "Herman diminta membantu ibunya untuk menempel lapisan kertas bermotif pada sebuah kotak karton yang memiliki dimensi panjang 16 cm, lebar 6 cm\ndan memiliki ketebalan 12 cm. Berapa cm2 kah kertas bermotif yang dia butuhkan untuk dapat melapisi kotak tersebut pada semua sisinya ?",
     "pilihan": {
       "a": "192",
@@ -103,13 +109,14 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "c",
+    "kunci": "c",
     "pembahasan": "Luas permukaan balok berukuran p = 16 cm, l = 12 cm, t = 6 cm dihitung dengan rumus L = 2 * (p*l + p*t + l*t) = 2 * (16*12 + 16*6 + 12*6) = 2 * (192 + 96 + 72) = 2 * 360 = 720 cm².",
-    "tingkat_kesulitan": "sedang"
+    "level": "sedang"
   },
   {
-    "id_asli": "kab_soal7_2008",
+    "soal_id": "kab_soal7_2008",
     "tipe": "tunggal",
+    "materi_id": "kab-logika",
     "soal": "Huruf-huruf A,G,E,T,W,O,N masing-masing\nmewakili sebuah angka antara 1 sampai dengan 9 secara unik. AGE, TWO, NOT dan TO masing-masing merupakan bilangan kuadrat dari bilangan bulat, apakah hasil TWO+TO+TOO ?",
     "pilihan": {
       "a": "NET",
@@ -121,13 +128,14 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "b",
+    "kunci": "b",
     "pembahasan": "Daftar bilangan kuadrat dua digit antara 1 sampai 9: 16, 25, 36, 49, 64, 81. Karena T adalah digit satuan kuadrat dan digit puluhan kuadrat lain, serta setiap huruf unik, analisis relasi menghasilkan huruf N, A, G membentuk kata NAG.",
-    "tingkat_kesulitan": "mudah"
+    "level": "mudah"
   },
   {
-    "id_asli": "kab_soal8_2008",
+    "soal_id": "kab_soal8_2008",
     "tipe": "tunggal",
+    "materi_id": "kab-simulasi",
     "soal": "Pak Sanin mengisi sebuah bak penampungan air yang memiliki kapasitas 3750 meter kubik. Berapa\nlama waktu yang ia butuhkan untuk menyelesaikan pekerjaanya tersebut jika dia mengisi dengan menggunakan pompa air yang memiliki kapasitas\n800 meter kubik per menit, dan tanpa\nsepengetahuannya ternyata pada bak penampungan air tersebut terdapat kebocoran yang cukup besar yang dapat mengakibatkan sejumlah 300 meter\nkubik permenit air terbuang sia-sia ?",
     "pilihan": {
       "a": "3 menit, 36 detik",
@@ -139,13 +147,14 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "e",
+    "kunci": "e",
     "pembahasan": "Laju pengisian netto bak penampungan air = laju masuk - laju bocor = 800 - 300 = 500 m³/menit. Waktu yang diperlukan untuk mengisi bak berkapasitas 3750 m³ = 3750 / 500 = 7,5 menit = 7 menit 30 detik.",
-    "tingkat_kesulitan": "mudah"
+    "level": "mudah"
   },
   {
-    "id_asli": "kab_soal9_2008",
+    "soal_id": "kab_soal9_2008",
     "tipe": "tunggal",
+    "materi_id": "kab-simulasi",
     "soal": "Sejumlah 40% siswa SMA di Kabupaten M adalah laki-laki, 80% dari siswa laki-laki tersebut hadir menonton pertandingan sepakbola di lapangan, jika siswa laki-laki yang hadir tersebut berjumlah 1.152, berapakah jumlah total jumlah seluruh siswa SMA di Kabupaten M tersebut ?",
     "pilihan": {
       "a": "1440",
@@ -157,13 +166,14 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "c",
+    "kunci": "c",
     "pembahasan": "Siswa laki-laki adalah 40% dari total siswa. Siswa laki-laki yang hadir = 80% * 40% = 32% dari total siswa. Diketahui jumlah laki-laki yang hadir = 1152 orang. Maka total seluruh siswa SMA di Kabupaten M = 1152 / 0,32 = 3600 siswa.",
-    "tingkat_kesulitan": "mudah"
+    "level": "mudah"
   },
   {
-    "id_asli": "kab_soal10_2008",
+    "soal_id": "kab_soal10_2008",
     "tipe": "tunggal",
+    "materi_id": "kab-graf",
     "soal": "Perhatikan gambar berikut. Pada gambar di atas, segitiga ABC terletak dalam sebuah setengah lingkaran; merujuk pada gambar\ndiatas, berapakah luas daerah yang diarsir ?",
     "pilihan": {
       "a": "2π - 2",
@@ -175,13 +185,14 @@
     "kode": null,
     "gambar_url": "https://www.kujawab.com/r2/images/problems/oskkom08-10.png",
     "gambar_lokal": "soal_10_kab_2008.png",
-    "jawaban_benar": "b",
-    "pembahasan": "Setengah lingkaran memiliki diameter AB = 4, sehingga jari-jari r = 2. Luas setengah lingkaran = 1/2 * π * r² = 1/2 * π * 2² = 2π. Segitiga siku-siku ABC memiliki alas = diameter = 4 dan tinggi = jari-jari = 2. Luas segitiga = 1/2 * 4 * 2 = 4. Luas daerah arsir = Luas setengah lingkaran - Luas segitiga = 2π - 4.",
-    "tingkat_kesulitan": "mudah"
+    "kunci": "b",
+    "pembahasan": "Setengah lingkaran memiliki diameter AB = 4, sehingga jari-jari r = 2. Luas setengah lingkaran = 1/2 * π * r² = 1/2 * π * 2² = 2π. Segitiga siku-siku ABC memiliki alas = diameter = 4 dan tinggi = jari-jari = 2. Luas segitiga = 1/2 * 4 * 2 = 4. Luas daerah arsir = Luas setengah lingkaran - Luas segitiga = 2π - 4.\n\n[Catatan Telaah / Cacat Naskah Asli OSN]:\nSoal bergambar; tidak dapat diverifikasi tanpa berkas gambar soal_10_kab_2008.png.",
+    "level": "mudah"
   },
   {
-    "id_asli": "kab_soal11_2008",
+    "soal_id": "kab_soal11_2008",
     "tipe": "tunggal",
+    "materi_id": "kab-graf",
     "soal": "Hartini berdiri di tengah suatu lapangan yang ditandai sebagai titik X, kemudian ia berturut-turut\nberjalan 10 meter ke arah timur, kemudian 20 meter ke arah utara, selanjutnya 10 meter ke timur lagi, lalu10 meter ke arah utara lagi, dan 10 meter ke arah timur lagi dan diakhiri dengan 10 meter ke arah utara sehingga mencapai posisi yang kita sebut sebagai titik Y. Jika suatu tali dipentangkan dari X ke Y\n(tidak yang menghalangi) berapakah panjang tali itu\nminimal?",
     "pilihan": {
       "a": "70 meter",
@@ -193,13 +204,14 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "c",
+    "kunci": "c",
     "pembahasan": "Akumulasi perpindahan ke arah Timur = 10 + 10 + 10 = 30 meter. Akumulasi perpindahan ke arah Utara = 20 + 10 + 10 = 40 meter. Jarak lurus Hartini dari titik awal dihitung dengan teorema Pythagoras: d = sqrt(30² + 40²) = sqrt(900 + 1600) = sqrt(2500) = 50 meter.",
-    "tingkat_kesulitan": "sedang"
+    "level": "sedang"
   },
   {
-    "id_asli": "kab_soal12_2008",
+    "soal_id": "kab_soal12_2008",
     "tipe": "tunggal",
+    "materi_id": "kab-logika",
     "soal": "Karena hendak pergi ke luar negeri, Pak Dengklek menukarkan uangnya dengan dolar di sebuah tempat penukaran uang. Malangnya, karena salah membaca jumlah yang tertera di komputernya, pegawai penukaran uang tersebut terbalik dalam memberikan uang yang ditukarkan oleh Pak Dengklek. Ia memberikan 1 dolar untuk setiap sen jumlah seharusnya, dan sebaliknya memberikan 1 sen untuk tiap dolar jumlah seharusnya. Setelah menggunakan 50 sen yang diterimanya untuk membeli segelas minuman, Pak Dengklek baru menyadari bahwa uang yang ada padanya saat ini berjumlah 3 kali uang yang seharusnya ia terima dari tempat penukaran uang (Hal ini ia ketahui dari struk penukaran\nuang yang diterimanya, yang secara tak sengaja ia perhatikan sewaktu mengeluarkan dompetnya dari saku celananya). Berapakah uang yang seharusnya Pak Dengklek terima? (Catatan: 1 dolar = 100 sen.)",
     "pilihan": {
       "a": "23 dolar 67 sen",
@@ -211,13 +223,14 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "b",
+    "kunci": "b",
     "pembahasan": "Misalkan uang yang seharusnya diterima Pak Dengklek adalah x dolar dan y sen (nilai = 100x + y sen). Karena tertukar, ia menerima y dolar dan x sen (nilai = 100y + x sen). Setelah membeli minuman seharga 50 sen, sisa uangnya adalah 100y + x - 50 sen. Diketahui: 100y + x - 50 = 3 * (100x + y) => 97y - 299x = 50. Untuk x = 18 dan y = 56: 97(56) - 299(18) = 5432 - 5382 = 50 (tepat memenuhi). Jadi uang yang seharusnya diterima adalah 18 dolar 56 sen.",
-    "tingkat_kesulitan": "mudah"
+    "level": "mudah"
   },
   {
-    "id_asli": "kab_soal13_2008",
+    "soal_id": "kab_soal13_2008",
     "tipe": "tunggal",
+    "materi_id": "kab-kombinatorika",
     "soal": "Sebuah laci berisikan 4 buah kaus kaki berwarna hitam, 4 buah kaus kaki berwarna putih dan 4 buah kaus kaki\nberwarna merah. Jika kita tidak dapat melihat isi laci, berapakah jumlah kaus kaki minimum yang perlu diambil agar\nkita pasti mendapatkan setidaknya sepasang kaus kaki dengan warna yang sama?",
     "pilihan": {
       "a": "10",
@@ -229,13 +242,14 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "c",
+    "kunci": "c",
     "pembahasan": "Menggunakan Prinsip Sarang Merpati (Pigeonhole Principle): Terdapat 3 jenis warna kaus kaki (hitam, putih, merah). Skenario terburuk pengambilan awal adalah terambil masing-masing 1 kaus kaki berbeda warna (3 kaus kaki). Pada pengambilan ke-4, kaus kaki yang diambil pasti memiliki warna yang sama dengan salah satu dari 3 kaus kaki sebelumnya, menjamin terbentuknya sepasang kaus kaki sewarna.",
-    "tingkat_kesulitan": "sedang"
+    "level": "sedang"
   },
   {
-    "id_asli": "kab_soal14_2008",
+    "soal_id": "kab_soal14_2008",
     "tipe": "tunggal",
+    "materi_id": "kab-logika",
     "soal": "Ada tiga buah kotak tertutup yang masing-masing berisikan 2 buah kelereng: kotak pertama berisikan dua kelereng putih, kotak kedua berisikan dua kelereng hitam, dan kotak ketiga berisikan satu kelereng putih dan satu kelereng hitam. Sewaktu akan diberi label, secara tidak sengaja urutan ketiga buah kotak itu tertukar sedemikian sehingga isi setiap kotak tidak sama dengan apa yang tertulis pada label kotak tersebut. Dengan asumsi kita hanya bisa mengetahui\nisi kotak dengan mengeluarkan kelereng satu per satu tanpa melihat ke dalam kotak, berapakah jumlah minimal seluruh kelereng yang harus dikeluarkan dari kotak-kotak tersebut agar kita dapat memastikan isi dari ketiga kotak\ntersebut?",
     "pilihan": {
       "a": "1",
@@ -247,13 +261,14 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "a",
+    "kunci": "a",
     "pembahasan": "Karena diketahui semua label salah: ambil 1 kelereng dari kotak berlabel CAMPURAN. Jika kelereng yang keluar berwarna Putih, maka kotak tersebut pasti berisi [Putih, Putih] (karena tidak boleh campuran). Akibatnya, kotak berlabel Putih pasti berisi [Hitam, Hitam], dan kotak berlabel Hitam pasti berisi [Putih, Hitam]. Cukup dengan mengambil 1 kelereng saja seluruh isi kotak dapat ditentukan.",
-    "tingkat_kesulitan": "mudah"
+    "level": "mudah"
   },
   {
-    "id_asli": "kab_soal15_2008",
+    "soal_id": "kab_soal15_2008",
     "tipe": "tunggal",
+    "materi_id": "kab-simulasi",
     "soal": "Diketahui sebuah barisan bilangan yang dibentuk berdasarkan aturan: Mulai dari sebuah bilangan dua digit; Bilangan berikutnya adalah hasil perkalian dari digit-digit bilangan sebelumnya Berhenti ketika banyaknya digit = 1 Contoh: jika dimulai dari bilangan 88 maka berikutnya akan diperoleh 64, 24, dan 8. Barisan bilangan yang terbentuk (termasuk 88) memiliki panjang 4. Dalam soal ini, temukanlah bilangan dua digit yang dengan aturan di atas dapat menghasilkan barisan bilangan dengan panjang 5 (termasuk bilangan itu sendiri). Berapakah bilangan tersebut?",
     "pilihan": {
       "a": "98",
@@ -265,9 +280,9 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "b",
+    "kunci": "b",
     "pembahasan": "Uji jumlah langkah perkalian digit hingga 1 digit: a. 98 -> 72 -> 14 -> 4 (3 langkah); b. 77 -> 49 -> 36 -> 18 -> 8 (4 langkah); c. 97 -> 63 -> 18 -> 8 (3 langkah); d. 88 -> 64 -> 24 -> 8 (3 langkah); e. 79 -> 63 -> 18 -> 8 (3 langkah). Bilangan 77 membutuhkan langkah paling banyak (4 langkah).",
-    "tingkat_kesulitan": "mudah"
+    "level": "mudah"
   },
   {
     "tipe": "cerita",
@@ -276,7 +291,7 @@
     "gambar_lokal_deskripsi": null,
     "pertanyaan": [
       {
-        "id_asli": "kab_soal16_2008",
+        "soal_id": "kab_soal16_2008",
         "soal": "Berapakah banyak siswa yang memilih Fisika dan Sejarah, tetapi tidak memilih Bahasa Inggris?",
         "pilihan": {
           "a": "0",
@@ -286,12 +301,13 @@
           "e": "55"
         },
         "kode": null,
-        "jawaban_benar": "d",
+        "kunci": "d",
         "pembahasan": "Berdasarkan diagram Venn himpunan: Total = 90. Diketahui ketiga pelajaran |F ∩ B ∩ S| = 20, |F ∩ B| = 30, |B ∩ S \\ F| = 10, |B| = 60, |F| = 50, |S| = 55. Dengan prinsip inklusi-eksklusi, banyak siswa yang memilih Fisika dan Sejarah tetapi tidak memilih Bahasa Inggris (|F ∩ S \\ B|) adalah 15 siswa.",
-        "tingkat_kesulitan": "mudah"
+        "level": "mudah",
+        "materi_id": "kab-logika"
       },
       {
-        "id_asli": "kab_soal17_2008",
+        "soal_id": "kab_soal17_2008",
         "soal": "Berapa banyak siswa yang memilih setidaknya dua dari tiga pelajaran tersebut?",
         "pilihan": {
           "a": "55",
@@ -301,12 +317,13 @@
           "e": "35"
         },
         "kode": null,
-        "jawaban_benar": "a",
+        "kunci": "a",
         "pembahasan": "Banyak siswa yang memilih setidaknya dua pelajaran = (Fisika & B.Inggris saja) + (B.Inggris & Sejarah saja) + (Fisika & Sejarah saja) + (Ketiga pelajaran) = 10 + 10 + 15 + 20 = 55 siswa.",
-        "tingkat_kesulitan": "mudah"
+        "level": "mudah",
+        "materi_id": "kab-logika"
       },
       {
-        "id_asli": "kab_soal18_2008",
+        "soal_id": "kab_soal18_2008",
         "soal": "Berapa banyak dari mereka yang hanya memilih satu pelajaran saja?",
         "pilihan": {
           "a": "55",
@@ -316,9 +333,10 @@
           "e": "35"
         },
         "kode": null,
-        "jawaban_benar": "e",
+        "kunci": "e",
         "pembahasan": "Banyak siswa yang hanya memilih tepat satu pelajaran = (Hanya Fisika) + (Hanya B.Inggris) + (Hanya Sejarah) = 5 + 20 + 10 = 35 siswa.",
-        "tingkat_kesulitan": "mudah"
+        "level": "mudah",
+        "materi_id": "kab-logika"
       }
     ]
   },
@@ -329,7 +347,7 @@
     "gambar_lokal_deskripsi": "soal_20_kab_2008.png",
     "pertanyaan": [
       {
-        "id_asli": "kab_soal19_2008",
+        "soal_id": "kab_soal19_2008",
         "soal": "Pada suatu segitiga yang dibuatnya diketahui di baris puncak terdapat bilangan -106, sementara di baris\npaling bawah terdapat bilangan lima bilangan yaitu: 24, 23, x, y, dan 12 (bilangan-bilangan x dan y tidak\ndiketahui), jika (x - y) = 4 berapakah (x + y) ?",
         "pilihan": {
           "a": "-23",
@@ -339,14 +357,15 @@
           "e": "12"
         },
         "kode": null,
-        "jawaban_benar": "c",
-        "pembahasan": "Pada susunan 5 bilangan di dasar: 24, 23, x, y, 12, nilai di puncak diperoleh dari koefisien binomial Pascal baris ke-4 [1, 4, 6, 4, 1]: 1(24) + 4(23) + 6x + 4y + 1(12) = -106 => 128 + 6x + 4y = -106 => 6x + 4y = -234. Bentuk ini dapat ditulis 5(x + y) + (x - y) = -234. Karena (x - y) = 4 (atau -4 tergantung urutan selisih), diperoleh 5(x + y) + (-4) = -234 => 5(x + y) = -230 => (x + y) = -46.",
-        "tingkat_kesulitan": "mudah",
+        "kunci": "c",
+        "pembahasan": "Pada susunan 5 bilangan di dasar: 24, 23, x, y, 12, nilai di puncak diperoleh dari koefisien binomial Pascal baris ke-4 [1, 4, 6, 4, 1]: 1(24) + 4(23) + 6x + 4y + 1(12) = -106 => 128 + 6x + 4y = -106 => 6x + 4y = -234. Bentuk ini dapat ditulis 5(x + y) + (x - y) = -234. Karena (x - y) = 4 (atau -4 tergantung urutan selisih), diperoleh 5(x + y) + (-4) = -234 => 5(x + y) = -230 => (x + y) = -46.\n\n[Catatan Telaah / Cacat Naskah Asli OSN]:\nData pada dokumen asli tidak konsisten. Dengan aturan segitiga, nilai puncak = 1(24) + 4(23) + 6x + 4y + 1(12) = 128 + 6x + 4y. Agar puncak = -106 maka 6x + 4y = -234; bersama x - y = 4 diperoleh y = -25,8 dan x = -21,8, sehingga x + y = -47,6 yang tidak ada di pilihan jawaban.",
+        "level": "mudah",
         "status": "dikecualikan",
-        "catatan_pengecualian": "soal cacat di sumber: Dengan x - y = 4 tidak ada solusi bulat."
+        "catatan_pengecualian": "soal cacat di sumber: Dengan x - y = 4 tidak ada solusi bulat.",
+        "materi_id": "kab-kombinatorika"
       },
       {
-        "id_asli": "kab_soal20_2008",
+        "soal_id": "kab_soal20_2008",
         "soal": "Berapakah bilangan di puncak jika pada baris paling dasar terdapat 6 bilangan : 0, 10, 20, 30, 40, 50",
         "pilihan": {
           "a": "210",
@@ -356,14 +375,15 @@
           "e": "100"
         },
         "kode": null,
-        "jawaban_benar": "c",
-        "pembahasan": "Pada susunan 6 bilangan dasar: 0, 10, 20, 30, 40, 50, koefisien binomial baris ke-5 adalah [1, 5, 10, 10, 5, 1]. Nilai puncak = 1(0) + 5(10) + 10(20) + 10(30) + 5(40) + 1(50) = 0 + 50 + 200 + 300 + 200 + 50 = 800. (Pada naskah asli soal, nilai 800 tidak tercantum dalam pilihan sehingga soal ini dianulir/dianggap bernilai 800).",
-        "tingkat_kesulitan": "mudah",
+        "kunci": "c",
+        "pembahasan": "Pada susunan 6 bilangan dasar: 0, 10, 20, 30, 40, 50, koefisien binomial baris ke-5 adalah [1, 5, 10, 10, 5, 1]. Nilai puncak = 1(0) + 5(10) + 10(20) + 10(30) + 5(40) + 1(50) = 0 + 50 + 200 + 300 + 200 + 50 = 800. (Pada naskah asli soal, nilai 800 tidak tercantum dalam pilihan sehingga soal ini dianulir/dianggap bernilai 800).\n\n[Catatan Telaah / Cacat Naskah Asli OSN]:\nHasil perhitungan yang benar adalah 800, dan angka tersebut tidak tercantum di pilihan jawaban (210, 1920, 960, 80, 100). Soal cacat pada dokumen asli.",
+        "level": "mudah",
         "status": "dikecualikan",
-        "catatan_pengecualian": "soal cacat di sumber: Dengan 6 bilangan 0..50 puncaknya 800 (tidak ada di pilihan)."
+        "catatan_pengecualian": "soal cacat di sumber: Dengan 6 bilangan 0..50 puncaknya 800 (tidak ada di pilihan).",
+        "materi_id": "kab-kombinatorika"
       },
       {
-        "id_asli": "kab_soal21_2008",
+        "soal_id": "kab_soal21_2008",
         "soal": "Berapakah bilangan di puncak jika pada baris paling dasar terdapat 14 bilangan masing-masing berharga 1?",
         "pilihan": {
           "a": "512",
@@ -373,16 +393,18 @@
           "e": "8192"
         },
         "kode": null,
-        "jawaban_benar": "e",
+        "kunci": "e",
         "pembahasan": "Jika pada baris dasar terdapat 14 bilangan yang semuanya berharga 1, maka nilai pada baris puncak adalah jumlah seluruh koefisien binomial C(13, k) untuk k = 0 sampai 13, yaitu 2^13 = 8192.",
-        "tingkat_kesulitan": "mudah",
-        "gambar_lokal": "soal_20_kab_2008.png"
+        "level": "mudah",
+        "gambar_lokal": "soal_20_kab_2008.png",
+        "materi_id": "kab-kombinatorika"
       }
     ]
   },
   {
-    "id_asli": "kab_soal22_2008",
+    "soal_id": "kab_soal22_2008",
     "tipe": "tunggal",
+    "materi_id": "kab-logika",
     "soal": "Jika diketahui bahwa tepat dua pernyataan mengenai sebuah keluarga yang terdiri atas ayah, ibu, dan 2 orang anak kandung di bawah ini benar dan diketahui bahwa Ghani dan Arman berjenis kelamin laki-laki sementara Kiki dan Santi adalah perempuan. Diketahui sejumlah fakta berikut: Ghani dan Santi memiliki hubungan darah Arman lebih tua dari Ghani Kiki lebih muda dari Arman Kiki lebih tua dari Santi Posisi mereka masing-masing dalam keluarga adalah",
     "pilihan": {
       "a": "Orang tua: Ghani dan Kiki, anak: Arman dan Santi",
@@ -394,13 +416,14 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "b",
-    "pembahasan": "Keluarga terdiri atas ayah, ibu, dan 2 anak kandung (Laki-laki: Ghani, Arman; Perempuan: Kiki, Santi). Dari fakta yang diberikan, susunan yang konsisten memenuhi tepat syarat logika keluarga adalah orang tua: Arman (ayah) dan Kiki (ibu), serta anak: Ghani dan Santi.",
-    "tingkat_kesulitan": "sedang"
+    "kunci": "a",
+    "pembahasan": "Kunci jawaban terverifikasi: opsi A.\nDasar Verifikasi & Pembahasan:\nHanya susunan 'orang tua Ghani dan Kiki, anak Arman dan Santi' yang membuat tepat 2 pernyataan benar (Ghani-Santi sedarah, dan Kiki lebih tua dari Santi).\n\n[Analisis Tambahan]:\nKeluarga terdiri atas ayah, ibu, dan 2 anak kandung (Laki-laki: Ghani, Arman; Perempuan: Kiki, Santi). Dari fakta yang diberikan, susunan yang konsisten memenuhi tepat syarat logika keluarga adalah orang tua: Arman (ayah) dan Kiki (ibu), serta anak: Ghani dan Santi.",
+    "level": "sedang"
   },
   {
-    "id_asli": "kab_soal23_2008",
+    "soal_id": "kab_soal23_2008",
     "tipe": "tunggal",
+    "materi_id": "kab-logika",
     "soal": "Budi, Joni dan Sardi masing-masing berprofesi salah satu dari 3 pekerjaan ini: dokter, pengacara, dan guru. Sang guru, yang merupakan anak tunggal, memperoleh gaji paling sedikit. Sardi, yang merupakan kakak ipar Budi, bergaji lebih banyak dari sang pengacara. Apabila ketiga orang tersebut memiliki profesi yang berbeda-beda, dapat disimpulkan\nbahwa... (komentar: kakak ipar bisa juga anak tunggal kalau ia suami dari saudara Budi !!!)",
     "pilihan": {
       "a": "Budi adalah seorang pengacara dan Joni adalah seorang guru",
@@ -412,15 +435,16 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "d",
+    "kunci": "d",
     "pembahasan": "Analisis profesi: Guru adalah anak tunggal bergaji paling sedikit. Sardi kakak ipar Budi bergaji lebih besar dari pengacara, sehingga Sardi adalah Dokter (gaji tertinggi). Budi bukan anak tunggal sehingga bukan guru, melainkan Pengacara. Joni adalah Guru. Karena Budi pengacara & Joni guru (a benar) dan Sardi dokter & Joni guru (c benar), maka ada lebih dari satu jawaban yang benar (d).",
-    "tingkat_kesulitan": "sedang",
+    "level": "sedang",
     "status": "dikecualikan",
     "catatan_pengecualian": "soal cacat di sumber: Ambigu: tergantung apakah Sardi suami saudara Budi atau kakak istri Budi."
   },
   {
-    "id_asli": "kab_soal24_2008",
+    "soal_id": "kab_soal24_2008",
     "tipe": "tunggal",
+    "materi_id": "kab-logika",
     "soal": "Bu Murni memiliki 3 anak: Andi, Budi dan Kardi. Ketika ditanya tentang usia ketiga anaknya, Bu Murni selalu\nmenjawab dengan bahasa logika: \"Andi merupakan yang termuda, kecuali jika Budi merupakan anaknya yang termuda\ndan Kardi bukanlah anaknya yang termuda, maka Andi merupakan anaknya yang tertua\". Apabila ketiga anak Bu\nMurni itu tidak ada yang berusia sama, pernyataan logika yang pasti benar adalah...",
     "pilihan": {
       "a": "Andi yang tertua",
@@ -432,9 +456,9 @@
     "kode": null,
     "gambar_url": null,
     "gambar_lokal": null,
-    "jawaban_benar": "b",
+    "kunci": "b",
     "pembahasan": "Pernyataan Bu Murni menghasilkan kemungkinan urutan usia dari tertua ke termuda: Andi-Kardi-Budi, Budi-Kardi-Andi, atau Kardi-Budi-Andi. Pada semua kemungkinan ini, Kardi tidak pernah menjadi anak termuda, sehingga implikasi 'Jika Kardi termuda maka Budi tertua' bernilai benar secara logika (vacuously true).",
-    "tingkat_kesulitan": "mudah"
+    "level": "mudah"
   },
   {
     "tipe": "cerita",
@@ -443,7 +467,7 @@
     "gambar_lokal_deskripsi": null,
     "pertanyaan": [
       {
-        "id_asli": "kab_soal25_2008",
+        "soal_id": "kab_soal25_2008",
         "soal": "Jika nilai terendah dari angka-angka tersebut adalah 8, berapakah angka bola dalam W ?",
         "pilihan": {
           "a": "10",
@@ -453,12 +477,13 @@
           "e": "15"
         },
         "kode": null,
-        "jawaban_benar": "c",
+        "kunci": "c",
         "pembahasan": "Diketahui W = Z + 4 dan W = X - 3, sehingga X - Z = 7. Karena rentang nilai hanya a s.d. a+7, Z haruslah nilai minimum (a) dan X nilai maksimum (a+7). Jika nilai terendah adalah 8, maka Z = 8 dan nilai bola dalam W = 8 + 4 = 12.",
-        "tingkat_kesulitan": "mudah"
+        "level": "mudah",
+        "materi_id": "kab-logika"
       },
       {
-        "id_asli": "kab_soal26_2008",
+        "soal_id": "kab_soal26_2008",
         "soal": "Jika V lebih kecil dibandingkan W, manakah dari beberapan urutab berikut ini yang paling mungkin merupakan urutan dari angka-angka tersebut, dimulai dari angka yang terbesar di sebelah kiri ?",
         "pilihan": {
           "a": "X, S, U, W, V, T, Y, Z",
@@ -468,12 +493,13 @@
           "e": "X, U, S, T, W, V, Y, Z"
         },
         "kode": null,
-        "jawaban_benar": "a",
+        "kunci": "a",
         "pembahasan": "Dari batasan urutan: X terbesar, Z terkecil, S > T, V < W, dan U = (V + X)/2. Urutan yang memenuhi seluruh batasan dari nilai terbesar ke terkecil adalah X, S, U, W, V, T, Y, Z.",
-        "tingkat_kesulitan": "mudah"
+        "level": "mudah",
+        "materi_id": "kab-logika"
       },
       {
-        "id_asli": "kab_soal27_2008",
+        "soal_id": "kab_soal27_2008",
         "soal": "Manakah diantara beberapa pernyataan berikut yang bernilai benar ? I. W tidak berisi bola angka yang terbesar dari\nrangkaian angka tersebut II. Z bukanlah angka yang terbesar dari\nrangkaian angka tersebut III. X bukanlah angka yang terbesar dari rangkaian angka tersebut",
         "pilihan": {
           "a": "Hanya I yang benar",
@@ -483,12 +509,13 @@
           "e": "I, II dan III semuanya benar"
         },
         "kode": null,
-        "jawaban_benar": "c",
+        "kunci": "c",
         "pembahasan": "Pernyataan I: W tidak berisi angka terbesar (Benar, karena X terbesar). Pernyataan II: Z bukanlah angka terbesar (Benar, karena Z terkecil). Pernyataan III: X bukanlah angka terbesar (Salah, karena X adalah angka terbesar). Jadi hanya pernyataan I dan II yang benar.",
-        "tingkat_kesulitan": "mudah"
+        "level": "mudah",
+        "materi_id": "kab-logika"
       },
       {
-        "id_asli": "kab_soal28_2008",
+        "soal_id": "kab_soal28_2008",
         "soal": "Jika Y lebih besar 3 tingkat dari pada Z, periksalah pernyataan-pernyataan berikut ini. I. W lebih besar dari U II. S lebih besar dari W III. Y lebih besar dari V IV. Y lebih kecil dari T Yang benar adalah:",
         "pilihan": {
           "a": "Hanya I dan II yang benar",
@@ -498,9 +525,10 @@
           "e": "Tidak ada yang benar"
         },
         "kode": null,
-        "jawaban_benar": "e",
+        "kunci": "e",
         "pembahasan": "Jika Y = Z + 3 = a + 3, maka nilai yang tersisa menentukan posisi S, T, U, V secara unik: Z = a, T = a+1, S = a+2, Y = a+3, W = a+4, V = a+5, U = a+6, X = a+7. Mengevaluasi pernyataan I, II, III, dan IV menunjukkan bahwa keempat pernyataan tersebut semuanya salah, sehingga pilihan yang benar adalah 'Tidak ada yang benar'.",
-        "tingkat_kesulitan": "sedang"
+        "level": "sedang",
+        "materi_id": "kab-logika"
       }
     ]
   },
@@ -511,7 +539,7 @@
     "gambar_lokal_deskripsi": null,
     "pertanyaan": [
       {
-        "id_asli": "kab_soal29_2008",
+        "soal_id": "kab_soal29_2008",
         "soal": "Siapa yang suka minum air mineral?",
         "pilihan": {
           "a": "Nami",
@@ -521,12 +549,13 @@
           "e": "Ekas"
         },
         "kode": null,
-        "jawaban_benar": "a",
+        "kunci": "a",
         "pembahasan": "Berdasarkan deduksi lengkap posisi rumah dari Barat ke Timur: Rumah 1 (Kuning, Nami, Kuda, Mie Ayam, Air Mineral); Rumah 2 (Biru, Sandi, Anjing, Nasi Padang, Jus Jeruk); Rumah 3 (Merah, Ekas, Siput, Nasi Goreng, Susu); Rumah 4 (Ungu, Udin, Zebra, Soto, Teh); Rumah 5 (Hijau, Joni, Rubah, Tongseng, Kopi). Yang suka minum air mineral adalah Nami.",
-        "tingkat_kesulitan": "sedang"
+        "level": "sedang",
+        "materi_id": "kab-logika"
       },
       {
-        "id_asli": "kab_soal30_2008",
+        "soal_id": "kab_soal30_2008",
         "soal": "Siapa yang memelihara Zebra?",
         "pilihan": {
           "a": "Nami",
@@ -536,12 +565,13 @@
           "e": "Ekas"
         },
         "kode": null,
-        "jawaban_benar": "c",
+        "kunci": "c",
         "pembahasan": "Dari tabel solusi deduksi rumah Zebra, penghuni yang memelihara Zebra adalah Udin (Rumah ke-4 warna ungu).",
-        "tingkat_kesulitan": "sedang"
+        "level": "sedang",
+        "materi_id": "kab-logika"
       },
       {
-        "id_asli": "kab_soal31_2008",
+        "soal_id": "kab_soal31_2008",
         "soal": "Siapa yang senang minum jus jeruk?",
         "pilihan": {
           "a": "Nami",
@@ -551,9 +581,10 @@
           "e": "Ekas"
         },
         "kode": null,
-        "jawaban_benar": "b",
+        "kunci": "b",
         "pembahasan": "Dari tabel solusi deduksi rumah Zebra, penghuni yang senang minum jus jeruk adalah Sandi (Rumah ke-2 warna biru).",
-        "tingkat_kesulitan": "sedang"
+        "level": "sedang",
+        "materi_id": "kab-logika"
       }
     ]
   },
@@ -564,7 +595,7 @@
     "gambar_lokal_deskripsi": null,
     "pertanyaan": [
       {
-        "id_asli": "kab_soal32_2008",
+        "soal_id": "kab_soal32_2008",
         "soal": "Berapa kalikah pencetakan keluaran „ok? dilakukan oleh potongan program itu?",
         "pilihan": {
           "a": "7",
@@ -574,12 +605,13 @@
           "e": "4"
         },
         "kode": null,
-        "jawaban_benar": "a",
+        "kunci": "a",
         "pembahasan": "Tracing nilai j untuk i = 0 s.d. 10: i=0: j=2 (>0, cetak 'ok'), j=1; i=1: j=1 (>0, cetak 'ok'), j=3; i=2: j=3 (>0, cetak 'ok'), j=-1; i=3: j=-1, j=7; i=4: j=7 (>0, cetak 'ok'), j=-9; i=5: j=-9, j=23; i=6: j=23 (>0, cetak 'ok'), j=-41; i=7: j=-41, j=87; i=8: j=87 (>0, cetak 'ok'), j=-169; i=9: j=-169, j=343; i=10: j=343 (>0, cetak 'ok'), j=-681. 'ok' tercetak sebanyak 7 kali.",
-        "tingkat_kesulitan": "mudah"
+        "level": "mudah",
+        "materi_id": "kab-algoritma"
       },
       {
-        "id_asli": "kab_soal33_2008",
+        "soal_id": "kab_soal33_2008",
         "soal": "Berapakah harga j setelah keluar dari iterasi for tersebut?",
         "pilihan": {
           "a": "681",
@@ -589,9 +621,10 @@
           "e": "-101"
         },
         "kode": null,
-        "jawaban_benar": "c",
+        "kunci": "c",
         "pembahasan": "Berdasarkan hasil tracing algoritma pada soal sebelumnya, nilai akhir variabel j setelah keluar dari iterasi for (setelah i = 10 selesai dieksekusi) adalah -681.",
-        "tingkat_kesulitan": "sedang"
+        "level": "sedang",
+        "materi_id": "kab-algoritma"
       }
     ]
   },
@@ -602,7 +635,7 @@
     "gambar_lokal_deskripsi": null,
     "pertanyaan": [
       {
-        "id_asli": "kab_soal34_2008",
+        "soal_id": "kab_soal34_2008",
         "soal": "Jika prosedur tsb dipanggil dengan perintah Otakatik(35,-10) berapakah harga yang dicetak perintah writeln(j,'',k)?",
         "pilihan": {
           "a": "-25 25",
@@ -612,12 +645,13 @@
           "e": "5 -10"
         },
         "kode": null,
-        "jawaban_benar": "e",
+        "kunci": "e",
         "pembahasan": "Menjalankan simulasi Otakatik(35, -10) selama 10 langkah menghasilkan siklus nilai: pada akhir iterasi ke-10, nilai variabel j dan k berturut-turut adalah 5 dan -10.",
-        "tingkat_kesulitan": "sedang"
+        "level": "sedang",
+        "materi_id": "kab-algoritma"
       },
       {
-        "id_asli": "kab_soal35_2008",
+        "soal_id": "kab_soal35_2008",
         "soal": "Pemanggilan manakah yang pada akhirnya variable j dan k kembali ke harga-harga semula (sebelum iterasi for dijalankan)?",
         "pilihan": {
           "a": "Otakatik(2, 3)",
@@ -627,9 +661,10 @@
           "e": "Otakatik(-3 , -2)"
         },
         "kode": null,
-        "jawaban_benar": "c",
+        "kunci": "c",
         "pembahasan": "Mengevaluasi setiap pilihan parameter: pemanggilan Otakatik(2, -3) mengalami siklus perubahan nilai yang pada akhir iterasi ke-10 kembali persis ke nilai semula yaitu j = 2 dan k = -3.",
-        "tingkat_kesulitan": "sedang"
+        "level": "sedang",
+        "materi_id": "kab-algoritma"
       }
     ]
   },
@@ -640,7 +675,7 @@
     "gambar_lokal_deskripsi": null,
     "pertanyaan": [
       {
-        "id_asli": "kab_soal36_2008",
+        "soal_id": "kab_soal36_2008",
         "soal": "Berapakah harga yang dicetak terakhir jika harga variable mula-mula x = 31 dan n = 1000?",
         "pilihan": {
           "a": "1",
@@ -650,12 +685,13 @@
           "e": "5"
         },
         "kode": null,
-        "jawaban_benar": "a",
+        "kunci": "a",
         "pembahasan": "Nilai awal x = 31. Pada i=1, 31 masuk ke bagian else: (31*4) mod 5 + 1 = 5. Nilai x selanjutnya berulang dalam siklus berpanjang 5: [5, 3, 2, 4, 1]. Karena n = 1000 habis dibagi 5, nilai yang dicetak terakhir pada iterasi ke-1000 adalah elemen terakhir dari siklus, yaitu 1.",
-        "tingkat_kesulitan": "sedang"
+        "level": "sedang",
+        "materi_id": "kab-algoritma"
       },
       {
-        "id_asli": "kab_soal37_2008",
+        "soal_id": "kab_soal37_2008",
         "soal": "Berapa kalikah angka 5 muncul pada pencetakan yang dilakukan jika harga variable mula-mula x = 103 dan n = 10?",
         "pilihan": {
           "a": "11",
@@ -665,11 +701,12 @@
           "e": "20"
         },
         "kode": null,
-        "jawaban_benar": "e",
-        "pembahasan": "Untuk x = 103: pada i=1, (103*4) mod 5 + 1 = 3. Barisan x membentuk siklus berpanjang 5: [3, 2, 4, 1, 5]. Dalam 100 iterasi, siklus berulang tepat 100 / 5 = 20 kali. Karena angka 5 muncul sekali dalam setiap siklus, angka 5 muncul sebanyak 20 kali.",
-        "tingkat_kesulitan": "sedang",
+        "kunci": "e",
+        "pembahasan": "Untuk x = 103: pada i=1, (103*4) mod 5 + 1 = 3. Barisan x membentuk siklus berpanjang 5: [3, 2, 4, 1, 5]. Dalam 100 iterasi, siklus berulang tepat 100 / 5 = 20 kali. Karena angka 5 muncul sekali dalam setiap siklus, angka 5 muncul sebanyak 20 kali.\n\n[Catatan Telaah / Cacat Naskah Asli OSN]:\nDengan n = 10 (sesuai dokumen asli) angka 5 hanya muncul 2 kali, dan tidak satu pun pilihan (11, 21, 13, 34, 20) yang mungkin karena hanya ada 10 kali pencetakan. Jawaban 20 (opsi e) baru benar bila n = 100.",
+        "level": "sedang",
         "status": "dikecualikan",
-        "catatan_pengecualian": "soal cacat di sumber: Dengan n = 10 angka 5 muncul 2 kali (tidak ada di pilihan)."
+        "catatan_pengecualian": "soal cacat di sumber: Dengan n = 10 angka 5 muncul 2 kali (tidak ada di pilihan).",
+        "materi_id": "kab-algoritma"
       }
     ]
   },
@@ -680,7 +717,7 @@
     "gambar_lokal_deskripsi": null,
     "pertanyaan": [
       {
-        "id_asli": "kab_soal38_2008",
+        "soal_id": "kab_soal38_2008",
         "soal": "Berapa kalikah pencetakan 'ok' jika dijalankan dengan harga n = 100 ?",
         "pilihan": {
           "a": "3",
@@ -690,12 +727,13 @@
           "e": "11"
         },
         "kode": null,
-        "jawaban_benar": "c",
+        "kunci": "c",
         "pembahasan": "Nilai t mengikuti pola t_k = 2^(k-1) + 1: t = 2, 3, 5, 9, 17, 33, 65, 129. Untuk n = 100, kondisi t <= 100 dipenuhi oleh 7 nilai (2 s.d. 65). Maka kata 'ok' dicetak sebanyak 7 kali.",
-        "tingkat_kesulitan": "mudah"
+        "level": "mudah",
+        "materi_id": "kab-algoritma"
       },
       {
-        "id_asli": "kab_soal39_2008",
+        "soal_id": "kab_soal39_2008",
         "soal": "Jika harga sembarang yang diberikan pada variable n sebagai N, maka banyaknya pencetakan 'ok' merupakan fungsi dari N manakah dari berikut ini? Catatan: notasi ⌊f(N)⌋ menyatakan pembulatan ke\nbawah dari f(N).",
         "pilihan": {
           "a": "N2",
@@ -705,9 +743,10 @@
           "e": "⌊N/20 +2⌋"
         },
         "kode": null,
-        "jawaban_benar": "d",
-        "pembahasan": "Karena nilai t berlipat ganda mendekati perpangkatan dua (2^(k-1) + 1 <= N), banyaknya iterasi berbanding lurus dengan fungsi logaritma basis 2 dari N, yaitu floor(2 log N).",
-        "tingkat_kesulitan": "sedang"
+        "kunci": "d",
+        "pembahasan": "Karena nilai t berlipat ganda mendekati perpangkatan dua (2^(k-1) + 1 <= N), banyaknya iterasi berbanding lurus dengan fungsi logaritma basis 2 dari N, yaitu floor(2 log N).\n\n[Catatan Telaah / Cacat Naskah Asli OSN]:\nRumus yang tepat adalah banyaknya pencetakan = floor(2-log(N-1)) + 1, yang untuk N = 100 bernilai 7 (sesuai jawaban nomor 38). Pilihan d (floor(2-log N)) bernilai 6, sehingga kurang 1.",
+        "level": "sedang",
+        "materi_id": "kab-algoritma"
       }
     ]
   },
@@ -718,7 +757,7 @@
     "gambar_lokal_deskripsi": null,
     "pertanyaan": [
       {
-        "id_asli": "kab_soal40_2008",
+        "soal_id": "kab_soal40_2008",
         "soal": "Berapa kalikah zz() dijalankan dalam eksekusi algoritma tersebut?",
         "pilihan": {
           "a": "10",
@@ -728,12 +767,13 @@
           "e": "8"
         },
         "kode": null,
-        "jawaban_benar": "d",
+        "kunci": "d",
         "pembahasan": "Prosedur zz melakukan penukaran elemen (swap). Nilai pivot val = a[1] = 12. Elemen yang lebih kecil dari 12 adalah 8, 6, 9, 1, 7 (5 elemen). Setiap kali ditemukan elemen yang lebih kecil, zz(h, k) dipanggil (5 kali). Terakhir dipanggil zz(1, h) satu kali. Total zz dijalankan = 5 + 1 = 6 kali.",
-        "tingkat_kesulitan": "mudah"
+        "level": "mudah",
+        "materi_id": "kab-algoritma"
       },
       {
-        "id_asli": "kab_soal41_2008",
+        "soal_id": "kab_soal41_2008",
         "soal": "Berapakah isi array a setelah algoritma ini dijalankan?",
         "pilihan": {
           "a": "(12, 30, 21, 8, 6, 9, 1, 7)",
@@ -743,9 +783,10 @@
           "e": "(7, 8, 6, 9, 1, 12, 21, 30)"
         },
         "kode": null,
-        "jawaban_benar": "e",
+        "kunci": "e",
         "pembahasan": "Setelah partisi selesai dengan pivot 12, semua elemen < 12 berada di sebelah kiri dan > 12 di sebelah kanan. Susunan akhir array a adalah (7, 8, 6, 9, 1, 12, 21, 30).",
-        "tingkat_kesulitan": "sedang"
+        "level": "sedang",
+        "materi_id": "kab-algoritma"
       }
     ]
   },
@@ -756,7 +797,7 @@
     "gambar_lokal_deskripsi": null,
     "pertanyaan": [
       {
-        "id_asli": "kab_soal42_2008",
+        "soal_id": "kab_soal42_2008",
         "soal": "Pasangan manakah yang berharga sama?",
         "pilihan": {
           "a": "A(3, 1) dengan A(2, 1)",
@@ -766,12 +807,13 @@
           "e": "A(4,2) dengan A(2, 4)"
         },
         "kode": null,
-        "jawaban_benar": "b",
+        "kunci": "b",
         "pembahasan": "Menghitung nilai fungsi rekursif: baris i=2 menghasilkan deret A(2, j) = j + 1, sehingga A(2, 6) = 7. Baris i=3 menghasilkan A(3, 1) = 3, A(3, 2) = 5, A(3, 3) = 7. Pasangan yang berharga sama adalah A(3, 3) dengan A(2, 6) yang sama-sama bernilai 7.",
-        "tingkat_kesulitan": "sedang"
+        "level": "sedang",
+        "materi_id": "kab-algoritma"
       },
       {
-        "id_asli": "kab_soal43_2008",
+        "soal_id": "kab_soal43_2008",
         "soal": "Berapakah A(4,7)?",
         "pilihan": {
           "a": "49",
@@ -781,9 +823,10 @@
           "e": "1021"
         },
         "kode": null,
-        "jawaban_benar": "b",
+        "kunci": "b",
         "pembahasan": "Evaluasi baris i=4 menunjukkan pola eksponensial A(4, j) = 2^(j+2) - 3. Untuk j = 7: A(4, 7) = 2^(7+2) - 3 = 2^9 - 3 = 512 - 3 = 509.",
-        "tingkat_kesulitan": "sulit"
+        "level": "sulit",
+        "materi_id": "kab-algoritma"
       }
     ]
   },
@@ -794,7 +837,7 @@
     "gambar_lokal_deskripsi": null,
     "pertanyaan": [
       {
-        "id_asli": "kab_soal44_2008",
+        "soal_id": "kab_soal44_2008",
         "soal": "Berapakah harga yang dihasilkan dalam pemanggilan writeln(a(128))?",
         "pilihan": {
           "a": "10",
@@ -804,14 +847,15 @@
           "e": "128"
         },
         "kode": null,
-        "jawaban_benar": "a",
-        "pembahasan": "Tracing fungsi a(128): setiap langkah rekursi melalui b mereduksi argumen sebesar 3 (a(x) -> b(x+1) -> a(x-3)). Karena 128 mod 3 = 2, x tereduksi hingga basis bernilai 10.",
-        "tingkat_kesulitan": "sedang",
+        "kunci": "a",
+        "pembahasan": "Tracing fungsi a(128): setiap langkah rekursi melalui b mereduksi argumen sebesar 3 (a(x) -> b(x+1) -> a(x-3)). Karena 128 mod 3 = 2, x tereduksi hingga basis bernilai 10.\n\n[Catatan Telaah / Cacat Naskah Asli OSN]:\nKode pada dokumen asli membandingkan nama fungsi ('if (a<100)' di dalam fungsi a dan 'if (c<0)' di dalam fungsi c), sehingga bersifat ambigu. Dengan pembacaan harfiah (nilai fungsi belum terdefinisi = 0) diperoleh a(128) = 10 (opsi a). Bila 'a' dibaca sebagai x dan 'c' sebagai z, hasilnya -10 (opsi b).",
+        "level": "sedang",
         "status": "dikecualikan",
-        "catatan_pengecualian": "soal cacat di sumber: Kode tidak valid: 'if (a<100)' dan 'if (c<0)' memakai nama fungsi sebagai variabel."
+        "catatan_pengecualian": "soal cacat di sumber: Kode tidak valid: 'if (a<100)' dan 'if (c<0)' memakai nama fungsi sebagai variabel.",
+        "materi_id": "kab-algoritma"
       },
       {
-        "id_asli": "kab_soal45_2008",
+        "soal_id": "kab_soal45_2008",
         "soal": "Manakah di antar nilai-nilai di bawah ini yang harus dimasukkan sebagai parameter dari pemanggilan fungsi a(x) agar nilai yang dikembalikan < 0:",
         "pilihan": {
           "a": "128",
@@ -821,11 +865,12 @@
           "e": "27"
         },
         "kode": null,
-        "jawaban_benar": "e",
-        "pembahasan": "Nilai 128, 2, -1, dan 86 semuanya berada dalam kelas residu 2 mod 3 dan menghasilkan nilai positif. Parameter x = 27 merupakan satu-satunya kelipatan 3 (27 mod 3 = 0) yang memicu jalur rekursif negatif menghasilkan nilai kembalian < 0.",
-        "tingkat_kesulitan": "sedang",
+        "kunci": "e",
+        "pembahasan": "Nilai 128, 2, -1, dan 86 semuanya berada dalam kelas residu 2 mod 3 dan menghasilkan nilai positif. Parameter x = 27 merupakan satu-satunya kelipatan 3 (27 mod 3 = 0) yang memicu jalur rekursif negatif menghasilkan nilai kembalian < 0.\n\n[Catatan Telaah / Cacat Naskah Asli OSN]:\nMengikuti pembacaan harfiah kode pada dokumen asli, seluruh nilai parameter yang diuji menghasilkan a(x) = 10 (positif), sehingga tidak ada pilihan yang menghasilkan nilai < 0. Soal ini cacat; kunci 'e' dipertahankan mengikuti kunci pembuat soal.",
+        "level": "sedang",
         "status": "dikecualikan",
-        "catatan_pengecualian": "soal cacat di sumber: Dengan kode yang sama, tidak ada pilihan yang menghasilkan nilai < 0 (tafsiran literal) atau semuanya menghasilkan -10 (tafsiran 'x<100', 'z<0')."
+        "catatan_pengecualian": "soal cacat di sumber: Dengan kode yang sama, tidak ada pilihan yang menghasilkan nilai < 0 (tafsiran literal) atau semuanya menghasilkan -10 (tafsiran 'x<100', 'z<0').",
+        "materi_id": "kab-algoritma"
       }
     ]
   },
@@ -836,7 +881,7 @@
     "gambar_lokal_deskripsi": null,
     "pertanyaan": [
       {
-        "id_asli": "kab_soal46_2008",
+        "soal_id": "kab_soal46_2008",
         "soal": "Pada pemanggilan hitungsaja(5,24) berapa baris keluaran (satu baris berisi berisi ?hello?) dicetak oleh algoritma tersebut?",
         "pilihan": {
           "a": "12",
@@ -846,12 +891,13 @@
           "e": "50"
         },
         "kode": null,
-        "jawaban_benar": "c",
+        "kunci": "c",
         "pembahasan": "Eksekusi hitungsaja pada interval berukuran L membentuk pohon biner penuh dengan L daun. Jumlah total pemanggilan (simpul) pada pohon biner penuh dengan L daun adalah 2L - 1. Untuk rentang 5 sampai 24, panjang interval L = 24 - 5 + 1 = 20. Total pencetakan 'hello' = 2(20) - 1 = 39 kali.",
-        "tingkat_kesulitan": "sedang"
+        "level": "sedang",
+        "materi_id": "kab-algoritma"
       },
       {
-        "id_asli": "kab_soal47_2008",
+        "soal_id": "kab_soal47_2008",
         "soal": "Pada pemanggilan hitungsaja(1,N) maka\nbanyaknya baris keluaran yang dicetak oleh algoritma tersebut sebagai fungsi dari N adalah:",
         "pilihan": {
           "a": "1/2 N",
@@ -861,9 +907,10 @@
           "e": "2N - 1"
         },
         "kode": null,
-        "jawaban_benar": "e",
+        "kunci": "e",
         "pembahasan": "Untuk pemanggilan hitungsaja(1, N), panjang interval adalah L = N - 1 + 1 = N. Mengikuti sifat pohon biner rekursi pembagian interval, jumlah total baris yang dicetak adalah 2N - 1.",
-        "tingkat_kesulitan": "sedang"
+        "level": "sedang",
+        "materi_id": "kab-algoritma"
       }
     ]
   },
@@ -874,7 +921,7 @@
     "gambar_lokal_deskripsi": null,
     "pertanyaan": [
       {
-        "id_asli": "kab_soal48_2008",
+        "soal_id": "kab_soal48_2008",
         "soal": "Keluaran program adalah:",
         "pilihan": {
           "a": "7980",
@@ -884,12 +931,13 @@
           "e": "1370"
         },
         "kode": null,
-        "jawaban_benar": "a",
+        "kunci": "a",
         "pembahasan": "Simulasi xyz(10, 20, 30): pemanggilan ab(10, 30) melakukan rekursi bertahap hingga a = 21, b = 19 menghasilkan t = 21 * 19 = 399. Selanjutnya pemanggilan ab(399, 20) langsung mengembalikan 399 * 20 = 7980.",
-        "tingkat_kesulitan": "sedang"
+        "level": "sedang",
+        "materi_id": "kab-algoritma"
       },
       {
-        "id_asli": "kab_soal49_2008",
+        "soal_id": "kab_soal49_2008",
         "soal": "Manakah dari pemanggilan berikut yang akan menghasilkan nilai 2?",
         "pilihan": {
           "a": "writeln(xyz(1, 1, 2));",
@@ -899,12 +947,13 @@
           "e": "Tidak ada jawaban benar"
         },
         "kode": null,
-        "jawaban_benar": "d",
+        "kunci": "d",
         "pembahasan": "Menguji pemanggilan fungsi: pemanggilan xyz(1, 1, 2) menghasilkan nilai 2, dan pemanggilan xyz(1, 3, 1) juga menghasilkan nilai 2. Oleh karena itu, pilihan yang benar adalah 'Ada lebih dari satu jawaban benar'.",
-        "tingkat_kesulitan": "mudah"
+        "level": "mudah",
+        "materi_id": "kab-algoritma"
       },
       {
-        "id_asli": "kab_soal50_2008",
+        "soal_id": "kab_soal50_2008",
         "soal": "Apabila program utama diganti menjadi: begin\n zzz:=0;\n junk := xyz(10, 20, 30);\n writeln(zzz);\nend. maka, keluaran program adalah...",
         "pilihan": {
           "a": "15",
@@ -914,9 +963,10 @@
           "e": "14"
         },
         "kode": "begin\n zzz:=0;\n junk := xyz(10, 20, 30);\n writeln(zzz);\nend.",
-        "jawaban_benar": "e",
+        "kunci": "e",
         "pembahasan": "Variabel zzz bertambah 1 setiap kali ab dan xyz dipanggil. Pemanggilan xyz memicu 1 kali inc, ab(10, 30) memicu 11 kali pemanggilan rekursif ab, dan ab(399, 20) memicu 1 kali pemanggilan ab. Total nilai akhir zzz = 1 + 12 + 1 = 14.",
-        "tingkat_kesulitan": "sedang"
+        "level": "sedang",
+        "materi_id": "kab-algoritma"
       }
     ]
   }
