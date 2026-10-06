@@ -4,6 +4,19 @@ Layanan Data & Analytics untuk platform OSN Informatika. Lihat `CONTEXT.md`
 (glosarium domain) dan `.scratch/osn-data-analytics/map.md` (peta scope &
 keputusan) sebelum mengerjakan tiket apa pun.
 
+> ## DEPLOY
+>
+> Service ini adalah **layanan hitung Python** yang dipakai Laravel API
+> (`Osn-Readiness-Web`). Panduan deploy lengkap untuk keduanya ada di
+> [`Osn-Readiness-Web/docs/PANDUAN-DEPLOY.md`](../Osn-Readiness-Web/docs/PANDUAN-DEPLOY.md).
+>
+> Hal yang paling sering terlewat:
+>
+> - `INTERNAL_API_TOKEN` di sini harus **sama** dengan `PERHITUNGAN_TOKEN` di Laravel.
+>   Kalau berbeda, Laravel membalas `502` dan semua submit pre-test/simulasi berakhir `503`.
+> - Kalau Laravel jalan di Docker, jalankan uvicorn dengan `--host 0.0.0.0` dan arahkan
+>   `PERHITUNGAN_URL` ke `http://host.docker.internal:8001`. Jangan pakai `localhost`.
+
 ## Setup
 
 ```bash
