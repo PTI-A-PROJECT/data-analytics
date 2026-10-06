@@ -10,8 +10,7 @@
     "level": "sedang",
     "kode_soal": null,
     "gambar_soal_url": null,
-    "gambar_soal_lokal": null,
-    "catatan_validasi": "Kunci jawaban & pembahasan pada file ini tertukar dengan naskah KSNP 2021"
+    "gambar_soal_lokal": null
   },
   {
     "soal_id": "prov_soal2_2021",
@@ -24,8 +23,7 @@
     "level": "sedang",
     "kode_soal": null,
     "gambar_soal_url": null,
-    "gambar_soal_lokal": null,
-    "catatan_validasi": "Kunci jawaban & pembahasan pada file ini tertukar dengan naskah KSNP 2021"
+    "gambar_soal_lokal": null
   },
   {
     "soal_id": "prov_soal3_2021",
@@ -38,8 +36,7 @@
     "level": "sedang",
     "kode_soal": null,
     "gambar_soal_url": null,
-    "gambar_soal_lokal": null,
-    "catatan_validasi": "Kunci jawaban & pembahasan pada file ini tertukar dengan naskah KSNP 2021"
+    "gambar_soal_lokal": null
   },
   {
     "soal_id": "prov_soal4_2021",
@@ -52,8 +49,7 @@
     "level": "mudah",
     "kode_soal": null,
     "gambar_soal_url": null,
-    "gambar_soal_lokal": null,
-    "catatan_validasi": "Kunci jawaban & pembahasan pada file ini tertukar dengan naskah KSNP 2021"
+    "gambar_soal_lokal": null
   },
   {
     "soal_id": "prov_soal5_2021",
@@ -66,8 +62,7 @@
     "level": "mudah",
     "kode_soal": null,
     "gambar_soal_url": null,
-    "gambar_soal_lokal": null,
-    "catatan_validasi": "Kunci jawaban & pembahasan pada file ini tertukar dengan naskah KSNP 2021"
+    "gambar_soal_lokal": null
   },
   {
     "soal_id": "prov_soal6_2021",
@@ -80,8 +75,7 @@
     "level": "sulit",
     "kode_soal": null,
     "gambar_soal_url": null,
-    "gambar_soal_lokal": null,
-    "catatan_validasi": "Kunci jawaban & pembahasan pada file ini tertukar dengan naskah KSNP 2021"
+    "gambar_soal_lokal": null
   },
   {
     "soal_id": "prov_soal7_2021",
@@ -94,8 +88,7 @@
     "level": "sulit",
     "kode_soal": null,
     "gambar_soal_url": null,
-    "gambar_soal_lokal": "soal_3.jpeg",
-    "catatan_validasi": "Kunci jawaban & pembahasan pada file ini tertukar dengan naskah KSNP 2021"
+    "gambar_soal_lokal": "soal_3.jpeg"
   },
   {
     "soal_id": "prov_soal8_2021",
@@ -112,8 +105,7 @@
       "soal_8_prov_2021.png",
       "ksnp_2021_soal8.png",
       "soal_B3_1_prov_2021.png"
-    ],
-    "catatan_validasi": "Kunci jawaban & pembahasan pada file ini tertukar dengan naskah KSNP 2021"
+    ]
   },
   {
     "soal_id": "prov_soal9_2021",
@@ -129,8 +121,7 @@
     "gambar_soal_lokal": [
       "soal_9_prov_2021.png",
       "ksnp_2021_soal9.png"
-    ],
-    "catatan_validasi": "Kunci jawaban & pembahasan pada file ini tertukar dengan naskah KSNP 2021"
+    ]
   },
   {
     "soal_id": "prov_soal10_2021",
@@ -143,8 +134,7 @@
     "level": "sulit",
     "kode_soal": null,
     "gambar_soal_url": null,
-    "gambar_soal_lokal": null,
-    "catatan_validasi": "Kunci jawaban & pembahasan pada file ini tertukar dengan naskah KSNP 2021"
+    "gambar_soal_lokal": null
   },
   {
     "soal_id": "prov_cerita11_2021",
@@ -166,8 +156,7 @@
         "level": "sedang",
         "kode_soal": null,
         "gambar_soal_url": null,
-        "gambar_soal_lokal": null,
-        "catatan_validasi": "Kunci jawaban & pembahasan pada file ini tertukar dengan naskah KSNP 2021"
+        "gambar_soal_lokal": null
       },
       {
         "soal_id": "prov_soal12_2021",
@@ -179,8 +168,7 @@
         "level": "sedang",
         "kode_soal": null,
         "gambar_soal_url": null,
-        "gambar_soal_lokal": null,
-        "catatan_validasi": "Kunci jawaban & pembahasan pada file ini tertukar dengan naskah KSNP 2021"
+        "gambar_soal_lokal": null
       },
       {
         "soal_id": "prov_soal13_2021",
@@ -192,8 +180,7 @@
         "level": "sedang",
         "kode_soal": null,
         "gambar_soal_url": null,
-        "gambar_soal_lokal": null,
-        "catatan_validasi": "Kunci jawaban & pembahasan pada file ini tertukar dengan naskah KSNP 2021"
+        "gambar_soal_lokal": null
       }
     ]
   },
@@ -217,8 +204,7 @@
         "level": "sedang",
         "kode_soal": null,
         "gambar_soal_url": null,
-        "gambar_soal_lokal": null,
-        "catatan_validasi": "Kunci jawaban & pembahasan pada file ini tertukar dengan naskah KSNP 2021"
+        "gambar_soal_lokal": null
       }
     ]
   },
@@ -242,8 +228,7 @@
         "level": "sedang",
         "kode_soal": null,
         "gambar_soal_url": null,
-        "gambar_soal_lokal": null,
-        "catatan_validasi": "Kunci jawaban & pembahasan pada file ini tertukar dengan naskah KSNP 2021"
+        "gambar_soal_lokal": null
       },
       {
         "soal_id": "prov_soal16_2021",
@@ -255,8 +240,7 @@
         "level": "sedang",
         "kode_soal": null,
         "gambar_soal_url": null,
-        "gambar_soal_lokal": null,
-        "catatan_validasi": "Kunci jawaban & pembahasan pada file ini tertukar dengan naskah KSNP 2021"
+        "gambar_soal_lokal": null
       },
       {
         "soal_id": "prov_soal17_2021",
@@ -268,8 +252,7 @@
         "level": "sedang",
         "kode_soal": null,
         "gambar_soal_url": null,
-        "gambar_soal_lokal": null,
-        "catatan_validasi": "Kunci jawaban & pembahasan pada file ini tertukar dengan naskah KSNP 2021"
+        "gambar_soal_lokal": null
       },
       {
         "soal_id": "prov_soal18_2021",
@@ -281,8 +264,7 @@
         "level": "sulit",
         "kode_soal": null,
         "gambar_soal_url": null,
-        "gambar_soal_lokal": null,
-        "catatan_validasi": "Kunci jawaban & pembahasan pada file ini tertukar dengan naskah KSNP 2021"
+        "gambar_soal_lokal": null
       }
     ]
   },
@@ -306,8 +288,7 @@
         "level": "sedang",
         "kode_soal": null,
         "gambar_soal_url": null,
-        "gambar_soal_lokal": null,
-        "catatan_validasi": "Kunci jawaban & pembahasan pada file ini tertukar dengan naskah KSNP 2021"
+        "gambar_soal_lokal": null
       },
       {
         "soal_id": "prov_soal20_2021",
@@ -319,8 +300,7 @@
         "level": "sedang",
         "kode_soal": null,
         "gambar_soal_url": null,
-        "gambar_soal_lokal": "soal_B5_4_prov_2021.png",
-        "catatan_validasi": "Kunci jawaban & pembahasan pada file ini tertukar dengan naskah KSNP 2021"
+        "gambar_soal_lokal": "soal_B5_4_prov_2021.png"
       },
       {
         "soal_id": "prov_soal21_2021",
@@ -332,8 +312,7 @@
         "level": "sulit",
         "kode_soal": null,
         "gambar_soal_url": null,
-        "gambar_soal_lokal": null,
-        "catatan_validasi": "Kunci jawaban & pembahasan pada file ini tertukar dengan naskah KSNP 2021"
+        "gambar_soal_lokal": null
       }
     ]
   },
@@ -357,8 +336,7 @@
         "level": "sedang",
         "kode_soal": null,
         "gambar_soal_url": null,
-        "gambar_soal_lokal": null,
-        "catatan_validasi": "Kunci jawaban & pembahasan pada file ini tertukar dengan naskah KSNP 2021"
+        "gambar_soal_lokal": null
       }
     ]
   },
@@ -382,8 +360,7 @@
         "level": "sulit",
         "kode_soal": null,
         "gambar_soal_url": null,
-        "gambar_soal_lokal": null,
-        "catatan_validasi": "Kunci jawaban & pembahasan pada file ini tertukar dengan naskah KSNP 2021"
+        "gambar_soal_lokal": null
       },
       {
         "soal_id": "prov_soal24_2021",
@@ -395,8 +372,7 @@
         "level": "sulit",
         "kode_soal": null,
         "gambar_soal_url": null,
-        "gambar_soal_lokal": null,
-        "catatan_validasi": "Kunci jawaban & pembahasan pada file ini tertukar dengan naskah KSNP 2021"
+        "gambar_soal_lokal": null
       },
       {
         "soal_id": "prov_soal25_2021",
@@ -408,8 +384,7 @@
         "level": "sulit",
         "kode_soal": null,
         "gambar_soal_url": null,
-        "gambar_soal_lokal": null,
-        "catatan_validasi": "Kunci jawaban & pembahasan pada file ini tertukar dengan naskah KSNP 2021"
+        "gambar_soal_lokal": null
       }
     ]
   },
@@ -433,8 +408,7 @@
         "level": "sulit",
         "kode_soal": null,
         "gambar_soal_url": null,
-        "gambar_soal_lokal": null,
-        "catatan_validasi": "Kunci jawaban & pembahasan pada file ini tertukar dengan naskah KSNP 2021"
+        "gambar_soal_lokal": null
       }
     ]
   },
@@ -458,8 +432,7 @@
         "level": "sedang",
         "kode_soal": null,
         "gambar_soal_url": null,
-        "gambar_soal_lokal": null,
-        "catatan_validasi": "Kunci jawaban & pembahasan pada file ini tertukar dengan naskah KSNP 2021"
+        "gambar_soal_lokal": null
       },
       {
         "soal_id": "prov_soal28_2021",
@@ -471,8 +444,7 @@
         "level": "sedang",
         "kode_soal": null,
         "gambar_soal_url": null,
-        "gambar_soal_lokal": null,
-        "catatan_validasi": "Kunci jawaban & pembahasan pada file ini tertukar dengan naskah KSNP 2021"
+        "gambar_soal_lokal": null
       },
       {
         "soal_id": "prov_soal29_2021",
@@ -484,8 +456,7 @@
         "level": "sulit",
         "kode_soal": null,
         "gambar_soal_url": null,
-        "gambar_soal_lokal": null,
-        "catatan_validasi": "Kunci jawaban & pembahasan pada file ini tertukar dengan naskah KSNP 2021"
+        "gambar_soal_lokal": null
       }
     ]
   },
@@ -509,8 +480,7 @@
         "level": "sedang",
         "kode_soal": null,
         "gambar_soal_url": null,
-        "gambar_soal_lokal": "soal_4.png",
-        "catatan_validasi": "Kunci jawaban & pembahasan pada file ini tertukar dengan naskah KSNP 2021"
+        "gambar_soal_lokal": "soal_4.png"
       }
     ],
     "gambar_soal_lokal": "soal_4.png"
