@@ -4,7 +4,14 @@ Conversion Funnel SIAP OSN (FR-01 & FR-24).
 
 from __future__ import annotations
 
+import sys
 from datetime import datetime, timedelta, timezone
+from pathlib import Path
+
+# Pastikan direktori src modul dashboard-user-analytics masuk ke sys.path
+_SRC_DIR = Path(__file__).resolve().parent.parent / "src"
+if str(_SRC_DIR) not in sys.path:
+    sys.path.insert(0, str(_SRC_DIR))
 
 import pytest
 from fastapi import HTTPException

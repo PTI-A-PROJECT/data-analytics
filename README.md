@@ -1,5 +1,8 @@
 # data-analytics
 
+> **Branch `dashboard-user-analytics`**:
+> Modul User Analytics & Conversion Funnel (FR-01 & FR-24) tersedia pada direktori khusus [`dashboard-user-analytics/`](./dashboard-user-analytics/) dan panduan ringkas pada [`DASHBOARD_USER_ANALYTICS.md`](./DASHBOARD_USER_ANALYTICS.md).
+
 Layanan Data & Analytics untuk platform OSN Informatika. Lihat `CONTEXT.md`
 (glosarium domain) dan `.scratch/osn-data-analytics/map.md` (peta scope &
 keputusan) sebelum mengerjakan tiket apa pun.
