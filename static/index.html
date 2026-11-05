@@ -1,0 +1,1582 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SIAP OSN — User Analytics & Conversion Funnel (FR-01 & FR-24)</title>
+  <style>
+    /* -------------------------------------------------------------
+       APPLE DESIGN TOKENS (Light & Dark via CSS Custom Properties)
+       Ref: references/apple/DESIGN.md & WWDC Fluid Interfaces
+       ------------------------------------------------------------- */
+    :root {
+      /* Base System Font Stack */
+      --font-display: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Inter, sans-serif;
+      --font-body: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Inter, sans-serif;
+      --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+
+      /* Motion & Springs */
+      --spring-timing: cubic-bezier(0.16, 1, 0.3, 1);
+      --transition-snappy: 0.14s var(--spring-timing);
+      --transition-smooth: 0.24s var(--spring-timing);
+
+      /* Radii */
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --radius-pill: 9999px;
+    }
+
+    /* DARK THEME (Apple Pro Studio / Void Canvas) */
+    html[data-theme="dark"] {
+      --canvas: #000000;
+      --surface: #161617;
+      --surface-secondary: #1f1f21;
+      --surface-tertiary: #272729;
+      --surface-glass: rgba(22, 22, 23, 0.78);
+      --border: rgba(255, 255, 255, 0.08);
+      --border-subtle: rgba(255, 255, 255, 0.04);
+      --border-focus: #2997ff;
+
+      --text: #f5f5f7;
+      --text-secondary: #86868b;
+      --text-tertiary: #636366;
+
+      --primary: #2997ff;
+      --primary-hover: #47a6ff;
+      --primary-active: #1f85e8;
+      --primary-tint: rgba(41, 151, 255, 0.12);
+
+      --emerald: #30d158;
+      --emerald-tint: rgba(48, 209, 88, 0.12);
+
+      --rose: #ff453a;
+      --rose-tint: rgba(255, 69, 58, 0.12);
+
+      --amber: #ff9f0a;
+      --amber-tint: rgba(255, 159, 10, 0.12);
+
+      --focus-ring: rgba(41, 151, 255, 0.35);
+      --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+      --card-inset-highlight: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+      --track-bg: #0d0d0e;
+    }
+
+    /* LIGHT THEME (Apple Museum / Parchment Canvas) */
+    html[data-theme="light"] {
+      --canvas: #f5f5f7;
+      --surface: #ffffff;
+      --surface-secondary: #fbfbfd;
+      --surface-tertiary: #ececee;
+      --surface-glass: rgba(245, 245, 247, 0.82);
+      --border: rgba(0, 0, 0, 0.08);
+      --border-subtle: rgba(0, 0, 0, 0.04);
+      --border-focus: #0071e3;
+
+      --text: #1d1d1f;
+      --text-secondary: #86868b;
+      --text-tertiary: #a1a1a6;
+
+      --primary: #0071e3;
+      --primary-hover: #0077ed;
+      --primary-active: #0062c4;
+      --primary-tint: rgba(0, 113, 227, 0.08);
+
+      --emerald: #34c759;
+      --emerald-tint: rgba(52, 199, 89, 0.1);
+
+      --rose: #ff3b30;
+      --rose-tint: rgba(255, 59, 48, 0.1);
+
+      --amber: #ff9500;
+      --amber-tint: rgba(255, 149, 0, 0.1);
+
+      --focus-ring: rgba(0, 113, 227, 0.3);
+      --card-shadow: 0 2px 14px rgba(0, 0, 0, 0.04);
+      --card-inset-highlight: inset 0 1px 0 rgba(255, 255, 255, 0.8);
+      --track-bg: #e5e5ea;
+    }
+
+    /* -------------------------------------------------------------
+       GLOBAL RESET & TYPOGRAPHY
+       ------------------------------------------------------------- */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--canvas);
+      color: var(--text);
+      line-height: 1.47;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      transition: background-color var(--transition-smooth), color var(--transition-smooth);
+    }
+
+    code, pre {
+      font-family: var(--font-mono);
+      font-size: 0.82em;
+    }
+
+    /* -------------------------------------------------------------
+       NAVIGATION BAR (Translucent Glass & Segmented Control)
+       ------------------------------------------------------------- */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: var(--surface-glass);
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      transition: background-color var(--transition-smooth), border-color var(--transition-smooth);
+    }
+
+    .brand-cluster {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-mark {
+      background: var(--text);
+      color: var(--canvas);
+      font-weight: 700;
+      font-size: 0.78rem;
+      letter-spacing: 0.06em;
+      padding: 5px 10px;
+      border-radius: var(--radius-sm);
+      display: inline-flex;
+      align-items: center;
+      user-select: none;
+    }
+
+    .brand-meta h1 {
+      font-family: var(--font-display);
+      font-size: 0.98rem;
+      font-weight: 600;
+      letter-spacing: -0.015em;
+      color: var(--text);
+    }
+
+    .brand-meta p {
+      font-size: 0.74rem;
+      color: var(--text-secondary);
+      letter-spacing: -0.005em;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    /* Apple-Style Segmented Control */
+    .segmented-control {
+      display: inline-flex;
+      background: var(--surface-tertiary);
+      padding: 3px;
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--border-subtle);
+    }
+
+    .segment-item {
+      background: transparent;
+      border: none;
+      color: var(--text-secondary);
+      font-family: var(--font-body);
+      font-size: 0.82rem;
+      font-weight: 500;
+      padding: 6px 16px;
+      border-radius: var(--radius-pill);
+      cursor: pointer;
+      transition: all var(--transition-snappy);
+      white-space: nowrap;
+    }
+
+    .segment-item:hover {
+      color: var(--text);
+    }
+
+    .segment-item.active {
+      background: var(--surface);
+      color: var(--text);
+      font-weight: 600;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+    }
+
+    .segment-item:active {
+      transform: scale(0.97);
+    }
+
+    /* Theme Toggle Button */
+    .theme-toggle-btn {
+      background: var(--surface-tertiary);
+      border: 1px solid var(--border-subtle);
+      color: var(--text);
+      width: 34px;
+      height: 34px;
+      border-radius: var(--radius-pill);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all var(--transition-snappy);
+    }
+
+    .theme-toggle-btn:hover {
+      background: var(--surface-secondary);
+    }
+
+    .theme-toggle-btn:active {
+      transform: scale(0.94);
+    }
+
+    .theme-toggle-btn svg {
+      width: 16px;
+      height: 16px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    /* -------------------------------------------------------------
+       MAIN CONTENT CONTAINER
+       ------------------------------------------------------------- */
+    main {
+      max-width: 1220px;
+      margin: 0 auto;
+      padding: 28px 24px 72px;
+    }
+
+    .view-section {
+      display: none;
+      opacity: 0;
+      transform: translateY(4px);
+      transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+
+    .view-section.active {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* -------------------------------------------------------------
+       CARDS & GRID SYSTEM
+       ------------------------------------------------------------- */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    @media (max-width: 1024px) {
+      .kpi-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 580px) {
+      .kpi-grid {
+        grid-template-columns: 1fr;
+      }
+      header {
+        padding: 10px 16px;
+      }
+      main {
+        padding: 18px 16px 60px;
+      }
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      box-shadow: var(--card-shadow);
+      box-shadow: var(--card-inset-highlight);
+      transition: background-color var(--transition-smooth), border-color var(--transition-smooth);
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 20px;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .card-title {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 600;
+      letter-spacing: -0.015em;
+      color: var(--text);
+    }
+
+    .card-subtitle {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      margin-top: 3px;
+      line-height: 1.35;
+    }
+
+    /* KPI METRIC CARDS */
+    .kpi-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 20px 22px;
+      box-shadow: var(--card-shadow);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 124px;
+      transition: transform var(--transition-snappy), background-color var(--transition-smooth);
+    }
+
+    .kpi-card:hover {
+      border-color: rgba(255, 255, 255, 0.16);
+    }
+
+    html[data-theme="light"] .kpi-card:hover {
+      border-color: rgba(0, 0, 0, 0.16);
+    }
+
+    .kpi-label {
+      font-size: 0.72rem;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 600;
+    }
+
+    .kpi-value {
+      font-family: var(--font-display);
+      font-size: 2.15rem;
+      font-weight: 600;
+      letter-spacing: -0.025em;
+      line-height: 1.1;
+      margin: 10px 0 6px;
+      color: var(--text);
+    }
+
+    .kpi-foot {
+      font-size: 0.74rem;
+      color: var(--text-tertiary);
+    }
+
+    /* -------------------------------------------------------------
+       TOOLBAR & FILTERS
+       ------------------------------------------------------------- */
+    .toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 22px;
+      background: var(--surface);
+      padding: 12px 18px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      box-shadow: var(--card-shadow);
+    }
+
+    .filter-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .filter-label {
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+
+    /* Apple-styled Select Menus */
+    select {
+      appearance: none;
+      -webkit-appearance: none;
+      background-color: var(--surface-tertiary);
+      color: var(--text);
+      border: 1px solid var(--border-subtle);
+      padding: 7px 30px 7px 12px;
+      border-radius: var(--radius-sm);
+      font-family: var(--font-body);
+      font-size: 0.82rem;
+      font-weight: 500;
+      cursor: pointer;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2386868b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+      background-repeat: no-repeat;
+      background-position: right 8px center;
+      background-size: 14px;
+      transition: border-color var(--transition-snappy), box-shadow var(--transition-snappy);
+    }
+
+    select:focus {
+      outline: none;
+      border-color: var(--border-focus);
+      box-shadow: 0 0 0 3px var(--focus-ring);
+    }
+
+    /* -------------------------------------------------------------
+       BUTTONS (Apple Pill CTAs & Utilities)
+       ------------------------------------------------------------- */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: var(--primary);
+      color: #ffffff;
+      border: none;
+      padding: 8px 18px;
+      border-radius: var(--radius-pill);
+      font-family: var(--font-body);
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      cursor: pointer;
+      transition: background-color var(--transition-snappy), transform 0.1s ease-out;
+      user-select: none;
+    }
+
+    .btn:hover {
+      background: var(--primary-hover);
+    }
+
+    .btn:active {
+      transform: scale(0.97);
+      background: var(--primary-active);
+    }
+
+    .btn:focus-visible {
+      outline: none;
+      box-shadow: 0 0 0 3px var(--focus-ring);
+    }
+
+    .btn-secondary {
+      background: var(--surface-tertiary);
+      color: var(--text);
+      border: 1px solid var(--border-subtle);
+    }
+
+    .btn-secondary:hover {
+      background: var(--surface-secondary);
+      border-color: var(--border);
+    }
+
+    .btn-emerald {
+      background: var(--emerald);
+      color: #ffffff;
+    }
+
+    .btn-emerald:hover {
+      filter: brightness(1.06);
+    }
+
+    /* -------------------------------------------------------------
+       FUNNEL VISUALIZATION (Apple Tactile Capsules)
+       ------------------------------------------------------------- */
+    .funnel-stage-row {
+      margin-bottom: 22px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .funnel-stage-row:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .stage-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .stage-name {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 600;
+      font-size: 0.92rem;
+      letter-spacing: -0.01em;
+    }
+
+    .step-badge {
+      background: var(--surface-tertiary);
+      border: 1px solid var(--border-subtle);
+      color: var(--primary);
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: var(--radius-sm);
+      letter-spacing: 0.02em;
+    }
+
+    .stage-stats {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* Pill Badges */
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 3px 10px;
+      border-radius: var(--radius-pill);
+      font-weight: 600;
+      font-size: 0.72rem;
+      letter-spacing: 0.01em;
+      border: 1px solid transparent;
+    }
+
+    .pill-blue {
+      background: var(--primary-tint);
+      color: var(--primary);
+      border-color: rgba(41, 151, 255, 0.2);
+    }
+
+    .pill-green {
+      background: var(--emerald-tint);
+      color: var(--emerald);
+      border-color: rgba(48, 209, 88, 0.2);
+    }
+
+    .pill-rose {
+      background: var(--rose-tint);
+      color: var(--rose);
+      border-color: rgba(255, 69, 58, 0.2);
+    }
+
+    .pill-amber {
+      background: var(--amber-tint);
+      color: var(--amber);
+      border-color: rgba(255, 159, 10, 0.2);
+    }
+
+    /* Tactile Progress Capsule */
+    .bar-track {
+      width: 100%;
+      height: 32px;
+      background: var(--track-bg);
+      border-radius: var(--radius-pill);
+      overflow: hidden;
+      border: 1px solid var(--border-subtle);
+      position: relative;
+    }
+
+    .bar-fill {
+      height: 100%;
+      background: var(--primary);
+      border-radius: var(--radius-pill);
+      transition: width 0.4s var(--spring-timing);
+      display: flex;
+      align-items: center;
+      padding-left: 14px;
+      padding-right: 14px;
+      font-size: 0.76rem;
+      font-weight: 600;
+      color: #ffffff;
+      white-space: nowrap;
+      letter-spacing: -0.01em;
+    }
+
+    /* -------------------------------------------------------------
+       TABLES (Apple Hairline Separators & Generous Breathing Room)
+       ------------------------------------------------------------- */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.84rem;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    th {
+      color: var(--text-secondary);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 600;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    /* -------------------------------------------------------------
+       SIMULATION VIEW (FR-01) SPECIFIC STYLES
+       ------------------------------------------------------------- */
+    .scenario-tile {
+      background: var(--surface-secondary);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 22px;
+      margin-bottom: 24px;
+    }
+
+    .scenario-tile h2 {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 600;
+      letter-spacing: -0.015em;
+      margin-bottom: 6px;
+      color: var(--text);
+    }
+
+    .scenario-tile p {
+      color: var(--text-secondary);
+      font-size: 0.86rem;
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.78rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--text-secondary);
+      letter-spacing: -0.01em;
+    }
+
+    .form-group input {
+      width: 100%;
+      background: var(--surface-tertiary);
+      color: var(--text);
+      border: 1px solid var(--border);
+      padding: 11px 14px;
+      border-radius: var(--radius-md);
+      font-family: var(--font-body);
+      font-size: 0.86rem;
+      transition: border-color var(--transition-snappy), box-shadow var(--transition-snappy);
+    }
+
+    .form-group input:focus {
+      outline: none;
+      border-color: var(--border-focus);
+      box-shadow: 0 0 0 3px var(--focus-ring);
+      background: var(--surface);
+    }
+
+    .form-group input::placeholder {
+      color: var(--text-tertiary);
+    }
+
+    /* Alert Notifications */
+    .alert-msg {
+      padding: 12px 16px;
+      border-radius: var(--radius-md);
+      font-size: 0.84rem;
+      line-height: 1.4;
+      margin-bottom: 18px;
+      display: none;
+    }
+
+    .alert-error {
+      background: var(--rose-tint);
+      border: 1px solid rgba(255, 69, 58, 0.25);
+      color: var(--rose);
+      display: block;
+    }
+
+    .alert-success {
+      background: var(--emerald-tint);
+      border: 1px solid rgba(48, 209, 88, 0.25);
+      color: var(--emerald);
+      display: block;
+    }
+
+    /* Telemetry Identity Box */
+    .telemetry-card {
+      background: var(--surface-tertiary);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 14px;
+      margin-bottom: 14px;
+      font-size: 0.78rem;
+      line-height: 1.6;
+    }
+
+    .live-pulse-dot {
+      width: 7px;
+      height: 7px;
+      background-color: var(--emerald);
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 5px;
+    }
+
+    @keyframes fadeInRow {
+      from {
+        opacity: 0;
+        background-color: var(--primary-tint);
+      }
+      to {
+        opacity: 1;
+        background-color: transparent;
+      }
+    }
+
+    .telemetry-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .log-list {
+      max-height: 340px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 0.78rem;
+    }
+
+    .log-item {
+      background: var(--surface-secondary);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      padding: 10px 12px;
+      transition: background-color var(--transition-snappy);
+    }
+
+    .log-item:hover {
+      background: var(--surface-tertiary);
+    }
+
+    /* -------------------------------------------------------------
+       ACCESSIBILITY & REDUCED MOTION
+       ------------------------------------------------------------- */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- TOP NAVIGATION BAR -->
+  <header>
+    <div class="brand-cluster">
+      <span class="brand-mark">SIAP OSN</span>
+      <div class="brand-meta">
+        <h1>Sistem Adaptif Persiapan OSN Informatika</h1>
+        <p>User Analytics & Registration Conversion Funnel (FR-01 & Super Admin FR-24)</p>
+      </div>
+    </div>
+
+    <div class="nav-actions">
+      <!-- Apple Segmented Control for View Switching -->
+      <nav class="segmented-control" role="tablist" aria-label="Tampilan Sistem">
+        <button
+          type="button"
+          class="segment-item active"
+          id="tabBtnDashboard"
+          role="tab"
+          aria-selected="true"
+          onclick="switchTab('dashboard')"
+        >
+          Dashboard Super Admin (FR-24)
+        </button>
+        <button
+          type="button"
+          class="segment-item"
+          id="tabBtnPortal"
+          role="tab"
+          aria-selected="false"
+          onclick="switchTab('portal')"
+        >
+          Simulasi Registrasi Siswa (FR-01)
+        </button>
+      </nav>
+
+      <!-- Theme Switcher (Dark / Light) -->
+      <button
+        type="button"
+        class="theme-toggle-btn"
+        id="themeToggleBtn"
+        onclick="toggleTheme()"
+        title="Ganti Mode Tampilan (Dark/Light)"
+        aria-label="Ganti Mode Tampilan"
+      >
+        <svg id="themeIconSun" style="display:none;" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg id="themeIconMoon" viewBox="0 0 24 24">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- =========================================================
+         VIEW 1: DASHBOARD SUPER ADMIN (FR-24)
+         ========================================================= -->
+    <section id="viewDashboard" class="view-section active">
+      <!-- Filter Toolbar -->
+      <div class="toolbar">
+        <div class="filter-group">
+          <label for="filterWindow" class="filter-label">Rentang Waktu:</label>
+          <select id="filterWindow" onchange="refreshDashboard()">
+            <option value="7d">7 Hari Terakhir</option>
+            <option value="30d" selected>30 Hari Terakhir</option>
+            <option value="90d">90 Hari Terakhir</option>
+            <option value="all">Semua Waktu</option>
+          </select>
+
+          <label for="filterDevice" class="filter-label" style="margin-left:8px;">Perangkat:</label>
+          <select id="filterDevice" onchange="refreshDashboard()">
+            <option value="">Semua Perangkat</option>
+            <option value="desktop">Desktop</option>
+            <option value="mobile">Mobile</option>
+            <option value="tablet">Tablet</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <button type="button" class="btn btn-secondary" onclick="switchTab('portal')">
+            + Uji Coba Registrasi Siswa
+          </button>
+          <button type="button" class="btn" onclick="resetDemoSeed()">
+            Reset Data Simulasi (200 Pengunjung)
+          </button>
+        </div>
+      </div>
+
+      <!-- 4 Apple Metric KPI Cards -->
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-label">1. Pengunjung Unik (page_visit)</div>
+          <div class="kpi-value" id="kpiVisitors">0</div>
+          <div class="kpi-foot">Denominator funnel (DISTINCT anonymous_id)</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">4. Akun Siswa Terbuat (FR-01)</div>
+          <div class="kpi-value" id="kpiAccounts" style="color:var(--emerald);">0</div>
+          <div class="kpi-foot">Tersimpan di tabel users & ter-stitch</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Tingkat Konversi Keseluruhan</div>
+          <div class="kpi-value" id="kpiConversion" style="color:var(--primary);">0%</div>
+          <div class="kpi-foot">Dari page_visit ke account_created</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Waktu Konversi (Time-to-Convert)</div>
+          <div class="kpi-value" id="kpiMedianTtc">0s</div>
+          <div class="kpi-foot" id="kpiP90Ttc">Median (P50) | P90: -</div>
+        </div>
+      </div>
+
+      <!-- Main Dashboard Grid -->
+      <div class="grid-2">
+        <!-- 4-Stage Strict Monotonic Conversion Funnel -->
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <div class="card-title">Tahapan Conversion Funnel Pendaftaran Siswa</div>
+              <div class="card-subtitle">Mengacu pada Activity Diagram Gambar 12 & Sequence Diagram Gambar 18</div>
+            </div>
+            <span class="pill pill-blue">Strict Monotonic Funnel</span>
+          </div>
+          <div id="funnelStagesContainer"></div>
+        </div>
+
+        <!-- Attribution & Device Breakdown Column -->
+        <div style="display:flex;flex-direction:column;gap:24px;">
+          <!-- Drop-off Attribution -->
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <div class="card-title">Atribusi Drop-Off Tahap 3 ke Tahap 4</div>
+                <div class="card-subtitle">Mengapa calon pengguna yang mulai mengisi form tidak menjadi akun?</div>
+              </div>
+              <span class="pill pill-rose" id="badgeTotalStep3Drop">0 Gugur</span>
+            </div>
+            <table>
+              <thead>
+                <tr>
+                  <th>Penyebab Drop-Off / Kendala</th>
+                  <th>Calon Pengguna</th>
+                  <th>Proporsi</th>
+                </tr>
+              </thead>
+              <tbody id="attributionTableBody"></tbody>
+            </table>
+          </div>
+
+          <!-- Device Breakdown Table -->
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <div class="card-title">Komparasi Konversi per Segmen Perangkat</div>
+                <div class="card-subtitle">Segmentasi akuisisi calon siswa OSN Informatika</div>
+              </div>
+            </div>
+            <table>
+              <thead>
+                <tr>
+                  <th>Segmen Perangkat</th>
+                  <th>Pengunjung</th>
+                  <th>Akun Jadi</th>
+                  <th>Konversi</th>
+                </tr>
+              </thead>
+              <tbody id="deviceTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Real-Time User Activity Stream Card -->
+      <div class="card" style="margin-top:24px;">
+        <div class="card-header">
+          <div>
+            <div class="card-title">Log Aktivitas Pengguna Real-Time (Live Activity Stream)</div>
+            <div class="card-subtitle">Pencatatan tahapan interaksi calon pengguna secara instan via Server-Sent Events (SSE) tanpa reload halaman</div>
+          </div>
+          <span class="pill pill-green" id="streamConnectionBadge">
+            <span class="live-pulse-dot"></span> Live SSE Terhubung
+          </span>
+        </div>
+        <div style="overflow-x:auto;">
+          <table>
+            <thead>
+              <tr>
+                <th style="width:110px;">Waktu</th>
+                <th style="width:180px;">Tahapan Corong</th>
+                <th style="width:220px;">Identitas Pengguna</th>
+                <th style="width:130px;">Perangkat</th>
+                <th style="width:150px;">URL Halaman</th>
+                <th>Keterangan / Rincian</th>
+              </tr>
+            </thead>
+            <tbody id="realtimeActivityTableBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         VIEW 2: SIMULASI PORTAL REGISTRASI SISWA (FR-01)
+         ========================================================= -->
+    <section id="viewPortal" class="view-section">
+      <div class="grid-2">
+        <!-- Left: Interactive Simulation & Registration Form -->
+        <div class="card">
+          <div class="scenario-tile">
+            <span class="pill pill-blue" style="margin-bottom:12px;display:inline-block;">Tahap 1 & 2: Landing Page SIAP OSN</span>
+            <h2>Persiapan Adaptif Seleksi OSN Bidang Informatika</h2>
+            <p>
+              Ukur kemampuan awal lewat Pre-Test, dapatkan Peta Kompetensi dan Rekomendasi Materi otomatis,
+              serta ikuti Simulasi Seleksi Kabupaten, Provinsi, hingga Nasional.
+            </p>
+            <div style="display:flex;gap:10px;flex-wrap:wrap;">
+              <button type="button" class="btn btn-secondary" onclick="handleSimulatedPageVisit()">
+                1. Kunjungan Siswa Baru (+1 Pengunjung)
+              </button>
+              <button type="button" class="btn btn-emerald" onclick="handleSimulatedClickRegister()">
+                2. Klik Tombol Daftar (+1 Klik Registrasi)
+              </button>
+              <button type="button" class="btn btn-secondary" onclick="simulateBatchVisitors(5)" title="Simulasikan 5 siswa acak secara cepat">
+                + Simulasikan 5 Siswa Sekaligus
+              </button>
+              <button type="button" class="btn btn-secondary" onclick="startNewVisitorSession()">
+                Ganti Calon Siswa Baru
+              </button>
+            </div>
+            <div style="margin-top:14px;padding:10px 14px;background:var(--surface-tertiary);border-radius:var(--radius-sm);font-size:0.76rem;color:var(--text-secondary);line-height:1.45;">
+              <strong style="color:var(--text);">Aturan Deduplikasi Unik (Strict Monotonic Funnel):</strong>
+              Metrik corong dihitung berbasis <code>COUNT(DISTINCT anonymous_id)</code>. Satu pengunjung yang mengklik berulang kali tidak dilipatgandakan (aturan anti-spam). Tombol di atas otomatis membuat identitas siswa baru setiap kali ditekan agar angka metrik bertambah.
+            </div>
+          </div>
+
+          <div id="registrationFormContainer">
+            <div class="card-header">
+              <div>
+                <div class="card-title">Formulir Registrasi Akun Siswa (FR-01)</div>
+                <div class="card-subtitle">Mengetik di kolom mana pun akan otomatis memicu Tahap 3 (start_registration)</div>
+              </div>
+              <span class="pill pill-amber" id="formStageIndicator">Menunggu Interaksi</span>
+            </div>
+
+            <div id="registerAlert" class="alert-msg"></div>
+
+            <form id="siswaRegisterForm" onsubmit="handleRegisterSubmit(event)">
+              <div class="form-group">
+                <label for="inputNama">Nama Lengkap Siswa</label>
+                <input
+                  type="text"
+                  id="inputNama"
+                  placeholder="Contoh: Aisyah Putri Maharani"
+                  oninput="handleFirstFormInput()"
+                />
+              </div>
+              <div class="form-group">
+                <label for="inputEmail">Email Siswa (Unik sesuai Business Rule FR-01)</label>
+                <input
+                  type="email"
+                  id="inputEmail"
+                  placeholder="Contoh: aisyah@sman1malang.sch.id (gunakan siswa1@sman-osn.sch.id untuk tes duplikat)"
+                  oninput="handleFirstFormInput()"
+                />
+              </div>
+              <div class="form-group">
+                <label for="inputPassword">Password (Minimal 8 Karakter)</label>
+                <input
+                  type="password"
+                  id="inputPassword"
+                  placeholder="Minimal 8 karakter"
+                  oninput="handleFirstFormInput()"
+                />
+              </div>
+              <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:20px;">
+                <button type="submit" class="btn">
+                  4. Submit Registrasi Akun Siswa
+                </button>
+                <button type="button" class="btn btn-secondary" onclick="startNewVisitorSession()">
+                  Ganti Calon Pengguna Baru
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Right: Inspector Telemetry & Recent Accounts -->
+        <div style="display:flex;flex-direction:column;gap:24px;">
+          <!-- Telemetry Inspector -->
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <div class="card-title">Inspector Identitas & Event Stream Langsung</div>
+                <div class="card-subtitle">Memantau anonymous_id (localStorage) & session_id (sessionStorage)</div>
+              </div>
+            </div>
+            <div class="telemetry-card">
+              <div class="telemetry-row">
+                <span style="color:var(--text-secondary);font-weight:600;">anonymous_id:</span>
+                <code id="lblAnonId" style="color:var(--primary);">-</code>
+              </div>
+              <div class="telemetry-row" style="margin-top:6px;">
+                <span style="color:var(--text-secondary);font-weight:600;">session_id:</span>
+                <code id="lblSessionId" style="color:var(--emerald);">-</code>
+              </div>
+            </div>
+            <div class="log-list" id="eventLogList"></div>
+          </div>
+
+          <!-- Stitched Accounts -->
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <div class="card-title">Akun Siswa Terbaru (Penyatuan Identitas)</div>
+                <div class="card-subtitle">Bukti penyatuan anonymous_id ke users.id saat Tahap 4 berhasil</div>
+              </div>
+            </div>
+            <table>
+              <thead>
+                <tr>
+                  <th>Nama Siswa</th>
+                  <th>Email</th>
+                  <th>Stitched anonymous_id</th>
+                </tr>
+              </thead>
+              <tbody id="recentUsersTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Tracker SDK -->
+  <script src="/static/siap-osn-funnel-tracker.js"></script>
+  <script>
+    // Theme Switcher Logic
+    function updateThemeIcon(theme) {
+      const sun = document.getElementById("themeIconSun");
+      const moon = document.getElementById("themeIconMoon");
+      if (theme === "light") {
+        sun.style.display = "block";
+        moon.style.display = "none";
+      } else {
+        sun.style.display = "none";
+        moon.style.display = "block";
+      }
+    }
+
+    function toggleTheme() {
+      const current = document.documentElement.getAttribute("data-theme") || "dark";
+      const next = current === "dark" ? "light" : "dark";
+      document.documentElement.setAttribute("data-theme", next);
+      localStorage.setItem("siap_theme", next);
+      updateThemeIcon(next);
+    }
+
+    function initTheme() {
+      const saved = localStorage.getItem("siap_theme") || "dark";
+      document.documentElement.setAttribute("data-theme", saved);
+      updateThemeIcon(saved);
+    }
+    initTheme();
+
+    // Tracker Initialization
+    const tracker = new window.SiapOsnFunnelTracker({
+      endpoint: "/api/v1/onboarding/step",
+    });
+
+    function updateIdentityLabels() {
+      document.getElementById("lblAnonId").textContent = tracker.anonymousId;
+      document.getElementById("lblSessionId").textContent = tracker.sessionId;
+    }
+
+    function appendEventLog(stage, detailText, badgeClass = "pill-blue") {
+      const container = document.getElementById("eventLogList");
+      const item = document.createElement("div");
+      item.className = "log-item";
+      const timeStr = new Date().toLocaleTimeString("id-ID");
+      item.innerHTML = `
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
+          <span class="pill ${badgeClass}">${stage}</span>
+          <span style="color:var(--text-tertiary);font-size:0.72rem;">${timeStr}</span>
+        </div>
+        <div style="color:var(--text-secondary);font-size:0.78rem;">${detailText}</div>
+      `;
+      container.prepend(item);
+    }
+
+    tracker.onEvent((ev) => {
+      appendEventLog(
+        ev.recorded_stages.join(" -> "),
+        `anon_id: ${ev.anonymous_id.slice(0, 12)}... | path: ${ev.page_path}`
+      );
+      refreshDashboard();
+    });
+
+    function switchTab(tabName) {
+      const isDash = tabName === "dashboard";
+      localStorage.setItem("siap_active_tab", tabName);
+      document.getElementById("viewDashboard").classList.toggle("active", isDash);
+      document.getElementById("viewPortal").classList.toggle("active", !isDash);
+      document.getElementById("tabBtnDashboard").classList.toggle("active", isDash);
+      document.getElementById("tabBtnPortal").classList.toggle("active", !isDash);
+      document.getElementById("tabBtnDashboard").setAttribute("aria-selected", isDash ? "true" : "false");
+      document.getElementById("tabBtnPortal").setAttribute("aria-selected", !isDash ? "true" : "false");
+
+      if (isDash) {
+        refreshDashboard();
+      } else {
+        loadRecentUsers();
+      }
+    }
+
+    async function handleSimulatedPageVisit() {
+      // Jika calon siswa saat ini sudah pernah berkunjung, buat identitas baru agar pengunjung unik bertambah
+      if (tracker.sentStages.has("page_visit")) {
+        tracker.resetIdentity();
+        updateIdentityLabels();
+        document.getElementById("siswaRegisterForm").reset();
+      }
+      await tracker.trackStage("page_visit", { pagePath: "/", force: true });
+      document.getElementById("formStageIndicator").textContent = "Tahap 1: page_visit Tercatat (+1 Siswa)";
+      await refreshDashboard();
+    }
+
+    async function handleSimulatedClickRegister() {
+      // Jika calon siswa saat ini sudah pernah klik registrasi, buat identitas baru
+      if (tracker.sentStages.has("click_register")) {
+        tracker.resetIdentity();
+        updateIdentityLabels();
+        document.getElementById("siswaRegisterForm").reset();
+      }
+      await tracker.trackStage("click_register", { pagePath: "/register", force: true });
+      document.getElementById("formStageIndicator").textContent = "Tahap 2: click_register Tercatat";
+      document.getElementById("inputNama").focus();
+      await refreshDashboard();
+    }
+
+    async function simulateBatchVisitors(count = 5) {
+      const indicator = document.getElementById("formStageIndicator");
+      indicator.textContent = `Menjalankan simulasi ${count} calon siswa baru...`;
+      for (let i = 0; i < count; i++) {
+        tracker.resetIdentity();
+        await tracker.trackStage("page_visit", { pagePath: "/", force: true });
+        // Mayoritas lanjut klik registrasi
+        if (Math.random() > 0.25) {
+          await tracker.trackStage("click_register", { pagePath: "/register", force: true });
+          if (Math.random() > 0.35) {
+            await tracker.trackStage("start_registration", { pagePath: "/register", force: true });
+          }
+        }
+      }
+      updateIdentityLabels();
+      indicator.textContent = `Simulasi ${count} Siswa Selesai (+Pengunjung Unik Bertambah)`;
+      await refreshDashboard();
+    }
+
+    async function handleFirstFormInput() {
+      if (!tracker.sentStages.has("start_registration")) {
+        await tracker.trackStartRegistration("/register");
+        document.getElementById("formStageIndicator").textContent = "Tahap 3: start_registration Tercatat";
+      }
+    }
+
+    async function handleRegisterSubmit(event) {
+      event.preventDefault();
+      const alertBox = document.getElementById("registerAlert");
+      alertBox.className = "alert-msg";
+
+      const payload = tracker.getIdentityPayload({
+        nama: document.getElementById("inputNama").value,
+        email: document.getElementById("inputEmail").value,
+        password: document.getElementById("inputPassword").value,
+      });
+
+      const res = await fetch("/api/v1/auth/register", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      const body = await res.json();
+      if (!res.ok) {
+        const errInfo = body.detail || {};
+        alertBox.className = "alert-msg alert-error";
+        alertBox.textContent = `Gagal Validasi (${errInfo.error_type || "error"}): ${errInfo.message || "Data tidak valid"}`;
+        appendEventLog(
+          `registration_error (${errInfo.error_type})`,
+          errInfo.message || "Validasi FR-01 menolak input",
+          "pill-rose"
+        );
+      } else {
+        alertBox.className = "alert-msg alert-success";
+        alertBox.textContent = `${body.message} (users.id: ${body.user_id.slice(0, 8)}... terhubung ke anonymous_id)`;
+        document.getElementById("formStageIndicator").textContent = "Tahap 4: account_created Selesai";
+        appendEventLog(
+          "account_created",
+          `users.id=${body.user_id.slice(0, 8)}... <-> anon=${body.anonymous_id.slice(0, 8)}...`,
+          "pill-green"
+        );
+        document.getElementById("siswaRegisterForm").reset();
+        // Siapkan identitas baru untuk pengujian calon siswa selanjutnya
+        tracker.resetIdentity();
+        updateIdentityLabels();
+      }
+      await refreshDashboard();
+      await loadRecentUsers();
+    }
+
+    function startNewVisitorSession() {
+      tracker.resetIdentity();
+      updateIdentityLabels();
+      document.getElementById("siswaRegisterForm").reset();
+      document.getElementById("registerAlert").className = "alert-msg";
+      document.getElementById("formStageIndicator").textContent = "Calon Pengguna Baru Siap";
+      appendEventLog("session_reset", `Calon pengguna baru: ${tracker.anonymousId.slice(0, 12)}...`, "pill-amber");
+    }
+
+    async function resetDemoSeed() {
+      await fetch("/api/v1/admin/funnel/seed", { method: "POST" });
+      await refreshDashboard();
+      await loadRecentUsers();
+    }
+
+    async function loadRecentUsers() {
+      const res = await fetch("/api/v1/admin/users");
+      const users = await res.json();
+      const tbody = document.getElementById("recentUsersTableBody");
+      tbody.innerHTML = users
+        .slice(0, 6)
+        .map(
+          (u) => `
+        <tr>
+          <td><strong>${u.nama}</strong></td>
+          <td style="color:var(--text-secondary);">${u.email}</td>
+          <td><code style="color:var(--primary);">${u.anonymous_id.slice(0, 16)}...</code></td>
+        </tr>
+      `
+        )
+        .join("");
+    }
+
+    async function refreshDashboard() {
+      const windowVal = document.getElementById("filterWindow").value;
+      const deviceVal = document.getElementById("filterDevice").value;
+      const qs = new URLSearchParams({ rentang_waktu: windowVal });
+      if (deviceVal) qs.set("device_type", deviceVal);
+
+      const res = await fetch(`/api/v1/admin/funnel?${qs.toString()}`);
+      const data = await res.json();
+
+      document.getElementById("kpiVisitors").textContent = data.kpi.total_visitors.toLocaleString("id-ID");
+      document.getElementById("kpiAccounts").textContent = data.kpi.total_accounts_created.toLocaleString("id-ID");
+      document.getElementById("kpiConversion").textContent = `${data.kpi.overall_conversion_rate}%`;
+      document.getElementById("kpiMedianTtc").textContent =
+        data.kpi.median_time_to_convert_seconds != null
+          ? `${data.kpi.median_time_to_convert_seconds}s`
+          : "-";
+      document.getElementById("kpiP90Ttc").textContent =
+        data.kpi.p90_time_to_convert_seconds != null
+          ? `Median (P50) | P90: ${data.kpi.p90_time_to_convert_seconds}s`
+          : "Belum ada konversi";
+
+      const stagesContainer = document.getElementById("funnelStagesContainer");
+      stagesContainer.innerHTML = data.stages
+        .map((st) => {
+          const dropBadge =
+            st.step > 1
+              ? `<span class="pill pill-rose">Drop-off: -${st.drop_off_users} (${st.drop_off_rate}%)</span>`
+              : `<span class="pill pill-blue">Titik Masuk (100%)</span>`;
+          return `
+            <div class="funnel-stage-row">
+              <div class="stage-top">
+                <div class="stage-name">
+                  <span class="step-badge">Tahap ${st.step}</span>
+                  <span>${st.label}</span>
+                  <code style="color:var(--text-tertiary);font-size:0.75rem;">(${st.stage})</code>
+                </div>
+                <div class="stage-stats">
+                  <span class="pill pill-green">Step: ${st.step_conversion_rate}%</span>
+                  ${dropBadge}
+                </div>
+              </div>
+              <div class="bar-track">
+                <div class="bar-fill" style="width: ${Math.max(st.overall_conversion_rate, 8)}%;">
+                  ${st.unique_users} pengguna unik (${st.overall_conversion_rate}% dari total)
+                </div>
+              </div>
+            </div>
+          `;
+        })
+        .join("");
+
+      const attr = data.drop_off_attribution;
+      document.getElementById("badgeTotalStep3Drop").textContent = `${attr.total_step3_drop_off} Gugur`;
+      const totalDrop = Math.max(attr.total_step3_drop_off, 1);
+      const dupCount = attr.error_breakdown.duplicate_email || 0;
+      const valCount = attr.error_breakdown.validation_failed || 0;
+
+      document.getElementById("attributionTableBody").innerHTML = `
+        <tr>
+          <td><strong>Form Abandonment</strong> (Menutup halaman sebelum submit)</td>
+          <td>${attr.form_abandonment_users} siswa</td>
+          <td><span class="pill pill-amber">${((attr.form_abandonment_users / totalDrop) * 100).toFixed(1)}%</span></td>
+        </tr>
+        <tr>
+          <td><strong>Gagal Validasi: Email Duplikat</strong> (<code>duplicate_email</code> FR-01)</td>
+          <td>${dupCount} siswa</td>
+          <td><span class="pill pill-rose">${((dupCount / totalDrop) * 100).toFixed(1)}%</span></td>
+        </tr>
+        <tr>
+          <td><strong>Gagal Validasi: Format Input / Password</strong> (<code>validation_failed</code>)</td>
+          <td>${valCount} siswa</td>
+          <td><span class="pill pill-rose">${((valCount / totalDrop) * 100).toFixed(1)}%</span></td>
+        </tr>
+      `;
+
+      document.getElementById("deviceTableBody").innerHTML = data.segment_by_device
+        .map(
+          (seg) => `
+        <tr>
+          <td style="text-transform:capitalize;"><strong>${seg.device_type}</strong></td>
+          <td>${seg.visitors}</td>
+          <td>${seg.accounts_created}</td>
+          <td><span class="pill pill-green">${seg.overall_conversion_rate}%</span></td>
+        </tr>
+      `
+        )
+        .join("");
+    }
+
+    function formatStageBadge(stage) {
+      switch (stage) {
+        case "page_visit":
+          return '<span class="pill pill-blue">1. page_visit</span>';
+        case "click_register":
+          return '<span class="pill pill-blue">2. click_register</span>';
+        case "start_registration":
+          return '<span class="pill pill-amber">3. start_registration</span>';
+        case "account_created":
+          return '<span class="pill pill-green">4. account_created</span>';
+        case "registration_error":
+          return '<span class="pill pill-rose">Gagal Registrasi</span>';
+        default:
+          return `<span class="pill pill-secondary">${stage}</span>`;
+      }
+    }
+
+    async function loadRecentActivities() {
+      try {
+        const res = await fetch("/api/v1/admin/activities/recent?limit=30");
+        const activities = await res.json();
+        const tbody = document.getElementById("realtimeActivityTableBody");
+        if (!tbody) return;
+        if (!activities || activities.length === 0) {
+          tbody.innerHTML = '<tr><td colspan="6" style="text-align:center;color:var(--text-tertiary);padding:20px;">Belum ada aktivitas tercatat.</td></tr>';
+          return;
+        }
+        tbody.innerHTML = activities
+          .map((a) => {
+            const timeStr = new Date(a.occurred_at).toLocaleTimeString("id-ID");
+            const errBadge = a.error_type
+              ? `<span class="pill pill-rose" style="font-size:0.7rem;margin-left:6px;">${a.error_type}</span>`
+              : "";
+            const detailText = a.siswa_id
+              ? `Akun terbentuk (users.id: ${a.siswa_id.slice(0, 8)}...)`
+              : (a.error_type ? `Validasi gagal (${a.error_type})` : `Kunjungan di ${a.page_path}`);
+            return `
+              <tr>
+                <td style="color:var(--text-secondary);font-size:0.76rem;">${timeStr}</td>
+                <td>${formatStageBadge(a.stage)}</td>
+                <td><code style="color:var(--primary);">${a.anonymous_id.slice(0, 16)}...</code></td>
+                <td style="text-transform:capitalize;">${a.device_type}</td>
+                <td><code>${a.page_path}</code></td>
+                <td>${detailText} ${errBadge}</td>
+              </tr>
+            `;
+          })
+          .join("");
+      } catch (err) {
+        console.error("Gagal memuat log aktivitas awal:", err);
+      }
+    }
+
+    function prependRealtimeActivityRow(msg) {
+      const tbody = document.getElementById("realtimeActivityTableBody");
+      if (!tbody) return;
+      const d = msg.data || {};
+      const timeStr = new Date(msg.timestamp || new Date()).toLocaleTimeString("id-ID");
+      const row = document.createElement("tr");
+      row.style.animation = "fadeInRow 0.3s ease";
+
+      const errBadge = d.error_type
+        ? `<span class="pill pill-rose" style="font-size:0.7rem;margin-left:6px;">${d.error_type}</span>`
+        : "";
+      let detailText = "Aktivitas tercatat";
+      if (d.user_id) {
+        detailText = `Akun terbentuk: ${d.nama || "Siswa"} (${d.email || "-"})`;
+      } else if (d.error_type) {
+        detailText = d.message || `Gagal validasi: ${d.error_type}`;
+      } else if (d.stage) {
+        detailText = `Tahap ${d.stage} berhasil dicatat`;
+      }
+
+      row.innerHTML = `
+        <td style="color:var(--text-secondary);font-size:0.76rem;">${timeStr}</td>
+        <td>${formatStageBadge(d.stage || msg.type)}</td>
+        <td><code style="color:var(--primary);">${(d.anonymous_id || "-").slice(0, 16)}...</code></td>
+        <td style="text-transform:capitalize;">${d.device_type || "desktop"}</td>
+        <td><code>${d.page_path || "/"}</code></td>
+        <td>${detailText} ${errBadge}</td>
+      `;
+      if (tbody.children.length > 25) {
+        tbody.removeChild(tbody.lastChild);
+      }
+      tbody.prepend(row);
+    }
+
+    function initRealtimeStream() {
+      const badge = document.getElementById("streamConnectionBadge");
+      if (!window.EventSource) {
+        if (badge) {
+          badge.className = "pill pill-amber";
+          badge.textContent = "SSE Tidak Didukung Browser";
+        }
+        return;
+      }
+
+      const evtSource = new EventSource("/api/v1/admin/events/stream");
+
+      evtSource.onopen = () => {
+        if (badge) {
+          badge.className = "pill pill-green";
+          badge.innerHTML = '<span class="live-pulse-dot"></span> Live SSE Terhubung';
+        }
+      };
+
+      evtSource.addEventListener("message", (e) => {
+        try {
+          const msg = JSON.parse(e.data);
+          prependRealtimeActivityRow(msg);
+          refreshDashboard();
+          if (msg.type === "account_created") {
+            loadRecentUsers();
+          }
+        } catch (err) {
+          console.error("Gagal parse event SSE:", err);
+        }
+      });
+
+      evtSource.onerror = () => {
+        if (badge) {
+          badge.className = "pill pill-amber";
+          badge.textContent = "Menghubungkan ulang...";
+        }
+      };
+    }
+
+    updateIdentityLabels();
+    refreshDashboard();
+    loadRecentUsers();
+    loadRecentActivities();
+    initRealtimeStream();
+    const savedTab = localStorage.getItem("siap_active_tab") || "dashboard";
+    switchTab(savedTab);
+  </script>
+</body>
+</html>
