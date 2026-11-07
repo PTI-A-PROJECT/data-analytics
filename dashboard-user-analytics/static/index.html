@@ -1028,12 +1028,15 @@
             </p>
             <div style="display:flex;gap:10px;flex-wrap:wrap;">
               <button type="button" class="btn btn-secondary" onclick="handleSimulatedPageVisit()">
-                1. Kunjungan Siswa Baru (+1 Pengunjung)
+                1. Kunjungan Siswa Baru (+1 Web Visit)
               </button>
               <button type="button" class="btn btn-emerald" onclick="handleSimulatedClickRegister()">
-                2. Klik Tombol Daftar (+1 Klik Registrasi)
+                2. Klik Tombol Daftar (Visit + Klik Daftar)
               </button>
-              <button type="button" class="btn btn-secondary" onclick="simulateBatchVisitors(5)" title="Simulasikan 5 siswa acak secara cepat">
+              <button type="button" class="btn btn-secondary" onclick="handleSimulatedStartRegistration()">
+                3. Mulai Registrasi (Visit + Klik + Mulai Isi)
+              </button>
+              <button type="button" class="btn btn-secondary" onclick="simulateBatchVisitors(5)" title="Simulasikan 5 siswa secara lengkap">
                 + Simulasikan 5 Siswa Sekaligus
               </button>
               <button type="button" class="btn btn-secondary" onclick="startNewVisitorSession()">
@@ -1180,9 +1183,19 @@
       endpoint: "/api/v1/onboarding/step",
     });
 
+    let isFormSessionActive = false;
+    let formInputPromise = null;
+
     function updateIdentityLabels() {
       document.getElementById("lblAnonId").textContent = tracker.anonymousId;
       document.getElementById("lblSessionId").textContent = tracker.sessionId;
+    }
+
+    function getBadgeClassForStage(stage) {
+      if (stage === "account_created") return "pill-green";
+      if (stage === "start_registration") return "pill-amber";
+      if (stage === "registration_error") return "pill-rose";
+      return "pill-blue";
     }
 
     function appendEventLog(stage, detailText, badgeClass = "pill-blue") {
@@ -1201,10 +1214,21 @@
     }
 
     tracker.onEvent((ev) => {
-      appendEventLog(
-        ev.recorded_stages.join(" -> "),
-        `anon_id: ${ev.anonymous_id.slice(0, 12)}... | path: ${ev.page_path}`
-      );
+      const stages =
+        Array.isArray(ev.recorded_stages) && ev.recorded_stages.length > 0
+          ? ev.recorded_stages
+          : [ev.stage];
+      stages.forEach((stg) => {
+        const pathForStage =
+          stg === "page_visit" && ev.stage !== "page_visit"
+            ? "/"
+            : ev.page_path;
+        appendEventLog(
+          stg,
+          `anon_id: ${ev.anonymous_id.slice(0, 12)}... | path: ${pathForStage}`,
+          getBadgeClassForStage(stg)
+        );
+      });
       refreshDashboard();
     });
 
@@ -1220,32 +1244,46 @@
 
       if (isDash) {
         refreshDashboard();
+        loadRecentActivities();
       } else {
         loadRecentUsers();
       }
     }
 
     async function handleSimulatedPageVisit() {
-      // Jika calon siswa saat ini sudah pernah berkunjung, buat identitas baru agar pengunjung unik bertambah
-      if (tracker.sentStages.has("page_visit")) {
-        tracker.resetIdentity();
-        updateIdentityLabels();
-        document.getElementById("siswaRegisterForm").reset();
-      }
+      isFormSessionActive = false;
+      formInputPromise = null;
+      tracker.resetIdentity();
+      updateIdentityLabels();
+      document.getElementById("siswaRegisterForm").reset();
       await tracker.trackStage("page_visit", { pagePath: "/", force: true });
-      document.getElementById("formStageIndicator").textContent = "Tahap 1: page_visit Tercatat (+1 Siswa)";
+      document.getElementById("formStageIndicator").textContent =
+        "Tahap 1 Tercatat: page_visit (+1 Pengunjung)";
       await refreshDashboard();
     }
 
     async function handleSimulatedClickRegister() {
-      // Jika calon siswa saat ini sudah pernah klik registrasi, buat identitas baru
-      if (tracker.sentStages.has("click_register")) {
-        tracker.resetIdentity();
-        updateIdentityLabels();
-        document.getElementById("siswaRegisterForm").reset();
-      }
+      isFormSessionActive = false;
+      formInputPromise = null;
+      tracker.resetIdentity();
+      updateIdentityLabels();
+      document.getElementById("siswaRegisterForm").reset();
       await tracker.trackStage("click_register", { pagePath: "/register", force: true });
-      document.getElementById("formStageIndicator").textContent = "Tahap 2: click_register Tercatat";
+      document.getElementById("formStageIndicator").textContent =
+        "Tahap 1 & 2 Tercatat: page_visit -> click_register";
+      document.getElementById("inputNama").focus();
+      await refreshDashboard();
+    }
+
+    async function handleSimulatedStartRegistration() {
+      isFormSessionActive = false;
+      formInputPromise = null;
+      tracker.resetIdentity();
+      updateIdentityLabels();
+      document.getElementById("siswaRegisterForm").reset();
+      await tracker.trackStage("start_registration", { pagePath: "/register", force: true });
+      document.getElementById("formStageIndicator").textContent =
+        "Tahap 1, 2 & 3 Tercatat: page_visit -> click_register -> start_registration";
       document.getElementById("inputNama").focus();
       await refreshDashboard();
     }
@@ -1253,26 +1291,68 @@
     async function simulateBatchVisitors(count = 5) {
       const indicator = document.getElementById("formStageIndicator");
       indicator.textContent = `Menjalankan simulasi ${count} calon siswa baru...`;
+      const batchProfiles = [
+        "account_created",
+        "account_created",
+        "start_registration",
+        "click_register",
+        "page_visit",
+      ];
       for (let i = 0; i < count; i++) {
         tracker.resetIdentity();
-        await tracker.trackStage("page_visit", { pagePath: "/", force: true });
-        // Mayoritas lanjut klik registrasi
-        if (Math.random() > 0.25) {
-          await tracker.trackStage("click_register", { pagePath: "/register", force: true });
-          if (Math.random() > 0.35) {
-            await tracker.trackStage("start_registration", { pagePath: "/register", force: true });
+        const targetStage = batchProfiles[i % batchProfiles.length];
+        if (targetStage === "account_created") {
+          const randSuffix = `${Date.now().toString().slice(-5)}${i}`;
+          const payload = tracker.getIdentityPayload({
+            nama: `Siswa Simulasi ${randSuffix}`,
+            email: `simulasi.${randSuffix}@sman-osn.sch.id`,
+            password: "passwordosn2026",
+          });
+          const res = await fetch("/api/v1/auth/register", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload),
+          });
+          const body = await res.json();
+          if (res.ok && Array.isArray(body.recorded_stages)) {
+            body.recorded_stages.forEach((stg) => {
+              appendEventLog(
+                stg,
+                stg === "account_created"
+                  ? `users.id=${body.user_id.slice(0, 8)}... <-> anon=${body.anonymous_id.slice(0, 8)}...`
+                  : `anon_id: ${body.anonymous_id.slice(0, 12)}... | path: ${stg === "page_visit" ? "/" : "/register"}`,
+                getBadgeClassForStage(stg)
+              );
+            });
           }
+        } else if (targetStage === "start_registration") {
+          await tracker.trackStage("start_registration", { pagePath: "/register", force: true });
+        } else if (targetStage === "click_register") {
+          await tracker.trackStage("click_register", { pagePath: "/register", force: true });
+        } else {
+          await tracker.trackStage("page_visit", { pagePath: "/", force: true });
         }
       }
+      isFormSessionActive = false;
+      formInputPromise = null;
+      tracker.resetIdentity();
       updateIdentityLabels();
-      indicator.textContent = `Simulasi ${count} Siswa Selesai (+Pengunjung Unik Bertambah)`;
+      indicator.textContent = `Simulasi ${count} Siswa Selesai (Semua Tahap Prasyarat Tercatat)`;
       await refreshDashboard();
+      await loadRecentUsers();
     }
 
     async function handleFirstFormInput() {
-      if (!tracker.sentStages.has("start_registration")) {
-        await tracker.trackStartRegistration("/register");
-        document.getElementById("formStageIndicator").textContent = "Tahap 3: start_registration Tercatat";
+      if (!isFormSessionActive) {
+        isFormSessionActive = true;
+        if (tracker.sentStages.size > 0) {
+          tracker.resetIdentity();
+          updateIdentityLabels();
+        }
+        formInputPromise = tracker.trackStartRegistration("/register");
+        await formInputPromise;
+        document.getElementById("formStageIndicator").textContent =
+          "Tahap 1, 2 & 3 Tercatat: page_visit -> click_register -> start_registration";
       }
     }
 
@@ -1280,6 +1360,15 @@
       event.preventDefault();
       const alertBox = document.getElementById("registerAlert");
       alertBox.className = "alert-msg";
+
+      if (formInputPromise) {
+        try {
+          await formInputPromise;
+        } catch (_) {}
+      } else if (!isFormSessionActive && tracker.sentStages.size > 0) {
+        tracker.resetIdentity();
+        updateIdentityLabels();
+      }
 
       const payload = tracker.getIdentityPayload({
         nama: document.getElementById("inputNama").value,
@@ -1298,22 +1387,50 @@
         const errInfo = body.detail || {};
         alertBox.className = "alert-msg alert-error";
         alertBox.textContent = `Gagal Validasi (${errInfo.error_type || "error"}): ${errInfo.message || "Data tidak valid"}`;
-        appendEventLog(
-          `registration_error (${errInfo.error_type})`,
-          errInfo.message || "Validasi FR-01 menolak input",
-          "pill-rose"
-        );
+        const errStages = Array.isArray(errInfo.recorded_stages)
+          ? errInfo.recorded_stages
+          : ["registration_error"];
+        errStages.forEach((stg) => {
+          if (stg === "registration_error") {
+            appendEventLog(
+              `registration_error (${errInfo.error_type})`,
+              errInfo.message || "Validasi FR-01 menolak input",
+              "pill-rose"
+            );
+          } else {
+            appendEventLog(
+              stg,
+              `anon_id: ${payload.anonymous_id.slice(0, 12)}... | path: ${stg === "page_visit" ? "/" : "/register"}`,
+              getBadgeClassForStage(stg)
+            );
+          }
+        });
       } else {
         alertBox.className = "alert-msg alert-success";
         alertBox.textContent = `${body.message} (users.id: ${body.user_id.slice(0, 8)}... terhubung ke anonymous_id)`;
-        document.getElementById("formStageIndicator").textContent = "Tahap 4: account_created Selesai";
-        appendEventLog(
-          "account_created",
-          `users.id=${body.user_id.slice(0, 8)}... <-> anon=${body.anonymous_id.slice(0, 8)}...`,
-          "pill-green"
-        );
+        document.getElementById("formStageIndicator").textContent =
+          "Tahap 1 s/d 4 Selesai: page_visit -> click_register -> start_registration -> account_created";
+        const recordedStages = Array.isArray(body.recorded_stages)
+          ? body.recorded_stages
+          : ["account_created"];
+        recordedStages.forEach((stg) => {
+          if (stg === "account_created") {
+            appendEventLog(
+              "account_created",
+              `users.id=${body.user_id.slice(0, 8)}... <-> anon=${body.anonymous_id.slice(0, 8)}...`,
+              "pill-green"
+            );
+          } else {
+            appendEventLog(
+              stg,
+              `anon_id: ${body.anonymous_id.slice(0, 12)}... | path: ${stg === "page_visit" ? "/" : "/register"}`,
+              getBadgeClassForStage(stg)
+            );
+          }
+        });
         document.getElementById("siswaRegisterForm").reset();
-        // Siapkan identitas baru untuk pengujian calon siswa selanjutnya
+        isFormSessionActive = false;
+        formInputPromise = null;
         tracker.resetIdentity();
         updateIdentityLabels();
       }
@@ -1322,6 +1439,8 @@
     }
 
     function startNewVisitorSession() {
+      isFormSessionActive = false;
+      formInputPromise = null;
       tracker.resetIdentity();
       updateIdentityLabels();
       document.getElementById("siswaRegisterForm").reset();
@@ -1334,6 +1453,7 @@
       await fetch("/api/v1/admin/funnel/seed", { method: "POST" });
       await refreshDashboard();
       await loadRecentUsers();
+      await loadRecentActivities();
     }
 
     async function loadRecentUsers() {
@@ -1460,9 +1580,35 @@
       }
     }
 
+    function describeStageActivity(stage, item) {
+      const uid = item.siswa_id || item.user_id;
+      if (stage === "page_visit") {
+        return `Tahap 1: Mengunjungi halaman website (${item.page_path || "/"})`;
+      }
+      if (stage === "click_register") {
+        return "Tahap 2: Klik tombol pendaftaran (setelah kunjungan halaman)";
+      }
+      if (stage === "start_registration") {
+        return "Tahap 3: Memulai registrasi (setelah kunjungan & klik pendaftaran)";
+      }
+      if (stage === "account_created") {
+        if (item.nama) {
+          return `Tahap 4: Akun berhasil dibuat — ${item.nama} (${item.email || "-"})`;
+        }
+        if (uid) {
+          return `Tahap 4: Akun berhasil dibuat (users.id: ${uid.slice(0, 8)}...)`;
+        }
+        return "Tahap 4: Akun siswa berhasil dibuat";
+      }
+      if (stage === "registration_error") {
+        return item.message || `Validasi gagal (${item.error_type || "error"})`;
+      }
+      return `Aktivitas ${stage} tercatat`;
+    }
+
     async function loadRecentActivities() {
       try {
-        const res = await fetch("/api/v1/admin/activities/recent?limit=30");
+        const res = await fetch("/api/v1/admin/activities/recent?limit=40");
         const activities = await res.json();
         const tbody = document.getElementById("realtimeActivityTableBody");
         if (!tbody) return;
@@ -1476,9 +1622,7 @@
             const errBadge = a.error_type
               ? `<span class="pill pill-rose" style="font-size:0.7rem;margin-left:6px;">${a.error_type}</span>`
               : "";
-            const detailText = a.siswa_id
-              ? `Akun terbentuk (users.id: ${a.siswa_id.slice(0, 8)}...)`
-              : (a.error_type ? `Validasi gagal (${a.error_type})` : `Kunjungan di ${a.page_path}`);
+            const detailText = describeStageActivity(a.stage, a);
             return `
               <tr>
                 <td style="color:var(--text-secondary);font-size:0.76rem;">${timeStr}</td>
@@ -1500,6 +1644,7 @@
       const tbody = document.getElementById("realtimeActivityTableBody");
       if (!tbody) return;
       const d = msg.data || {};
+      const stageName = d.stage || msg.type;
       const timeStr = new Date(msg.timestamp || new Date()).toLocaleTimeString("id-ID");
       const row = document.createElement("tr");
       row.style.animation = "fadeInRow 0.3s ease";
@@ -1507,24 +1652,17 @@
       const errBadge = d.error_type
         ? `<span class="pill pill-rose" style="font-size:0.7rem;margin-left:6px;">${d.error_type}</span>`
         : "";
-      let detailText = "Aktivitas tercatat";
-      if (d.user_id) {
-        detailText = `Akun terbentuk: ${d.nama || "Siswa"} (${d.email || "-"})`;
-      } else if (d.error_type) {
-        detailText = d.message || `Gagal validasi: ${d.error_type}`;
-      } else if (d.stage) {
-        detailText = `Tahap ${d.stage} berhasil dicatat`;
-      }
+      const detailText = describeStageActivity(stageName, d);
 
       row.innerHTML = `
         <td style="color:var(--text-secondary);font-size:0.76rem;">${timeStr}</td>
-        <td>${formatStageBadge(d.stage || msg.type)}</td>
+        <td>${formatStageBadge(stageName)}</td>
         <td><code style="color:var(--primary);">${(d.anonymous_id || "-").slice(0, 16)}...</code></td>
         <td style="text-transform:capitalize;">${d.device_type || "desktop"}</td>
-        <td><code>${d.page_path || "/"}</code></td>
+        <td><code>${d.page_path || (stageName === "page_visit" ? "/" : "/register")}</code></td>
         <td>${detailText} ${errBadge}</td>
       `;
-      if (tbody.children.length > 25) {
+      if (tbody.children.length > 60) {
         tbody.removeChild(tbody.lastChild);
       }
       tbody.prepend(row);
@@ -1552,6 +1690,12 @@
       evtSource.addEventListener("message", (e) => {
         try {
           const msg = JSON.parse(e.data);
+          if (msg.type === "data_reseeded") {
+            loadRecentActivities();
+            refreshDashboard();
+            loadRecentUsers();
+            return;
+          }
           prependRealtimeActivityRow(msg);
           refreshDashboard();
           if (msg.type === "account_created") {

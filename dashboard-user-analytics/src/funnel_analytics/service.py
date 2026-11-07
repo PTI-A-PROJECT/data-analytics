@@ -55,23 +55,42 @@ EMAIL_REGEX = re.compile(r"^[^@\s]+@[^@\s]+\.[^@\s]+$")
 
 
 class RegistrationError(Exception):
-    def __init__(self, message: str, error_type: RegistrationErrorType) -> None:
+    def __init__(
+        self,
+        message: str,
+        error_type: RegistrationErrorType,
+        recorded_stages: list[FunnelStage] | None = None,
+    ) -> None:
         super().__init__(message)
         self.message = message
         self.error_type = error_type
+        self.recorded_stages: list[FunnelStage] = recorded_stages or []
 
 
 class DuplicateEmailError(RegistrationError):
-    def __init__(self, email: str) -> None:
+    def __init__(
+        self,
+        email: str,
+        recorded_stages: list[FunnelStage] | None = None,
+    ) -> None:
         super().__init__(
             f"Email '{email}' sudah terdaftar pada sistem SIAP OSN (FR-01).",
             RegistrationErrorType.DUPLICATE_EMAIL,
+            recorded_stages=recorded_stages,
         )
 
 
 class RegistrationValidationError(RegistrationError):
-    def __init__(self, message: str) -> None:
-        super().__init__(message, RegistrationErrorType.VALIDATION_FAILED)
+    def __init__(
+        self,
+        message: str,
+        recorded_stages: list[FunnelStage] | None = None,
+    ) -> None:
+        super().__init__(
+            message,
+            RegistrationErrorType.VALIDATION_FAILED,
+            recorded_stages=recorded_stages,
+        )
 
 
 def ensure_utc(dt: datetime | None) -> datetime:
@@ -151,32 +170,55 @@ def record_funnel_event(
     occurred_at = ensure_utc(payload.occurred_at)
     device_type = detect_device_type(user_agent, payload.device_type)
 
-    if payload.auto_backfill:
-        existing_stages = set(
-            session.scalars(
-                select(FunnelEvent.stage).where(
-                    FunnelEvent.anonymous_id == payload.anonymous_id
-                )
-            ).all()
-        )
-        required_chain = _prerequisites_for_stage(payload.stage, payload.page_path)
-        stages_to_write: list[FunnelStage] = []
-        for candidate in required_chain:
-            if candidate == payload.stage or candidate not in existing_stages:
-                stages_to_write.append(candidate)
-    else:
-        stages_to_write = [payload.stage]
+    existing_events = list(
+        session.scalars(
+            select(FunnelEvent).where(
+                FunnelEvent.anonymous_id == payload.anonymous_id
+            )
+        ).all()
+    )
+    existing_stages = {ev.stage for ev in existing_events}
+
+    if existing_events:
+        latest_existing = max(ensure_utc(ev.occurred_at) for ev in existing_events)
+        if occurred_at <= latest_existing:
+            occurred_at = latest_existing + timedelta(milliseconds=10)
+
+    if payload.siswa_id:
+        for ev in existing_events:
+            if ev.siswa_id is None:
+                ev.siswa_id = payload.siswa_id
+
+    required_chain = _prerequisites_for_stage(payload.stage, payload.page_path)
+    stages_to_write: list[FunnelStage] = []
+    for candidate in required_chain:
+        if candidate == FunnelStage.REGISTRATION_ERROR:
+            stages_to_write.append(candidate)
+        elif candidate not in existing_stages:
+            stages_to_write.append(candidate)
 
     recorded: list[FunnelStage] = []
     for idx, stg in enumerate(stages_to_write):
-        event_time = occurred_at + timedelta(milliseconds=idx)
+        event_time = occurred_at + timedelta(milliseconds=idx * 10)
+        if stg == FunnelStage.PAGE_VISIT and payload.stage != FunnelStage.PAGE_VISIT:
+            stg_path = "/"
+        elif stg in (
+            FunnelStage.CLICK_REGISTER,
+            FunnelStage.START_REGISTRATION,
+            FunnelStage.ACCOUNT_CREATED,
+            FunnelStage.REGISTRATION_ERROR,
+        ) and payload.page_path == "/":
+            stg_path = "/register"
+        else:
+            stg_path = payload.page_path
+
         row = FunnelEvent(
             anonymous_id=payload.anonymous_id,
             session_id=payload.session_id,
-            siswa_id=payload.siswa_id if stg == FunnelStage.ACCOUNT_CREATED else None,
+            siswa_id=payload.siswa_id,
             sekolah_id=payload.sekolah_id,
             stage=stg,
-            page_path=payload.page_path,
+            page_path=stg_path,
             device_type=device_type,
             utm_source=payload.utm_source or "organik",
             referrer=payload.referrer,
@@ -193,6 +235,142 @@ def record_funnel_event(
         anonymous_id=payload.anonymous_id,
         session_id=payload.session_id,
     )
+
+
+def ensure_funnel_integrity(session: Session) -> int:
+    """Memastikan setiap pengguna di database memiliki urutan tahap prasyarat yang utuh:
+    - account_created wajib memiliki page_visit, click_register, start_registration, account_created
+    - start_registration / registration_error wajib memiliki page_visit, click_register, start_registration
+    - click_register wajib memiliki page_visit, click_register
+    Serta memperbaiki urutan waktu (occurred_at) secara kronologis.
+    """
+    all_events = list(session.scalars(select(FunnelEvent)).all())
+    by_anon: dict[str, list[FunnelEvent]] = defaultdict(list)
+    stitched_user_ids: set[str] = set()
+
+    for ev in all_events:
+        by_anon[ev.anonymous_id].append(ev)
+        if ev.siswa_id:
+            stitched_user_ids.add(ev.siswa_id)
+
+    fixed_count = 0
+
+    # Pastikan semua akun di tabel users memiliki jejak funnel_events lengkap
+    all_users = list(session.scalars(select(UserAccount)).all())
+    for user in all_users:
+        if user.id not in stitched_user_ids:
+            anon_id = f"auto-anon-{user.id[:12]}"
+            sess_id = f"auto-sess-{user.id[:12]}"
+            t_created = ensure_utc(user.created_at)
+            t_visit = t_created - timedelta(seconds=45)
+            t_click = t_created - timedelta(seconds=30)
+            t_start = t_created - timedelta(seconds=15)
+            for stg, t_ev, path in (
+                (FunnelStage.PAGE_VISIT, t_visit, "/"),
+                (FunnelStage.CLICK_REGISTER, t_click, "/register"),
+                (FunnelStage.START_REGISTRATION, t_start, "/register"),
+                (FunnelStage.ACCOUNT_CREATED, t_created, "/register"),
+            ):
+                new_ev = FunnelEvent(
+                    anonymous_id=anon_id,
+                    session_id=sess_id,
+                    siswa_id=user.id,
+                    stage=stg,
+                    page_path=path,
+                    device_type=DeviceType.DESKTOP,
+                    utm_source="organik",
+                    occurred_at=t_ev,
+                )
+                session.add(new_ev)
+                by_anon[anon_id].append(new_ev)
+                fixed_count += 1
+
+    # Periksa setiap anonymous_id agar seluruh prasyarat tahap lengkap & berurutan
+    for anon_id, evs in by_anon.items():
+        if not evs:
+            continue
+        stage_map: dict[FunnelStage, FunnelEvent] = {}
+        for ev in sorted(evs, key=lambda x: ensure_utc(x.occurred_at)):
+            if ev.stage not in stage_map:
+                stage_map[ev.stage] = ev
+
+        sample = evs[0]
+        siswa_id = next((e.siswa_id for e in evs if e.siswa_id), None)
+        if siswa_id:
+            for e in evs:
+                if e.siswa_id != siswa_id:
+                    e.siswa_id = siswa_id
+                    fixed_count += 1
+
+        if FunnelStage.ACCOUNT_CREATED in stage_map:
+            required = [
+                FunnelStage.PAGE_VISIT,
+                FunnelStage.CLICK_REGISTER,
+                FunnelStage.START_REGISTRATION,
+                FunnelStage.ACCOUNT_CREATED,
+            ]
+        elif (
+            FunnelStage.START_REGISTRATION in stage_map
+            or FunnelStage.REGISTRATION_ERROR in stage_map
+        ):
+            required = [
+                FunnelStage.PAGE_VISIT,
+                FunnelStage.CLICK_REGISTER,
+                FunnelStage.START_REGISTRATION,
+            ]
+        elif FunnelStage.CLICK_REGISTER in stage_map:
+            required = [
+                FunnelStage.PAGE_VISIT,
+                FunnelStage.CLICK_REGISTER,
+            ]
+        else:
+            required = [FunnelStage.PAGE_VISIT]
+
+        earliest_time = min(ensure_utc(e.occurred_at) for e in evs)
+
+        for idx, req_stage in enumerate(required):
+            if req_stage not in stage_map:
+                backfill_time = earliest_time - timedelta(seconds=(len(required) - idx) * 5)
+                new_ev = FunnelEvent(
+                    anonymous_id=anon_id,
+                    session_id=sample.session_id,
+                    siswa_id=siswa_id,
+                    sekolah_id=sample.sekolah_id,
+                    stage=req_stage,
+                    page_path="/" if req_stage == FunnelStage.PAGE_VISIT else "/register",
+                    device_type=sample.device_type,
+                    utm_source=sample.utm_source or "organik",
+                    referrer=sample.referrer,
+                    occurred_at=backfill_time,
+                )
+                session.add(new_ev)
+                stage_map[req_stage] = new_ev
+                fixed_count += 1
+
+        # Pastikan urutan waktu kronologis ketat antar tahap prasyarat
+        ordered_present = [stage_map[s] for s in required if s in stage_map]
+        times = sorted(ensure_utc(e.occurred_at) for e in ordered_present)
+        for idx, ev_obj in enumerate(ordered_present):
+            target_t = times[idx]
+            if idx > 0 and target_t <= ensure_utc(ordered_present[idx - 1].occurred_at):
+                target_t = ensure_utc(ordered_present[idx - 1].occurred_at) + timedelta(seconds=1)
+            if ensure_utc(ev_obj.occurred_at) != target_t:
+                ev_obj.occurred_at = target_t
+                fixed_count += 1
+
+        if (
+            FunnelStage.REGISTRATION_ERROR in stage_map
+            and FunnelStage.START_REGISTRATION in stage_map
+        ):
+            err_ev = stage_map[FunnelStage.REGISTRATION_ERROR]
+            start_t = ensure_utc(stage_map[FunnelStage.START_REGISTRATION].occurred_at)
+            if ensure_utc(err_ev.occurred_at) <= start_t:
+                err_ev.occurred_at = start_t + timedelta(seconds=1)
+                fixed_count += 1
+
+    if fixed_count > 0:
+        session.commit()
+    return fixed_count
 
 
 def register_student(
@@ -215,7 +393,7 @@ def register_student(
     password_raw = payload.password
 
     if not nama_clean or not email_clean or not password_raw:
-        record_funnel_event(
+        err_ingest = record_funnel_event(
             session,
             FunnelEventCreateRequest(
                 anonymous_id=payload.anonymous_id,
@@ -232,11 +410,12 @@ def register_student(
             user_agent=user_agent,
         )
         raise RegistrationValidationError(
-            "Nama, email, dan password wajib diisi sesuai ketentuan FR-01."
+            "Nama, email, dan password wajib diisi sesuai ketentuan FR-01.",
+            recorded_stages=err_ingest.recorded_stages,
         )
 
     if not EMAIL_REGEX.match(email_clean) or len(password_raw) < 8:
-        record_funnel_event(
+        err_ingest = record_funnel_event(
             session,
             FunnelEventCreateRequest(
                 anonymous_id=payload.anonymous_id,
@@ -253,14 +432,15 @@ def register_student(
             user_agent=user_agent,
         )
         raise RegistrationValidationError(
-            "Format email harus valid dan password minimal 8 karakter."
+            "Format email harus valid dan password minimal 8 karakter.",
+            recorded_stages=err_ingest.recorded_stages,
         )
 
     existing_user = session.scalar(
         select(UserAccount).where(func.lower(UserAccount.email) == email_clean)
     )
     if existing_user is not None:
-        record_funnel_event(
+        err_ingest = record_funnel_event(
             session,
             FunnelEventCreateRequest(
                 anonymous_id=payload.anonymous_id,
@@ -276,7 +456,10 @@ def register_student(
             ),
             user_agent=user_agent,
         )
-        raise DuplicateEmailError(email_clean)
+        raise DuplicateEmailError(
+            email_clean,
+            recorded_stages=err_ingest.recorded_stages,
+        )
 
     user_id = str(uuid.uuid4())
     password_hash = hashlib.sha256(password_raw.encode("utf-8")).hexdigest()
@@ -291,7 +474,7 @@ def register_student(
     session.add(new_user)
     session.flush()
 
-    record_funnel_event(
+    ingest_res = record_funnel_event(
         session,
         FunnelEventCreateRequest(
             anonymous_id=payload.anonymous_id,
@@ -316,6 +499,7 @@ def register_student(
         role="siswa",
         anonymous_id=payload.anonymous_id,
         message="Registrasi akun siswa SIAP OSN berhasil disimpan.",
+        recorded_stages=ingest_res.recorded_stages,
     )
 
 
@@ -341,7 +525,13 @@ def _compute_monotonic_users(
     dict[str, dict[FunnelStage, datetime]],
     dict[str, set[RegistrationErrorType]],
 ]:
-    """Menghitung himpunan `anonymous_id` monotonik ketat S1 >= S2 >= S3 >= S4."""
+    """Menghitung himpunan `anonymous_id` monotonik ketat S1 >= S2 >= S3 >= S4.
+
+    Menjamin aturan domain:
+    - Pengguna yang membuat akun (account_created) pasti tercatat di S1, S2, S3, S4.
+    - Pengguna yang memulai registrasi (start_registration / registration_error) pasti tercatat di S1, S2, S3.
+    - Pengguna yang klik pendaftaran (click_register) pasti tercatat di S1, S2.
+    """
     min_time_by_user: dict[str, dict[FunnelStage, datetime]] = defaultdict(dict)
     max_time_by_user: dict[str, dict[FunnelStage, datetime]] = defaultdict(dict)
     errors_by_user: dict[str, set[RegistrationErrorType]] = defaultdict(set)
@@ -357,19 +547,34 @@ def _compute_monotonic_users(
         if stg == FunnelStage.REGISTRATION_ERROR and ev.error_type is not None:
             errors_by_user[uid].add(ev.error_type)
 
-    eligible: dict[FunnelStage, set[str]] = {}
-    s1 = FunnelStage.PAGE_VISIT
-    eligible[s1] = {u for u, stages in min_time_by_user.items() if s1 in stages}
+    s4_users = {
+        u
+        for u, stages in min_time_by_user.items()
+        if FunnelStage.ACCOUNT_CREATED in stages
+    }
+    s3_users = s4_users | {
+        u
+        for u, stages in min_time_by_user.items()
+        if FunnelStage.START_REGISTRATION in stages
+        or FunnelStage.REGISTRATION_ERROR in stages
+    }
+    s2_users = s3_users | {
+        u
+        for u, stages in min_time_by_user.items()
+        if FunnelStage.CLICK_REGISTER in stages
+    }
+    s1_users = s2_users | {
+        u
+        for u, stages in min_time_by_user.items()
+        if FunnelStage.PAGE_VISIT in stages
+    }
 
-    prev_stage = s1
-    for current_stage in ORDERED_FUNNEL_STAGES[1:]:
-        current_set: set[str] = set()
-        for u in eligible[prev_stage]:
-            if current_stage in max_time_by_user[u]:
-                if max_time_by_user[u][current_stage] >= min_time_by_user[u][s1]:
-                    current_set.add(u)
-        eligible[current_stage] = current_set
-        prev_stage = current_stage
+    eligible: dict[FunnelStage, set[str]] = {
+        FunnelStage.PAGE_VISIT: s1_users,
+        FunnelStage.CLICK_REGISTER: s2_users,
+        FunnelStage.START_REGISTRATION: s3_users,
+        FunnelStage.ACCOUNT_CREATED: s4_users,
+    }
 
     return eligible, min_time_by_user, errors_by_user
 
@@ -407,8 +612,9 @@ def compute_funnel_dashboard(
 
     durations: list[float] = []
     for u in eligible[FunnelStage.ACCOUNT_CREATED]:
-        t_visit = min_time_by_user[u][FunnelStage.PAGE_VISIT]
-        t_created = min_time_by_user[u][FunnelStage.ACCOUNT_CREATED]
+        user_times = min_time_by_user[u]
+        t_visit = user_times.get(FunnelStage.PAGE_VISIT, min(user_times.values()))
+        t_created = user_times[FunnelStage.ACCOUNT_CREATED]
         delta_sec = max(0.0, (t_created - t_visit).total_seconds())
         durations.append(delta_sec)
     durations.sort()
@@ -559,26 +765,36 @@ def seed_demo_funnel_data(session: Session, reset_existing: bool = True) -> dict
         days_ago = (i % 25) + 1
         base_time = now - timedelta(days=days_ago, minutes=(i * 7) % 300)
 
+        uid_for_user = (
+            str(uuid.uuid5(uuid.NAMESPACE_DNS, f"siswa-{i}@siaposn.id"))
+            if i < 76
+            else None
+        )
+        t_visit = base_time
+        t_click = t_visit + timedelta(seconds=12 + (i % 15))
+        t_start = t_click + timedelta(seconds=15 + (i % 20))
+
         # Tahap 1: 200 pengunjung unik membuka halaman
         session.add(
             FunnelEvent(
                 anonymous_id=anon_id,
                 session_id=sess_id,
+                siswa_id=uid_for_user,
                 stage=FunnelStage.PAGE_VISIT,
                 page_path="/",
                 device_type=dev,
                 utm_source=ch,
-                occurred_at=base_time,
+                occurred_at=t_visit,
             )
         )
 
         # Tahap 2: 144 pengunjung menekan tombol Daftar (72% dari Tahap 1)
         if i < 144:
-            t_click = base_time + timedelta(seconds=12 + (i % 20))
             session.add(
                 FunnelEvent(
                     anonymous_id=anon_id,
                     session_id=sess_id,
+                    siswa_id=uid_for_user,
                     stage=FunnelStage.CLICK_REGISTER,
                     page_path="/register",
                     device_type=dev,
@@ -589,11 +805,11 @@ def seed_demo_funnel_data(session: Session, reset_existing: bool = True) -> dict
 
         # Tahap 3: 112 pengunjung mulai mengisi form Nama/Email/Password
         if i < 112:
-            t_start = base_time + timedelta(seconds=25 + (i % 25))
             session.add(
                 FunnelEvent(
                     anonymous_id=anon_id,
                     session_id=sess_id,
+                    siswa_id=uid_for_user,
                     stage=FunnelStage.START_REGISTRATION,
                     page_path="/register",
                     device_type=dev,
@@ -603,14 +819,12 @@ def seed_demo_funnel_data(session: Session, reset_existing: bool = True) -> dict
             )
 
         # Tahap 4: 76 berhasil membuat akun siswa (FR-01)
-        if i < 76:
-            duration_sec = 48 + ((i * 9) % 110)
-            t_created = base_time + timedelta(seconds=duration_sec)
-            uid = str(uuid.uuid5(uuid.NAMESPACE_DNS, f"siswa-{i}@siaposn.id"))
+        if i < 76 and uid_for_user is not None:
+            t_created = t_start + timedelta(seconds=25 + ((i * 7) % 60))
             email = f"siswa{i + 1}@sman-osn.sch.id"
             session.add(
                 UserAccount(
-                    id=uid,
+                    id=uid_for_user,
                     nama=f"Siswa OSN {i + 1}",
                     email=email,
                     password=hashlib.sha256(b"osninformatika").hexdigest(),
@@ -623,7 +837,7 @@ def seed_demo_funnel_data(session: Session, reset_existing: bool = True) -> dict
                 FunnelEvent(
                     anonymous_id=anon_id,
                     session_id=sess_id,
-                    siswa_id=uid,
+                    siswa_id=uid_for_user,
                     stage=FunnelStage.ACCOUNT_CREATED,
                     page_path="/register",
                     device_type=dev,
@@ -639,7 +853,7 @@ def seed_demo_funnel_data(session: Session, reset_existing: bool = True) -> dict
                 if i < 86
                 else RegistrationErrorType.VALIDATION_FAILED
             )
-            t_err = base_time + timedelta(seconds=55 + (i % 30))
+            t_err = t_start + timedelta(seconds=20 + (i % 20))
             session.add(
                 FunnelEvent(
                     anonymous_id=anon_id,

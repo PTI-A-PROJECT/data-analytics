@@ -16,7 +16,13 @@ from fastapi.staticfiles import StaticFiles
 from sqlalchemy import create_engine, func, select
 from sqlalchemy.orm import Session, sessionmaker
 
-from funnel_analytics.models import Base, DeviceType, FunnelEvent, UserAccount
+from funnel_analytics.models import (
+    Base,
+    DeviceType,
+    FunnelEvent,
+    FunnelStage,
+    UserAccount,
+)
 from funnel_analytics.schemas import (
     FunnelDashboardResponse,
     FunnelEventCreateRequest,
@@ -29,6 +35,8 @@ from funnel_analytics.service import (
     DuplicateEmailError,
     RegistrationValidationError,
     compute_funnel_dashboard,
+    detect_device_type,
+    ensure_funnel_integrity,
     record_funnel_event,
     register_student,
     seed_demo_funnel_data,
@@ -78,6 +86,15 @@ broadcaster = RealtimeBroadcaster()
 
 def init_db() -> None:
     Base.metadata.create_all(bind=engine)
+    with SessionLocal() as db:
+        count = db.scalar(select(func.count(FunnelEvent.id))) or 0
+        if count == 0:
+            seed_demo_funnel_data(db, reset_existing=False)
+        else:
+            ensure_funnel_integrity(db)
+
+
+init_db()
 
 
 def get_db() -> Generator[Session, None, None]:
@@ -127,16 +144,34 @@ def ingest_funnel_event(
 ) -> FunnelEventIngestResponse:
     """Endpoint pencatatan tahapan funnel (`page_visit`, `click_register`, `start_registration`)."""
     res = record_funnel_event(db, payload, user_agent=user_agent)
-    broadcaster.publish_sync(
-        "activity_logged",
-        {
-            "anonymous_id": payload.anonymous_id,
-            "stage": payload.stage.value if hasattr(payload.stage, "value") else str(payload.stage),
-            "page_path": payload.page_path,
-            "device_type": payload.device_type.value if hasattr(payload.device_type, "value") else str(payload.device_type),
-            "recorded_stages": [s.value if hasattr(s, "value") else str(s) for s in res.recorded_stages],
-        },
-    )
+    dev_val = detect_device_type(
+        user_agent if isinstance(user_agent, str) else None,
+        payload.device_type,
+    ).value
+    all_recorded = [
+        s.value if hasattr(s, "value") else str(s) for s in res.recorded_stages
+    ]
+    for stg in res.recorded_stages:
+        stg_val = stg.value if hasattr(stg, "value") else str(stg)
+        if stg == FunnelStage.PAGE_VISIT and payload.stage != FunnelStage.PAGE_VISIT:
+            stg_path = "/"
+        elif (
+            stg in (FunnelStage.CLICK_REGISTER, FunnelStage.START_REGISTRATION)
+            and payload.page_path == "/"
+        ):
+            stg_path = "/register"
+        else:
+            stg_path = payload.page_path
+        broadcaster.publish_sync(
+            "activity_logged",
+            {
+                "anonymous_id": payload.anonymous_id,
+                "stage": stg_val,
+                "page_path": stg_path,
+                "device_type": dev_val,
+                "recorded_stages": all_recorded,
+            },
+        )
     return res
 
 
@@ -151,46 +186,125 @@ def register_siswa_endpoint(
     db: Session = Depends(get_db),
 ) -> RegisterSiswaResponse:
     """Endpoint `Controller Auth: submitRegistrasi(data)` sesuai FR-01 & Gambar 18."""
+    dev_val = detect_device_type(
+        user_agent if isinstance(user_agent, str) else None,
+        payload.device_type,
+    ).value
     try:
-        res = register_student(db, payload, user_agent=user_agent)
-        broadcaster.publish_sync(
-            "account_created",
-            {
-                "anonymous_id": payload.anonymous_id,
-                "user_id": res.user_id,
-                "nama": payload.nama,
-                "email": payload.email,
-                "stage": "account_created",
-            },
+        res = register_student(
+            db,
+            payload,
+            user_agent=user_agent if isinstance(user_agent, str) else None,
         )
+        all_recorded = [
+            s.value if hasattr(s, "value") else str(s) for s in res.recorded_stages
+        ]
+        for stg in res.recorded_stages:
+            stg_val = stg.value if hasattr(stg, "value") else str(stg)
+            if stg == FunnelStage.ACCOUNT_CREATED:
+                broadcaster.publish_sync(
+                    "account_created",
+                    {
+                        "anonymous_id": payload.anonymous_id,
+                        "user_id": res.user_id,
+                        "nama": payload.nama,
+                        "email": payload.email,
+                        "stage": "account_created",
+                        "page_path": "/register",
+                        "device_type": dev_val,
+                        "recorded_stages": all_recorded,
+                    },
+                )
+            else:
+                broadcaster.publish_sync(
+                    "activity_logged",
+                    {
+                        "anonymous_id": payload.anonymous_id,
+                        "user_id": res.user_id,
+                        "nama": payload.nama,
+                        "email": payload.email,
+                        "stage": stg_val,
+                        "page_path": "/" if stg == FunnelStage.PAGE_VISIT else "/register",
+                        "device_type": dev_val,
+                        "recorded_stages": all_recorded,
+                    },
+                )
         return res
     except DuplicateEmailError as exc:
-        broadcaster.publish_sync(
-            "registration_error",
-            {
-                "anonymous_id": payload.anonymous_id,
-                "stage": "registration_error",
-                "error_type": exc.error_type.value,
-                "message": exc.message,
-            },
-        )
+        all_recorded = [
+            s.value if hasattr(s, "value") else str(s) for s in exc.recorded_stages
+        ]
+        for stg in exc.recorded_stages:
+            stg_val = stg.value if hasattr(stg, "value") else str(stg)
+            if stg == FunnelStage.REGISTRATION_ERROR:
+                broadcaster.publish_sync(
+                    "registration_error",
+                    {
+                        "anonymous_id": payload.anonymous_id,
+                        "stage": "registration_error",
+                        "page_path": "/register",
+                        "device_type": dev_val,
+                        "error_type": exc.error_type.value,
+                        "message": exc.message,
+                        "recorded_stages": all_recorded,
+                    },
+                )
+            else:
+                broadcaster.publish_sync(
+                    "activity_logged",
+                    {
+                        "anonymous_id": payload.anonymous_id,
+                        "stage": stg_val,
+                        "page_path": "/" if stg == FunnelStage.PAGE_VISIT else "/register",
+                        "device_type": dev_val,
+                        "recorded_stages": all_recorded,
+                    },
+                )
         raise HTTPException(
             status_code=status.HTTP_409_CONFLICT,
-            detail={"error_type": exc.error_type.value, "message": exc.message},
-        ) from exc
-    except RegistrationValidationError as exc:
-        broadcaster.publish_sync(
-            "registration_error",
-            {
-                "anonymous_id": payload.anonymous_id,
-                "stage": "registration_error",
+            detail={
                 "error_type": exc.error_type.value,
                 "message": exc.message,
+                "recorded_stages": all_recorded,
             },
-        )
+        ) from exc
+    except RegistrationValidationError as exc:
+        all_recorded = [
+            s.value if hasattr(s, "value") else str(s) for s in exc.recorded_stages
+        ]
+        for stg in exc.recorded_stages:
+            stg_val = stg.value if hasattr(stg, "value") else str(stg)
+            if stg == FunnelStage.REGISTRATION_ERROR:
+                broadcaster.publish_sync(
+                    "registration_error",
+                    {
+                        "anonymous_id": payload.anonymous_id,
+                        "stage": "registration_error",
+                        "page_path": "/register",
+                        "device_type": dev_val,
+                        "error_type": exc.error_type.value,
+                        "message": exc.message,
+                        "recorded_stages": all_recorded,
+                    },
+                )
+            else:
+                broadcaster.publish_sync(
+                    "activity_logged",
+                    {
+                        "anonymous_id": payload.anonymous_id,
+                        "stage": stg_val,
+                        "page_path": "/" if stg == FunnelStage.PAGE_VISIT else "/register",
+                        "device_type": dev_val,
+                        "recorded_stages": all_recorded,
+                    },
+                )
         raise HTTPException(
             status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
-            detail={"error_type": exc.error_type.value, "message": exc.message},
+            detail={
+                "error_type": exc.error_type.value,
+                "message": exc.message,
+                "recorded_stages": all_recorded,
+            },
         ) from exc
 
 
@@ -202,6 +316,7 @@ def get_admin_funnel_dashboard(
     db: Session = Depends(get_db),
 ) -> FunnelDashboardResponse:
     """Endpoint agregasi Conversion Funnel untuk Dashboard Super Admin (FR-24)."""
+    ensure_funnel_integrity(db)
     clean_device = device_type if isinstance(device_type, DeviceType) else None
     clean_utm = utm_source if isinstance(utm_source, str) else None
     clean_window: RentangWaktu = rentang_waktu if isinstance(rentang_waktu, str) else "30d"
@@ -255,15 +370,32 @@ async def stream_live_events(request: Request) -> StreamingResponse:
 
 @app.get("/api/v1/admin/activities/recent")
 def list_recent_activities(
-    limit: int = Query(default=20, ge=1, le=100),
+    limit: int = Query(default=30, ge=1, le=200),
     db: Session = Depends(get_db),
 ) -> list[dict[str, Any]]:
-    """Mengambil riwayat log aktivitas pengguna terbaru secara real-time dari database."""
-    events = list(
+    """Mengambil riwayat log aktivitas pengguna terbaru secara real-time dari database
+    beserta seluruh tahap prasyarat yang telah dilalui pengguna terkait.
+    """
+    ensure_funnel_integrity(db)
+    recent_seed = list(
         db.scalars(
-            select(FunnelEvent).order_by(FunnelEvent.occurred_at.desc()).limit(limit)
+            select(FunnelEvent)
+            .order_by(FunnelEvent.occurred_at.desc(), FunnelEvent.id.desc())
+            .limit(limit)
         ).all()
     )
+    if not recent_seed:
+        return []
+
+    anon_ids = list(dict.fromkeys(ev.anonymous_id for ev in recent_seed))
+    events = list(
+        db.scalars(
+            select(FunnelEvent)
+            .where(FunnelEvent.anonymous_id.in_(anon_ids))
+            .order_by(FunnelEvent.occurred_at.desc(), FunnelEvent.id.desc())
+        ).all()
+    )
+
     result: list[dict[str, Any]] = []
     for ev in events:
         result.append(

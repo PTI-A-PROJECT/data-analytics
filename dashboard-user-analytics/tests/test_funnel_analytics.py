@@ -283,3 +283,83 @@ def test_realtime_activity_logging_and_recent_events(db_session: Session) -> Non
     assert activities[0]["anonymous_id"] == "anon-realtime-test"
     assert activities[0]["stage"] == "page_visit"
     assert activities[0]["page_path"] == "/"
+
+
+def test_complete_prerequisite_stages_for_all_actions(db_session: Session) -> None:
+    """Memastikan:
+    1. User klik pendaftaran pasti tercatat page_visit + click_register
+    2. User memulai registrasi pasti tercatat page_visit + click_register + start_registration
+    3. User membuat akun pasti tercatat page_visit + click_register + start_registration + account_created
+    """
+    # 1. User yang klik pendaftaran
+    res_click = ingest_funnel_event(
+        FunnelEventCreateRequest(
+            anonymous_id="anon-only-click",
+            session_id="sess-only-click",
+            stage=FunnelStage.CLICK_REGISTER,
+            page_path="/register",
+        ),
+        db=db_session,
+    )
+    assert res_click.recorded_stages == [
+        FunnelStage.PAGE_VISIT,
+        FunnelStage.CLICK_REGISTER,
+    ]
+
+    # 2. User yang memulai registrasi
+    res_start = ingest_funnel_event(
+        FunnelEventCreateRequest(
+            anonymous_id="anon-only-start",
+            session_id="sess-only-start",
+            stage=FunnelStage.START_REGISTRATION,
+            page_path="/register",
+        ),
+        db=db_session,
+    )
+    assert res_start.recorded_stages == [
+        FunnelStage.PAGE_VISIT,
+        FunnelStage.CLICK_REGISTER,
+        FunnelStage.START_REGISTRATION,
+    ]
+
+    # 3. User yang langsung membuat akun
+    res_reg = register_siswa_endpoint(
+        RegisterSiswaRequest(
+            nama="Citra Lestari",
+            email="citra.osn@sman1.sch.id",
+            password="passwordosn2026",
+            anonymous_id="anon-only-register",
+            session_id="sess-only-register",
+        ),
+        db=db_session,
+    )
+    assert res_reg.recorded_stages == [
+        FunnelStage.PAGE_VISIT,
+        FunnelStage.CLICK_REGISTER,
+        FunnelStage.START_REGISTRATION,
+        FunnelStage.ACCOUNT_CREATED,
+    ]
+
+    dash = get_admin_funnel_dashboard(rentang_waktu="all", db=db_session)
+    assert dash.stages[0].unique_users == 3
+    assert dash.stages[1].unique_users == 3
+    assert dash.stages[2].unique_users == 2
+    assert dash.stages[3].unique_users == 1
+
+    activities = list_recent_activities(limit=20, db=db_session)
+    by_user: dict[str, list[str]] = {}
+    for act in activities:
+        by_user.setdefault(act["anonymous_id"], []).append(act["stage"])
+
+    assert set(by_user["anon-only-click"]) == {"page_visit", "click_register"}
+    assert set(by_user["anon-only-start"]) == {
+        "page_visit",
+        "click_register",
+        "start_registration",
+    }
+    assert set(by_user["anon-only-register"]) == {
+        "page_visit",
+        "click_register",
+        "start_registration",
+        "account_created",
+    }

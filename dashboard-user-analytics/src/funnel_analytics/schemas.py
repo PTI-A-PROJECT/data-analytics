@@ -58,6 +58,7 @@ class RegisterSiswaResponse(BaseModel):
     role: str
     anonymous_id: str
     message: str
+    recorded_stages: list[FunnelStage] = Field(default_factory=list)
 
 
 class FunnelFilterState(BaseModel):
