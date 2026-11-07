@@ -384,7 +384,7 @@
         "pilihan": {},
         "kode": null,
         "gambar_url": null,
-        "gambar_lokal": "../gambar_kabupaten/soal_25_1_kab_2023.png, ../gambar_kabupaten/soal_25_2_kab_2023.png",
+        "gambar_lokal": "../gambar_kabupaten/soal_25_kab_2023.png",
         "jawaban_benar": "ABCDEFGHIKJLM",
         "pembahasan": "Fungsi `cari(x)` melakukan penelusuran Post-Order Traversal pada pohon (kiri, tengah, kanan, lalu letakkan x paling atas boks). Penempatan 'paling atas' membalik urutan eksekusi post-order (sehingga elemen paling akhir yang diproses, yaitu A, berada di paling atas boks). Hasil akhir susunan boks dari atas ke bawah adalah ABCDEFGHIKJLM (atau susunan pre-order A B E F G C H I J D K L M)[cite: 5].",
         "tingkat_kesulitan": "mudah"

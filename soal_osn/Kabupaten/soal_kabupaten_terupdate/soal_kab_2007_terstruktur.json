@@ -56,7 +56,7 @@
     {
         "id_asli": "kab_soal4_2007",
         "tipe": "tunggal",
-        "soal": "Berapa banyak kemungkinan solusi untuk x + y + z = 11, jika x, y, z adalah bilangan-bilangan bulat positif dan memenuhi hubungan x y z ?",
+        "soal": "Berapa banyak kemungkinan solusi untuk x + y + z = 11, jika x, y, z adalah bilangan-bilangan bulat positif dan memenuhi hubungan x <= y <= z ?",
         "pilihan": {
             "a": "5",
             "b": "10",
@@ -65,8 +65,8 @@
             "e": "21"
         },
         "kode": null,
-        "gambar_url": "http://latex.codecogs.com/gif.latex?%5Cdpi%7B80%7D%20%5Csmall%20%5Cleq",
-        "gambar_lokal": "soal_4.png",
+        "gambar_url": null,
+        "gambar_lokal": null,
         "jawaban_benar": "b",
         "pembahasan": "Hubungan yang dimaksud adalah x <= y <= z. Selain 5 kombinasi unik di mana ketiganya berbeda (1,2,8; 1,3,7; 1,4,6; 2,3,6; 2,4,5), kita sertakan kombinasi yang memiliki elemen sama:\n6. 1 + 1 + 9 = 11 (1 <= 1 <= 9)\n7. 1 + 5 + 5 = 11 (1 <= 5 <= 5)\n8. 2 + 2 + 7 = 11 (2 <= 2 <= 7)\n9. 3 + 3 + 5 = 11 (3 <= 3 <= 5)\n10. 3 + 4 + 4 = 11 (3 <= 4 <= 4)\nTotal kemungkinan solusi ada 10.",
         "tingkat_kesulitan": "sedang"
@@ -247,7 +247,7 @@
                     "e": "Apatis"
                 },
                 "kode": null,
-                "jawaban_benar": "b",
+                "jawaban_benar": "a",
                 "pembahasan": "Malam selalu Hujan (H):\n- Hari 0: Berseri (B)\n- Hari 1 (H1): B -> Pemurung (M)\n- Hari 2 (H2): M -> Pemarah (R)\n- Hari 3 (H3): R -> Apatis (A)\n- Hari 4 (H4): A -> Pemurung (M)\n\nTerlihat siklus berulang setiap 3 hari untuk Hujan terus-menerus: M -> R -> A -> M...\n- Hari 1: M\n- Hari 2: R\n- Hari 3: A\n- Hari 4: M\n- Hari 5: R\n- Hari 6: A\n- Hari 7: M\nJika dihitung transisi 7 malam: 1(M), 2(R), 3(A), 4(M), 5(R), 6(A), 7(M/R). Untuk 7 malam berturut-turut hujan, hari ke-7 setelah berseri adalah Pemarah/Pemurung sesuai hitungan siklus (7 mod 3 = 1 -> Pemurung/Pemarah).",
                 "tingkat_kesulitan": "sedang"
             },
@@ -262,7 +262,7 @@
                     "e": "Selain biasa-biasa, mungkin juga pemarah"
                 },
                 "kode": null,
-                "jawaban_benar": "d",
+                "jawaban_benar": "b",
                 "pembahasan": "Jika malam selalu hujan, transisi ke depan adalah: ... -> M -> R -> A -> M -> R -> A -> ...\nMundur 1 hari dari Pemurung (M) pada kondisi hujan terus-menerus haruslah Apatis (A), mundur 2 hari R, mundur 3 hari M, mundur 4 hari A. Namun, perhatikan bahwa kondisi tertentu tidak dapat dicapai atau kontradiktif jika siklus berulang penuh tidak memiliki pendahulu yang sah tanpa keadaan khusus, sehingga kondisi ini dinyatakan tidak mungkin terjadi.",
                 "tingkat_kesulitan": "sedang"
             },
@@ -277,7 +277,7 @@
                     "e": "Selain biasa-biasa saja, mungkin juga pemarah"
                 },
                 "kode": null,
-                "jawaban_benar": "b",
+                "jawaban_benar": "e",
                 "pembahasan": "Jika hari ini Apatis (A) dan 4 malam sebelumnya hujan:\n- Mundur 1 malam (H): R atau S\n- Mundur 2 malam (H): M\n- Mundur 3 malam (H): B atau A\n- Mundur 4 malam (H): Apatis atau Berseri-seri.",
                 "tingkat_kesulitan": "mudah"
             },
@@ -642,7 +642,7 @@
                 },
                 "kode": null,
                 "jawaban_benar": "a",
-                "pembahasan": "Mencari FPB(414, 662):\n- 662 mod 414 = 248\n- 414 mod 248 = 166\n- 248 mod 166 = 82\n- 166 mod 82 = 2\n- 82 mod 2 = 0\n\nFPB(414, 662) = 2. Dari pilihan jawaban yang paling mendekati (terdapat typo pilihan pada soal asli), nilai FPB-nya adalah 2 (atau jika soal 414 & 663, FPB = 1).",
+                "pembahasan": "Mencari FPB(414, 662):\n- 662 mod 414 = 248\n- 414 mod 248 = 166\n- 248 mod 166 = 82\n- 166 mod 82 = 2\n- 82 mod 2 = 0\n\nHasil FPB(414, 662) = 2. Pada naskah asli OSK 2007 nilai 2 tidak terdapat pada pilihan jawaban (anomali naskah/soal bonus).",
                 "tingkat_kesulitan": "sedang"
             },
             {
@@ -868,7 +868,7 @@
                     "e": "7"
                 },
                 "kode": null,
-                "jawaban_benar": "d",
+                "jawaban_benar": "e",
                 "pembahasan": "H(Susi) = (10*19 + 21) mod 17 = 211 mod 17 = 7.\nBangku yang diperiksa:\n1. No 7 (Andi - terisi) -> gagal 1\n2. No 8 (Bella - terisi) -> gagal 2\n3. No 9 (Budi - terisi) -> gagal 3\n4. No 10 (Fany - terisi) -> gagal 4\n5. No 11 (Coki - terisi) -> gagal 5\n6. No 12 (Dewi - terisi) -> gagal 6\n7. No 13 (Nunik - terisi) -> gagal 7\n8. No 14 -> Kosong! Ditempatkan di no 14.\n\nBanyaknya kegagalan/pemeriksaan bangku yang terisi sebelum menemukan yang kosong adalah 6 sampai 7 kali (6/7 kali pemeriksaan sebelum dapat bangku kosong).",
                 "tingkat_kesulitan": "mudah"
             }

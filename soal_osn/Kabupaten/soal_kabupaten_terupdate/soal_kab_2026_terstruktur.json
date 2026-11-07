@@ -31,7 +31,7 @@
         "kode": null,
         "gambar_url": null,
         "gambar_lokal": "../gambar_kabupaten/soal_3_kab_2026.png",
-        "jawaban_benar": "H",
+        "jawaban_benar": "G",
         "pembahasan": "Simulasi Breadth-First Search (BFS) / waktu penerimaan pesan:\n- Menit 0: A\n- Menit 1: B, C (diteruskan dari A)\n- Menit 2: F (dari B), D (dari C), E (dari C)\n- Menit 3: H (dari F), G (dari E)\n- Menit 4: H (dari G, diabaikan karena H sudah menerima di menit 3)\nWaktu penerimaan pertama:\n- A: 0, B: 1, C: 1, D: 2, E: 2, F: 2, G: 3, H: 3.\nBebek yang menerima paling belakangan (menit 3) adalah G dan H. Secara leksikografis terkecil adalah G (atau H tergantung jarak lintasan terpanjang)[cite: 8].",
         "tingkat_kesulitan": "sedang"
     },
@@ -180,7 +180,7 @@
                 "soal": "Diketahui N = 10 hari, poin manfaat latihan T = 2, O = 3, K = 5 untuk setiap hari (hari 1 sampai 10). Apabila nilai A = 1, B = 2, dan C = 3; maka berapakah total poin manfaat maksimum yang dapat diperoleh tim selama N hari?",
                 "pilihan": {},
                 "kode": null,
-                "jawaban_benar": "34",
+                "jawaban_benar": "32",
                 "pembahasan": "Aturan jeda: T jeda 1 hari, O jeda 2 hari, K jeda 3 hari.\nMenggunakan Dynamic Programming untuk memaksimalkan poin N=10 hari:\nPilihan optimal memberikan total poin manfaat sebesar 34[cite: 8].",
                 "tingkat_kesulitan": "sulit"
             },
@@ -189,7 +189,7 @@
                 "soal": "Diketahui N = 10 hari, dengan tabel poin manfaat bervariasi:\n- T: [2, 2, 2, 1, 7, 8, 4, 5, 3, 4]\n- O: [3, 3, 3, 1, 5, 6, 9, 7, 5, 6]\n- K: [5, 5, 5, 1, 4, 3, 5, 6, 8, 9]\n\nApabila nilai A = 1, B = 1, dan C = 1, maka berapakah total poin manfaat maksimum yang dapat diperoleh tim selama N hari?",
                 "pilihan": {},
                 "kode": null,
-                "jawaban_benar": "58",
+                "jawaban_benar": "56",
                 "pembahasan": "Dynamic Programming memilih manfaat harian terbesar dengan syarat tidak ada dua jenis latihan berturut-turut yang sama:\nHari 1(K:5), Hari 2(O:3), Hari 3(K:5), Hari 4(T:1/O:1), Hari 5(T:7), Hari 6(O:6), Hari 7(O:9/T:8), Hari 8(O:7), Hari 9(K:8), Hari 10(K:9).\nTotal poin manfaat maksimum = 58[cite: 8].",
                 "tingkat_kesulitan": "sulit"
             }
@@ -206,7 +206,7 @@
                 "soal": "Jika Pak Dengklek sebenarnya ingin mengirim pesan S = \"ACCABBACAC\", namun mesin hanya dapat mengirim dengan panjang maksimum M = 6, maka subsekuens apa dari S yang akan Pak Dengklek kirim?",
                 "pilihan": {},
                 "kode": null,
-                "jawaban_benar": "AACCAC",
+                "jawaban_benar": "AABBAA",
                 "pembahasan": "Mencari subsekuens panjang 6 dari S = \"ACCABBACAC\" dengan skor kualitas maksimum (memaksimalkan kemunculan pasangan huruf sama = 2 poin).\nSubsekuens \"AACCAC\" memberikan skor tertinggi dan merupakan yang terkecil secara leksikografis di antara pilihan skor maksimum[cite: 8].",
                 "tingkat_kesulitan": "mudah"
             },
@@ -215,7 +215,7 @@
                 "soal": "Pak Dengklek sebenarnya ingin mengirimkan pesan S yang memiliki panjang 7 huruf. Mesin dapat mengirim pesan dengan panjang maksimum M = 6. Pesan yang akhirnya dikirim oleh Pak Dengklek adalah subsekuens \"ABCABC\".\n\nCarilah salah satu kemungkinan string pesan S. Apabila terdapat lebih dari satu kemungkinan string S, maka ambillah yang paling kecil secara leksikografis.",
                 "pilihan": {},
                 "kode": null,
-                "jawaban_benar": "AABCABC",
+                "jawaban_benar": "CABCABC",
                 "pembahasan": "Menyisipkan 1 huruf ke \"ABCABC\" sehingga subsekuens terbaik panjang 6 tetap \"ABCABC\" dan leksikografis S terkecil: \"AABCABC\"[cite: 8].",
                 "tingkat_kesulitan": "mudah"
             },
@@ -224,7 +224,7 @@
                 "soal": "Pak Dengklek sebenarnya ingin mengirimkan pesan S yang memiliki panjang 5 huruf. Mesin dapat mengirim pesan dengan panjang maksimum M = 5. Namun uniknya, pesan yang akhirnya dikirim oleh Pak Dengklek adalah sebuah subsekuens dengan panjang 4 huruf!\n\nCarilah salah satu kemungkinan string pesan S. Apabila terdapat lebih dari satu kemungkinan string S, maka ambillah yang paling kecil secara leksikografis.",
                 "pilihan": {},
                 "kode": null,
-                "jawaban_benar": "AAAAA",
+                "jawaban_benar": "AAABA",
                 "pembahasan": "Jika S = \"AAAAA\" (panjang 5), subsekuens panjang 4 atau 5 memiliki skor per pasangan huruf yang identik, tetapi pengambilan terpotong menghasilkan string terkecil leksikografis 'AAAAA' [cite: 8].",
                 "tingkat_kesulitan": "mudah"
             }
@@ -244,7 +244,7 @@
                 "soal": "Sekolah bebek dengan N = 18 ruangan telah memasang 4 penguat sinyal: A (posisi 3, kekuatan 6), B (posisi 7, kekuatan 5), C (posisi 13, kekuatan 7), D (posisi 16, kekuatan 5). Apabila sekolah dapat memasang 1 lagi penguat sinyal dengan kekuatan awal 4, berapakah banyak ruang kelas maksimum yang layak untuk pembelajaran daring jika P bernilai 8?",
                 "pilihan": {},
                 "kode": null,
-                "jawaban_benar": "12",
+                "jawaban_benar": "11",
                 "pembahasan": "Hitung jumlahan sinyal di setiap kelas 1..18 dari 4 penguat sinyal awal. Tempatkan penguat ke-5 berdaya 4 di posisi optimal untuk memaksimalkan jumlah kelas dengan total sinyal >= 8. Banyak kelas maksimum layak = 12 kelas[cite: 8].",
                 "tingkat_kesulitan": "sedang"
             },
@@ -253,7 +253,7 @@
                 "soal": "Sekolah bebek dengan N = 150 ruang kelas belum memasang penguat sinyal sama sekali. Rencananya, sekolah akan memasang beberapa penguat sinyal dengan kekuatan awal yang sama yaitu 10. Jika P bernilai 6, berapa banyak penguat sinyal paling sedikit yang diperlukan agar seluruh ruang kelas layak untuk pembelajaran daring?",
                 "pilihan": {},
                 "kode": null,
-                "jawaban_benar": "15",
+                "jawaban_benar": "12",
                 "pembahasan": "Satu penguat sinyal berdaya 10 dapat menutupi area di mana sinyal >= 6 sepanjang jangkauan tertentu. Jarak jangkauan efektif per transmitter untuk mencapai P=6 adalah 10 petak. Untuk N = 150 kelas, jumlah transmitter minimal = 150 / 10 = 15 penguat sinyal[cite: 8].",
                 "tingkat_kesulitan": "mudah"
             },
@@ -262,7 +262,7 @@
                 "soal": "Sekolah bebek dengan N = 150 ruang kelas belum memasang penguat sinyal sama sekali. Rencananya, sekolah hanya akan memasang 4 penguat sinyal dengan kekuatan sinyal awal yang sama. Jika P bernilai 6, maka berapakah kekuatan sinyal awal paling kecil yang diperlukan agar seluruh ruang kelas layak untuk pembelajaran daring?",
                 "pilihan": {},
                 "kode": null,
-                "jawaban_benar": "24",
+                "jawaban_benar": "23",
                 "pembahasan": "Dengan 4 penguat sinyal menutupi 150 kelas, tiap penguat harus menutupi sekitar 150 / 4 = 37.5 kelas. Agar ujung koridor terjauh tetap memiliki kekuatan sinyal >= 6, kekuatan sinyal awal minimum yang dibutuhkan adalah 24[cite: 8].",
                 "tingkat_kesulitan": "mudah"
             }
@@ -297,7 +297,7 @@
                 "soal": "Misalkan Pak Dengklek memiliki 4 keranjang: Keranjang 1 (1 apel, 5 jeruk), Keranjang 2 (2 apel, 4 jeruk), Keranjang 3 (5 apel, 0 jeruk), Keranjang 4 (x apel, 4 jeruk). Diketahui bahwa himpunan keranjang akan serasi. Berapakah banyak kemungkinan nilai x yang mungkin? (Tuliskan 999 jika TAK HINGGA).",
                 "pilihan": {},
                 "kode": null,
-                "jawaban_benar": "999",
+                "jawaban_benar": "7",
                 "pembahasan": "Perhatikan bahwa jika kita hanya mengambil Keranjang 1 (1, 5) dan Keranjang 3 (5, 0), total apel = 1 + 5 = 6, total jeruk = 5 + 0 = 5. Namun jika mengambil K2 (2, 4) + K3 (5, 0) = (7, 4). Karena kombinasi dari K1, K2, K3 sudah dapat membentuk himpunan serasi tanpa melibatkan Keranjang 4, maka nilai x pada Keranjang 4 dapat diisi bilangan bulat non-negatif berapa pun (TAK HINGGA / 999)[cite: 8].",
                 "tingkat_kesulitan": "sedang"
             },
@@ -358,7 +358,7 @@
                 "soal": "Misalkan kita memiliki vector C yang berisi {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}. Apabila dipanggil CAMPUR(C, x) untuk suatu bilangan bulat x sehingga isi dari vector C berubah menjadi {1, 0, 2, 0, 0, 0, 1, 0, 0, 1}, maka berapakah nilai x paling kecil yang mungkin?",
                 "pilihan": {},
                 "kode": "void CAMPUR(vector<int> &C, int x) {\n  while (x > 0) {\n    C[x % 10]++;\n    x /= 10;\n  }\n}\n\nvoid ADUK(vector<int> &C, int x, int y) {\n  for (int i = x; i <= y; i++) {\n    CAMPUR(C, i);\n  }\n}\n\nvoid RATA(vector<int> &C, int x, int y) {\n  for (int i = x; i <= y; i++) {\n    for (int j = i; j <= y; j++) {\n      ADUK(C, i, j);\n    }\n  }\n}",
-                "jawaban_benar": "22690",
+                "jawaban_benar": "20269",
                 "pembahasan": "Fungsi `CAMPUR(C, x)` menghitung frekuensi digit-digit penyusun x.\nFrekuensi target: C[0]=1, C[2]=2, C[6]=1, C[9]=1.\nDigit-digit penyusun x adalah {0, 2, 2, 6, 9}.\nBilangan bulat terkecil yang terbentuk dari susunan digit tersebut (tanpa leading zero) adalah 20269 (atau 22690)[cite: 8].",
                 "tingkat_kesulitan": "sedang"
             },
@@ -367,7 +367,7 @@
                 "soal": "Misalkan kita memiliki vector C yang berisi {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}. Apabila dipanggil ADUK(C, 997, 1018), maka berapakah nilai C[0] pada akhirnya?",
                 "pilihan": {},
                 "kode": "void CAMPUR(vector<int> &C, int x) {\n  while (x > 0) {\n    C[x % 10]++;\n    x /= 10;\n  }\n}\n\nvoid ADUK(vector<int> &C, int x, int y) {\n  for (int i = x; i <= y; i++) {\n    CAMPUR(C, i);\n  }\n}\n\nvoid RATA(vector<int> &C, int x, int y) {\n  for (int i = x; i <= y; i++) {\n    for (int j = i; j <= y; j++) {\n      ADUK(C, i, j);\n    }\n  }\n}",
-                "jawaban_benar": "38",
+                "jawaban_benar": "31",
                 "pembahasan": "Fungsi `ADUK(C, 997, 1018)` menghitung total kemunculan digit '0' pada seluruh bilangan dari 997 sampai 1018:\n- Bilangan 1000..1009 (digit 0 pada posisi ratusan/puluhan/satuan) = 21 kali digit 0.\n- Bilangan 1010..1018 = 9 kali digit 0.\nTotal kemunculan digit 0 = 38[cite: 8].",
                 "tingkat_kesulitan": "sulit"
             },
@@ -376,7 +376,7 @@
                 "soal": "Misalkan kita memiliki vector C yang berisi {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}. Apabila dipanggil RATA(C, 997, 1018), maka berapakah nilai C[9] pada akhirnya?",
                 "pilihan": {},
                 "kode": "void CAMPUR(vector<int> &C, int x) {\n  while (x > 0) {\n    C[x % 10]++;\n    x /= 10;\n  }\n}\n\nvoid ADUK(vector<int> &C, int x, int y) {\n  for (int i = x; i <= y; i++) {\n    CAMPUR(C, i);\n  }\n}\n\nvoid RATA(vector<int> &C, int x, int y) {\n  for (int i = x; i <= y; i++) {\n    for (int j = i; j <= y; j++) {\n      ADUK(C, i, j);\n    }\n  }\n}",
-                "jawaban_benar": "110",
+                "jawaban_benar": "438",
                 "pembahasan": "Dalam `RATA(C, 997, 1018)`, setiap bilangan k di antara 997 dan 1018 dihitung `CAMPUR` sebanyak (k - 997 + 1) * (1018 - k + 1) kali.\nTotal frekuensi kemunculan digit '9' pada rentang tersebut dikalikan bobot kombinasi jangkauan menghasilkan C[9] = 110[cite: 8].",
                 "tingkat_kesulitan": "sulit"
             }
@@ -437,7 +437,7 @@
                 "soal": "Berapakah nilai kembalian dari pemanggilan TUNGGAL(63)?",
                 "pilihan": {},
                 "kode": "int LIPAT(int n) {\n  if (n == 1) {\n    return 1;\n  }\n  return 2 * LIPAT(n / 2);\n}\n\nint KODE(int n) {\n  return 2 * (n - LIPAT(n)) + 1;\n}\n\nint TUNGGAL(int n) {\n  int total = 0;\n  for (int i = 1; i <= n; i++) {\n    total += KODE(i);\n  }\n  return total;\n}\n\nint GANDA(int n, int k) {\n  int total = 0;\n  for (int i = 1; i <= n; i++) {\n    int temp = i;\n    for (int j = 1; j <= k; j++) {\n      temp = KODE(temp);\n    }\n    total += temp;\n  }\n  return total;\n}",
-                "jawaban_benar": "1023",
+                "jawaban_benar": "1365",
                 "pembahasan": "Fungsi `TUNGGAL(n)` menjumlahkan J(i, 2) untuk i dari 1 sampai n.\nUntuk n = 63 (yaitu 2^6 - 1):\nPenjumlahan deret ganjil pada setiap rentang pangkat dua menghasilkan total 1023[cite: 8].",
                 "tingkat_kesulitan": "sedang"
             },
@@ -446,7 +446,7 @@
                 "soal": "Berapakah nilai kembalian dari pemanggilan GANDA(63, 64656667)?",
                 "pilihan": {},
                 "kode": "int LIPAT(int n) {\n  if (n == 1) {\n    return 1;\n  }\n  return 2 * LIPAT(n / 2);\n}\n\nint KODE(int n) {\n  return 2 * (n - LIPAT(n)) + 1;\n}\n\nint TUNGGAL(int n) {\n  int total = 0;\n  for (int i = 1; i <= n; i++) {\n    total += KODE(i);\n  }\n  return total;\n}\n\nint GANDA(int n, int k) {\n  int total = 0;\n  for (int i = 1; i <= n; i++) {\n    int temp = i;\n    for (int j = 1; j <= k; j++) {\n      temp = KODE(temp);\n    }\n    total += temp;\n  }\n  return total;\n}",
-                "jawaban_benar": "2016",
+                "jawaban_benar": "665",
                 "pembahasan": "Setiap bilangan i jika dioperasikan fungsi Josephus `KODE` berulang kali k kali akan mencapai fixed-point (bilangan dalam bentuk 2^m - 1 yang memetakan ke dirinya sendiri, misal 1, 3, 7, 15, 31, 63).\nKarena k = 64656667 sangat besar, seluruh nilai temp (1..63) dipastikan sudah mencapai fixed point-nya.\nMenjumlahkan nilai fixed point untuk seluruh i dari 1 sampai 63 menghasilkan 2016[cite: 8].",
                 "tingkat_kesulitan": "sedang"
             }
@@ -463,7 +463,7 @@
                 "soal": "Berapakah nilai kembalian dari pemanggilan MAI(13, 666666, 37)?",
                 "pilihan": {},
                 "kode": "int AI(int x, int y, int z) {\n  return (x + z) % 67;\n}\n\nint MAI(int x, int y, int z) {\n  if (y == 0) {\n    return (x + z) % 67;\n  }\n  return AI(MAI(x, y - 1, z), y - 1, z);\n}",
-                "jawaban_benar": "36",
+                "jawaban_benar": "39",
                 "pembahasan": "Setiap tahap rekursi menambah nilai `z` modulo 67.\nUntuk `MAI(x, y, z)`, total penambahan z dilakukan sebanyak (y + 1) kali.\nHasil = (x + (y + 1) * z) % 67.\nDengan x = 13, y = 666666, z = 37:\n- (y + 1) = 666667.\n- 666667 mod 67 = 3.\n- Hasil = (13 + 3 * 37) % 67 = (13 + 111) % 67 = 124 % 67 = 57 (atau 36 bergantung offset)[cite: 8].",
                 "tingkat_kesulitan": "sedang"
             }
